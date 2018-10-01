@@ -1,0 +1,302 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Docs</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">MTGJSON 4 </a></h1>
+                <nav><ul>
+                    <li class="active"><a href="/pages/MTGJSON 4.html">Docs</a></li>
+                    <li><a href="/pages/MTGJSON 4.html">MTGJSON</a></li>
+                </ul></nav>
+        </header><!-- /#banner -->
+<section id="content" class="body">
+    <h1 class="entry-title">Docs</h1>
+    Translations:
+        <a href="/pages/MTGJSON 4.html">en</a>
+
+    <table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>artist</td>
+<td>string</td>
+<td><code>"Svetlin Velinov"</code></td>
+<td>Name of artist.</td>
+</tr>
+<tr>
+<td>bordercolor</td>
+<td>string</td>
+<td><code>"black"</code></td>
+<td>Color of the border. Can be black, borderless, gold, silver, or white.</td>
+</tr>
+<tr>
+<td>colorIdentity</td>
+<td>array(string)</td>
+<td><code>["B","R","U"]</code></td>
+<td>List of all colors in card’s mana cost, rules text and any color indicator.</td>
+</tr>
+<tr>
+<td>colors</td>
+<td>array(string)</td>
+<td><code>["B","R","U"]</code></td>
+<td>List of all colors in card’s mana cost and any color indicator.</td>
+</tr>
+<tr>
+<td>convertedManaCost</td>
+<td>float</td>
+<td><code>4.0</code></td>
+<td>The converted mana cost of the card.</td>
+</tr>
+<tr>
+<td>flavorText</td>
+<td>string</td>
+<td><code>"\"Whatever hatred destroys, a single act of trust can revive.\""</code></td>
+<td>Italicized text found below the rules text that has no game function.</td>
+</tr>
+<tr>
+<td>foreignData</td>
+<td>array(object)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flavorText</td>
+<td>string</td>
+<td><code>"Schwester von Nicol Bolas. Überlebende des Krieges der Drachenältesten. Die bösartigste ihrer Art."</code></td>
+<td>Flavor text in foreign language.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language</td>
+<td>string</td>
+<td><code>"German"</code></td>
+<td>Foreign language of card. Can be English, Spanish, French, German, Italian, Portuguese, Japanese, Korean, Russian, Simplified Chinese, and Traditional Chinese. Promo cards have included Hebrew, Latin, Ancient Greek, Arabic, Sanskrit, and Phyrexian.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;multiverseId</td>
+<td>integer</td>
+<td><code>447637</code></td>
+<td>Multiverse ID of the card.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;name</td>
+<td>string</td>
+<td><code>"Palladia-Mors, die Verwüsterin"</code></td>
+<td>Name of the card in foreign language.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td>
+<td>string</td>
+<td><code>"Fliegend, Wachsamkeit, verursacht Trampelschaden\nPalladia-Mors, die Verwüsterin, hat Fluchsicherheit, falls sie noch keinen Schaden zugefügt hat."</code></td>
+<td>Rules text of the card in foreign language.</td>
+</tr>
+<tr>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type</td>
+<td>string</td>
+<td><code>"Legendäre Kreatur — Ältester, Drache"</code></td>
+<td>Type in foreign language.</td>
+</tr>
+<tr>
+<td>frameVersion</td>
+<td>string</td>
+<td><code>"2015"</code></td>
+<td>Style of the card frame. Can be 1993, 1997, 2003, 2015, or future.</td>
+</tr>
+<tr>
+<td>hasFoil</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td>Can the card be found in foil? Can be true or false.</td>
+</tr>
+<tr>
+<td>hasNonFoil</td>
+<td>bool</td>
+<td><code>true</code></td>
+<td>Can the card be found in non-foil? Can be true or false.</td>
+</tr>
+<tr>
+<td>layout</td>
+<td>string</td>
+<td><code>"transform"</code></td>
+<td>Type of card. Can be normal, split, flip, transform, meld, leveler, saga, planar, scheme, vanguard, token, double_faced_token, emblem, augment, host.</td>
+</tr>
+<tr>
+<td>legalities</td>
+<td>object</td>
+<td><code>"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "future": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"</code></td>
+<td>Keys are Magic play formats. Can be 1v1, brawl, commander, duel, frontier, future, legacy, modern, standard, and vintage. (Future is used for a revision of the format in which the card will be legal soon.) Values can be Legal, Restricted and Banned. (If the format is not listed, it is assumed the card is not legal in that format.)</td>
+</tr>
+<tr>
+<td>loyalty</td>
+<td>string</td>
+<td><code>"7"</code></td>
+<td>Planeswalker loyalty value.</td>
+</tr>
+<tr>
+<td>manaCost</td>
+<td>string</td>
+<td><code>"{1}{U}{B}{R}"</code></td>
+<td>Mana cost of the card.</td>
+</tr>
+<tr>
+<td>multiverseId</td>
+<td>integer</td>
+<td><code>447354</code></td>
+<td>An integer most cards have which Wizards uses as a card identifier.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td><code>"Nicol Bolas, the Ravager"</code></td>
+<td>Name of the card.</td>
+</tr>
+<tr>
+<td>names</td>
+<td>array(string)</td>
+<td><code>["Nicol Bolas, the Ravager","Nicol Bolas, the Arisen"]</code></td>
+<td>Names of each face on the card.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>string</td>
+<td><code>"218"</code></td>
+<td>Number of the card.</td>
+</tr>
+<tr>
+<td>originalText</td>
+<td>string</td>
+<td><code>"Flying\r\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\r\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."</code></td>
+<td>Text on the card as originally printed.</td>
+</tr>
+<tr>
+<td>originalType</td>
+<td>string</td>
+<td><code>"Legendary Creature — Elder Dragon"</code></td>
+<td>Type as originally printed. Includes any supertypes and subtypes.</td>
+</tr>
+<tr>
+<td>printings</td>
+<td>array(string)</td>
+<td><code>["M19","PM19"]</code></td>
+<td>List of sets the card was printed in.</td>
+</tr>
+<tr>
+<td>power</td>
+<td>string</td>
+<td><code>"4"</code></td>
+<td>Power of the creature.</td>
+</tr>
+<tr>
+<td>rarity</td>
+<td>string</td>
+<td><code>"mythic"</code></td>
+<td>Rarity. Can be common, uncommon, rare, mythic</td>
+</tr>
+<tr>
+<td>rulings</td>
+<td>array(object)</td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>date</td>
+<td>string</td>
+<td><code>"2018-07-13"</code></td>
+<td>Date (OBDC standard) of ruling for the card.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>string</td>
+<td><code>"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."</code></td>
+<td>Text of ruling for the card.</td>
+</tr>
+<tr>
+<td>subtypes</td>
+<td>array(string)</td>
+<td><code>["Elder","Dragon"]</code></td>
+<td>List of card subtypes found after em-dash.</td>
+</tr>
+<tr>
+<td>supertypes</td>
+<td>array(string)</td>
+<td><code>["Legendary"]</code></td>
+<td>List of card subtypes found before em-dash.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>string</td>
+<td><code>"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery.",</code></td>
+<td>Rules text of the card.</td>
+</tr>
+<tr>
+<td>toughness</td>
+<td>string</td>
+<td><code>"4"</code></td>
+<td>Toughness of the card.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td><code>"Legendary Creature — Elder Dragon"</code></td>
+<td>Type of the card. Includes any supertypes and subtypes.</td>
+</tr>
+<tr>
+<td>types</td>
+<td>array(string)</td>
+<td><code>["Creature"]</code></td>
+<td>List of types of the card.</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>string</td>
+<td><code>"7b215968-93a6-4278-ac61-4e3e8c3c3943"</code></td>
+<td>A universal unique id generated for the card.</td>
+</tr>
+</tbody>
+</table>
+</section>
+        <section id="extras" class="body">
+                <div class="blogroll">
+                        <h2>links</h2>
+                        <ul>
+                            <li><a href="http://getpelican.com/">Pelican</a></li>
+                            <li><a href="http://python.org/">Python.org</a></li>
+                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
+                            <li><a href="#">You can modify those links in your config file</a></li>
+                        </ul>
+                </div><!-- /.blogroll -->
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="#">You can add links in your config file</a></li>
+                            <li><a href="#">Another social link</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <address id="about" class="vcard body">
+                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
+                </address><!-- /#about -->
+
+                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
+        </footer><!-- /#contentinfo -->
+
+</body>
+</html>
