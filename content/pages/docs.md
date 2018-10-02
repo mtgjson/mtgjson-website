@@ -3,9 +3,11 @@ Date: 2018-10-01 00:00
 Modified: 2018-10-01 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
-Slug: MTGJSON 4 Docs
+Slug: docs
 Authors: MTGJSON Developers
 Summary: Short version for index and feeds
+
+**Card**
 
 Property | Value | Example | Description
 -----|-----|-----|-----
@@ -39,8 +41,8 @@ printings | array(string) | `["M19","PM19"]` | List of sets the card was printed
 power | string | `"4"` | Power of the creature.
 rarity | string | `"mythic"` | Rarity. Can be common, uncommon, rare, mythic
 rulings | array(object) |  | 
-date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
-text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
+&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
 subtypes | array(string) | `["Elder","Dragon"]` | List of card subtypes found after em-dash.
 supertypes | array(string) | `["Legendary"]` | List of card subtypes found before em-dash.
 text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery.",` | Rules text of the card.
@@ -48,3 +50,34 @@ toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.
 uuid | string | `"7b215968-93a6-4278-ac61-4e3e8c3c3943"` | A universal unique id generated for the card.
+
+**Token**
+
+Property | Value | Example | Description
+-----|-----|-----|-----
+artist | string | `"Jack Wang"` | Name of artist.
+bordercolor | string | `"black"` | Color of the border. Can be black, borderless, gold, silver, or white.
+colorIdentity | array(string) | `["G","W"]` | List of all colors in card’s mana cost, rules text and any color indicator.
+colors | array(string) | `["G","W"]` | List of all colors in card’s mana cost and any color indicator.
+loyalty | string | `"7"` | Planeswalker loyalty value.
+name | string | `"Elf Knight"` | Name of the token.
+number | string | `"2"` | Number of the token card.
+power | string | `"2"` | Power of the creature.
+reverseRelated | array(string) | `["Assemble","Conclave Cavalier","Conclave Guildmage","Ledev Champion","Sprouting Renewal"]` | List of cards in the same set which reference the token.
+text | string | `"Vigilance"` | Rules text of the token.
+toughness | string | `"4"` | Toughness of the creature.
+type | string | `"Token Creature — Elf Knight"` | Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as if a card type.
+uuid | string | `"f43a5ec2-8898-4645-84d7-b7218682be9b"` | A universal unique id generated for the token card.
+watermark | string | `"selesnya"` | Name of the watermark on the card.
+
+**Set**
+
+Property | Value | Example | Description
+-----|-----|-----|-----
+cards | array(object) |  | List of cards. (See Card table.)
+code | string | `"m19"` | Set code for the set.
+meta | object | `{"date": “2018-09-28","version": "4.0.0"}` | Keys are date or version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
+mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
+releaseDate | string | `"2018-07-13"` | Date of release for the set.
+type | string | `"core"` | Type of set. Can be core, expansion, masters, masterpiece, from_the_vault, spellbook, premium_deck, duel_deck, draft_innovation, commander, planechase, archenemy, vanguard, funny, starter, box, promo, token or memorabilia.
+tokens | array(object) |  | List of tokens for the set. (See Token table.)

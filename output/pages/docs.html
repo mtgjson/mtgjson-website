@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
         <meta charset="utf-8" />
-        <title>Docs</title>
+        <title>Documentation</title>
         <link rel="stylesheet" href="/theme/css/main.css" />
 
         <!--[if IE]>
@@ -14,16 +14,15 @@
         <header id="banner" class="body">
                 <h1><a href="/">MTGJSON 4 </a></h1>
                 <nav><ul>
-                    <li class="active"><a href="/pages/MTGJSON 4.html">Docs</a></li>
-                    <li><a href="/pages/MTGJSON 4.html">MTGJSON</a></li>
+                    <li class="active"><a href="/pages/docs.html">Documentation</a></li>
+                    <li><a href="/pages/sets.html">Sets</a></li>
                 </ul></nav>
         </header><!-- /#banner -->
 <section id="content" class="body">
-    <h1 class="entry-title">Docs</h1>
-    Translations:
-        <a href="/pages/MTGJSON 4.html">en</a>
-
-    <table>
+    <h1 class="entry-title">Documentation</h1>
+    
+    <p><strong>Card</strong></p>
+<table>
 <thead>
 <tr>
 <th>Property</th>
@@ -214,13 +213,13 @@
 <td></td>
 </tr>
 <tr>
-<td>date</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date</td>
 <td>string</td>
 <td><code>"2018-07-13"</code></td>
 <td>Date (OBDC standard) of ruling for the card.</td>
 </tr>
 <tr>
-<td>text</td>
+<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text</td>
 <td>string</td>
 <td><code>"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."</code></td>
 <td>Text of ruling for the card.</td>
@@ -269,25 +268,168 @@
 </tr>
 </tbody>
 </table>
+<p><strong>Token</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>artist</td>
+<td>string</td>
+<td><code>"Jack Wang"</code></td>
+<td>Name of artist.</td>
+</tr>
+<tr>
+<td>bordercolor</td>
+<td>string</td>
+<td><code>"black"</code></td>
+<td>Color of the border. Can be black, borderless, gold, silver, or white.</td>
+</tr>
+<tr>
+<td>colorIdentity</td>
+<td>array(string)</td>
+<td><code>["G","W"]</code></td>
+<td>List of all colors in card’s mana cost, rules text and any color indicator.</td>
+</tr>
+<tr>
+<td>colors</td>
+<td>array(string)</td>
+<td><code>["G","W"]</code></td>
+<td>List of all colors in card’s mana cost and any color indicator.</td>
+</tr>
+<tr>
+<td>loyalty</td>
+<td>string</td>
+<td><code>"7"</code></td>
+<td>Planeswalker loyalty value.</td>
+</tr>
+<tr>
+<td>name</td>
+<td>string</td>
+<td><code>"Elf Knight"</code></td>
+<td>Name of the token.</td>
+</tr>
+<tr>
+<td>number</td>
+<td>string</td>
+<td><code>"2"</code></td>
+<td>Number of the token card.</td>
+</tr>
+<tr>
+<td>power</td>
+<td>string</td>
+<td><code>"2"</code></td>
+<td>Power of the creature.</td>
+</tr>
+<tr>
+<td>reverseRelated</td>
+<td>array(string)</td>
+<td><code>["Assemble","Conclave Cavalier","Conclave Guildmage","Ledev Champion","Sprouting Renewal"]</code></td>
+<td>List of cards in the same set which reference the token.</td>
+</tr>
+<tr>
+<td>text</td>
+<td>string</td>
+<td><code>"Vigilance"</code></td>
+<td>Rules text of the token.</td>
+</tr>
+<tr>
+<td>toughness</td>
+<td>string</td>
+<td><code>"4"</code></td>
+<td>Toughness of the creature.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td><code>"Token Creature — Elf Knight"</code></td>
+<td>Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as if a card type.</td>
+</tr>
+<tr>
+<td>uuid</td>
+<td>string</td>
+<td><code>"f43a5ec2-8898-4645-84d7-b7218682be9b"</code></td>
+<td>A universal unique id generated for the token card.</td>
+</tr>
+<tr>
+<td>watermark</td>
+<td>string</td>
+<td><code>"selesnya"</code></td>
+<td>Name of the watermark on the card.</td>
+</tr>
+</tbody>
+</table>
+<p><strong>Set</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cards</td>
+<td>array(object)</td>
+<td></td>
+<td>List of cards. (See Card table.)</td>
+</tr>
+<tr>
+<td>code</td>
+<td>string</td>
+<td><code>"m19"</code></td>
+<td>Set code for the set.</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>object</td>
+<td><code>{"date": “2018-09-28","version": "4.0.0"}</code></td>
+<td>Keys are date or version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.</td>
+</tr>
+<tr>
+<td>mtgoCode</td>
+<td>string</td>
+<td><code>"m19"</code></td>
+<td>Set code for the set as it appears on Magic: The Gathering Online.</td>
+</tr>
+<tr>
+<td>releaseDate</td>
+<td>string</td>
+<td><code>"2018-07-13"</code></td>
+<td>Date of release for the set.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td><code>"core"</code></td>
+<td>Type of set. Can be core, expansion, masters, masterpiece, from_the_vault, spellbook, premium_deck, duel_deck, draft_innovation, commander, planechase, archenemy, vanguard, funny, starter, box, promo, token or memorabilia.</td>
+</tr>
+<tr>
+<td>tokens</td>
+<td>array(object)</td>
+<td></td>
+<td>List of tokens for the set. (See Token table.)</td>
+</tr>
+</tbody>
+</table>
 </section>
         <section id="extras" class="body">
                 <div class="blogroll">
                         <h2>links</h2>
                         <ul>
-                            <li><a href="http://getpelican.com/">Pelican</a></li>
-                            <li><a href="http://python.org/">Python.org</a></li>
-                            <li><a href="http://jinja.pocoo.org/">Jinja2</a></li>
-                            <li><a href="#">You can modify those links in your config file</a></li>
+                            <li><a href="https://mtgjson.com/">MTGJSON</a></li>
+                            <li><a href="https://github.com/mtgjson/mtgjson4">GitHub</a></li>
+                            <li><a href="https://discord.gg/Dfwjftx">Discord server</a></li>
                         </ul>
                 </div><!-- /.blogroll -->
-                <div class="social">
-                        <h2>social</h2>
-                        <ul>
-
-                            <li><a href="#">You can add links in your config file</a></li>
-                            <li><a href="#">Another social link</a></li>
-                        </ul>
-                </div><!-- /.social -->
         </section><!-- /#extras -->
 
         <footer id="contentinfo" class="body">
