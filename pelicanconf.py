@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'MTGJSON Developers'
 SITENAME = 'MTGJSON 4'
-SITEURL = ''
+SITEURL = 'https://mtgjson.com/v4/'
 
 PATH = 'content'
 
@@ -31,7 +31,7 @@ MARKDOWN = {
 # Blogroll
 LINKS = (('MTGJSON', 'https://mtgjson.com/'),
          ('GitHub', 'https://github.com/mtgjson/mtgjson4'),
-         ('Discord server', 'https://discord.gg/Dfwjftx'),)
+         ('Discord server', 'https://discord.gg/74GUQDE'),)
 
 # Social widget
 # SOCIAL = (('You can add links in your config file', '#'),
