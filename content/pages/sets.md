@@ -9,7 +9,7 @@ Summary: Download sets
 
 &nbsp;|&nbsp;|&nbsp;
 ----|----|----
-  [LEA](json/LEA.json)<br>1993-08-05<br>Limited Edition Alpha |   [LEB](json/LEB.json)<br>1993-10-04<br>Limited Edition Beta |   [2ED](json/2ED.json)<br>1993-12-01<br>Unlimited Edition
+  ![LEA](/path/to/img.jpg) [LEA](json/LEA.json)<br>1993-08-05<br>Limited Edition Alpha |   [LEB](json/LEB.json)<br>1993-10-04<br>Limited Edition Beta |   [2ED](json/2ED.json)<br>1993-12-01<br>Unlimited Edition
   [CED](json/CED.json)<br>1993-12-10<br>Collectors’ Edition |   [CEI](json/CEI.json)<br>1993-12-10<br>Intl. Collectors’ Edition |   [ARN](json/ARN.json)<br>1993-12-17<br>Arabian Nights
   [ATQ](json/ATQ.json)<br>1994-03-04<br>Antiquities |   [3ED](json/3ED.json)<br>1994-04-01<br>Revised Edition |   [LEG](json/LEG.json)<br>1994-06-01<br>Legends
   [SUM](json/SUM.json)<br>1994-06-21<br>Summer Magic / Edgar |   [DRK](json/DRK.json)<br>1994-08-01<br>The Dark |   [FEM](json/FEM.json)<br>1994-11-01<br>Fallen Empires
@@ -47,7 +47,7 @@ Summary: Download sets
   [DDE](json/DDE.json)<br>2010-03-19<br>Duel Decks: Phyrexia vs. the Coalition |   [ROE](json/ROE.json)<br>2010-04-23<br>Rise of the Eldrazi |   [DPA](json/DPA.json)<br>2010-06-04<br>Duels of the Planeswalkers
   [ARC](json/ARC.json)<br>2010-06-18<br>Archenemy |   [M11](json/M11.json)<br>2010-07-16<br>Magic 2011 |   [V10](json/V10.json)<br>2010-08-27<br>From the Vault: Relics
   [DDF](json/DDF.json)<br>2010-09-03<br>Duel Decks: Elspeth vs. Tezzeret |   [SOM](json/SOM.json)<br>2010-10-01<br>Scars of Mirrodin |   [TD0](json/TD0.json)<br>2010-11-08<br>Magic Online Theme Decks
-  [PD2](json/PD2.json)<br>2010-11-19<br>Premium Deck Series: Fire and Lightning |   [OLGC](json/OLGC.json)<br>2011-01-01<br>Legacy Championship |   [ME4](json/ME4.json)<br>2011-01-10<br>Masters Edition IV [MBS](json/MBS.json)<br>2011-02-04<br>Mirrodin Besieged |   [DDG](json/DDG.json)<br>2011-04-01<br>Duel Decks: Knights vs. Dragons |   [NPH](json/NPH.json)<br>2011-05-13<br>New Phyrexia
+  [PD2](json/PD2.json)<br>2010-11-19<br>Premium Deck Series: Fire and Lightning |   [OLGC](json/OLGC.json)<br>2011-01-01<br>Legacy Championship |   [ME4](json/ME4.json)<br>2011-01-10<br>Masters Edition IV | [MBS](json/MBS.json)<br>2011-02-04<br>Mirrodin Besieged |   [DDG](json/DDG.json)<br>2011-04-01<br>Duel Decks: Knights vs. Dragons |   [NPH](json/NPH.json)<br>2011-05-13<br>New Phyrexia
   [TD2](json/TD2.json)<br>2011-05-14<br>Duel Decks: Mirrodin Pure vs. New Phyrexia |   [CMD](json/CMD.json)<br>2011-06-17<br>Commander 2011 |   [M12](json/M12.json)<br>2011-07-15<br>Magic 2012
   [V11](json/V11.json)<br>2011-08-26<br>From the Vault: Legends |   [DDH](json/DDH.json)<br>2011-09-02<br>Duel Decks: Ajani vs. Nicol Bolas |   [ISD](json/ISD.json)<br>2011-09-30<br>Innistrad
   [PD3](json/PD3.json)<br>2011-11-18<br>Premium Deck Series: Graveborn |   [DKA](json/DKA.json)<br>2012-02-03<br>Dark Ascension |   [DDI](json/DDI.json)<br>2012-03-30<br>Duel Decks: Venser vs. Koth

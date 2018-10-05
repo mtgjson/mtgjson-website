@@ -28,6 +28,11 @@ MARKDOWN = {
     'output_format': 'html5',
 }
 
+JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
+THEME = '/Users/martinproud/Downloads/mtgjson4-website/themes/pelican-bootstrap3'
+PLUGIN_PATHS = ['/Users/martinproud/Downloads/mtgjson4-website/plugins']
+PLUGINS = ['i18n_subsites']
+
 # Blogroll
 LINKS = (('MTGJSON', 'https://mtgjson.com/'),
          ('GitHub', 'https://github.com/mtgjson/mtgjson4'),

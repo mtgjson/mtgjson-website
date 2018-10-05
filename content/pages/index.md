@@ -6,12 +6,11 @@ Tags: mtgjson, mtgjson4
 Slug: index
 Authors: MTGJSON Developers
 Summary: Short version for index and feeds
-Status: hidden
 
 **Downloads**
 
-* AllCards
-* AllSets
+* [AllCards](json/AllCards.json)
+* [AllSets](json/AllSets.json)
 
-* AllCards zipped
-* AllSets zipped
+* [AllCards zipped](json/AllCards.json.zip)
+* [AllSets zipped](json/AllSets.json.zip)

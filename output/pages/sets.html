@@ -1,27 +1,84 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-        <meta charset="utf-8" />
-        <title>Sets</title>
-        <link rel="stylesheet" href="/theme/css/main.css" />
+    <title>Sets - MTGJSON 4</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-        <!--[if IE]>
-            <script src="https://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-        <![endif]-->
+
+
+<link rel="canonical" href="/pages/sets.html">
+
+        <meta name="author" content="MTGJSON Developers" />
+        <meta name="description" content="Download sets" />
+
+    <meta property="og:site_name" content="MTGJSON 4" />
+    <meta property="og:type" content="article"/>
+    <meta property="og:title" content="Sets"/>
+    <meta property="og:url" content="/pages/sets.html"/>
+    <meta property="og:description" content="Download sets" />
+
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
+
+
+
+
+
 </head>
+<body>
 
-<body id="index" class="home">
-        <header id="banner" class="body">
-                <h1><a href="/">MTGJSON 4 </a></h1>
-                <nav><ul>
-                    <li><a href="/pages/docs.html">Documentation</a></li>
-                    <li class="active"><a href="/pages/sets.html">Sets</a></li>
-                </ul></nav>
-        </header><!-- /#banner -->
-<section id="content" class="body">
-    <h1 class="entry-title">Sets</h1>
-    
-    <table>
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+    <div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="/" class="navbar-brand">
+MTGJSON 4            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                         <li><a href="/pages/docs.html">
+                             Documentation
+                          </a></li>
+                         <li><a href="/pages/index.html">
+                             MTGJSON
+                          </a></li>
+                         <li class="active"><a href="/pages/sets.html">
+                             Sets
+                          </a></li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+
+<!-- Banner -->
+<!-- End Banner -->
+
+<!-- Content Container -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+    <section id="content" class="body">
+        <h1 class="entry-title">Sets</h1>
+        
+        <div class="entry-content">
+            <table>
 <thead>
 <tr>
 <th>&nbsp;</th>
@@ -31,7 +88,7 @@
 </thead>
 <tbody>
 <tr>
-<td><a href="json/LEA.json">LEA</a><br>1993-08-05<br>Limited Edition Alpha</td>
+<td><img alt="LEA" src="/path/to/img.jpg"> <a href="json/LEA.json">LEA</a><br>1993-08-05<br>Limited Edition Alpha</td>
 <td><a href="json/LEB.json">LEB</a><br>1993-10-04<br>Limited Edition Beta</td>
 <td><a href="json/2ED.json">2ED</a><br>1993-12-01<br>Unlimited Edition</td>
 </tr>
@@ -223,7 +280,7 @@
 <tr>
 <td><a href="json/PD2.json">PD2</a><br>2010-11-19<br>Premium Deck Series: Fire and Lightning</td>
 <td><a href="json/OLGC.json">OLGC</a><br>2011-01-01<br>Legacy Championship</td>
-<td><a href="json/ME4.json">ME4</a><br>2011-01-10<br>Masters Edition IV <a href="json/MBS.json">MBS</a><br>2011-02-04<br>Mirrodin Besieged</td>
+<td><a href="json/ME4.json">ME4</a><br>2011-01-10<br>Masters Edition IV</td>
 </tr>
 <tr>
 <td><a href="json/TD2.json">TD2</a><br>2011-05-14<br>Duel Decks: Mirrodin Pure vs. New Phyrexia</td>
@@ -387,25 +444,61 @@
 </tr>
 </tbody>
 </table>
+        </div>
+    </section>
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+<!-- Sidebar -->
+<section class="well well-sm">
+  <ul class="list-group list-group-flush">
+
+<!-- Sidebar/Links -->
+<li class="list-group-item">
+  <h4><i class="fa fa-external-link-square fa-lg"></i><span class="icon-label">Links</span></h4>
+  <ul class="list-group" id="links">
+    <li class="list-group-item">
+      <a href="https://mtgjson.com/" target="_blank">MTGJSON</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://github.com/mtgjson/mtgjson4" target="_blank">GitHub</a>
+    </li>
+    <li class="list-group-item">
+      <a href="https://discord.gg/Dfwjftx" target="_blank">Discord server</a>
+    </li>
+  </ul>
+</li>
+<!-- End Sidebar/Links -->
+  </ul>
 </section>
-        <section id="extras" class="body">
-                <div class="blogroll">
-                        <h2>links</h2>
-                        <ul>
-                            <li><a href="https://mtgjson.com/">MTGJSON</a></li>
-                            <li><a href="https://github.com/mtgjson/mtgjson4">GitHub</a></li>
-                            <li><a href="https://discord.gg/Dfwjftx">Discord server</a></li>
-                        </ul>
-                </div><!-- /.blogroll -->
-        </section><!-- /#extras -->
+<!-- End Sidebar -->            </aside>
+        </div>
+    </div>
+</div>
+<!-- End Content Container -->
 
-        <footer id="contentinfo" class="body">
-                <address id="about" class="vcard body">
-                Proudly powered by <a href="http://getpelican.com/">Pelican</a>, which takes great advantage of <a href="http://python.org">Python</a>.
-                </address><!-- /#about -->
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy;  MTGJSON Developers
+            &middot; Powered by <a href="https://github.com/getpelican/pelican-themes/tree/master/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="/theme/js/jquery.min.js"></script>
 
-                <p>The theme is by <a href="http://coding.smashingmagazine.com/2009/08/04/designing-a-html-5-layout-from-scratch/">Smashing Magazine</a>, thanks!</p>
-        </footer><!-- /#contentinfo -->
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="/theme/js/respond.min.js"></script>
+
+
+
 
 </body>
 </html>
