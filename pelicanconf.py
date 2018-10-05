@@ -4,7 +4,13 @@ from __future__ import unicode_literals
 
 AUTHOR = 'MTGJSON Developers'
 SITENAME = 'MTGJSON 4'
-SITEURL = 'https://mtgjson.com/v4/'
+
+# TODO
+# Setting the siteurl breaks testing. Commenting out for testing purposes.
+# Will re-enable. Long term, there is likely a setting to satisft both deploy
+# and testing modes.
+
+# SITEURL = 'https://mtgjson.com/v4'
 
 PATH = 'content'
 
@@ -32,6 +38,9 @@ JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
 THEME = '/Users/martinproud/Downloads/mtgjson4-website/themes/pelican-bootstrap3'
 PLUGIN_PATHS = ['/Users/martinproud/Downloads/mtgjson4-website/plugins']
 PLUGINS = ['i18n_subsites']
+
+CUSTOM_CSS = 'css/mtgjson4.css'
+STATIC_PATHS = ['css']
 
 # Blogroll
 LINKS = (('MTGJSON', 'https://mtgjson.com/'),

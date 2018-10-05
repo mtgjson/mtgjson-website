@@ -1,0 +1,19 @@
+i.set {
+  height: 2em;
+  width: 2em;
+  display: inline-block;
+  background-repeat: no-repeat;
+  margin-top: 2em;
+}
+
+.entry-content a {
+  text-decoration: none;
+  border: 1px solid;
+  background-color: lightgreen;
+  padding: 0.125em 0.5em;
+  border-radius: 0.5em;
+}
+
+i.fas {
+  display: inline-block;
+}
