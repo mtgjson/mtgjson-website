@@ -35,8 +35,8 @@ MARKDOWN = {
 }
 
 JINJA_ENVIRONMENT = {'extensions': ['jinja2.ext.i18n']}
-THEME = '/Users/martinproud/Downloads/mtgjson4-website/themes/pelican-bootstrap3'
-PLUGIN_PATHS = ['/Users/martinproud/Downloads/mtgjson4-website/plugins']
+THEME = '/Users/zachary/Downloads/pelican-themes-master/pelican-bootstrap3'
+PLUGIN_PATHS = ['/Users/zachary/Desktop/Development/mtgjson4-website/plugins']
 PLUGINS = ['i18n_subsites']
 
 CUSTOM_CSS = 'css/mtgjson4.css'
