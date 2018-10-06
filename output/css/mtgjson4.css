@@ -9,9 +9,10 @@ i.set {
 .entry-content a {
   text-decoration: none;
   border: 1px solid;
-  background-color: lightgreen;
-  padding: 0.125em 0.5em;
+  background-color: green;
+  padding: 0.25em 0.625em;
   border-radius: 0.5em;
+  color: white;
 }
 
 i.fas {
