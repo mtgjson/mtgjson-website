@@ -79,7 +79,63 @@ MTGJSON 4            </a>
         <h1 class="entry-title">Documentation</h1>
         
         <div class="entry-content">
-            <p><strong>Card</strong></p>
+            <p><strong>Set</strong></p>
+<table>
+<thead>
+<tr>
+<th>Property</th>
+<th>Value</th>
+<th>Example</th>
+<th>Description</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td>cards</td>
+<td>array(object)</td>
+<td></td>
+<td>List of cards. (See Card table.)</td>
+</tr>
+<tr>
+<td>code</td>
+<td>string</td>
+<td><code>"m19"</code></td>
+<td>Set code for the set.</td>
+</tr>
+<tr>
+<td>meta</td>
+<td>object</td>
+<td><code>{"date": “2018-09-28","version": "4.0.0"}</code></td>
+<td>Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.</td>
+</tr>
+<tr>
+<td>mtgoCode</td>
+<td>string</td>
+<td><code>"m19"</code></td>
+<td>Set code for the set as it appears on Magic: The Gathering Online.</td>
+</tr>
+<tr>
+<td>releaseDate&nbsp;&nbsp;</td>
+<td>string</td>
+<td><code>"2018-07-13"</code></td>
+<td>Date of release for the set.</td>
+</tr>
+<tr>
+<td>type</td>
+<td>string</td>
+<td><code>"core"</code></td>
+<td>Type of set. Can be core, expansion, masters, masterpiece, from_the_vault, spellbook, premium_deck, duel_deck, draft_innovation, commander, planechase, archenemy, vanguard, funny, starter, box, promo, token or memorabilia.</td>
+</tr>
+<tr>
+<td>tokens</td>
+<td>array(object)</td>
+<td></td>
+<td>List of tokens for the set. (See Token table.)</td>
+</tr>
+</tbody>
+</table>
+<p><br><br><br>
+<strong>Card</strong></p>
 <table>
 <thead>
 <tr>
@@ -104,7 +160,7 @@ MTGJSON 4            </a>
 </tr>
 <tr>
 <td>colorIdentity</td>
-<td>array(string)</td>
+<td>array(string)&nbsp;&nbsp;</td>
 <td><code>["B","R","U"]</code></td>
 <td>List of all colors in card’s mana cost, rules text and any color indicator.</td>
 </tr>
@@ -115,7 +171,7 @@ MTGJSON 4            </a>
 <td>List of all colors in card’s mana cost and any color indicator.</td>
 </tr>
 <tr>
-<td>convertedManaCost</td>
+<td>convertedManaCost&nbsp;&nbsp;</td>
 <td>float</td>
 <td><code>4.0</code></td>
 <td>The converted mana cost of the card.</td>
@@ -248,7 +304,7 @@ MTGJSON 4            </a>
 </tr>
 <tr>
 <td>printings</td>
-<td>array(string)</td>
+<td>array(string)&nbsp;&nbsp;</td>
 <td><code>["M19","PM19"]</code></td>
 <td>List of sets the card was printed in.</td>
 </tr>
@@ -326,7 +382,8 @@ MTGJSON 4            </a>
 </tr>
 </tbody>
 </table>
-<p><strong>Token</strong></p>
+<p><br><br><br>
+<strong>Token</strong></p>
 <table>
 <thead>
 <tr>
@@ -386,8 +443,8 @@ MTGJSON 4            </a>
 <td>Power of the creature.</td>
 </tr>
 <tr>
-<td>reverseRelated</td>
-<td>array(string)</td>
+<td>reverseRelated&nbsp;&nbsp;</td>
+<td>array(string)&nbsp;&nbsp;</td>
 <td><code>["Assemble","Conclave Cavalier","Conclave Guildmage","Ledev Champion","Sprouting Renewal"]</code></td>
 <td>List of cards in the same set which reference the token.</td>
 </tr>
@@ -420,61 +477,6 @@ MTGJSON 4            </a>
 <td>string</td>
 <td><code>"selesnya"</code></td>
 <td>Name of the watermark on the card.</td>
-</tr>
-</tbody>
-</table>
-<p><strong>Set</strong></p>
-<table>
-<thead>
-<tr>
-<th>Property</th>
-<th>Value</th>
-<th>Example</th>
-<th>Description</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>cards</td>
-<td>array(object)</td>
-<td></td>
-<td>List of cards. (See Card table.)</td>
-</tr>
-<tr>
-<td>code</td>
-<td>string</td>
-<td><code>"m19"</code></td>
-<td>Set code for the set.</td>
-</tr>
-<tr>
-<td>meta</td>
-<td>object</td>
-<td><code>{"date": “2018-09-28","version": "4.0.0"}</code></td>
-<td>Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.</td>
-</tr>
-<tr>
-<td>mtgoCode</td>
-<td>string</td>
-<td><code>"m19"</code></td>
-<td>Set code for the set as it appears on Magic: The Gathering Online.</td>
-</tr>
-<tr>
-<td>releaseDate</td>
-<td>string</td>
-<td><code>"2018-07-13"</code></td>
-<td>Date of release for the set.</td>
-</tr>
-<tr>
-<td>type</td>
-<td>string</td>
-<td><code>"core"</code></td>
-<td>Type of set. Can be core, expansion, masters, masterpiece, from_the_vault, spellbook, premium_deck, duel_deck, draft_innovation, commander, planechase, archenemy, vanguard, funny, starter, box, promo, token or memorabilia.</td>
-</tr>
-<tr>
-<td>tokens</td>
-<td>array(object)</td>
-<td></td>
-<td>List of tokens for the set. (See Token table.)</td>
 </tr>
 </tbody>
 </table>

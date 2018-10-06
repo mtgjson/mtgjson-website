@@ -9,8 +9,6 @@ Summary: Short version for index and feeds
 
 **Downloads**
 
-* [AllCards](json/AllCards.json)
-* [AllSets](json/AllSets.json)
+[<i class="fa fa-file-text-o" aria-hidden="true"></i> All Cards](json/AllCards.json) [<i class="fa fa-file-archive-o" aria-hidden="true"></i> All Cards Zip](json/AllCards.json.zip)
 
-* [AllCards zipped](json/AllCards.json.zip)
-* [AllSets zipped](json/AllSets.json.zip)
+[<i class="fa fa-file-text-o" aria-hidden="true"></i> All Sets](json/AllSets.json) [<i class="fa fa-file-archive-o" aria-hidden="true"></i> All Sets Zip](json/AllSets.json.zip)
