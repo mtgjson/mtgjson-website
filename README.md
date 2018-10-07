@@ -16,7 +16,7 @@ $ pip3 install pelican Markdown
 
 4) Build the site using pelican:
 ```sh
-$ pelican /path/to/content -s /path/to/pleicanconf.py
+$ pelican /path/to/content -s /path/to/pelicanconf.py
 ```
 
 5) Start up a local server
