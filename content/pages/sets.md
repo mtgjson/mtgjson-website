@@ -7,6 +7,15 @@ Slug: sets
 Authors: MTGJSON Developers
 Summary: Download sets
 
+
+&nbsp;|&nbsp;|&nbsp;
+----|----|----
+<div class="Media Media--center"><figure class="Media-figure"><img class="Media-figure" src="https://img.scryfall.com/sets/lea.svg" height="40px" width="40px"/></figure><div class="Media-body">Limited Edition Alpha<br>LEA — 1993-08-05<br><div class="downloads"><a href="json/LEA.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> JSON</a><a href="json/LEA.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> ZIP</a></div></div></div> | <div class="Media Media--center"><figure class="Media-figure"><img class="Media-figure" src="https://img.scryfall.com/sets/leb.svg" height="40px" width="40px"/></figure><div class="Media-body">Limited Edition Beta<br>LEB — 1993-10-04<br><div class="downloads"><a href="json/LEB.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> JSON</a><a href="json/LEB.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> ZIP</a></div></div></div> | <div class="Media Media--center"><figure class="Media-figure"><img class="Media-figure" src="https://img.scryfall.com/sets/2ed.svg" height="40px" width="40px"/></figure><div class="Media-body">Unlimited Edition<br>LEB — 1993-12-01<br><div class="downloads"><a href="json/2ED.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> JSON</a><a href="json/2ED.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> ZIP</a></div></div></div>
+
+
+
+<br><br>
+
 &nbsp;|&nbsp;|&nbsp;
 ----|----|----
   <i class="set" style="background-image: url('https://img.scryfall.com/sets/lea.svg')"></i> Limited Edition Alpha <br>LEA — 1993-08-05 <br><a href="json/LEA.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> Download</a><a href="json/LEA.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Zip</a> |   <i class="set" style="background-image: url('https://img.scryfall.com/sets/leb.svg')"></i> Limited Edition Beta <br>LEB — 1993-10-04 <br><a href="json/LEB.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> Download</a><a href="json/LEB.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Zip</a> |   <i class="set" style="background-image: url('https://img.scryfall.com/sets/2ed.svg')"></i> Unlimited Edition<br>2ED — 1993-12-01 <br><a href="json/2ED.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> Download</a><a href="json/2ED.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> Zip</a> 

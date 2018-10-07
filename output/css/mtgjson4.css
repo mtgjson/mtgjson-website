@@ -10,11 +10,53 @@ i.set {
   text-decoration: none;
   border: 1px solid;
   background-color: green;
-  padding: 0.25em 0.625em;
+  padding: 0.375em 0.7em;
   border-radius: 0.5em;
   color: white;
 }
 
 i.fas {
   display: inline-block;
+}
+
+.downloads {
+  padding-top: 0.3em;
+}
+
+.Media {
+  display: flex;
+  align-items: flex-start;
+  margin-bottom: 1em;
+}
+
+.Media-figure {
+  margin-right: 0.4em;
+}
+
+.Media-body {
+  flex: 1;
+}
+.Media-body {
+  padding-right:4em;
+}
+.Media-body :last-child {
+  margin-bottom: 0;
+
+}
+
+.Media-title {
+  margin: 0 0 .5em;
+}
+
+.Media--center {
+  align-items: center;
+}
+
+.Media--reverse > .Media-figure {
+  order: 1;
+  margin: 0 0 0 1em;
+}
+
+.Grid-cell {
+  background-color:hsla(31,15%,50%,.1);
 }
