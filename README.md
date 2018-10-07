@@ -1,24 +1,27 @@
-MTGJSON 4 Website ReadMe
+MTGJSON v4 Website
 ========================
 
-Building the website
+## Site Information
+MTGJSON 4's website is generated using [Pelican 3.7.1](http://docs.getpelican.com/en/stable/) and [Markdown 3.0.1](https://python-markdown.github.io/).
 
-The files for MTGJSON 4 website are generated using Pelican. To generate new files, you will need to install the Python package, Pelican.
+## Steps to Build
+1) Install python3 dependencies:
+```sh
+$ pip3 install pelican Markdown
+```
 
-`pip install pelican`
+2) Make changes to files in the `content/` directory
 
-You will also need the Python Markdown package in order to use Markdown files with the website.
+3) If necessary, modify the config files (`pelicanconf.py`, `publishconf.py`)
 
-`pip install Markdown`
+4) Build the site using pelican:
+```sh
+$ pelican /path/to/content -s /path/to/pelicanconf.py
+```
 
-Most website data is stored in files in `pages/`. The configuration for the website is in `pelicanconf.py` and `publishconf.py`.
+5) Start up a local server
+```sh
+$ python3 -m http.server --directory output
+```
 
-To build the site, run the following command:
-
-`pelican /path/to/content -s /path/to/pelicanconf.py`
-
-To test out how the files look, you can create a simple HTTP server:
-
-`cd output`
-
-`python -m http.server`
+6) Review the output via `http://0.0.0.0:8000` (the default website for http.server)
