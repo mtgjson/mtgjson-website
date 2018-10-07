@@ -24,4 +24,4 @@ $ pelican /path/to/content -s /path/to/pelicanconf.py
 $ python3 -m http.server --directory output
 ```
 
-6) Review the output via `0.0.0.0:8000` (the default website for http.server)
+6) Review the output via `http://0.0.0.0:8000` (the default website for http.server)
