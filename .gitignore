@@ -1,5 +1,4 @@
-output/*
-content/.DS_Store
+output/
 Makefile
 .DS_Store
 *.pyc
