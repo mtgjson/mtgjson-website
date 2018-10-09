@@ -7,7 +7,7 @@ SITENAME = 'MTGJSON 4'
 
 # TODO
 # Setting the siteurl breaks testing. Commenting out for testing purposes.
-# Will re-enable. Long term, there is likely a setting to satisft both deploy
+# Will re-enable. Long term, there is likely a setting to satisfy both deploy
 # and testing modes.
 
 # SITEURL = 'https://mtgjson.com/v4'

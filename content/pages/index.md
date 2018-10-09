@@ -7,6 +7,8 @@ Slug: index
 Authors: MTGJSON Developers
 Summary: Short version for index and feeds
 
+![MTGJSON](/img/logo.png "MTGJSON")
+
 **Downloads**
 
 * [AllCards](json/AllCards.json)
