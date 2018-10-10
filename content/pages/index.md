@@ -7,10 +7,9 @@ Slug: index
 Authors: MTGJSON Developers
 Summary: Short version for index and feeds
 
-**Downloads**
+<span id="logo">![MTGJSON4](/img/logo.png)</span>
 
-* [AllCards](json/AllCards.json)
-* [AllSets](json/AllSets.json)
-
-* [AllCards zipped](json/AllCards.json.zip)
-* [AllSets zipped](json/AllSets.json.zip)
+&nbsp;|&nbsp;
+----:|:----
+<a href="json/AllCards.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Cards</a>|<a href="json/AllCards.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Cards Zipped</a><br>
+<a href="json/AllSets.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Sets</a>|<a href="json/AllSets.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Sets Zipped</a><br>

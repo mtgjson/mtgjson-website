@@ -7,7 +7,7 @@ SITENAME = 'MTGJSON 4'
 
 # TODO
 # Setting the siteurl breaks testing. Commenting out for testing purposes.
-# Will re-enable. Long term, there is likely a setting to satisft both deploy
+# Will re-enable. Long term, there is likely a setting to satisfy both deploy
 # and testing modes.
 
 # SITEURL = 'https://mtgjson.com/v4'
@@ -40,7 +40,7 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['i18n_subsites']
 
 CUSTOM_CSS = 'css/mtgjson4.css'
-STATIC_PATHS = ['css']
+STATIC_PATHS = ['css', 'img']
 
 # Blogroll
 LINKS = (('MTGJSON', 'https://mtgjson.com/'),

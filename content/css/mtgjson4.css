@@ -29,3 +29,29 @@ i.fas {
   padding-top: 0.3em;
 }
 
+img[alt="MTGJSON4"] {
+  width: 400px;
+}
+
+#logo {
+  text-align: center;
+  display: block;
+  margin-top: 8em;
+}
+
+.centerme {
+  text-align: center;
+}
+
+.entry-content table {
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.entry-title {
+  display: none;
+}
+
+td {
+  padding: 4px;
+}

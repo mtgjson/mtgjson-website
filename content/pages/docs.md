@@ -7,8 +7,9 @@ Slug: docs
 Authors: MTGJSON Developers
 Summary: Short version for index and feeds
 
-**Card**
+<h1>Documentation</h1>
 
+<h3>Card</h3>
 Property | Value | Example | Description
 -----|-----|-----|-----
 artist | string | `"Svetlin Velinov"` | Name of artist.
@@ -50,11 +51,9 @@ toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.
 uuid | string | `"7b215968-93a6-4278-ac61-4e3e8c3c3943"` | A universal unique id generated for the card.
-
-**Token**
-
-Property | Value | Example | Description
------|-----|-----|-----
+&nbsp; | &nbsp; | &nbsp; | &nbsp;
+<h3>Token</h3> | &nbsp; | &nbsp; | &nbsp;
+**Property** | **Value** | **Example** | **Description**
 artist | string | `"Jack Wang"` | Name of artist.
 bordercolor | string | `"black"` | Color of the border. Can be black, borderless, gold, silver, or white.
 colorIdentity | array(string) | `["G","W"]` | List of all colors in card’s mana cost, rules text and any color indicator.
@@ -69,11 +68,9 @@ toughness | string | `"4"` | Toughness of the creature.
 type | string | `"Token Creature — Elf Knight"` | Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as if a card type.
 uuid | string | `"f43a5ec2-8898-4645-84d7-b7218682be9b"` | A universal unique id generated for the token card.
 watermark | string | `"selesnya"` | Name of the watermark on the card.
-
-**Set**
-
-Property | Value | Example | Description
------|-----|-----|-----
+&nbsp; | &nbsp; | &nbsp; | &nbsp;
+<h3>Set</h3> | &nbsp; | &nbsp; | &nbsp;
+**Property** | **Value** | **Example** | **Description**
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
 meta | object | `{"date": “2018-09-28","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
