@@ -8,7 +8,7 @@ Authors: MTGJSON Developers
 Summary: Short version for index and feeds
 Page-order: 1
 
-<span id="logo">![MTGJSON4](/img/logo.png)</span>
+<span id="logo">![MTGJSON4](img/logo.png)</span>
 
 &nbsp;|&nbsp;
 ----:|:----

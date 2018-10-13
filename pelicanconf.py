@@ -40,9 +40,9 @@ DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
 
 MENUITEMS = (
-    ('Sets', '/sets.html'),
-    ('Changelog', '/changelog.html'),
-    ('Documentation', '/docs.html'),
+    ('Sets', 'sets.html'),
+    ('Changelog', 'changelog.html'),
+    ('Documentation', 'docs.html'),
 )
 
 INDEX_SAVE_AS = None
@@ -53,7 +53,7 @@ PAGE_SAVE_AS = '{slug}.html'
 PAGE_ORDER_BY = 'page-order'
 
 # Blogroll
-LINKS = (('MTGJSON', 'https://mtgjson.com/'),
+LINKS = (('MTGJSON', SITEURL),
          ('GitHub', 'https://github.com/mtgjson/mtgjson4'),
          ('Discord server', 'https://discord.gg/74GUQDE'),)
 
