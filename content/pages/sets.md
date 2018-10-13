@@ -6,8 +6,9 @@ Tags: mtgjson, mtgjson4
 Slug: sets
 Authors: MTGJSON Developers
 Summary: Download sets
+Page-order: 2
 
-<h1>Sets</h1>
+# Sets
 
 &nbsp;|&nbsp;|&nbsp;
 ----|----|----

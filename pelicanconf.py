@@ -4,13 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'MTGJSON Developers'
 SITENAME = 'MTGJSON 4'
-
-# TODO
-# Setting the siteurl breaks testing. Commenting out for testing purposes.
-# Will re-enable. Long term, there is likely a setting to satisfy both deploy
-# and testing modes.
-
-# SITEURL = 'https://mtgjson.com/v4'
+SITEURL = 'https://mtgjson.com/v4'
 
 PATH = 'content'
 
@@ -42,6 +36,21 @@ PLUGINS = ['i18n_subsites']
 CUSTOM_CSS = 'css/mtgjson4.css'
 STATIC_PATHS = ['css', 'img']
 
+DISPLAY_CATEGORIES_ON_MENU = False
+DISPLAY_PAGES_ON_MENU = False
+
+MENUITEMS = (
+    ('Sets', '/sets.html'),
+    ('Changelog', '/changelog.html'),
+    ('Documentation', '/docs.html'),
+)
+
+PAGE_PATHS = ['pages']
+
+PAGE_SAVE_AS = '/'
+
+PAGE_ORDER_BY = 'page-order'
+
 # Blogroll
 LINKS = (('MTGJSON', 'https://mtgjson.com/'),
          ('GitHub', 'https://github.com/mtgjson/mtgjson4'),
@@ -54,4 +63,4 @@ LINKS = (('MTGJSON', 'https://mtgjson.com/'),
 DEFAULT_PAGINATION = False
 
 # Uncomment following line if you want document-relative URLs when developing
-#RELATIVE_URLS = True
+# RELATIVE_URLS = True
