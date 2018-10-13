@@ -39,8 +39,9 @@ img[alt="MTGJSON4"] {
   margin-top: 8em;
 }
 
-.centerme {
+.splash {
   text-align: center;
+  margin: 1em 0em;
 }
 
 .entry-content table {
@@ -51,6 +52,10 @@ img[alt="MTGJSON4"] {
 
 .entry-title {
   display: none;
+}
+
+.line6 {
+  line-height: 6;
 }
 
 td {

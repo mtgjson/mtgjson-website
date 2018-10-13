@@ -1,6 +1,6 @@
 Title: MTGJSON
 Date: 2018-10-01 00:00
-Modified: 2018-10-01 00:00
+Modified: 2018-10-13 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: index
@@ -9,6 +9,10 @@ Summary: Short version for index and feeds
 Page-order: 1
 
 <span id="logo">![MTGJSON4](img/logo.png)</span>
+
+<div class="splash"><p class="line6">Magic: The Gathering card data in JSON
+<p><h4>Current version: 4.0</h4>
+2018 October 13</div>
 
 &nbsp;|&nbsp;
 ----:|:----
