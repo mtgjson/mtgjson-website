@@ -45,9 +45,10 @@ MENUITEMS = (
     ('Documentation', '/docs.html'),
 )
 
-PAGE_PATHS = ['pages']
+INDEX_SAVE_AS = None
 
-PAGE_SAVE_AS = '/'
+PAGE_PATHS = ['pages']
+PAGE_SAVE_AS = '{slug}.html'
 
 PAGE_ORDER_BY = 'page-order'
 
