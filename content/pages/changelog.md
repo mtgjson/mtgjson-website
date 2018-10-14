@@ -47,7 +47,7 @@ Page-order: 3
 - `convertedManaCost` is a float over an int
 - `multiverseid` is now `multiverseId` (with capital I)
 - `flavor` is now `flavorText`
-- `border is now `borderColor`
+- `border` is now `borderColor`
 - `id` is now `uuid`
 - `legalities` formatting has changed
-- `loyalty` is now a string
+- `loyalty` is now a string over an int
