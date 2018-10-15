@@ -76,10 +76,12 @@ watermark | string | `"selesnya"` | Name of the watermark on the card.
 &nbsp; | &nbsp; | &nbsp; | &nbsp;
 <h3>Set</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
+block | string | `"Theros"` | Block the set was in.
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
 meta | object | `{"date": "2018-10-09","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
+onlineOnly | bool | `false` | Was the set published in paper?Can be `true` or `false`. (If false, it is usually omitted.)
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
