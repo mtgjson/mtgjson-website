@@ -12,6 +12,11 @@ Page-order: 3
 
 ## 4.0.1 <small>(2018-10-15)</small>
 
+### Individual Sets
+#### Changed:
+- `reserved` is now `isReserved` (Consistency)
+- `foilOnly` is now `isFoilOnly` (Consistency)
+- `onlineOnly` is now `isOnlineOnly` (Consistency)
 
 
 ## 4.0 <small>(2018-10-13)</small>
