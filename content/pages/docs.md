@@ -16,7 +16,7 @@ Page-order: 4
 Property | Value | Example | Description
 -----|-----|-----|-----
 artist | string | `"Svetlin Velinov"` | Name of artist.
-bordercolor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
+borderColor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
 colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost, rules text and any color indicator.
 colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).
 convertedManaCost | float | `4.0` | The converted mana cost of the card.
@@ -62,7 +62,7 @@ uuid | string | `"7b215968-93a6-4278-ac61-4e3e8c3c3943"` | A universal unique id
 <h3>Token</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
 artist | string | `"Jack Wang"` | Name of artist.
-bordercolor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
+borderColor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
 colorIdentity | array(string) | `["G","W"]` | List of all colors in card’s mana cost, rules text and any color indicator.
 colors | array(string) | `["G","W"]` | List of all colors in card’s mana cost and any color indicator.
 loyalty | string | `"7"` | Planeswalker loyalty value.
