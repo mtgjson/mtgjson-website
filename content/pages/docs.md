@@ -21,7 +21,7 @@ colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s
 colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator.
 convertedManaCost | float | `4.0` | The converted mana cost of the card.
 flavorText | string | `"\"Whatever hatred destroys, a single act of trust can revive.\""` | Italicized text found below the rules text that has no game function.
-foilOnly | bool | `false` | Can the card only be found in foil? `true` or `false`. (If false, it is usually omitted.)
+isFoilOnly | bool | `false` | Can the card only be found in foil? `true` or `false`. (If false, it is usually omitted.)
 foreignData | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flavorText | string | `"Schwester von Nicol Bolas. Überlebende des Krieges der Drachenältesten. Die bösartigste ihrer Art."` | Flavor text in foreign language.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;language | string | `"German"` | Foreign language of card. Can be `English`, `Spanish`, `French`, `German`, `Italian`, `Portuguese`, `Japanese`, `Korean`, `Russian`, `Simplified Chinese`, or `Traditional Chinese`. Promo cards can be `Hebrew`, `Latin`, `Ancient Greek`, `Arabic`, `Sanskrit`, or `Phyrexian`.
@@ -32,6 +32,8 @@ foreignData | array(object) |  |
 frameVersion | string | `"2015"` | Style of the card frame. Can be `1993`, `1997`, `2003`, `2015`, or `future`.
 hasFoil | bool | `true` | Can the card be found in foil? Can be `true` or `false`. (If false, it is usually omitted.)
 hasNonFoil | bool | `true` | Can the card be found in non-foil? Can be `true` or `false`. (If false, it is usually omitted.)
+isOnlineOnly | bool | `false` | Is the card only available online? Can be `true` or `false`. (If false, it is usually omitted.)
+isOversized | bool | `false` | Is the card oversized? Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
 legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "future": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `future`, `legacy`, `modern`, `standard`, or `vintage`. (Future is used for a revision of the format in which the card will be legal soon.) Values can be `Legal`, `Restricted` and `Banned`. (If the format is not listed, it is assumed the card is not legal in that format.)
 loyalty | string | `"7"` | Planeswalker loyalty value.
@@ -45,13 +47,13 @@ originalType | string | `"Legendary Creature — Elder Dragon"` | Type as origin
 printings | array(string) | `["M19","PM19"]` | List of sets the card was printed in, in uppercase.
 power | string | `"4"` | Power of the creature.
 rarity | string | `"mythic"` | Rarity. Can be `common`, `uncommon`, `rare`, or `mythic`
-reserve | bool | `false` | True or false. (If false, reserve is usually omitted.)
+isReserved | bool | `false` | True or false. (If false, reserve is usually omitted.)
 rulings | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
 subtypes | array(string) | `["Elder","Dragon"]` | List of card subtypes found after em-dash.
-supertypes | array(string) | `["Legendary"]` | List of card subtypes found before em-dash.
-text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery.",` | Rules text of the card.
+supertypes | array(string) | `["Legendary"]` | List of card supertypes found before em-dash.
+text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Rules text of the card.
 toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.
@@ -81,7 +83,7 @@ cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
 meta | object | `{"date": "2018-10-09","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
-onlineOnly | bool | `false` | Was the set published in paper?Can be `true` or `false`. (If false, it is usually omitted.)
+isOnlineOnly | bool | `false` | Was the set published in paper? Can be `true` or `false`. (If false, it is usually omitted.)
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
