@@ -34,8 +34,9 @@ hasFoil | bool | `true` | Can the card be found in foil? Can be `true` or `false
 hasNonFoil | bool | `true` | Can the card be found in non-foil? Can be `true` or `false`. (If false, it is usually omitted.)
 isOnlineOnly | bool | `false` | Is the card only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 isOversized | bool | `false` | Is the card oversized? Can be `true` or `false`. (If false, it is usually omitted.)
+isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
-legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (`Future` is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
+legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
@@ -47,7 +48,6 @@ originalType | string | `"Legendary Creature — Elder Dragon"` | Type as origin
 printings | array(string) | `["M19","PM19"]` | List of sets the card was printed in, in uppercase.
 power | string | `"4"` | Power of the creature.
 rarity | string | `"mythic"` | Rarity. Can be `common`, `uncommon`, `rare`, or `mythic`
-isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
 rulings | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
@@ -58,6 +58,7 @@ toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.
 uuid | string | `"7b215968-93a6-4278-ac61-4e3e8c3c3943"` | A universal unique id generated for the card.
+watermark | string | `""` | Name of the watermark on the card. Can be one of many different values, including a guild name, clan name, or `wotc` for the shooting star.
 &nbsp; | &nbsp; | &nbsp; | &nbsp;
 <h3>Token</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
@@ -74,16 +75,17 @@ text | string | `"Vigilance"` | Rules text of the token.
 toughness | string | `"4"` | Toughness of the creature.
 type | string | `"Token Creature — Elf Knight"` | Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as if a card type.
 uuid | string | `"f43a5ec2-8898-4645-84d7-b7218682be9b"` | A universal unique id generated for the token card.
-watermark | string | `"selesnya"` | Name of the watermark on the card.
+watermark | string | `"selesnya"` | Name of the watermark on the card. Can be one of many different values, including a guild name, clan name, or `wotc` for the shooting star.
 &nbsp; | &nbsp; | &nbsp; | &nbsp;
 <h3>Set</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
 block | string | `"Theros"` | Block the set was in.
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
+isOnlineOnly | bool | `false` | Is the set only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 meta | object | `{"date": "2018-10-13","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
-isOnlineOnly | bool | `false` | Is the set only available online? Can be `true` or `false`. (If false, it is usually omitted.)
+name | string | `"Nicol Bolas, the Ravager"` | Name of the card.
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
