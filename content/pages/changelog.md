@@ -1,6 +1,6 @@
 Title: Changelog
-Date: 2018-10-01 00:00
-Modified: 2018-10-13 00:00
+Date: 2018-10-13 00:00
+Modified: 2018-10-15 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,10 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.0.1 <small>(2018-10-15)</small>
+
+
 
 ## 4.0 <small>(2018-10-13)</small>
 

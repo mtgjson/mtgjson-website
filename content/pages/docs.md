@@ -1,6 +1,6 @@
 Title: Documentation
-Date: 2018-10-01 00:00
-Modified: 2018-10-13 00:00
+Date: 2018-10-13 00:00
+Modified: 2018-10-15 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.0 <small>(2018-10-13)</small>
+## 4.0.1 <small>(2018-10-13)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -35,7 +35,7 @@ hasNonFoil | bool | `true` | Can the card be found in non-foil? Can be `true` or
 isOnlineOnly | bool | `false` | Is the card only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 isOversized | bool | `false` | Is the card oversized? Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
-legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "future": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `future`, `legacy`, `modern`, `standard`, or `vintage`. (Future is used for a revision of the format in which the card will be legal soon.) Values can be `Legal`, `Restricted` and `Banned`. (If the format is not listed, it is assumed the card is not legal in that format.)
+legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. (Future is used for a revision of the format in which the card will be legal soon.) Values can be `Legal`, `Restricted` and `Banned`. (If the format is not listed, it is assumed the card is not legal in that format.)
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
@@ -47,7 +47,7 @@ originalType | string | `"Legendary Creature — Elder Dragon"` | Type as origin
 printings | array(string) | `["M19","PM19"]` | List of sets the card was printed in, in uppercase.
 power | string | `"4"` | Power of the creature.
 rarity | string | `"mythic"` | Rarity. Can be `common`, `uncommon`, `rare`, or `mythic`
-isReserved | bool | `false` | True or false. (If false, reserve is usually omitted.)
+isReserved | bool | `false` | `true` or `false`. (If false, reserve is usually omitted.)
 rulings | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
@@ -81,7 +81,7 @@ watermark | string | `"selesnya"` | Name of the watermark on the card.
 block | string | `"Theros"` | Block the set was in.
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
-meta | object | `{"date": "2018-10-09","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
+meta | object | `{"date": "2018-10-13","version": "4.0.1"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
 isOnlineOnly | bool | `false` | Was the set published in paper? Can be `true` or `false`. (If false, it is usually omitted.)
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
