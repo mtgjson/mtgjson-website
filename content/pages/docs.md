@@ -81,7 +81,7 @@ watermark | string | `"selesnya"` | Name of the watermark on the card.
 block | string | `"Theros"` | Block the set was in.
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
-meta | object | `{"date": "2018-10-13","version": "4.0.1"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
+meta | object | `{"date": "2018-10-13","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
 isOnlineOnly | bool | `false` | Is the set only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
