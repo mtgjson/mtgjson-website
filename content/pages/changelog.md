@@ -18,6 +18,17 @@ Page-order: 3
 - `foilOnly` is now `isFoilOnly` (Consistency)
 - `onlineOnly` is now `isOnlineOnly` (Consistency)
 
+### Other
+- Added `version.json` that will be added to the json/ output folder
+```json
+{
+	"4.0.0": {
+		"date": "2018-10-13",
+		"filesModified": ["SETA", "SETB", "SETC"]
+	}
+}
+```
+
 
 ## 4.0 <small>(2018-10-13)</small>
 
