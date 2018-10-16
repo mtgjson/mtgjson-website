@@ -18,7 +18,7 @@ Property | Value | Example | Description
 artist | string | `"Svetlin Velinov"` | Name of artist.
 bordercolor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
 colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost, rules text and any color indicator.
-colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator.
+colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).
 convertedManaCost | float | `4.0` | The converted mana cost of the card.
 flavorText | string | `"\"Whatever hatred destroys, a single act of trust can revive.\""` | Italicized text found below the rules text that has no game function.
 isFoilOnly | bool | `false` | Can the card only be found in foil? `true` or `false`. (If false, it is usually omitted.)
