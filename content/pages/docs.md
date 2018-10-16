@@ -47,7 +47,7 @@ originalType | string | `"Legendary Creature — Elder Dragon"` | Type as origin
 printings | array(string) | `["M19","PM19"]` | List of sets the card was printed in, in uppercase.
 power | string | `"4"` | Power of the creature.
 rarity | string | `"mythic"` | Rarity. Can be `common`, `uncommon`, `rare`, or `mythic`
-isReserved | bool | `false` | `true` or `false`. (If false, reserve is usually omitted.)
+isReserved | bool | `false` | Is the card on the Reserve List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
 rulings | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
@@ -83,7 +83,7 @@ cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
 meta | object | `{"date": "2018-10-13","version": "4.0.1"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
-isOnlineOnly | bool | `false` | Was the set published in paper? Can be `true` or `false`. (If false, it is usually omitted.)
+isOnlineOnly | bool | `false` | Is the card only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
