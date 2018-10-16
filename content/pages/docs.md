@@ -35,7 +35,7 @@ hasNonFoil | bool | `true` | Can the card be found in non-foil? Can be `true` or
 isOnlineOnly | bool | `false` | Is the card only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 isOversized | bool | `false` | Is the card oversized? Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
-legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. (Future is used for a revision of the format in which the card will be legal soon.) Values can be `Legal`, `Restricted`, `Banned` and `Future`. (If the format is not listed, it is assumed the card is not legal in that format.)
+legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned` or `Future`. (`Future` is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
@@ -47,7 +47,7 @@ originalType | string | `"Legendary Creature — Elder Dragon"` | Type as origin
 printings | array(string) | `["M19","PM19"]` | List of sets the card was printed in, in uppercase.
 power | string | `"4"` | Power of the creature.
 rarity | string | `"mythic"` | Rarity. Can be `common`, `uncommon`, `rare`, or `mythic`
-isReserved | bool | `false` | Is the card on the Reserve List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
+isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
 rulings | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
