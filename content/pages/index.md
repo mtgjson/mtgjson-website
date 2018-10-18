@@ -11,8 +11,8 @@ Page-order: 1
 <span id="logo">![MTGJSON4](img/logo.png)</span>
 
 <div class="splash"><p class="line6">Magic: The Gathering card data in JSON
-<p><h4>Current version: 4.0.1</h4>
-2018 October 15</div>
+<p><h4>Current version: 4.0.2</h4>
+2018 October 17</div>
 
 &nbsp;|&nbsp;
 ----:|:----
