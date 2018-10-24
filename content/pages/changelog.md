@@ -10,6 +10,29 @@ Page-order: 3
 
 # Changelog
 
+## 4.0.2 <small>(2018-10-17)</small>
+
+### Individual Sets
+#### Added:
+- `colorIndicator` (For cards that don't have a mana cost, for example)
+
+#### Fixed:
+- Split/Meld cards were a bit wonky. This is the first of two fixes to be done.
+	- Will be fully addressed in `4.1`
+- Address UUID collisions
+
+### Other
+- Updated sets download page with _all_ sets we build
+- Reorder sets download page to have newest at top
+- `version.json` now exists to inform of latest release:
+	- This is manual for right now, will be automated soon
+```json
+{
+	"version": "v4.0.2"
+}
+```
+
+
 ## 4.0.1 <small>(2018-10-15)</small>
 
 ### Individual Sets

@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-10-15 00:00
+Modified: 2018-10-17 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.0.1 <small>(2018-10-15)</small>
+## 4.0.2 <small>(2018-10-17)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -18,6 +18,7 @@ Property | Value | Example | Description
 artist | string | `"Svetlin Velinov"` | Name of artist.
 borderColor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
 colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost, rules text and any color indicator.
+colorIndicator | array(string) | `[]` | List of all colors in card’s color indicator. Usually found only on cards without mana costs and other special cards.
 colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).
 convertedManaCost | float | `4.0` | The converted mana cost of the card.
 flavorText | string | `"\"Whatever hatred destroys, a single act of trust can revive.\""` | Italicized text found below the rules text that has no game function.
@@ -64,7 +65,8 @@ watermark | string | `""` | Name of the watermark on the card. Can be one of man
 **Property** | **Value** | **Example** | **Description**
 artist | string | `"Jack Wang"` | Name of artist.
 borderColor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
-colorIdentity | array(string) | `["G","W"]` | List of all colors in card’s mana cost, rules text and any color indicator.
+colorIdentity | array(string) | `["G","W"]` | List of all colors in card’s mana 
+colorIndicator | array(string) | `[]` | List of all colors in card’s color indicator. Usually found only on cards without mana costs and other special cards.
 colors | array(string) | `["G","W"]` | List of all colors in card’s mana cost and any color indicator.
 loyalty | string | `"7"` | Planeswalker loyalty value.
 name | string | `"Elf Knight"` | Name of the token.
