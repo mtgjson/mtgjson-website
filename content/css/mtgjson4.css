@@ -14,7 +14,8 @@ i.set {
   padding: 0.5em 1em;
   border-radius: 1em;
   color: white;
-  margin-bottom: 1em;
+  margin: 0.5em 0.25em;
+  display: inline-block;
 }
 
 td > br:last-child {
@@ -26,7 +27,7 @@ i.fas {
 }
 
 .downloads {
-  padding-top: 0.3em;
+  padding-top: 3em;
 }
 
 img[alt="MTGJSON4"] {
@@ -41,21 +42,11 @@ img[alt="MTGJSON4"] {
 
 .splash {
   text-align: center;
-  margin: 1em 0em;
-}
-
-.entry-content table {
-  margin-left: auto;
-  margin-right: auto;
-  margin-bottom: 8em;
+  margin: 2em 0em;
 }
 
 .entry-title {
   display: none;
-}
-
-.line6 {
-  line-height: 6;
 }
 
 td {

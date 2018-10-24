@@ -10,11 +10,13 @@ Page-order: 1
 
 <span id="logo">![MTGJSON4](img/logo.png)</span>
 
-<div class="splash"><p class="line6">Magic: The Gathering card data in JSON
-<p><h4>Current version: 4.0.2</h4>
-2018 October 17</div>
-
-&nbsp;|&nbsp;
-----:|:----
-<a href="json/AllCards.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Cards</a>|<a href="json/AllCards.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Cards Zipped</a><br>
-<a href="json/AllSets.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Sets</a>|<a href="json/AllSets.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Sets Zipped</a><br>
+<div class="splash"><p>Magic: The Gathering card data in JSON
+<p><h4>Current version: 4.0.1</h4>
+2018 October 15
+<div class="downloads">
+  <p>
+    <a href="json/AllCards.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Cards</a><a href="json/AllCards.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Cards Zipped</a><br>
+  <p>
+    <a href="json/AllSets.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Sets</a><a href="json/AllSets.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Sets Zipped</a><br>
+  </div>
+</div>
