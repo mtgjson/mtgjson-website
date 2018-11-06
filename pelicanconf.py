@@ -43,6 +43,7 @@ MENUITEMS = (
     ('Sets', 'sets.html'),
     ('Changelog', 'changelog.html'),
     ('Documentation', 'docs.html'),
+    ('About Us', 'about.html'),
 )
 
 INDEX_SAVE_AS = None

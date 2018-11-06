@@ -18,6 +18,20 @@ i.set {
   display: inline-block;
 }
 
+.classic-link a {
+  border: 0;
+  background-color: transparent;
+  padding: 0;
+  color: green;
+  border-radius: 0;
+  margin: 0;
+}
+
+.classic-link a:hover {
+  border: 0;
+  text-decoration: underline;
+}
+
 td > br:last-child {
   line-height: 3;
 }
