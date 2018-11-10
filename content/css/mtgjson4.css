@@ -77,7 +77,13 @@ h3.users + table tbody tr td a:hover {
   border: 0;
 }
 
+#div-bio {
+  margin: 4em 0em;
+}
+
 .bio {
   width: 100px;
   border-radius: 50%;
+  float: left;
+  margin-right: 2em;
 }
