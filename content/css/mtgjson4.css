@@ -66,3 +66,13 @@ img[alt="MTGJSON4"] {
 td {
   padding: 4px;
 }
+
+h3.users + table td a {
+  background-color: transparent;
+  border: 0;
+  color: inherit;
+}
+
+h3.users + table tbody tr td a:hover {
+  border: 0;
+}
