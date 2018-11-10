@@ -76,3 +76,8 @@ h3.users + table td a {
 h3.users + table tbody tr td a:hover {
   border: 0;
 }
+
+.bio {
+  width: 100px;
+  border-radius: 50%;
+}
