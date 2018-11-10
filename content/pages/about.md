@@ -17,6 +17,8 @@ Zach is a 21‐year old hippo fanatic who loves playing with big data and giving
 ### How to Contribute
 If you have suggestions on improvements, if you find bugs, or if you would like to help address existing issues, we are always looking for help. You can contribute to the project through our <span class="classic-link">[GitHub page](https://github.com/mtgjson/mtgjson4)</span>.
 
+While not expected or required, monetary donations are also accepted via PayPal: <a href="https://www.paypal.me/Zachhalpern"><i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;&nbsp;Donate</a>
+
 <h3 class="users">Current and Past Users</h3>
 
 &nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;|&nbsp;

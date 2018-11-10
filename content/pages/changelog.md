@@ -10,11 +10,20 @@ Page-order: 3
 
 # Changelog
 
+## 4.1 <small>(2018-11-11)</small>
+- Added Keywords.json
+- Added SetCodes.json
+- Added `booster` field from Version 3
+- Cards with multiple variants can now be distinguishable (such as a few from *Unstable*)
+- Split cards now use a `side` field for each face
+- Meld cards will have names field as [CardA, Meld, CardB]
+- Sets now have totalSetSize and baseSetSize
+
 ## 4.0.2 <small>(2018-10-17)</small>
 
 ### Individual Sets
 #### Added:
-- `colorIndicator` (For cards that don't have a mana cost, for example)
+- `colorIndicator` (For cards that don’t have a mana cost, for example)
 
 #### Fixed:
 - Split/Meld cards were a bit wonky. This is the first of two fixes to be done.
