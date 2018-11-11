@@ -13,11 +13,16 @@ Page-order: 3
 ## 4.1 <small>(2018-11-11)</small>
 - Added Keywords.json
 - Added SetCodes.json
-- Added `booster` field from Version 3
+- Added SetList.json
+- Added `boosterV3` field (as used from Version 3) (`booster` is reserved for future use)
+- Sets now have `totalSetSize` and `baseSetSize`
 - Cards with multiple variants can now be distinguishable (such as a few from *Unstable*)
 - Split cards now use a `side` field for each face
-- Meld cards will have names field as [CardA, Meld, CardB]
-- Sets now have totalSetSize and baseSetSize
+- Split cards now have a convertedmanacost for each face as opposed to the entire card
+- Better Gatherer parsing of `originalText` and `originalType`
+- Better parsing of `names` field
+- Better system checks
+- Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
 
 ## 4.0.2 <small>(2018-10-17)</small>
 
