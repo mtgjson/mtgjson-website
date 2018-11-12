@@ -59,7 +59,7 @@ img[alt="MTGJSON4"] {
   margin: 2em 0em;
 }
 
-.entry-title {
+.entry-title , th {
   display: none;
 }
 
@@ -88,6 +88,7 @@ h3.users + table tbody tr td a:hover {
   margin-right: 2em;
 }
 
-th, tbody tr:nth-child(even){
+tbody tr:nth-child(odd){
   background-color: #eee;
 }
+

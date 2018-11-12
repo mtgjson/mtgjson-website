@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-10-17 00:00
+Modified: 2018-11-11 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -15,6 +15,7 @@ Page-order: 4
 <h3>Card</h3>
 Property | Value | Example | Description
 -----|-----|-----|-----
+**Property** | **Value** | **Example** | **Description**
 artist | string | `"Svetlin Velinov"` | Name of artist.
 borderColor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
 colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost, rules text and any color indicator.
