@@ -12,7 +12,7 @@ Page-order: 3
 
 ## 4.1 <small>(2018-11-11)</small>
 
-### Indivudal Cards
+### Individual Cards
 #### Fixed
 - Better Gatherer parsing of `originalText` and `originalType`
 - Better parsing of `names` field

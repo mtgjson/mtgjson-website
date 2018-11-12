@@ -4,7 +4,7 @@ i.set {
   width: 3em;
   float: left;
   background-repeat: no-repeat;
-  margin: 1em 1.5em 2em 0em;
+  margin: 1em;
 }
 
 .entry-content a {
@@ -59,7 +59,7 @@ img[alt="MTGJSON4"] {
   margin: 2em 0em;
 }
 
-.entry-title , th {
+.entry-title, th {
   display: none;
 }
 
@@ -91,4 +91,3 @@ h3.users + table tbody tr td a:hover {
 tbody tr:nth-child(odd){
   background-color: #eee;
 }
-
