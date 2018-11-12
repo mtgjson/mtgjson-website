@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-10-15 00:00
+Modified: 2018-11-11 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -11,33 +11,42 @@ Page-order: 3
 # Changelog
 
 ## 4.1 <small>(2018-11-11)</small>
-- Added Keywords.json
-- Added SetCodes.json
-- Added SetList.json
-- Added `boosterV3` field (as used from Version 3) (`booster` is reserved for future use)
-- Sets now have `totalSetSize` and `baseSetSize`
-- Cards with multiple variants can now be distinguishable (such as a few from *Unstable*)
-- Split cards now use a `side` field for each face
-- Split cards now have a convertedmanacost for each face as opposed to the entire card
+
+### Indivudal Cards
+- Cards with multiple variants can now be distinguishable (such as several cards from *Unstable*)
+- Split cards now have a converted mana cost for each face as opposed to the entire card
+
+### Individual Sets
+#### Added
+- `baseSetSize` and `totalSetSize`
+- `boosterV3` field (as used from Version 3) (`booster` is reserved for future use)
+- `side` field is now used for each face of split cards
+
+#### Fixed
 - Better Gatherer parsing of `originalText` and `originalType`
 - Better parsing of `names` field
 - Better system checks
 - Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
 
+### Other
+- Added `Keywords.json` file
+- Added `SetCodes.json` file
+- Added `SetList.json` file
+
 ## 4.0.2 <small>(2018-10-17)</small>
 
 ### Individual Sets
-#### Added:
+#### Added
 - `colorIndicator` (For cards that don’t have a mana cost, for example)
 
-#### Fixed:
+#### Fixed
 - Split/Meld cards were a bit wonky. This is the first of two fixes to be done.
 	- Will be fully addressed in `4.1`
 - Address UUID collisions
 
 ### Other
 - Updated sets download page with _all_ sets we build
-- Reorder sets download page to have newest at top
+- Reordered sets download page to have newest at top
 - `version.json` now exists to inform of latest release:
 	- This is manual for right now, will be automated soon
 ```json
@@ -50,7 +59,7 @@ Page-order: 3
 ## 4.0.1 <small>(2018-10-15)</small>
 
 ### Individual Sets
-#### Changed:
+#### Changed
 - `reserved` is now `isReserved` (Consistency)
 - `foilOnly` is now `isFoilOnly` (Consistency)
 - `onlineOnly` is now `isOnlineOnly` (Consistency)
@@ -69,21 +78,8 @@ Page-order: 3
 
 ## 4.0 <small>(2018-10-13)</small>
 
-### Individual Sets
-#### Added:
-- `meta` (Better understanding of when data was created)
-- `mtgoCode` (Determine MTGO set name)
-- `tokens` (Tokens have made it in!)
-- `foilOnly` (If a set is available only in foil, like sliver premium deck)
-
-#### Removed:
-- `gathererCode` (No longer necessary)
-- `magicCardsInfoCode` (No longer in service)
-- `border` (Moved to individual cards)
-- `booster` (Will be re-added in v4.1)
-
-### Individual Cards:
-#### Added:
+### Individual Cards
+#### Added
 - `frameVersion` (Determine the frame type)
 - `hasFoil` (Card available in foil)
 - `hasNonFoil` (Card available in non-foil)
@@ -91,7 +87,7 @@ Page-order: 3
 - `isOversized` (Card is HUGEEE)
 - `foreignData` (All foreign printings from the set and data relating)
 
-#### Removed:
+#### Removed
 - `source` (Hard to validate)
 - `mciNumber` (No longer in service)
 - `life` (Will re-add whenever Vanguard support is re-implemented)
@@ -99,7 +95,7 @@ Page-order: 3
 - `imageName` (No longer a thing)
 - `variations` (Each printing will have it's own entry)
 
-#### Changed:
+#### Changed
 - `cmc` is now `convertedManaCost`
 - `convertedManaCost` is a float over an int
 - `multiverseid` is now `multiverseId` (with capital I)
@@ -108,3 +104,16 @@ Page-order: 3
 - `id` is now `uuid`
 - `legalities` formatting has changed
 - `loyalty` is now a string over an int
+
+### Individual Sets
+#### Added
+- `meta` (Better understanding of when data was created)
+- `mtgoCode` (Determine MTGO set name)
+- `tokens` (Tokens have made it in!)
+- `foilOnly` (If a set is available only in foil, like sliver premium deck)
+
+#### Removed
+- `gathererCode` (No longer necessary)
+- `magicCardsInfoCode` (No longer in service)
+- `border` (Moved to individual cards)
+- `booster` (Will be re-added in v4.1)
