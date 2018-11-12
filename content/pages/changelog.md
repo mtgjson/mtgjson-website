@@ -15,10 +15,9 @@ Page-order: 3
 ### Indivudal Cards
 #### Fixed
 - Better Gatherer parsing of `originalText` and `originalType`
-- Better parsing of `names` field
+- Better parsing of `names` field; Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
 - Cards with multiple variants can now be distinguishable (such as several cards from *Unstable*)
 - Split cards now have a converted mana cost for each face as opposed to the entire card
-- Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
 
 ### Individual Sets
 #### Added
