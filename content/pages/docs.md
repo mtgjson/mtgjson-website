@@ -55,12 +55,12 @@ rulings | array(object) |  |
 subtypes | array(string) | `["Elder","Dragon"]` | List of card subtypes found after em-dash.
 supertypes | array(string) | `["Legendary"]` | List of card supertypes found before em-dash.
 text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Rules text of the card.
+timeshifted | bool | `false` | Card is “timeshifted”, a feature from *Time Spiral* block. Can be `true` or `false`. (If false, it is usually omitted.)
 toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.
 uuid | string | `"7b215968-93a6-4278-ac61-4e3e8c3c3943"` | A universal unique id generated for the card.
 watermark | string | `""` | Name of the watermark on the card. Can be one of many different values, including a guild name, clan name, or `wotc` for the shooting star. (If there isn’t one, it can be an empty string, but it is usually omitted.)
-&nbsp; | &nbsp; | &nbsp; | &nbsp;
 <h3>Token</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
 artist | string | `"Jack Wang"` | Name of artist.
@@ -86,7 +86,7 @@ block | string | `"Core Set 2019"` | Block the set was in.
 boosterV3 | array(string) | `"boosterV3": [ [ "rare", "mythic rare" ], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing" ]` | Contents of a typical booster.
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
-isOnlineOnly | bool | `false` | Is the set only available online? Can be `true` or `false`. (If false, it is usually omitted.)
+isOnlineOnly | bool | `false` | Set available online only. Can be `true` or `false`. (If false, it is usually omitted.)
 meta | object | `{"date": "2018-10-13","version": "4.0.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
 name | string | `"Core Set 2019"` | Name of the set.
