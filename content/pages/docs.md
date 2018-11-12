@@ -101,6 +101,6 @@ AbilityWords | array(string) | `[ `…`"Undergrowth", `…` ]` | List of ability
 KeywordAbilities | array(string) | `[ `…`"Convoke", `…` ]` | List of keyword abilities found in rules text on cards.
 KeywordActions | array(string) | `[ `…` "Surveil", `…` ]` | List of keyword actions found in rules text on cards.
 <h3>Set List</h3> | &nbsp; | &nbsp; | &nbsp;
-code | string | "m19" | Set code for the set.
-name | string | "Core Set 2019" | Name for the set.
-releaseDate | string | "2018-07-13" | Release date (OBDC standard) for the set. If the set was not formally released as a product, can be `null`.
+code | string | `"m19"` | Set code for the set.
+name | string | `"Core Set 2019"` | Name for the set.
+releaseDate | string | `"2018-07-13"` | Release date (OBDC standard) for the set. If the set was not formally released as a product, can be `null`.
