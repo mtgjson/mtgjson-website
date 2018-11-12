@@ -95,3 +95,12 @@ releaseDate | string | `"2018-07-13"` | Date of release for the set.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
 totalSetSize | integer | `314` | Total number of cards in the set, including promos and related supplemental products.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
+&nbsp; | &nbsp; | &nbsp;| &nbsp;
+<h3>Keywords</h3> | &nbsp; | &nbsp; | &nbsp;
+AbilityWords | array(string) | `[ `…`"Undergrowth", `…` ]` | List of ability words found in rules text on cards.
+KeywordAbilities | array(string) | `[ `…`"Convoke", `…` ]` | List of keyword abilities found in rules text on cards.
+KeywordActions | array(string) | `[ `…` "Surveil", `…` ]` | List of keyword actions found in rules text on cards.
+<h3>Set List</h3> | &nbsp; | &nbsp; | &nbsp;
+code | string | "m19" | Set code for the set.
+name | string | "Core Set 2019" | Name for the set.
+releaseDate | string | "2018-07-13" | Release date (OBDC standard) for the set. If the set was not formally released as a product, can be `null`.

@@ -13,8 +13,12 @@ Page-order: 3
 ## 4.1 <small>(2018-11-11)</small>
 
 ### Indivudal Cards
+#### Fixed
+- Better Gatherer parsing of `originalText` and `originalType`
+- Better parsing of `names` field
 - Cards with multiple variants can now be distinguishable (such as several cards from *Unstable*)
 - Split cards now have a converted mana cost for each face as opposed to the entire card
+- Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
 
 ### Individual Sets
 #### Added
@@ -22,16 +26,13 @@ Page-order: 3
 - `boosterV3` field (as used from Version 3) (`booster` is reserved for future use)
 - `side` field is now used for each face of split cards
 
-#### Fixed
-- Better Gatherer parsing of `originalText` and `originalType`
-- Better parsing of `names` field
-- Better system checks
-- Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
-
 ### Other
-- Added `Keywords.json` file
-- Added `SetCodes.json` file
-- Added `SetList.json` file
+#### Added
+- `Keywords.json` file, has keywords found in cards
+- `SetList.json` file, has a list of sets and set information
+
+#### Fixed
+- Better system checks
 
 ## 4.0.2 <small>(2018-10-17)</small>
 
@@ -45,6 +46,7 @@ Page-order: 3
 - Address UUID collisions
 
 ### Other
+#### Fixed
 - Updated sets download page with _all_ sets we build
 - Reordered sets download page to have newest at top
 - `version.json` now exists to inform of latest release:
@@ -65,7 +67,8 @@ Page-order: 3
 - `onlineOnly` is now `isOnlineOnly` (Consistency)
 
 ### Other
-- Added `version.json` that will be added to the json/ output folder
+#### Added
+- `version.json` that will be added to the json/ output folder
 ```json
 {
 	"4.0.0": {
