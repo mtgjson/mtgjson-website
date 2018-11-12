@@ -63,7 +63,7 @@ img[alt="MTGJSON4"] {
   display: none;
 }
 
-td {
+td, th {
   padding: 4px;
 }
 
@@ -86,4 +86,8 @@ h3.users + table tbody tr td a:hover {
   border-radius: 50%;
   float: left;
   margin-right: 2em;
+}
+
+th, tbody tr:nth-child(even){
+  background-color: #eee;
 }
