@@ -43,7 +43,7 @@ loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
 name | string | `"Nicol Bolas, the Ravager"` | Name of the card.
-names | array(string) | `["Nicol Bolas, the Ravager","Nicol Bolas, the Arisen"]` | Names of each face on the card.
+names | array(string) | `["Nicol Bolas, the Ravager","Nicol Bolas, the Arisen"]` | Names of each face on the card. Meld cards are listed in the order of *CardA, Meld, CardB`.*
 number | string | `"218"` | Number of the card.
 originalText | string | `"Flying\r\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\r\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Text on the card as originally printed.
 originalType | string | `"Legendary Creature — Elder Dragon"` | Type as originally printed. Includes any supertypes and subtypes.
