@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-11-11 00:00
+Modified: 2018-11-26 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.1 <small>(2018-11-11)</small>
+## 4.1.1 <small>(2018-11-26)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -22,6 +22,7 @@ colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s
 colorIndicator | array(string) | `[]` | List of all colors in card’s color indicator. Usually found only on cards without mana costs and other special cards.
 colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).
 convertedManaCost | float | `4.0` | The converted mana cost of the card.
+faceConvertedManaCost | float | `4.0` | The converted mana cost of the face (half, or part) of the card.
 flavorText | string | `"\"Whatever hatred destroys, a single act of trust can revive.\""` | Italicized text found below the rules text that has no game function.
 foreignData | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;flavorText | string | `"Schwester von Nicol Bolas. Überlebende des Krieges der Drachenältesten. Die bösartigste ihrer Art."` | Flavor text in foreign language.
@@ -37,12 +38,13 @@ isFoilOnly | bool | `false` | Can the card only be found in foil? `true` or `fal
 isOnlineOnly | bool | `false` | Is the card only available online? Can be `true` or `false`. (If false, it is usually omitted.)
 isOversized | bool | `false` | Is the card oversized? Can be `true` or `false`. (If false, it is usually omitted.)
 isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
+isTimeshifted | bool | `false` | Card is “timeshifted”, a feature from *Time Spiral* block. Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
 legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
-name | string | `"Nicol Bolas, the Ravager"` | Name of the card.
+name | string | `"Nicol Bolas, the Ravager"` | Name of the card. (If the card is in a set file and it has multiple printings, a letter starting with `(a)` follows the name.
 names | array(string) | `["Nicol Bolas, the Ravager","Nicol Bolas, the Arisen"]` | Names of each face on the card. Meld cards are listed in the order of *CardA, Meld, CardB`.*
 number | string | `"218"` | Number of the card.
 originalText | string | `"Flying\r\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\r\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Text on the card as originally printed.
@@ -56,7 +58,6 @@ rulings | array(object) |  |
 subtypes | array(string) | `["Elder","Dragon"]` | List of card subtypes found after em-dash.
 supertypes | array(string) | `["Legendary"]` | List of card supertypes found before em-dash.
 text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Rules text of the card.
-timeshifted | bool | `false` | Card is “timeshifted”, a feature from *Time Spiral* block. Can be `true` or `false`. (If false, it is usually omitted.)
 toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.

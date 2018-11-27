@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-11-11 00:00
+Modified: 2018-11-26 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,28 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.1.1 <small>(2018-11-26)</small>
+
+### Individual Cards
+#### Added
+- Added timeshifted rarity
+- `faceConvertedManaCost` is the converted mana cost for the face (typically referenced while cast)
+
+#### Fixed
+- Reverted converted mana cost; `convertedManaCost` is now the total of the card (typically referenced while not on stack)
+- `timeshifted` is now `isTimeshifted`
+- Cards with multiple printings in a single set now have `a`, `b` after name
+- Better parsing of `colors` on cards
+- Better parsing of flavor text
+
+### Individual Sets
+#### Added
+- Added Ultimate Masters (UMA)
+- Added Ultimate Masters Box Toppers (PUMA)
+
+#### Fixed
+- Windows OS workaround for `CON` now ignored in All Sets file
 
 ## 4.1 <small>(2018-11-11)</small>
 
@@ -33,6 +55,7 @@ Page-order: 3
 
 #### Fixed
 - Better system checks
+- Better handling of set files for Windows OS
 
 ## 4.0.2 <small>(2018-10-17)</small>
 
