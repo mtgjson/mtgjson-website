@@ -65,6 +65,7 @@ img[alt="MTGJSON4"] {
 
 td, th {
   padding: 4px;
+  vertical-align: top;
 }
 
 h3.users + table td a {

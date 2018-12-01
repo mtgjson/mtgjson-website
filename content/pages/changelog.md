@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-11-26 00:00
+Modified: 2018-11-30 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,27 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.1.2 <small>(2018-11-30)</small>
+### Individual Cards
+#### Added
+- Cards with variants not in *Un*-sets now use `variations` instead of different names (an array of UUIDs containing the other printings of the same card in the set) — for exampl, the card “Cursed Scroll” from World Championship Decks 1999 with the UUID `51694451-d762-4c22-b9a1-61ce4716826b` has these variations:
+```json
+"variations": [
+    "226007db-4cd2-43ec-9f2c-4e68fff7d960",
+    "42f64a71-5c4c-45b3-9963-880768b2343b",
+    "0b23cdc8-d413-4fb1-8470-474221b10fe2"
+]
+```
+
+#### Fixed
+- Cards with variants in *Un*-sets now no longer include names with `(a)` in `name` — for example:
+    - `Very Cryptic Command`
+    - `Very Cryptic Command (b)`
+    - `Very Cryptic Command (c)`
+    - `Very Cryptic Command (d)`
+    - `Very Cryptic Command (e)`
+    - `Very Cryptic Command (f)`
 
 ## 4.1.1 <small>(2018-11-26)</small>
 
