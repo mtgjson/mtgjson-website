@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-11-26 00:00
+Modified: 2018-11-30 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,14 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.1.2 <small>(2018-11-30)</small>
+### Individual Cards
+#### Added
+- Cards with variants not in *Un*-sets now use `variations` instead of different names (an array of UUIDs containing the other printings of the same card in the set)
+
+#### Fixed
+- Cards with variants in *Un*-sets now no longer include names with `(a)` in `name` (for example, `Very Crpytic Command`, `Very Cryptic Command (b)`, `Very Cryptic Command (c)`…)
 
 ## 4.1.1 <small>(2018-11-26)</small>
 

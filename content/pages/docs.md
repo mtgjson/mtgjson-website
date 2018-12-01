@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-11-26 00:00
+Modified: 2018-11-30 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.1.1 <small>(2018-11-26)</small>
+## 4.1.2 <small>(2018-11-30)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -44,7 +44,7 @@ legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal",
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
-name | string | `"Nicol Bolas, the Ravager"` | Name of the card. (If the card is in a set file and it has multiple printings, a letter starting with `(a)` follows the name.
+name | string | `"Nicol Bolas, the Ravager"` | Name of the card. (If the card is in an *Un-*set and has multiple printings, a space and letter enclosed in parentheses (starting with ` (b)`) follows the name.
 names | array(string) | `["Nicol Bolas, the Ravager","Nicol Bolas, the Arisen"]` | Names of each face on the card. Meld cards are listed in the order of *CardA, Meld, CardB.*
 number | string | `"218"` | Number of the card.
 originalText | string | `"Flying\r\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\r\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Text on the card as originally printed.
@@ -62,6 +62,7 @@ toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
 types | array(string) | `["Creature"]` | List of types of the card.
 uuid | string | `"7b215968-93a6-4278-ac61-4e3e8c3c3943"` | A universal unique id generated for the card.
+variations | array(string) | `[]` | UUIDs of cards with alternate printings with the same set code (excluding *Un*-sets).
 watermark | string | `""` | Name of the watermark on the card. Can be one of many different values, including a guild name, clan name, or `wotc` for the shooting star. (If there isn’t one, it can be an empty string, but it is usually omitted.)
 <h3>Token</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
