@@ -92,3 +92,8 @@ h3.users + table tbody tr td a:hover {
 tbody tr:nth-child(odd){
   background-color: #eee;
 }
+
+.users + table {
+  table-layout: fixed;
+  width: 100%;
+}

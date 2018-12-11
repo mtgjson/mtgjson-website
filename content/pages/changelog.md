@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-11-30 00:00
+Modified: 2018-12-07 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -10,6 +10,21 @@ Page-order: 3
 
 # Changelog
 
+## 4.1.3 <small>(2018-12-07)</small>
+### Individual Sets
+#### Added
+- Compiled outputs now avaiable for different formats, including `AllCardsNoUn.json`, `AllSetsNoUn.json`, `Standard.json`, and `Modern.json`
+- New formats available for set downloads: `.gz`, `.bz2`, `.xz` (links will be implemented on the website soon)
+
+### Individual Cards
+#### Added
+- TCGPlayer API information
+
+#### Changed
+- Fixed more tokens that were appearing in `names` and `cards` arrays
+- Meld cards now assign the values “a”, “b”, and “c” to the `side` field, where “a” and “b” are for the two front sides and “c” is the meld back sides
+- UUIDs for split cards, meld cards, and split tokens are 37 characters in length (with the first 36 characters being the same between them)
+  
 ## 4.1.2 <small>(2018-11-30)</small>
 ### Individual Cards
 #### Added
@@ -22,7 +37,7 @@ Page-order: 3
 ]
 ```
 
-#### Fixed
+#### Changed
 - Cards with variants in *Un*-sets now no longer include names with `(a)` in `name` — for example:
     - `Very Cryptic Command`
     - `Very Cryptic Command (b)`
@@ -38,7 +53,7 @@ Page-order: 3
 - Added timeshifted rarity
 - `faceConvertedManaCost` is the converted mana cost for the face (typically referenced while cast)
 
-#### Fixed
+#### Changed
 - Reverted converted mana cost; `convertedManaCost` is now the total of the card (typically referenced while not on stack)
 - `timeshifted` is now `isTimeshifted`
 - Cards with multiple printings in a single set now have `a`, `b` after name
@@ -50,13 +65,13 @@ Page-order: 3
 - Added Ultimate Masters (UMA)
 - Added Ultimate Masters Box Toppers (PUMA)
 
-#### Fixed
+#### Changed
 - Windows OS workaround for `CON` now ignored in All Sets file
 
 ## 4.1 <small>(2018-11-11)</small>
 
 ### Individual Cards
-#### Fixed
+#### Changed
 - Better Gatherer parsing of `originalText` and `originalType`
 - Better parsing of `names` field
 - Meld cards will have `names` field as [ *CardA, Meld, CardB* ]
@@ -74,7 +89,7 @@ Page-order: 3
 - `Keywords.json` file, has keywords found in cards
 - `SetList.json` file, has a list of sets and set information
 
-#### Fixed
+#### Changed
 - Better system checks
 - Better handling of set files for Windows OS
 
@@ -84,13 +99,13 @@ Page-order: 3
 #### Added
 - `colorIndicator` (For cards that don’t have a mana cost, for example)
 
-#### Fixed
+#### Changed
 - Split/Meld cards were a bit wonky. This is the first of two fixes to be done.
 	- Will be fully addressed in `4.1`
 - Address UUID collisions
 
 ### Other
-#### Fixed
+#### Changed
 - Updated sets download page with _all_ sets we build
 - Reordered sets download page to have newest at top
 - `version.json` now exists to inform of latest release:
