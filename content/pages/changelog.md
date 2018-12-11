@@ -14,7 +14,7 @@ Page-order: 3
 ### Individual Sets
 #### Added
 - Compiled outputs now avaiable for different formats, including `AllCardsNoUn.json`, `AllSetsNoUn.json`, `Standard.json`, and `Modern.json`
-- New formats available for set downloads: `.gz`, `.bz2`, `.xz` (links will be implemented on the website soon)
+- New formats available for set downloads: `.gz`, `.bz2`, `.xz`
 
 ### Individual Cards
 #### Added
