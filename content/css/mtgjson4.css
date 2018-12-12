@@ -78,7 +78,7 @@ h3.users + table tbody tr td a:hover {
   border: 0;
 }
 
-#div-bio {
+.div-bio {
   margin: 4em 0em;
 }
 
@@ -96,4 +96,12 @@ tbody tr:nth-child(odd){
 .users + table {
   table-layout: fixed;
   width: 100%;
+}
+
+.div-bio p {
+  clear: both;
+}
+
+h4 {
+  font-size: 16px;
 }
