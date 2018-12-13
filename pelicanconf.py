@@ -55,8 +55,11 @@ PAGE_ORDER_BY = 'page-order'
 
 # Blogroll
 LINKS = (('MTGJSON', SITEURL),
-         ('GitHub', 'https://github.com/mtgjson/mtgjson4'),
-         ('Discord server', 'https://discord.gg/74GUQDE'),)
+        ('GitHub', 'https://github.com/mtgjson/mtgjson4'),
+        ('Discord server', 'https://discord.gg/74GUQDE'),)
+
+# Hide Blogroll
+HIDE_SIDEBAR = True
 
 # Social widget
 # SOCIAL = (('You can add links in your config file', '#'),

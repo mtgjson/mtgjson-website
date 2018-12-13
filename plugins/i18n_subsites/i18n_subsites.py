@@ -22,8 +22,10 @@ import locale
 from pelican import signals
 from pelican.generators import ArticlesGenerator, PagesGenerator
 from pelican.settings import configure_settings
-from pelican.contents import Draft
-
+try:
+	from pelican.contents import Draft
+except ImportError:
+	from pelican.contents import Article as Draft
 
 # Global vars
 _MAIN_SETTINGS = None     # settings dict of the main Pelican instance

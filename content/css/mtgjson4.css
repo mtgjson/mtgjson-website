@@ -7,7 +7,7 @@ i.set {
   margin: 1em;
 }
 
-.entry-content a {
+.entry-content a, a.footer-link {
   text-decoration: none;
   border: 1px solid;
   background-color: green;
@@ -16,6 +16,10 @@ i.set {
   color: white;
   margin: 0.5em 0.25em;
   display: inline-block;
+}
+
+a.footer-link {
+  background-color: gray;
 }
 
 .classic-link a {
@@ -78,7 +82,7 @@ h3.users + table tbody tr td a:hover {
   border: 0;
 }
 
-#div-bio {
+.div-bio {
   margin: 4em 0em;
 }
 
@@ -91,4 +95,17 @@ h3.users + table tbody tr td a:hover {
 
 tbody tr:nth-child(odd){
   background-color: #eee;
+}
+
+.users + table {
+  table-layout: fixed;
+  width: 100%;
+}
+
+.div-bio p {
+  clear: both;
+}
+
+h4 {
+  font-size: 16px;
 }
