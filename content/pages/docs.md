@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-11-30 00:00
+Modified: 2018-12-07 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.1.2 <small>(2018-11-30)</small>
+## 4.1.3 <small>(2018-12-07)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -19,7 +19,7 @@ Property | Value | Example | Description
 artist | string | `"Svetlin Velinov"` | Name of artist.
 borderColor | string | `"black"` | Color of the border. Can be `black`, `borderless`, `gold`, `silver`, or `white`.
 colorIdentity | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost, rules text and any color indicator.
-colorIndicator | array(string) | `[]` | List of all colors in card’s color indicator. Usually found only on cards without mana costs and other special cards.
+colorIndicator | array(string) | `[]` | List of all colors in card’s color indicator (a symbol showing the colors of the card). Usually found only on cards without mana costs and other special cards.
 colors | array(string) | `["B","R","U"]` | List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).
 convertedManaCost | float | `4.0` | The converted mana cost of the card.
 faceConvertedManaCost | float | `4.0` | The converted mana cost of the face (half, or part) of the card.
@@ -40,7 +40,7 @@ isOversized | bool | `false` | Is the card oversized? Can be `true` or `false`. 
 isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or `false`. (If false, isReserved is usually omitted.)
 isTimeshifted | bool | `false` | Card is “timeshifted”, a feature from *Time Spiral* block. Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
-legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `legacy`, `modern`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
+legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": “Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `future`, `legacy`, `modern`, `pauper`, `penny`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
@@ -55,6 +55,8 @@ rarity | string | `"mythic"` | Rarity. Can be `common`, `uncommon`, `rare`, or `
 rulings | array(object) |  | 
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;date | string | `"2018-07-13"` | Date (OBDC standard) of ruling for the card.
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;text | string | `"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time."` | Text of ruling for the card.
+side | string | `a` | Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be `a`, `b`, or `c`.
+starter | bool | `false` | Is the card only not found in a booster pack? Can be `true` or `false`. (If false, it is usually omitted.)
 subtypes | array(string) | `["Elder","Dragon"]` | List of card subtypes found after em-dash.
 supertypes | array(string) | `["Legendary"]` | List of card supertypes found before em-dash.
 text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Rules text of the card.
@@ -76,7 +78,7 @@ name | string | `"Elf Knight"` | Name of the token.
 number | string | `"2"` | Number of the token card.
 power | string | `"2"` | Power of the creature.
 reverseRelated | array(string) | `["Assemble","Conclave Cavalier","Conclave Guildmage","Ledev Champion","Sprouting Renewal"]` | List of cards in the same set which reference the token.
-side | string | `a` | Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be `a` or `b`.
+side | string | `a` | Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be `a`, `b`, or `c`.
 text | string | `"Vigilance"` | Rules text of the token.
 toughness | string | `"4"` | Toughness of the creature.
 type | string | `"Token Creature — Elf Knight"` | Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as if a card type.
@@ -99,10 +101,29 @@ totalSetSize | integer | `314` | Total number of cards in the set, including pro
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
 &nbsp; | &nbsp; | &nbsp;| &nbsp;
 <h3>Keywords</h3> | &nbsp; | &nbsp; | &nbsp;
+**Property** | **Value** | **Example** | **Description**
 AbilityWords | array(string) | `[ `…`"Undergrowth", `…` ]` | List of ability words found in rules text on cards.
 KeywordAbilities | array(string) | `[ `…`"Convoke", `…` ]` | List of keyword abilities found in rules text on cards.
 KeywordActions | array(string) | `[ `…` "Surveil", `…` ]` | List of keyword actions found in rules text on cards.
+&nbsp; | &nbsp; | &nbsp;| &nbsp;
 <h3>Set List</h3> | &nbsp; | &nbsp; | &nbsp;
+**Property** | **Value** | **Example** | **Description**
 code | string | `"m19"` | Set code for the set.
+isFoilOnly | bool | `false` | Set only has foil cards. Can be `true` or `false`. (If false, it is usually omitted.)
 name | string | `"Core Set 2019"` | Name for the set.
 releaseDate | string | `"2018-07-13"` | Release date (OBDC standard) for the set. If the set was not formally released as a product, can be `null`.
+
+<h3>File Manifest</h3>
+Filename | Description
+-----|-----
+**Filename** | **Description**
+*SET*.json | Every card in a specific set.
+AllCards.json | Every card listed once.
+AllCardsNoUn.json | AllCards.json without *Un-*set cards.
+AllSets.json | Every set and all of their cards.
+AllSetsNoUn.json | AllSets.json without *Un-*set cards.
+Keywords.json | List of all keywords used on Magic cards.
+Modern.json | AllSets.json with only Modern-legal sets.
+Standard.json | AllSets.json with only Standard-legal sets.
+SetList.json | List of codes, names and release dates of all sets.
+version.json | Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release.
