@@ -118,12 +118,12 @@ Filename | Description
 -----|-----
 **Filename** | **Description**
 *SET*.json | Every card in a specific set.
-AllCards.json | Every card listed once.
-AllCardsNoUn.json | AllCards.json without *Un-*set cards.
-AllSets.json | Every set and all of their cards.
-AllSetsNoUn.json | AllSets.json without *Un-*set cards.
-Keywords.json | List of all keywords used on Magic cards.
-Modern.json | AllSets.json with only Modern-legal sets.
-Standard.json | AllSets.json with only Standard-legal sets.
-SetList.json | List of codes, names and release dates of all sets.
-version.json | Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release.
+<a href="json/AllCards.json">AllCards.json</a> | Every card listed once.
+<a href="json/AllCardsNoUn.json">AllCardsNoUn.json</a> | AllCards.json without *Un-*set cards.
+<a href="json/AllSets.json">AllSets.json</a> | Every set and all of their cards.
+<a href="json/AllSetsNoUn.json">AllSetsNoUn.json</a> | AllSets.json without *Un-*set cards.
+<a href="json/Keywords.json">Keywords.json</a> | List of all keywords used on Magic cards.
+<a href="json/Modern.json">Modern.json</a> | AllSets.json with only Modern-legal sets.
+<a href="json/Standard.json">Standard.json</a> | AllSets.json with only Standard-legal sets.
+<a href="json/SetList.json">SetList.json</a> | List of codes, names and release dates of all sets.
+<a href="json/version.json">version.json</a> | Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release.
