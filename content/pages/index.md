@@ -20,3 +20,9 @@ Page-order: 1
     <a href="json/AllSets.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Sets</a><a href="json/AllSets.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Sets Zipped</a><br>
   </div>
 </div>
+
+<div class="attention">
+MTGJSON is graciously maintained by a group of volunteers. If you like what you see, we accept donations to the project via PayPal.
+
+<a href="https://www.paypal.me/Zachhalpern"><i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;&nbsp;Donate</a>
+</div>
