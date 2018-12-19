@@ -25,3 +25,8 @@ $ python3 -m http.server --directory output
 ```
 
 6) Review the output via `http://0.0.0.0:8000` (the default website for http.server)
+
+
+---
+
+The most recent documentation of the data output can be found on our [webpage](https://mtgjson.com/v4/docs.html).
