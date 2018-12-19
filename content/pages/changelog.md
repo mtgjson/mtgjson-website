@@ -22,8 +22,8 @@ Page-order: 3
 - `frameEffect` used for cards with added frame styling
 
 #### Changed
-- UUIDs have been changed: the old field has become `scryfallId` whereas the new field is now `uuid`
-- UUIDs (v5) are now manually generated based on card attributes (name, set code, colors, Scryfall UUIDv4, printed text) and token attributes (name, colors, power, toughness, setcode, Scryfall UUIDv4)
+- UUIDs have been changed: the old field has become `scryfallId` whereas the new field is now `uuid` (these have reverted to exactly 36 characters; keep in mind a UUID for each face on the same physical card is not unique)
+- `uuid` is now manually generated as a UUID v5 based on card attributes (name, set code, colors, Scryfall UUIDv4, printed text) and token attributes (name, colors, power, toughness, setcode, Scryfall UUIDv4); a UUID for each face is unique
 - Some entries updated in the `names` array of cards
 - Updated meld card ordering
 - Fixed duplicate tokens appearing in `tokens` array with missing attributes
