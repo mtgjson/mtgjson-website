@@ -24,8 +24,9 @@ Page-order: 3
 #### Changed
 - UUIDs have been changed: the old field has become `scryfallId` whereas the new field is now `uuid` (these have reverted back to before 4.1.3, they are no longer modified, and are once again exactly 36 characters); keep in mind a UUID for each face on the same physical card is not unique
 - `uuid` is now manually generated as a UUID v5 based on card attributes (name, set code, colors, Scryfall UUIDv4, printed text) and token attributes (name, colors, power, toughness, setcode, Scryfall UUIDv4); a UUID for each face is unique
+- `variations` field uses the MTGJSON generated `uuid` field (not the `scryfallId` field, like it did before)
 - Some entries updated in the `names` array of cards
-- Updated meld card ordering
+- Fixed meld card ordering with Chittering Host and company
 - Fixed duplicate tokens appearing in `tokens` array with missing attributes
 
 ### Other
