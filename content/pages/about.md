@@ -1,6 +1,6 @@
 Title: About Us
 Date: 2018-10-13 00:00
-Modified: 2018-12-07 00:00
+Modified: 2018-12-18 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: about

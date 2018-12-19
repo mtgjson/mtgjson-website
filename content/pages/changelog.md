@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-12-07 00:00
+Modified: 2018-12-18 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,35 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.2 <small>(2018-12-18)</small>
+### Individual Sets
+#### Changed
+- `baseSetSize` numbers have been adjusted because of new `isAlternative` field
+
+### Individual Cards
+#### Added
+- `isAlternative` used for cards that are a secret foil (in select sets)
+- `duelDeck` used to denote which deck of a duel deck product (`a` or `b`)
+- `frameEffect` used for cards with added frame styling
+
+#### Changed
+- UUIDs have been changed: the old field has become `scryfallId` whereas the new field is now `uuid` (these have reverted back to before 4.1.3, they are no longer modified, and are once again exactly 36 characters); keep in mind a UUID for each face on the same physical card is not unique
+- `uuid` is now manually generated as a UUID v5 based on card attributes (name, set code, colors, Scryfall UUIDv4, printed text) and token attributes (name, colors, power, toughness, setcode, Scryfall UUIDv4); a UUID for each face is unique
+- `variations` field uses the MTGJSON generated `uuid` field (not the `scryfallId` field, like it did before)
+- Some entries updated in the `names` array of cards
+- Fixed meld card ordering with Chittering Host and company
+- Fixed duplicate tokens appearing in `tokens` array with missing attributes
+
+### Other
+#### Added
+- MTGJSON commands have been updated and simplified (see README for more details)
+
+#### Changed
+- `Keywords.json` abilities are now in lowercase
+
+#### Removed
+- Removed `SetCodes.json` (same information can be found in `SetLists.json`)
 
 ## 4.1.3 <small>(2018-12-07)</small>
 ### Individual Sets
