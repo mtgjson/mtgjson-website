@@ -23,6 +23,5 @@ Page-order: 1
 
 <div class="attention">
 MTGJSON is graciously maintained by a group of volunteers. If you like what you see, we accept donations to the project via PayPal.
-
-<a href="https://www.paypal.me/Zachhalpern"><i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;&nbsp;Donate</a>
+<br><a href="https://www.paypal.me/Zachhalpern"><i class="fa fa-paypal" aria-hidden="true"></i>&nbsp;&nbsp;Donate</a>
 </div>
