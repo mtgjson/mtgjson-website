@@ -4,7 +4,7 @@ from __future__ import unicode_literals
 
 AUTHOR = 'MTGJSON Developers'
 SITENAME = 'MTGJSON 4'
-SITEURL = 'https://mtgjson.com/v4'
+SITEURL = 'https://mtgjson.com'
 
 PATH = 'content'
 
