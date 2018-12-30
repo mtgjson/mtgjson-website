@@ -34,7 +34,12 @@ PLUGIN_PATHS = ['plugins']
 PLUGINS = ['i18n_subsites']
 
 CUSTOM_CSS = 'css/mtgjson4.css'
-STATIC_PATHS = ['css', 'img']
+STATIC_PATHS = ['css', 'img', 'extra',]
+
+EXTRA_PATH_METADATA = {
+	'extra/robots.txt': {'path': 'robots.txt'},
+	'extra/favicon.ico': {'path': 'favicon.ico'},
+}
 
 DISPLAY_CATEGORIES_ON_MENU = False
 DISPLAY_PAGES_ON_MENU = False
