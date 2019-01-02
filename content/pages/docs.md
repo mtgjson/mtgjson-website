@@ -104,7 +104,7 @@ name | string | `"Core Set 2019"` | Name of the set.
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
 totalSetSize | integer | `314` | Total number of cards in the set, including promos and related supplemental products.
-type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token` or `memorabilia`.
+type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `treasure_chest`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token`, or `memorabilia`.
 &nbsp; | &nbsp; | &nbsp;| &nbsp;
 <h3>Keywords</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
