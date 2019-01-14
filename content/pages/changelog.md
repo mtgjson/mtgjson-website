@@ -13,7 +13,6 @@ Page-order: 3
 ## 4.2.1 <small>(2018-01-12)</small>
 ### Individual Sets
 #### Changed
-- MTGJSON has a new logo
 - `code` is now capitalized
 - `mtgoCode` is now capitalized
 - Fixed Unstable booster content
@@ -29,11 +28,12 @@ Page-order: 3
 #### Added
 - `life` for Vanguard cards
 - `hand` for Vanguard cards
-- `tcgplayerPurchaseUrl` which contains URLs to purchase cards (referrals are nice :)
+- `tcgplayerPurchaseUrl` which contains URLs to purchase cards ( referrals are nice :) )
 
 ### Other
 #### Added
-- `AllSetFiles.json.zip`, which contains all individual set files in a folder instead of `AllSets.json` (which is one file with all of the data)
+- MTGJSON has a new logo (please do give feedback!)
+- `AllSetFiles.zip`, which contains all individual set files in a folder instead of `AllSets.json` (which is one file with all of the data)
 
 ## 4.2 <small>(2018-12-18)</small>
 ### Individual Sets
@@ -220,6 +220,8 @@ Page-order: 3
 - `id` is now `uuid`
 - `legalities` formatting has changed
 - `loyalty` is now a string over an int
+- `rarity` uses "mythic" instead of "mythic rare" now
+- `layout` uses "transform" instead of "double-faced" now
 
 ### Individual Sets
 #### Added
