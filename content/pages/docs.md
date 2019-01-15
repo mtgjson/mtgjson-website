@@ -133,11 +133,11 @@ Filename | Links | | | | | Description
 **Filename** | **Links** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | **Description**
 AllCards | [JSON](json/AllCards.json) | [BZ2](json/AllCards.json.bz2) | [GZ](json/AllCards.json.gz) | [XZ](json/AllCards.json.xz) | [ZIP](json/AllCards.json.zip) | Every card in a specific set.
 AllCardsNoUn | [JSON](json/AllCardsNoUn.json) | [BZ2](json/AllCardsNoUn.json.bz2) | [GZ](json/AllCardsNoUn.json.gz) | [XZ](json/AllCardsNoUn.json.xz) | [ZIP](json/AllCardsNoUn.json.zip) | AllCards.json without *Un-*set cards (will be renamed `VintageCards.json` soon).
-AllSetFiles | | | | | [ZIP](json/AllSetFiles.json) | Every set file.
+AllSetFiles | | | | | [ZIP](json/AllSetFiles.json) | Every set file. Useful for systems that can't load `AllSets.json`.
 AllSets | [JSON](json/AllSets.json) | [BZ2](json/AllSets.json.bz2) | [GZ](json/AllSets.json.gz) | [XZ](json/AllSets.json.xz) | [ZIP](json/AllSets.json.zip) | Every set and all of their cards.
 AllSetsNoUn | [JSON](json/AllSetsNoUn.json) | [BZ2](json/AllSetsNoUn.json.bz2) | [GZ](json/AllSetsNoUn.json.gz) | [XZ](json/AllSetsNoUn.json.xz) | [ZIP](json/AllSetsNoUn.json.zip) | AllSets.json without *Un-*set cards (will be renamed `VintageSets.json` soon).
 Keywords | [JSON](json/Keywords.json) | [BZ2](json/Keywords.json.bz2) | [GZ](json/Keywords.json.gz) | [XZ](json/Keywords.json.xz) | [ZIP](json/Keywords.json.zip) | List of all keywords used on Magic cards.
-Modern | [JSON](json/Modern.json) | [BZ2](json/Modern.json.bz2) | [GZ](json/Modern.json.gz) | [XZ](json/Modern.json.xz) | [ZIP](json/Modern.json.zip) | AllSets.json with only Modern-legal sets.
+Modern | [JSON](json/Modern.json) | [BZ2](json/Modern.json.bz2) | [GZ](json/Modern.json.gz) | [XZ](json/Modern.json.xz) | [ZIP](json/Modern.json.zip) | AllSets.json with only Modern-legal sets (will be renamed `ModernSets.json` soon).
 SetList | [JSON](json/SetList.json) | [BZ2](json/SetList.json.bz2) | [GZ](json/SetList.json.gz) | [XZ](json/SetList.json.xz) | [ZIP](json/SetList.json.zip) | List of codes, names and release dates of all sets.
-Standard | [JSON](json/Standard.json) | [BZ2](json/Standard.json.bz2) | [GZ](json/Standard.json.gz) | [XZ](json/Standard.json.xz) | [ZIP](json/Standard.json.zip) | AllSets.json with only Standard-legal sets.
+Standard | [JSON](json/Standard.json) | [BZ2](json/Standard.json.bz2) | [GZ](json/Standard.json.gz) | [XZ](json/Standard.json.xz) | [ZIP](json/Standard.json.zip) | AllSets.json with only Standard-legal sets (will be renamed `StandardSets.json` soon).
 version | [JSON](json/version.json) | [BZ2](json/version.json.bz2) | [GZ](json/version.json.gz) | [XZ](json/version.json.xz) | [ZIP](json/version.json.zip) | Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release.
