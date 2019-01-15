@@ -12,7 +12,7 @@ Page-order: 1
 
 <div class="splash"><p>Magic: The Gathering card data in JSON
 <p><h4>Current version: 4.2.1</h4>
-2018 January 12
+2019 January 12
 <div class="downloads">
   <p>
     <a href="json/AllCards.json"><i class="fa fa-file-text-o" aria-hidden="true"></i> All Cards</a><a href="json/AllCards.json.zip"><i class="fa fa-file-archive-o" aria-hidden="true"></i> All Cards Zipped</a><br>
