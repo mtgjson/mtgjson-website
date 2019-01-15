@@ -28,6 +28,7 @@ Page-order: 3
 #### Added
 - `life` for Vanguard cards
 - `hand` for Vanguard cards
+- `tcgplayerProductId` used to identify the card on TCGPlayer’s website
 - `tcgplayerPurchaseUrl` which contains URLs to purchase cards ( referrals are nice :) )
 
 ### Other
