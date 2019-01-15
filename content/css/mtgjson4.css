@@ -86,6 +86,10 @@ h3.users + table tbody tr td a:hover {
   border: 0;
 }
 
+h3.manifest + table td {
+  vertical-align: middle;
+}
+
 .div-bio {
   margin: 4em 0em;
 }
