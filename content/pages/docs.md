@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-12-18 00:00
+Modified: 2018-01-12 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.2 <small>(2018-12-18)</small>
+## 4.2.1 <small>(2019-01-12)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -34,6 +34,7 @@ foreignData | array(object) |  |
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type | string | `"Legendäre Kreatur — Ältester, Drache"` | Type in foreign language.
 frameEffect | string | `"originpwdfc"` | Effect found on the card frame style. Can be `legendary`, `miracle`, `nyxtouched`, `draft`, `devoid`, `tombstone`, `colorshifted`, `sunmoondfc`, `compasslanddfc`, `originpwdfc`, or `mooneldrazidfc`. (If none, it is usually omitted.)
 frameVersion | string | `"2015"` | Version of the card frame style. Can be `1993`, `1997`, `2003`, `2015`, or `future`.
+hand | string | `"+0"` | Starting maximum hand size total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.
 hasFoil | bool | `true` | Can the card be found in foil? Can be `true` or `false`. (If false, it is usually omitted.)
 hasNonFoil | bool | `true` | Can the card be found in non-foil? Can be `true` or `false`. (If false, it is usually omitted.)
 isAlternative | bool | `false` | Is the card a "secret foil" in the set? This is a feature found in sets such as UNH, 10E, CN2, BBD, and PLS. Can be `true` or `false`.  (If false, it is usually omitted.)
@@ -44,7 +45,7 @@ isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or
 isTimeshifted | bool | `false` | Card is “timeshifted”, a feature from *Time Spiral* block. Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
 legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": "Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `future`, `legacy`, `modern`, `pauper`, `penny`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
-loyalty | string | `"7"` | Planeswalker loyalty value.
+life | string | `"+0"` | Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
 name | string | `"Nicol Bolas, the Ravager"` | Name of the card. (If the card is in an *Un-*set and has multiple printings, a space and letter enclosed in parentheses, starting with ` (b)`, follows the name.)
@@ -97,6 +98,7 @@ block | string | `"Core Set 2019"` | Block the set was in.
 boosterV3 | array(string) | `"boosterV3": [ [ "rare", "mythic rare" ], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing" ]` | Contents of a typical booster.
 cards | array(object) |  | List of cards. (See Card table.)
 code | string | `"m19"` | Set code for the set.
+codeV3 | string | `` | Alternate set code Wizards uses for a select few duel deck sets. (If there is not an alternate set code, this field is omitted.)
 isOnlineOnly | bool | `false` | Set available online only. Can be `true` or `false`. (If false, it is usually omitted.)
 meta | object | `{"date": "2018-12-18","version": "4.2.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
 mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
@@ -105,7 +107,6 @@ releaseDate | string | `"2018-07-13"` | Date of release for the set.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
 totalSetSize | integer | `314` | Total number of cards in the set, including promos and related supplemental products.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `treasure_chest`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token`, or `memorabilia`.
-&nbsp; | &nbsp; | &nbsp;| &nbsp;
 <h3>Keywords</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
 AbilityWords | array(string) | `[ `…`"undergrowth", `…` ]` | List of ability words found in rules text on cards.
