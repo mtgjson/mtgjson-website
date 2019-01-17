@@ -86,6 +86,10 @@ h3.users + table tbody tr td a:hover {
   border: 0;
 }
 
+h3.manifest + table td {
+  vertical-align: middle;
+}
+
 .div-bio {
   margin: 4em 0em;
 }
@@ -116,7 +120,7 @@ h4 {
 
 .attention {
   display: block;
-  background: #ff6;
+  background: #ff9;
   border: 2px solid gray;
   width: 30%;
   padding: 1em;

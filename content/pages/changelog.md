@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-12-18 00:00
+Modified: 2018-01-12 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,32 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.2.1 <small>(2018-01-12)</small>
+### Individual Sets
+#### Changed
+- `code` is now capitalized
+- `mtgoCode` is now capitalized
+- Fixed Unstable booster content
+
+#### Added
+- `codeV3` for the few sets who have different Gatherer codes
+
+### Individual Cards
+#### Changed
+- `rarity` no longer contains things like "timeshifted rare" as that can be inferred (this reverts a 4.1.1 change)
+- Fixed several cards having incorrect data
+
+#### Added
+- `life` for Vanguard cards
+- `hand` for Vanguard cards
+- `tcgplayerProductId` used to identify the card on TCGPlayer’s website
+- `tcgplayerPurchaseUrl` which contains URLs to purchase cards ( referrals are nice :) )
+
+### Other
+#### Added
+- MTGJSON has a new logo (please do give feedback!)
+- `AllSetFiles.zip`, which contains all individual set files in a folder instead of `AllSets.json` (which is one file with all of the data)
 
 ## 4.2 <small>(2018-12-18)</small>
 ### Individual Sets
@@ -195,6 +221,8 @@ Page-order: 3
 - `id` is now `uuid`
 - `legalities` formatting has changed
 - `loyalty` is now a string over an int
+- `rarity` uses "mythic" instead of "mythic rare" now
+- `layout` uses "transform" instead of "double-faced" now
 
 ### Individual Sets
 #### Added

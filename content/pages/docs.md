@@ -1,6 +1,6 @@
 Title: Documentation
 Date: 2018-10-13 00:00
-Modified: 2018-12-18 00:00
+Modified: 2018-01-12 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: docs
@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.2 <small>(2018-12-18)</small>
+## 4.2.1 <small>(2019-01-12)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
@@ -34,6 +34,7 @@ foreignData | array(object) |  |
 &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;type | string | `"Legendäre Kreatur — Ältester, Drache"` | Type in foreign language.
 frameEffect | string | `"originpwdfc"` | Effect found on the card frame style. Can be `legendary`, `miracle`, `nyxtouched`, `draft`, `devoid`, `tombstone`, `colorshifted`, `sunmoondfc`, `compasslanddfc`, `originpwdfc`, or `mooneldrazidfc`. (If none, it is usually omitted.)
 frameVersion | string | `"2015"` | Version of the card frame style. Can be `1993`, `1997`, `2003`, `2015`, or `future`.
+hand | string | `"+0"` | Starting maximum hand size total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.
 hasFoil | bool | `true` | Can the card be found in foil? Can be `true` or `false`. (If false, it is usually omitted.)
 hasNonFoil | bool | `true` | Can the card be found in non-foil? Can be `true` or `false`. (If false, it is usually omitted.)
 isAlternative | bool | `false` | Is the card a "secret foil" in the set? This is a feature found in sets such as UNH, 10E, CN2, BBD, and PLS. Can be `true` or `false`.  (If false, it is usually omitted.)
@@ -44,6 +45,7 @@ isReserved | bool | `false` | Is the card on the Reserved List? Can be `true` or
 isTimeshifted | bool | `false` | Card is “timeshifted”, a feature from *Time Spiral* block. Can be `true` or `false`. (If false, it is usually omitted.)
 layout | string | `"transform"` | Type of card. Can be `normal`, `split`, `flip`, `transform`, `meld`, `leveler`, `saga`, `planar`, `scheme`, `vanguard`, `token`, `double_faced_token`, `emblem`, `augment`, or `host`. (If normal, it is usually omitted.)
 legalities | object | `"{"1v1": "Legal", "brawl": "Legal", "commander": "Legal", "duel": "Legal", "frontier": "Legal", "legacy": "Legal", "modern": "Legal", "standard": "Legal", "vintage": "Legal"}"` | Keys are Magic play formats. Can be `1v1`, `brawl`, `commander`, `duel`, `frontier`, `future`, `legacy`, `modern`, `pauper`, `penny`, `standard`, or `vintage`. Values can be `Legal`, `Restricted`, `Banned`, or `Future`. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
+life | string | `"+0"` | Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.
 loyalty | string | `"7"` | Planeswalker loyalty value.
 manaCost | string | `"{1}{U}{B}{R}"` | Mana cost of the card.
 multiverseId | integer | `447354` | An integer most cards have which Wizards uses as a card identifier.
@@ -63,6 +65,8 @@ side | string | `"a"` | Identifier of the side. Used on cards with multiple face
 starter | bool | `false` | Is the card only not found in a booster pack? Can be `true` or `false`. (If false, it is usually omitted.)
 subtypes | array(string) | `["Elder","Dragon"]` | List of card subtypes found after em-dash.
 supertypes | array(string) | `["Legendary"]` | List of card supertypes found before em-dash.
+tcgplayerProductId | integer | `168451` | Numeric identifier for the card for TCGPlayer.
+tcgplayerPurchaseUrl | string | `"https://mtgjson.com/links/c9231e9296c7917d"` | URL which redirects to TCGPlayer website’s card page.
 text | string | `"Flying\nWhen Nicol Bolas, the Ravager enters the battlefield, each opponent discards a card.\n{4}{U}{B}{R}: Exile Nicol Bolas, the Ravager, then return him to the battlefield transformed under his owner's control. Activate this ability only any time you could cast a sorcery."` | Rules text of the card.
 toughness | string | `"4"` | Toughness of the card.
 type | string | `"Legendary Creature — Elder Dragon"` | Type of the card. Includes any supertypes and subtypes.
@@ -96,16 +100,16 @@ baseSetSize | integer | `280` | Number of cards in the set. Note that Wizards so
 block | string | `"Core Set 2019"` | Block the set was in.
 boosterV3 | array(string) | `"boosterV3": [ [ "rare", "mythic rare" ], "uncommon", "uncommon", "uncommon", "common", "common", "common", "common", "common", "common", "common", "common", "common", "common", "land", "marketing" ]` | Contents of a typical booster.
 cards | array(object) |  | List of cards. (See Card table.)
-code | string | `"m19"` | Set code for the set.
+code | string | `"M19"` | Set code for the set.
+codeV3 | string | &nbsp; | Alternate set code Wizards uses for a select few duel deck sets. (If there is not an alternate set code, this field is omitted.)
 isOnlineOnly | bool | `false` | Set available online only. Can be `true` or `false`. (If false, it is usually omitted.)
 meta | object | `{"date": "2018-12-18","version": "4.2.0"}` | Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release.
-mtgoCode | string | `"m19"` | Set code for the set as it appears on Magic: The Gathering Online.
+mtgoCode | string | `"M19"` | Set code for the set as it appears on Magic: The Gathering Online.
 name | string | `"Core Set 2019"` | Name of the set.
 releaseDate | string | `"2018-07-13"` | Date of release for the set.
 tokens | array(object) |  | List of tokens for the set. (See Token table.)
 totalSetSize | integer | `314` | Total number of cards in the set, including promos and related supplemental products.
 type | string | `"core"` | Type of set. Can be `core`, `expansion`, `masters`, `masterpiece`, `from_the_vault`, `spellbook`, `premium_deck`, `duel_deck`, `draft_innovation`, `treasure_chest`, `commander`, `planechase`, `archenemy`, `vanguard`, `funny`, `starter`, `box`, `promo`, `token`, or `memorabilia`.
-&nbsp; | &nbsp; | &nbsp;| &nbsp;
 <h3>Keywords</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
 AbilityWords | array(string) | `[ `…`"undergrowth", `…` ]` | List of ability words found in rules text on cards.
@@ -114,7 +118,7 @@ KeywordActions | array(string) | `[ `…` "surveil", `…` ]` | List of keyword 
 &nbsp; | &nbsp; | &nbsp;| &nbsp;
 <h3>Set List</h3> | &nbsp; | &nbsp; | &nbsp;
 **Property** | **Value** | **Example** | **Description**
-code | string | `"m19"` | Set code for the set.
+code | string | `"M19"` | Set code for the set.
 isFoilOnly | bool | `false` | Set only has foil cards. Can be `true` or `false`. (If false, it is usually omitted.)
 name | string | `"Core Set 2019"` | Name for the set.
 releaseDate | string | `"2018-07-13"` | Release date (OBDC standard) for the set. If the set was not formally released as a product, can be `null`.
@@ -123,17 +127,17 @@ releaseDate | string | `"2018-07-13"` | Release date (OBDC standard) for the set
 date | string | `"2018-12-18"` | Date of the MTGJSON build.
 version | string | `"4.2.0"` | Version of the MTGJSON build.
 
-<h3>File Manifest</h3>
-Filename | Description
------|-----
-**Filename** | **Description**
-<span class="classic-link">[*SET*.json](sets.html) | Every card in a specific set.
-<span class="classic-link">[AllCards.json](json/AllCards.json) | Every card listed once.
-<span class="classic-link">[AllCardsNoUn.json](json/AllCardsNoUn.json) | AllCards.json without *Un-*set cards.
-<span class="classic-link">[AllSets.json](json/AllSets.json) | Every set and all of their cards.
-<span class="classic-link">[AllSetsNoUn.json](json/AllSetsNoUn.json) | AllSets.json without *Un-*set cards.
-<span class="classic-link">[Keywords.json](json/Keywords.json) | List of all keywords used on Magic cards.
-<span class="classic-link">[Modern.json](json/Modern.json) | AllSets.json with only Modern-legal sets.
-<span class="classic-link">[Standard.json](json/Standard.json) | AllSets.json with only Standard-legal sets.
-<span class="classic-link">[SetList.json](json/SetList.json) | List of codes, names and release dates of all sets.
-<span class="classic-link">[version.json](json/version.json) | Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release.
+<h3 class="manifest">Downloads and Files</h3>
+Filename | Links | | | | | Description
+-----|-----|-----|-----|-----|-----|-----
+**Filename** | **Links** | &nbsp; | &nbsp; | &nbsp; | &nbsp; | **Description**
+AllCards | [JSON](json/AllCards.json) | [BZ2](json/AllCards.json.bz2) | [GZ](json/AllCards.json.gz) | [XZ](json/AllCards.json.xz) | [ZIP](json/AllCards.json.zip) | Every card in a specific set.
+AllCardsNoUn | [JSON](json/AllCardsNoUn.json) | [BZ2](json/AllCardsNoUn.json.bz2) | [GZ](json/AllCardsNoUn.json.gz) | [XZ](json/AllCardsNoUn.json.xz) | [ZIP](json/AllCardsNoUn.json.zip) | AllCards.json without *Un-*set cards (will be renamed `VintageCards.json` soon).
+AllSetFiles | | | | | [ZIP](json/AllSetFiles.json) | Every set file. Useful for systems that can't load `AllSets.json`.
+AllSets | [JSON](json/AllSets.json) | [BZ2](json/AllSets.json.bz2) | [GZ](json/AllSets.json.gz) | [XZ](json/AllSets.json.xz) | [ZIP](json/AllSets.json.zip) | Every set and all of their cards.
+AllSetsNoUn | [JSON](json/AllSetsNoUn.json) | [BZ2](json/AllSetsNoUn.json.bz2) | [GZ](json/AllSetsNoUn.json.gz) | [XZ](json/AllSetsNoUn.json.xz) | [ZIP](json/AllSetsNoUn.json.zip) | AllSets.json without *Un-*set cards (will be renamed `VintageSets.json` soon).
+Keywords | [JSON](json/Keywords.json) | [BZ2](json/Keywords.json.bz2) | [GZ](json/Keywords.json.gz) | [XZ](json/Keywords.json.xz) | [ZIP](json/Keywords.json.zip) | List of all keywords used on Magic cards.
+Modern | [JSON](json/Modern.json) | [BZ2](json/Modern.json.bz2) | [GZ](json/Modern.json.gz) | [XZ](json/Modern.json.xz) | [ZIP](json/Modern.json.zip) | AllSets.json with only Modern-legal sets (will be renamed `ModernSets.json` soon).
+SetList | [JSON](json/SetList.json) | [BZ2](json/SetList.json.bz2) | [GZ](json/SetList.json.gz) | [XZ](json/SetList.json.xz) | [ZIP](json/SetList.json.zip) | List of codes, names and release dates of all sets.
+Standard | [JSON](json/Standard.json) | [BZ2](json/Standard.json.bz2) | [GZ](json/Standard.json.gz) | [XZ](json/Standard.json.xz) | [ZIP](json/Standard.json.zip) | AllSets.json with only Standard-legal sets (will be renamed `StandardSets.json` soon).
+version | [JSON](json/version.json) | [BZ2](json/version.json.bz2) | [GZ](json/version.json.gz) | [XZ](json/version.json.xz) | [ZIP](json/version.json.zip) | Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release.

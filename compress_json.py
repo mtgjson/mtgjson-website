@@ -6,6 +6,7 @@ import gzip
 import os
 import os.path
 import lzma as xz
+import requests
 import sys
 import zipfile
 
@@ -49,14 +50,25 @@ def compress_single_sets(source_dir):
         print("Compressed " + os.path.basename(f))
 
 
+def get_all_set_names():
+    data = requests.get("https://api.scryfall.com/sets/").json()["data"]
+    return [x["code"].upper() for x in data]
+
+
 def compress_all_set_files(source_dir):
     # AllSetFiles
     all_set_files_name = "AllSetFiles"
 
+    sets = set(get_all_set_names() + ["CON_"])
+
     # .ZIP
     with zipfile.ZipFile(all_set_files_name + ".zip", "w") as zip_out:
         for f in file_endings(source_dir, ".json"):
-            zip_out.write(f, compress_type=zipfile.ZIP_DEFLATED)
+            set_name = f.split("/")[-1].split(".")[0]
+            if set_name in sets:
+                zip_out.write(f, compress_type=zipfile.ZIP_DEFLATED)
+            else:
+                print("NOT INCLUDING", f)
 
     print("Compressed " + all_set_files_name)
 
