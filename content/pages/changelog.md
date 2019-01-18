@@ -14,6 +14,7 @@ Page-order: 3
 ### Individual Sets
 #### Changed
 - `code` is now capitalized
+- **NOTE: UUIDs have changed due to `code` being capitalized. This is _hopefully_ the last time we will break UUIDs <3**
 - `mtgoCode` is now capitalized
 - Fixed Unstable booster content
 
