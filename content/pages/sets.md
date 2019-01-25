@@ -1,6 +1,6 @@
 Title: Sets
 Date: 2018-10-13 00:00
-Modified: 2018-01-12 00:00
+Modified: 2019-01-12 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: sets

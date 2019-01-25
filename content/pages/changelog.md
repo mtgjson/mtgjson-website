@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2018-01-12 00:00
+Modified: 2019-01-12 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -10,7 +10,7 @@ Page-order: 3
 
 # Changelog
 
-## 4.2.1 <small>(2018-01-12)</small>
+## 4.2.1 <small>(2019-01-12)</small>
 ### Individual Sets
 #### Changed
 - `code` is now capitalized
