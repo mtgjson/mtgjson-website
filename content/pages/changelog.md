@@ -1,6 +1,6 @@
 Title: Changelog
 Date: 2018-10-13 00:00
-Modified: 2019-01-12 00:00
+Modified: 2019-01-30 00:00
 Category: MTGJSON
 Tags: mtgjson, mtgjson4
 Slug: changelog
@@ -9,6 +9,24 @@ Summary: Changelog
 Page-order: 3
 
 # Changelog
+
+## 4.2.2 <small>(2019-01-30)</small>
+### Individual Sets
+#### Added
+- Ravnica Guild Kit (`GK2`)
+
+#### Changed
+- 2018 Gift PAck set code changed from `PGP18` or `PGP1` to `G18`
+- 2017 Gift Pack set code changed from `PGP17` to `G17`
+
+### Individual Cards
+#### Changed
+- Updated rules and oracle text wording corrections
+- Updated missing foreign data for newer cards
+
+### Other
+#### Added
+- Old School (`oldschool`) is now a supported format
 
 ## 4.2.1 <small>(2019-01-12)</small>
 ### Individual Sets
