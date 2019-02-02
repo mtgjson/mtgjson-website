@@ -10,7 +10,7 @@ Page-order: 4
 
 # Documentation
 
-## 4.2.1 <small>(2019-01-12)</small>
+## 4.2.2 <small>(2019-01-30)</small>
 
 <h3>Card</h3>
 Property | Value | Example | Description
