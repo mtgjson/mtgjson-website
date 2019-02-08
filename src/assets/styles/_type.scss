@@ -1,0 +1,9 @@
+body {
+  font-family: Krub, system, -apple-system, BlinkMacSystemFont, "Helvetica Neue", "Lucida Grande", sans-serif;
+  font-weight: normal;
+  line-height: 1em;
+}
+
+h2 {
+  @extend %medium-headline;
+}
