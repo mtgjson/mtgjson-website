@@ -15,11 +15,24 @@ module.exports = {
         sizes: '32x32',
         href: '/favicon.ico',
       },
-    ]
+    ],
   ],
   themeConfig: {
-    nav: [{ text: 'Discord', link: 'https://discord.gg/74GUQDE'}, { text: 'Github', link: 'https://github.com/mtgjson/mtgjson'}, { text: 'Donate Now', link: 'https://www.paypal.me/Zachhalpern' }],
-    sidebar: ['/', '/documentation/Overview', '/documentation/AllCards' ],
-    lastUpdated: 'Last Updated'
+    nav: [
+      { text: 'Discord', link: 'https://discord.gg/74GUQDE' },
+      { text: 'Github', link: 'https://github.com/mtgjson/mtgjson' },
+      { text: 'Donate Now', link: 'https://www.paypal.me/Zachhalpern' },
+    ],
+    sidebar: [
+      '/',
+      '/downloads/',
+      {
+        title: 'Documentation',
+        path: '/documentation/',
+        collapsable: false,
+        children: ['/documentation/', '/documentation/all-cards'],
+      }
+    ],
+    lastUpdated: 'Last Updated',
   },
 };

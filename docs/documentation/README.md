@@ -2,6 +2,6 @@
 docs_index: true
 ---
 
-# Documentation Overview
+# Overview
 
 Here are some notes
