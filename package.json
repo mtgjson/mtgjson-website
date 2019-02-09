@@ -1,8 +1,25 @@
 {
+  "name": "mtgjson-website",
+  "version": "2.0.0",
+  "author": "MTGJSON Developers",
+  "repository": "",
+  "license": "MIT",
+  "scripts": {
+    "docs:dev": "vuepress dev docs",
+    "dev": "yarn docs:dev",
+    "docs:build": "vuepress build docs",
+    "build": "yarn docs:build"
+  },
   "devDependencies": {
     "node-sass": "^4.11.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0"
+  },
+  "dependencies": {
+    "vuepress": "^1.0.0-alpha.37"
+  },
+  "resolutions": {
+    "terser": "3.14.1"
   }
 }

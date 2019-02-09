@@ -1,0 +1,94 @@
+@keyframes pulse
+  0%
+    background-color: salmon;
+  65%
+    background-color: darken(salmon, 20%);
+
+a:link
+  transition .25s all;
+
+  &:hover
+    transition .25s all;
+
+.nav-links
+  .nav-item
+    margin-left: 10px !important;
+    transition: .25s all;
+
+    a // generic
+      background-color: darkgray;
+      transition: .25s all;
+
+    &:hover
+      opacity: 0.8;
+      transition: .25s all;
+
+    &:first-of-type // Discord
+      a
+        background-color: #7289da;
+
+    &:last-of-type // Donate
+      a
+        background-color: salmon;
+        animation: pulse 3s infinite;
+
+.search-box
+  margin-right: 0 !important;
+
+.nav-link.external
+  color: white;
+  font-weight: bold;
+  padding: 6px 15px
+  border-radius: 2em;
+  
+  &:hover
+    color: white;
+
+  svg
+    display: none;
+
+img[alt='avatar']
+  max-width: 100px !important;
+  border-radius: 100%;
+  float: left;
+  margin-right: 30px;
+
+img[alt='logo']
+  max-width: 275px !important;  
+  margin-left: 0;
+
+.page-nav
+  .next,
+  .prev
+    a
+      font-weight: bold;
+
+      &:hover 
+        text-decoration: underline;
+
+.sidebar-links
+  & > li > a.sidebar-link.active
+    background-color: dodgerblue;
+    border-left-width: 0;
+    color: white;
+
+  .sidebar-link
+    font-weight: bold !important;
+
+  .sidebar-sub-headers
+    margin-top: 10px
+
+.custom-block.tip
+  border-color: dodgerblue !important;
+
+h2#those-we-serve
+  border-bottom-width: 0;
+
+  & + table
+    thead tr
+      display: none;
+    
+    tbody
+      width: 100%;
+      display: inline-table;
+      box-sizing: border-box;
