@@ -1,29 +1,9 @@
-# mtgjson-website
+# About MTGJSON
 
-## Project setup
+## Summary
 
-```sh
-yarn install
-```
+things
 
-### Compiles and hot-reloads for development
+## About Us
 
-```sh
-yarn serve
-```
-
-### Compiles and minifies for production
-
-```sh
-yarn build
-```
-
-### Lints and fixes files
-
-```sh
-yarn lint
-```
-
-### Customize configuration
-
-See [Configuration Reference](https://cli.vuejs.org/config/).
+things
