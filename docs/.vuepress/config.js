@@ -4,7 +4,7 @@ module.exports = {
   // Deployment
   // https://vuepress.vuejs.org/guide/deploy.html
   host: '0.0.0.0',
-  port: '8080',
+  port: '3000',
   // SEO
   title: 'MTGJSON (v4)',
   description: 'Magic: The Gathering card data in JSON ',
