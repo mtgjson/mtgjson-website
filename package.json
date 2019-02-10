@@ -16,13 +16,13 @@
     "heroku-postbuild": "yarn build"
   },
   "dependencies": {
-    "vuepress": "^1.0.0-alpha.37"
-  },
-  "devDependencies": {
+    "vuepress": "^1.0.0-alpha.37",
     "node-sass": "^4.11.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0"
+  },
+  "devDependencies": {
   },
   "resolutions": {
     "ajv": "6.8.1"
