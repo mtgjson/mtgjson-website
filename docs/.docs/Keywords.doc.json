@@ -1,0 +1,23 @@
+{
+  "headings": ["Property", "Value", "Example", "Description"],
+  "properties": [
+    {
+      "key": "AbilityWords",
+      "value": "array(string)",
+      "example": "[...\"undergrowth\"...]",
+      "description": "List of ability words found in rules text on cards."
+    },
+    {
+      "key": "KeywordAbilities",
+      "value": "array(string)",
+      "example": "[...\"convoke\"...]",
+      "description": "List of keyword abilities found in rules text on cards."
+    },
+    {
+      "key": "KeywordActions",
+      "value": "array(string)",
+      "example": "[...\"surveil\"...]",
+      "description": "List of keyword actions found in rules text on cards."
+    }
+  ]
+}

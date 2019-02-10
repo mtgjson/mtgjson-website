@@ -1,11 +1,18 @@
+const documentationChildren = require('./documentation.js')();
+
 module.exports = {
+  host: '0.0.0.0',
+  port: '8080',
   title: 'MTGJSON (v4)',
   description: 'Magic: The Gathering card data in JSON ',
   head: [
-    ['meta', { name: 'apple-mobile-web-app-capable', content: 'yes' }],
     [
-      'meta',
-      { name: 'apple-mobile-web-app-status-bar-style', content: 'dodgerblue' },
+      'link',
+      {
+        rel: 'stylesheet',
+        type: 'text/css',
+        href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css',
+      },
     ],
     [
       'link',
@@ -25,13 +32,14 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/downloads/',
       {
         title: 'Documentation',
         path: '/documentation/',
         collapsable: false,
-        children: ['/documentation/', '/documentation/all-cards'],
-      }
+        children: documentationChildren,
+      },
+      '/changelog/',
+      '/downloads/'
     ],
     lastUpdated: 'Last Updated',
   },

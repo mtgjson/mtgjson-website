@@ -1,7 +1,3 @@
----
-docs_index: true
----
-
 # Overview
 
-Here are some notes
+MTGJSON is built in Python3 and aggregates different source data to generate multiplle compiled outputs for all MTG data.

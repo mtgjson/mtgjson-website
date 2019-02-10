@@ -13,7 +13,7 @@
 
 <script>
 export default {
-  name: "Table",
+  name: "GenerateTable",
   data() {
     return {
       documentHeadings: [],
@@ -29,11 +29,7 @@ export default {
     }
   },
   mounted() {
-    let dump = require(`../public/data/${this.$page.title}.doc.js`).default;
-    let dumpKeys = Object.keys(dump)
-
-    // We should also except one key for now, the name of the output
-    dump = dump[dumpKeys[0]]
+    let dump = require(`../../.docs/${this.$page.title}.doc.json`);
 
     this.documentHeadings = dump.headings || this.documentHeadings;
     this.documentProperties = dump.properties || this.documentProperties;

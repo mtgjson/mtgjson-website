@@ -1,0 +1,17 @@
+{
+  "headings": ["Property", "Value", "Example", "Description"],
+  "properties": [
+    {
+      "key": "date",
+      "value": "string",
+      "example": "2018-12-18",
+      "description": "Date of the MTGJSON build."
+    },
+    {
+      "key": "version",
+      "value": "bool",
+      "example": "4.2.2",
+      "description": "Version of the MTGJSON build."
+    }
+  ]
+}

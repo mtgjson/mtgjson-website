@@ -27,16 +27,6 @@ Zach is a 21‐year old hippo fanatic who loves playing with big data and giving
 Martin is an avid strategy gamer and Magic player since late 1994. When he’s not looking at JavaScript or playing Commander, he’s likely spending time on a host of smaller projects, including the custom card creator MTG.Design.
 :::
 
-## Those We Serve
+## Who We Serve
 
-|---|---|---|---|
-|---|---|---|---|
-|Aetherhub|Card Castle|Cardhoarder|Cardsphere|
-|Cockatrice|Cube Tutor|Dr4ft|Draftalot|
-|EDHrec|Magarena|MTG Addict|MTG Developers|
-|MTG Set Builder|MYPCards|Scryfall|Snapcardster|
-|Tamiyo Discord Bot|TutorCards|XMage|mtg.wtf|
-|Bestiaire|Card Codex|DeckList.org|DideRobot|
-|Lab Maniac|Liminal Thoughts|MagicFetchBot|Magidex|
-|MTG Brewmaster|MTGCardFetcher|MTG Lands|MTG On Curve|
-|MTG Search||||
+<GenerateServices/>
