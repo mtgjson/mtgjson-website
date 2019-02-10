@@ -18,6 +18,8 @@ yarn-error.log*
 # Node modules
 node_modules
 
+# Build folder
+.vuepress/dist
+
 # Experiments
-# schemas
-schema.json
+*schema.json

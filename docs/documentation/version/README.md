@@ -6,6 +6,6 @@ document: version
 
 Version provides information exported from MTGJSON builds
 
-## version Structure
+### version Structure
 
 <GenerateTable/>

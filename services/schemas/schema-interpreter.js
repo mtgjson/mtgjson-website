@@ -1,3 +1,10 @@
+/**
+ * I mean... yea, it's dumb, but its gets a schema colors to what
+ * we want than the actuall json itself. Many gaps needs to be filled
+ * in after placing the output in a .doc file.
+ * 
+ * @TODO Perhaps get MTGJSON app to export a .doc file for us
+ */
 'use strict';
 
 const fs = require('fs');
@@ -35,7 +42,7 @@ const fs = require('fs');
         ? '[]'
         : obj.type === 'object'
         ? '{}'
-        : 'null'
+        : ''
       : '';
 
     output.push(obj);

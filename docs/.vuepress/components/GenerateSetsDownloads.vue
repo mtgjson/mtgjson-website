@@ -8,8 +8,8 @@
           p {{ set.name }} - {{ set.code }}
           small {{ set.releaseDate }}
         .dl-wrap
-          a.cta-btn(download :href="`${pathToDownloads}${set.code}.json.zip`") ZIP
-          a.cta-btn(download :href="`${pathToDownloads}${set.code}.json`") JSON
+          a.cta-btn(download :href="`${pathToDownloads}${set.code}.json.zip`") .zip
+          a.cta-btn(download :href="`${pathToDownloads}${set.code}.json`") .json
 
 </template>
 
@@ -18,7 +18,10 @@ export default {
   name: "GenerateSetsDownloads",
   data() {
     return {
-      pathToDownloads: 'https://mtgjson.com/json/',
+      /**
+       * @TODO fix environment variables and aliases
+       */
+      pathToDownloads: '/public/json/',
       sets: require(`../public/json/SetList.json`),
       iconHoverEffect: false
     };

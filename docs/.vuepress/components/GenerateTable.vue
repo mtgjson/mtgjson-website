@@ -17,9 +17,6 @@
 </template>
 
 <script>
-/**
- * @TODO Remove flower from this component in to its own file
- */
 export default {
   name: "GenerateTable",
   data() {
@@ -31,6 +28,9 @@ export default {
       value: false,
       object: [],
       matter: {},
+      /**
+       * @TODO Remove flower from this component in to its own file
+       */
       fertilize: false,
       flower: {
         buds: [],
@@ -57,7 +57,7 @@ export default {
      * @TODO Find a way to allow fertilization before mounted lifecycle
      * and enable router linking for fertizilation
      */
-    this.object = require(`../../.docs/${this.matter.document}.doc.json`);
+    this.object = require(`../public/documents/${this.matter.document}.doc.json`);
   },
   mounted() {
     const tableValues = Array.from(this.$el.querySelectorAll(".fertilizer"));

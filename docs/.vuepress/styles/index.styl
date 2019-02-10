@@ -8,6 +8,9 @@ h2 {
   border-width: 0 !important;
 }
 
+img
+  user-select: none;
+
 a:link
   transition .25s color;
 
@@ -16,7 +19,7 @@ a:link
 
 .page
   & > *
-    max-width: 100% !important;
+    max-width: 1240px !important;
     margin-left: 0 !important;
 
 .nav-links
@@ -85,24 +88,25 @@ img[alt='logo']
       &:hover 
         text-decoration: underline;
 
-.sidebar-sub-headers
-  a.sidebar-link:first-of-type
-    margin-top: 10px;
-  a.sidebar-link:last-of-type
-    margin-bottom: 10px;
-
 .sidebar
   &-group
     a.sidebar-link
       padding-left: 1.25rem !important;
 
+    .sidebar-sub-headers
+      a.sidebar-link:first-of-type
+        margin-top: 10px !important;
+      a.sidebar-link:last-of-type
+        margin-bottom: 10px !important;
+
   .sidebar-links
     .sidebar-link
       // font-weight: bold !important;
       font-size: 1.1em !important;
+      border-width: 0 !important;
 
     .sidebar-heading[href="/documentation/"]
-      border-left-color: transparent !important;
+      border-width: 0 !important;
       color: #2c3e50 !important;
 
     .sidebar-heading.clickable.active
@@ -110,9 +114,11 @@ img[alt='logo']
       font-weight: bold !important;
 
     .sidebar-sub-headers
-      padding-left: 2rem;
+      padding-left: 1.25rem;
 
       .sidebar-sub-header
+        .sidebar-link
+          padding-left: 0;
         .active
           font-weight: normal !important;
 

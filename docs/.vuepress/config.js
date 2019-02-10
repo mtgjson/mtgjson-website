@@ -29,15 +29,18 @@ module.exports = {
     ],
     sidebar: [
       '/',
+      '/changelog/',
+      '/downloads/',
       {
-        title: 'Structures',
+        title: 'Documentation',
         path: '/documentation/',
         collapsable: false,
         children: documentationChildren,
       },
-      '/changelog/',
-      '/downloads/'
     ],
+    serviceWorker: {
+      updatePopup: true
+    },
     lastUpdated: 'Last Updated',
   },
   /**

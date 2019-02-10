@@ -9,3 +9,9 @@ https://json-schema.org/understanding-json-schema/reference/type.html
 
 ## Oliver Steele's method to never run in to an undefined object value
 https://hackernoon.com/accessing-nested-objects-in-javascript-f02f1bd6387f
+
+## TODO
+- Figure out a more elegant solution to rendering downloads instead of just one component per grouping. e.g. render them all, not just sets, all and misc separately.
+- FLOWER. What the else did I just make? Maybe turn it in to a Vuepress plugin/extension?
+- Add meta data to every page
+- Eject the theme and manage it closer, its trash CSS right now and a mix between Stylus and SCSS, Force once to work only.

@@ -1,6 +1,5 @@
 ---
-# Component Data
-document: AllSets
+document: Set
 petals:
   - card: ${Card}$
   - token: ${Token}$
@@ -14,9 +13,8 @@ meta:
 
 # AllSets
 
-### Minor Description
 AllSets outputs every set unless flags are used to omit certain sets
 
-## Set Structure
+### Set Structure
 
 <GenerateTable/>

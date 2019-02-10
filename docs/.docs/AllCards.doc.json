@@ -1,8 +1,0 @@
-[
-  {
-    "key": "colorIdentity",
-    "value": "array(string)",
-    "example": "[\"B\",\"R\",\"U\"]",
-    "description": "List of all colors in card’s mana cost, rules text and any color indicator."
-  }
-]
