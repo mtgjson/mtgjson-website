@@ -12,7 +12,8 @@
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
     "dev": "yarn docs:dev",
-    "build": "yarn docs:build"
+    "build": "yarn docs:build",
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
     "vuepress": "^1.0.0-alpha.37"
