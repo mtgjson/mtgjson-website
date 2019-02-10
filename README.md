@@ -17,3 +17,9 @@ yarn dev
 ```sh
 yarn build
 ```
+
+## Deployment
+
+If you are deploying to GitHub pages, see the `deploy.sh` file, otherwise you will want to want the index directory to live at `docs/.vuepress/dist`
+
+The default host and port may also need to be changed in the `config.js` file in `.vuepress`

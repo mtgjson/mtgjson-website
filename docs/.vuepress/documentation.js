@@ -1,10 +1,12 @@
 fs = require('fs');
 
-module.exports = () => {
+const routes = () => {
   const files = fs.readdirSync('./docs/documentation/');
 
   return files
-    .map(file => file.replace('.md', ''))
-    .filter(file => file !== 'README')
-    .map(file => (file = 'documentation/' + file));
+    // Get rid of the index page
+    .filter(file => file !== 'README.md')
+    .map(file => (file = '/documentation/' + file + '/'));
 };
+
+module.exports = routes;

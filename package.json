@@ -10,6 +10,9 @@
     "dev": "yarn docs:dev",
     "build": "yarn docs:build"
   },
+  "dependencies": {
+    "vuepress": "^1.0.0-alpha.37"
+  },
   "devDependencies": {
     "fs": "^0.0.1-security",
     "node-sass": "^4.11.0",
@@ -17,7 +20,7 @@
     "pug-plain-loader": "^1.0.0",
     "sass-loader": "^7.1.0"
   },
-  "dependencies": {
-    "vuepress": "^1.0.0-alpha.37"
+  "resolutions": {
+    "ajv": "6.8.1"
   }
 }

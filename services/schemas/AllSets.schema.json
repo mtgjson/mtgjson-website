@@ -1,0 +1,820 @@
+{
+  "definitions": {},
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "$id": "http://example.com/root.json",
+  "type": "object",
+  "title": "The Root Schema",
+  "required": [
+    "baseSetSize",
+    "block",
+    "boosterV3",
+    "cards",
+    "code",
+    "meta",
+    "mtgoCode",
+    "name",
+    "releaseDate",
+    "tcgplayerGroupId",
+    "tokens",
+    "totalSetSize",
+    "type"
+  ],
+  "properties": {
+    "baseSetSize": {
+      "$id": "#/properties/baseSetSize",
+      "type": "integer",
+      "title": "The Basesetsize Schema",
+      "default": 0,
+      "examples": [
+        259
+      ]
+    },
+    "block": {
+      "$id": "#/properties/block",
+      "type": "string",
+      "title": "The Block Schema",
+      "default": "",
+      "examples": [
+        "Guilds of Ravnica"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "boosterV3": {
+      "$id": "#/properties/boosterV3",
+      "type": "array",
+      "title": "The Boosterv3 Schema",
+      "items": {
+        "$id": "#/properties/boosterV3/items",
+        "type": "array",
+        "title": "The Items Schema",
+        "items": {
+          "$id": "#/properties/boosterV3/items/items",
+          "type": "string",
+          "title": "The Items Schema",
+          "default": "",
+          "examples": [
+            "rare",
+            "mythic rare"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "cards": {
+      "$id": "#/properties/cards",
+      "type": "array",
+      "title": "The Cards Schema",
+      "items": {
+        "$id": "#/properties/cards/items",
+        "type": "object",
+        "title": "The Items Schema",
+        "required": [
+          "artist",
+          "borderColor",
+          "colorIdentity",
+          "colors",
+          "convertedManaCost",
+          "flavorText",
+          "foreignData",
+          "frameEffect",
+          "frameVersion",
+          "hand",
+          "hasFoil",
+          "hasNonFoil",
+          "isOnlineOnly",
+          "isOversized",
+          "isReserved",
+          "isTimeshifted",
+          "layout",
+          "legalities",
+          "life",
+          "loyalty",
+          "manaCost",
+          "multiverseId",
+          "name",
+          "number",
+          "originalText",
+          "originalType",
+          "power",
+          "printings",
+          "rarity",
+          "rulings",
+          "scryfallId",
+          "subtypes",
+          "supertypes",
+          "tcgplayerProductId",
+          "text",
+          "toughness",
+          "type",
+          "types",
+          "uuid",
+          "uuidV421",
+          "watermark"
+        ],
+        "properties": {
+          "artist": {
+            "$id": "#/properties/cards/items/properties/artist",
+            "type": "string",
+            "title": "The Artist Schema",
+            "default": "",
+            "examples": [
+              "Ryan Yee"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "borderColor": {
+            "$id": "#/properties/cards/items/properties/borderColor",
+            "type": "string",
+            "title": "The Bordercolor Schema",
+            "default": "",
+            "examples": [
+              "black"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "colorIdentity": {
+            "$id": "#/properties/cards/items/properties/colorIdentity",
+            "type": "array",
+            "title": "The Coloridentity Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/colorIdentity/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "W"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "colors": {
+            "$id": "#/properties/cards/items/properties/colors",
+            "type": "array",
+            "title": "The Colors Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/colors/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "W"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "convertedManaCost": {
+            "$id": "#/properties/cards/items/properties/convertedManaCost",
+            "type": "integer",
+            "title": "The Convertedmanacost Schema",
+            "default": 0,
+            "examples": [
+              5
+            ]
+          },
+          "flavorText": {
+            "$id": "#/properties/cards/items/properties/flavorText",
+            "type": "null",
+            "title": "The Flavortext Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "foreignData": {
+            "$id": "#/properties/cards/items/properties/foreignData",
+            "type": "array",
+            "title": "The Foreigndata Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/foreignData/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "flavorText",
+                "language",
+                "multiverseId",
+                "name",
+                "text",
+                "type"
+              ],
+              "properties": {
+                "flavorText": {
+                  "$id": "#/properties/cards/items/properties/foreignData/items/properties/flavorText",
+                  "type": "null",
+                  "title": "The Flavortext Schema",
+                  "default": null,
+                  "examples": [
+                    null
+                  ]
+                },
+                "language": {
+                  "$id": "#/properties/cards/items/properties/foreignData/items/properties/language",
+                  "type": "string",
+                  "title": "The Language Schema",
+                  "default": "",
+                  "examples": [
+                    "German"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "multiverseId": {
+                  "$id": "#/properties/cards/items/properties/foreignData/items/properties/multiverseId",
+                  "type": "integer",
+                  "title": "The Multiverseid Schema",
+                  "default": 0,
+                  "examples": [
+                    457404
+                  ]
+                },
+                "name": {
+                  "$id": "#/properties/cards/items/properties/foreignData/items/properties/name",
+                  "type": "string",
+                  "title": "The Name Schema",
+                  "default": "",
+                  "examples": [
+                    "Engel der Barmherzigkeit"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "text": {
+                  "$id": "#/properties/cards/items/properties/foreignData/items/properties/text",
+                  "type": "string",
+                  "title": "The Text Schema",
+                  "default": "",
+                  "examples": [
+                    "Aufblitzen\nFliegend\nWenn der Engel der Barmherzigkeit ins Spiel kommt, wird dein Lebenspunktestand bis zum Ende des Zuges durch Schaden, der ihn unter 1 reduzieren würde, stattdessen auf 1 reduziert.\n{4}{W}{W}, schicke den Engel der Barmherzigkeit aus deinem Friedhof ins Exil: Dein Lebenspunktestand wird zu 10."
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "type": {
+                  "$id": "#/properties/cards/items/properties/foreignData/items/properties/type",
+                  "type": "string",
+                  "title": "The Type Schema",
+                  "default": "",
+                  "examples": [
+                    "Kreatur — Engel"
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "frameEffect": {
+            "$id": "#/properties/cards/items/properties/frameEffect",
+            "type": "string",
+            "title": "The Frameeffect Schema",
+            "default": "",
+            "examples": [
+              ""
+            ],
+            "pattern": "^(.*)$"
+          },
+          "frameVersion": {
+            "$id": "#/properties/cards/items/properties/frameVersion",
+            "type": "string",
+            "title": "The Frameversion Schema",
+            "default": "",
+            "examples": [
+              "2015"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "hand": {
+            "$id": "#/properties/cards/items/properties/hand",
+            "type": "null",
+            "title": "The Hand Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "hasFoil": {
+            "$id": "#/properties/cards/items/properties/hasFoil",
+            "type": "boolean",
+            "title": "The Hasfoil Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "hasNonFoil": {
+            "$id": "#/properties/cards/items/properties/hasNonFoil",
+            "type": "boolean",
+            "title": "The Hasnonfoil Schema",
+            "default": false,
+            "examples": [
+              true
+            ]
+          },
+          "isOnlineOnly": {
+            "$id": "#/properties/cards/items/properties/isOnlineOnly",
+            "type": "boolean",
+            "title": "The Isonlineonly Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "isOversized": {
+            "$id": "#/properties/cards/items/properties/isOversized",
+            "type": "boolean",
+            "title": "The Isoversized Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "isReserved": {
+            "$id": "#/properties/cards/items/properties/isReserved",
+            "type": "boolean",
+            "title": "The Isreserved Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "isTimeshifted": {
+            "$id": "#/properties/cards/items/properties/isTimeshifted",
+            "type": "boolean",
+            "title": "The Istimeshifted Schema",
+            "default": false,
+            "examples": [
+              false
+            ]
+          },
+          "layout": {
+            "$id": "#/properties/cards/items/properties/layout",
+            "type": "string",
+            "title": "The Layout Schema",
+            "default": "",
+            "examples": [
+              "normal"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "legalities": {
+            "$id": "#/properties/cards/items/properties/legalities",
+            "type": "object",
+            "title": "The Legalities Schema",
+            "required": [
+              "commander",
+              "duel",
+              "frontier",
+              "future",
+              "legacy",
+              "modern",
+              "standard",
+              "vintage"
+            ],
+            "properties": {
+              "commander": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/commander",
+                "type": "string",
+                "title": "The Commander Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "duel": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/duel",
+                "type": "string",
+                "title": "The Duel Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "frontier": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/frontier",
+                "type": "string",
+                "title": "The Frontier Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "future": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/future",
+                "type": "string",
+                "title": "The Future Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "legacy": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/legacy",
+                "type": "string",
+                "title": "The Legacy Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "modern": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/modern",
+                "type": "string",
+                "title": "The Modern Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "standard": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/standard",
+                "type": "string",
+                "title": "The Standard Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              },
+              "vintage": {
+                "$id": "#/properties/cards/items/properties/legalities/properties/vintage",
+                "type": "string",
+                "title": "The Vintage Schema",
+                "default": "",
+                "examples": [
+                  "Legal"
+                ],
+                "pattern": "^(.*)$"
+              }
+            }
+          },
+          "life": {
+            "$id": "#/properties/cards/items/properties/life",
+            "type": "null",
+            "title": "The Life Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "loyalty": {
+            "$id": "#/properties/cards/items/properties/loyalty",
+            "type": "null",
+            "title": "The Loyalty Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          },
+          "manaCost": {
+            "$id": "#/properties/cards/items/properties/manaCost",
+            "type": "string",
+            "title": "The Manacost Schema",
+            "default": "",
+            "examples": [
+              "{3}{W}{W}"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "multiverseId": {
+            "$id": "#/properties/cards/items/properties/multiverseId",
+            "type": "integer",
+            "title": "The Multiverseid Schema",
+            "default": 0,
+            "examples": [
+              457145
+            ]
+          },
+          "name": {
+            "$id": "#/properties/cards/items/properties/name",
+            "type": "string",
+            "title": "The Name Schema",
+            "default": "",
+            "examples": [
+              "Angel of Grace"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "number": {
+            "$id": "#/properties/cards/items/properties/number",
+            "type": "string",
+            "title": "The Number Schema",
+            "default": "",
+            "examples": [
+              "1"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "originalText": {
+            "$id": "#/properties/cards/items/properties/originalText",
+            "type": "string",
+            "title": "The Originaltext Schema",
+            "default": "",
+            "examples": [
+              "Flash\nFlying\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10."
+            ],
+            "pattern": "^(.*)$"
+          },
+          "originalType": {
+            "$id": "#/properties/cards/items/properties/originalType",
+            "type": "string",
+            "title": "The Originaltype Schema",
+            "default": "",
+            "examples": [
+              "Creature — Angel"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "power": {
+            "$id": "#/properties/cards/items/properties/power",
+            "type": "string",
+            "title": "The Power Schema",
+            "default": "",
+            "examples": [
+              "5"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "printings": {
+            "$id": "#/properties/cards/items/properties/printings",
+            "type": "array",
+            "title": "The Printings Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/printings/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "RNA"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "rarity": {
+            "$id": "#/properties/cards/items/properties/rarity",
+            "type": "string",
+            "title": "The Rarity Schema",
+            "default": "",
+            "examples": [
+              "mythic"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "rulings": {
+            "$id": "#/properties/cards/items/properties/rulings",
+            "type": "array",
+            "title": "The Rulings Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/rulings/items",
+              "type": "object",
+              "title": "The Items Schema",
+              "required": [
+                "date",
+                "text"
+              ],
+              "properties": {
+                "date": {
+                  "$id": "#/properties/cards/items/properties/rulings/items/properties/date",
+                  "type": "string",
+                  "title": "The Date Schema",
+                  "default": "",
+                  "examples": [
+                    "2019-01-25"
+                  ],
+                  "pattern": "^(.*)$"
+                },
+                "text": {
+                  "$id": "#/properties/cards/items/properties/rulings/items/properties/text",
+                  "type": "string",
+                  "title": "The Text Schema",
+                  "default": "",
+                  "examples": [
+                    "Angel of Grace’s triggered ability doesn’t prevent damage. It only changes the result of damage dealt to you. For example, a creature with lifelink that deals damage to you will still cause its controller to gain life, even if that damage would reduce your life total to less than 1."
+                  ],
+                  "pattern": "^(.*)$"
+                }
+              }
+            }
+          },
+          "scryfallId": {
+            "$id": "#/properties/cards/items/properties/scryfallId",
+            "type": "string",
+            "title": "The Scryfallid Schema",
+            "default": "",
+            "examples": [
+              "80164e61-3e94-4e10-9bd1-518b8dc7fc4c"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "subtypes": {
+            "$id": "#/properties/cards/items/properties/subtypes",
+            "type": "array",
+            "title": "The Subtypes Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/subtypes/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "Angel"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "supertypes": {
+            "$id": "#/properties/cards/items/properties/supertypes",
+            "type": "array",
+            "title": "The Supertypes Schema"
+          },
+          "tcgplayerProductId": {
+            "$id": "#/properties/cards/items/properties/tcgplayerProductId",
+            "type": "integer",
+            "title": "The Tcgplayerproductid Schema",
+            "default": 0,
+            "examples": [
+              183201
+            ]
+          },
+          "text": {
+            "$id": "#/properties/cards/items/properties/text",
+            "type": "string",
+            "title": "The Text Schema",
+            "default": "",
+            "examples": [
+              "Flash\nFlying\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10."
+            ],
+            "pattern": "^(.*)$"
+          },
+          "toughness": {
+            "$id": "#/properties/cards/items/properties/toughness",
+            "type": "string",
+            "title": "The Toughness Schema",
+            "default": "",
+            "examples": [
+              "4"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "type": {
+            "$id": "#/properties/cards/items/properties/type",
+            "type": "string",
+            "title": "The Type Schema",
+            "default": "",
+            "examples": [
+              "Creature — Angel"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "types": {
+            "$id": "#/properties/cards/items/properties/types",
+            "type": "array",
+            "title": "The Types Schema",
+            "items": {
+              "$id": "#/properties/cards/items/properties/types/items",
+              "type": "string",
+              "title": "The Items Schema",
+              "default": "",
+              "examples": [
+                "Creature"
+              ],
+              "pattern": "^(.*)$"
+            }
+          },
+          "uuid": {
+            "$id": "#/properties/cards/items/properties/uuid",
+            "type": "string",
+            "title": "The Uuid Schema",
+            "default": "",
+            "examples": [
+              "7eb0f276-5e32-5a1e-acfd-9b0ddc19b845"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "uuidV421": {
+            "$id": "#/properties/cards/items/properties/uuidV421",
+            "type": "string",
+            "title": "The Uuidv421 Schema",
+            "default": "",
+            "examples": [
+              "c095a153-6bbf-5e93-8a68-578d17461170"
+            ],
+            "pattern": "^(.*)$"
+          },
+          "watermark": {
+            "$id": "#/properties/cards/items/properties/watermark",
+            "type": "null",
+            "title": "The Watermark Schema",
+            "default": null,
+            "examples": [
+              null
+            ]
+          }
+        }
+      }
+    },
+    "code": {
+      "$id": "#/properties/code",
+      "type": "string",
+      "title": "The Code Schema",
+      "default": "",
+      "examples": [
+        "RNA"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "meta": {
+      "$id": "#/properties/meta",
+      "type": "object",
+      "title": "The Meta Schema",
+      "required": [
+        "date",
+        "version"
+      ],
+      "properties": {
+        "date": {
+          "$id": "#/properties/meta/properties/date",
+          "type": "string",
+          "title": "The Date Schema",
+          "default": "",
+          "examples": [
+            "2019-01-30"
+          ],
+          "pattern": "^(.*)$"
+        },
+        "version": {
+          "$id": "#/properties/meta/properties/version",
+          "type": "string",
+          "title": "The Version Schema",
+          "default": "",
+          "examples": [
+            "4.2.2"
+          ],
+          "pattern": "^(.*)$"
+        }
+      }
+    },
+    "mtgoCode": {
+      "$id": "#/properties/mtgoCode",
+      "type": "string",
+      "title": "The Mtgocode Schema",
+      "default": "",
+      "examples": [
+        "RNA"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "name": {
+      "$id": "#/properties/name",
+      "type": "string",
+      "title": "The Name Schema",
+      "default": "",
+      "examples": [
+        "Ravnica Allegiance"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "releaseDate": {
+      "$id": "#/properties/releaseDate",
+      "type": "string",
+      "title": "The Releasedate Schema",
+      "default": "",
+      "examples": [
+        "2019-01-25"
+      ],
+      "pattern": "^(.*)$"
+    },
+    "tcgplayerGroupId": {
+      "$id": "#/properties/tcgplayerGroupId",
+      "type": "integer",
+      "title": "The Tcgplayergroupid Schema",
+      "default": 0,
+      "examples": [
+        2366
+      ]
+    },
+    "tokens": {
+      "$id": "#/properties/tokens",
+      "type": "array",
+      "title": "The Tokens Schema"
+    },
+    "totalSetSize": {
+      "$id": "#/properties/totalSetSize",
+      "type": "integer",
+      "title": "The Totalsetsize Schema",
+      "default": 0,
+      "examples": [
+        273
+      ]
+    },
+    "type": {
+      "$id": "#/properties/type",
+      "type": "string",
+      "title": "The Type Schema",
+      "default": "",
+      "examples": [
+        "expansion"
+      ],
+      "pattern": "^(.*)$"
+    }
+  }
+}

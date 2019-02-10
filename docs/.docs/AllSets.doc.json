@@ -1,0 +1,98 @@
+[
+  {
+    "property": "baseSetSize",
+    "type": "integer",
+    "example": "259",
+    "description": "Number of cards in the set. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products."
+  },
+  {
+    "property": "block",
+    "type": "string",
+    "example": "\"Guilds of Ravnica\"",
+    "description": "Block the set was in."
+  },
+  {
+    "property": "boosterV3",
+    "type": "array(array, string, ...)",
+    "example": "[[\"rare\", ...], \"uncommon\", ... ]",
+    "description": "Contents of a typical booster."
+  },
+  {
+    "property": "cards",
+    "type": "array(object, ...)",
+    "example": " [ ${Card}$, ... ] ",
+    "description": "List of cards. See the ${Card}$ object."
+  },
+  {
+    "property": "code",
+    "type": "string",
+    "example": "\"RNA\"",
+    "description": "Set code for the set."
+  },
+  {
+    "property": "codeV3",
+    "type": "string",
+    "example": "",
+    "description": "Alternate set code Wizards uses for a select few duel deck sets. (If there is not an alternate set code, this field is omitted.)"
+  },
+  {
+    "property": "isFoilOnly",
+    "type": "boolean",
+    "example": "false",
+    "description": "Set available only in foil. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "isOnlineOnly",
+    "type": "boolean",
+    "example": "false",
+    "description": "Set available online only. Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "meta",
+    "type": "object(string, string)",
+    "example": "{\"date\": \"${_Date}$\", \"version\": \"${_Version}$\"}",
+    "description": "Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release."
+  },
+  {
+    "property": "mtgoCode",
+    "type": "string",
+    "example": "\"RNA\"",
+    "description": "Set code for the set as it appears on Magic: The Gathering Online."
+  },
+  {
+    "property": "name",
+    "type": "string",
+    "example": "\"Ravnica Allegiance\"",
+    "description": "Name of the set."
+  },
+  {
+    "property": "releaseDate",
+    "type": "string",
+    "example": "\"2019-01-25\"",
+    "description": "Date of release for the set."
+  },
+  {
+    "property": "tcgplayerGroupId",
+    "type": "integer",
+    "example": "2366",
+    "description": "Group ID of the set on TCGPlayer."
+  },
+  {
+    "property": "tokens",
+    "type": "array(object, ...)",
+    "example": "[${Token}$, ...]",
+    "description": "List of tokens for the set. See the ${Token}$ object."
+  },
+  {
+    "property": "totalSetSize",
+    "type": "integer",
+    "example": "273",
+    "description": "Total number of cards in the set, including promos and related supplemental products."
+  },
+  {
+    "property": "type",
+    "type": "string",
+    "example": "\"expansion\"",
+    "description": "Type of set. See ${SetTypes}$ examples."
+  }
+]

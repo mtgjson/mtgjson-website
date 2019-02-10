@@ -1,7 +1,0 @@
----
-title: version
----
-
-# version
-
-<GenerateTable/>

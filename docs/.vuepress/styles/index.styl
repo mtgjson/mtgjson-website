@@ -4,15 +4,20 @@
   65%
     background-color: darken(salmon, 20%);
 
+h2 {
+  border-width: 0 !important;
+}
+
 a:link
   transition .25s color;
 
   &:hover
     transition .25s color;
 
-.page > *
-  max-width: 900px !important;
-  margin-left: 0 !important;
+.page
+  & > *
+    max-width: 100% !important;
+    margin-left: 0 !important;
 
 .nav-links
   .nav-item
@@ -80,24 +85,36 @@ img[alt='logo']
       &:hover 
         text-decoration: underline;
 
-.sidebar-links
-  .sidebar-link
-    // font-weight: bold !important;
-    font-size: 1.1em !important;
+.sidebar-sub-headers
+  a.sidebar-link:first-of-type
+    margin-top: 10px;
+  a.sidebar-link:last-of-type
+    margin-bottom: 10px;
 
-  .sidebar-heading.clickable.active
-    font-size: 1.1em !important;
-    font-weight: bold !important;
+.sidebar
+  &-group
+    a.sidebar-link
+      padding-left: 1.25rem !important;
 
-  .sidebar-sub-headers
-    margin-top: 10px
+  .sidebar-links
+    .sidebar-link
+      // font-weight: bold !important;
+      font-size: 1.1em !important;
+
+    .sidebar-heading[href="/documentation/"]
+      border-left-color: transparent !important;
+      color: #2c3e50 !important;
+
+    .sidebar-heading.clickable.active
+      font-size: 1.1em !important;
+      font-weight: bold !important;
+
+    .sidebar-sub-headers
+      padding-left: 2rem;
+
+      .sidebar-sub-header
+        .active
+          font-weight: normal !important;
 
 .custom-block.tip
   border-color: dodgerblue !important;
-
-h2#those-we-serve
-  border-bottom-width: 0;
-
-.sidebar-heading[href="/documentation/"]
-  border-left-color: transparent !important;
-  color: #2c3e50 !important;

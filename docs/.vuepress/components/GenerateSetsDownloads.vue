@@ -4,7 +4,6 @@
       .download-wrap
         .img-wrap
           div(:class="`ss ss-${set.code.toLowerCase()}`")
-          //- img(:src="`https://img.scryfall.com/sets/${set.code.toLowerCase()}.svg`")
         .txt-wrap
           p {{ set.name }} - {{ set.code }}
           small {{ set.releaseDate }}
@@ -93,10 +92,6 @@ export default {
         p {
           font-weight: bold;
           margin: 0;
-        }
-
-        small {
-
         }
       }
 

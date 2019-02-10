@@ -1,5 +1,5 @@
 ---
-title: Changelog
+document: Changelog
 ---
 
 # Changelog

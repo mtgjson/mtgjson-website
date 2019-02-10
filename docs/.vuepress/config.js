@@ -1,10 +1,14 @@
 const documentationChildren = require('./documentation.js')();
 
 module.exports = {
+  // Deployment
+  // https://vuepress.vuejs.org/guide/deploy.html
   host: '0.0.0.0',
   port: '8080',
+  // SEO
   title: 'MTGJSON (v4)',
   description: 'Magic: The Gathering card data in JSON ',
+  // Support Links
   head: [
     [
       'link',
@@ -13,17 +17,10 @@ module.exports = {
         type: 'text/css',
         href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css',
       },
-    ],
-    [
-      'link',
-      {
-        rel: 'icon',
-        type: 'image/ico',
-        sizes: '32x32',
-        href: '/favicon.ico',
-      },
-    ],
+    ]
   ],
+  // Vuepress Themeing
+  // 
   themeConfig: {
     nav: [
       { text: 'Discord', link: 'https://discord.gg/74GUQDE' },
@@ -33,7 +30,7 @@ module.exports = {
     sidebar: [
       '/',
       {
-        title: 'Documentation',
+        title: 'Structures',
         path: '/documentation/',
         collapsable: false,
         children: documentationChildren,
@@ -43,4 +40,8 @@ module.exports = {
     ],
     lastUpdated: 'Last Updated',
   },
+  /**
+   * The good hacking stuff portion...
+   */
+  // Well, maybe...
 };
