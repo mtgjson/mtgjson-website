@@ -21,5 +21,11 @@ node_modules
 # Build folder
 dist/
 
+# JSON Dumps
+json/
+!json/.gitkeep
+# Keep smaller files for documentation
+!json/SetList.json
+
 # Experiments
 *schema.json

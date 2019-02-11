@@ -20,8 +20,8 @@
   {
     "property": "cards",
     "type": "array(object)",
-    "example": " [${Card}$] ",
-    "description": "List of cards. See the ${Card}$ Structure."
+    "example": " [${card}$] ",
+    "description": "List of cards. See the ${card}$ Structure."
   },
   {
     "property": "code",
@@ -50,7 +50,7 @@
   {
     "property": "meta",
     "type": "object(string, string)",
-    "example": "{\"date\": \"${_Date}$\", \"version\": \"${_Version}$\"}",
+    "example": "{\"date\": \"${date}$\", \"version\": \"${version}$\"}",
     "description": "Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release."
   },
   {
@@ -80,8 +80,8 @@
   {
     "property": "tokens",
     "type": "array(object)",
-    "example": "[${Token}$]",
-    "description": "List of tokens for the set. See the ${Token}$ Structure."
+    "example": "[${token}$]",
+    "description": "List of tokens for the set. See the ${token}$ Structure."
   },
   {
     "property": "totalSetSize",
@@ -93,6 +93,6 @@
     "property": "type",
     "type": "string",
     "example": "\"expansion\"",
-    "description": "Type of set. See ${SetTypes}$ examples."
+    "description": "Type of set. See ${settypes}$ examples."
   }
 ]

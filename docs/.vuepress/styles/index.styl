@@ -1,12 +1,12 @@
-@keyframes pulse
-  0%
-    background-color: salmon;
-  65%
-    background-color: darken(salmon, 20%);
+@require './animations'
+@require './sidebar'
 
-h2 {
+h2
   border-width: 0 !important;
-}
+
+.code-link
+  font-weight: bold
+  text-transform: capitalize
 
 img
   user-select: none;
@@ -42,7 +42,7 @@ a:link
     &:last-of-type // Donate
       a
         background-color: salmon;
-        animation: pulse 3s infinite;
+        animation: donate-btn-pulse 3s infinite;
 
 .search-box
   margin-right: 0 !important;
@@ -88,39 +88,5 @@ img[alt='logo']
       &:hover 
         text-decoration: underline;
 
-.sidebar
-  &-group
-    a.sidebar-link
-      padding-left: 1.25rem !important;
-
-    .sidebar-sub-headers
-      a.sidebar-link:first-of-type
-        margin-top: 10px !important;
-      a.sidebar-link:last-of-type
-        margin-bottom: 10px !important;
-
-  .sidebar-links
-    .sidebar-link
-      // font-weight: bold !important;
-      font-size: 1.1em !important;
-      border-width: 0 !important;
-
-    .sidebar-heading[href="/documentation/"]
-      border-width: 0 !important;
-      color: #2c3e50 !important;
-
-    .sidebar-heading.clickable.active
-      font-size: 1.1em !important;
-      font-weight: bold !important;
-
-    .sidebar-sub-headers
-      padding-left: 1.25rem;
-
-      .sidebar-sub-header
-        .sidebar-link
-          padding-left: 0;
-        .active
-          font-weight: normal !important;
-
 .custom-block.tip
-  border-color: dodgerblue !important;
+  border-color: $accentColor !important;

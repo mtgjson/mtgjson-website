@@ -1,13 +1,13 @@
 [
   {
-    "key": "date",
-    "value": "string",
+    "property": "date",
+    "type": "string",
     "example": "\"2019-01-01\"",
     "description": "Date of the MTGJSON build."
   },
   {
-    "key": "version",
-    "value": "boolean",
+    "property": "version",
+    "type": "boolean",
     "example": "4.2.2",
     "description": "Version of the MTGJSON build."
   }

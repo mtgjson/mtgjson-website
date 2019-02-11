@@ -1,19 +1,19 @@
 [
   {
-    "key": "AbilityWords",
-    "value": "array(string)",
+    "property": "AbilityWords",
+    "type": "array(string)",
     "example": "[\"undergrowth\"]",
     "description": "List of ability words found in rules text on cards."
   },
   {
-    "key": "KeywordAbilities",
-    "value": "array(string)",
+    "property": "KeywordAbilities",
+    "type": "array(string)",
     "example": "[\"convoke\"]",
     "description": "List of keyword abilities found in rules text on cards."
   },
   {
-    "key": "KeywordActions",
-    "value": "array(string)",
+    "property": "KeywordActions",
+    "type": "array(string)",
     "example": "[\"surveil\"]",
     "description": "List of keyword actions found in rules text on cards."
   }
