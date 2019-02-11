@@ -23,7 +23,6 @@
     "sass-loader": "^7.1.0",
     "vuepress": "^1.0.0-alpha.37"
   },
-  "devDependencies": {},
   "resolutions": {
     "ajv": "6.8.1"
   }
