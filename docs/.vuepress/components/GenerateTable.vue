@@ -1,3 +1,4 @@
+<!-- Pug case statements do not work for our hydration purposes -->
 <template lang="pug">
   .doc-table
     table(v-if="!showMobileTable")
@@ -8,128 +9,77 @@
       tbody
         tr(v-for="(value, key) in properties" v:key=key)
           td(v-for="(value, key) in value" v:key=key v-bind:data-break="value.toLowerCase().indexOf('id') > 0")
-            span(v-if="key === 'type'")
-              em.fertilizer {{ value }}
+            span(v-if="key === 'property'")
+              span {{ value }}
+            span(v-else-if="key === 'type'")
+              em {{ value }}
             span(v-else-if="key === 'example'")
-              code.fertilizer {{ value }}
+              code.land-cycler {{ value }}
             span(v-else)
-              span.fertilizer {{ value }}
+              span.land-cycler {{ value }}
 
     ol.mobile-doc-table(v-if="showMobileTable" v-for="(value, key) in properties" v:key=key)
       li(v-for="(value, key) in value" v:key=key)
-        span(v-if="key === 'type'")
+        span(v-if="key === 'property'")
+          div {{ key }}
+          div {{ value }}
+        span(v-else-if="key === 'type'")
           div {{ key }}
           div
-            em.fertilizer {{ value }}
+            em {{ value }}
         span(v-else-if="key === 'example'")
           div {{ key }}
           div
-            code.fertilizer {{ value }}
+            code.land-cycler {{ value }}
         span(v-else)
           div {{ key }}
-          div.fertilizer {{ value }}
+          div.land-cycler {{ value }}
 
 </template>
 
 <script>
+import Landcycle from '../modules/Landcycle';
+
 export default {
-  name: "GenerateTable",
+  name: 'GenerateTable',
   data() {
     return {
       isMobileSize: 800,
       isMobile: false,
       object: [],
       matter: {},
-      /**
-       * @TODO Remove flower from this component in to its own file
-       */
-      fertilize: false,
-      flower: {
-        buds: [],
-        petals: [],
-        deflower: petal => {
-          console.log('Deflowering...')
-          if (this.flower.buds.indexOf(petal) > -1) {
-            let petalName = petal.replace("${", "").replace("}$", "");
-            let newFlower = {
-              name: petalName,
-              dew: null
-            }
-
-            switch(petalName){
-              case 'date':
-                newFlower.dew = `${new Date().toISOString().split('T')[0]}`;
-                break;
-
-              case 'card':
-              case 'token':
-                newFlower.dew = `<a class="code-link" href=/structures/${petalName}>${petalName}</a>`;
-                break;
-
-              default:
-                break;
-            }
-
-            return newFlower;
-          }
-        }
-      }
     };
   },
   created() {
     // We use create to load the data as fast as possible and can get,
     // away without computed values because we have no state
     this.matter = this.$page.frontmatter;
-    this.fertilize = this.$page.frontmatter.petals || false;
     /**
      * @TODO Find a way to allow fertilization before `created` lifecycle
      * and enable router linking for fertizilation
      */
-    this.object = require(`../public/documents/${this.matter.document}.doc.json`);
-    
+    this.object = require(`../public/documents/${
+      this.matter.document
+    }.doc.json`);
   },
-  beforeMount(){
+  beforeMount() {
     // In Vue.js it is suggested to put these in the `created` lifecycle method
     // However, in VuePress, we need them in the mounted area because of the
     // build process of VuePress itself. Not sure why
-    window.addEventListener('resize', this.checkIfMobile)
-    window.addEventListener('DOMContentLoaded', this.checkIfMobile)
+    window.addEventListener('resize', this.checkIfMobile);
+    // Not always working but could be because state
+    window.addEventListener('DOMContentLoaded', this.checkIfMobile);
   },
   mounted() {
-    const soil = Array.from(this.$el.querySelectorAll(".fertilizer"));
-    
-    // Pass in the page links to the flower methods
-    if( this.fertilize ){
-      this.grow( this.flower, this.matter.petals ).then( flower => {
-        soil.forEach((el, index) => {
-          flower.buds.forEach(petal => {
-            if (el.innerText.indexOf(petal) > -1) {
-              let removedPetal = flower.deflower(petal);
-              el.innerHTML = el.innerText.replace(
-                petal,
-                removedPetal.dew
-              );
-            }
-          });
-        });
-      }).catch( err => {
-        console.log( err )
-      });
-    }
+    const land = Array.from(this.$el.querySelectorAll('.land-cycler'));
+    const hand = this.$page.frontmatter.refs;
+
+    let build = new Landcycle(land, hand);
   },
   methods: {
-    async grow( flower, petals ) {
-      for (let growth of petals) {
-        for (let petal in growth) {
-          let bud = growth[petal];
-          await flower.buds.push(bud);
-        }
-      }
-      return flower;
-    },
-    checkIfMobile(){
+    checkIfMobile() {
       this.isMobile = Math.max(window.innerWidth || 0) < this.isMobileSize;
-    }
+    },
   },
   computed: {
     properties() {
@@ -138,10 +88,10 @@ export default {
     replacement() {
       return this.value;
     },
-    showMobileTable(){
+    showMobileTable() {
       return this.isMobile;
-    }
-  }
+    },
+  },
 };
 </script>
 
@@ -158,7 +108,7 @@ table
     padding: 10px 15px
     text-align: left;
     text-transform: capitalize
-  
+
   td
     padding: 10px 15px
 
@@ -172,7 +122,7 @@ table
   tbody
     tr:nth-of-type(odd)
       background-color: $tableAltBgColor
-    
+
     tr:nth-of-type(even)
       background-color: transparent
 

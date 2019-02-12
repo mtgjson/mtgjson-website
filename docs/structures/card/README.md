@@ -1,5 +1,9 @@
 ---
-document: Card
+
+{
+  "title": "Card",
+  "document": "Card",
+}
 ---
 
 # Card

@@ -2,13 +2,13 @@
   {
     "property": "date",
     "type": "string",
-    "example": "\"${date}$\"",
+    "example": "\"{%date%}\"",
     "description": "Date of the MTGJSON build."
   },
   {
     "property": "version",
     "type": "boolean",
-    "example": "${version}",
+    "example": "{%version}",
     "description": "Version of the MTGJSON build."
   }
 ]

@@ -1,10 +1,13 @@
 ---
-document: Set
-petals:
-  - card: ${card}$
-  - token: ${token}$
-  - date: ${date}$
-  - version: ${version}$
+{
+  "title": "Set",
+  "document": "Set",
+  "refs": [
+    "{%card%}",
+    "{%token%}",
+    "{%version%}"
+  ]
+}
 ---
 
 # Set

@@ -1,10 +1,12 @@
 ---
-title: SetList
-document: SetList
+{
+  "title": "SetList",
+  "document": "SetList",
+}
 ---
 
-# SetList Structure
+# SetList
 
-### SetList
+### SetList Structure
 
 <GenerateTable/>

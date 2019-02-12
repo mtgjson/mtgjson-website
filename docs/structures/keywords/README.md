@@ -1,5 +1,8 @@
 ---
-document: Keywords
+{
+  "title": "Keywords",
+  "document": "Keywords",
+}
 ---
 
 # Keywords

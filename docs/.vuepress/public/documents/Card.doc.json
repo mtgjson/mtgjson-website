@@ -56,7 +56,7 @@
   {
     "property": "foreignData",
     "type": "array(object)",
-    "example": "[${ForeignData}$]",
+    "example": "[{%ForeignData%}]",
     "description": "Italicized text found below the rules text that has no game function."
   },
   {
@@ -194,7 +194,7 @@
   {
     "property": "rulings",
     "type": "array(object)",
-    "example": "[${Rulings}$]",
+    "example": "[{%Rulings%}]",
     "description": ""
   },
   {

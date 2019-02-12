@@ -1,5 +1,7 @@
 ---
-document: Changelog
+{
+  "document": "Changelog"
+}
 ---
 
 # Changelog

@@ -1,17 +1,28 @@
 # Notes
 
-## Using the custom Markdown extension syntax, aka "flower", to pre-render state
-You might notice `${Card}$` within documents. The purpose of this is to replace on Vue template pre-render.
-For example, transforming computer friendly values oh JSON in to HTML. a flower function will essentially "Hydrate" as common frameworks call it, to refresh the state of the page. This applies the same logic but gets its props from the Markdown pages instead of a store like Redux or other components.
+Lack of ESLint is purposeful. We do a lot a content mixing to create linkable chain of data types and  transpiled and markup language.
+
+Some of the settings are based on Heroku deployments so adjust accordingly.
+
+## Templating
+
+You might notice `{%Card%}` within documents., these are templates we can apply in schmemas to then route to other pages. The purpose of this is to replace computer friendly values in JSON to HTML or other types of data. See [this reference](https://sketchboard.me/hBr0fbIsfUNj#/)
 
 ## JSON Schema mapping and type-specific words
+
 https://json-schema.org/understanding-json-schema/reference/type.html
 
 ## Oliver Steele's method to never run in to an undefined object value
+
+Not used but worth keeping in mind for dealing with values
+
 https://hackernoon.com/accessing-nested-objects-in-javascript-f02f1bd6387f
 
 ## TODO
+
 - Figure out a more elegant solution to rendering downloads instead of just one component per grouping. e.g. render them all, not just sets, all and misc separately.
-- FLOWER. What the else did I just make? Maybe turn it in to a Vuepress plugin/extension?
-- Add meta data to every page
-- Eject the theme and manage it closer, its trash CSS right now and a mix between Stylus and SCSS, Force once to work only.
+- Add meta data to every page.
+- Change the spec of download front matter to the JSON format.
+- ~~Nice job adding TypeScript for no reason.~~
+- ~~Make flow chart of hydration system.~~
+- Add component for list of other non-lead contributors like myself

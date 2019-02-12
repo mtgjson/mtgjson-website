@@ -1,6 +1,12 @@
 # MTGJSON Website
 
+Built using [VuePress](https://vuepress.vuejs.org/) with Vue, JS/TS and Markdown on Node
+
 ## Installation
+
+Install project dependencies. You'll notice all of them are non-dev, this is because on Heroku you can run in to errors. Heroku prunes what is needed on its own.
+
+> _One thing to know is that the only production dependency is `vuepress`_
 
 ```sh
 yarn install
@@ -12,14 +18,15 @@ yarn install
 yarn dev
 ```
 
-## Building (You may need to do this in development when adding new files that the server has not parsed as available)
+
+_Every now and then when making major changes be sure to kill your server and rebuild to verify everything is still working. The following code will kill all node instances on linux-based systems. When adding new components or modules the server watch may not pick up on changes._
+
+```sh
+killall node
+```
+
+## Building for Distribution
 
 ```sh
 yarn build
 ```
-
-## Deployment
-
-If you are deploying to GitHub pages, see the `deploy.sh` file, otherwise you will want to want the index directory to live at `docs/.vuepress/dist`
-
-The default host and port may also need to be changed in the `config.js` file in `.vuepress`

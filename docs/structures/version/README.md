@@ -1,5 +1,8 @@
 ---
-document: Version
+{
+  "title": "Version",
+  "document": "Version",
+}
 ---
 
 # Version

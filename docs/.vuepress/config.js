@@ -1,12 +1,10 @@
-require('dotenv').config();
 const generateSidebarRoutes = require('./config.sidebar');
 
 module.exports = {
   // Deployment
   // https://vuepress.vuejs.org/guide/deploy.html
-  host: process.env.HOST || '0.0.0.0',
-  port: process.env.PORT || '3000',
-  static: process.env.NODE_ENV === 'production' ? '0.0.0.0:3000/json/' : '../public/json',
+  host: '0.0.0.0',
+  port: '8080',
   // SEO
   title: 'MTGJSON (v4)',
   description: 'Magic: The Gathering card data in JSON ',

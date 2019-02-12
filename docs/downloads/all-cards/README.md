@@ -1,5 +1,7 @@
 ---
-title: AllCards
+{
+  "title": "AllCards"
+}
 ---
 
 # AllCards

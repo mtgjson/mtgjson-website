@@ -1,5 +1,8 @@
 ---
-document: Token
+{
+  "title": "Token",
+  "document": "Token",
+}
 ---
 
 # Token
