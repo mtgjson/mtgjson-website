@@ -1,6 +1,6 @@
 ---
 {
-  "document": "Changelog"
+  "schema": "Changelog"
 }
 ---
 

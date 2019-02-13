@@ -1,9 +1,9 @@
 /**
  * I mean... yea, it's dumb, but its gets a schema colors to what
  * we want than the actuall json itself. Many gaps needs to be filled
- * in after placing the output in a .doc file.
+ * in after placing the output in a .schema file.
  * 
- * @TODO Perhaps get MTGJSON app to export a .doc file for us
+ * @TODO Perhaps get MTGJSON app to export a .schema file for us
  */
 'use strict';
 

@@ -1,7 +1,7 @@
 ---
 {
   "title": "SetList",
-  "document": "SetList",
+  "schema": "SetList",
 }
 ---
 

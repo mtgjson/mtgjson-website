@@ -1,13 +1,16 @@
 ---
-# home: true
+{
+  # "home": "true" # Even false value returns true?
+}
 ---
+
 # About MTGJSON
 
 ![logo](/images/logo.svg "MTGJSON")
 
 ::: warning
 
-This documentation site is currently in a beta stage. You can find more sources of truths, specifically to download files, at the official [MTGJSON website](https://mtgjson.com/)
+This schemaation site is currently in a beta stage. You can find more sources of truths, specifically to download files, at the official [MTGJSON website](https://mtgjson.com/)
 
 :::
 
@@ -35,9 +38,7 @@ Martin is an avid strategy gamer and Magic player since late 1994. When he’s n
 
 ### Second Mentions
 
-::: tip Staghouse — Documentation Developer
-&nbsp;
-:::
+<GenerateContributors/>
 
 
 ## Who We Serve

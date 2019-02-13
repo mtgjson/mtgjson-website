@@ -1,16 +1,17 @@
 <!-- Pug case statements do not work for our hydration purposes -->
 <template lang="pug">
-  .doc-table
+  .schema-table
     table(v-if="!showMobileTable")
       thead
         tr
-          th(v-for="(value, key) in properties[0]" v:key=key)
+          th(v-for="(value, key) in structure[0]" v:key=key)
             span {{ key }}
       tbody
-        tr(v-for="(value, key) in properties" v:key=key)
+        tr(v-for="(value, key) in structure" v:key=key)
           td(v-for="(value, key) in value" v:key=key v-bind:data-break="value.toLowerCase().indexOf('id') > 0")
             span(v-if="key === 'property'")
-              span {{ value }}
+              h3(:id="value") {{ value }}
+                a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
             span(v-else-if="key === 'type'")
               em {{ value }}
             span(v-else-if="key === 'example'")
@@ -18,10 +19,12 @@
             span(v-else)
               span.land-cycler {{ value }}
 
-    ol.mobile-doc-table(v-if="showMobileTable" v-for="(value, key) in properties" v:key=key)
+    ol.mobile-doc-table(v-if="showMobileTable" v-for="(value, key) in structure" v:key=key)
       li(v-for="(value, key) in value" v:key=key)
         span(v-if="key === 'property'")
-          div {{ key }}
+          div
+            h3(:id="value") {{ key }}
+              a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
           div {{ value }}
         span(v-else-if="key === 'type'")
           div {{ key }}
@@ -44,23 +47,15 @@ export default {
   name: 'GenerateTable',
   data() {
     return {
-      isMobileSize: 800,
+      isMobileSize: 960,
       isMobile: false,
-      object: [],
-      matter: {},
+      schema: [],
     };
   },
   created() {
-    // We use create to load the data as fast as possible and can get,
-    // away without computed values because we have no state
-    this.matter = this.$page.frontmatter;
-    /**
-     * @TODO Find a way to allow fertilization before `created` lifecycle
-     * and enable router linking for fertizilation
-     */
-    this.object = require(`../public/documents/${
-      this.matter.document
-    }.doc.json`);
+    this.schema = require(`../public/schemas/${
+      this.$page.frontmatter.schema
+    }.schema.json`);
   },
   beforeMount() {
     // In Vue.js it is suggested to put these in the `created` lifecycle method
@@ -72,9 +67,7 @@ export default {
   },
   mounted() {
     const land = Array.from(this.$el.querySelectorAll('.land-cycler'));
-    const hand = this.$page.frontmatter.refs;
-
-    let build = new Landcycle(land, hand);
+    let build = new Landcycle(land);
   },
   methods: {
     checkIfMobile() {
@@ -82,11 +75,8 @@ export default {
     },
   },
   computed: {
-    properties() {
-      return this.object;
-    },
-    replacement() {
-      return this.value;
+    structure() {
+      return this.schema;
     },
     showMobileTable() {
       return this.isMobile;
@@ -96,78 +86,113 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-table
-  &, *
-    box-sizing: border-box
+h3 {
+  font-size: 16px;
+  padding: 0;
+  margin: 0;
+  font-weight: normal;
+  position: relative;
 
-  tr
-    width: 100%
+  a {
+    position: absolute;
+    left: 0;
+  }
+}
+
+table {
+  &, * {
+    box-sizing: border-box;
+  }
+
+  tr {
+    width: 100%;
     // display: table-cell
+  }
 
-  th
-    padding: 10px 15px
+  th {
+    padding: 10px 15px;
     text-align: left;
-    text-transform: capitalize
+    text-transform: capitalize;
+  }
 
-  td
-    padding: 10px 15px
+  td {
+    padding: 10px 15px;
 
-    &:nth-of-type(2)
-      white-space: nowrap
+    &:nth-of-type(2) {
+      white-space: nowrap;
+    }
+  }
 
-  thead,
-  tbody
-    width: 100%
+  thead, tbody {
+    width: 100%;
+  }
 
-  tbody
-    tr:nth-of-type(odd)
-      background-color: $tableAltBgColor
+  tbody {
+    tr:nth-of-type(odd) {
+      background-color: $tableAltBgColor;
+    }
 
-    tr:nth-of-type(even)
-      background-color: transparent
+    tr:nth-of-type(even) {
+      background-color: transparent;
+    }
+  }
+}
 
-.mobile-doc-table
-  padding: 0
-  margin: 0
+.mobile-doc-table {
+  padding: 0;
+  margin: 0;
   margin-top: 20px;
   margin-bottom: 30px;
-  border: 1px solid $borderColor
-  box-sizing: border-box
+  border: 1px solid $borderColor;
+  box-sizing: border-box;
 
-  li
-    list-style none
+  h3 {
+    font-weight: bold;
+  }
 
-    &:last-of-type
-      span
-        border-bottom-width: 0
+  li {
+    list-style: none;
 
-    span
+    &:last-of-type {
+      span {
+        border-bottom-width: 0;
+      }
+    }
+
+    span {
       width: 100%;
       display: flex;
-      border-bottom: 1px solid $borderColor
+      border-bottom: 1px solid $borderColor;
 
-      div
+      div {
         flex: 0 0 50%;
-        padding: 10px 15px
-        border-right: 1px solid $borderColor
-        box-sizing: border-box
+        padding: 10px 15px;
+        border-right: 1px solid $borderColor;
+        box-sizing: border-box;
 
-        &:first-of-type
-          text-transform: capitalize
-          font-weight: bold
-          background-color: $tableAltBgColor
+        &:first-of-type {
+          text-transform: capitalize;
+          font-weight: bold;
+          background-color: $tableAltBgColor;
+        }
 
-        &:last-of-type
-          border-right-width: 0
+        &:last-of-type {
+          border-right-width: 0;
+        }
+      }
+    }
+  }
+}
 
-code
-  background-color: $tableCodeBgColor
-  color: $tableCodeTextColor
+code {
+  &:empty {
+    display: none;
+  }
+}
 
-  &:empty
-    display: none
-
-*[data-break="true"] ~ *
-  code
-    word-wrap anywhere
+*[data-break='true'] ~ * {
+  code {
+    word-wrap: anywhere;
+  }
+}
 </style>

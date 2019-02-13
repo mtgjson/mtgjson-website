@@ -3681,7 +3681,7 @@ global@^4.3.2:
   resolved "https://registry.yarnpkg.com/global/-/global-4.3.2.tgz#e76989268a6c74c38908b1305b10fc0e394e9d0f"
   integrity sha1-52mJJopsdMOJCLEwWxD8DjlOnQ8=
   dependencies:
-    min-document "^2.19.0"
+    min-schema "^2.19.0"
     process "~0.5.1"
 
 globals@^11.1.0:
@@ -5541,9 +5541,9 @@ mimic-fn@^1.0.0:
   resolved "https://registry.yarnpkg.com/mimic-fn/-/mimic-fn-1.2.0.tgz#820c86a39334640e99516928bd03fca88057d022"
   integrity sha512-jf84uxzwiuiIVKiOLpfYk7N46TSy8ubTonmneY9vrpHNAnp0QBt2BxWV9dO3/j+BoVAb+a5G6YDPW3M5HOdMWQ==
 
-min-document@^2.19.0:
+min-schema@^2.19.0:
   version "2.19.0"
-  resolved "https://registry.yarnpkg.com/min-document/-/min-document-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
+  resolved "https://registry.yarnpkg.com/min-schema/-/min-schema-2.19.0.tgz#7bd282e3f5842ed295bb748cdd9f1ffa2c824685"
   integrity sha1-e9KC4/WELtKVu3SM3Z8f+iyCRoU=
   dependencies:
     dom-walk "^0.1.0"
