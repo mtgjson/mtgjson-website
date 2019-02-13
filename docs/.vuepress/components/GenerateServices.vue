@@ -44,6 +44,11 @@ export default {
           link: 'http://cubetutor.com',
         },
         {
+          name: 'DideRobot',
+          image: 'github.svg',
+          link: 'https://github.com/Didero/DideRobot',
+        },
+        {
           name: 'Dr4ft',
           image: 'dr4ft.png',
           link: 'https://dr4ft.info',
@@ -64,6 +69,16 @@ export default {
           link: 'https://github.com/magarena/magarena',
         },
         {
+          name: 'MagicFetchBot',
+          image: 'reddit.png',
+          link: 'https://redd.it/55l38e',
+        },
+        {
+          name: 'Magidex',
+          image: 'magidex.png',
+          link: 'https://magidex.com',
+        },
+        {
           name: 'MTG Addict',
           image: 'mtgaddict.png',
           link: 'https://mtgaddict.net',
@@ -79,9 +94,19 @@ export default {
           link: 'http://mtgsetbuilder.com',
         },
         {
+          name: 'MTG Brewmaster',
+          image: 'mtgbrewmaster.png',
+          link: 'http://mtgbrewmaster.com',
+        },
+        {
           name: 'MYPCards',
           image: 'mypcards.png',
           link: 'https://mypcards.com/',
+        },
+        {
+          name: 'Planestrader',
+          image: 'planestrader.png',
+          link: 'https://planestrader.com/'
         },
         {
           name: 'Scryfall',
@@ -109,11 +134,6 @@ export default {
           link: 'http://xmage.de',
         },
         {
-          name: 'MTG Brewmaster',
-          image: 'mtgbrewmaster.png',
-          link: 'http://mtgbrewmaster.com',
-        },
-        {
           name: 'Card Codex',
           image: '',
           link: 'https://cardcodex.com',
@@ -124,11 +144,6 @@ export default {
           link: 'https://decklist.org/',
         },
         {
-          name: 'DideRobot',
-          image: '',
-          link: 'https://github.com/Didero/DideRobot',
-        },
-        {
           name: 'Lab Maniac',
           image: '',
           link: 'http://labmaniac.com',
@@ -137,16 +152,6 @@ export default {
           name: 'Liminal Thoughts',
           image: '',
           link: 'https://brennands.wordpress.com',
-        },
-        {
-          name: 'MagicFetchBot',
-          image: '',
-          link: 'https://redd.it/55l38e',
-        },
-        {
-          name: 'Magidex',
-          image: '',
-          link: 'https://magidex.com',
         },
         {
           name: 'MTGCardFetcher',
@@ -184,7 +189,7 @@ export default {
 };
 </script>
 
-<style lang="scss" scoped>
+<style lang="stylus" scoped>
 .services-table {
   margin-top: 10px;
   display: flex;

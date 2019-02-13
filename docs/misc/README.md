@@ -9,7 +9,7 @@
 ## Set Types
 
 ::: warning
-This data is prone to stagnation as wizards make core updates.
+This page is prone to stagnation as [Wizards of the Coast&trade;](https://www.wizardsofthecoast.com) make core updates to [Magic: The Gathering](https://magic.wizards.com/en).
 :::
 
 > Property `set`  

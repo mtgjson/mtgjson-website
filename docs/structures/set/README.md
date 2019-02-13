@@ -7,6 +7,6 @@
 
 # Set
 
-### Set Structure
+### Structure
 
 <GenerateTable/>

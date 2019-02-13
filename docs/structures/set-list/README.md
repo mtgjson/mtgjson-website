@@ -7,6 +7,6 @@
 
 # SetList
 
-### SetList Structure
+### Structure
 
 <GenerateTable/>

@@ -47,6 +47,9 @@ export default class {
                     case 'set-types':
                         newLand = `<a class="code-link" href=/misc/#${cardName}>${this.faceUp(cardName)}</a>`;
                         break;
+                    case 'legalities':
+                        newLand = `<a class="code-link" href=/misc/${cardName}>${this.faceUp(cardName)}</a>`;
+                        break;
                     default:
                         newLand = `<a class="code-link" href=/structures/${cardName}>${this.faceUp(cardName)}</a>`;
                         break;

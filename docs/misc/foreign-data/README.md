@@ -7,6 +7,6 @@
 
 # ForeignData
 
-### ForeignData Structure
+### Structure
 
 <GenerateTable/>

@@ -5,7 +5,7 @@ module.exports = {
   port: '8080',
   // Google Analytics
   ga: 'UA-131358443-1',
-  searchMaxSuggestions: 100,
+  searchMaxSuggestions: 10,
   repo: 'staghouse/mtgjson-website',
   editLinks: true,
   // SEO

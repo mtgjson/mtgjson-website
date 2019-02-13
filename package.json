@@ -5,23 +5,19 @@
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
   "engines": {
-    "node": "^10.15.1",
+    "node": "^11.9.0",
     "yarn": "^1.13.0"
   },
   "scripts": {
+    "compile-ts": "tsc",
     "docs:dev": "vuepress dev docs",
     "docs:build": "vuepress build docs",
-    "dev": "yarn docs:dev",
-    "build": "yarn docs:build",
-    "compile-ts": "tsc",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "vuepress build docs"
   },
   "dependencies": {
     "@types/node": "^11.9.0",
-    "node-sass": "^4.11.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
-    "sass-loader": "^7.1.0",
     "typescript": "^3.3.3",
     "vuepress": "^1.0.0-alpha.37"
   },

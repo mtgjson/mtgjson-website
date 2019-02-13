@@ -7,6 +7,6 @@
 
 # Card
 
-### Card Structure
+### Structure
 
 <GenerateTable/>

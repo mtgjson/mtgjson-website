@@ -9,7 +9,7 @@
     "property": "language",
     "type": "string",
     "example": "\"German\"",
-    "description": "Foreign language of card. Can be English, Spanish, French, German, Italian, Portuguese, Japanese, Korean, Russian, Simplified Chinese, or Traditional Chinese. Promo cards can be Hebrew, Latin, Ancient Greek, Arabic, Sanskrit, or Phyrexian."
+    "description": "Foreign language of card. Can be English, Spanish, French, German, Italian, Portuguese (Brazil), Japanese, Korean, Russian, Chinese Simplified, or Chinese Traditional. Promo cards can be Hebrew, Latin, Ancient Greek, Arabic, Sanskrit, or Phyrexian."
   },
   {
     "property": "multiverseId",

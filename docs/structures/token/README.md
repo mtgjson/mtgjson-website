@@ -7,6 +7,6 @@
 
 # Token
 
-### Token Structure
+### Structure
 
 <GenerateTable/>

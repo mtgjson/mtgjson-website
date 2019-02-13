@@ -7,6 +7,6 @@
 
 # Keywords
 
-### Keywords Structure
+### Structure
 
 <GenerateTable/>

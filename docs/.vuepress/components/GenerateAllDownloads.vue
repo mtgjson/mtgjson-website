@@ -8,9 +8,14 @@ import GenerateSingleDownload from './GenerateSingleDownload';
 export default {
   name: 'GenerateAllDownloads',
   components: { GenerateSingleDownload },
+  data(){
+    return {
+      downloadDirectory: 'json'
+    }
+  },
   computed: {
     downloads(){
-      return this.$page.frontmatter.downloads
+      return require(`../public/${this.downloadDirectory}/CompiledList.json`);
     }
   }
 }

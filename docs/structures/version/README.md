@@ -7,6 +7,6 @@
 
 # Version
 
-### Version Structure
+### Structure
 
 <GenerateTable/>

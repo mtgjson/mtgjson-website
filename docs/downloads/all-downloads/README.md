@@ -1,10 +1,6 @@
 ---
 {
-  "title": "All Downloads",
-  "downloads": [
-    "AllCards",
-    "AllSets"
-  ]
+  "title": "All Downloads"
 }
 ---
 
