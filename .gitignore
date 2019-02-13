@@ -24,8 +24,8 @@ dist/
 # JSON Dumps
 json/
 !json/.gitkeep
-# Keep smaller files for schemaation
+# Keep smaller files for documentation
 !json/SetList.json
 
-# Experiments
+# Experimental Schemas
 src/*schema.json

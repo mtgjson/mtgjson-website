@@ -9,7 +9,7 @@ Install project dependencies. You'll notice all of them are non-dev, this is bec
 > _One thing to know is that the only production dependency is `vuepress`_
 
 ```sh
-yarn install
+yarn i
 ```
 
 ## Development Server
