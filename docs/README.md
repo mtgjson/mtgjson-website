@@ -9,8 +9,7 @@
 ![logo](/images/logo.svg "MTGJSON")
 
 ::: warning
-
-This schemaation site is currently in a beta stage. You can find more sources of truths, specifically to download files, at the official [MTGJSON website](https://mtgjson.com/)
+This documentation site is currently in a beta stage. You can find more sources of truths, specifically to download files, at the official [MTGJSON website](https://mtgjson.com/)
 
 :::
 
@@ -25,18 +24,14 @@ Many others that have devoted their time and effort in to this project that empo
 ## The Core Team
 
 ::: tip Zach - Lead Developer
-
 ![avatar](/images/avatar-zach.jpg "Zach")
 Zach is a 21‐year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open‐source Cockatrice game client.
 :::
 
-::: tip Martin — Web Developer
-
+::: tip Martin - Web Developer
 ![avatar](/images/avatar-martin.jpg "Martin")
 Martin is an avid strategy gamer and Magic player since late 1994. When he’s not looking at JavaScript or playing Commander, he’s likely spending time on a host of smaller projects, including the custom card creator MTG.Design.
 :::
-
-### Second Mentions
 
 <GenerateContributors/>
 

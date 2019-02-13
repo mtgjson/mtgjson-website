@@ -11,7 +11,7 @@ export default {
   computed: {
     contributors(){
       return [
-        'Staghouse - schemaation Developer'
+        'Staghouse - Documentation Developer'
       ]
     }
   }
