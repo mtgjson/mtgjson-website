@@ -1,0 +1,90 @@
+.download-tables
+  margin-top: 20px;
+  max-width: 800px;
+  
+  h3 {
+    font-size: 16px;
+  }
+
+  .download-table {
+    border: 1px solid #eaecef;
+    box-sizing: border-box;
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+
+    &:nth-of-type(odd) {
+      background-color: #f6f6f6;
+    }
+
+    &:nth-of-type(even) {
+      background-color: transparent;
+    }
+
+    .download-item {
+      flex: 0 0 100%;
+
+      .download-wrap {
+        padding: 20px;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+
+        .img-wrap {
+          flex: none;
+
+          div {
+            margin-right: 20px;
+            position: relative;
+            height: 50px;
+            width: 50px;
+
+            &::before {
+              position: absolute;
+              text-align: center;
+              line-height: 1em;
+              font-size: 50px;
+              width: 100%;
+              height: 100%;
+              transition: 0.25s color;
+            }
+          }
+
+          img {
+            flex: none;
+            width: 100%;
+            height: auto;
+          }
+        }
+
+        .txt-wrap {
+          flex: 1;
+
+          & > * {
+            flex: 0 0 100%;
+          }
+
+          p {
+            font-weight: bold;
+            margin: 0;
+          }
+        }
+
+        .dl-wrap {
+          flex: 1;
+          display: inline-flex;
+          flex-wrap: wrap;
+          justify-content: end;
+
+          a {
+            margin: 10px 20px 10px 0;
+            font-weight: bold;
+
+            &:last-of-type {
+              margin-right: 0;
+            }
+          }
+        }
+      }
+    }
+  }

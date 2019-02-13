@@ -12,57 +12,63 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let logger = null;
 export default class {
-    constructor(land, seeds, optional) {
+    constructor(hand = [], optional) {
         this.shouldNotFertilize = optional || false;
         this.className = 'Landcycle';
-        this.hasFertilized = false;
-        this.land = land;
-        this.seeds = seeds;
+        this.lands = [
+            '{{foreign-data}}',
+            '{{legalities}}',
+            '{{set-types}}',
+            '{{all-cards}}',
+            '{{all-sets}}',
+            '{{keywords}}',
+            '{{version}}',
+            '{{rulings}}',
+            '{{token}}',
+            '{{card}}',
+            '{{set}}',
+        ];
+        this.hand = hand;
         this.debug = false;
         logger = this.logger.bind(this); // Short logger alias
         if (this.shouldNotFertilize) {
             return this;
         }
         logger('The ground is rumbling...', true);
-        this.cycle(this.land, this.seeds);
+        this.cycle(this.hand);
     }
     discard(card) {
         return __awaiter(this, void 0, void 0, function* () {
-            // Improper logging. Like because of the {%} characters as the template
             logger(`discarding ${card}...`);
-            const cardName = card.match(/{%(.*?)%}/)[1] || card;
-            const ability = {
-                name: cardName,
-                effect: '',
-            };
-            if (this.seeds.indexOf(card) > -1) {
-                /**
-                 * @TODO abstract in to another reference
-                 */
+            let cardName = this.reveal(card) || card;
+            let newLand = null;
+            if (this.lands.indexOf(card) > -1) {
                 switch (cardName) {
-                    case 'date':
-                        ability.effect = `${new Date().toISOString().split('T')[0]}`;
-                        break;
-                    case 'card':
-                    case 'token':
-                        ability.effect = `<a class="code-link" href=/structures/${cardName}>${cardName}</a>`;
+                    case 'set-types':
+                        newLand = `<a class="code-link" href=/misc/#${cardName}>${this.faceUp(cardName)}</a>`;
                         break;
                     default:
+                        newLand = `<a class="code-link" href=/structures/${cardName}>${this.faceUp(cardName)}</a>`;
                         break;
                 }
             }
-            return yield ability;
+            logger(`land acquired: ${JSON.stringify(newLand)}`, true);
+            return yield newLand;
         });
     }
-    cycle(land, seeds) {
-        for (let hand of land) {
-            for (let seed in seeds) {
-                const card = seeds[seed];
-                if (hand.innerText.indexOf(card) > -1) {
+    /**
+     *
+     * @param battlefield DOM elements we want to cycle through and hydrate
+     */
+    cycle(battlefield) {
+        for (let land of battlefield) {
+            for (let color in this.lands) {
+                const card = this.lands[color];
+                if (land.innerText.indexOf(card) > -1) {
                     // Nested here for the promise of new
                     this.discard(card)
-                        .then(ability => {
-                        hand.innerHTML = hand.innerText.replace(card, ability.effect);
+                        .then(newLand => {
+                        land.innerHTML = land.innerText.replace(card, newLand);
                     })
                         .catch(err => {
                         logger(`${card} :: ${err}`, false);
@@ -74,18 +80,30 @@ export default class {
     }
     /**
      *
-     * Discard after use?
-     *
+     * @param card Mustachio'ed card
      */
-    logger(log, flag = null) {
+    reveal(card) {
+        return card.match(/{{(.*?)}}/)[1];
+    }
+    /**
+     *
+     * @param card multiple word normalizing
+     */
+    faceUp(card) {
+        return card.split('-').map(n => n.charAt(0).toUpperCase() + n.slice(1)).join('');
+    }
+    logger(log, flag = '') {
         if (this.debug && log && flag === true) {
             console.log(`%c ${this.className} logger :: ${log}`, 'background: seagreen; color: white;');
         }
         else if (log && flag === false) {
             console.log(`%c ${this.className} logger :: ${log}`, 'background: #9b2e2e; color: #ffeeec;');
         }
-        else if (this.debug) {
+        else if (log && flag === null) {
             console.log(`%c ${this.className} logger :: ${log}`, 'background: white; color: black;');
+        }
+        else if (this.debug) {
+            console.log(`${this.className} logger :: ${log}`);
         }
     }
 }

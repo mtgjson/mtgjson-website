@@ -1,12 +1,7 @@
 ---
 {
   "title": "Set",
-  "document": "Set",
-  "refs": [
-    "{%card%}",
-    "{%token%}",
-    "{%version%}"
-  ]
+  "schema": "Set"
 }
 ---
 

@@ -13,7 +13,7 @@
     "docs:build": "vuepress build docs",
     "dev": "yarn docs:dev",
     "build": "yarn docs:build",
-    "test": "jest",
+    "compile-ts": "tsc",
     "heroku-postbuild": "yarn build"
   },
   "dependencies": {

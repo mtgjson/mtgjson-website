@@ -20,7 +20,7 @@
   {
     "property": "colorIndicator",
     "type": "array(string)",
-    "example": "[]",
+    "example": "[\"G\",\"W\"]",
     "description": "List of all colors in card’s color indicator. Usually found only on cards without mana costs and other special cards."
   },
   {

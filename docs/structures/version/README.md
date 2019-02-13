@@ -1,7 +1,7 @@
 ---
 {
   "title": "Version",
-  "document": "Version",
+  "schema": "Version",
 }
 ---
 

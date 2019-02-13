@@ -1,9 +1,11 @@
 ---
-title: Single Sets
-download: SetList
+{
+  "title": "Single Sets",
+  "download": "SetList"
+}
 ---
 
-# Single Sets
+# Download Single Sets
 
 ### Downloads
 

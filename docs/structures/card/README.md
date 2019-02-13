@@ -1,8 +1,7 @@
 ---
-
 {
   "title": "Card",
-  "document": "Card",
+  "schema": "Card"
 }
 ---
 

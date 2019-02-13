@@ -1,9 +1,0 @@
----
-{
-  "title": "AllCards"
-}
----
-
-# AllCards
-
-### Downloads

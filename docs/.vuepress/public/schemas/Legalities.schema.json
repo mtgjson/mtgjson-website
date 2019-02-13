@@ -1,0 +1,56 @@
+[
+  {
+    "property": "1v1",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "brawl",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "commander",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "duel",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "frontier",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "legacy",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "modern",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "standard",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  },
+  {
+    "property": "vintage",
+    "type": "string",
+    "example": "Legal",
+    "description": "Returns a string value if legal otherwise entire property is omitted."
+  }
+]

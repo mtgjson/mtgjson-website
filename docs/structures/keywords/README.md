@@ -1,7 +1,7 @@
 ---
 {
   "title": "Keywords",
-  "document": "Keywords",
+  "schema": "Keywords",
 }
 ---
 

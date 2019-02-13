@@ -6,21 +6,30 @@
 let logger = null;
 
 export default class {
-  private hasFertilized: boolean;
   shouldNotFertilize: boolean;
   className: string;
-  land: any[];
-  seeds: any[];
-  debug: boolean;
   optional: boolean;
+  debug: boolean;
+  hand: any[];
+  lands: any[];
 
-
-  constructor(land: any[], seeds: any[], optional: boolean) {
+  constructor(hand: any[] = [], optional: boolean) {
     this.shouldNotFertilize = optional || false;
     this.className = 'Landcycle';
-    this.hasFertilized = false;
-    this.land = land;
-    this.seeds = seeds;
+    this.lands = [
+      '{{foreign-data}}',
+      '{{legalities}}',
+      '{{set-types}}',
+      '{{all-cards}}',
+      '{{all-sets}}',
+      '{{keywords}}',
+      '{{version}}',
+      '{{rulings}}',
+      '{{token}}',
+      '{{card}}',
+      '{{set}}',
+    ];
+    this.hand = hand;
     this.debug = false;
 
     logger = this.logger.bind(this); // Short logger alias
@@ -30,52 +39,48 @@ export default class {
     }
 
     logger('The ground is rumbling...', true);
-    this.cycle(this.land, this.seeds);
+
+    this.cycle(this.hand);
   }
-  
+
 
   async discard(card: string) {
-    // Improper logging. Like because of the {%} characters as the template
     logger(`discarding ${card}...`);
 
-    const cardName = card.match(/{%(.*?)%}/)[1] || card;
-    const ability = {
-      name: cardName,
-      effect: '',
-    };
+    let cardName = this.reveal(card) || card;
+    let newLand = null
 
-    if (this.seeds.indexOf(card) > -1) {
-      /**
-       * @TODO abstract in to another reference
-       */
+    if (this.lands.indexOf(card) > -1) {
       switch (cardName) {
-        case 'date':
-          ability.effect = `${new Date().toISOString().split('T')[0]}`;
-          break;
-
-        case 'card':
-        case 'token':
-          ability.effect = `<a class="code-link" href=/structures/${cardName}>${cardName}</a>`;
+        case 'set-types':
+          newLand = `<a class="code-link" href=/misc/#${cardName}>${this.faceUp(cardName)}</a>`;
           break;
 
         default:
+          newLand = `<a class="code-link" href=/structures/${cardName}>${this.faceUp(cardName)}</a>`;
           break;
       }
     }
 
-    return await ability;
+    logger(`land acquired: ${JSON.stringify(newLand)}`, true);
+
+    return await newLand;
   }
 
+  /**
+   * 
+   * @param battlefield DOM elements we want to cycle through and hydrate
+   */
+  cycle(battlefield: any[]) {
+    for (let land of battlefield) {
+      for (let color in this.lands) {
+        const card = this.lands[color]
 
-  cycle(land: any[], seeds: any[]) {
-    for (let hand of land) {
-      for (let seed in seeds) {
-        const card = seeds[seed]
-        if (hand.innerText.indexOf(card) > -1) {
+        if (land.innerText.indexOf(card) > -1) {
           // Nested here for the promise of new
           this.discard(card)
-            .then(ability => {
-              hand.innerHTML = hand.innerText.replace(card, ability.effect);
+            .then(newLand => {
+              land.innerHTML = land.innerText.replace(card, newLand);
             })
             .catch(err => {
               logger(`${card} :: ${err}`, false);
@@ -85,13 +90,24 @@ export default class {
     }
     return this;
   }
+
+  /**
+   * 
+   * @param card Mustachio'ed card
+   */
+  private reveal(card: string) {
+    return card.match(/{{(.*?)}}/)[1]
+  }
   
   /**
    * 
-   * Discard after use?
-   * 
+   * @param card multiple word normalizing
    */
-  logger(log: any, flag: any = null) {
+  private faceUp(card: string) {
+    return card.split('-').map( n => n.charAt(0).toUpperCase() + n.slice(1)).join('')
+  }
+  
+  private logger(log: any, flag: any = '') {
     if (this.debug && log && flag === true) {
       console.log(
         `%c ${this.className} logger :: ${log}`,
@@ -102,10 +118,14 @@ export default class {
         `%c ${this.className} logger :: ${log}`,
         'background: #9b2e2e; color: #ffeeec;'
       );
-    } else if (this.debug) {
+    } else if (log && flag === null) {
       console.log(
         `%c ${this.className} logger :: ${log}`,
         'background: white; color: black;'
+      );
+    } else if (this.debug) {
+      console.log(
+        `${this.className} logger :: ${log}`
       );
     }
   }

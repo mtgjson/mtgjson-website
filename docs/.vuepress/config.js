@@ -1,10 +1,13 @@
 const generateSidebarRoutes = require('./config.sidebar');
 
 module.exports = {
-  // Deployment
-  // https://vuepress.vuejs.org/guide/deploy.html
   host: '0.0.0.0',
   port: '8080',
+  // Google Analytics
+  ga: 'UA-131358443-1',
+  searchMaxSuggestions: 100,
+  repo: 'staghouse/mtgjson-website',
+  editLinks: true,
   // SEO
   title: 'MTGJSON (v4)',
   description: 'Magic: The Gathering card data in JSON ',
@@ -34,16 +37,22 @@ module.exports = {
     sidebar: [
       '/',
       {
-        title: 'Data Structures',
+        title: 'Downloads',
+        path: '/downloads/all-downloads',
+        collapsable: false,
+        children: generateSidebarRoutes('/downloads/'),
+      },
+      {
+        title: 'Structured Data',
         path: '/structures/card',
         collapsable: false,
         children: generateSidebarRoutes('/structures/'),
       },
       {
-        title: 'Downloads',
-        path: '/downloads/all-cards',
-        collapsable: false,
-        children: generateSidebarRoutes('/downloads/'),
+        title: 'Misc Data',
+        path: '/misc/',
+        collapsable: true,
+        children: generateSidebarRoutes('/misc/')
       },
       '/changelog/'
     ],

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Token",
-  "document": "Token",
+  "schema": "Token",
 }
 ---
 
