@@ -48,6 +48,7 @@ export default class {
                         newLand = `<a class="code-link" href=/misc/#${cardName}>${this.faceUp(cardName)}</a>`;
                         break;
                     case 'legalities':
+                    case 'rulings':
                         newLand = `<a class="code-link" href=/misc/${cardName}>${this.faceUp(cardName)}</a>`;
                         break;
                     default:
