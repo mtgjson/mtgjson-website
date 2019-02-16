@@ -40,6 +40,7 @@
             position: relative;
             height: 50px;
             width: 50px;
+            color: $codeBgColor;
 
             &::before {
               position: absolute;
@@ -51,36 +52,39 @@
               transition: 0.25s color;
             }
           }
-
-          img {
-            flex: none;
-            width: 100%;
-            height: auto;
-          }
         }
 
         .txt-wrap {
           flex: 1;
 
-          & > * {
-            flex: 0 0 100%;
-          }
-
           p {
+            display: block;
             font-weight: bold;
             margin: 0;
+          }
+
+          small {
+            display: inline-block;
+            font-weight: bold;
+            margin-right: 30px;
+
+            span {
+              font-weight: normal;
+            }
           }
         }
 
         .dl-wrap {
-          flex: 1;
-          display: inline-flex;
+          display: flex;
+          flex: 0 0 100%;
           flex-wrap: wrap;
-          justify-content: end;
+          margin-top: 10px;
 
           a {
-            margin: 0 20px 0 0;
+            text-decoration: none;
+            margin: 10px 20px 0 0;
             font-weight: bold;
+            text-transform: uppercase;
 
             &:last-of-type {
               margin-right: 0;

@@ -9,8 +9,8 @@ module.exports = {
   repo: 'staghouse/mtgjson-website',
   editLinks: true,
   // SEO
-  title: 'MTGJSON (v4)',
-  description: 'Magic: The Gathering card data in JSON ',
+  title: 'MTGJSON',
+  description: 'Magic: The Gathering card data in JSON.',
   // Support Links
   head: [
     [
@@ -30,9 +30,9 @@ module.exports = {
     },
     lastUpdated: 'Last Updated',
     nav: [
-      { text: 'Discord', link: 'https://discord.gg/74GUQDE' },
-      { text: 'Github', link: 'https://github.com/mtgjson/mtgjson' },
-      { text: 'Donate Now', link: 'https://www.paypal.me/Zachhalpern' },
+      { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
+      { text: 'Contribute', link: 'https://github.com/mtgjson' },
+      { text: 'Donate', link: 'https://www.paypal.me/Zachhalpern' },
     ],
     sidebar: [
       '/',
@@ -47,12 +47,6 @@ module.exports = {
         path: '/structures/card',
         collapsable: false,
         children: generateSidebarRoutes('/structures/'),
-      },
-      {
-        title: 'Misc Data',
-        path: '/misc/',
-        collapsable: true,
-        children: generateSidebarRoutes('/misc/')
       },
       '/changelog/'
     ],

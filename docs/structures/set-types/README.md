@@ -1,16 +1,12 @@
 ---
 {
-  "title": "Misc Data"
+  "title": "Set Types"
 }
 ---
 
-# Misc Data
+# Set Types
 
-## Set Types
-
-::: warning
-This page is prone to stagnation as [Wizards of the Coast&trade;](https://www.wizardsofthecoast.com) make core updates to [Magic: The Gathering](https://magic.wizards.com/en).
-:::
+Set types can describe some play formats, versions of card groupings, general rulings, legalities and their nature in the Magic: The Gathering universe.
 
 > Property `set`  
 > Type `string`

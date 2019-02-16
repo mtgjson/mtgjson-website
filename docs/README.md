@@ -33,8 +33,10 @@ Zach is a 21‐year old hippo fanatic who loves playing with big data and giving
 Martin is an avid strategy gamer and Magic player since late 1994. When he’s not looking at JavaScript or playing Commander, he’s likely spending time on a host of smaller projects, including the custom card creator MTG.Design.
 :::
 
-<GenerateContributors/>
-
+::: tip Eric - Documentation Developer
+![avatar](/images/avatar-eric.gif "Eric")
+Eric is an Open Source Software loving conceptualizer and Cervidae aficionado. When not delving in to any code he can find he enjoys watching "B" rated Horror movies, Camping and Hiking.
+:::
 
 ## Who We Serve
 

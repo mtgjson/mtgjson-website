@@ -9,17 +9,17 @@
           select.table-sort-select(@change="sortBy($event)")
             option(value="releaseDate:true" selected) Release Date (Newest)
             option(value="releaseDate") Release Date (Oldest)
-            option(value="name:true") Alphabetized by Name (Z-0)
-            option(value="name") Alphabetized by Name (0-Z)
-            option(value="code:true") Alphabetized by Code (Z-0)
-            option(value="code") Alphabetized by Code (0-Z)
+            option(value="name") Name (Ascending)
+            option(value="name:true") Name (Descending)
+            option(value="code") Code (Ascending)
+            option(value="code:true") Code (Descending)
 
         div(v-if="!showAll")
           strong Per Page: 
             select(v-model="perPage")
-              option(value="25") 25
               option(value="50") 50
               option(value="100") 100
+              option(value="200") 200
               
         div.show-all
           strong Show All: 
@@ -39,10 +39,13 @@
             div(:class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
             p {{ set.name }} - {{ set.code }}
-            small {{ set.releaseDate }}
+            small Code: 
+              span {{ set.code }}
+            small Release Date: 
+              span {{ set.releaseDate }}
           .dl-wrap
-            a(v-for="(format, key) in downloadFormats" v-if="format !== '.json'" :key="key" :href="`/${downloadDirectory}/${set.code}.json${format}`") {{ format }}
-            a(v-else v-bind:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
+            a.cta-btn(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key" :href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
+            a.cta-btn(v-else v-bind:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
 
 </template>
 
@@ -51,13 +54,13 @@ export default {
   name: 'GenerateSingleSetDownloads',
   data() {
     return {
-      downloadFormats: ['.bz2', '.gz', '.json', '.xz', '.zip'],
+      downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
       defaultList: [],
       defaultPage: 1,
       showSorting: true,
-      showAll: false,
-      perPage: 25,
+      showAll: true,
+      perPage: 50,
     };
   },
   created() {
@@ -148,7 +151,7 @@ export default {
     border-bottom: 1px solid $borderColor;
 
     .show-sort-row {
-      display: block;
+      display: inline-block;
       margin-bottom: 20px;
     }
 
@@ -212,16 +215,6 @@ export default {
 
   .download-table {
     margin-top: -1px;
-
-    .dl-wrap {
-      justify-content: start !important;
-      flex: 0 0 100% !important;
-
-      +breakpoint(medium) {
-        justify-content: end !important;
-        flex: 1 !important;
-      }
-    }
   }
 }
 </style>

@@ -1,0 +1,29 @@
+{
+  "AllCards": {
+    "description": "Every card as a unique \"atomic\" object. May also be outputted as every card in a specific set. Some data properties will be omitted if they have various values from set to set."
+  },
+  "AllSets": {
+    "description": "Every set and all cards in that set."
+  },
+  "CompiledList": {
+    "description": "All possible compiled outputs from MTGJSON."
+  },
+  "Keywords": {
+    "description": "List of all keywords used on Magic cards."
+  },
+  "Modern": {
+    "description": "All Modern-legal only sets."
+  },
+  "SetList": {
+    "description": "List of codes, names and release dates of all sets."
+  },
+  "Standard": {
+    "description": "All Standard-legal only sets."
+  },
+  "Vintage": {
+    "description": "All Vintage-legal only sets."
+  },
+  "version": {
+    "description": "Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release."
+  }
+}
