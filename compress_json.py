@@ -7,6 +7,7 @@ import os
 import os.path
 import lzma as xz
 import requests
+import shutil
 import sys
 import zipfile
 
@@ -39,7 +40,7 @@ def compress_single_sets(source_dir):
         bz_file_name = file_root + ".json.bz2"
         bz_file_path = os.path.join(source_dir, bz_file_name)
         with open(f, "rb") as f_in, open(bz_file_path, "wb") as f_out:
-            f_out.write(bz2.compress(f_in.read(), 9))
+            f_out.write(bz2.compress(f_in.read()))
 
         # .XZ
         xz_file_name = file_root + ".json.xz"
@@ -56,19 +57,27 @@ def get_all_set_names():
 
 
 def compress_all_set_files(source_dir):
-    # AllSetFiles
     all_set_files_name = "AllSetFiles"
 
-    sets = set(get_all_set_names() + ["CON_"])
+    # Make directory of stuff to compress
+    os.makedirs(all_set_files_name)
 
-    # .ZIP
-    with zipfile.ZipFile(all_set_files_name + ".zip", "w") as zip_out:
-        for f in file_endings(source_dir, ".json"):
-            set_name = f.split("/")[-1].split(".")[0]
-            if set_name in sets:
-                zip_out.write(f, compress_type=zipfile.ZIP_DEFLATED)
-            else:
-                print("NOT INCLUDING", f)
+    # Copy stuff to compress
+    sets = set(get_all_set_names() + ["CON_"])
+    for f in sets:
+        try:
+            shutil.copy(os.path.join(source_dir, f + ".json"), all_set_files_name)
+        except FileNotFoundError:
+            pass
+
+    # Compress the archives
+    shutil.make_archive(all_set_files_name, "bztar", all_set_files_name)
+    shutil.make_archive(all_set_files_name, "gztar", all_set_files_name)
+    shutil.make_archive(all_set_files_name, "xztar", all_set_files_name)
+    shutil.make_archive(all_set_files_name, "zip", all_set_files_name)
+
+    # Delete the copied folder
+    shutil.rmtree(all_set_files_name, ignore_errors=True)
 
     print("Compressed " + all_set_files_name)
 
