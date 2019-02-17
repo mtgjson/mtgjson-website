@@ -1,7 +1,7 @@
 <!-- Pug case statements do not work for our hydration purposes -->
 <template lang="pug">
   .schema-table
-    table(v-if="!showMobileTable")
+    table(v-bind:class="{hidden: showMobileTable}")
       thead
         tr
           th(v-for="(value, key) in structure[0]" v:key=key)
@@ -19,25 +19,25 @@
             span(v-else)
               span.land-cycler {{ value }}
 
-    //- To avoid async/await madness, use the hydrate method on mobile view render
-    ol.mobile-doc-table(v-if="showMobileTable, hydrate" v-for="(value, key) in structure" v:key=key)
-      li(v-for="(value, key) in value" v:key=key)
-        span(v-if="key === 'property'")
-          div
-            h3(:id="value") {{ key }}
-              a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
-          div {{ value }}
-        span(v-else-if="key === 'type'")
-          div {{ key }}
-          div
-            em {{ value }}
-        span(v-else-if="key === 'example'")
-          div {{ key }}
-          div
-            code.land-cycler {{ value }}
-        span(v-else)
-          div {{ key }}
-          div.land-cycler {{ value }}
+    div(v-bind:class="{hidden: !showMobileTable}")
+      ol.mobile-doc-table(v-for="(value, key) in structure" v:key=key)
+        li(v-for="(value, key) in value" v:key=key)
+          span(v-if="key === 'property'")
+            div
+              h3(:id="value") {{ key }}
+                a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
+            div {{ value }}
+          span(v-else-if="key === 'type'")
+            div {{ key }}
+            div
+              em {{ value }}
+          span(v-else-if="key === 'example'")
+            div {{ key }}
+            div
+              code.land-cycler {{ value }}
+          span(v-else)
+            div {{ key }}
+            div.land-cycler {{ value }}
 
 </template>
 
@@ -60,12 +60,12 @@ export default {
   },
   mounted() {
     window.addEventListener('resize', this.checkIfMobile);
-    this.hydrate();
     this.checkIfMobile();
   },
   methods: {
     checkIfMobile() {
       this.isMobile = Math.max(window.innerWidth || 0) < this.isMobileSize;
+      this.hydrate();
     },
     hydrate() {
       const land = this.$page.path.split('/')[1];
@@ -96,6 +96,14 @@ h3 {
     position: absolute;
     left: 0;
   }
+}
+
+.hidden {
+  max-height: 0;
+  padding: 0;
+  border-width: 0;
+  margin: 0;
+  overflow: hidden;
 }
 
 table {
