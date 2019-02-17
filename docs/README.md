@@ -8,11 +8,6 @@
 
 ![logo](/images/logo.svg "MTGJSON")
 
-::: warning
-This documentation site is currently in a beta stage. You can find more sources of truths, specifically to download files, at the official [MTGJSON website](https://mtgjson.com/)
-
-:::
-
 ## Our Mission
 
 MTGJSON is an open‐source project with the goal of cataloging all Magic cards in a portable format. It’s actively maintained by a dedicated group of fans and supplies data for a variety of projects and sites in the community.
