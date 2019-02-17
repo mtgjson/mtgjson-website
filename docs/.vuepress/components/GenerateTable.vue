@@ -58,16 +58,13 @@ export default {
     }.schema.json`);
   },
   beforeMount() {
-    // In Vue.js it is suggested to put these in the `created` lifecycle method
-    // However, in VuePress, we need them in the mounted area because of the
-    // build process of VuePress itself. Not sure why
     window.addEventListener('resize', this.checkIfMobile);
-    // Not always working but could be because state
-    window.addEventListener('DOMContentLoaded', this.checkIfMobile);
   },
   mounted() {
-    const land = Array.from(this.$el.querySelectorAll('.land-cycler'));
-    let build = new Landcycle(land);
+      this.checkIfMobile();
+      const land = this.$page.path.split('/')[1];
+      const hand = Array.from(this.$el.querySelectorAll('.land-cycler'));
+      new Landcycle(hand, land);
   },
   methods: {
     checkIfMobile() {

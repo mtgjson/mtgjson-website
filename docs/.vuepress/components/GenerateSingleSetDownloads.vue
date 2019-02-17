@@ -1,11 +1,9 @@
 <template lang="pug">
   .download-tables
     .sorting-options
-      a.show-sort-row(@click.prevent="toggleSorting()") Toggle Options
-      
       .sort-row(v-if="showSorting")
         div
-          strong Sort By: 
+          strong Sort By:
           select.table-sort-select(@change="sortBy($event)")
             option(value="releaseDate:true" selected) Release Date (Newest)
             option(value="releaseDate") Release Date (Oldest)
@@ -14,32 +12,14 @@
             option(value="code") Code (Ascending)
             option(value="code:true") Code (Descending)
 
-        div(v-if="!showAll")
-          strong Per Page: 
-            select(v-model="perPage")
-              option(value="50") 50
-              option(value="100") 100
-              option(value="200") 200
-              
-        div.show-all
-          strong Show All: 
-            input(type="checkbox" v-model="showAll")
-
-      .pagination(v-if="!showAll")
-        .pagination-links
-          a.prev(v-bind:class="{hidden: (page === 1)}" @click.prevent="goToPage(0)") &larr; Prev Page
-          span
-            strong Page: {{ page }}
-          a.next(v-bind:class="{hidden: (page === pageMax)}" @click.prevent="goToPage(1)") Next Page &rarr;
-
-    .download-table(v-for="(set, key) in paginatedList")
+    .download-table(v-for="(set, key) in list")
       .download-item
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
-            p {{ set.name }} - {{ set.code }}
-            small Code: 
+            p {{ set.name }}
+            small Set Code: 
               span {{ set.code }}
             small Release Date: 
               span {{ set.releaseDate }}
@@ -58,9 +38,7 @@ export default {
       downloadDirectory: 'json',
       defaultList: [],
       defaultPage: 1,
-      showSorting: true,
-      showAll: true,
-      perPage: 50,
+      showSorting: true
     };
   },
   created() {
@@ -70,37 +48,14 @@ export default {
     this.defaultList = this.sortBy('releaseDate:true');
   },
   computed: {
-    pageMax() {
-      return Math.ceil(this.list.length / this.perPage);
-    },
     page() {
       return this.defaultPage;
     },
     list() {
       return this.defaultList;
-    },
-    paginatedList() {
-      if (!this.showAll) {
-        return this.defaultList.filter((item, index) => {
-          let intermitentMax = this.page * this.perPage;
-          let intermitentMin = intermitentMax - this.perPage;
-
-          return index > intermitentMin && index < intermitentMax;
-        });
-      } else {
-        return this.list;
-      }
-    },
+    }
   },
   methods: {
-    toggleSorting() {
-      this.showSorting = !this.showSorting;
-    },
-    goToPage(increment) {
-      const next =
-        increment === 0 ? this.defaultPage - 1 : this.defaultPage + 1;
-      this.defaultPage = next < 1 ? 1 : next;
-    },
     // PogChamp
     // A little different than the source but works
     // https://jsbin.com/wowezadolo/edit?js,console
@@ -147,70 +102,18 @@ export default {
     top: 55px;
     z-index: 9;
     background-color: white;
-    padding: 30px 0 10px;
+    padding: 30px 0 30px;
     border-bottom: 1px solid $borderColor;
 
     .show-sort-row {
       display: inline-block;
-      margin-bottom: 20px;
-    }
-
-    .pagination {
-      margin-top: 10px;
-
-      .pagination-links {
-        width: 100%;
-        display: flex;
-        justify-content: space-between;
-
-        * {
-          flex: 1;
-        }
-
-        span {
-          text-align: center;
-        }
-
-        a {
-          cursor: pointer;
-          user-select: none;
-
-          &.prev {
-            text-align: left;
-          }
-
-          &.next {
-            text-align: right;
-          }
-
-          &.hidden {
-            opacity: 0.5;
-            pointer-events: none;
-            color: gray;
-          }
-        }
-      }
-    }
-
-    .sort-row {
-      div {
-        display: block;
-        margin-top: 5px;
-
-        &.show-all {
-          margin-bottom: 15px;
-        }
-
-        &:first-of-type {
-          margin-top: 0;
-        }
-      }
     }
   }
 
   select {
     display: inline;
     font-size: 16px;
+    margin-left: 10px;
   }
 
   .download-table {

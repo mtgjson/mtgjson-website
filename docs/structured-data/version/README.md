@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Version",
+  "title": "version",
   "schema": "Version",
 }
 ---

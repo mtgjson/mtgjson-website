@@ -5,8 +5,7 @@ h2
   border-width: 0 !important;
 
 .code-link
-  font-weight: bold
-  text-transform: capitalize
+  font-weight: bold;
 
 img
   user-select: none;
@@ -28,21 +27,34 @@ a:link
   margin-right: 0 !important;
 
 .cta-btn,
-.nav-link.external
-  background-color: $codeBgColor;
-  color: white;
+.nav-link
+  background-color: $codeBgColor !important;
+  color: white !important;
   font-weight: bold;
   padding: 6px 15px
   border-radius: 5px;
-  transition: .25s all;
+  transition: .25s opacity;
   
+  svg
+    display: none !important;
+    
   &:hover
     color: white;
     opacity: 0.8;
-    transition: .25s all;
+    transition: .25s opacity;
 
-  svg
-    display: none;
+
+.sidebar,
+.navbar
+  .nav-links
+    .nav-item
+      &:first-of-type // Discord
+        a
+          background-color: #7289da !important;
+
+      &:last-of-type // Donate
+        a
+          background-color: salmon !important;
 
 img[alt='avatar']
   max-width: 100px !important;

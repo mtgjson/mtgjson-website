@@ -5,9 +5,6 @@ module.exports = {
   port: '8080',
   // Google Analytics
   ga: 'UA-131358443-1',
-  searchMaxSuggestions: 10,
-  repo: 'staghouse/mtgjson-website',
-  editLinks: true,
   // SEO
   title: 'MTGJSON',
   description: 'Magic: The Gathering card data in JSON.',
@@ -25,9 +22,13 @@ module.exports = {
   // Vuepress Themeing
   // 
   themeConfig: {
+    searchMaxSuggestions: 20,
+    displayAllHeaders: true,
     serviceWorker: {
       updatePopup: true
     },
+    repo: 'staghouse/mtgjson-website',
+    editLinks: true,
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
@@ -36,17 +37,24 @@ module.exports = {
     ],
     sidebar: [
       '/',
+      '/documentation/',
       {
         title: 'Downloads',
-        path: '/downloads/all-downloads',
+        path: '/downloads/compiled',
         collapsable: false,
         children: generateSidebarRoutes('/downloads/'),
       },
       {
         title: 'Structured Data',
-        path: '/structures/card',
+        path: '/structured-data/card',
         collapsable: false,
-        children: generateSidebarRoutes('/structures/'),
+        children: generateSidebarRoutes('/structured-data/'),
+      },
+      {
+        title: 'Output Data',
+        path: '/output-data/keywords',
+        collapsable: false,
+        children: generateSidebarRoutes('/output-data/'),
       },
       '/changelog/'
     ],

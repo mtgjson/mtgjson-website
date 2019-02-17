@@ -30,3 +30,18 @@ killall node
 ```sh
 yarn docs:build
 ```
+
+## Misc
+
+# Notes
+
+We use the `.schema` format for docuemntation on structures. In some IDE's this will lead to linting errors. Do ignore them.
+
+# Landcycle
+
+Landcycle is a Typescript/JS class that allows JSON to take mustache variables such as `{{example-variable}}` and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.
+
+# Todo
+
+- Add meta data to every page.
+- Add keyword highlighting to schema `description`.

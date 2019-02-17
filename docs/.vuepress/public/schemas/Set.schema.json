@@ -9,19 +9,19 @@
     "property": "block",
     "type": "string",
     "example": "\"Guilds of Ravnica\"",
-    "description": "Block the set was in."
+    "description": "Block name the set was in."
   },
   {
     "property": "boosterV3",
     "type": "array(array, string)",
     "example": "[[\"rare\"], \"uncommon\"]",
-    "description": "Contents of a typical booster."
+    "description": "The card rarity contents of a typical booster pack."
   },
   {
     "property": "cards",
     "type": "array(object)",
     "example": " [{{card}}] ",
-    "description": "List of cards."
+    "description": "List of cards in this set."
   },
   {
     "property": "code",
@@ -32,7 +32,7 @@
   {
     "property": "codeV3",
     "type": "string",
-    "example": "",
+    "example": "\"XYZ\"",
     "description": "Alternate set code Wizards uses for a select few duel deck sets. (If there is not an alternate set code, this field is omitted.)"
   },
   {
@@ -49,9 +49,9 @@
   },
   {
     "property": "meta",
-    "type": "object(string, string)",
-    "example": "{\"date\": \"2000-01-01\", \"version\": \"x.x.x\"}",
-    "description": "Keys are date and version. Date (OBDC standard) is date of build. Version is version of MTGJSON release."
+    "type": "object",
+    "example": "{{version}}",
+    "description": "See the {{version}} structure."
   },
   {
     "property": "mtgoCode",
@@ -80,8 +80,8 @@
   {
     "property": "tokens",
     "type": "array(object)",
-    "example": "[{{token}}]",
-    "description": "List of tokens for the set."
+    "example": "[{{tokens}}]",
+    "description": "See the {{tokens}} structure."
   },
   {
     "property": "totalSetSize",
@@ -93,6 +93,6 @@
     "property": "type",
     "type": "string",
     "example": "\"expansion\"",
-    "description": "Type of set. See {{set-types}} examples."
+    "description": "See {{types}} examples."
   }
 ]

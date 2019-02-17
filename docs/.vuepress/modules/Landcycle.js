@@ -12,22 +12,25 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let logger = null;
 export default class {
-    constructor(hand = [], optional) {
+    constructor(hand = [], land = 'devoid', optional) {
         this.shouldNotFertilize = optional || false;
         this.className = 'Landcycle';
         this.lands = [
+            '{{frame-effect}}',
             '{{foreign-data}}',
             '{{legalities}}',
-            '{{set-types}}',
             '{{all-cards}}',
             '{{all-sets}}',
+            '{{set-list}}',
             '{{keywords}}',
             '{{version}}',
             '{{rulings}}',
-            '{{token}}',
+            '{{tokens}}',
+            '{{types}}',
             '{{card}}',
             '{{set}}',
         ];
+        this.land = land;
         this.hand = hand;
         this.debug = false;
         logger = this.logger.bind(this); // Short logger alias
@@ -43,7 +46,7 @@ export default class {
             let cardName = this.reveal(card) || card;
             let newLand = "";
             if (this.lands.indexOf(card) > -1) {
-                newLand = `<a class="code-link" href=/structures/${cardName}>${this.faceUp(cardName)}</a>`;
+                newLand = `<a class="code-link" href=/${this.land}/${cardName}>${this.faceUp(cardName)}</a>`;
             }
             logger(`land acquired: ${JSON.stringify(newLand)}`, true);
             return yield newLand;
@@ -83,7 +86,12 @@ export default class {
      * @param card multiple word normalizing
      */
     faceUp(card) {
-        return card.split('-').map(n => n.charAt(0).toUpperCase() + n.slice(1)).join('');
+        return card.split('-').map((n, i) => {
+            if (i > 0) {
+                return n.charAt(0).toUpperCase() + n.slice(1);
+            }
+            return n;
+        }).join('');
     }
     logger(log, flag = '') {
         if (this.debug && log && flag === true) {

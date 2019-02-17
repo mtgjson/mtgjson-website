@@ -3,7 +3,7 @@
     "property": "artist",
     "type": "string",
     "example": "\"Jack Wang\"",
-    "description": "Name of artist."
+    "description": "Name of the artist that illustrated the card art."
   },
   {
     "property": "borderColor",
@@ -93,7 +93,7 @@
     "property": "type",
     "type": "string",
     "example": "\"Token Creature — Elf Knight\"",
-    "description": "Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as if a card type."
+    "description": "Type of the token. Includes any supertypes and subtypes. Will have either Token or Emblem listed as a card type."
   },
   {
     "property": "uuid",

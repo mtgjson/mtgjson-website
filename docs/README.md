@@ -15,11 +15,7 @@ This documentation site is currently in a beta stage. You can find more sources 
 
 ## Our Mission
 
-MTGJSON is an open‐source project with the goal of cataloging all Magic cards in a portable format. It’s actively maintained by a dedicated group of fans, supplying data for a variety of projects and sites in the community.
-
-## Contributing
-
-Many others that have devoted their time and effort in to this project that empowers so many others. If you have suggestions on improvements, if you find bugs, or if you would like to help address existing issues, we are always looking for help. You can contribute to the project through the main MTGJSON [GitHub page](https://github.com/mtgjson/mtgjson) or the MTGJSON website [GitHub page](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern)
+MTGJSON is an open‐source project with the goal of cataloging all Magic cards in a portable format. It’s actively maintained by a dedicated group of fans and supplies data for a variety of projects and sites in the community.
 
 ## The Core Team
 
@@ -35,8 +31,12 @@ Martin is an avid strategy gamer and Magic player since late 1994. When he’s n
 
 ::: tip Eric - Documentation Developer
 ![avatar](/images/avatar-eric.gif "Eric")
-Eric is an Open Source Software loving conceptualizer and Cervidae aficionado. When not delving in to any code he can find he enjoys watching "B" rated Horror movies, Camping and Hiking.
+Eric is a conceptualizer that loves Open Source Software and Cerivdae. When he's not delving into any code he can find, he enjoys watching 'B'-rated horror movies, camping, and hiking.
 :::
+
+## Contributing
+
+Other have devoted their time and effort in to this project. If you have suggestions for improvements, if you find bugs, or if you would like to help address existing issues, we are always looking for help. You can contribute to the project through the main MTGJSON [GitHub page](https://github.com/mtgjson/mtgjson) or the MTGJSON website [GitHub page](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern)
 
 ## Who We Serve
 

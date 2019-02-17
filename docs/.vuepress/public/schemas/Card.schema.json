@@ -3,7 +3,7 @@
     "property": "artist",
     "type": "string",
     "example": "\"Ryan Yee\"",
-    "description": "Name of artist."
+    "description": "Name of the artist that illustrated the card art."
   },
   {
     "property": "borderColor",
@@ -39,7 +39,7 @@
     "property": "duelDeck",
     "type": "string",
     "example": "a",
-    "description": "If the card is in a duel deck product, can be \"a\" or \"b\". (If not in duel deck product, duelDeck is usually ommitted.)"
+    "description": "If the card is in a duel deck product, can be \"a\"(left) or \"b\"(right). (If not in duel deck product, duelDeck is usually ommitted.)"
   },
   {
     "property": "faceConvertedManaCost",
@@ -57,13 +57,13 @@
     "property": "foreignData",
     "type": "array(object)",
     "example": "[{{foreign-data}}]",
-    "description": "Italicized text found below the rules text that has no game function."
+    "description": "See the {{foreign-data}} structure."
   },
   {
     "property": "frameEffect",
     "type": "string",
-    "example": "\"originpwdfc\"",
-    "description": "Effect found on the card frame style. Can be legendary, miracle, nyxtouched, draft, devoid, tombstone, colorshifted, sunmoondfc, compasslanddfc, originpwdfc, or mooneldrazidfc. (If none, it is usually omitted.)"
+    "example": "\"legendary\"",
+    "description": "See the {{frame-effect}} structure."
   },
   {
     "property": "frameVersion",
@@ -117,7 +117,7 @@
     "property": "legalities",
     "type": "object",
     "example": "{{legalities}}",
-    "description": "Magic play formats."
+    "description": "See the {{legalities}} structure."
   },
   {
     "property": "life",
@@ -164,14 +164,14 @@
   {
     "property": "originalText",
     "type": "string",
-    "example": "\"Flash\\nFlying\\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10.\"",
+    "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
     "description": "Text on the card as originally printed."
   },
   {
     "property": "originalType",
     "type": "string",
-    "example": "\"Creature — Angel\"",
-    "description": "Type as originally printed. Includes any supertypes and subtypes."
+    "example": "\"Legendary Creature — Angel\"",
+    "description": "Type as originally printed. Includes any supertypes and subtypes. (\"Legendary Creature — Angel\")"
   },
   {
     "property": "power",
@@ -195,7 +195,7 @@
     "property": "rulings",
     "type": "array(object)",
     "example": "[{{rulings}}]",
-    "description": "Declartion of rules for the specific card."
+    "description": "See the {{rulings}} structure."
   },
   {
     "property": "scryfallId",
@@ -213,19 +213,19 @@
     "property": "isStarter",
     "type": "boolean",
     "example": "false",
-    "description": "Is the card only not found in a booster pack? Can be true or false. (If false, it is usually omitted.)"
+    "description": "If this card is found in a booster pack. (If false, it is usually omitted.)"
   },
   {
     "property": "subtypes",
     "type": "array(string)",
     "example": "[\"Angel\"]",
-    "description": "List of card subtypes found after em-dash."
+    "description": "List of card subtypes found after em-dash. (\"Legendary Creature — Angel\")"
   },
   {
     "property": "supertypes",
     "type": "array(string)",
     "example": "[\"Legendary\"]",
-    "description": "List of card supertypes found before em-dash."
+    "description": "List of card supertypes found before em-dash. (\"Legendary Creature — Angel\")"
   },
   {
     "property": "tcgplayerProductId",
@@ -242,7 +242,7 @@
   {
     "property": "text",
     "type": "string",
-    "example": "\"Flash\\nFlying\\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10.\"",
+    "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
     "description": "Rules text of the card."
   },
   {
@@ -254,8 +254,8 @@
   {
     "property": "type",
     "type": "string",
-    "example": "\"Creature — Angel\"",
-    "description": "Type of the card. Includes any supertypes and subtypes."
+    "example": "\"Legendary Creature — Angel\"",
+    "description": "Type of the card. Includes any supertypes and subtypes. (\"Creature — Angel\")"
   },
   {
     "property": "types",
@@ -273,18 +273,18 @@
     "property": "uuidV421",
     "type": "string",
     "example": "\"c095a153-6bbf-5e93-8a68-578d17461170\"",
-    "description": ""
+    "description": "Compatibility uuid for v4.3.0, but will support v4.2.1 to help people transition until v4.4.0."
   },
   {
     "property": "variations",
     "type": "array(string)",
     "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
-    "description": "uuid field of cards with alternate printings with the same set code (excluding Un-sets)."
+    "description": "List of uuid id's of this card with alternate printings in the same set. Excludes Un-sets."
   },
   {
     "property": "watermark",
     "type": "string",
     "example": "\"wotc\"",
-    "description": "Name of the watermark on the card. Can be one of many different values, including a guild name, clan name, or wotc for the shooting star. (If there isn’t one, it can be an empty string, but it is usually omitted.)"
+    "description": "Name of the watermark on the card. If there isn’t one, it can be an empty string, but it is usually omitted."
   }
 ]

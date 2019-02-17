@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Set Types"
+  "title": "type (Set Types)"
 }
 ---
 
@@ -8,8 +8,9 @@
 
 Set types can describe some play formats, versions of card groupings, general rulings, legalities and their nature in the Magic: The Gathering universe.
 
-> Property `set`  
-> Type `string`
+> Parent structure: [set](../set)  
+> Parent property: `type`  
+> Parent property type: `string`
 
 The current possible set types as of `2019-02-12` are:
 
