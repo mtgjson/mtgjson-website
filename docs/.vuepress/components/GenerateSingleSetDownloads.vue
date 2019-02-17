@@ -16,7 +16,8 @@
       .download-item
         .download-wrap
           .img-wrap
-            div(:class="`ss ss-${set.code.toLowerCase()}`")
+            div(v-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
+            div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
             p {{ set.name }}
             small Set Code: 

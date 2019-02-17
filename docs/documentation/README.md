@@ -21,6 +21,6 @@
 
 ## F.A.Q.
 
-- Why can't I find some properties on certain cards or sets?
+- Why can't I find certain properties on cards or sets?
   - When using `AllCards` any properties with values that may be different from set to set are removed.
   - Certain properties with "falsey" values will be omitted from certain structures. We recommend checking for a property before looking for its value.

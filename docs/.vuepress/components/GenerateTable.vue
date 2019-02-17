@@ -19,7 +19,8 @@
             span(v-else)
               span.land-cycler {{ value }}
 
-    ol.mobile-doc-table(v-if="showMobileTable" v-for="(value, key) in structure" v:key=key)
+    //- To avoid async/await madness, use the hydrate method on mobile view render
+    ol.mobile-doc-table(v-if="showMobileTable, hydrate" v-for="(value, key) in structure" v:key=key)
       li(v-for="(value, key) in value" v:key=key)
         span(v-if="key === 'property'")
           div
@@ -57,19 +58,20 @@ export default {
       this.$page.frontmatter.schema
     }.schema.json`);
   },
-  beforeMount() {
-    window.addEventListener('resize', this.checkIfMobile);
-  },
   mounted() {
-      this.checkIfMobile();
-      const land = this.$page.path.split('/')[1];
-      const hand = Array.from(this.$el.querySelectorAll('.land-cycler'));
-      new Landcycle(hand, land);
+    window.addEventListener('resize', this.checkIfMobile);
+    this.hydrate();
+    this.checkIfMobile();
   },
   methods: {
     checkIfMobile() {
       this.isMobile = Math.max(window.innerWidth || 0) < this.isMobileSize;
     },
+    hydrate() {
+      const land = this.$page.path.split('/')[1];
+      const hand = Array.from(this.$el.querySelectorAll('.land-cycler'));
+      new Landcycle(hand, land);
+    }
   },
   computed: {
     structure() {
