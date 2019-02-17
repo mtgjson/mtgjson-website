@@ -27,8 +27,6 @@ module.exports = {
     serviceWorker: {
       updatePopup: true
     },
-    repo: 'staghouse/mtgjson-website',
-    editLinks: true,
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },

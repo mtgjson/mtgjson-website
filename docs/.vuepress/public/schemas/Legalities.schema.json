@@ -2,55 +2,55 @@
   {
     "property": "1v1",
     "type": "string",
-    "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "example": "Banned",
+    "description": "Legality for the play format."
   },
   {
     "property": "brawl",
     "type": "string",
-    "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "example": "Restricted",
+    "description": "Legality for the play format."
   },
   {
     "property": "commander",
     "type": "string",
     "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "description": "Legality for the play format."
   },
   {
     "property": "duel",
     "type": "string",
     "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "description": "Legality for the play format."
   },
   {
     "property": "frontier",
     "type": "string",
-    "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "example": "Restricted",
+    "description": "Legality for the play format."
   },
   {
     "property": "legacy",
     "type": "string",
     "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "description": "Legality for the play format."
   },
   {
     "property": "modern",
     "type": "string",
     "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "description": "Legality for the play format."
   },
   {
     "property": "standard",
     "type": "string",
-    "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "example": "Restricted",
+    "description": "Legality for the play format."
   },
   {
     "property": "vintage",
     "type": "string",
     "example": "Legal",
-    "description": "Returns a string value if legal otherwise entire property is omitted."
+    "description": "Legality for the play format."
   }
 ]

@@ -6,7 +6,7 @@
     "description": "Every set and all cards in that set."
   },
   "AllSetFiles": {
-    "description": "Every individual set in the ZIP format."
+    "description": "Each individual set file in a directory, compressed."
   },
   "CompiledList": {
     "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllSets, Modern, SetList, etc."
@@ -15,16 +15,16 @@
     "description": "List of all keywords used on Magic cards. See the {{keywords}} structure."
   },
   "Modern": {
-    "description": "All sets legal in Modern."
+    "description": "All sets, restricted to sets legal in Modern."
   },
   "SetList": {
     "description": "List of codes, names and release dates of all sets. See the {{set-list}} structure."
   },
   "Standard": {
-    "description": "All sets legal in Standard."
+    "description": "All sets, restricted to sets legal in Standard."
   },
   "Vintage": {
-    "description": "All sets legal in Vintage."
+    "description": "All sets, restricted to sets legal in Vintage."
   },
   "version": {
     "description": "Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release."

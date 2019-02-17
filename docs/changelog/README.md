@@ -12,7 +12,7 @@
 - Ravnica Guild Kit (`GK2`)
 
 #### Changed
-- 2018 Gift PAck set code changed from `PGP18` or `PGP1` to `G18`
+- 2018 Gift Pack set code changed from `PGP18` or `PGP1` to `G18`
 - 2017 Gift Pack set code changed from `PGP17` to `G17`
 
 ### Individual Cards

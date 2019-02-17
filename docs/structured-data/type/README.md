@@ -1,12 +1,12 @@
 ---
 {
-  "title": "type (Set Types)"
+  "title": "type"
 }
 ---
 
-# Set Types
+# Type (Set Types)
 
-Set types can describe some play formats, versions of card groupings, general rulings, legalities and their nature in the Magic: The Gathering universe.
+`type`, for a [set](../set), can describe some play formats, versions of card groupings, general rulings, legalities and their nature in the Magic: The Gathering universe.
 
 > Parent structure: [set](../set)  
 > Parent property: `type`  
