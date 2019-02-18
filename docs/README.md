@@ -36,7 +36,7 @@ Martin is an avid strategy gamer and Magic player since late 1994. When he’s n
 
 ::: tip Eric - Documentation Developer
 ![avatar](/images/avatar-eric.gif "Eric")
-Eric is a conceptualizer that loves Open Source Software and Cerivdae. When he's not delving into any code he can find, he enjoys watching 'B'-rated horror movies, camping, and hiking.
+Eric is a conceptualizer that loves Open Source Software and Cervidae. When he's not delving into any code he can find, he enjoys watching 'B'-rated horror movies, camping, and hiking.
 :::
 
 ## Contributing

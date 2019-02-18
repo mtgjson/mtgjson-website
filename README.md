@@ -2,6 +2,10 @@
 
 Built using [VuePress](https://vuepress.vuejs.org/) with Vue, JS/TS and Markdown on Node
 
+## Dependencies
+- Node
+- Yarn
+
 ## Installation
 
 Install project dependencies. You'll notice all of them are non-dev, this is because on Heroku you can run in to errors. Heroku prunes what is needed on its own.
