@@ -1,7 +1,17 @@
 ---
 {
   "title": "foreignData",
-  "schema": "ForeignData"
+  "schema": "ForeignData",
+  "meta": [
+    {
+      "name": "description",
+      "content": "foreignData data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, foreigndata, foreign data",
+    }
+  ]
 }
 ---
 

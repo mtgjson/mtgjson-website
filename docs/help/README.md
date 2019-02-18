@@ -1,12 +1,22 @@
 ---
 {
-  "title": "Documentation"
+  "title": "Help",
+  "meta": [
+    {
+      "name": "description",
+      "content": "Help understanding MTGJSON documentation.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, help, documentation",
+    }
+  ]
 }
 ---
 
-# Documentation
+# Help
 
-## Preamble
+## Format
 
 **The format of this documentation for MTGJSON is based on 3 notions:**
 

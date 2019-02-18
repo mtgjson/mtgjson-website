@@ -2,6 +2,16 @@
 {
   "title": "token",
   "schema": "Token",
+  "meta": [
+    {
+      "name": "description",
+      "content": "token data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, tokens, token",
+    }
+  ]
 }
 ---
 

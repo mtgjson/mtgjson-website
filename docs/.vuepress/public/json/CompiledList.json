@@ -1,12 +1,18 @@
-[
-  "AllCards",
-  "AllSets",
-  "AllSetFiles",
-  "CompiledList",
-  "Keywords",
-  "Modern",
-  "SetList",
-  "Standard",
-  "Vintage",
-  "version"
-]
+{
+  "files": [
+    "AllCards",
+    "AllSetFiles",
+    "AllSets",
+    "CompiledList",
+    "Keywords",
+    "Modern",
+    "SetList",
+    "Standard",
+    "Vintage",
+    "version"
+  ],
+  "meta": {
+    "date": "2019-01-30",
+    "version": "4.2.2"
+  }
+}

@@ -1,6 +1,16 @@
 ---
 {
-  "title": "type"
+  "title": "type",
+  "meta": [
+    {
+      "name": "description",
+      "content": "type data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, type, set type, set types",
+    }
+  ]
 }
 ---
 

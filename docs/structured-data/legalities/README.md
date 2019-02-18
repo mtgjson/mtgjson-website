@@ -1,7 +1,17 @@
 ---
 {
   "title": "legalities",
-  "schema": "Legalities"
+  "schema": "Legalities",
+  "meta": [
+    {
+      "name": "description",
+      "content": "legalities data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, legal, legalities",
+    }
+  ]
 }
 ---
 

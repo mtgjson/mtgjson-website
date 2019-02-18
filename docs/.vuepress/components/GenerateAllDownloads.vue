@@ -1,6 +1,6 @@
 <template lang="pug">
   .download-tables
-    GenerateSingleDownload(v-for="(download, index) in downloads" :download="download" :descriptions="descriptions")
+    GenerateSingleDownload(v-for="(download, index) in allFiles" :download="download" :descriptions="descriptions")
 </template>
 
 <script>
@@ -14,8 +14,15 @@ export default {
     }
   },
   computed: {
-    downloads(){
-      return require(`../public/${this.downloadDirectory}/CompiledList.json`);
+    allFiles(){
+      const src = require(`../public/${this.downloadDirectory}/CompiledList.json`);
+
+      // compat for new structure
+      if(src.files){
+        return src.files
+      } else {
+        return src
+      }
     },
     descriptions(){
       return require(`../public/schemas/CompiledList.schema.json`);

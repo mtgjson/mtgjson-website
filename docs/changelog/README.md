@@ -1,6 +1,16 @@
 ---
 {
-  "schema": "Changelog"
+  "schema": "Changelog",
+  "meta": [
+    {
+      "name": "description",
+      "content": "MTGJSON Changelog.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, changelog",
+    }
+  ]
 }
 ---
 

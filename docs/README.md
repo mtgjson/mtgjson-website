@@ -1,6 +1,16 @@
 ---
 {
-  # "home": "true" # Even false value returns true?
+  "title": "About MTGJSON",
+  "meta": [
+    {
+      "name": "description",
+      "content": "Magic: The Gathering card data in JSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json",
+    }
+  ]
 }
 ---
 

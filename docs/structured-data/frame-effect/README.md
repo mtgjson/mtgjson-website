@@ -1,6 +1,16 @@
 ---
 {
-  "title": "frameEffect"
+  "title": "frameEffect",
+  "meta": [
+    {
+      "name": "description",
+      "content": "foreignEffect data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, frameeffect, frame effect",
+    }
+  ]
 }
 ---
 

@@ -1,7 +1,17 @@
 ---
 {
   "title": "card",
-  "schema": "Card"
+  "schema": "Card",
+  "meta": [
+    {
+      "name": "description",
+      "content": "Card data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, card, cards",
+    }
+  ]
 }
 ---
 

@@ -10,9 +10,9 @@
   },
   "scripts": {
     "compile-ts": "tsc",
-    "docs:dev": "vuepress dev docs",
-    "docs:build": "vuepress build docs",
-    "heroku-postbuild": "vuepress build docs"
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "heroku-postbuild": "yarn build"
   },
   "dependencies": {
     "@types/node": "^11.9.0",

@@ -1,7 +1,17 @@
 ---
 {
   "title": "set",
-  "schema": "Set"
+  "schema": "Set",
+  "meta": [
+    {
+      "name": "description",
+      "content": "set data structure for MTGJSON.",
+    },
+    {
+      "name": "keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, set, sets",
+    }
+  ]
 }
 ---
 

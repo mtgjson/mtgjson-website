@@ -24,9 +24,6 @@ module.exports = {
   themeConfig: {
     searchMaxSuggestions: 20,
     displayAllHeaders: true,
-    serviceWorker: {
-      updatePopup: true
-    },
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
@@ -35,7 +32,6 @@ module.exports = {
     ],
     sidebar: [
       '/',
-      '/documentation/',
       {
         title: 'Downloads',
         path: '/downloads/compiled',
@@ -54,6 +50,7 @@ module.exports = {
         collapsable: false,
         children: generateSidebarRoutes('/output-data/'),
       },
+      '/help/',
       '/changelog/'
     ],
   }
