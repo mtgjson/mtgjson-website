@@ -3,7 +3,7 @@
     "property": "AbilityWords",
     "type": "array(string)",
     "example": "[\"undergrowth\"]",
-    "description": "List of ability words found in rules text on cards."
+    "description": "List of ability words found in rules text on cards. Will be deprecated."
   },
   {
     "property": "abilityWords",
@@ -15,7 +15,7 @@
     "property": "KeywordAbilities",
     "type": "array(string)",
     "example": "[\"convoke\"]",
-    "description": "List of keyword abilities found in rules text on cards."
+    "description": "List of keyword abilities found in rules text on cards. Will be deprecated."
   },
   {
     "property": "keywordAbilities",
@@ -27,7 +27,7 @@
     "property": "KeywordActions",
     "type": "array(string)",
     "example": "[\"surveil\"]",
-    "description": "List of keyword actions found in rules text on cards."
+    "description": "List of keyword actions found in rules text on cards. Will be deprecated."
   },
   {
     "property": "keywordActions",

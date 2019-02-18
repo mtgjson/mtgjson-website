@@ -44,9 +44,17 @@ export default class {
         return __awaiter(this, void 0, void 0, function* () {
             logger(`discarding ${card}...`);
             let cardName = this.reveal(card) || card;
+            let land = this.land;
             let newLand = "";
             if (this.lands.indexOf(card) > -1) {
-                newLand = `<a class="code-link" href=/${this.land}/${cardName}>${this.faceUp(cardName)}</a>`;
+                switch (cardName) {
+                    case 'version':
+                        land = 'structured-data';
+                        break;
+                    default:
+                        break;
+                }
+                newLand = `<a class="code-link" href=/${land}/${cardName}>${this.faceUp(cardName)}</a>`;
             }
             logger(`land acquired: ${JSON.stringify(newLand)}`, true);
             return yield newLand;

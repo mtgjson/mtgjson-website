@@ -21,7 +21,8 @@
 Key names will change from PascalCase, example: `AbilityWords`, to camelCase, example: `abilityWords`. **Version 4.4** will remove PascalCase permanently.
 :::
 
-> Data type: `object`
+> Data type: `array(object)`  
+> Property type: `object`  
 
 ### Structure
 

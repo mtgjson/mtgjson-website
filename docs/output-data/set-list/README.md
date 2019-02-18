@@ -18,7 +18,7 @@
 # SetList
 
 > Data type: `array(object)`  
-> Property type: `object`
+> Property type: `object`  
 
 ### Structure
 
