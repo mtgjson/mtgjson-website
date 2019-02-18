@@ -8,7 +8,7 @@
   {
     "property": "colorIndicator",
     "type": "array(string)",
-    "example": "[]",
+    "example": "[\"B\",\"R\"]",
     "description": "List of all colors in card’s color indicator (a symbol showing the colors of the card). Usually found only on cards without mana costs and other special cards."
   },
   {
@@ -44,8 +44,8 @@
   {
     "property": "frameEffect",
     "type": "string",
-    "example": "\"originpwdfc\"",
-    "description": "Effect found on the card frame style. Can be legendary, miracle, nyxtouched, draft, devoid, tombstone, colorshifted, sunmoondfc, compasslanddfc, originpwdfc, or mooneldrazidfc. (If none, it is usually omitted.)"
+    "example": "\"legendary\"",
+    "description": "See the {{frame-effect}} structure."
   },
   {
     "property": "hand",
@@ -62,8 +62,8 @@
   {
     "property": "legalities",
     "type": "object",
-    "example": "{\"1v1\": \"Legal\",\"brawl\": \"Legal\", \"commander\": \"Legal\", \"duel\": \"Legal\", \"frontier\": \"Legal\", \"legacy\": \"Legal\", \"modern\": \"Legal\", \"standard\": \"Legal\", \"vintage\": \"Legal\"}",
-    "description": "Keys are Magic play formats. Can be 1v1, brawl, commander, duel, frontier, future, legacy, modern, oldschool, pauper, penny, standard, or vintage. Values can be Legal, Restricted, Banned, or Future. (“Future” is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)"
+    "example": "{{legalities}}",
+    "description": "See the {{legalities}} structure."
   },
   {
     "property": "life",
@@ -129,7 +129,7 @@
     "property": "isStarter",
     "type": "boolean",
     "example": "false",
-    "description": "Is the card only not found in a booster pack? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Is the card only not found in a booster pack? (If false, it is usually omitted.)"
   },
   {
     "property": "subtypes",
@@ -189,6 +189,6 @@
     "property": "uuidV421",
     "type": "string",
     "example": "b408de19-f203-502d-8325-28304ec21602",
-    "description": ""
+    "description": "Compatibility uuid for v4.3.0, but will support v4.2.1 to help people transition until v4.4.0."
   }
 ]

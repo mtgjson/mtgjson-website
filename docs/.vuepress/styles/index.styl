@@ -1,6 +1,9 @@
 @require './navbar'
 @require './sidebar'
 
+html
+  scroll-behavior: smooth;
+
 h2
   border-width: 0 !important;
 
@@ -49,13 +52,41 @@ a:link
 .navbar
   .nav-links
     .nav-item
-      &:first-of-type // Discord
+      a
+        position: relative;
+        padding-left: 40px !important;
+        
+        &::before
+          content: "";
+          height: 20px;
+          width: 20px;
+          position: absolute;
+          left: 10px;
+          top: 7px;
+          background-size: cover;
+
+        &:hover
+          opacity: 1;
+
+      &:nth-of-type(1) // Discord
         a
           background-color: #7289da !important;
+          
+          &::before
+            background-image: url("/images/discord.svg");
 
-      &:last-of-type // Donate
+      &:nth-of-type(2) // Github
+        a
+          &::before
+            background-image: url("/images/github-nav.svg");
+
+
+      &:nth-of-type(3) // Donate
         a
           background-color: salmon !important;
+          
+          &::before
+            background-image: url("/images/paypal.svg");
 
 img[alt='avatar']
   max-width: 100px !important;

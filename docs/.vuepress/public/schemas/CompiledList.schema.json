@@ -1,32 +1,14 @@
-{
-  "AllCards": {
-    "description": "Every card as a unique \"atomic\" object. May also be outputted as every card in a specific set. Some data properties will be omitted if they have differing values from set to set."
+[
+  {
+    "property": "files",
+    "type": "array(object)",
+    "example": "[{{files}}]",
+    "description": "All possible compiled outputs from MTGJSON. See the {{files}} structure."
   },
-  "AllSets": {
-    "description": "Every set and all cards in that set."
-  },
-  "AllSetFiles": {
-    "description": "Each individual set file in a directory, compressed."
-  },
-  "CompiledList": {
-    "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllSets, Modern, SetList, etc."
-  },
-  "Keywords": {
-    "description": "List of all keywords used on Magic cards. See the {{keywords}} structure."
-  },
-  "Modern": {
-    "description": "All sets, restricted to sets legal in Modern."
-  },
-  "SetList": {
-    "description": "List of codes, names and release dates of all sets. See the {{set-list}} structure."
-  },
-  "Standard": {
-    "description": "All sets, restricted to sets legal in Standard."
-  },
-  "Vintage": {
-    "description": "All sets, restricted to sets legal in Vintage."
-  },
-  "version": {
-    "description": "Metadata object has date (OBDC standard) and version (string) properties of this MTGJSON release."
+  {
+    "property": "meta",
+    "type": "object",
+    "example": "[{{version}}]",
+    "description": "Metadata object has date (OBDC standard) and version properties of this MTGJSON release. See the {{version}} structure."
   }
-}
+]

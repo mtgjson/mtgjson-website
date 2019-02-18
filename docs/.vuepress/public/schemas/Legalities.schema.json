@@ -1,56 +1,56 @@
 [
   {
-    "property": "1v1",
-    "type": "string",
-    "example": "Banned",
-    "description": "Legality for the play format."
-  },
-  {
-    "property": "brawl",
-    "type": "string",
-    "example": "Restricted",
-    "description": "Legality for the play format."
-  },
-  {
     "property": "commander",
     "type": "string",
     "example": "Legal",
-    "description": "Legality for the play format."
+    "description": "Card legality in the Commander play format."
   },
   {
     "property": "duel",
     "type": "string",
-    "example": "Legal",
-    "description": "Legality for the play format."
+    "example": "Banned",
+    "description": "Card legality in the Duel Commander play format."
   },
   {
     "property": "frontier",
     "type": "string",
-    "example": "Restricted",
-    "description": "Legality for the play format."
+    "example": "",
+    "description": "Omitted. Card not legal in the Standard play format."
   },
   {
     "property": "legacy",
     "type": "string",
-    "example": "Legal",
-    "description": "Legality for the play format."
+    "example": "Banned",
+    "description": "Card legality in the Legacy play format."
   },
   {
     "property": "modern",
     "type": "string",
-    "example": "Legal",
-    "description": "Legality for the play format."
+    "example": "",
+    "description": "Omitted. Card not legal in the Standard play format."
+  },
+  {
+    "property": "pauper",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Pauper play format."
+  },
+  {
+    "property": "penny",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Penny play format."
   },
   {
     "property": "standard",
     "type": "string",
-    "example": "Restricted",
-    "description": "Legality for the play format."
+    "example": "",
+    "description": "Omitted. Card not legal in the Standard play format."
   },
   {
     "property": "vintage",
     "type": "string",
-    "example": "Legal",
-    "description": "Legality for the play format."
+    "example": "Restricted",
+    "description": "Card legality in the Vintage play format."
   }
 ]

@@ -19,7 +19,8 @@
 
 > Parent structure: [set](../set)  
 > Parent property: `tokens`  
-> Parent property type: `array(object)`
+> Parent property type: `array(object)`  
+> Property type: `object`  
 
 ### Structure
 

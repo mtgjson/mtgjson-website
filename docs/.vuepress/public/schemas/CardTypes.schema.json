@@ -1,0 +1,14 @@
+[
+  {
+    "property": "meta",
+    "type": "object",
+    "example": "{{version}}",
+    "description": "See the {{version}} structure."
+  },
+  {
+    "property": "types",
+    "type": "array(object)",
+    "example": "{{types}}",
+    "description": "See the {{types}} structure."
+  }
+]

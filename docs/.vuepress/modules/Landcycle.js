@@ -16,8 +16,10 @@ export default class {
         this.shouldNotFertilize = optional || false;
         this.className = 'Landcycle';
         this.lands = [
+            '{{compiled-list}}',
             '{{frame-effect}}',
             '{{foreign-data}}',
+            '{{card-types}}',
             '{{legalities}}',
             '{{all-cards}}',
             '{{all-sets}}',
@@ -26,7 +28,9 @@ export default class {
             '{{version}}',
             '{{rulings}}',
             '{{tokens}}',
+            '{{files}}',
             '{{types}}',
+            '{{type}}',
             '{{card}}',
             '{{set}}',
         ];
@@ -48,13 +52,17 @@ export default class {
             let newLand = "";
             if (this.lands.indexOf(card) > -1) {
                 switch (cardName) {
-                    case 'version':
+                    case 'files':
+                    case 'types':
+                    case 'card-types':
                         land = 'structured-data';
                         break;
+                    case 'version':
+                        land = 'compiled-data';
                     default:
                         break;
                 }
-                newLand = `<a class="code-link" href=/${land}/${cardName}>${this.faceUp(cardName)}</a>`;
+                newLand = `<a class="code-link" href=/${land}/${cardName}/>${this.faceUp(cardName)}</a>`;
             }
             logger(`land acquired: ${JSON.stringify(newLand)}`, true);
             return yield newLand;

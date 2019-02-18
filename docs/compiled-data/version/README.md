@@ -17,6 +17,8 @@
 
 # Version
 
+Metadata object has date (OBDC standard) and version properties of this MTGJSON release.
+
 ### Structure
 
 <GenerateTable/>

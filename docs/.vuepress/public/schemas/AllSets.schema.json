@@ -1,1 +1,8 @@
-[]
+[
+  {
+    "property": "",
+    "type": "object",
+    "example": "{{set}}",
+    "description": "Every set and all cards in that set. See the {{set}} structure."
+  }
+]

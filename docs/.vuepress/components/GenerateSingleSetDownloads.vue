@@ -19,7 +19,8 @@
             div(v-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
-            p {{ set.name }}
+            h3(:id="set.code") {{ set.name }}
+              //- a(:href="'#' + set.code" aria-hidden="true" class="header-anchor") #
             small Set Code: 
               span {{ set.code }}
             small Release Date: 

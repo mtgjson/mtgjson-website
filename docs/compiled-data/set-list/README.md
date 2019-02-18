@@ -17,6 +17,8 @@
 
 # SetList
 
+List of codes, names and release dates of all sets.
+
 > Data type: `array(object)`  
 > Property type: `object`  
 

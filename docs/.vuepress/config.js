@@ -3,11 +3,11 @@ const generateSidebarRoutes = require('./config.sidebar');
 module.exports = {
   host: '0.0.0.0',
   port: '8080',
-  // Google Analytics
-  ga: 'UA-131358443-1',
   // SEO
   title: 'MTGJSON',
   description: 'Magic: The Gathering card data in JSON.',
+  // Google Analytics
+  ga: 'UA-131358443-1',
   // Support Links
   head: [
     [
@@ -20,7 +20,6 @@ module.exports = {
     ]
   ],
   // Vuepress Themeing
-  // 
   themeConfig: {
     searchMaxSuggestions: 20,
     displayAllHeaders: true,
@@ -39,18 +38,17 @@ module.exports = {
         children: generateSidebarRoutes('/downloads/'),
       },
       {
+        title: 'Compiled Data',
+        path: '/compiled-data/all-cards',
+        collapsable: false,
+        children: generateSidebarRoutes('/compiled-data/'),
+      },
+      {
         title: 'Structured Data',
         path: '/structured-data/card',
         collapsable: false,
         children: generateSidebarRoutes('/structured-data/'),
       },
-      {
-        title: 'Output Data',
-        path: '/output-data/keywords',
-        collapsable: false,
-        children: generateSidebarRoutes('/output-data/'),
-      },
-      '/help/',
       '/changelog/'
     ],
   }
