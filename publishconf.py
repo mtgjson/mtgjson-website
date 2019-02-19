@@ -7,18 +7,19 @@ from __future__ import unicode_literals
 
 import os
 import sys
+
 sys.path.append(os.curdir)
 from pelicanconf import *
 
-SITEURL = 'https://mtgjson.com'
+SITEURL = "https://mtgjson.com"
 RELATIVE_URLS = False
 
-FEED_ALL_ATOM = 'atom.xml'
+FEED_ALL_ATOM = "atom.xml"
 # CATEGORY_FEED_ATOM = 'feeds/{slug}.atom.xml'
 
 DELETE_OUTPUT_DIRECTORY = True
 
 # Following items are often useful when publishing
 
-#DISQUS_SITENAME = ""
+# DISQUS_SITENAME = ""
 GOOGLE_ANALYTICS = "UA-131358443-1"

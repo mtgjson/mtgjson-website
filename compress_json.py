@@ -11,10 +11,38 @@ import shutil
 import sys
 import zipfile
 
+ALL_SETS_OUTPUT: str = "AllSets.json"
+ALL_CARDS_OUTPUT: str = "AllCards.json"
+SET_LIST_OUTPUT: str = "SetList.json"
+COMPILED_LIST_OUTPUT: str = "CompiledList.json"
+KEY_WORDS_OUTPUT: str = "Keywords.json"
+VERSION_OUTPUT: str = "version.json"
+STANDARD_OUTPUT: str = "Standard.json"
+MODERN_OUTPUT: str = "Modern.json"
+VINTAGE_OUTPUT: str = "Vintage.json"
+REFERRAL_DB_OUTPUT: str = "ReferralMap.json"
+ALL_SETS_DIR_OUTPUT: str = "AllSetFiles.json"
+CARD_TYPES_OUTPUT: str = "CardTypes.json"
+
+files_to_ignore = [
+    ALL_SETS_OUTPUT,
+    ALL_CARDS_OUTPUT,
+    SET_LIST_OUTPUT,
+    COMPILED_LIST_OUTPUT,
+    KEY_WORDS_OUTPUT,
+    VERSION_OUTPUT,
+    STANDARD_OUTPUT,
+    MODERN_OUTPUT,
+    VINTAGE_OUTPUT,
+    REFERRAL_DB_OUTPUT,
+    ALL_SETS_DIR_OUTPUT,
+    CARD_TYPES_OUTPUT,
+]
+
 
 def file_endings(source_dir, ending):
     for f in glob.glob(os.path.join(source_dir, "*")):
-        if f.endswith(ending):
+        if f.endswith(ending) and (os.path.basename(f) not in files_to_ignore):
             yield f
 
 
@@ -51,11 +79,6 @@ def compress_single_sets(source_dir):
         print("Compressed " + os.path.basename(f))
 
 
-def get_all_set_names():
-    data = requests.get("https://api.scryfall.com/sets/").json()["data"]
-    return [x["code"].upper() for x in data]
-
-
 def compress_all_set_files(source_dir):
     all_set_files_name = "AllSetFiles"
 
@@ -63,10 +86,9 @@ def compress_all_set_files(source_dir):
     os.makedirs(all_set_files_name)
 
     # Copy stuff to compress
-    sets = set(get_all_set_names() + ["CON_"])
-    for f in sets:
+    for f in file_endings(source_dir, ".json"):
         try:
-            shutil.copy(os.path.join(source_dir, f + ".json"), all_set_files_name)
+            shutil.copy(os.path.join(source_dir, f), all_set_files_name)
         except FileNotFoundError:
             pass
 
