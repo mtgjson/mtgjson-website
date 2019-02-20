@@ -19,8 +19,8 @@
 
 All possible compiled outputs from MTGJSON.
 
-> Data type: `array(object)`  
-> Property type: `object`  
+> Data type: `object(string: object)`  
+> Property type: `string: object`   
 
 ### Structure
 

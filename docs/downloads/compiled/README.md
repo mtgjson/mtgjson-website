@@ -20,4 +20,4 @@ Downloads outputted by MTGJSON.
 
 ### Downloads
 
-<GenerateAllDownloads/>
+<GenerateCompiledDownloads/>

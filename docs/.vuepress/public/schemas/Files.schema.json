@@ -6,6 +6,11 @@
   },
   {
     "type": "string",
+    "value": "\"AllDeckFiles\"",
+    "description": "Pre-constructed decks, compressed."
+  },
+  {
+    "type": "string",
     "value": "\"AllSets\"",
     "description": "Every set and all cards in that set."
   },
@@ -23,6 +28,11 @@
     "type": "string",
     "value": "\"CompiledList\"",
     "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllSets, Modern, SetList, etc."
+  },
+  {
+    "type": "string",
+    "value": "\"DeckLists\"",
+    "description": "All possible compiled pre-constructed deck outputs from MTGJSON."
   },
   {
     "type": "string",
@@ -46,12 +56,12 @@
   },
   {
     "type": "string",
-    "value": "\"version\"",
-    "description": "Metadata object has date (OBDC standard) and version properties of this MTGJSON release."
+    "value": "\"Vintage\"",
+    "description": "All sets, restricted to sets legal in Vintage."
   },
   {
     "type": "string",
-    "value": "\"Vintage\"",
-    "description": "All sets, restricted to sets legal in Vintage."
+    "value": "\"version\"",
+    "description": "Metadata object has date (OBDC standard) and version properties of this MTGJSON release."
   }
 ]

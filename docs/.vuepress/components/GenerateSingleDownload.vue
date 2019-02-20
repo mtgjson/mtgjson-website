@@ -7,12 +7,22 @@
             //- a(:href="'#' + file" aria-hidden="true" class="header-anchor") #
           small
             span.land-cycler {{ file.description }}
-        .dl-wrap(v-if="file.value !== 'AllSetFiles'")
-          a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.value}.json.${format}`") {{ format }}
-          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.value}.json`") {{ format }}
-        .dl-wrap(v-else)
+        //- All set files download
+        .dl-wrap(v-if="file.value === 'AllSetFiles'")
           a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.value}.tar.${format}`") {{ format }}
           a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.value}.zip`") {{ format }}
+        //- All deck files download
+        .dl-wrap(v-else-if="file.value === 'AllDeckFiles'")
+          a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/decks/${file.value}.tar.${format}`") {{ format }}
+          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/decks/${file.value}.zip`") {{ format }}
+        //- Deck lists
+        .dl-wrap(v-else-if="file.value === 'DeckLists'")
+          a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/decks/${file.value}.json.${format}`") {{ format }}
+          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/decks/${file.value}.json`") {{ format }}
+        //- Everything else
+        .dl-wrap(v-else)
+          a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.value}.json.${format}`") {{ format }}
+          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.value}.json`") {{ format }}
 </template>
 
 <script>

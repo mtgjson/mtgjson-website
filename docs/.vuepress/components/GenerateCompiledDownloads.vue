@@ -14,9 +14,18 @@ export default {
     };
   },
   created() {
-    this.defaultFiles = require(`../public/schemas/Files.schema.json`).map(
+    this.defaultFiles = require(`../public/schemas/Files.schema.json`)
+  },
+  mounted(){
+    this.defaultFiles = this.defaultFiles.map(
       file => {
-        file['value'] = file['value'].split('\"')[1]; // remove quotes
+        const key = 'value';
+        const name = file[key];
+
+        if(name.includes('\"')){
+          file[key] = name.split('\"')[1]; // remove quotes
+        }
+
         return file;
       }
     );
