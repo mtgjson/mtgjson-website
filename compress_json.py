@@ -53,6 +53,8 @@ def compress_single_sets(source_dir):
     for f in file_endings(source_dir, ".json"):
         file_root = os.path.splitext(f)[0]
 
+        print(f)
+
         # .ZIP
         zip_file_name = file_root + ".json.zip"
         zip_out = zipfile.ZipFile(zip_file_name, "w")
@@ -63,20 +65,17 @@ def compress_single_sets(source_dir):
 
         # .GZ
         gz_file_name = file_root + ".json.gz"
-        gz_file_path = os.path.join(source_dir, gz_file_name)
-        with open(f, "rb") as f_in, gzip.open(gz_file_path, "wb") as f_out:
+        with open(f, "rb") as f_in, gzip.open(gz_file_name, "wb") as f_out:
             f_out.writelines(f_in)
 
         # .BZ2
         bz_file_name = file_root + ".json.bz2"
-        bz_file_path = os.path.join(source_dir, bz_file_name)
-        with open(f, "rb") as f_in, open(bz_file_path, "wb") as f_out:
+        with open(f, "rb") as f_in, open(bz_file_name, "wb") as f_out:
             f_out.write(bz2.compress(f_in.read()))
 
         # .XZ
         xz_file_name = file_root + ".json.xz"
-        xz_file_path = os.path.join(source_dir, xz_file_name)
-        with open(f, "rb") as f_in, open(xz_file_path, "wb") as f_out:
+        with open(f, "rb") as f_in, open(xz_file_name, "wb") as f_out:
             f_out.write(xz.compress(f_in.read()))
 
         print("Compressed " + os.path.basename(f))
@@ -115,6 +114,7 @@ def main():
     compress_dir_to_archives(".", "AllSetFiles")
     compress_dir_to_archives("./decks", "AllDeckFiles")
     compress_single_sets(".")
+    compress_single_sets("./decks")
 
 
 if __name__ == "__main__":
