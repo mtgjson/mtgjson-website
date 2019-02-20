@@ -38,7 +38,7 @@
   {
     "property": "duelDeck",
     "type": "string",
-    "example": "a",
+    "example": "\"a\"",
     "description": "If the card is in a duel deck product, can be \"a\"(left) or \"b\"(right). (If not in duel deck product, duelDeck is usually ommitted.)"
   },
   {

@@ -80,8 +80,8 @@
   {
     "property": "tokens",
     "type": "array(object)",
-    "example": "[{{tokens}}]",
-    "description": "See the {{tokens}} structure."
+    "example": "[{{token}}]",
+    "description": "See the {{token}} structure."
   },
   {
     "property": "totalSetSize",

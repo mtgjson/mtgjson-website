@@ -10,7 +10,11 @@ export default {
   components: { GenerateSingleDownload },
   computed: {
     files(){
-      return require(`../public/schemas/Files.schema.json`);
+      const list = require(`../public/schemas/Files.schema.json`).map( file => {
+        file["example"] = file["example"].split('\"')[1]; // remove quotes
+        return file
+      });
+      return list;
     }
   }
 }

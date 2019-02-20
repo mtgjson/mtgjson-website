@@ -19,8 +19,8 @@
 
 Every card type of any type of card.
 
-> Data type: `array(object)`  
-> Property type: `anonymous object`  
+> Data type: `object(string: object)`  
+> Property type: `string: object`  
 
 ### Structure
 

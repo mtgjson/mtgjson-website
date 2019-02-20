@@ -1,8 +1,14 @@
 [
   {
-    "property": "",
+    "property": "PRW2",
     "type": "object",
     "example": "{{set}}",
-    "description": "Every set and all cards in that set. See the {{set}} structure."
+    "description": "This set, set data and all cards in this set. See the {{set}} structure."
+  },
+  {
+    "property": "GK2",
+    "type": "object",
+    "example": "{{set}}",
+    "description": "This set, set data and all cards in that set. See the {{set}} structure."
   }
 ]

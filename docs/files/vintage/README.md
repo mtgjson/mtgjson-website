@@ -1,11 +1,11 @@
 ---
 {
-  "title": "Modern",
+  "title": "Vintage",
   "schema": "AllSets",
   "meta": [
     {
       "name": "description",
-      "content": "Modern compiled output schema for MTGJSON.",
+      "content": "Vintage compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -15,12 +15,12 @@
 }
 ---
 
-# Modern
+# Vintage
 
-All sets, restricted to sets legal in Modern.
+All sets, restricted to sets legal in Vintage.
 
-> Data type: `array(object)`  
-> Property type: `anonymous object`  
+> Data type: `array(string: object)`  
+> Property type: `string: object`  
 
 ### Structure
 

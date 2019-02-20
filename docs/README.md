@@ -26,7 +26,7 @@ MTGJSON is an open‐source project with the goal of cataloging all Magic cards 
 
 ::: tip Zach - Lead Developer
 ![avatar](/images/avatar-zach.jpg "Zach")
-Zach is a 21‐year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open‐source Cockatrice game client.
+Zach is a 22‐year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open‐source Cockatrice game client.
 :::
 
 ::: tip Martin - Web Developer
@@ -41,7 +41,7 @@ Eric is a conceptualizer that loves Open Source Software and Cervidae. When he's
 
 ## Contributing
 
-Other have devoted their time and effort in to this project. If you have suggestions for improvements, if you find bugs, or if you would like to help address existing issues, we are always looking for help. You can contribute to the project through the main MTGJSON [GitHub page](https://github.com/mtgjson/mtgjson) or the MTGJSON website [GitHub page](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern)
+Other have devoted their time and effort in to this project. If you have suggestions for improvements, if you find bugs, or if you would like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern).
 
 ## Who We Serve
 

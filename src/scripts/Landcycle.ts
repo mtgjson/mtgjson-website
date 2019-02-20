@@ -29,7 +29,7 @@ export default class {
       '{{keywords}}',
       '{{version}}',
       '{{rulings}}',
-      '{{tokens}}',
+      '{{token}}',
       '{{files}}',
       '{{types}}',
       '{{type}}',
@@ -61,16 +61,11 @@ export default class {
 
     if (this.lands.indexOf(card) > -1) {
       switch(cardName){
-        case 'files':
-        case 'types':
-        case 'card-types':
-          land = 'structured-data';
-          break;
-
         case 'version':
-          land = 'compiled-data';
+          land = 'files';
 
         default:
+          land = 'structures';
           break;
       }
       

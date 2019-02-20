@@ -27,7 +27,7 @@ export default class {
             '{{keywords}}',
             '{{version}}',
             '{{rulings}}',
-            '{{tokens}}',
+            '{{token}}',
             '{{files}}',
             '{{types}}',
             '{{type}}',
@@ -52,14 +52,10 @@ export default class {
             let newLand = "";
             if (this.lands.indexOf(card) > -1) {
                 switch (cardName) {
-                    case 'files':
-                    case 'types':
-                    case 'card-types':
-                        land = 'structured-data';
-                        break;
                     case 'version':
-                        land = 'compiled-data';
+                        land = 'files';
                     default:
+                        land = 'structures';
                         break;
                 }
                 newLand = `<a class="code-link" href=/${land}/${cardName}/>${this.faceUp(cardName)}</a>`;

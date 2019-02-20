@@ -1,11 +1,11 @@
 ---
 {
-  "title": "Standard",
+  "title": "Modern",
   "schema": "AllSets",
   "meta": [
     {
       "name": "description",
-      "content": "Standard compiled output schema for MTGJSON.",
+      "content": "Modern compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -15,12 +15,12 @@
 }
 ---
 
-# Standard
+# Modern
 
-All sets, restricted to sets legal in Standard.
+All sets, restricted to sets legal in Modern.
 
-> Data type: `array(object)`  
-> Property type: `anonymous object`  
+> Data type: `array(string: object)`  
+> Property type: `string: object`  
 
 ### Structure
 

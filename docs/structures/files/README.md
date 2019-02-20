@@ -19,10 +19,10 @@
 
 Files Data is a structure defining all possible compiled outputs from MTGJSON.
 
-> Parent structure: [CompiledList](../../compiled-data/card)  
+> Parent structure: [CompiledList](../../structures/card)  
 > Parent property: `files`  
-> Parent property type: `array(object)`  
-> Property type: `object`  
+> Parent property type: `array(string)`  
+> Property type: `string`  
 
 ### Structure
 

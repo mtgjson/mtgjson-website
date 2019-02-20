@@ -47,5 +47,6 @@ Landcycle is a Typescript/JS class that allows JSON to take mustache variables s
 
 # Todo
 
-- Add meta data to every page.
 - Add keyword highlighting to schema `description`.
+- Nest files and structures in to documentation route
+- Resolve routing for card-types and set-types

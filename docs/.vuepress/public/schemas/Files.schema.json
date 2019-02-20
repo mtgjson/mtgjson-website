@@ -1,68 +1,68 @@
 [
   {
-    "property": "AllCards",
+    "property": "",
     "type": "string",
-    "example": "AllCards",
+    "example": "\"AllCards\"",
     "description": "Every card as a unique \"atomic\" object. May also be outputted as every card in a specific set. Some data properties will be omitted if they have differing values from set to set."
   },
   {
-    "property": "AllSets",
+    "property": "",
     "type": "string",
-    "example": "AllSets",
+    "example": "\"AllSets\"",
     "description": "Every set and all cards in that set."
   },
   {
-    "property": "AllSetFiles",
-    "type": "compressed",
-    "example": "AllSetFiles.zip",
+    "property": "",
+    "type": "string",
+    "example": "\"AllSetFiles\"",
     "description": "Each individual set file in a directory, compressed."
   },
   {
-    "property": "CardTypes",
+    "property": "",
     "type": "string",
-    "example": "CardTypes",
+    "example": "\"CardTypes\"",
     "description": "Every card type of any type of card."
   },
   {
-    "property": "CompiledList",
+    "property": "",
     "type": "string",
-    "example": "CompiledList",
+    "example": "\"CompiledList\"",
     "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllSets, Modern, SetList, etc."
   },
   {
-    "property": "Keywords",
+    "property": "",
     "type": "string",
-    "example": "Keywords",
+    "example": "\"Keywords\"",
     "description": "List of all keywords used on Magic cards."
   },
   {
-    "property": "Modern",
+    "property": "",
     "type": "string",
-    "example": "Modern",
+    "example": "\"Modern\"",
     "description": "All sets, restricted to sets legal in Modern."
   },
   {
-    "property": "SetList",
+    "property": "",
     "type": "string",
-    "example": "SetList",
+    "example": "\"SetList\"",
     "description": "List of codes, names and release dates of all sets."
   },
   {
-    "property": "Standard",
+    "property": "",
     "type": "string",
-    "example": "Standard",
+    "example": "\"Standard\"",
     "description": "All sets, restricted to sets legal in Standard."
   },
   {
-    "property": "version",
+    "property": "",
     "type": "string",
-    "example": "version",
+    "example": "\"version\"",
     "description": "Metadata object has date (OBDC standard) and version properties of this MTGJSON release."
   },
   {
-    "property": "Vintage",
+    "property": "",
     "type": "string",
-    "example": "Vintage",
+    "example": "\"Vintage\"",
     "description": "All sets, restricted to sets legal in Vintage."
   }
 ]

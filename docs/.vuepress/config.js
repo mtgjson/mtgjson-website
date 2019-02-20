@@ -38,16 +38,23 @@ module.exports = {
         children: generateSidebarRoutes('/downloads/'),
       },
       {
-        title: 'Compiled Data',
-        path: '/compiled-data/all-cards',
+        title: 'Documentation',
+        path: '/files/all-cards',
         collapsable: false,
-        children: generateSidebarRoutes('/compiled-data/'),
-      },
-      {
-        title: 'Structured Data',
-        path: '/structured-data/card',
-        collapsable: false,
-        children: generateSidebarRoutes('/structured-data/'),
+        children: [
+          {
+            title: 'Files',
+            path: '/files/all-cards',
+            collapsable: false,
+            children: generateSidebarRoutes('/files/'),
+          },
+          {
+            title: 'Structures',
+            path: '/structures/card',
+            collapsable: false,
+            children: generateSidebarRoutes('/structures/'),
+          }
+        ]
       },
       '/changelog/'
     ],

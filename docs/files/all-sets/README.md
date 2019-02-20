@@ -19,9 +19,11 @@
 
 Every set and all cards in that set.
 
-> Data type: `array(object)`  
-> Property type: `anonymous object`  
+> Data type: `array(string: object)`  
+> Property type: `string: object`  
 
 ### Structure
+
+(This page shows only 2 sets of all possible.)
 
 <GenerateTable/>
