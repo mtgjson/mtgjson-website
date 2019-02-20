@@ -22,11 +22,12 @@ node_modules/
 dist/
 
 # JSON Dumps
-json/
-!json/.gitkeep
-# Keep smaller files for downloads
-!json/CompiledList.json
-!json/SetList.json
+# json/
+# !json/.gitkeep
+# # Keep smaller files for downloads
+# !json/CompiledList.json
+# !json/SetList.json
+# !json/decks/DeckLists.json
 
 # Experimental Schemas
 src/*schema.json
