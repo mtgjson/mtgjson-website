@@ -19,7 +19,7 @@ yarn install
 ## Development Server
 
 ```sh
-yarn docs:dev
+yarn dev
 ```
 
 
@@ -32,7 +32,7 @@ killall node
 ## Building for Distribution
 
 ```sh
-yarn docs:build
+yarn build
 ```
 
 ## Misc

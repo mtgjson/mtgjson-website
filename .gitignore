@@ -16,7 +16,7 @@ yarn-error.log*
 .vscode
 
 # Node modules
-node_modules
+node_modules/
 
 # Build folder
 dist/
