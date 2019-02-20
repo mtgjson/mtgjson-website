@@ -23,6 +23,8 @@ VINTAGE_OUTPUT: str = "Vintage.json"
 REFERRAL_DB_OUTPUT: str = "ReferralMap.json"
 ALL_SETS_DIR_OUTPUT: str = "AllSetFiles.json"
 CARD_TYPES_OUTPUT: str = "CardTypes.json"
+DECK_LISTS_OUTPUT: str = "DeckLists.json"
+
 
 files_to_ignore = [
     ALL_SETS_OUTPUT,
@@ -37,6 +39,7 @@ files_to_ignore = [
     REFERRAL_DB_OUTPUT,
     ALL_SETS_DIR_OUTPUT,
     CARD_TYPES_OUTPUT,
+    DECK_LISTS_OUTPUT,
 ]
 
 
@@ -79,29 +82,28 @@ def compress_single_sets(source_dir):
         print("Compressed " + os.path.basename(f))
 
 
-def compress_all_set_files(source_dir):
-    all_set_files_name = "AllSetFiles"
-
+def compress_dir_to_archives(source_dir, compressed_name):
     # Make directory of stuff to compress
-    os.makedirs(all_set_files_name)
+    os.makedirs(compressed_name, exist_ok=True)
 
     # Copy stuff to compress
     for f in file_endings(source_dir, ".json"):
         try:
-            shutil.copy(os.path.join(source_dir, f), all_set_files_name)
+            shutil.copy(f, compressed_name)
         except FileNotFoundError:
+            print("ERROR with " + f)
             pass
 
     # Compress the archives
-    shutil.make_archive(all_set_files_name, "bztar", all_set_files_name)
-    shutil.make_archive(all_set_files_name, "gztar", all_set_files_name)
-    shutil.make_archive(all_set_files_name, "xztar", all_set_files_name)
-    shutil.make_archive(all_set_files_name, "zip", all_set_files_name)
+    shutil.make_archive(compressed_name, "bztar", compressed_name)
+    shutil.make_archive(compressed_name, "gztar", compressed_name)
+    shutil.make_archive(compressed_name, "xztar", compressed_name)
+    shutil.make_archive(compressed_name, "zip", compressed_name)
 
     # Delete the copied folder
-    shutil.rmtree(all_set_files_name, ignore_errors=True)
+    shutil.rmtree(compressed_name, ignore_errors=True)
 
-    print("Compressed " + all_set_files_name)
+    print("Compressed " + compressed_name)
 
 
 def main():
@@ -110,7 +112,8 @@ def main():
     os.chdir(source_dir)
 
     # Compress the system
-    compress_all_set_files(".")
+    compress_dir_to_archives(".", "AllSetFiles")
+    compress_dir_to_archives("./decks", "AllDeckFiles")
     compress_single_sets(".")
 
 
