@@ -1,7 +1,7 @@
 ---
 {
   "title": "Modern",
-  "schema": "AllSets",
+  "schema": "Modern",
   "meta": [
     {
       "name": "description",

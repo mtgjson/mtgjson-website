@@ -24,6 +24,4 @@ Every set and all cards in that set.
 
 ### Structure
 
-(This page shows only 2 sets of all possible.)
-
 <GenerateTable/>

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Vintage",
-  "schema": "AllSets",
+  "schema": "Vintage",
   "meta": [
     {
       "name": "description",

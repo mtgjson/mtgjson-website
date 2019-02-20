@@ -16,7 +16,7 @@ export default {
   created() {
     this.defaultFiles = require(`../public/schemas/Files.schema.json`).map(
       file => {
-        file['example'] = file['example'].split('\"')[1]; // remove quotes
+        file['value'] = file['value'].split('\"')[1]; // remove quotes
         return file;
       }
     );

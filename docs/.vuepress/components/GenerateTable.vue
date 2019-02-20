@@ -14,7 +14,7 @@
                 a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
             span(v-else-if="key === 'type'")
               em {{ value }}
-            span(v-else-if="key === 'example'")
+            span(v-else-if="key === 'example' || key === 'value'")
               code.land-cycler {{ value }}
             span(v-else)
               span.land-cycler {{ value }}
@@ -31,7 +31,7 @@
             div {{ key }}
             div
               em {{ value }}
-          span(v-else-if="key === 'example'")
+          span(v-else-if="key === 'example' || key === 'value'")
             div {{ key }}
             div
               code.land-cycler {{ value }}
@@ -191,14 +191,16 @@ table {
   }
 }
 
-code {
+code,
+pre {
   &:empty {
     display: none;
   }
 }
 
 *[data-break='true'] ~ * {
-  code {
+  code,
+  pre {
     word-wrap: anywhere;
   }
 }

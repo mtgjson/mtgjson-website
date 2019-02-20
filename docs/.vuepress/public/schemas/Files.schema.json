@@ -1,68 +1,57 @@
 [
   {
-    "property": "",
     "type": "string",
-    "example": "\"AllCards\"",
+    "value": "\"AllCards\"",
     "description": "Every card as a unique \"atomic\" object. May also be outputted as every card in a specific set. Some data properties will be omitted if they have differing values from set to set."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"AllSets\"",
+    "value": "\"AllSets\"",
     "description": "Every set and all cards in that set."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"AllSetFiles\"",
+    "value": "\"AllSetFiles\"",
     "description": "Each individual set file in a directory, compressed."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"CardTypes\"",
+    "value": "\"CardTypes\"",
     "description": "Every card type of any type of card."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"CompiledList\"",
+    "value": "\"CompiledList\"",
     "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllSets, Modern, SetList, etc."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"Keywords\"",
+    "value": "\"Keywords\"",
     "description": "List of all keywords used on Magic cards."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"Modern\"",
+    "value": "\"Modern\"",
     "description": "All sets, restricted to sets legal in Modern."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"SetList\"",
+    "value": "\"SetList\"",
     "description": "List of codes, names and release dates of all sets."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"Standard\"",
+    "value": "\"Standard\"",
     "description": "All sets, restricted to sets legal in Standard."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"version\"",
+    "value": "\"version\"",
     "description": "Metadata object has date (OBDC standard) and version properties of this MTGJSON release."
   },
   {
-    "property": "",
     "type": "string",
-    "example": "\"Vintage\"",
+    "value": "\"Vintage\"",
     "description": "All sets, restricted to sets legal in Vintage."
   }
 ]

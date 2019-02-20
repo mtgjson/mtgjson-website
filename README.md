@@ -44,9 +44,3 @@ We use the `.schema` format for docuemntation on structures. In some IDE's this 
 # Landcycle
 
 Landcycle is a Typescript/JS class that allows JSON to take mustache variables such as `{{example-variable}}` and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.
-
-# Todo
-
-- Add keyword highlighting to schema `description`.
-- Nest files and structures in to documentation route
-- Resolve routing for card-types and set-types

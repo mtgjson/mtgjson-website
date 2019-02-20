@@ -3,16 +3,16 @@
     .download-item(v-if="file")
       .download-wrap
         .txt-wrap
-          h3(:id="file.example") {{ file.example }}
+          h3(:id="file.value") {{ file.value }}
             //- a(:href="'#' + file" aria-hidden="true" class="header-anchor") #
           small
             span.land-cycler {{ file.description }}
-        .dl-wrap(v-if="file.example !== 'AllSetFiles'")
-          a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+        .dl-wrap(v-if="file.value !== 'AllSetFiles'")
+          a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.value}.json.${format}`") {{ format }}
+          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.value}.json`") {{ format }}
         .dl-wrap(v-else)
-          a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
-          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
+          a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.value}.tar.${format}`") {{ format }}
+          a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.value}.zip`") {{ format }}
 </template>
 
 <script>

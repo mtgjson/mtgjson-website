@@ -1,6 +1,6 @@
 [
   {
-    "property": "10E",
+    "property": "DOM",
     "type": "object",
     "example": "{{set}}",
     "description": "This set, set data and all cards in this set. See the {{set}} structure."
@@ -8,11 +8,11 @@
   {
     "property": "...",
     "type": "...",
-    "example": "{{set}}",
+    "example": "...",
     "description": "..."
   },
   {
-    "property": "ZEN",
+    "property": "XLN",
     "type": "object",
     "example": "{{set}}",
     "description": "This set, set data and all cards in that set. See the {{set}} structure."

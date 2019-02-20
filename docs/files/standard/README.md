@@ -1,7 +1,7 @@
 ---
 {
   "title": "Standard",
-  "schema": "AllSets",
+  "schema": "Standard",
   "meta": [
     {
       "name": "description",
