@@ -49,7 +49,7 @@
   },
   {
     "property": "meta",
-    "type": "object",
+    "type": "object(string: string)",
     "example": "{{version}}",
     "description": "See the {{version}} structure."
   },

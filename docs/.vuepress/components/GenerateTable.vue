@@ -4,10 +4,10 @@
     table(v-bind:class="{hidden: showMobileTable}")
       thead
         tr
-          th(v-for="(value, key) in structure[0]" v:key=key)
+          th(v-for="(value, key) in schema[0]" v:key=key)
             span {{ key }}
       tbody
-        tr(v-for="(value, key) in structure" v:key=key)
+        tr(v-for="(value, key) in schema" v:key=key)
           td(v-for="(value, key) in value" v:key=key v-bind:data-break="value.toLowerCase().indexOf('id') > 0")
             span(v-if="key === 'property'")
               h3(:id="value") {{ value }}
@@ -20,7 +20,7 @@
               span.land-cycler {{ value }}
 
     div(v-bind:class="{hidden: !showMobileTable}")
-      ol.mobile-doc-table(v-for="(value, key) in structure" v:key=key)
+      ol.mobile-doc-table(v-for="(value, key) in schema" v:key=key)
         li(v-for="(value, key) in value" v:key=key)
           span(v-if="key === 'property'")
             div
@@ -68,15 +68,11 @@ export default {
       this.hydrate();
     },
     hydrate() {
-      const land = this.$page.path.split('/')[1];
       const hand = Array.from(this.$el.querySelectorAll('.land-cycler'));
-      new Landcycle(hand, land);
+      new Landcycle(hand);
     }
   },
   computed: {
-    structure() {
-      return this.schema;
-    },
     showMobileTable() {
       return this.isMobile;
     },

@@ -20,7 +20,8 @@ Frame Effect describes the possible visual identity of the frame around the artw
 
 > Parent structure: [card](../card)  
 > Parent property: `frameEffect`  
-> Parent property type: `string`
+> Parent property type: `string: string`  
+> Property type: `string`  
 
 The current possible set types as of `2019-02-16` are:
 

@@ -19,8 +19,8 @@
 
 Every card as a unique "atomic" object. May also be outputted as every card in a specific set.
 
-> Data type: `array(object)`  
-> Property type: `anonymous object`  
+> Data type: `array(anonymous object)`  
+> Property type: `string`      
 
 ### Structure
 

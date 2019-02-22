@@ -12,7 +12,7 @@ var __awaiter = (this && this.__awaiter) || function (thisArg, _arguments, P, ge
 };
 let logger = null;
 export default class {
-    constructor(hand = [], land = 'devoid', optional) {
+    constructor(hand = [], optional) {
         this.shouldNotFertilize = optional || false;
         this.className = 'Landcycle';
         this.lands = [
@@ -35,7 +35,6 @@ export default class {
             '{{card}}',
             '{{set}}',
         ];
-        this.land = land;
         this.hand = hand;
         this.debug = false;
         logger = this.logger.bind(this); // Short logger alias
@@ -48,21 +47,21 @@ export default class {
     discard(card) {
         return __awaiter(this, void 0, void 0, function* () {
             logger(`discarding ${card}...`);
-            let cardName = this.reveal(card) || card;
-            let land = this.land;
-            let newLand = "";
-            if (this.lands.indexOf(card) > -1) {
-                switch (cardName) {
-                    case 'version':
-                        land = 'files';
-                    default:
-                        land = 'structures';
-                        break;
-                }
-                newLand = `<a class="code-link" href=/${land}/${cardName}/>${this.faceUp(cardName)}</a>`;
+            let cardName = (yield this.reveal(card)) || card;
+            let plane = '';
+            let land = '';
+            switch (cardName) {
+                case 'version':
+                case 'deck':
+                    plane = 'files';
+                    break;
+                default:
+                    plane = 'structures';
+                    break;
             }
-            logger(`land acquired: ${JSON.stringify(newLand)}`, true);
-            return yield newLand;
+            land = `<a class="code-link" href=/${plane}/${cardName}/>${this.faceUp(cardName)}</a>`;
+            logger(`land acquired: ${JSON.stringify(land)}`, true);
+            return yield land;
         });
     }
     /**

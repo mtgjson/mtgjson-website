@@ -18,6 +18,9 @@
 # Set
 
 The set structure describes the properties and values of a single set.
+ 
+> Potential Parent property type: `object(string: any)`  
+> Property type: `string`  
 
 ### Structure
 

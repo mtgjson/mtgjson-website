@@ -19,10 +19,10 @@
 
 The decks structure describes the properties and values of a deck reference.
 
-> Potential Parent structure: [DeckLists](../../files/deck-lists/)  
-> Potential Parent property: `decks`  
-> Potential Parent property type: `object(string: string)`  
-> Property type: `string: string`  
+> Parent structure: [DeckLists](../../files/deck-lists/)  
+> Parent property: `decks`  
+> Parent property type: `anonymous object(string: string)`  
+> Property type: `string`  
 
 ### Structure
 

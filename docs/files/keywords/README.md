@@ -23,8 +23,8 @@ List of all keywords used on Magic cards.
 Key names will change from PascalCase, example: `AbilityWords`, to camelCase, example: `abilityWords`. **Version 4.4** will remove PascalCase permanently.
 :::
 
-> Data type: `object(string: object)`  
-> Property type: `string: object`  
+> Data type: `object(string: any)`  
+> Property type: `string`  
 
 ### Structure
 

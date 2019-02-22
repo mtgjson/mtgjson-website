@@ -20,7 +20,8 @@
 
 > Parent structure: [set](../set)  
 > Parent property: `type`  
-> Parent property type: `string`
+> Parent property type: `string: string`  
+> Property type: `string`  
 
 The current possible set types as of `2019-02-12` are:
 

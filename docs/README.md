@@ -20,7 +20,7 @@
 
 ## Our Mission
 
-MTGJSON is an open‐source project with the goal of cataloging all Magic cards in a portable format. It’s actively maintained by a dedicated group of fans and supplies data for a variety of projects and sites in the community.
+MTGJSON is an open‐source project that catalogues all Magic cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community.
 
 ## The Team
 
@@ -41,7 +41,7 @@ Eric is a conceptualizer that loves open-source software and cervidae. When he's
 
 ## Contributing
 
-Other have devoted their time and effort in to this project. If you have suggestions for improvements, if you find bugs, or if you would like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern).
+Others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern).
 
 ## Who We Serve
 

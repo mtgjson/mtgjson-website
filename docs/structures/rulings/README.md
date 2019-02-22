@@ -21,8 +21,8 @@ List of rulings that are for a specific card.
 
 > Parent structure: [card](../card)  
 > Parent property: `rulings`  
-> Parent property type: `array(object)`  
-> Property type: `object`
+> Parent property type: `array(anonymous object)`  
+> Property type: `string`
 
 ### Structure
 

@@ -19,8 +19,8 @@
 
 All sets, restricted to sets legal in Vintage.
 
-> Data type: `array(string: object)`  
-> Property type: `string: object`  
+> Data type: `anonymous object(string: object)`  
+> Property type: `string`  
 
 ### Structure
 

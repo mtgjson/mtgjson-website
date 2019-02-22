@@ -7,8 +7,8 @@
   },
   {
     "property": "meta",
-    "type": "object",
-    "example": "[{{version}}]",
-    "description": "Metadata object has date (OBDC standard) and version properties of this MTGJSON release. See the {{version}} structure."
+    "type": "object(string: string)",
+    "example": "{{version}}",
+    "description": "See the {{version}} structure."
   }
 ]

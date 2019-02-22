@@ -8,13 +8,11 @@ let logger = null;
 export default class {
   shouldNotFertilize: boolean;
   className: string;
-  optional: boolean;
   debug: boolean;
   lands: any[];
-  land: string;
   hand: any[];
 
-  constructor(hand: any[] = [], land: string = 'devoid', optional: boolean) {
+  constructor(hand: any[] = [], optional: boolean) {
     this.shouldNotFertilize = optional || false;
     this.className = 'Landcycle';
     this.lands = [
@@ -37,7 +35,6 @@ export default class {
       '{{card}}',
       '{{set}}',
     ];
-    this.land = land;
     this.hand = hand;
     this.debug = false;
 
@@ -56,26 +53,26 @@ export default class {
   async discard(card: string) {
     logger(`discarding ${card}...`);
 
-    let cardName = this.reveal(card) || card;
-    let land = this.land;
-    let newLand = ""
+    let cardName = await this.reveal(card) || card;
+    let plane = '';
+    let land = '';
 
-    if (this.lands.indexOf(card) > -1) {
-      switch(cardName){
-        case 'version':
-          land = 'files';
+    switch(cardName){
+      case 'version':
+      case 'deck':
+        plane = 'files';
+        break;
 
-        default:
-          land = 'structures';
-          break;
-      }
-      
-      newLand = `<a class="code-link" href=/${land}/${cardName}/>${this.faceUp(cardName)}</a>`;
+      default:
+        plane = 'structures';
+        break;
     }
+    
+    land = `<a class="code-link" href=/${plane}/${cardName}/>${this.faceUp(cardName)}</a>`;
 
-    logger(`land acquired: ${JSON.stringify(newLand)}`, true);
+    logger(`land acquired: ${JSON.stringify(land)}`, true);
 
-    return await newLand;
+    return await land;
   }
 
   /**

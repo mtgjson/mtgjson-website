@@ -10,14 +10,11 @@ export default {
   components: { GenerateSingleDownload },
   data() {
     return {
-      defaultFiles: [],
+      files: require(`../public/schemas/Files.schema.json`),
     };
   },
-  created() {
-    this.defaultFiles = require(`../public/schemas/Files.schema.json`)
-  },
-  mounted(){
-    this.defaultFiles = this.defaultFiles.map(
+  created(){
+    this.files = this.files.map(
       file => {
         const key = 'value';
         const name = file[key];
@@ -29,12 +26,7 @@ export default {
         return file;
       }
     );
-  },
-  computed: {
-    files() {
-      return this.defaultFiles;
-    },
-  },
+  }
 };
 </script>
 

@@ -76,5 +76,11 @@
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
     "description": "All card types available for Vanguards"
+  },
+  {
+    "property": "meta",
+    "type": "object(string: string)",
+    "example": "{{version}}",
+    "description": "See the {{version}} structure."
   }
 ]

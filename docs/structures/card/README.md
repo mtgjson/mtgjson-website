@@ -19,10 +19,9 @@
 
 The card structure describes the properties and values of a single card.
 
-> Potential Parent structure: [set](../set), [AllCards](../../downloads/compiled/)  
 > Potential Parent property: `cards`  
-> Potential Parent property type: `array(object)`  
-> Property type: `object`  
+> Potential Parent property type: `array(anonymous object)`  
+> Property type: `string`  
 
 ### Structure
 

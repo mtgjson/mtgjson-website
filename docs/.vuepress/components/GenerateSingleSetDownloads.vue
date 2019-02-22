@@ -1,7 +1,7 @@
 <template lang="pug">
   .download-tables
     .sorting-options
-      .sort-row(v-if="showSorting")
+      .sort-row
         div
           strong Sort By:
           select.table-sort-select(@change="sortBy($event)")
@@ -38,24 +38,16 @@ export default {
     return {
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
-      defaultList: [],
-      defaultPage: 1,
-      showSorting: true
+      defaultList: require(`../public/json/SetList.json`)
     };
   },
   created() {
-    this.defaultList = require(`../public/${
-      this.downloadDirectory
-    }/SetList.json`);
     this.defaultList = this.sortBy('releaseDate:true');
   },
   computed: {
-    page() {
-      return this.defaultPage;
-    },
     list() {
       return this.defaultList;
-    }
+    },
   },
   methods: {
     // PogChamp

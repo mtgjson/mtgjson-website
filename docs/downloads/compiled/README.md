@@ -16,7 +16,7 @@
 
 # Compiled
 
-Downloads outputted by MTGJSON.
+Download MTGJSON outputs.
 
 ### Downloads
 

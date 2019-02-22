@@ -19,8 +19,8 @@
 
 Metadata object has date (OBDC standard) and version properties of this MTGJSON release.
 
-> Data type: `object(string: object)`  
-> Property type: `string: object`  
+> Data type: `anonymous object(string: string)`  
+> Property type: `string`  
 
 ### Structure
 

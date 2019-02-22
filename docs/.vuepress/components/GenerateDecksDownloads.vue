@@ -10,17 +10,9 @@ export default {
   components: { GenerateSingleDeckDownload },
   data() {
     return {
-      defaultDecks: [],
+      decks: require(`../public/json/decks/DeckLists.json`).decks,
     };
-  },
-  created() {
-    this.defaultDecks = require(`../public/json/decks/DeckLists.json`).decks
-  },
-  computed: {
-    decks() {
-      return this.defaultDecks;
-    },
-  },
+  }
 };
 </script>
 
