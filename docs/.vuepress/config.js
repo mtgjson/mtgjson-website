@@ -8,8 +8,17 @@ module.exports = {
   description: 'Magic: The Gathering card data in JSON.',
   // Google Analytics
   ga: 'UA-131358443-1',
-  // Support Links
+  // Head Tags
   head: [
+    // SEO Image
+    [
+      'meta',
+      {
+        property: 'og:image',
+        content: '/images/og_logo.png'
+      }
+    ],
+    // Keyrun for set images
     [
       'link',
       {
