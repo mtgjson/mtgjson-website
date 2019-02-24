@@ -75,7 +75,7 @@ export default {
         },
         {
           name: 'MagicFetchBot',
-          image: 'reddit.png',
+          image: 'reddit.svg',
           link: 'https://redd.it/55l38e',
         },
         {
@@ -87,6 +87,11 @@ export default {
           name: 'MTG Addict',
           image: 'mtgaddict.png',
           link: 'https://mtgaddict.net',
+        },
+        {
+          name: 'MTGCardFetcher',
+          image: 'reddit.svg',
+          link: 'https://reddit.com/r/MTGCardFetcher',
         },
         {
           name: 'MTG Developers',
@@ -167,11 +172,6 @@ export default {
           name: 'Liminal Thoughts',
           image: '',
           link: 'https://brennands.wordpress.com',
-        },
-        {
-          name: 'MTGCardFetcher',
-          image: '',
-          link: 'https://reddit.com/r/MTGCardFetcher',
         },
         {
           name: 'MTG Lands',
