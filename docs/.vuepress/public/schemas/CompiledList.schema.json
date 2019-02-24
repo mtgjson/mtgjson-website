@@ -1,0 +1,14 @@
+[
+  {
+    "property": "files",
+    "type": "array(object)",
+    "example": "[{{files}}]",
+    "description": "All possible compiled outputs from MTGJSON. See the {{files}} structure."
+  },
+  {
+    "property": "meta",
+    "type": "object(string: string)",
+    "example": "{{version}}",
+    "description": "See the {{version}} structure."
+  }
+]

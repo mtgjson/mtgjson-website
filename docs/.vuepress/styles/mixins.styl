@@ -1,0 +1,23 @@
+clearfix() {
+  &::before,
+  &::after {
+      content: ''
+      display: table
+      clear: both
+  }
+}
+
+media_queries = {
+  xsmall: "only screen and (min-width: 400px)",
+  small: "only screen and (min-width: 570px)",
+  medium: "only screen and (min-width: 960px)",
+  large: "only screen and (min-width: 1240px)"
+}
+
+breakpoint(breakpoints)
+  conditions = ()
+  for breakpoint in breakpoints
+    push(conditions, media_queries[breakpoint])
+  conditions = join(", ", conditions)
+  @media conditions
+    {block}

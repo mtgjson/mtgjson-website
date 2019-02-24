@@ -1,0 +1,14 @@
+[
+  {
+    "property": "date",
+    "type": "string",
+    "example": "\"2018-07-13\"",
+    "description": "Date (OBDC standard) of ruling for the card."
+  },
+  {
+    "property": "text",
+    "type": "string",
+    "example": "\"When Nicol Bolas’s enters-the-battlefield triggered ability resolves, first the next opponent in turn order (or, if it’s an opponent’s turn, that opponent) chooses a card in their hand without revealing it, then each other opponent in turn order does the same. Then all the chosen cards are discarded at the same time.\"",
+    "description": "Text of ruling for the card."
+  }
+]

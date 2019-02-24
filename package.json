@@ -1,0 +1,27 @@
+{
+  "name": "mtgjson-website",
+  "version": "2.0.0",
+  "author": "MTGJSON Developers",
+  "repository": "https://github.com/mtgjson/mtgjson-website",
+  "license": "MIT",
+  "engines": {
+    "node": "^11.9.0",
+    "yarn": "^1.13.0"
+  },
+  "scripts": {
+    "compile-ts": "tsc",
+    "dev": "vuepress dev docs",
+    "build": "vuepress build docs",
+    "heroku-postbuild": "yarn build"
+  },
+  "dependencies": {
+    "@types/node": "^11.9.0",
+    "pug": "^2.0.3",
+    "pug-plain-loader": "^1.0.0",
+    "typescript": "^3.3.3",
+    "vuepress": "^1.0.0-alpha.37"
+  },
+  "resolutions": {
+    "ajv": "6.8.1"
+  }
+}

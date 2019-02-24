@@ -1,0 +1,20 @@
+[
+  {
+    "property": "fileName",
+    "type": "string",
+    "example": "AbzanSiege",
+    "description": "File name for the deck."
+  },
+  {
+    "property": "name",
+    "type": "string",
+    "example": "Abzan Siege",
+    "description": "Actual name of the deck."
+  },
+  {
+    "property": "code",
+    "type": "string",
+    "example": "KTK",
+    "description": "Set code for the deck."
+  }
+]

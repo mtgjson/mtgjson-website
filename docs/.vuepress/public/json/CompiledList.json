@@ -1,0 +1,20 @@
+{
+  "files": [
+    "AllCards",
+    "AllDeckFiles",
+    "AllSetFiles",
+    "AllSets",
+    "CardTypes",
+    "CompiledList",
+    "Keywords",
+    "Modern",
+    "SetList",
+    "Standard",
+    "Vintage",
+    "version"
+  ],
+  "meta": {
+    "date": "2019-01-30",
+    "version": "4.2.2"
+  }
+}

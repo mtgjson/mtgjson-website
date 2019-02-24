@@ -1,0 +1,56 @@
+[
+  {
+    "property": "commander",
+    "type": "string",
+    "example": "Legal",
+    "description": "Card legality in the Commander play format."
+  },
+  {
+    "property": "duel",
+    "type": "string",
+    "example": "Banned",
+    "description": "Card legality in the Duel Commander play format."
+  },
+  {
+    "property": "frontier",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Standard play format."
+  },
+  {
+    "property": "legacy",
+    "type": "string",
+    "example": "Banned",
+    "description": "Card legality in the Legacy play format."
+  },
+  {
+    "property": "modern",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Standard play format."
+  },
+  {
+    "property": "pauper",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Pauper play format."
+  },
+  {
+    "property": "penny",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Penny play format."
+  },
+  {
+    "property": "standard",
+    "type": "string",
+    "example": "",
+    "description": "Omitted. Card not legal in the Standard play format."
+  },
+  {
+    "property": "vintage",
+    "type": "string",
+    "example": "Restricted",
+    "description": "Card legality in the Vintage play format."
+  }
+]

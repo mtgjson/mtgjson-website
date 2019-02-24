@@ -1,27 +1,46 @@
-MTGJSON v4 Website
-========================
+# MTGJSON Website
 
-## Site Information
-MTGJSON 4's website is generated using [Pelican 3.7.1](http://docs.getpelican.com/en/stable/) and [Markdown 3.0.1](https://python-markdown.github.io/).
+Built using [VuePress](https://vuepress.vuejs.org/) with Vue, JS/TS and Markdown on Node
 
-## Steps to Build
-1) Install python3 dependencies:
+## Dependencies
+- Node
+- Yarn
+
+## Installation
+
+Install project dependencies. You'll notice all of them are non-dev, this is because on Heroku you can run in to errors. Heroku prunes what is needed on its own.
+
+> _One thing to know is that the only production dependency is `vuepress`_
+
 ```sh
-$ pip3 install pelican Markdown
+yarn install
 ```
 
-2) Make changes to files in the `content/` directory
+## Development Server
 
-3) If necessary, modify the config files (`pelicanconf.py`, `publishconf.py`)
-
-4) Build the site using pelican:
 ```sh
-$ pelican /path/to/content -s /path/to/pelicanconf.py
+yarn dev
 ```
 
-5) Start up a local server
+
+_Every now and then when making major changes be sure to kill your server and rebuild to verify everything is still working. The following code will kill all node instances on linux-based systems. When adding new components or modules the server watch may not pick up on changes._
+
 ```sh
-$ python3 -m http.server --directory output
+killall node
 ```
 
-6) Review the output via `http://0.0.0.0:8000` (the default website for http.server)
+## Building for Distribution
+
+```sh
+yarn build
+```
+
+## Misc
+
+# Notes
+
+We use the `.schema` format for docuemntation on structures. In some IDE's this will lead to linting errors. Do ignore them.
+
+# Landcycle
+
+Landcycle is a Typescript/JS class that allows JSON to take mustache variables such as `{{example-variable}}` and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.

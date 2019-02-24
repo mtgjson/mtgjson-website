@@ -1,0 +1,26 @@
+[
+  {
+    "property": "code",
+    "type": "string",
+    "example": "\"M19\"",
+    "description": "Set code for the set."
+  },
+  {
+    "property": "isFoilOnly",
+    "type": "boolean",
+    "example": "false",
+    "description": "Set only has foil cards. Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "name",
+    "type": "string",
+    "example": "\"Core Set 2019\"",
+    "description": "Name for the set."
+  },
+  {
+    "property": "releaseDate",
+    "type": "string",
+    "example": "\"2018-07-13\"",
+    "description": "Release date (OBDC standard) for the set. If the set was not formally released as a product, can be null."
+  }
+]

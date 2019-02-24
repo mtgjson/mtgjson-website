@@ -1,9 +1,9 @@
                     GNU GENERAL PUBLIC LICENSE
                        Version 3, 29 June 2007
 
- Copyright (C) 2007 Free Software Foundation, Inc. <https://fsf.org/>
+ Copyright (C) 2007 Free Software Foundation, Inc. <http://fsf.org/>
  Everyone is permitted to copy and distribute verbatim copies
- of this license document, but changing it is not allowed.
+ of this license schema, but changing it is not allowed.
 
                             Preamble
 
@@ -336,7 +336,7 @@ protocols for communication across the network.
 
   Corresponding Source conveyed, and Installation Information provided,
 in accord with this section must be in a format that is publicly
-documented (and with an implementation available to the public in
+schemaed (and with an implementation available to the public in
 source code form), and must require no special password or key for
 unpacking, reading or copying.
 
@@ -389,10 +389,10 @@ that material) supplement the terms of this License with terms:
 restrictions" within the meaning of section 10.  If the Program as you
 received it, or any part of it, contains a notice stating that it is
 governed by this License along with a term that is a further
-restriction, you may remove that term.  If a license document contains
+restriction, you may remove that term.  If a license schema contains
 a further restriction but permits relicensing or conveying under this
 License, you may add to a covered work material governed by the terms
-of that license document, provided that the further restriction does
+of that license schema, provided that the further restriction does
 not survive such relicensing or conveying.
 
   If you add terms to a covered work in accord with this section, you
@@ -645,7 +645,7 @@ the "copyright" line and a pointer to where the full notice is found.
     GNU General Public License for more details.
 
     You should have received a copy of the GNU General Public License
-    along with this program.  If not, see <https://www.gnu.org/licenses/>.
+    along with this program.  If not, see <http://www.gnu.org/licenses/>.
 
 Also add information on how to contact you by electronic and paper mail.
 
@@ -664,11 +664,11 @@ might be different; for a GUI interface, you would use an "about box".
   You should also get your employer (if you work as a programmer) or school,
 if any, to sign a "copyright disclaimer" for the program, if necessary.
 For more information on this, and how to apply and follow the GNU GPL, see
-<https://www.gnu.org/licenses/>.
+<http://www.gnu.org/licenses/>.
 
   The GNU General Public License does not permit incorporating your program
 into proprietary programs.  If your program is a subroutine library, you
 may consider it more useful to permit linking proprietary applications with
 the library.  If this is what you want to do, use the GNU Lesser General
 Public License instead of this License.  But first, please read
-<https://www.gnu.org/licenses/why-not-lgpl.html>.
+<http://www.gnu.org/philosophy/why-not-lgpl.html>.
