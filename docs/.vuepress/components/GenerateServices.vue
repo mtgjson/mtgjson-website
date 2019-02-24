@@ -49,11 +49,6 @@ export default {
           link: 'http://cubetutor.com',
         },
         {
-          name: 'DideRobot',
-          image: 'github.svg',
-          link: 'https://github.com/Didero/DideRobot',
-        },
-        {
           name: 'Dr4ft',
           image: 'dr4ft.png',
           link: 'https://dr4ft.info',
@@ -74,24 +69,14 @@ export default {
           link: 'https://github.com/magarena/magarena',
         },
         {
-          name: 'MagicFetchBot',
-          image: 'reddit.svg',
-          link: 'https://redd.it/55l38e',
-        },
-        {
           name: 'Magidex',
-          image: 'magidex.png',
+          image: 'magidex.svg',
           link: 'https://magidex.com',
         },
         {
           name: 'MTG Addict',
           image: 'mtgaddict.png',
           link: 'https://mtgaddict.net',
-        },
-        {
-          name: 'MTGCardFetcher',
-          image: 'reddit.svg',
-          link: 'https://reddit.com/r/MTGCardFetcher',
         },
         {
           name: 'MTG Developers',
@@ -159,6 +144,11 @@ export default {
           link: 'https://decklist.org/',
         },
         {
+          name: 'DideRobot',
+          image: '',
+          link: 'https://github.com/Didero/DideRobot',
+        },
+        {
           name: 'FlavorTexts.com',
           image: '',
           link: 'https://flavortexts.com',
@@ -172,6 +162,16 @@ export default {
           name: 'Liminal Thoughts',
           image: '',
           link: 'https://brennands.wordpress.com',
+        },
+        {
+          name: 'MagicFetchBot',
+          image: '',
+          link: 'https://redd.it/55l38e',
+        },
+        {
+          name: 'MTGCardFetcher',
+          image: '',
+          link: 'https://reddit.com/r/MTGCardFetcher',
         },
         {
           name: 'MTG Lands',
