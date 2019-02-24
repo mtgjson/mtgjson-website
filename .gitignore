@@ -1,6 +1,33 @@
-output/*
-content/.DS_Store
-Makefile
+# OS generated files
 .DS_Store
-*.pyc
-logo/
+.DS_Store?
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+Thumbs.db
+
+# Log files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Editor directories and files
+.idea
+.vscode
+
+# Node modules
+node_modules/
+
+# Build folder
+dist/
+
+# JSON Dumps
+# json/
+# !json/.gitkeep
+# # Keep smaller files for downloads
+# !json/CompiledList.json
+# !json/SetList.json
+# !json/decks/DeckLists.json
+
+# Experimental Schemas
+src/*schema.json

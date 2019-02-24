@@ -1,0 +1,38 @@
+[
+  {
+    "property": "code",
+    "type": "string",
+    "example": "\"KTK\"",
+    "description": "Set code for the deck."
+  },
+  {
+    "property": "mainBoard",
+    "type": "array(object)",
+    "example": "[{{card}}]",
+    "description": "The cards in the main-board. See the {{card}} structure."
+  },
+  {
+    "property": "meta",
+    "type": "object(string: string)",
+    "example": "{{version}}",
+    "description": "See the {{version}} structure."
+  },
+  {
+    "property": "name",
+    "type": "string",
+    "example": "\"Abzan Siege\"",
+    "description": "Name of the deck."
+  },
+  {
+    "property": "sideBoard",
+    "type": "array(object)",
+    "example": "[{{card}}]",
+    "description": "The cards in the side-board. See the {{card}} structure."
+  },
+  {
+    "property": "type",
+    "type": "string",
+    "example": "\"Intro Pack\"",
+    "description": "The type of deck."
+  }
+]

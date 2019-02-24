@@ -43,10 +43,14 @@ files_to_ignore = [
 ]
 
 
-def file_endings(source_dir, ending):
+def file_endings(source_dir, ending, ignore_files=False):
     for f in glob.glob(os.path.join(source_dir, "*")):
-        if f.endswith(ending) and (os.path.basename(f) not in files_to_ignore):
-            yield f
+        if f.endswith(ending):
+            if ignore_files:
+                if os.path.basename(f) not in files_to_ignore:
+                    yield f
+            else:
+                yield f
 
 
 def compress_single_sets(source_dir):
@@ -84,7 +88,7 @@ def compress_dir_to_archives(source_dir, compressed_name):
     os.makedirs(compressed_name, exist_ok=True)
 
     # Copy stuff to compress
-    for f in file_endings(source_dir, ".json"):
+    for f in file_endings(source_dir, ".json", True):
         try:
             shutil.copy(f, compressed_name)
         except FileNotFoundError:

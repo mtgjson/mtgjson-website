@@ -1,0 +1,290 @@
+[
+  {
+    "property": "artist",
+    "type": "string",
+    "example": "\"Ryan Yee\"",
+    "description": "Name of the artist that illustrated the card art."
+  },
+  {
+    "property": "borderColor",
+    "type": "string",
+    "example": "\"black\"",
+    "description": "Color of the border. Can be black, borderless, gold, silver, or white."
+  },
+  {
+    "property": "colorIdentity",
+    "type": "array(string)",
+    "example": "[\"B\"]",
+    "description": "List of all colors in card’s mana cost, rules text and any color indicator."
+  },
+  {
+    "property": "colorIndicator",
+    "type": "array(string)",
+    "example": "[\"B\",\"R\"]",
+    "description": "List of all colors in card’s color indicator (a symbol showing the colors of the card). Usually found only on cards without mana costs and other special cards."
+  },
+  {
+    "property": "colors",
+    "type": "array(string)",
+    "example": "[\"B\",\"R\"]",
+    "description": "List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text)."
+  },
+  {
+    "property": "convertedManaCost",
+    "type": "float",
+    "example": "5.0",
+    "description": "The converted mana cost of the card."
+  },
+  {
+    "property": "duelDeck",
+    "type": "string",
+    "example": "\"a\"",
+    "description": "If the card is in a duel deck product, can be \"a\"(left) or \"b\"(right). (If not in duel deck product, duelDeck is usually ommitted.)"
+  },
+  {
+    "property": "faceConvertedManaCost",
+    "type": "float",
+    "example": "5.0",
+    "description": "The converted mana cost of the face (half, or part) of the card."
+  },
+  {
+    "property": "flavorText",
+    "type": "string",
+    "example": "\"Whatever hatred destroys, a single act of trust can revive.\"",
+    "description": "Italicized text found below the rules text that has no game function."
+  },
+  {
+    "property": "foreignData",
+    "type": "array(object)",
+    "example": "[{{foreign-data}}]",
+    "description": "See the {{foreign-data}} structure."
+  },
+  {
+    "property": "frameEffect",
+    "type": "string",
+    "example": "\"legendary\"",
+    "description": "See the {{frame-effect}} structure."
+  },
+  {
+    "property": "frameVersion",
+    "type": "string",
+    "example": "\"2015\"",
+    "description": "Version of the card frame style. Can be 1993, 1997, 2003, 2015, or future."
+  },
+  {
+    "property": "hand",
+    "type": "string",
+    "example": "\"+0\"",
+    "description": "Starting maximum hand size total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards."
+  },
+  {
+    "property": "hasFoil",
+    "type": "boolean",
+    "example": "true",
+    "description": "Can the card be found in foil? Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "hasNonFoil",
+    "type": "boolean",
+    "example": "true",
+    "description": "Can the card be found in non-foil? Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "isOnlineOnly",
+    "type": "boolean",
+    "example": "false",
+    "description": "Is the card only available online? Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "isOversized",
+    "type": "boolean",
+    "example": "false",
+    "description": "Is the card oversized? Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "isTimeshifted",
+    "type": "boolean",
+    "example": "false",
+    "description": "Card is “timeshifted”, a feature from Time Spiral block. Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "layout",
+    "type": "string",
+    "example": "\"normal\"",
+    "description": "Type of card. Can be normal, split, flip, transform, meld, leveler, saga, planar, scheme, vanguard, token, double_faced_token, emblem, augment, or host. (If normal, it is usually omitted.)"
+  },
+  {
+    "property": "legalities",
+    "type": "object",
+    "example": "{{legalities}}",
+    "description": "See the {{legalities}} structure."
+  },
+  {
+    "property": "life",
+    "type": "string",
+    "example": "\"+0\"",
+    "description": "Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards."
+  },
+  {
+    "property": "loyalty",
+    "type": "string",
+    "example": "\"7\"",
+    "description": "Planeswalker loyalty value."
+  },
+  {
+    "property": "manaCost",
+    "type": "string",
+    "example": "\"{3}{W}{W}\"",
+    "description": "Mana cost of the card."
+  },
+  {
+    "property": "multiverseId",
+    "type": "integer",
+    "example": "457145",
+    "description": "An integer most cards have which Wizards uses as a card identifier."
+  },
+  {
+    "property": "name",
+    "type": "string",
+    "example": "\"Angel of Grace\"",
+    "description": "Name of the card. (If the card is in an Un-set and has multiple printings, a space and letter enclosed in parentheses, starting with (b), follows the name.)"
+  },
+  {
+    "property": "names",
+    "type": "array(string)",
+    "example": "[\"Nicol Bolas, the Ravager\",\"Nicol Bolas, the Arisen\"]",
+    "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB."
+  },
+  {
+    "property": "number",
+    "type": "string",
+    "example": "\"218\"",
+    "description": "Number of the card."
+  },
+  {
+    "property": "originalText",
+    "type": "string",
+    "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
+    "description": "Text on the card as originally printed."
+  },
+  {
+    "property": "originalType",
+    "type": "string",
+    "example": "\"Legendary Creature — Angel\"",
+    "description": "Type as originally printed. Includes any supertypes and subtypes. (\"Legendary Creature — Angel\")"
+  },
+  {
+    "property": "power",
+    "type": "string",
+    "example": "\"5\"",
+    "description": "Power of the creature."
+  },
+  {
+    "property": "printings",
+    "type": "array(string)",
+    "example": "[\"M19\",\"PM19\"]",
+    "description": "List of sets the card was printed in, in uppercase."
+  },
+  {
+    "property": "rarity",
+    "type": "string",
+    "example": "\"mythic\"",
+    "description": "Rarity. Can be basic, common, uncommon, rare, or mythic"
+  },
+  {
+    "property": "rulings",
+    "type": "array(object)",
+    "example": "[{{rulings}}]",
+    "description": "See the {{rulings}} structure."
+  },
+  {
+    "property": "scryfallId",
+    "type": "string",
+    "example": "\"80164e61-3e94-4e10-9bd1-518b8dc7fc4c\"",
+    "description": "A universal unique id (v4) generated by Scryfall. Note that cards with multiple faces are not unique."
+  },
+  {
+    "property": "side",
+    "type": "string",
+    "example": "\"a\"",
+    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be a, b, or c."
+  },
+  {
+    "property": "isStarter",
+    "type": "boolean",
+    "example": "false",
+    "description": "If this card is found in a booster pack. (If false, it is usually omitted.)"
+  },
+  {
+    "property": "subtypes",
+    "type": "array(string)",
+    "example": "[\"Angel\"]",
+    "description": "List of card subtypes found after em-dash. (\"Legendary Creature — Angel\")"
+  },
+  {
+    "property": "supertypes",
+    "type": "array(string)",
+    "example": "[\"Legendary\"]",
+    "description": "List of card supertypes found before em-dash. (\"Legendary Creature — Angel\")"
+  },
+  {
+    "property": "tcgplayerProductId",
+    "type": "integer",
+    "example": "183201",
+    "description": "Numeric identifier for the card for TCGPlayer."
+  },
+  {
+    "property": "tcgplayerPurchaseUrl",
+    "type": "string",
+    "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
+    "description": "URL which redirects to TCGPlayer website’s card page."
+  },
+  {
+    "property": "text",
+    "type": "string",
+    "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
+    "description": "Rules text of the card."
+  },
+  {
+    "property": "toughness",
+    "type": "string",
+    "example": "\"4\"",
+    "description": "Toughness of the card."
+  },
+  {
+    "property": "type",
+    "type": "string",
+    "example": "\"Legendary Creature — Angel\"",
+    "description": "Type of the card. Includes any supertypes and subtypes. (\"Creature — Angel\")"
+  },
+  {
+    "property": "types",
+    "type": "array(string)",
+    "example": "[\"Creature\"]",
+    "description": "List of types of the card."
+  },
+  {
+    "property": "uuid",
+    "type": "string",
+    "example": "\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"",
+    "description": "A universal unique id (v5) generated by MTGJSON. Each entry is unique."
+  },
+  {
+    "property": "uuidV421",
+    "type": "string",
+    "example": "\"c095a153-6bbf-5e93-8a68-578d17461170\"",
+    "description": "Compatibility uuid for v4.3.0, but will support v4.2.1 to help people transition until v4.4.0."
+  },
+  {
+    "property": "variations",
+    "type": "array(string)",
+    "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
+    "description": "List of uuid id's of this card with alternate printings in the same set. Excludes Un-sets."
+  },
+  {
+    "property": "watermark",
+    "type": "string",
+    "example": "\"wotc\"",
+    "description": "Name of the watermark on the card. If there isn’t one, it can be an empty string, but it is usually omitted."
+  }
+]

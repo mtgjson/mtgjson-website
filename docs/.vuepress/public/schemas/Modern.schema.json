@@ -1,0 +1,20 @@
+[
+  {
+    "property": "10E",
+    "type": "object",
+    "example": "{{set}}",
+    "description": "This set, set data and all cards in this set. See the {{set}} structure."
+  },
+  {
+    "property": "...",
+    "type": "...",
+    "example": "...",
+    "description": "..."
+  },
+  {
+    "property": "ZEN",
+    "type": "object",
+    "example": "{{set}}",
+    "description": "This set, set data and all cards in that set. See the {{set}} structure."
+  }
+]
