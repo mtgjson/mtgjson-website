@@ -16,6 +16,55 @@
 
 # Changelog
 
+## 4.3.0 <small>(2019-02-22)</small>
+### Website
+- We have a new website!
+    - Please let us know what you think via email or Discord, always looking to improve :)
+- We also have a new logo!
+
+### Compiled Outputs
+#### Added
+- `CompiledList` which contains a list of all compiled outputs.
+- `Keywords` now has `abilityWords`, `keywordActions`, and `keywordAbilities`. 
+    - `AbilityWords`, `KeywordActions`, and `KeywordAbilities` are deprecated and will be removed in 4.4.0.
+- `CardTypes` is now a compiled output, which gives all possible super/subtypes of each card type.
+- `AllDeckFiles` has been added and contains archives of all decks (read below).
+
+#### Changed
+- `AllSetsNoUn` is now `Vintage`. System rewrite rules have been added to keep compatibility.
+- `SetList` now has field `type` to indicate the type of set it stands for.
+- `SetList` now has field `parentCode` to indicate if the set is a child of a parent.
+- `Keywords` now has a meta tag.
+
+
+#### Removed
+- `AllCardsNoUn` has been removed due to lack of use and purpose. Try `AllCards` for your card needs.
+- `AllCards` has lost `duelDeck`, `frameEffect`, `isStarter`, `isTimeshifted`, and `scryfallId` as these fields are not atomic.
+
+### Pre-constructed Decks
+#### Added
+- Precons have arrived! Simply check out [/json/decks](/json/decks) for the options.
+
+
+### Individual Sets
+#### Added
+- `parentCode` which is given to sets that are a child of another set.
+    - Mainly related to promo sets.
+
+### Individual Cards
+#### Added
+- `uuidV421` is a holdover field to help developers assimilate to the new `uuid` field. This will be removed in 4.4.0.
+
+#### Changed
+- `starter` is now `isStarter`, as alerted to in prior releases.
+- `uuid` is _finally_ finalized. You can use `uuidV421` to get the 4.2.1 UUID to help assimilate to the new UUID.
+    - This is the final version. No more change should come to UUID. We apologize for so many changes over time.
+
+#### Fixed
+- `foreignData` is now more accurate.
+- Some fields on tokens were mistakenly left blank. This has been addressed.
+
+
 ## 4.2.2 <small>(2019-01-30)</small>
 ### Individual Sets
 #### Added
