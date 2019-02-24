@@ -39,6 +39,11 @@ export default {
           link: 'https://cockatrice.github.io',
         },
         {
+          name: 'Combo Deck',
+          image: 'combodeck.png',
+          link: 'http://combodeck.net',
+        },
+        {
           name: 'Cube Tutor',
           image: 'cubetutor.png',
           link: 'http://cubetutor.com',
@@ -119,6 +124,11 @@ export default {
           link: 'https://snapcardster.com',
         },
         {
+          name: 'Stream Decker',
+          image: 'streamdecker.png',
+          link: 'https://www.streamdecker.com',
+        },
+        {
           name: 'Tamiyo Discord Bot',
           image: 'tamiyodiscordbot.png',
           link: 'https://mtg.design/tamiyo',
@@ -142,6 +152,11 @@ export default {
           name: 'DeckList.org',
           image: '',
           link: 'https://decklist.org/',
+        },
+        {
+          name: 'FlavorTexts.com',
+          image: '',
+          link: 'https://flavortexts.com',
         },
         {
           name: 'Lab Maniac',
