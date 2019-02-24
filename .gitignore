@@ -31,3 +31,5 @@ dist/
 
 # Experimental Schemas
 src/*schema.json
+
+logo/
