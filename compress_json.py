@@ -53,8 +53,6 @@ def compress_single_sets(source_dir):
     for f in file_endings(source_dir, ".json"):
         file_root = os.path.splitext(f)[0]
 
-        print(f)
-
         # .ZIP
         zip_file_name = file_root + ".json.zip"
         zip_out = zipfile.ZipFile(zip_file_name, "w")
