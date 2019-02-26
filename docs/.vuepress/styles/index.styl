@@ -2,7 +2,11 @@
 @require './sidebar'
 
 html
+  min-width: 320px;
   scroll-behavior: smooth;
+
+  *
+    box-sizing: border-box;
 
 h2
   border-width: 0 !important;
@@ -25,9 +29,6 @@ a:link
   & > *
     max-width: 1240px !important;
     margin-left: 0 !important;
-
-.search-box
-  margin-right: 0 !important;
 
 .cta-btn,
 .repo-link,
@@ -122,4 +123,4 @@ code,
 pre
   background-color: $tableCodeBgColor !important;
   color: $tableCodeTextColor !important;
-  line-height: 1.4
+  line-height: 1.7em !important;

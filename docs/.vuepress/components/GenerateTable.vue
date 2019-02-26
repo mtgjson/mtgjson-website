@@ -8,36 +8,41 @@
             span {{ key }}
       tbody
         tr(v-for="(value, key) in schema" v:key=key)
-          td(v-for="(value, key) in value" v:key=key v-bind:data-break="value.toLowerCase().indexOf('id') > 0")
-            span(v-if="key === 'property'")
+          td(v-for="(value, key) in value" v:key=key)
+            div(v-if="key === 'property'")
               h3(:id="value") {{ value }}
                 a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
-            span(v-else-if="key === 'type'")
+            div(v-else-if="key === 'type'")
               em {{ value }}
-            span(v-else-if="key === 'example' || key === 'value'")
+            div(v-else-if="key === 'example' || key === 'value'")
               code.land-cycler {{ value }}
-            span(v-else)
-              span.land-cycler {{ value }}
+            div(v-else)
+              div.land-cycler {{ value }}
 
-    div(v-bind:class="{hidden: !showMobileTable}")
-      ol.mobile-doc-table(v-for="(value, key) in schema" v:key=key)
-        li(v-for="(value, key) in value" v:key=key)
-          span(v-if="key === 'property'")
-            div
+    div.mobile-doc-tables(v-bind:class="{hidden: !showMobileTable}")
+      div.mobile-doc-table(v-for="(value, key) in schema" v:key=key v-bind:class="{hidden: !showMobileTable}")
+        div.mobile-doc-table--row(v-for="(value, key) in value" v:key=key)
+          div.mobile-doc-table--row-item(v-if="key === 'property'")
+            div.mobile-doc-table--row-item-key
               h3(:id="value") {{ key }}
                 a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
-            div {{ value }}
-          span(v-else-if="key === 'type'")
-            div {{ key }}
-            div
+            div.mobile-doc-table--row-item-value
+              span {{ value }}
+          div.mobile-doc-table--row-item(v-else-if="key === 'type'")
+            div.mobile-doc-table--row-item-key
+              span {{ key }}
+            div.mobile-doc-table--row-item-value
               em {{ value }}
-          span(v-else-if="key === 'example' || key === 'value'")
-            div {{ key }}
-            div
+          div.mobile-doc-table--row-item(v-else-if="key === 'example' || key === 'value'")
+            div.mobile-doc-table--row-item-key
+              span {{ key }}
+            div.mobile-doc-table--row-item-value
               code.land-cycler {{ value }}
-          span(v-else)
-            div {{ key }}
-            div.land-cycler {{ value }}
+          div.mobile-doc-table--row-item(v-else)
+            div.mobile-doc-table--row-item-key
+              span {{ key }}
+            div.mobile-doc-table--row-item-value
+              div.land-cycler {{ value }}
 
 </template>
 
@@ -149,38 +154,48 @@ table {
   border: 1px solid $borderColor;
   box-sizing: border-box;
 
+  * {
+    font-size: 15px;
+  }
+
   h3 {
     font-weight: bold;
   }
 
-  li {
-    list-style: none;
-
+  &--row {
     &:last-of-type {
-      span {
-        border-bottom-width: 0;
+      .mobile-doc-table--row-item {
+        &:last-of-type {
+          border-bottom-width: 0;
+        }
       }
     }
 
-    span {
+    &-item {
       width: 100%;
-      display: flex;
+      display: inline-flex;
       border-bottom: 1px solid $borderColor;
 
-      div {
-        flex: 0 0 50%;
-        padding: 10px 15px;
-        border-right: 1px solid $borderColor;
-        box-sizing: border-box;
+      &-key {
+        text-transform: capitalize;
+        font-weight: bold;
+        background-color: $tableAltBgColor;
+        flex: 0 0 40%;
+        display: flex;
 
-        &:first-of-type {
-          text-transform: capitalize;
-          font-weight: bold;
-          background-color: $tableAltBgColor;
+        & > * {
+          margin: 10px;
         }
+      }
 
-        &:last-of-type {
-          border-right-width: 0;
+      &-value {
+        flex: auto;
+        padding: 10px;
+        border-left: 1px solid $borderColor;
+        overflow-wrap: anywhere;
+
+        code {
+          font-size: 14px;
         }
       }
     }
@@ -191,13 +206,6 @@ code,
 pre {
   &:empty {
     display: none;
-  }
-}
-
-*[data-break='true'] ~ * {
-  code,
-  pre {
-    word-wrap: anywhere;
   }
 }
 </style>
