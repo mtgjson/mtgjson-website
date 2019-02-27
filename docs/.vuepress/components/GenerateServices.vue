@@ -59,6 +59,11 @@ export default {
           link: 'http://draftalot.com/',
         },
         {
+          name: 'Draftsim',
+          image: 'draftsim.png',
+          link: 'https://draftsim.com/',
+        },
+        {
           name: 'EDHrec',
           image: 'edhrec.png',
           link: 'https://edhrec.com',
