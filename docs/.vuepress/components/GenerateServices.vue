@@ -129,6 +129,11 @@ export default {
           link: 'https://mtg.design/tamiyo',
         },
         {
+          name: 'TCGPlayer',
+          image: 'tcgplayer.png',
+          link: 'https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson',
+        },
+        {
           name: 'TutorCards',
           image: 'tutorcards.svg',
           link: 'https://tutor.cards',
