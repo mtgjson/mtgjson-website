@@ -10,7 +10,7 @@ export default {
   components: { GenerateSingleDeckDownload },
   data() {
     return {
-      decks: require(`../public/json/decks/DeckLists.json`).decks,
+      decks: require(`../public/json/DeckLists.json`).decks,
     };
   }
 };
