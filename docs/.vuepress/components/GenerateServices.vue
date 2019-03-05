@@ -74,6 +74,11 @@ export default {
           link: 'https://github.com/magarena/magarena',
         },
         {
+          name: 'Magic Cards Manager',
+          image: 'mcm.png',
+          link: 'https://www.magiccardsmanager.com',
+        },
+        {
           name: 'Magidex',
           image: 'magidex.svg',
           link: 'https://magidex.com',
