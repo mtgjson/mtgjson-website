@@ -102,6 +102,12 @@
     "description": "Is the card oversized? Can be true or false. (If false, it is usually omitted.)"
   },
   {
+    "property": "isReserved",
+    "type": "boolean",
+    "example": "false",
+    "description": "Is the card on the MTG Reserved List? Can be true or false. (If false, it is usually omitted.)"
+  },
+  {
     "property": "isTimeshifted",
     "type": "boolean",
     "example": "false",
