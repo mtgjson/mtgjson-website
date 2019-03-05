@@ -16,8 +16,6 @@
 
 # About MTGJSON
 
-![logo](/images/logo.svg "MTGJSON")
-
 ## Our Mission
 
 MTGJSON is an open‐source project that catalogues all Magic cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community.

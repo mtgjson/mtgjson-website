@@ -38,6 +38,7 @@ module.exports = {
       { text: 'Contribute', link: 'https://github.com/mtgjson' },
       { text: 'Donate', link: 'https://www.paypal.me/Zachhalpern' },
     ],
+    logo: '/images/logo.svg',
     sidebar: [
       '/',
       {
