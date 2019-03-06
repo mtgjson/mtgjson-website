@@ -1,16 +1,6 @@
 <template>
   <aside class="sidebar">
-    <div
-      class="meta-data can-hide"
-    >
-      <span
-        ref="versionNumber"
-        class="version-number"
-      >v{{ version.version }}</span>
-      <span
-        class="release-date"
-      >({{ version.date }})</span>
-    </div>
+    <Metadata/>
     <NavLinks/>
     <slot name="top"/>
     <SidebarLinks :depth="0" :items="items"/>
@@ -19,6 +9,7 @@
 </template>
 
 <script>
+import Metadata from './Metadata.vue';
 import Version from '../../public/json/version';
 import SidebarLinks from './SidebarLinks.vue'
 import NavLinks from './NavLinks.vue'
@@ -26,7 +17,7 @@ import NavLinks from './NavLinks.vue'
 export default {
   name: 'Sidebar',
 
-  components: { SidebarLinks, NavLinks },
+  components: { Metadata, SidebarLinks, NavLinks },
 
   props: ['items'],
 

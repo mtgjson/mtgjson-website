@@ -14,17 +14,7 @@
       >
     </router-link>
     
-    <div
-      class="meta-data can-hide"
-    >
-      <span
-        ref="versionNumber"
-        class="version-number"
-      >v{{ version.version }}</span>
-      <span
-        class="release-date"
-      >({{ version.date }})</span>
-    </div>
+    <Metadata/>
 
     <div
       class="links"
@@ -43,14 +33,14 @@
 </template>
 
 <script>
-import Version from '../../public/json/version';
+import Metadata from './Metadata.vue';
 import SidebarButton from './SidebarButton.vue'
 import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import NavLinks from './NavLinks.vue'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { Metadata, SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
 
   data () {
     return {
