@@ -108,6 +108,12 @@
     "description": "Is the card on the MTG Reserved List? Can be true or false. (If false, it is usually omitted.)"
   },
   {
+    "property": "isStarter",
+    "type": "boolean",
+    "example": "false",
+    "description": "If this card is found in a booster pack. (If false, it is usually omitted.)"
+  },
+  {
     "property": "isTimeshifted",
     "type": "boolean",
     "example": "false",
@@ -226,12 +232,6 @@
     "type": "string",
     "example": "\"a\"",
     "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be a, b, or c."
-  },
-  {
-    "property": "isStarter",
-    "type": "boolean",
-    "example": "false",
-    "description": "If this card is found in a booster pack. (If false, it is usually omitted.)"
   },
   {
     "property": "subtypes",
