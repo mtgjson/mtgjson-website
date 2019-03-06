@@ -2,23 +2,31 @@
   <div
     class="meta-data can-hide"
   >
-    <span
-      ref="versionNumber"
+    <router-link
       class="version-number"
-    >v{{ version.version }}</span>
+      :to="changelogLink"
+    >v{{ metaData.version }}</router-link>
     <span
       class="release-date"
-    >({{ version.date }})</span>
+    >({{ metaData.date }})</span>
   </div>
 </template>
 
 <script>
-import Version from '../../public/json/version';
+import MetaData from '../../public/json/version';
 
 export default {
   data () {
     return {
-      version: Version
+      metaData: MetaData
+    }
+  },
+
+  computed: {
+    changelogLink(){
+      const version = this.metaData.version.replace(/\./g, '-');
+      const date = this.metaData.date;
+      return `/changelog/#_${version}-${date}`;
     }
   }
 }
