@@ -10,14 +10,21 @@
         class="logo"
         v-if="$site.themeConfig.logo"
         :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
         :title="$siteTitle"
       >
+    </router-link>
+    
+    <div
+      class="meta-data can-hide"
+    >
       <span
         ref="versionNumber"
         class="version-number"
       >v{{ version.version }}</span>
-    </router-link>
+      <span
+        class="release-date"
+      >({{ version.date }})</span>
+    </div>
 
     <div
       class="links"
@@ -97,14 +104,8 @@ $navbar-horizontal-padding = 1.5rem
     display inline-block
   .logo
     height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
+    width auto
     vertical-align top
-  .version-number
-    font-size 14px
-    font-weight 600
-    color $textColor
-    position relative
   .links
     padding-left 1.5rem
     box-sizing border-box
@@ -122,8 +123,12 @@ $navbar-horizontal-padding = 1.5rem
 @media (max-width: $MQMobile)
   .navbar
     padding-left 4rem
+    .logo
+      height $navbarHeight - 1.8rem
+      vertical-align middle
     .can-hide
       display none
     .links
       padding-left 1.5rem
+            
 </style>
