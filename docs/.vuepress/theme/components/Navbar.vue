@@ -44,8 +44,7 @@ export default {
 
   data () {
     return {
-      linksWrapMaxWidth: null,
-      version: Version
+      linksWrapMaxWidth: null
     }
   },
 

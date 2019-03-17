@@ -1,6 +1,5 @@
 <template>
   <aside class="sidebar">
-    <Metadata/>
     <NavLinks/>
     <slot name="top"/>
     <SidebarLinks :depth="0" :items="items"/>
@@ -9,7 +8,6 @@
 </template>
 
 <script>
-import Metadata from './Metadata.vue';
 import Version from '../../public/json/version';
 import SidebarLinks from './SidebarLinks.vue'
 import NavLinks from './NavLinks.vue'
@@ -17,15 +15,9 @@ import NavLinks from './NavLinks.vue'
 export default {
   name: 'Sidebar',
 
-  components: { Metadata, SidebarLinks, NavLinks },
+  components: { SidebarLinks, NavLinks },
 
   props: ['items'],
-
-  data(){
-    return {
-      version: Version
-    }
-  }
 }
 </script>
 
@@ -37,9 +29,6 @@ export default {
     list-style-type none
   a
     display inline-block
-  .meta-data
-    margin-left 1.5rem
-    margin-top 0.75rem
   .nav-links
     display none
     border-bottom 1px solid $borderColor
@@ -68,10 +57,4 @@ export default {
         top calc(1rem - 2px)
     & > .sidebar-links
       padding 1rem 0
-
-@media (min-width: $MQMobile)
-  .sidebar
-    .meta-data
-      &.can-hide
-        display none
 </style>

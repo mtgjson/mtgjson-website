@@ -1,14 +1,14 @@
 <template>
   <div
-    class="meta-data can-hide"
+    class="meta-data"
   >
     <router-link
       class="version-number"
       :to="changelogLink"
     >v{{ metaData.version }}</router-link>
-    <span
+    <!-- <span
       class="release-date"
-    >({{ metaData.date }})</span>
+    >({{ metaData.date }})</span> -->
   </div>
 </template>
 

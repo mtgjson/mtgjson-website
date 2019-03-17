@@ -34,7 +34,7 @@ module.exports = {
     displayAllHeaders: true,
     lastUpdated: 'Last Updated',
     nav: [
-      { text: 'Talk', link: 'https://discord.gg/74GUQDE' },
+      { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' },
       { text: 'Donate', link: 'https://www.paypal.me/Zachhalpern' },
     ],
