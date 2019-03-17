@@ -2,2206 +2,2737 @@
     {
         "code": "P15A",
         "name": "15th Anniversary Cards",
-        "releaseDate": "2008-04-01"
+        "releaseDate": "2008-04-01",
+        "type": "promo"
     },
     {
         "code": "HTR",
         "name": "2016 Heroes of the Realm",
-        "releaseDate": "2017-09-20"
+        "releaseDate": "2017-09-20",
+        "type": "funny"
     },
     {
         "code": "G17",
         "name": "2017 Gift Pack",
-        "releaseDate": "2017-10-20"
+        "releaseDate": "2017-10-20",
+        "type": "box"
     },
     {
         "code": "HTR17",
         "name": "2017 Heroes of the Realm",
-        "releaseDate": "2018-08-01"
+        "releaseDate": "2018-08-01",
+        "type": "memorabilia"
     },
     {
         "code": "PLNY",
         "name": "2018 Lunar New Year",
-        "releaseDate": "2018-02-16"
+        "releaseDate": "2018-02-16",
+        "type": "promo"
     },
     {
         "code": "AER",
         "name": "Aether Revolt",
-        "releaseDate": "2017-01-20"
+        "releaseDate": "2017-01-20",
+        "type": "expansion"
     },
     {
         "code": "PAER",
         "name": "Aether Revolt Promos",
-        "releaseDate": "2017-01-19"
+        "parentCode": "AER",
+        "releaseDate": "2017-01-19",
+        "type": "promo"
     },
     {
         "code": "ARB",
         "name": "Alara Reborn",
-        "releaseDate": "2009-04-30"
+        "releaseDate": "2009-04-30",
+        "type": "expansion"
     },
     {
         "code": "ALL",
         "name": "Alliances",
-        "releaseDate": "1996-06-10"
+        "releaseDate": "1996-06-10",
+        "type": "expansion"
     },
     {
         "code": "AKH",
         "name": "Amonkhet",
-        "releaseDate": "2017-04-28"
+        "releaseDate": "2017-04-28",
+        "type": "expansion"
     },
     {
         "code": "MP2",
         "name": "Amonkhet Invocations",
-        "releaseDate": "2017-04-28"
+        "parentCode": "AKH",
+        "releaseDate": "2017-04-28",
+        "type": "masterpiece"
     },
     {
         "code": "PAKH",
         "name": "Amonkhet Promos",
-        "releaseDate": "2017-04-28"
+        "parentCode": "AKH",
+        "releaseDate": "2017-04-28",
+        "type": "promo"
     },
     {
         "code": "ATH",
         "name": "Anthologies",
-        "releaseDate": "1998-11-01"
+        "releaseDate": "1998-11-01",
+        "type": "box"
     },
     {
         "code": "ATQ",
         "name": "Antiquities",
-        "releaseDate": "1994-03-04"
+        "releaseDate": "1994-03-04",
+        "type": "expansion"
     },
     {
         "code": "APC",
         "name": "Apocalypse",
-        "releaseDate": "2001-06-04"
+        "releaseDate": "2001-06-04",
+        "type": "expansion"
     },
     {
         "code": "ARN",
         "name": "Arabian Nights",
-        "releaseDate": "1993-12-17"
+        "releaseDate": "1993-12-17",
+        "type": "expansion"
     },
     {
         "code": "ARC",
         "name": "Archenemy",
-        "releaseDate": "2010-06-18"
+        "releaseDate": "2010-06-18",
+        "type": "archenemy"
     },
     {
         "code": "OARC",
         "name": "Archenemy Schemes",
-        "releaseDate": "2010-06-18"
+        "parentCode": "ARC",
+        "releaseDate": "2010-06-18",
+        "type": "archenemy"
     },
     {
         "code": "E01",
         "name": "Archenemy: Nicol Bolas",
-        "releaseDate": "2017-06-16"
+        "releaseDate": "2017-06-16",
+        "type": "archenemy"
     },
     {
         "code": "OE01",
         "name": "Archenemy: Nicol Bolas Schemes",
-        "releaseDate": "2018-12-25"
+        "parentCode": "E01",
+        "releaseDate": "2018-12-25",
+        "type": "archenemy"
     },
     {
         "code": "PARL",
         "name": "Arena League 1996",
-        "releaseDate": "1996-08-02"
+        "releaseDate": "1996-08-02",
+        "type": "promo"
     },
     {
         "code": "PAL99",
         "name": "Arena League 1999",
-        "releaseDate": "1999-01-01"
+        "releaseDate": "1999-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL00",
         "name": "Arena League 2000",
-        "releaseDate": "2000-01-01"
+        "releaseDate": "2000-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL01",
         "name": "Arena League 2001",
-        "releaseDate": "2001-01-01"
+        "releaseDate": "2001-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL02",
         "name": "Arena League 2002",
-        "releaseDate": "2002-01-01"
+        "releaseDate": "2002-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL03",
         "name": "Arena League 2003",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL04",
         "name": "Arena League 2004",
-        "releaseDate": "2004-01-01"
+        "releaseDate": "2004-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL05",
         "name": "Arena League 2005",
-        "releaseDate": "2005-01-01"
+        "releaseDate": "2005-01-01",
+        "type": "promo"
     },
     {
         "code": "PAL06",
         "name": "Arena League 2006",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "ANA",
         "name": "Arena New Player Experience",
-        "releaseDate": "2018-07-14"
+        "releaseDate": "2018-07-14",
+        "type": "starter"
     },
     {
         "code": "PALP",
         "name": "Asia Pacific Land Program",
-        "releaseDate": "1998-09-01"
+        "releaseDate": "1998-09-01",
+        "type": "promo"
     },
     {
         "code": "AVR",
         "name": "Avacyn Restored",
-        "releaseDate": "2012-05-04"
+        "releaseDate": "2012-05-04",
+        "type": "expansion"
     },
     {
         "code": "PAVR",
         "name": "Avacyn Restored Promos",
-        "releaseDate": "2012-04-28"
+        "parentCode": "AVR",
+        "releaseDate": "2012-04-28",
+        "type": "promo"
     },
     {
         "code": "PSS1",
         "name": "BFZ Standard Series",
-        "releaseDate": "2015-10-02"
+        "parentCode": "BFZ",
+        "releaseDate": "2015-10-02",
+        "type": "promo"
     },
     {
         "code": "BRB",
         "name": "Battle Royale Box Set",
-        "releaseDate": "1999-11-12"
+        "releaseDate": "1999-11-12",
+        "type": "box"
     },
     {
         "code": "BFZ",
         "name": "Battle for Zendikar",
-        "releaseDate": "2015-10-02"
+        "releaseDate": "2015-10-02",
+        "type": "expansion"
     },
     {
         "code": "PBFZ",
         "name": "Battle for Zendikar Promos",
-        "releaseDate": "2015-10-02"
+        "parentCode": "BFZ",
+        "releaseDate": "2015-10-02",
+        "type": "promo"
     },
     {
         "code": "TBTH",
         "name": "Battle the Horde",
-        "releaseDate": "2014-03-01"
+        "parentCode": "BNG",
+        "releaseDate": "2014-03-01",
+        "type": "token"
     },
     {
         "code": "BBD",
         "name": "Battlebond",
-        "releaseDate": "2018-06-08"
+        "releaseDate": "2018-06-08",
+        "type": "draft_innovation"
     },
     {
         "code": "PBBD",
         "name": "Battlebond Promos",
-        "releaseDate": "2018-06-09"
+        "parentCode": "BBD",
+        "releaseDate": "2018-06-09",
+        "type": "promo"
     },
     {
         "code": "BTD",
         "name": "Beatdown Box Set",
-        "releaseDate": "2000-10-01"
+        "releaseDate": "2000-10-01",
+        "type": "box"
     },
     {
         "code": "BOK",
         "name": "Betrayers of Kamigawa",
-        "releaseDate": "2005-02-04"
+        "releaseDate": "2005-02-04",
+        "type": "expansion"
     },
     {
         "code": "BNG",
         "name": "Born of the Gods",
-        "releaseDate": "2014-02-07"
+        "releaseDate": "2014-02-07",
+        "type": "expansion"
     },
     {
         "code": "THP2",
         "name": "Born of the Gods Hero's Path",
-        "releaseDate": "2014-02-07"
+        "parentCode": "BNG",
+        "releaseDate": "2014-02-07",
+        "type": "token"
     },
     {
         "code": "PBNG",
         "name": "Born of the Gods Promos",
-        "releaseDate": "2014-02-01"
+        "parentCode": "BNG",
+        "releaseDate": "2014-02-01",
+        "type": "promo"
     },
     {
         "code": "PCEL",
         "name": "Celebration Cards",
-        "releaseDate": "1996-08-14"
+        "releaseDate": "1996-08-14",
+        "type": "memorabilia"
     },
     {
         "code": "CHK",
         "name": "Champions of Kamigawa",
-        "releaseDate": "2004-10-01"
+        "releaseDate": "2004-10-01",
+        "type": "expansion"
     },
     {
         "code": "PCMP",
         "name": "Champs and States",
-        "releaseDate": "2006-03-18"
+        "releaseDate": "2006-03-18",
+        "type": "promo"
     },
     {
         "code": "CHR",
         "name": "Chronicles",
-        "releaseDate": "1995-07-01"
+        "releaseDate": "1995-07-01",
+        "type": "masters"
     },
     {
         "code": "6ED",
         "name": "Classic Sixth Edition",
-        "releaseDate": "1999-04-21"
+        "releaseDate": "1999-04-21",
+        "type": "core"
     },
     {
         "code": "CSP",
         "name": "Coldsnap",
-        "releaseDate": "2006-07-21"
+        "releaseDate": "2006-07-21",
+        "type": "expansion"
     },
     {
         "code": "CST",
         "name": "Coldsnap Theme Decks",
-        "releaseDate": "2006-07-21"
+        "parentCode": "CSP",
+        "releaseDate": "2006-07-21",
+        "type": "box"
     },
     {
         "code": "CED",
         "name": "Collectors’ Edition",
-        "releaseDate": "1993-12-10"
+        "releaseDate": "1993-12-10",
+        "type": "memorabilia"
     },
     {
         "code": "CMD",
         "name": "Commander 2011",
-        "releaseDate": "2011-06-17"
+        "releaseDate": "2011-06-17",
+        "type": "commander"
     },
     {
         "code": "PCMD",
         "name": "Commander 2011 Launch Party",
-        "releaseDate": "2011-06-17"
+        "parentCode": "CMD",
+        "releaseDate": "2011-06-17",
+        "type": "memorabilia"
     },
     {
         "code": "OCMD",
         "name": "Commander 2011 Oversized",
-        "releaseDate": "2011-06-17"
+        "parentCode": "CMD",
+        "releaseDate": "2011-06-17",
+        "type": "memorabilia"
     },
     {
         "code": "C13",
         "name": "Commander 2013",
-        "releaseDate": "2013-11-01"
+        "releaseDate": "2013-11-01",
+        "type": "commander"
     },
     {
         "code": "OC13",
         "name": "Commander 2013 Oversized",
-        "releaseDate": "2013-11-01"
+        "parentCode": "C13",
+        "releaseDate": "2013-11-01",
+        "type": "memorabilia"
     },
     {
         "code": "C14",
         "name": "Commander 2014",
-        "releaseDate": "2014-11-07"
+        "releaseDate": "2014-11-07",
+        "type": "commander"
     },
     {
         "code": "OC14",
         "name": "Commander 2014 Oversized",
-        "releaseDate": "2014-11-07"
+        "parentCode": "C14",
+        "releaseDate": "2014-11-07",
+        "type": "memorabilia"
     },
     {
         "code": "C15",
         "name": "Commander 2015",
-        "releaseDate": "2015-11-13"
+        "releaseDate": "2015-11-13",
+        "type": "commander"
     },
     {
         "code": "OC15",
         "name": "Commander 2015 Oversized",
-        "releaseDate": "2015-11-13"
+        "parentCode": "C15",
+        "releaseDate": "2015-11-13",
+        "type": "memorabilia"
     },
     {
         "code": "C16",
         "name": "Commander 2016",
-        "releaseDate": "2016-11-11"
+        "releaseDate": "2016-11-11",
+        "type": "commander"
     },
     {
         "code": "OC16",
         "name": "Commander 2016 Oversized",
-        "releaseDate": "2016-11-11"
+        "parentCode": "C16",
+        "releaseDate": "2016-11-11",
+        "type": "memorabilia"
     },
     {
         "code": "C17",
         "name": "Commander 2017",
-        "releaseDate": "2017-08-25"
+        "releaseDate": "2017-08-25",
+        "type": "commander"
     },
     {
         "code": "OC17",
         "name": "Commander 2017 Oversized",
-        "releaseDate": "2017-08-25"
+        "parentCode": "C17",
+        "releaseDate": "2017-08-25",
+        "type": "memorabilia"
     },
     {
         "code": "C18",
         "name": "Commander 2018",
-        "releaseDate": "2018-08-09"
+        "releaseDate": "2018-08-09",
+        "type": "commander"
     },
     {
         "code": "OC18",
         "name": "Commander 2018 Oversized",
-        "releaseDate": "2018-08-09"
+        "parentCode": "C18",
+        "releaseDate": "2018-08-09",
+        "type": "memorabilia"
     },
     {
         "code": "CMA",
         "name": "Commander Anthology",
-        "releaseDate": "2017-06-06"
+        "releaseDate": "2017-06-06",
+        "type": "commander"
     },
     {
         "code": "CM2",
         "name": "Commander Anthology Volume II",
-        "releaseDate": "2018-06-08"
+        "releaseDate": "2018-06-08",
+        "type": "commander"
     },
     {
         "code": "CM1",
         "name": "Commander's Arsenal",
-        "releaseDate": "2012-11-02"
+        "releaseDate": "2012-11-02",
+        "type": "commander"
     },
     {
         "code": "OCM1",
         "name": "Commander's Arsenal Oversized",
-        "releaseDate": "2012-11-02"
+        "parentCode": "CM1",
+        "releaseDate": "2012-11-02",
+        "type": "memorabilia"
     },
     {
         "code": "CON",
         "name": "Conflux",
-        "releaseDate": "2009-02-06"
+        "releaseDate": "2009-02-06",
+        "type": "expansion"
     },
     {
         "code": "CNS",
         "name": "Conspiracy",
-        "releaseDate": "2014-06-06"
+        "releaseDate": "2014-06-06",
+        "type": "draft_innovation"
     },
     {
         "code": "CN2",
         "name": "Conspiracy: Take the Crown",
-        "releaseDate": "2016-08-26"
+        "releaseDate": "2016-08-26",
+        "type": "draft_innovation"
     },
     {
         "code": "M19",
         "name": "Core Set 2019",
-        "releaseDate": "2018-07-13"
+        "releaseDate": "2018-07-13",
+        "type": "core"
     },
     {
         "code": "PM19",
         "name": "Core Set 2019 Promos",
-        "releaseDate": "2018-07-13"
+        "parentCode": "M19",
+        "releaseDate": "2018-07-13",
+        "type": "promo"
     },
     {
         "code": "PLGM",
         "name": "DCI Legend Membership",
-        "releaseDate": "1995-01-01"
+        "releaseDate": "1995-01-01",
+        "type": "promo"
     },
     {
         "code": "DKA",
         "name": "Dark Ascension",
-        "releaseDate": "2012-02-03"
+        "releaseDate": "2012-02-03",
+        "type": "expansion"
     },
     {
         "code": "PDKA",
         "name": "Dark Ascension Promos",
-        "releaseDate": "2012-01-28"
+        "parentCode": "DKA",
+        "releaseDate": "2012-01-28",
+        "type": "promo"
     },
     {
         "code": "DST",
         "name": "Darksteel",
-        "releaseDate": "2004-02-06"
+        "releaseDate": "2004-02-06",
+        "type": "expansion"
     },
     {
         "code": "DKM",
         "name": "Deckmasters",
-        "releaseDate": "2001-12-01"
+        "releaseDate": "2001-12-01",
+        "type": "box"
     },
     {
         "code": "TDAG",
         "name": "Defeat a God",
-        "releaseDate": "2014-05-25"
+        "parentCode": "JOU",
+        "releaseDate": "2014-05-25",
+        "type": "token"
     },
     {
         "code": "DIS",
         "name": "Dissension",
-        "releaseDate": "2006-05-05"
+        "releaseDate": "2006-05-05",
+        "type": "expansion"
     },
     {
         "code": "DOM",
         "name": "Dominaria",
-        "releaseDate": "2018-04-27"
+        "releaseDate": "2018-04-27",
+        "type": "expansion"
     },
     {
         "code": "PDOM",
         "name": "Dominaria Promos",
-        "releaseDate": "2018-04-27"
+        "parentCode": "DOM",
+        "releaseDate": "2018-04-27",
+        "type": "promo"
     },
     {
         "code": "PDRC",
         "name": "Dragon Con",
-        "releaseDate": "1994-01-01"
+        "releaseDate": "1994-01-01",
+        "type": "promo"
     },
     {
         "code": "DGM",
         "name": "Dragon's Maze",
-        "releaseDate": "2013-05-03"
+        "releaseDate": "2013-05-03",
+        "type": "expansion"
     },
     {
         "code": "PDGM",
         "name": "Dragon's Maze Promos",
-        "releaseDate": "2013-04-27"
+        "parentCode": "DGM",
+        "releaseDate": "2013-04-27",
+        "type": "promo"
     },
     {
         "code": "DTK",
         "name": "Dragons of Tarkir",
-        "releaseDate": "2015-03-27"
+        "releaseDate": "2015-03-27",
+        "type": "expansion"
     },
     {
         "code": "PDTK",
         "name": "Dragons of Tarkir Promos",
-        "releaseDate": "2015-03-26"
+        "parentCode": "DTK",
+        "releaseDate": "2015-03-26",
+        "type": "promo"
     },
     {
         "code": "DVD",
         "name": "Duel Decks Anthology: Divine vs. Demonic",
-        "releaseDate": "2014-12-05"
+        "releaseDate": "2014-12-05",
+        "type": "duel_deck"
     },
     {
         "code": "EVG",
         "name": "Duel Decks Anthology: Elves vs. Goblins",
-        "releaseDate": "2014-12-05"
+        "releaseDate": "2014-12-05",
+        "type": "duel_deck"
     },
     {
         "code": "GVL",
         "name": "Duel Decks Anthology: Garruk vs. Liliana",
-        "releaseDate": "2014-12-05"
+        "releaseDate": "2014-12-05",
+        "type": "duel_deck"
     },
     {
         "code": "JVC",
         "name": "Duel Decks Anthology: Jace vs. Chandra",
-        "releaseDate": "2014-12-05"
+        "releaseDate": "2014-12-05",
+        "type": "duel_deck"
     },
     {
         "code": "DDH",
         "name": "Duel Decks: Ajani vs. Nicol Bolas",
-        "releaseDate": "2011-09-02"
+        "releaseDate": "2011-09-02",
+        "type": "duel_deck"
     },
     {
         "code": "DDQ",
         "name": "Duel Decks: Blessed vs. Cursed",
-        "releaseDate": "2016-02-26"
+        "releaseDate": "2016-02-26",
+        "type": "duel_deck"
     },
     {
         "code": "DDC",
         "name": "Duel Decks: Divine vs. Demonic",
-        "releaseDate": "2009-04-10"
+        "releaseDate": "2009-04-10",
+        "type": "duel_deck"
     },
     {
         "code": "DDO",
         "name": "Duel Decks: Elspeth vs. Kiora",
-        "releaseDate": "2015-02-27"
+        "releaseDate": "2015-02-27",
+        "type": "duel_deck"
     },
     {
         "code": "DDF",
         "name": "Duel Decks: Elspeth vs. Tezzeret",
-        "releaseDate": "2010-09-03"
+        "releaseDate": "2010-09-03",
+        "type": "duel_deck"
     },
     {
         "code": "DD1",
         "name": "Duel Decks: Elves vs. Goblins",
-        "releaseDate": "2007-11-16"
+        "releaseDate": "2007-11-16",
+        "type": "duel_deck"
     },
     {
         "code": "DDU",
         "name": "Duel Decks: Elves vs. Inventors",
-        "releaseDate": "2018-04-06"
+        "releaseDate": "2018-04-06",
+        "type": "duel_deck"
     },
     {
         "code": "DDD",
         "name": "Duel Decks: Garruk vs. Liliana",
-        "releaseDate": "2009-10-30"
+        "releaseDate": "2009-10-30",
+        "type": "duel_deck"
     },
     {
         "code": "DDL",
         "name": "Duel Decks: Heroes vs. Monsters",
-        "releaseDate": "2013-09-06"
+        "releaseDate": "2013-09-06",
+        "type": "duel_deck"
     },
     {
         "code": "DDJ",
         "name": "Duel Decks: Izzet vs. Golgari",
-        "releaseDate": "2012-09-07"
+        "releaseDate": "2012-09-07",
+        "type": "duel_deck"
     },
     {
         "code": "DD2",
         "name": "Duel Decks: Jace vs. Chandra",
-        "releaseDate": "2008-11-07"
+        "releaseDate": "2008-11-07",
+        "type": "duel_deck"
     },
     {
         "code": "PDD2",
         "name": "Duel Decks: Jace vs. Chandra Japanese Promos",
-        "releaseDate": "2010-12-03"
+        "parentCode": "DD2",
+        "releaseDate": "2010-12-03",
+        "type": "promo"
     },
     {
         "code": "DDM",
         "name": "Duel Decks: Jace vs. Vraska",
-        "releaseDate": "2014-03-14"
+        "releaseDate": "2014-03-14",
+        "type": "duel_deck"
     },
     {
         "code": "DDG",
         "name": "Duel Decks: Knights vs. Dragons",
-        "releaseDate": "2011-04-01"
+        "releaseDate": "2011-04-01",
+        "type": "duel_deck"
     },
     {
         "code": "DDT",
         "name": "Duel Decks: Merfolk vs. Goblins",
-        "releaseDate": "2017-10-24"
+        "releaseDate": "2017-10-24",
+        "type": "duel_deck"
     },
     {
         "code": "DDS",
         "name": "Duel Decks: Mind vs. Might",
-        "releaseDate": "2017-03-31"
+        "releaseDate": "2017-03-31",
+        "type": "duel_deck"
     },
     {
         "code": "TD2",
         "name": "Duel Decks: Mirrodin Pure vs. New Phyrexia",
-        "releaseDate": "2011-05-14"
+        "releaseDate": "2011-05-14",
+        "type": "duel_deck"
     },
     {
         "code": "DDR",
         "name": "Duel Decks: Nissa vs. Ob Nixilis",
-        "releaseDate": "2016-09-02"
+        "releaseDate": "2016-09-02",
+        "type": "duel_deck"
     },
     {
         "code": "DDE",
         "name": "Duel Decks: Phyrexia vs. the Coalition",
-        "releaseDate": "2010-03-19"
+        "releaseDate": "2010-03-19",
+        "type": "duel_deck"
     },
     {
         "code": "DDK",
         "name": "Duel Decks: Sorin vs. Tibalt",
-        "releaseDate": "2013-03-15"
+        "releaseDate": "2013-03-15",
+        "type": "duel_deck"
     },
     {
         "code": "DDN",
         "name": "Duel Decks: Speed vs. Cunning",
-        "releaseDate": "2014-09-05"
+        "releaseDate": "2014-09-05",
+        "type": "duel_deck"
     },
     {
         "code": "DDI",
         "name": "Duel Decks: Venser vs. Koth",
-        "releaseDate": "2012-03-30"
+        "releaseDate": "2012-03-30",
+        "type": "duel_deck"
     },
     {
         "code": "DDP",
         "name": "Duel Decks: Zendikar vs. Eldrazi",
-        "releaseDate": "2015-08-28"
+        "releaseDate": "2015-08-28",
+        "type": "duel_deck"
     },
     {
         "code": "DPA",
         "name": "Duels of the Planeswalkers",
-        "releaseDate": "2010-06-04"
+        "releaseDate": "2010-06-04",
+        "type": "box"
     },
     {
         "code": "PDTP",
         "name": "Duels of the Planeswalkers Promos 2009",
-        "releaseDate": "2009-01-01"
+        "releaseDate": "2009-01-01",
+        "type": "promo"
     },
     {
         "code": "PDP10",
         "name": "Duels of the Planeswalkers Promos 2010",
-        "releaseDate": "2010-01-01"
+        "releaseDate": "2010-01-01",
+        "type": "promo"
     },
     {
         "code": "PDP11",
         "name": "Duels of the Planeswalkers Promos 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "promo"
     },
     {
         "code": "PDP12",
         "name": "Duels of the Planeswalkers Promos 2012",
-        "releaseDate": "2012-01-01"
+        "releaseDate": "2012-01-01",
+        "type": "promo"
     },
     {
         "code": "PDP13",
         "name": "Duels of the Planeswalkers Promos 2013",
-        "releaseDate": "2013-01-01"
+        "releaseDate": "2013-01-01",
+        "type": "promo"
     },
     {
         "code": "PDP14",
         "name": "Duels of the Planeswalkers Promos 2014",
-        "releaseDate": "2014-01-01"
+        "releaseDate": "2014-01-01",
+        "type": "promo"
     },
     {
         "code": "8ED",
         "name": "Eighth Edition",
-        "releaseDate": "2003-07-28"
+        "releaseDate": "2003-07-28",
+        "type": "core"
     },
     {
         "code": "EMN",
         "name": "Eldritch Moon",
-        "releaseDate": "2016-07-22"
+        "releaseDate": "2016-07-22",
+        "type": "expansion"
     },
     {
         "code": "PEMN",
         "name": "Eldritch Moon Promos",
-        "releaseDate": "2016-07-22"
+        "parentCode": "EMN",
+        "releaseDate": "2016-07-22",
+        "type": "promo"
     },
     {
         "code": "EMA",
         "name": "Eternal Masters",
-        "releaseDate": "2016-06-10"
+        "releaseDate": "2016-06-10",
+        "type": "masters"
     },
     {
         "code": "PELP",
         "name": "European Land Program",
-        "releaseDate": "2000-02-05"
+        "releaseDate": "2000-02-05",
+        "type": "promo"
     },
     {
         "code": "EVE",
         "name": "Eventide",
-        "releaseDate": "2008-07-25"
+        "releaseDate": "2008-07-25",
+        "type": "expansion"
     },
     {
         "code": "EXO",
         "name": "Exodus",
-        "releaseDate": "1998-06-15"
+        "releaseDate": "1998-06-15",
+        "type": "expansion"
     },
     {
         "code": "E02",
         "name": "Explorers of Ixalan",
-        "releaseDate": "2017-11-24"
+        "releaseDate": "2017-11-24",
+        "type": "box"
     },
     {
         "code": "TFTH",
         "name": "Face the Hydra",
-        "releaseDate": "2013-10-19"
+        "parentCode": "THS",
+        "releaseDate": "2013-10-19",
+        "type": "token"
     },
     {
         "code": "FEM",
         "name": "Fallen Empires",
-        "releaseDate": "1994-11-01"
+        "releaseDate": "1994-11-01",
+        "type": "expansion"
     },
     {
         "code": "FRF",
         "name": "Fate Reforged",
-        "releaseDate": "2015-01-23"
+        "releaseDate": "2015-01-23",
+        "type": "expansion"
     },
     {
         "code": "CP2",
         "name": "Fate Reforged Clash Pack",
-        "releaseDate": "2015-01-24"
+        "parentCode": "FRF",
+        "releaseDate": "2015-01-24",
+        "type": "starter"
     },
     {
         "code": "PFRF",
         "name": "Fate Reforged Promos",
-        "releaseDate": "2015-01-22"
+        "parentCode": "FRF",
+        "releaseDate": "2015-01-22",
+        "type": "promo"
     },
     {
         "code": "5DN",
         "name": "Fifth Dawn",
-        "releaseDate": "2004-06-04"
+        "releaseDate": "2004-06-04",
+        "type": "expansion"
     },
     {
         "code": "5ED",
         "name": "Fifth Edition",
-        "releaseDate": "1997-03-24"
+        "releaseDate": "1997-03-24",
+        "type": "core"
     },
     {
         "code": "FBB",
         "name": "Foreign Black Border",
-        "releaseDate": "1995-04-01"
+        "releaseDate": "1995-04-01",
+        "type": "core"
     },
     {
         "code": "4ED",
         "name": "Fourth Edition",
-        "releaseDate": "1995-04-01"
+        "releaseDate": "1995-04-01",
+        "type": "core"
     },
     {
         "code": "FNM",
         "name": "Friday Night Magic 2000",
-        "releaseDate": "2000-01-01"
+        "releaseDate": "2000-01-01",
+        "type": "promo"
     },
     {
         "code": "F01",
         "name": "Friday Night Magic 2001",
-        "releaseDate": "2001-01-01"
+        "releaseDate": "2001-01-01",
+        "type": "promo"
     },
     {
         "code": "F02",
         "name": "Friday Night Magic 2002",
-        "releaseDate": "2002-01-01"
+        "releaseDate": "2002-01-01",
+        "type": "promo"
     },
     {
         "code": "F03",
         "name": "Friday Night Magic 2003",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "promo"
     },
     {
         "code": "F04",
         "name": "Friday Night Magic 2004",
-        "releaseDate": "2004-01-01"
+        "releaseDate": "2004-01-01",
+        "type": "promo"
     },
     {
         "code": "F05",
         "name": "Friday Night Magic 2005",
-        "releaseDate": "2005-01-01"
+        "releaseDate": "2005-01-01",
+        "type": "promo"
     },
     {
         "code": "F06",
         "name": "Friday Night Magic 2006",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "F07",
         "name": "Friday Night Magic 2007",
-        "releaseDate": "2007-01-01"
+        "releaseDate": "2007-01-01",
+        "type": "promo"
     },
     {
         "code": "F08",
         "name": "Friday Night Magic 2008",
-        "releaseDate": "2008-01-01"
+        "releaseDate": "2008-01-01",
+        "type": "promo"
     },
     {
         "code": "F09",
         "name": "Friday Night Magic 2009",
-        "releaseDate": "2009-01-01"
+        "releaseDate": "2009-01-01",
+        "type": "promo"
     },
     {
         "code": "F10",
         "name": "Friday Night Magic 2010",
-        "releaseDate": "2010-01-01"
+        "releaseDate": "2010-01-01",
+        "type": "promo"
     },
     {
         "code": "F11",
         "name": "Friday Night Magic 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "promo"
     },
     {
         "code": "F12",
         "name": "Friday Night Magic 2012",
-        "releaseDate": "2012-01-01"
+        "releaseDate": "2012-01-01",
+        "type": "promo"
     },
     {
         "code": "F13",
         "name": "Friday Night Magic 2013",
-        "releaseDate": "2013-01-01"
+        "releaseDate": "2013-01-01",
+        "type": "promo"
     },
     {
         "code": "F14",
         "name": "Friday Night Magic 2014",
-        "releaseDate": "2014-01-01"
+        "releaseDate": "2014-01-01",
+        "type": "promo"
     },
     {
         "code": "F15",
         "name": "Friday Night Magic 2015",
-        "releaseDate": "2015-01-01"
+        "releaseDate": "2015-01-01",
+        "type": "promo"
     },
     {
         "code": "F16",
         "name": "Friday Night Magic 2016",
-        "releaseDate": "2016-01-01"
+        "releaseDate": "2016-01-01",
+        "type": "promo"
     },
     {
         "code": "F17",
         "name": "Friday Night Magic 2017",
-        "releaseDate": "2017-01-01"
+        "releaseDate": "2017-01-01",
+        "type": "promo"
     },
     {
         "code": "F18",
         "name": "Friday Night Magic 2018",
-        "releaseDate": "2017-12-27"
+        "releaseDate": "2017-12-27",
+        "type": "promo"
     },
     {
         "code": "V15",
         "name": "From the Vault: Angels",
-        "releaseDate": "2015-08-21"
+        "releaseDate": "2015-08-21",
+        "type": "from_the_vault"
     },
     {
         "code": "V14",
         "name": "From the Vault: Annihilation",
-        "releaseDate": "2014-08-22"
+        "releaseDate": "2014-08-22",
+        "type": "from_the_vault"
     },
     {
         "code": "DRB",
         "name": "From the Vault: Dragons",
-        "releaseDate": "2008-08-29"
+        "releaseDate": "2008-08-29",
+        "type": "from_the_vault"
     },
     {
         "code": "V09",
         "name": "From the Vault: Exiled",
-        "releaseDate": "2009-08-28"
+        "releaseDate": "2009-08-28",
+        "type": "from_the_vault"
     },
     {
         "code": "V11",
         "name": "From the Vault: Legends",
-        "releaseDate": "2011-08-26"
+        "releaseDate": "2011-08-26",
+        "type": "from_the_vault"
     },
     {
         "code": "V16",
         "name": "From the Vault: Lore",
-        "releaseDate": "2016-08-19"
+        "releaseDate": "2016-08-19",
+        "type": "from_the_vault"
     },
     {
         "code": "V12",
         "name": "From the Vault: Realms",
-        "releaseDate": "2012-08-31"
+        "releaseDate": "2012-08-31",
+        "type": "from_the_vault"
     },
     {
         "code": "V10",
         "name": "From the Vault: Relics",
-        "releaseDate": "2010-08-27"
+        "releaseDate": "2010-08-27",
+        "type": "from_the_vault"
     },
     {
         "code": "V17",
         "name": "From the Vault: Transform",
-        "releaseDate": "2017-11-24"
+        "releaseDate": "2017-11-24",
+        "type": "from_the_vault"
     },
     {
         "code": "V13",
         "name": "From the Vault: Twenty",
-        "releaseDate": "2013-08-23"
+        "releaseDate": "2013-08-23",
+        "type": "from_the_vault"
     },
     {
         "code": "FUT",
         "name": "Future Sight",
-        "releaseDate": "2007-05-04"
+        "releaseDate": "2007-05-04",
+        "type": "expansion"
     },
     {
         "code": "GK1",
         "name": "GRN Guild Kit",
-        "releaseDate": "2018-11-02"
+        "releaseDate": "2018-11-02",
+        "type": "box"
     },
     {
         "code": "PRWK",
         "name": "GRN Ravnica Weekend",
-        "releaseDate": "2018-10-05"
+        "parentCode": "GRN",
+        "releaseDate": "2018-10-05",
+        "type": "promo"
     },
     {
         "code": "GNT",
         "name": "Game Night",
-        "releaseDate": "2018-11-16"
+        "releaseDate": "2018-11-16",
+        "type": "box"
     },
     {
         "code": "GTC",
         "name": "Gatecrash",
-        "releaseDate": "2013-02-01"
+        "releaseDate": "2013-02-01",
+        "type": "expansion"
     },
     {
         "code": "PGTC",
         "name": "Gatecrash Promos",
-        "releaseDate": "2013-01-26"
+        "parentCode": "GTC",
+        "releaseDate": "2013-01-26",
+        "type": "promo"
     },
     {
         "code": "PGTW",
         "name": "Gateway 2006",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "PG07",
         "name": "Gateway 2007",
-        "releaseDate": "2007-01-01"
+        "releaseDate": "2007-01-01",
+        "type": "promo"
     },
     {
         "code": "PG08",
         "name": "Gateway 2008",
-        "releaseDate": "2008-01-01"
+        "releaseDate": "2008-01-01",
+        "type": "promo"
     },
     {
         "code": "GS1",
         "name": "Global Series Jiang Yanggu & Mu Yanling",
-        "releaseDate": "2018-06-22"
+        "releaseDate": "2018-06-22",
+        "type": "duel_deck"
     },
     {
         "code": "PGPX",
         "name": "Grand Prix Promos",
-        "releaseDate": "2007-02-24"
+        "releaseDate": "2007-02-24",
+        "type": "promo"
     },
     {
         "code": "GPT",
         "name": "Guildpact",
-        "releaseDate": "2006-02-03"
+        "releaseDate": "2006-02-03",
+        "type": "expansion"
     },
     {
         "code": "GRN",
         "name": "Guilds of Ravnica",
-        "releaseDate": "2018-10-05"
+        "releaseDate": "2018-10-05",
+        "type": "expansion"
     },
     {
         "code": "PGRN",
         "name": "Guilds of Ravnica Promos",
-        "releaseDate": "2018-10-05"
+        "parentCode": "GRN",
+        "releaseDate": "2018-10-05",
+        "type": "promo"
     },
     {
         "code": "PGRU",
         "name": "Guru",
-        "releaseDate": "1999-07-12"
+        "releaseDate": "1999-07-12",
+        "type": "promo"
     },
     {
         "code": "PHUK",
         "name": "Hachette UK",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "box"
     },
     {
         "code": "HHO",
         "name": "Happy Holidays",
-        "releaseDate": "2006-12-31"
+        "releaseDate": "2006-12-31",
+        "type": "funny"
     },
     {
         "code": "PHPR",
         "name": "HarperPrism Book Promos",
-        "releaseDate": "1994-01-01"
+        "releaseDate": "1994-01-01",
+        "type": "promo"
     },
     {
         "code": "H17",
         "name": "HasCon 2017",
-        "releaseDate": "2017-09-20"
+        "releaseDate": "2017-09-20",
+        "type": "funny"
     },
     {
         "code": "HML",
         "name": "Homelands",
-        "releaseDate": "1995-10-01"
+        "releaseDate": "1995-10-01",
+        "type": "expansion"
     },
     {
         "code": "HOU",
         "name": "Hour of Devastation",
-        "releaseDate": "2017-07-14"
+        "releaseDate": "2017-07-14",
+        "type": "expansion"
     },
     {
         "code": "PHOU",
         "name": "Hour of Devastation Promos",
-        "releaseDate": "2017-07-14"
+        "parentCode": "HOU",
+        "releaseDate": "2017-07-14",
+        "type": "promo"
     },
     {
         "code": "PIDW",
         "name": "IDW Comics 2012",
-        "releaseDate": "2012-01-01"
+        "releaseDate": "2012-01-01",
+        "type": "promo"
     },
     {
         "code": "PI13",
         "name": "IDW Comics 2013",
-        "releaseDate": "2013-01-01"
+        "releaseDate": "2013-01-01",
+        "type": "promo"
     },
     {
         "code": "PI14",
         "name": "IDW Comics 2014",
-        "releaseDate": "2014-01-01"
+        "releaseDate": "2014-01-01",
+        "type": "promo"
     },
     {
         "code": "ICE",
         "name": "Ice Age",
-        "releaseDate": "1995-06-01"
+        "releaseDate": "1995-06-01",
+        "type": "expansion"
     },
     {
         "code": "IMA",
         "name": "Iconic Masters",
-        "releaseDate": "2017-11-17"
+        "releaseDate": "2017-11-17",
+        "type": "masters"
     },
     {
         "code": "ISD",
         "name": "Innistrad",
-        "releaseDate": "2011-09-30"
+        "releaseDate": "2011-09-30",
+        "type": "expansion"
     },
     {
         "code": "PISD",
         "name": "Innistrad Promos",
-        "releaseDate": "2011-09-24"
+        "parentCode": "ISD",
+        "releaseDate": "2011-09-24",
+        "type": "promo"
     },
     {
         "code": "CEI",
         "name": "Intl. Collectors’ Edition",
-        "releaseDate": "1993-12-10"
+        "releaseDate": "1993-12-10",
+        "type": "memorabilia"
     },
     {
         "code": "ITP",
         "name": "Introductory Two-Player Set",
-        "releaseDate": "1996-12-31"
+        "releaseDate": "1996-12-31",
+        "type": "starter"
     },
     {
         "code": "INV",
         "name": "Invasion",
-        "releaseDate": "2000-10-02"
+        "releaseDate": "2000-10-02",
+        "type": "expansion"
     },
     {
         "code": "XLN",
         "name": "Ixalan",
-        "releaseDate": "2017-09-29"
+        "releaseDate": "2017-09-29",
+        "type": "expansion"
     },
     {
         "code": "PXLN",
         "name": "Ixalan Promos",
-        "releaseDate": "2017-09-29"
+        "parentCode": "XLN",
+        "releaseDate": "2017-09-29",
+        "type": "promo"
     },
     {
         "code": "PJJT",
         "name": "Japan Junior Tournament",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "promo"
     },
     {
         "code": "JOU",
         "name": "Journey into Nyx",
-        "releaseDate": "2014-05-02"
+        "releaseDate": "2014-05-02",
+        "type": "expansion"
     },
     {
         "code": "THP3",
         "name": "Journey into Nyx Hero's Path",
-        "releaseDate": "2014-05-02"
+        "parentCode": "JOU",
+        "releaseDate": "2014-05-02",
+        "type": "token"
     },
     {
         "code": "PJOU",
         "name": "Journey into Nyx Promos",
-        "releaseDate": "2014-04-26"
+        "parentCode": "JOU",
+        "releaseDate": "2014-04-26",
+        "type": "promo"
     },
     {
         "code": "JGP",
         "name": "Judge Gift Cards 1998",
-        "releaseDate": "1998-01-01"
+        "releaseDate": "1998-01-01",
+        "type": "promo"
     },
     {
         "code": "G99",
         "name": "Judge Gift Cards 1999",
-        "releaseDate": "1999-01-01"
+        "releaseDate": "1999-01-01",
+        "type": "promo"
     },
     {
         "code": "G00",
         "name": "Judge Gift Cards 2000",
-        "releaseDate": "2000-01-01"
+        "releaseDate": "2000-01-01",
+        "type": "promo"
     },
     {
         "code": "G01",
         "name": "Judge Gift Cards 2001",
-        "releaseDate": "2001-01-01"
+        "releaseDate": "2001-01-01",
+        "type": "promo"
     },
     {
         "code": "G02",
         "name": "Judge Gift Cards 2002",
-        "releaseDate": "2002-01-01"
+        "releaseDate": "2002-01-01",
+        "type": "promo"
     },
     {
         "code": "G03",
         "name": "Judge Gift Cards 2003",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "promo"
     },
     {
         "code": "G04",
         "name": "Judge Gift Cards 2004",
-        "releaseDate": "2004-01-01"
+        "releaseDate": "2004-01-01",
+        "type": "promo"
     },
     {
         "code": "G05",
         "name": "Judge Gift Cards 2005",
-        "releaseDate": "2005-01-01"
+        "releaseDate": "2005-01-01",
+        "type": "promo"
     },
     {
         "code": "G06",
         "name": "Judge Gift Cards 2006",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "G07",
         "name": "Judge Gift Cards 2007",
-        "releaseDate": "2007-01-01"
+        "releaseDate": "2007-01-01",
+        "type": "promo"
     },
     {
         "code": "G08",
         "name": "Judge Gift Cards 2008",
-        "releaseDate": "2008-01-01"
+        "releaseDate": "2008-01-01",
+        "type": "promo"
     },
     {
         "code": "G09",
         "name": "Judge Gift Cards 2009",
-        "releaseDate": "2009-01-01"
+        "releaseDate": "2009-01-01",
+        "type": "promo"
     },
     {
         "code": "G10",
         "name": "Judge Gift Cards 2010",
-        "releaseDate": "2010-01-01"
+        "releaseDate": "2010-01-01",
+        "type": "promo"
     },
     {
         "code": "G11",
         "name": "Judge Gift Cards 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "promo"
     },
     {
         "code": "J12",
         "name": "Judge Gift Cards 2012",
-        "releaseDate": "2012-01-01"
+        "releaseDate": "2012-01-01",
+        "type": "promo"
     },
     {
         "code": "J13",
         "name": "Judge Gift Cards 2013",
-        "releaseDate": "2013-01-01"
+        "releaseDate": "2013-01-01",
+        "type": "promo"
     },
     {
         "code": "J14",
         "name": "Judge Gift Cards 2014",
-        "releaseDate": "2014-01-01"
+        "releaseDate": "2014-01-01",
+        "type": "promo"
     },
     {
         "code": "J15",
         "name": "Judge Gift Cards 2015",
-        "releaseDate": "2015-01-01"
+        "releaseDate": "2015-01-01",
+        "type": "promo"
     },
     {
         "code": "J16",
         "name": "Judge Gift Cards 2016",
-        "releaseDate": "2016-01-01"
+        "releaseDate": "2016-01-01",
+        "type": "promo"
     },
     {
         "code": "J17",
         "name": "Judge Gift Cards 2017",
-        "releaseDate": "2017-01-01"
+        "releaseDate": "2017-01-01",
+        "type": "promo"
     },
     {
         "code": "J18",
         "name": "Judge Gift Cards 2018",
-        "releaseDate": "2018-01-01"
+        "releaseDate": "2018-01-01",
+        "type": "promo"
     },
     {
         "code": "JUD",
         "name": "Judgment",
-        "releaseDate": "2002-05-27"
+        "releaseDate": "2002-05-27",
+        "type": "expansion"
     },
     {
         "code": "PJAS",
         "name": "Junior APAC Series",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "PJSE",
         "name": "Junior Series Europe",
-        "releaseDate": "2005-01-01"
+        "releaseDate": "2005-01-01",
+        "type": "promo"
     },
     {
         "code": "PSUS",
         "name": "Junior Super Series",
-        "releaseDate": "1999-12-01"
+        "releaseDate": "1999-12-01",
+        "type": "promo"
     },
     {
         "code": "KLD",
         "name": "Kaladesh",
-        "releaseDate": "2016-09-30"
+        "releaseDate": "2016-09-30",
+        "type": "expansion"
     },
     {
         "code": "MPS",
         "name": "Kaladesh Inventions",
-        "releaseDate": "2016-09-30"
+        "parentCode": "KLD",
+        "releaseDate": "2016-09-30",
+        "type": "masterpiece"
     },
     {
         "code": "PKLD",
         "name": "Kaladesh Promos",
-        "releaseDate": "2016-09-30"
+        "parentCode": "KLD",
+        "releaseDate": "2016-09-30",
+        "type": "promo"
     },
     {
         "code": "KTK",
         "name": "Khans of Tarkir",
-        "releaseDate": "2014-09-26"
+        "releaseDate": "2014-09-26",
+        "type": "expansion"
     },
     {
         "code": "PKTK",
         "name": "Khans of Tarkir Promos",
-        "releaseDate": "2014-09-20"
+        "parentCode": "KTK",
+        "releaseDate": "2014-09-20",
+        "type": "promo"
     },
     {
         "code": "PLPA",
         "name": "Launch Parties",
-        "releaseDate": "2008-02-01"
+        "releaseDate": "2008-02-01",
+        "type": "promo"
     },
     {
         "code": "L12",
         "name": "League Tokens 2012",
-        "releaseDate": "2012-01-01"
+        "releaseDate": "2012-01-01",
+        "type": "token"
     },
     {
         "code": "L13",
         "name": "League Tokens 2013",
-        "releaseDate": "2013-01-01"
+        "releaseDate": "2013-01-01",
+        "type": "token"
     },
     {
         "code": "L14",
         "name": "League Tokens 2014",
-        "releaseDate": "2014-01-01"
+        "releaseDate": "2014-01-01",
+        "type": "token"
     },
     {
         "code": "L15",
         "name": "League Tokens 2015",
-        "releaseDate": "2015-01-01"
+        "releaseDate": "2015-01-01",
+        "type": "token"
     },
     {
         "code": "L16",
         "name": "League Tokens 2016",
-        "releaseDate": "2016-01-01"
+        "releaseDate": "2016-01-01",
+        "type": "token"
     },
     {
         "code": "L17",
         "name": "League Tokens 2017",
-        "releaseDate": "2017-01-01"
+        "releaseDate": "2017-01-01",
+        "type": "token"
     },
     {
         "code": "OLGC",
         "name": "Legacy Championship",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "memorabilia"
     },
     {
         "code": "PZ1",
         "name": "Legendary Cube",
-        "releaseDate": "2015-11-18"
+        "releaseDate": "2015-11-18",
+        "type": "treasure_chest"
     },
     {
         "code": "LEG",
         "name": "Legends",
-        "releaseDate": "1994-06-01"
+        "releaseDate": "1994-06-01",
+        "type": "expansion"
     },
     {
         "code": "LGN",
         "name": "Legions",
-        "releaseDate": "2003-02-03"
+        "releaseDate": "2003-02-03",
+        "type": "expansion"
     },
     {
         "code": "LEA",
         "name": "Limited Edition Alpha",
-        "releaseDate": "1993-08-05"
+        "releaseDate": "1993-08-05",
+        "type": "core"
     },
     {
         "code": "LEB",
         "name": "Limited Edition Beta",
-        "releaseDate": "1993-10-04"
+        "releaseDate": "1993-10-04",
+        "type": "core"
     },
     {
         "code": "LRW",
         "name": "Lorwyn",
-        "releaseDate": "2007-10-12"
+        "releaseDate": "2007-10-12",
+        "type": "expansion"
     },
     {
         "code": "PPC1",
         "name": "M15 Prerelease Challenge",
-        "releaseDate": "2014-07-12"
+        "parentCode": "M15",
+        "releaseDate": "2014-07-12",
+        "type": "memorabilia"
     },
     {
         "code": "G18",
         "name": "M19 Gift Pack",
-        "releaseDate": "2018-11-16"
+        "parentCode": "M19",
+        "releaseDate": "2018-11-16",
+        "type": "box"
     },
     {
         "code": "PSS3",
         "name": "M19 Standard Showdown",
-        "releaseDate": "2018-07-13"
+        "parentCode": "M19",
+        "releaseDate": "2018-07-13",
+        "type": "promo"
     },
     {
         "code": "PMEI",
         "name": "Magazine Inserts",
-        "releaseDate": "1995-01-01"
+        "releaseDate": "1995-01-01",
+        "type": "promo"
     },
     {
         "code": "M10",
         "name": "Magic 2010",
-        "releaseDate": "2009-07-17"
+        "releaseDate": "2009-07-17",
+        "type": "core"
     },
     {
         "code": "PM10",
         "name": "Magic 2010 Promos",
-        "releaseDate": "2009-07-16"
+        "parentCode": "M10",
+        "releaseDate": "2009-07-16",
+        "type": "promo"
     },
     {
         "code": "M11",
         "name": "Magic 2011",
-        "releaseDate": "2010-07-16"
+        "releaseDate": "2010-07-16",
+        "type": "core"
     },
     {
         "code": "PM11",
         "name": "Magic 2011 Promos",
-        "releaseDate": "2010-07-15"
+        "parentCode": "M11",
+        "releaseDate": "2010-07-15",
+        "type": "promo"
     },
     {
         "code": "M12",
         "name": "Magic 2012",
-        "releaseDate": "2011-07-15"
+        "releaseDate": "2011-07-15",
+        "type": "core"
     },
     {
         "code": "PM12",
         "name": "Magic 2012 Promos",
-        "releaseDate": "2011-07-14"
+        "parentCode": "M12",
+        "releaseDate": "2011-07-14",
+        "type": "promo"
     },
     {
         "code": "M13",
         "name": "Magic 2013",
-        "releaseDate": "2012-07-13"
+        "releaseDate": "2012-07-13",
+        "type": "core"
     },
     {
         "code": "PM13",
         "name": "Magic 2013 Promos",
-        "releaseDate": "2012-07-12"
+        "parentCode": "M13",
+        "releaseDate": "2012-07-12",
+        "type": "promo"
     },
     {
         "code": "M14",
         "name": "Magic 2014",
-        "releaseDate": "2013-07-19"
+        "releaseDate": "2013-07-19",
+        "type": "core"
     },
     {
         "code": "PM14",
         "name": "Magic 2014 Promos",
-        "releaseDate": "2013-07-18"
+        "parentCode": "M14",
+        "releaseDate": "2013-07-18",
+        "type": "promo"
     },
     {
         "code": "M15",
         "name": "Magic 2015",
-        "releaseDate": "2014-07-18"
+        "releaseDate": "2014-07-18",
+        "type": "core"
     },
     {
         "code": "CP1",
         "name": "Magic 2015 Clash Pack",
-        "releaseDate": "2014-07-18"
+        "parentCode": "M15",
+        "releaseDate": "2014-07-18",
+        "type": "starter"
     },
     {
         "code": "PM15",
         "name": "Magic 2015 Promos",
-        "releaseDate": "2014-07-17"
+        "parentCode": "M15",
+        "releaseDate": "2014-07-17",
+        "type": "promo"
     },
     {
         "code": "PMOA",
         "name": "Magic Online Avatars",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "vanguard"
     },
     {
         "code": "PRM",
         "name": "Magic Online Promos",
-        "releaseDate": "2002-06-24"
+        "releaseDate": "2002-06-24",
+        "type": "promo"
     },
     {
         "code": "TD0",
         "name": "Magic Online Theme Decks",
-        "releaseDate": "2010-11-08"
+        "releaseDate": "2010-11-08",
+        "type": "box"
     },
     {
         "code": "ORI",
         "name": "Magic Origins",
-        "releaseDate": "2015-07-17"
+        "releaseDate": "2015-07-17",
+        "type": "core"
     },
     {
         "code": "CP3",
         "name": "Magic Origins Clash Pack",
-        "releaseDate": "2015-07-17"
+        "parentCode": "ORI",
+        "releaseDate": "2015-07-17",
+        "type": "starter"
     },
     {
         "code": "PORI",
         "name": "Magic Origins Promos",
-        "releaseDate": "2015-07-17"
+        "parentCode": "ORI",
+        "releaseDate": "2015-07-17",
+        "type": "promo"
     },
     {
         "code": "MPR",
         "name": "Magic Player Rewards 2001",
-        "releaseDate": "2001-01-01"
+        "releaseDate": "2001-01-01",
+        "type": "promo"
     },
     {
         "code": "PR2",
         "name": "Magic Player Rewards 2002",
-        "releaseDate": "2002-01-01"
+        "releaseDate": "2002-01-01",
+        "type": "promo"
     },
     {
         "code": "P03",
         "name": "Magic Player Rewards 2003",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "promo"
     },
     {
         "code": "P04",
         "name": "Magic Player Rewards 2004",
-        "releaseDate": "2004-01-01"
+        "releaseDate": "2004-01-01",
+        "type": "promo"
     },
     {
         "code": "P05",
         "name": "Magic Player Rewards 2005",
-        "releaseDate": "2005-01-01"
+        "releaseDate": "2005-01-01",
+        "type": "promo"
     },
     {
         "code": "P06",
         "name": "Magic Player Rewards 2006",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "P07",
         "name": "Magic Player Rewards 2007",
-        "releaseDate": "2007-01-01"
+        "releaseDate": "2007-01-01",
+        "type": "promo"
     },
     {
         "code": "P08",
         "name": "Magic Player Rewards 2008",
-        "releaseDate": "2008-01-01"
+        "releaseDate": "2008-01-01",
+        "type": "promo"
     },
     {
         "code": "P09",
         "name": "Magic Player Rewards 2009",
-        "releaseDate": "2009-01-01"
+        "releaseDate": "2009-01-01",
+        "type": "promo"
     },
     {
         "code": "P10",
         "name": "Magic Player Rewards 2010",
-        "releaseDate": "2010-01-01"
+        "releaseDate": "2010-01-01",
+        "type": "promo"
     },
     {
         "code": "P11",
         "name": "Magic Player Rewards 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS",
         "name": "Magic Premiere Shop 2005",
-        "releaseDate": "2005-01-01"
+        "releaseDate": "2005-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS06",
         "name": "Magic Premiere Shop 2006",
-        "releaseDate": "2006-01-01"
+        "releaseDate": "2006-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS07",
         "name": "Magic Premiere Shop 2007",
-        "releaseDate": "2007-01-01"
+        "releaseDate": "2007-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS08",
         "name": "Magic Premiere Shop 2008",
-        "releaseDate": "2008-01-01"
+        "releaseDate": "2008-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS09",
         "name": "Magic Premiere Shop 2009",
-        "releaseDate": "2009-01-01"
+        "releaseDate": "2009-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS10",
         "name": "Magic Premiere Shop 2010",
-        "releaseDate": "2010-01-01"
+        "releaseDate": "2010-01-01",
+        "type": "promo"
     },
     {
         "code": "PMPS11",
         "name": "Magic Premiere Shop 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "promo"
     },
     {
         "code": "PF19",
         "name": "MagicFest 2019",
-        "releaseDate": "2019-01-01"
+        "releaseDate": "2019-01-01",
+        "type": "promo"
     },
     {
         "code": "A25",
         "name": "Masters 25",
-        "releaseDate": "2018-03-16"
+        "releaseDate": "2018-03-16",
+        "type": "masters"
     },
     {
         "code": "ME1",
         "name": "Masters Edition",
-        "releaseDate": "2007-09-10"
+        "releaseDate": "2007-09-10",
+        "type": "masters"
     },
     {
         "code": "ME2",
         "name": "Masters Edition II",
-        "releaseDate": "2008-09-22"
+        "releaseDate": "2008-09-22",
+        "type": "masters"
     },
     {
         "code": "ME3",
         "name": "Masters Edition III",
-        "releaseDate": "2009-09-07"
+        "releaseDate": "2009-09-07",
+        "type": "masters"
     },
     {
         "code": "ME4",
         "name": "Masters Edition IV",
-        "releaseDate": "2011-01-10"
+        "releaseDate": "2011-01-10",
+        "type": "masters"
     },
     {
         "code": "MMQ",
         "name": "Mercadian Masques",
-        "releaseDate": "1999-10-04"
+        "releaseDate": "1999-10-04",
+        "type": "expansion"
     },
     {
         "code": "MIR",
         "name": "Mirage",
-        "releaseDate": "1996-10-08"
+        "releaseDate": "1996-10-08",
+        "type": "expansion"
     },
     {
         "code": "MRD",
         "name": "Mirrodin",
-        "releaseDate": "2003-10-02"
+        "releaseDate": "2003-10-02",
+        "type": "expansion"
     },
     {
         "code": "MBS",
         "name": "Mirrodin Besieged",
-        "releaseDate": "2011-02-04"
+        "releaseDate": "2011-02-04",
+        "type": "expansion"
     },
     {
         "code": "PMBS",
         "name": "Mirrodin Besieged Promos",
-        "releaseDate": "2011-02-03"
+        "parentCode": "MBS",
+        "releaseDate": "2011-02-03",
+        "type": "promo"
     },
     {
         "code": "PBOK",
         "name": "Miscellaneous Book Promos",
-        "releaseDate": "2009-01-27"
+        "releaseDate": "2009-01-27",
+        "type": "promo"
     },
     {
         "code": "MD1",
         "name": "Modern Event Deck 2014",
-        "releaseDate": "2014-05-30"
+        "releaseDate": "2014-05-30",
+        "type": "box"
+    },
+    {
+        "code": "MH1",
+        "name": "Modern Horizons",
+        "releaseDate": "2019-06-14",
+        "type": "draft_innovation"
     },
     {
         "code": "MMA",
         "name": "Modern Masters",
-        "releaseDate": "2013-06-07"
+        "releaseDate": "2013-06-07",
+        "type": "masters"
     },
     {
         "code": "MM2",
         "name": "Modern Masters 2015",
-        "releaseDate": "2015-05-22"
+        "releaseDate": "2015-05-22",
+        "type": "masters"
     },
     {
         "code": "MM3",
         "name": "Modern Masters 2017",
-        "releaseDate": "2017-03-17"
+        "releaseDate": "2017-03-17",
+        "type": "masters"
     },
     {
         "code": "MOR",
         "name": "Morningtide",
-        "releaseDate": "2008-02-01"
+        "releaseDate": "2008-02-01",
+        "type": "expansion"
     },
     {
         "code": "MGB",
         "name": "Multiverse Gift Box",
-        "releaseDate": "1996-11-01"
+        "releaseDate": "1996-11-01",
+        "type": "box"
     },
     {
         "code": "MED",
         "name": "Mythic Edition",
-        "releaseDate": "2018-10-05"
+        "releaseDate": "2018-10-05",
+        "type": "masterpiece"
     },
     {
         "code": "PNAT",
         "name": "Nationals Promos",
-        "releaseDate": "2018-01-25"
+        "releaseDate": "2018-01-25",
+        "type": "promo"
     },
     {
         "code": "NEM",
         "name": "Nemesis",
-        "releaseDate": "2000-02-14"
+        "releaseDate": "2000-02-14",
+        "type": "expansion"
     },
     {
         "code": "NPH",
         "name": "New Phyrexia",
-        "releaseDate": "2011-05-13"
+        "releaseDate": "2011-05-13",
+        "type": "expansion"
     },
     {
         "code": "PNPH",
         "name": "New Phyrexia Promos",
-        "releaseDate": "2011-05-12"
+        "parentCode": "NPH",
+        "releaseDate": "2011-05-12",
+        "type": "promo"
     },
     {
         "code": "9ED",
         "name": "Ninth Edition",
-        "releaseDate": "2005-07-29"
+        "releaseDate": "2005-07-29",
+        "type": "core"
     },
     {
         "code": "OGW",
         "name": "Oath of the Gatewatch",
-        "releaseDate": "2016-01-22"
+        "releaseDate": "2016-01-22",
+        "type": "expansion"
     },
     {
         "code": "POGW",
         "name": "Oath of the Gatewatch Promos",
-        "releaseDate": "2016-01-22"
+        "parentCode": "OGW",
+        "releaseDate": "2016-01-22",
+        "type": "promo"
     },
     {
         "code": "ODY",
         "name": "Odyssey",
-        "releaseDate": "2001-10-01"
+        "releaseDate": "2001-10-01",
+        "type": "expansion"
     },
     {
         "code": "ONS",
         "name": "Onslaught",
-        "releaseDate": "2002-10-07"
+        "releaseDate": "2002-10-07",
+        "type": "expansion"
     },
     {
         "code": "PHEL",
         "name": "Open the Helvault",
-        "releaseDate": "2012-04-28"
+        "parentCode": "AVR",
+        "releaseDate": "2012-04-28",
+        "type": "memorabilia"
     },
     {
         "code": "PLC",
         "name": "Planar Chaos",
-        "releaseDate": "2007-02-02"
+        "releaseDate": "2007-02-02",
+        "type": "expansion"
     },
     {
         "code": "HOP",
         "name": "Planechase",
-        "releaseDate": "2009-09-04"
+        "releaseDate": "2009-09-04",
+        "type": "planechase"
     },
     {
         "code": "PC2",
         "name": "Planechase 2012",
-        "releaseDate": "2012-06-01"
+        "releaseDate": "2012-06-01",
+        "type": "planechase"
     },
     {
         "code": "OPC2",
         "name": "Planechase 2012 Planes",
-        "releaseDate": "2012-06-01"
+        "parentCode": "PC2",
+        "releaseDate": "2012-06-01",
+        "type": "planechase"
     },
     {
         "code": "PCA",
         "name": "Planechase Anthology",
-        "releaseDate": "2016-11-25"
+        "releaseDate": "2016-11-25",
+        "type": "planechase"
     },
     {
         "code": "OPCA",
         "name": "Planechase Anthology Planes",
-        "releaseDate": "2018-12-25"
+        "parentCode": "PCA",
+        "releaseDate": "2018-12-25",
+        "type": "planechase"
     },
     {
         "code": "OHOP",
         "name": "Planechase Planes",
-        "releaseDate": "2009-09-04"
+        "parentCode": "HOP",
+        "releaseDate": "2009-09-04",
+        "type": "planechase"
     },
     {
         "code": "PLS",
         "name": "Planeshift",
-        "releaseDate": "2001-02-05"
+        "releaseDate": "2001-02-05",
+        "type": "expansion"
     },
     {
         "code": "POR",
         "name": "Portal",
-        "releaseDate": "1997-05-01"
+        "releaseDate": "1997-05-01",
+        "type": "starter"
     },
     {
         "code": "PPOD",
         "name": "Portal Demo Game",
-        "releaseDate": "1997-05-01"
+        "parentCode": "POR",
+        "releaseDate": "1997-05-01",
+        "type": "starter"
     },
     {
         "code": "P02",
         "name": "Portal Second Age",
-        "releaseDate": "1998-06-01"
+        "releaseDate": "1998-06-01",
+        "type": "starter"
     },
     {
         "code": "PTK",
         "name": "Portal Three Kingdoms",
-        "releaseDate": "1999-05-01"
+        "releaseDate": "1999-05-01",
+        "type": "starter"
     },
     {
         "code": "PD2",
         "name": "Premium Deck Series: Fire and Lightning",
-        "releaseDate": "2010-11-19"
+        "releaseDate": "2010-11-19",
+        "type": "premium_deck"
     },
     {
         "code": "PD3",
         "name": "Premium Deck Series: Graveborn",
-        "releaseDate": "2011-11-18"
+        "releaseDate": "2011-11-18",
+        "type": "premium_deck"
     },
     {
         "code": "H09",
         "name": "Premium Deck Series: Slivers",
-        "releaseDate": "2009-11-20"
+        "releaseDate": "2009-11-20",
+        "type": "premium_deck"
     },
     {
         "code": "PPRE",
         "name": "Prerelease Events",
-        "releaseDate": "1997-10-04"
+        "releaseDate": "1997-10-04",
+        "type": "promo"
     },
     {
         "code": "PTC",
         "name": "Pro Tour Collector Set",
-        "releaseDate": "1996-05-01"
+        "releaseDate": "1996-05-01",
+        "type": "memorabilia"
     },
     {
         "code": "PPRO",
         "name": "Pro Tour Promos",
-        "releaseDate": "2007-02-09"
+        "releaseDate": "2007-02-09",
+        "type": "promo"
     },
     {
         "code": "PHOP",
         "name": "Promotional Planes",
-        "releaseDate": "2009-09-04"
+        "releaseDate": "2009-09-04",
+        "type": "promo"
     },
     {
         "code": "PARC",
         "name": "Promotional Schemes",
-        "releaseDate": "2010-06-18"
+        "releaseDate": "2010-06-18",
+        "type": "archenemy"
     },
     {
         "code": "PCY",
         "name": "Prophecy",
-        "releaseDate": "2000-06-05"
+        "releaseDate": "2000-06-05",
+        "type": "expansion"
     },
     {
         "code": "GK2",
         "name": "RNA Guild Kit",
-        "releaseDate": "2019-02-15"
+        "releaseDate": "2019-02-15",
+        "type": "box"
     },
     {
         "code": "PRW2",
         "name": "RNA Ravnica Weekend",
-        "releaseDate": "2019-02-16"
+        "parentCode": "RNA",
+        "releaseDate": "2019-02-16",
+        "type": "promo"
     },
     {
         "code": "RNA",
         "name": "Ravnica Allegiance",
-        "releaseDate": "2019-01-25"
+        "releaseDate": "2019-01-25",
+        "type": "expansion"
     },
     {
         "code": "PRNA",
         "name": "Ravnica Allegiance Promos",
-        "releaseDate": "2019-01-25"
+        "parentCode": "RNA",
+        "releaseDate": "2019-01-25",
+        "type": "promo"
     },
     {
         "code": "RAV",
         "name": "Ravnica: City of Guilds",
-        "releaseDate": "2005-10-07"
+        "releaseDate": "2005-10-07",
+        "type": "expansion"
     },
     {
         "code": "PRED",
         "name": "Redemption Program",
-        "releaseDate": "1996-10-01"
+        "releaseDate": "1996-10-01",
+        "type": "promo"
     },
     {
         "code": "PREL",
         "name": "Release Events",
-        "releaseDate": "2003-07-26"
+        "releaseDate": "2003-07-26",
+        "type": "promo"
     },
     {
         "code": "REN",
         "name": "Renaissance",
-        "releaseDate": "1995-08-01"
+        "releaseDate": "1995-08-01",
+        "type": "masters"
     },
     {
         "code": "PRES",
         "name": "Resale Promos",
-        "releaseDate": "2007-01-01"
+        "releaseDate": "2007-01-01",
+        "type": "promo"
     },
     {
         "code": "RTR",
         "name": "Return to Ravnica",
-        "releaseDate": "2012-10-05"
+        "releaseDate": "2012-10-05",
+        "type": "expansion"
     },
     {
         "code": "PRTR",
         "name": "Return to Ravnica Promos",
-        "releaseDate": "2012-10-05"
+        "parentCode": "RTR",
+        "releaseDate": "2012-10-05",
+        "type": "promo"
     },
     {
         "code": "3ED",
         "name": "Revised Edition",
-        "releaseDate": "1994-04-01"
+        "releaseDate": "1994-04-01",
+        "type": "core"
     },
     {
         "code": "RIN",
         "name": "Rinascimento",
-        "releaseDate": "1995-08-01"
+        "releaseDate": "1995-08-01",
+        "type": "masters"
     },
     {
         "code": "ROE",
         "name": "Rise of the Eldrazi",
-        "releaseDate": "2010-04-23"
+        "releaseDate": "2010-04-23",
+        "type": "expansion"
     },
     {
         "code": "PROE",
         "name": "Rise of the Eldrazi Promos",
-        "releaseDate": "2010-04-23"
+        "parentCode": "ROE",
+        "releaseDate": "2010-04-23",
+        "type": "promo"
     },
     {
         "code": "RQS",
         "name": "Rivals Quick Start Set",
-        "releaseDate": "1996-07-01"
+        "releaseDate": "1996-07-01",
+        "type": "box"
     },
     {
         "code": "RIX",
         "name": "Rivals of Ixalan",
-        "releaseDate": "2018-01-19"
+        "releaseDate": "2018-01-19",
+        "type": "expansion"
     },
     {
         "code": "PRIX",
         "name": "Rivals of Ixalan Promos",
-        "releaseDate": "2018-01-19"
+        "parentCode": "RIX",
+        "releaseDate": "2018-01-19",
+        "type": "promo"
     },
     {
         "code": "PSAL",
         "name": "Salvat 2005",
-        "releaseDate": "2005-08-22"
+        "releaseDate": "2005-08-22",
+        "type": "box"
     },
     {
         "code": "PS11",
         "name": "Salvat 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "box"
     },
     {
         "code": "PSDC",
         "name": "San Diego Comic-Con 2013",
-        "releaseDate": "2013-07-18"
+        "releaseDate": "2013-07-18",
+        "type": "promo"
     },
     {
         "code": "PS14",
         "name": "San Diego Comic-Con 2014",
-        "releaseDate": "2014-07-08"
+        "releaseDate": "2014-07-08",
+        "type": "promo"
     },
     {
         "code": "PS15",
         "name": "San Diego Comic-Con 2015",
-        "releaseDate": "2015-07-09"
+        "releaseDate": "2015-07-09",
+        "type": "promo"
     },
     {
         "code": "PS16",
         "name": "San Diego Comic-Con 2016",
-        "releaseDate": "2016-10-01"
+        "releaseDate": "2016-10-01",
+        "type": "promo"
     },
     {
         "code": "PS17",
         "name": "San Diego Comic-Con 2017",
-        "releaseDate": "2017-07-20"
+        "releaseDate": "2017-07-20",
+        "type": "promo"
     },
     {
         "code": "PS18",
         "name": "San Diego Comic-Con 2018",
-        "releaseDate": "2018-07-19"
+        "releaseDate": "2018-07-19",
+        "type": "promo"
     },
     {
         "code": "SOK",
         "name": "Saviors of Kamigawa",
-        "releaseDate": "2005-06-03"
+        "releaseDate": "2005-06-03",
+        "type": "expansion"
     },
     {
         "code": "SOM",
         "name": "Scars of Mirrodin",
-        "releaseDate": "2010-10-01"
+        "releaseDate": "2010-10-01",
+        "type": "expansion"
     },
     {
         "code": "PSOM",
         "name": "Scars of Mirrodin Promos",
-        "releaseDate": "2010-09-30"
+        "parentCode": "SOM",
+        "releaseDate": "2010-09-30",
+        "type": "promo"
     },
     {
         "code": "SCG",
         "name": "Scourge",
-        "releaseDate": "2003-05-26"
+        "releaseDate": "2003-05-26",
+        "type": "expansion"
     },
     {
         "code": "7ED",
         "name": "Seventh Edition",
-        "releaseDate": "2001-04-11"
+        "releaseDate": "2001-04-11",
+        "type": "core"
     },
     {
         "code": "SHM",
         "name": "Shadowmoor",
-        "releaseDate": "2008-05-02"
+        "releaseDate": "2008-05-02",
+        "type": "expansion"
     },
     {
         "code": "SOI",
         "name": "Shadows over Innistrad",
-        "releaseDate": "2016-04-08"
+        "releaseDate": "2016-04-08",
+        "type": "expansion"
     },
     {
         "code": "PSOI",
         "name": "Shadows over Innistrad Promos",
-        "releaseDate": "2016-04-08"
+        "parentCode": "SOI",
+        "releaseDate": "2016-04-08",
+        "type": "promo"
     },
     {
         "code": "ALA",
         "name": "Shards of Alara",
-        "releaseDate": "2008-10-03"
+        "releaseDate": "2008-10-03",
+        "type": "expansion"
     },
     {
         "code": "SS1",
         "name": "Signature Spellbook: Jace",
-        "releaseDate": "2018-06-15"
+        "releaseDate": "2018-06-15",
+        "type": "spellbook"
     },
     {
         "code": "S99",
         "name": "Starter 1999",
-        "releaseDate": "1999-07-01"
+        "releaseDate": "1999-07-01",
+        "type": "starter"
     },
     {
         "code": "S00",
         "name": "Starter 2000",
-        "releaseDate": "2000-04-01"
+        "releaseDate": "2000-04-01",
+        "type": "starter"
     },
     {
         "code": "STH",
         "name": "Stronghold",
-        "releaseDate": "1998-03-02"
+        "releaseDate": "1998-03-02",
+        "type": "expansion"
     },
     {
         "code": "SUM",
         "name": "Summer Magic / Edgar",
-        "releaseDate": "1994-06-21"
+        "releaseDate": "1994-06-21",
+        "type": "core"
     },
     {
         "code": "PSUM",
         "name": "Summer of Magic",
-        "releaseDate": "2007-07-21"
+        "releaseDate": "2007-07-21",
+        "type": "promo"
     },
     {
         "code": "PTKDF",
         "name": "Tarkir Dragonfury",
-        "releaseDate": "2015-04-03"
+        "parentCode": "DTK",
+        "releaseDate": "2015-04-03",
+        "type": "promo"
     },
     {
         "code": "TMP",
         "name": "Tempest",
-        "releaseDate": "1997-10-14"
+        "releaseDate": "1997-10-14",
+        "type": "expansion"
     },
     {
         "code": "TPR",
         "name": "Tempest Remastered",
-        "releaseDate": "2015-05-06"
+        "releaseDate": "2015-05-06",
+        "type": "masters"
     },
     {
         "code": "10E",
         "name": "Tenth Edition",
-        "releaseDate": "2007-07-13"
+        "releaseDate": "2007-07-13",
+        "type": "core"
     },
     {
         "code": "P10E",
         "name": "Tenth Edition Promos",
-        "releaseDate": "2007-07-13"
+        "parentCode": "10E",
+        "releaseDate": "2007-07-13",
+        "type": "promo"
     },
     {
         "code": "DRK",
         "name": "The Dark",
-        "releaseDate": "1994-08-01"
+        "releaseDate": "1994-08-01",
+        "type": "expansion"
     },
     {
         "code": "THS",
         "name": "Theros",
-        "releaseDate": "2013-09-27"
+        "releaseDate": "2013-09-27",
+        "type": "expansion"
     },
     {
         "code": "THP1",
         "name": "Theros Hero's Path",
-        "releaseDate": "2013-09-27"
+        "parentCode": "THS",
+        "releaseDate": "2013-09-27",
+        "type": "token"
     },
     {
         "code": "PTHS",
         "name": "Theros Promos",
-        "releaseDate": "2013-09-21"
+        "parentCode": "THS",
+        "releaseDate": "2013-09-21",
+        "type": "promo"
     },
     {
         "code": "TSP",
         "name": "Time Spiral",
-        "releaseDate": "2006-10-06"
+        "releaseDate": "2006-10-06",
+        "type": "expansion"
     },
     {
         "code": "TSB",
         "name": "Time Spiral Timeshifted",
-        "releaseDate": "2006-10-06"
+        "parentCode": "TSP",
+        "releaseDate": "2006-10-06",
+        "type": "expansion"
     },
     {
         "code": "TOR",
         "name": "Torment",
-        "releaseDate": "2002-02-04"
+        "releaseDate": "2002-02-04",
+        "type": "expansion"
     },
     {
         "code": "P2HG",
         "name": "Two-Headed Giant Tournament",
-        "releaseDate": "2005-12-09"
+        "releaseDate": "2005-12-09",
+        "type": "promo"
     },
     {
         "code": "PURL",
         "name": "URL/Convention Promos",
-        "releaseDate": "2009-02-08"
+        "releaseDate": "2009-02-08",
+        "type": "promo"
     },
     {
         "code": "UGIN",
         "name": "Ugin's Fate",
-        "releaseDate": "2015-01-17"
+        "parentCode": "FRF",
+        "releaseDate": "2015-01-17",
+        "type": "promo"
     },
     {
         "code": "PUMA",
         "name": "Ultimate Box Topper",
-        "releaseDate": "2018-12-07"
+        "parentCode": "UMA",
+        "releaseDate": "2018-12-07",
+        "type": "masterpiece"
     },
     {
         "code": "UMA",
         "name": "Ultimate Masters",
-        "releaseDate": "2018-12-07"
+        "releaseDate": "2018-12-07",
+        "type": "masters"
     },
     {
         "code": "UGL",
         "name": "Unglued",
-        "releaseDate": "1998-08-11"
+        "releaseDate": "1998-08-11",
+        "type": "funny"
     },
     {
         "code": "UNH",
         "name": "Unhinged",
-        "releaseDate": "2004-11-19"
+        "releaseDate": "2004-11-19",
+        "type": "funny"
     },
     {
         "code": "2ED",
         "name": "Unlimited Edition",
-        "releaseDate": "1993-12-01"
+        "releaseDate": "1993-12-01",
+        "type": "core"
     },
     {
         "code": "UST",
         "name": "Unstable",
-        "releaseDate": "2017-12-08"
+        "releaseDate": "2017-12-08",
+        "type": "funny"
     },
     {
         "code": "PUST",
         "name": "Unstable Promos",
-        "releaseDate": "2017-11-13"
+        "parentCode": "UST",
+        "releaseDate": "2017-11-13",
+        "type": "promo"
     },
     {
         "code": "UDS",
         "name": "Urza's Destiny",
-        "releaseDate": "1999-06-07"
+        "releaseDate": "1999-06-07",
+        "type": "expansion"
     },
     {
         "code": "ULG",
         "name": "Urza's Legacy",
-        "releaseDate": "1999-02-15"
+        "releaseDate": "1999-02-15",
+        "type": "expansion"
     },
     {
         "code": "USG",
         "name": "Urza's Saga",
-        "releaseDate": "1998-10-12"
+        "releaseDate": "1998-10-12",
+        "type": "expansion"
     },
     {
         "code": "PVAN",
         "name": "Vanguard Series",
-        "releaseDate": "1997-05-01"
+        "releaseDate": "1997-05-01",
+        "type": "vanguard"
     },
     {
         "code": "OVNT",
         "name": "Vintage Championship",
-        "releaseDate": "2003-01-01"
+        "releaseDate": "2003-01-01",
+        "type": "memorabilia"
     },
     {
         "code": "VMA",
         "name": "Vintage Masters",
-        "releaseDate": "2014-06-16"
+        "releaseDate": "2014-06-16",
+        "type": "masters"
     },
     {
         "code": "VIS",
         "name": "Visions",
-        "releaseDate": "1997-02-03"
+        "releaseDate": "1997-02-03",
+        "type": "expansion"
     },
     {
         "code": "WTH",
         "name": "Weatherlight",
-        "releaseDate": "1997-06-09"
+        "releaseDate": "1997-06-09",
+        "type": "expansion"
     },
     {
         "code": "W16",
         "name": "Welcome Deck 2016",
-        "releaseDate": "2016-04-08"
+        "releaseDate": "2016-04-08",
+        "type": "starter"
     },
     {
         "code": "W17",
         "name": "Welcome Deck 2017",
-        "releaseDate": "2017-04-15"
+        "releaseDate": "2017-04-15",
+        "type": "starter"
     },
     {
         "code": "PWPN",
         "name": "Wizards Play Network 2008",
-        "releaseDate": "2008-10-01"
+        "releaseDate": "2008-10-01",
+        "type": "promo"
     },
     {
         "code": "PWP09",
         "name": "Wizards Play Network 2009",
-        "releaseDate": "2009-01-01"
+        "releaseDate": "2009-01-01",
+        "type": "promo"
     },
     {
         "code": "PWP10",
         "name": "Wizards Play Network 2010",
-        "releaseDate": "2010-01-01"
+        "releaseDate": "2010-01-01",
+        "type": "promo"
     },
     {
         "code": "PWP11",
         "name": "Wizards Play Network 2011",
-        "releaseDate": "2011-01-01"
+        "releaseDate": "2011-01-01",
+        "type": "promo"
     },
     {
         "code": "PWP12",
         "name": "Wizards Play Network 2012",
-        "releaseDate": "2012-01-01"
+        "releaseDate": "2012-01-01",
+        "type": "promo"
     },
     {
         "code": "PWOS",
         "name": "Wizards of the Coast Online Store",
-        "releaseDate": "1999-09-04"
+        "releaseDate": "1999-09-04",
+        "type": "promo"
     },
     {
         "code": "WC97",
         "name": "World Championship Decks 1997",
-        "releaseDate": "1997-08-13"
+        "releaseDate": "1997-08-13",
+        "type": "memorabilia"
     },
     {
         "code": "WC98",
         "name": "World Championship Decks 1998",
-        "releaseDate": "1998-08-12"
+        "releaseDate": "1998-08-12",
+        "type": "memorabilia"
     },
     {
         "code": "WC99",
         "name": "World Championship Decks 1999",
-        "releaseDate": "1999-08-04"
+        "releaseDate": "1999-08-04",
+        "type": "memorabilia"
     },
     {
         "code": "WC00",
         "name": "World Championship Decks 2000",
-        "releaseDate": "2000-08-02"
+        "releaseDate": "2000-08-02",
+        "type": "memorabilia"
     },
     {
         "code": "WC01",
         "name": "World Championship Decks 2001",
-        "releaseDate": "2001-08-08"
+        "releaseDate": "2001-08-08",
+        "type": "memorabilia"
     },
     {
         "code": "WC02",
         "name": "World Championship Decks 2002",
-        "releaseDate": "2002-08-14"
+        "releaseDate": "2002-08-14",
+        "type": "memorabilia"
     },
     {
         "code": "WC03",
         "name": "World Championship Decks 2003",
-        "releaseDate": "2003-08-06"
+        "releaseDate": "2003-08-06",
+        "type": "memorabilia"
     },
     {
         "code": "WC04",
         "name": "World Championship Decks 2004",
-        "releaseDate": "2004-09-01"
+        "releaseDate": "2004-09-01",
+        "type": "memorabilia"
     },
     {
         "code": "PWCQ",
         "name": "World Magic Cup Qualifiers",
-        "releaseDate": "2013-04-06"
+        "releaseDate": "2013-04-06",
+        "type": "promo"
     },
     {
         "code": "PWOR",
         "name": "Worlds",
-        "releaseDate": "1999-08-04"
+        "releaseDate": "1999-08-04",
+        "type": "promo"
     },
     {
         "code": "WWK",
         "name": "Worldwake",
-        "releaseDate": "2010-02-05"
+        "releaseDate": "2010-02-05",
+        "type": "expansion"
     },
     {
         "code": "PWWK",
         "name": "Worldwake Promos",
-        "releaseDate": "2010-02-05"
+        "parentCode": "WWK",
+        "releaseDate": "2010-02-05",
+        "type": "promo"
     },
     {
         "code": "PSS2",
         "name": "XLN Standard Showdown",
-        "releaseDate": "2017-09-29"
+        "parentCode": "XLN",
+        "releaseDate": "2017-09-29",
+        "type": "promo"
     },
     {
         "code": "PXTC",
         "name": "XLN Treasure Chest",
-        "releaseDate": "2017-11-24"
+        "parentCode": "XLN",
+        "releaseDate": "2017-11-24",
+        "type": "promo"
     },
     {
         "code": "PZ2",
         "name": "You Make the Cube",
-        "releaseDate": "2016-11-16"
+        "releaseDate": "2016-11-16",
+        "type": "treasure_chest"
     },
     {
         "code": "ZEN",
         "name": "Zendikar",
-        "releaseDate": "2009-10-02"
+        "releaseDate": "2009-10-02",
+        "type": "expansion"
     },
     {
         "code": "EXP",
         "name": "Zendikar Expeditions",
-        "releaseDate": "2015-10-02"
+        "parentCode": "BFZ",
+        "releaseDate": "2015-10-02",
+        "type": "masterpiece"
     },
     {
         "code": "PZEN",
         "name": "Zendikar Promos",
-        "releaseDate": "2009-10-02"
+        "parentCode": "ZEN",
+        "releaseDate": "2009-10-02",
+        "type": "promo"
     }
 ]
