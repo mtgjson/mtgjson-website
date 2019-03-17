@@ -10,14 +10,11 @@
         class="logo"
         v-if="$site.themeConfig.logo"
         :src="$withBase($site.themeConfig.logo)"
-        :alt="$siteTitle"
         :title="$siteTitle"
       >
-      <span
-        ref="versionNumber"
-        class="version-number"
-      >v{{ version.version }}</span>
     </router-link>
+    
+    <Metadata/>
 
     <div
       class="links"
@@ -36,19 +33,18 @@
 </template>
 
 <script>
-import Version from '../../public/json/version';
+import Metadata from './Metadata.vue';
 import SidebarButton from './SidebarButton.vue'
 import AlgoliaSearchBox from '@AlgoliaSearchBox'
 import SearchBox from '@SearchBox'
 import NavLinks from './NavLinks.vue'
 
 export default {
-  components: { SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
+  components: { Metadata, SidebarButton, NavLinks, SearchBox, AlgoliaSearchBox },
 
   data () {
     return {
-      linksWrapMaxWidth: null,
-      version: Version
+      linksWrapMaxWidth: null
     }
   },
 
@@ -97,14 +93,8 @@ $navbar-horizontal-padding = 1.5rem
     display inline-block
   .logo
     height $navbarHeight - 1.4rem
-    min-width $navbarHeight - 1.4rem
-    margin-right 0.8rem
+    width auto
     vertical-align top
-  .version-number
-    font-size 14px
-    font-weight 600
-    color $textColor
-    position relative
   .links
     padding-left 1.5rem
     box-sizing border-box
@@ -122,8 +112,12 @@ $navbar-horizontal-padding = 1.5rem
 @media (max-width: $MQMobile)
   .navbar
     padding-left 4rem
+    .logo
+      height $navbarHeight - 1.8rem
+      vertical-align middle
     .can-hide
       display none
     .links
       padding-left 1.5rem
+            
 </style>
