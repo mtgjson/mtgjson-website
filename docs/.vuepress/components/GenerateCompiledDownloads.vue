@@ -1,6 +1,6 @@
 <template lang="pug">
   .download-tables
-    GenerateSingleDownload(v-if="files" v-for="(file, index) in files" :file="file")
+    GenerateSingleDownload(v-if="files" v-for="(file, index) in files" :name="index" :file="file")
 </template>
 
 <script>
@@ -14,23 +14,17 @@ export default {
     };
   },
   created(){
-    this.files = this.files.map(
-      file => {
-        const key = 'value';
-        const name = file[key];
+    for(let file in this.files){
+      const example = this.files[file].example;
 
-        if(name.includes('\"')){
-          file[key] = name.split('\"')[1]; // remove quotes
-        }
-
-        return file;
+      if(example.includes('\"')){
+        this.files[file].example = example.split('\"')[1]; // remove quotes
       }
-    );
+    }
   }
 };
 </script>
 
 <style lang="stylus">
-@require '../styles/includes';
 @require '../styles/download';
 </style>

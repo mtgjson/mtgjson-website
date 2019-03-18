@@ -4,36 +4,36 @@
     table(v-bind:class="{hidden: showMobileTable}")
       thead
         tr
-          th(v-for="(value, key) in schema[0]" v:key=key)
-            span {{ key }}
+          th(v-for="(value, key) in headings" v:key=key)
+            span {{ value }}
       tbody
         tr(v-for="(value, key) in schema" v:key=key)
+          td
+            div
+              h3 {{ key }}
           td(v-for="(value, key) in value" v:key=key)
-            div(v-if="key === 'property'")
-              h3(:id="value") {{ value }}
-                a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
-            div(v-else-if="key === 'type'")
+            div(v-if="key === 'type'")
               em {{ value }}
-            div(v-else-if="key === 'example' || key === 'value'")
+            div(v-else-if="key === 'example'")
               code.land-cycler {{ value }}
             div(v-else)
               div.land-cycler {{ value }}
 
     div.mobile-doc-tables(v-bind:class="{hidden: !showMobileTable}")
-      div.mobile-doc-table(v-for="(value, key) in schema" v:key=key v-bind:class="{hidden: !showMobileTable}")
-        div.mobile-doc-table--row(v-for="(value, key) in value" v:key=key)
-          div.mobile-doc-table--row-item(v-if="key === 'property'")
+      div.mobile-doc-table(v-for="(values, key) in schema" v:key=key v-bind:class="{hidden: !showMobileTable}")
+        div.mobile-doc-table--row
+          div.mobile-doc-table--row-item
             div.mobile-doc-table--row-item-key
-              h3(:id="value") {{ key }}
-                a(:href="'#' + value" aria-hidden="true" class="header-anchor") #
+              h3 {{ headings[0] }}
             div.mobile-doc-table--row-item-value
-              span {{ value }}
-          div.mobile-doc-table--row-item(v-else-if="key === 'type'")
+              span {{ key }}
+        div.mobile-doc-table--row(v-for="(value, key) in values" v:key=key)
+          div.mobile-doc-table--row-item(v-if="key === 'type'")
             div.mobile-doc-table--row-item-key
               span {{ key }}
             div.mobile-doc-table--row-item-value
               em {{ value }}
-          div.mobile-doc-table--row-item(v-else-if="key === 'example' || key === 'value'")
+          div.mobile-doc-table--row-item(v-else-if="key === 'example'")
             div.mobile-doc-table--row-item-key
               span {{ key }}
             div.mobile-doc-table--row-item-value
@@ -56,6 +56,7 @@ export default {
       isMobileSize: 960,
       isMobile: false,
       schema: [],
+      headings: ['property','type','example','description']
     };
   },
   created() {
