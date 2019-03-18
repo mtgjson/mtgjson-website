@@ -1,14 +1,12 @@
-[
-  {
-    "property": "date",
+{
+  "date": {
     "type": "string",
     "example": "\"2000-01-01\"",
     "description": "Date of the MTGJSON build."
   },
-  {
-    "property": "version",
+  "version": {
     "type": "string",
     "example": "\"x.x.x\"",
     "description": "Version of the MTGJSON build."
   }
-]
+}
