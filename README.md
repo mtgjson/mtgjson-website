@@ -43,4 +43,4 @@ We use the `.schema` format for docuemntation on structures. In some IDE's this 
 
 # Landcycle
 
-Landcycle is a Typescript/JS class that allows JSON to take mustache variables such as `{{example-variable}}` and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.
+Landcycle is a JS class that allows JSON to take mustache variables such as `{{example-variable}}` and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.

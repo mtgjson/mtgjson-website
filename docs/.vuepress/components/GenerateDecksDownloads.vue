@@ -1,5 +1,5 @@
 <template lang="pug">
-  .download-tables
+  .download-tables(v-if="decks.length")
     .sorting-options
       .sort-row
         div
@@ -28,24 +28,27 @@
 </template>
 
 <script>
-import Sorter from '../modules/Sorter';
+import Sorter from '../scripts/Sorter';
+import fetch from 'node-fetch';
 
 export default {
   name: 'GenerateAllDownloads',
   data() {
     return {
-      defaultDecks: require(`../public/json/DeckLists.json`).decks,
+      defaultDecks: [],
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
-      sorter: Sorter
     };
   },
-  mounted() {
-    this.defaultDecks = this.sorter('name', this.decks);
+  async beforeCreate() {
+    this.defaultDecks = await fetch('https://mtgjson.com/json/DeckLists.json')
+      .then(res => res.json())
+      .then(res => res.decks)
+      .catch(err => err);
   },
   computed: {
     decks() {
-      return this.defaultDecks;
+      return Sorter('name', this.defaultDecks);
     },
   },
 };
@@ -53,5 +56,4 @@ export default {
 
 <style lang="stylus">
 @require '../styles/download';
-
 </style>
