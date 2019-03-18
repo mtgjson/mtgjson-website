@@ -4,7 +4,7 @@
 </template>
 
 <script>
-import GenerateSingleDownload from './GenerateSingleDownload';
+import GenerateSingleDownload from './GenerateSingleDownlod';
 export default {
   name: 'GenerateAllDownloads',
   components: { GenerateSingleDownload },
