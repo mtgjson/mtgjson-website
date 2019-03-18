@@ -1,32 +1,27 @@
-[
-  {
-    "property": "flavorText",
+{
+  "flavorText": {
     "type": "string",
     "example": "\"Schwester von Nicol Bolas. Überlebende des Krieges der Drachenältesten. Die bösartigste ihrer Art.\"",
     "description": "Flavor text in foreign language."
   },
-  {
-    "property": "language",
+  "language": {
     "type": "string",
     "example": "\"German\"",
     "description": "Foreign language of card. Can be English, Spanish, French, German, Italian, Portuguese (Brazil), Japanese, Korean, Russian, Chinese Simplified, or Chinese Traditional. Promo cards can be Hebrew, Latin, Ancient Greek, Arabic, Sanskrit, or Phyrexian."
   },
-  {
-    "property": "multiverseId",
+  "multiverseId": {
     "type": "integer",
     "example": "447637",
     "description": "Multiverse ID of the card."
   },
-  {
-    "property": "name",
+  "name": {
     "type": "string",
     "example": "\"Palladia-Mors, die Verwüsterin\"",
     "description": "Name of the card in foreign language."
   },
-  {
-    "property": "text",
+  "text": {
     "type": "string",
     "example": "\"Fliegend, Wachsamkeit, verursacht Trampelschaden\nPalladia-Mors, die Verwüsterin, hat Fluchsicherheit, falls sie noch keinen Schaden zugefügt hat.\"",
     "description": "Rules text of the card in foreign language."
   }
-]
+}

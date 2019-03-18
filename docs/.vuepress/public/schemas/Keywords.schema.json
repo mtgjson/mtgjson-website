@@ -1,44 +1,37 @@
-[
-  {
-    "property": "AbilityWords",
+{
+  "AbilityWords": {
     "type": "array(string)",
     "example": "[\"undergrowth\"]",
     "description": "List of ability words found in rules text on cards. Will be deprecated."
   },
-  {
-    "property": "abilityWords",
+  "abilityWords": {
     "type": "array(string)",
     "example": "[\"undergrowth\"]",
     "description": "List of ability words found in rules text on cards."
   },
-  {
-    "property": "KeywordAbilities",
+  "KeywordAbilities": {
     "type": "array(string)",
     "example": "[\"convoke\"]",
     "description": "List of keyword abilities found in rules text on cards. Will be deprecated."
   },
-  {
-    "property": "keywordAbilities",
+  "keywordAbilities": {
     "type": "array(string)",
     "example": "[\"convoke\"]",
     "description": "List of keyword abilities found in rules text on cards."
   },
-  {
-    "property": "KeywordActions",
+  "KeywordActions": {
     "type": "array(string)",
     "example": "[\"surveil\"]",
     "description": "List of keyword actions found in rules text on cards. Will be deprecated."
   },
-  {
-    "property": "keywordActions",
+  "keywordActions": {
     "type": "array(string)",
     "example": "[\"surveil\"]",
     "description": "List of keyword actions found in rules text on cards."
   },
-  {
-    "property": "meta",
+  "meta": {
     "type": "object(string: string)",
     "example": "{{version}}",
     "description": "See the {{version}} structure."
   }
-]
+}
