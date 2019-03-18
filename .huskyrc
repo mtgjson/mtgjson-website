@@ -1,7 +1,0 @@
-{
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn build",
-    }
-  }
-}

@@ -12,6 +12,7 @@
     "compile-ts": "tsc",
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "delete-build": "rm -rf docs/.vuepress/dist",
     "heroku-postbuild": "yarn build"
   },
   "dependencies": {
@@ -24,5 +25,10 @@
   },
   "resolutions": {
     "ajv": "6.8.1"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn build && yarn delete-build"
+    }
   }
 }
