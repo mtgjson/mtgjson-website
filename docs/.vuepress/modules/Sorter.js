@@ -22,6 +22,8 @@ export default ( event = '', toSort = [] ) => {
   return toSort.sort((a, b) => {
     a = getItem.call(config, a);
     b = getItem.call(config, b);
+    // + operator before a bool will create a bool's
+    // integer equivilent: true => 1; false => 0
     return config.desc * (a < b ? -1 : +(a > b));
   });
 }
