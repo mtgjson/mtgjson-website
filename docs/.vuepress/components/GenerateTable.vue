@@ -47,8 +47,6 @@
 </template>
 
 <script>
-import Landcycle from '../scripts/Landcycle';
-
 export default {
   name: 'GenerateTable',
   data() {
@@ -75,7 +73,7 @@ export default {
     },
     hydrate() {
       const hand = Array.from(this.$el.querySelectorAll('.land-cycler'));
-      new Landcycle(hand);
+      new this.$landcycle(hand);
     }
   },
   computed: {

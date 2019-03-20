@@ -1,16 +1,39 @@
 <template lang="pug">
   .download-tables
-    GenerateSingleDownload(v-if="files" v-for="(file, index) in files" :name="index" :file="file")
+    .download-table(v-if="files" v-for="(file, index) in files")
+      .download-item(v-if="file")
+        .download-wrap
+          .txt-wrap
+            h3 {{ index }}
+            small
+              span {{ file.description }}
+          //- All set files download
+          .dl-wrap(v-if="file.example === 'AllSetFiles'")
+            a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
+            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
+          //- All deck files download
+          .dl-wrap(v-else-if="file.example === 'AllDeckFiles'")
+            a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
+            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
+          //- Deck lists
+          .dl-wrap(v-else-if="file.example === 'DeckLists'")
+            a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
+            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+          //- Everything else
+          .dl-wrap(v-else)
+            a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
+            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
 </template>
 
 <script>
-import GenerateSingleDownload from './GenerateSingleDownload';
 export default {
   name: 'GenerateAllDownloads',
-  components: { GenerateSingleDownload },
   data() {
     return {
       files: require(`../public/schemas/Files.schema.json`),
+      fileFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
+      fileFormatsAllSetFiles: ['zip', 'bz2', 'gz', 'xz'],
+      fileDirectory: 'json',
     };
   },
   created(){
@@ -27,4 +50,12 @@ export default {
 
 <style lang="stylus">
 @require '../styles/download';
+
+.txt-wrap {
+  small {
+    span {
+      text-transform: none !important;
+    }
+  }
+}
 </style>

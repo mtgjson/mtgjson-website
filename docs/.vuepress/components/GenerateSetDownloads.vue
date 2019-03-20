@@ -1,5 +1,5 @@
 <template lang="pug">
-  .download-tables(v-if="sets.length")
+  .download-tables
     .sorting-options
       .sort-row
         div
@@ -33,27 +33,24 @@
 </template>
 
 <script>
-import Sorter from '../scripts/Sorter';
-import fetch from 'node-fetch';
+import sorter from '../scripts/Sorter';
 
 export default {
   name: 'GenerateSingleSetDownloads',
   data() {
     return {
-      defaultSets: [],
+      defaultSets: this.$promisedSets,
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
+      sorter: sorter
     };
   },
-  async beforeCreate() {
-    this.defaultSets = await fetch('https://mtgjson.com/json/SetList.json')
-      .then(res => res.json())
-      .then(res => res)
-      .catch(err => err);
+  beforeMount(){
+    this.defaultSets = this.sorter('name', this.defaultSets);
   },
   computed: {
     sets() {
-      return Sorter('name', this.defaultSets);
+      return this.defaultSets;
     },
   },
 };
