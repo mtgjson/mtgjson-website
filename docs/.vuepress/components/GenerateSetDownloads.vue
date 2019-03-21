@@ -57,5 +57,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '../styles/download';
+@require '../theme/styles/download';
 </style>

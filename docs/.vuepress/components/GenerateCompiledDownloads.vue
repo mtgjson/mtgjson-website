@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../styles/download';
+@require '../theme/styles/download';
 
 .txt-wrap {
   small {
