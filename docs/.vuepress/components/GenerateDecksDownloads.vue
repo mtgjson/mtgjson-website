@@ -28,20 +28,20 @@
 </template>
 
 <script>
-import Sorter from '../modules/Sorter';
+import sorter from '../scripts/Sorter';
 
 export default {
   name: 'GenerateAllDownloads',
   data() {
     return {
-      defaultDecks: require(`../public/json/DeckLists.json`).decks,
+      defaultDecks: this.$promisedDecks,
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
-      sorter: Sorter
+      sorter: sorter
     };
   },
-  mounted() {
-    this.defaultDecks = this.sorter('name', this.decks);
+  beforeMount(){
+    this.defaultDecks = this.sorter('name', this.defaultDecks);
   },
   computed: {
     decks() {
@@ -53,5 +53,4 @@ export default {
 
 <style lang="stylus">
 @require '../styles/download';
-
 </style>

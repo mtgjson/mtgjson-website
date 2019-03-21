@@ -6,14 +6,8 @@
 let logger = null;
 
 export default class {
-  shouldNotFertilize: boolean;
-  className: string;
-  debug: boolean;
-  lands: any[];
-  hand: any[];
-
-  constructor(hand: any[] = [], optional: boolean) {
-    this.shouldNotFertilize = optional || false;
+  constructor(hand = [], optional = false) {
+    this.shouldNotFertilize = optional;
     this.className = 'Landcycle';
     this.lands = [
       '{{compiled-list}}',
@@ -50,7 +44,7 @@ export default class {
   }
 
 
-  async discard(card: string) {
+  async discard(card = '') {
     logger(`discarding ${card}...`);
 
     let cardName = await this.reveal(card) || card;
@@ -79,7 +73,7 @@ export default class {
    * 
    * @param battlefield DOM elements we want to cycle through and hydrate
    */
-  cycle(battlefield: any[]) {
+  cycle(battlefield = []) {
     for (let land of battlefield) {
       for (let color in this.lands) {
         const card = this.lands[color]
@@ -103,7 +97,7 @@ export default class {
    * 
    * @param card Mustachio'ed card
    */
-  private reveal(card: string) {
+  reveal(card = '') {
     return card.match(/{{(.*?)}}/)[1]
   }
   
@@ -111,7 +105,7 @@ export default class {
    * 
    * @param card multiple word normalizing
    */
-  private faceUp(card: string) {
+  faceUp(card = '') {
     return card.split('-').map( (n, i) => {
       if( i > 0 ){
         return n.charAt(0).toUpperCase() + n.slice(1)
@@ -120,25 +114,25 @@ export default class {
     }).join('')
   }
   
-  private logger(log: any, flag: any = '') {
-    if (this.debug && log && flag === true) {
+  logger(msg = '', flag = '') {
+    if (this.debug && msg && flag === true) {
       console.log(
-        `%c ${this.className} logger :: ${log}`,
+        `%c ${this.className} logger :: ${msg}`,
         'background: seagreen; color: white;'
       );
-    } else if (log && flag === false) {
+    } else if (msg && flag === false) {
       console.log(
-        `%c ${this.className} logger :: ${log}`,
+        `%c ${this.className} logger :: ${msg}`,
         'background: #9b2e2e; color: #ffeeec;'
       );
-    } else if (log && flag === null) {
+    } else if (msg && flag === null) {
       console.log(
-        `%c ${this.className} logger :: ${log}`,
+        `%c ${this.className} logger :: ${msg}`,
         'background: white; color: black;'
       );
     } else if (this.debug) {
       console.log(
-        `${this.className} logger :: ${log}`
+        `${this.className} logger :: ${msg}`
       );
     }
   }

@@ -8,7 +8,6 @@
 </template>
 
 <script>
-import Version from '../../public/json/version';
 import SidebarLinks from './SidebarLinks.vue'
 import NavLinks from './NavLinks.vue'
 

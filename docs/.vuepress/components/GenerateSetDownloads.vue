@@ -4,7 +4,7 @@
       .sort-row
         div
           strong Sort By:
-          select.table-sort-select(@change="sorter($event, list)")
+          select.table-sort-select(@change="sorter($event, sets)")
             option(value="releaseDate:true" selected) Release Date (Newest)
             option(value="releaseDate") Release Date (Oldest)
             option(value="name") Name (Ascending)
@@ -12,7 +12,7 @@
             option(value="code") Code (Ascending)
             option(value="code:true") Code (Descending)
 
-    .download-table(v-for="(set, key) in list")
+    .download-table(v-for="(set, key) in sets")
       .download-item
         .download-wrap
           .img-wrap
@@ -20,9 +20,10 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
             h3(:id="set.code") {{ set.name }}
-              //- a(:href="'#' + set.code" aria-hidden="true" class="header-anchor") #
             small Set Code: 
               span {{ set.code }}
+            small Set Type: 
+              span {{ set.type.replace('_', ' ') }}
             small Release Date: 
               span {{ set.releaseDate }}
           .dl-wrap
@@ -32,24 +33,24 @@
 </template>
 
 <script>
-import Sorter from '../modules/Sorter';
+import sorter from '../scripts/Sorter';
 
 export default {
   name: 'GenerateSingleSetDownloads',
   data() {
     return {
+      defaultSets: this.$promisedSets,
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
-      defaultList: require(`../public/json/SetList.json`),
-      sorter: Sorter
+      sorter: sorter
     };
   },
-  mounted() {
-    this.defaultList = this.sorter('releaseDate:true', this.list);
+  beforeMount(){
+    this.defaultSets = this.sorter('name', this.defaultSets);
   },
   computed: {
-    list() {
-      return this.defaultList;
+    sets() {
+      return this.defaultSets;
     },
   },
 };
@@ -57,5 +58,4 @@ export default {
 
 <style lang="stylus" scoped>
 @require '../styles/download';
-
 </style>
