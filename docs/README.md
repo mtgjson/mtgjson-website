@@ -1,6 +1,6 @@
 ---
 {
-  "title": "MTGJSON | Magic: The Gathering card data in JSON.",
+  "title": "About",
   "meta": [
     {
       "name": "description",

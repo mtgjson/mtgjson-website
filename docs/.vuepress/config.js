@@ -4,7 +4,7 @@ module.exports = {
   host: '0.0.0.0',
   port: '8080',
   // SEO
-  title: 'MTGJSON | Magic: The Gathering card data in JSON.',
+  title: 'MTGJSON',
   description: 'Magic: The Gathering card data in JSON.',
   // Google Analytics
   ga: 'UA-131358443-1',
