@@ -16,7 +16,7 @@
   },
   "cards": {
     "type": "array(object)",
-    "example": " [{{card}}] ",
+    "example": "{{card}}",
     "description": "List of cards in this set."
   },
   "code": {
@@ -38,6 +38,21 @@
     "type": "boolean",
     "example": "false",
     "description": "Set available online only. Can be true or false. (If false, it is usually omitted.)"
+  },
+  "keyruneCode": {
+    "type": "string",
+    "example": "\"KTK\"",
+    "description": "The matching keyrune code for keyrune.css image icons."
+  },
+  "mcmName": {
+    "type": "string",
+    "example": "\"Ravnica Allegiance\"",
+    "description": "The Magic Card Market set name."
+  },
+  "mcmId": {
+    "type": "integer",
+    "example": "2411",
+    "description": "The Magic Card Market set id."
   },
   "meta": {
     "type": "object(string: string)",
@@ -66,17 +81,22 @@
   },
   "tokens": {
     "type": "array(object)",
-    "example": "[{{token}}]",
-    "description": "See the {{token}} structure."
+    "example": "{{token}}",
+    "description": "Tokens available to the set. See the {{token}} structure."
   },
   "totalSetSize": {
     "type": "integer",
     "example": "273",
     "description": "Total number of cards in the set, including promos and related supplemental products."
   },
+  "translations": {
+    "type": "object(string: string)",
+    "example": "{{translations}}",
+    "description": "Translated set name by language. See the {{translations}} structure."
+  },
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "See {{types}} examples."
+    "description": "See {{type}} examples."
   }
 }

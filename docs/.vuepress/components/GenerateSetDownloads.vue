@@ -16,14 +16,15 @@
       .download-item
         .download-wrap
           .img-wrap
-            div(v-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
+            div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
+            div(v-else-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
             h3(:id="set.code") {{ set.name }}
             small Set Code: 
               span {{ set.code }}
             small Set Type: 
-              span {{ set.type.replace('_', ' ') }}
+              span.type {{ set.type }}
             small Release Date: 
               span {{ set.releaseDate }}
           .dl-wrap
@@ -46,7 +47,7 @@ export default {
     };
   },
   beforeMount(){
-    this.defaultSets = this.sorter('name', this.defaultSets);
+    this.defaultSets = this.sorter('releaseDate:true', this.defaultSets);
   },
   computed: {
     sets() {

@@ -32,7 +32,8 @@ module.exports = {
   themeConfig: {
     searchMaxSuggestions: 20,
     displayAllHeaders: true,
-    lastUpdated: 'Last Updated',
+    // Currently does not render on all pages
+    // lastUpdated: 'Last Updated',
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' },
