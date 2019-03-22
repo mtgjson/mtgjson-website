@@ -11,6 +11,7 @@ export default class {
     this.className = 'Landcycle';
     this.lands = [
       '{{compiled-list}}',
+      '{{translations}}',
       '{{frame-effect}}',
       '{{foreign-data}}',
       '{{card-types}}',

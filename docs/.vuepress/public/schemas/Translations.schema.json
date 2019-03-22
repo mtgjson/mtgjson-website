@@ -1,0 +1,52 @@
+{
+  "\"Chinese Simplified\"": {
+    "type": "string",
+    "example": "\"\u6548\u5fe0\u62c9\u5c3c\u5361\"",
+    "description": "Translation in Chinese Simplified."
+  },
+  "\"Chinese Traditional\"": {
+    "type": "string",
+    "example": "\"\u6548\u5fe0\u62c9\u5c3c\u5361\"",
+    "description": "Translation in Chinese Traditional."
+  },
+  "\"French\"": {
+    "type": "string",
+    "example": "\"L'all\u00e9geance de Ravnica\"",
+    "description": "Translated in French."
+  },
+  "\"German\"": {
+    "type": "string",
+    "example": "\"Ravnicas Treue\"",
+    "description": "Translated in German."
+  },
+  "\"Italian\"": {
+    "type": "string",
+    "example": "\"Fedelt\u00e0 di Ravnica\"",
+    "description": "Translated in Italian."
+  },
+  "\"Japanese\"": {
+    "type": "string",
+    "example": "\"\u300e\u30e9\u30f4\u30cb\u30ab\u306e\u732e\u8eab\u300f\"",
+    "description": "Translated in Japanese."
+  },
+  "\"Korean\"": {
+    "type": "string",
+    "example": "\"\ub77c\ube0c\ub2c8\uce74\uc758 \ucda9\uc131\"",
+    "description": "Translated in Korean."
+  },
+  "\"Portuguese (Brazil)\"": {
+    "type": "string",
+    "example": "\"Lealdade em Ravnica\"",
+    "description": "Translated in Portuguese (Brazil)."
+  },
+  "\"Russian\"": {
+    "type": "string",
+    "example": "\"\u00ab\u0412\u044b\u0431\u043e\u0440 \u0420\u0430\u0432\u043d\u0438\u043a\u0438\u00bb\"",
+    "description": "Translated in Russian."
+  },
+  "\"Spanish\"": {
+    "type": "string",
+    "example": "\"La lealtad de R\u00e1vnica\"",
+    "description": "Translated in Spanish."
+  }
+}

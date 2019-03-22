@@ -69,17 +69,23 @@ export default {
 
   computed: {
     lastUpdated () {
-      const def = this.$page.lastUpdated;
-      // Format for standard computer date and drop exact time
-      const unformattedDate = def.split(',')[0].split('/');
-      const unformattedMonth = unformattedDate[0];
-      const unformattedDay = unformattedDate[1];
-      const formattedYear = unformattedDate[2];
-      // Add padding
-      const formattedMonth = unformattedMonth.length < 2? '0' + unformattedMonth : unformattedMonth;
-      const formattedDay = unformattedDay.length < 2? '0' + unformattedDay : unformattedDay;
-      const formattedDate = `${formattedYear}-${formattedMonth}-${formattedDay}`;
-      // Return standard date
+      const date = this.$page.lastUpdated;
+      let formattedDate = '';
+      
+      if(date){
+        // Format for standard computer date and drop exact time
+        const unformattedDate = date.split(',')[0].split('/');
+        const unformattedMonth = unformattedDate[0];
+        const unformattedDay = unformattedDate[1];
+        const formattedYear = unformattedDate[2];
+        // Add padding
+        const formattedMonth = unformattedMonth.length < 2? '0' + unformattedMonth : unformattedMonth;
+        const formattedDay = unformattedDay.length < 2? '0' + unformattedDay : unformattedDay;
+        
+        formattedDate = `${formattedYear}-${formattedMonth}-${formattedDay}`;
+        
+      }
+      
       return formattedDate;
     },
 

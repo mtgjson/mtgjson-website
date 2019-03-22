@@ -5,8 +5,8 @@
   
   h3 {
     font-size: 16px;
-    line-height: 2em;
-    margin: 0;
+    line-height: 1em;
+    margin: 0 0 10px;
   }
 
   .sorting-options {
@@ -28,7 +28,6 @@
     }
   }
 
-
   .download-table {
     border: 1px solid #eaecef;
     box-sizing: border-box;
@@ -49,7 +48,7 @@
       flex: 0 0 100%;
 
       .download-wrap {
-        padding: 10px 20px 20px;
+        padding: 15px 20px 20px;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
@@ -93,6 +92,10 @@
             span {
               font-weight: normal;
               text-transform: capitalize;
+
+              &.type {
+                text-transform: none;
+              }
             }
           }
         }
