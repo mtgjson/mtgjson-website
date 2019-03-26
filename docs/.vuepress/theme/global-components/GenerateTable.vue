@@ -58,7 +58,7 @@ export default {
     };
   },
   created() {
-    this.schema = require(`../public/schemas/${
+    this.schema = require(`../../public/schemas/${
       this.$page.frontmatter.schema
     }.schema.json`);
   },

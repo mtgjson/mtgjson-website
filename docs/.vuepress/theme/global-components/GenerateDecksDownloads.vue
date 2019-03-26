@@ -28,7 +28,7 @@
 </template>
 
 <script>
-import sorter from '../scripts/Sorter';
+import sorter from '../../scripts/Sorter';
 
 export default {
   name: 'GenerateAllDownloads',
@@ -52,5 +52,5 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../theme/styles/download';
+@require '../styles/download';
 </style>

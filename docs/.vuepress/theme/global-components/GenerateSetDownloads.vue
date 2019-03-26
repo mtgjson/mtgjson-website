@@ -34,7 +34,7 @@
 </template>
 
 <script>
-import sorter from '../scripts/Sorter';
+import sorter from '../../scripts/Sorter';
 
 export default {
   name: 'GenerateSingleSetDownloads',
@@ -58,5 +58,5 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-@require '../theme/styles/download';
+@require '../styles/download';
 </style>

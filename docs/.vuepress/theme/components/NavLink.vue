@@ -1,49 +1,43 @@
-<template>
-  <router-link
-    class="nav-link"
+<template lang="pug">
+  router-link.nav-link(
     :to="link"
     v-if="!isExternal(link)"
-    :exact="exact"
-  >{{ item.text }}</router-link>
-  <a
+    :exact="exact") {{ item.text }}
+  a.nav-link.external(
     v-else
     :href="link"
-    class="nav-link external"
     :target="isMailto(link) || isTel(link) ? null : '_blank'"
-    :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'"
-  >
-    {{ item.text }}
-    <OutboundLink/>
-  </a>
+    :rel="isMailto(link) || isTel(link) ? null : 'noopener noreferrer'") {{ item.text }}
+    
+    OutboundLink
 </template>
 
 <script>
-import { isExternal, isMailto, isTel, ensureExt } from '../util'
+import { isExternal, isMailto, isTel, ensureExt } from '../util';
 
 export default {
   props: {
     item: {
-      required: true
-    }
-  },
-
-  computed: {
-    link () {
-      return ensureExt(this.item.link)
+      required: true,
     },
-
-    exact () {
-      if (this.$site.locales) {
-        return Object.keys(this.$site.locales).some(rootLink => rootLink === this.link)
-      }
-      return this.link === '/'
-    }
   },
-
+  computed: {
+    link() {
+      return ensureExt(this.item.link);
+    },
+    exact() {
+      if (this.$site.locales) {
+        return Object.keys(this.$site.locales).some(
+          rootLink => rootLink === this.link
+        );
+      }
+      return this.link === '/';
+    },
+  },
   methods: {
     isExternal,
     isMailto,
-    isTel
-  }
-}
+    isTel,
+  },
+};
 </script>

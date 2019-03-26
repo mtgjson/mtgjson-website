@@ -1,86 +1,71 @@
-<template>
-  <ul
-    class="sidebar-links"
-    v-if="items.length"
-  >
-    <li v-for="(item, i) in items" :key="i">
-      <SidebarGroup
+<template lang="pug">
+  ul.sidebar-links(v-if="items.length")
+    li(v-for="(item, i) in items" :key="i")
+      SidebarGroup(
         v-if="item.type === 'group'"
         :item="item"
         :open="i === openGroupIndex"
         :collapsable="item.collapsable || item.collapsible"
         :depth="depth"
-        @toggle="toggleGroup(i)"
-      />
-      <SidebarLink
+        @toggle="toggleGroup(i)")
+      SidebarLink(
         v-else
         :sidebarDepth="sidebarDepth"
-        :item="item"
-      />
-    </li>
-  </ul>
+        :item="item")
 </template>
 
 <script>
-import SidebarGroup from './SidebarGroup.vue'
-import SidebarLink from './SidebarLink.vue'
-import { isActive } from '../util'
+import SidebarGroup from './SidebarGroup.vue';
+import SidebarLink from './SidebarLink.vue';
+import { isActive } from '../util';
 
 export default {
   name: 'SidebarLinks',
-
   components: { SidebarGroup, SidebarLink },
-
   props: [
     'items',
-    'depth',  // depth of current sidebar links
-    'sidebarDepth' // depth of headers to be extracted
+    'depth', // depth of current sidebar links
+    'sidebarDepth', // depth of headers to be extracted
   ],
-
-  data () {
+  data() {
     return {
-      openGroupIndex: 0
-    }
+      openGroupIndex: 0,
+    };
   },
-
-  created () {
-    this.refreshIndex()
+  created() {
+    this.refreshIndex();
   },
-
   watch: {
-    '$route' () {
-      this.refreshIndex()
-    }
+    $route() {
+      this.refreshIndex();
+    },
   },
-
   methods: {
-    refreshIndex () {
-      const index = resolveOpenGroupIndex(
-        this.$route,
-        this.items
-      )
+    refreshIndex() {
+      const index = resolveOpenGroupIndex(this.$route, this.items);
       if (index > -1) {
-        this.openGroupIndex = index
+        this.openGroupIndex = index;
       }
     },
-
-    toggleGroup (index) {
-      this.openGroupIndex = index === this.openGroupIndex ? -1 : index
+    toggleGroup(index) {
+      this.openGroupIndex = index === this.openGroupIndex ? -1 : index;
     },
+    isActive(page) {
+      return isActive(this.$route, page.regularPath);
+    },
+  },
+};
 
-    isActive (page) {
-      return isActive(this.$route, page.regularPath)
-    }
-  }
-}
-
-function resolveOpenGroupIndex (route, items) {
+function resolveOpenGroupIndex(route, items) {
   for (let i = 0; i < items.length; i++) {
-    const item = items[i]
-    if (item.type === 'group' && item.children.some(c => c.type === 'page' && isActive(route, c.path))) {
-      return i
+    const item = items[i];
+    if (
+      item.type === 'group' &&
+      item.children.some(c => c.type === 'page' && isActive(route, c.path))
+    ) {
+      return i;
     }
   }
-  return -1
+  return -1;
 }
 </script>
