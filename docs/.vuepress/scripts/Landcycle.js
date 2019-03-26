@@ -44,15 +44,14 @@ export default class {
     this.cycle(this.hand);
   }
 
-
   async discard(card = '') {
     logger(`discarding ${card}...`);
 
-    let cardName = await this.reveal(card) || card;
+    let cardName = (await this.reveal(card)) || card;
     let plane = '';
     let land = '';
 
-    switch(cardName){
+    switch (cardName) {
       case 'version':
       case 'deck':
         plane = 'files';
@@ -62,8 +61,10 @@ export default class {
         plane = 'structures';
         break;
     }
-    
-    land = `<a class="code-link" href=/${plane}/${cardName}/>${this.faceUp(cardName)}</a>`;
+
+    land = `<a class="code-link" href=/${plane}/${cardName}/>${this.faceUp(
+      cardName
+    )}</a>`;
 
     logger(`land acquired: ${JSON.stringify(land)}`, true);
 
@@ -71,23 +72,26 @@ export default class {
   }
 
   /**
-   * 
+   *
    * @param battlefield DOM elements we want to cycle through and hydrate
    */
-  cycle(battlefield = []) {
+  async cycle(battlefield = []) {
     for (let land of battlefield) {
       for (let color in this.lands) {
-        const card = this.lands[color]
+        const cardToCycle = this.lands[color];
+        const canCycle = land.innerText.indexOf(cardToCycle) > -1;
 
-        if (land.innerText.indexOf(card) > -1) {
-          // Nested here for the promise of new
-          this.discard(card)
-            .then(newLand => {
-              land.innerHTML = land.innerText.replace(card, newLand);
+        if (canCycle) {
+          await this.discard(cardToCycle)
+            .then(async newLand => {
+              land.innerHTML = await land.innerHTML.replace(
+                cardToCycle,
+                newLand
+              );
             })
             .catch(err => {
-              logger(`${card} :: ${err}`, false);
-            })
+              logger(`${cardToCycle} :: ${err}`, false);
+            });
         }
       }
     }
@@ -95,26 +99,29 @@ export default class {
   }
 
   /**
-   * 
+   *
    * @param card Mustachio'ed card
    */
   reveal(card = '') {
-    return card.match(/{{(.*?)}}/)[1]
+    return card.match(/{{(.*?)}}/)[1];
   }
-  
+
   /**
-   * 
+   *
    * @param card multiple word normalizing
    */
   faceUp(card = '') {
-    return card.split('-').map( (n, i) => {
-      if( i > 0 ){
-        return n.charAt(0).toUpperCase() + n.slice(1)
-      }
-      return n;
-    }).join('')
+    return card
+      .split('-')
+      .map((n, i) => {
+        if (i > 0) {
+          return n.charAt(0).toUpperCase() + n.slice(1);
+        }
+        return n;
+      })
+      .join('');
   }
-  
+
   logger(msg = '', flag = '') {
     if (this.debug && msg && flag === true) {
       console.log(
@@ -132,9 +139,7 @@ export default class {
         'background: white; color: black;'
       );
     } else if (this.debug) {
-      console.log(
-        `${this.className} logger :: ${msg}`
-      );
+      console.log(`${this.className} logger :: ${msg}`);
     }
   }
 }
