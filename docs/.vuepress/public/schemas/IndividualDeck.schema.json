@@ -6,7 +6,7 @@
   },
   "mainBoard": {
     "type": "array(object)",
-    "example": "[{{card}}]",
+    "example": "{{card}}",
     "description": "The cards in the main-board. See the {{card}} structure."
   },
   "meta": {
@@ -21,7 +21,7 @@
   },
   "sideBoard": {
     "type": "array(object)",
-    "example": "[{{card}}]",
+    "example": "{{card}}",
     "description": "The cards in the side-board. See the {{card}} structure."
   },
   "type": {

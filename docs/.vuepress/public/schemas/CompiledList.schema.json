@@ -1,7 +1,7 @@
 {
   "files": {
     "type": "array(object)",
-    "example": "[{{files}}]",
+    "example": "{{files}}",
     "description": "All possible compiled outputs from MTGJSON. See the {{files}} structure."
   },
   "meta": {

@@ -1,7 +1,7 @@
 {
   "decks": {
     "type": "array(object)",
-    "example": "[{{decks}}]",
+    "example": "{{decks}}",
     "description": "List of pre-constructed decks. See the {{decks}} structure."
   },
   "meta": {
