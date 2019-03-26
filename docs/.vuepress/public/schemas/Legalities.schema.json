@@ -2,46 +2,46 @@
   "commander": {
     "type": "string",
     "example": "Legal",
-    "description": "Card legality in the Commander play format."
+    "description": "Card is legal in the Commander play format."
   },
   "duel": {
     "type": "string",
     "example": "Banned",
-    "description": "Card legality in the Duel Commander play format."
+    "description": "Card is legal in the Duel Commander play format."
   },
   "frontier": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card not legal in the Standard play format."
+    "description": "Omitted. Card is not legal in the Frontier play format."
   },
   "legacy": {
     "type": "string",
     "example": "Banned",
-    "description": "Card legality in the Legacy play format."
+    "description": "Card is legal in the Legacy play format."
   },
   "modern": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card not legal in the Standard play format."
+    "description": "Omitted. Card is not legal in the Modern play format."
   },
   "pauper": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card not legal in the Pauper play format."
+    "description": "Omitted. Card is not legal in the Pauper play format."
   },
   "penny": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card not legal in the Penny play format."
+    "description": "Omitted. Card is not legal in the Penny play format."
   },
   "standard": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card not legal in the Standard play format."
+    "description": "Omitted. Card is not legal in the Standard play format."
   },
   "vintage": {
     "type": "string",
     "example": "Restricted",
-    "description": "Card legality in the Vintage play format."
+    "description": "Card is legal in the Vintage play format."
   }
 }

@@ -46,7 +46,7 @@
   },
   "foreignData": {
     "type": "array(object)",
-    "example": "[{{foreign-data}}]",
+    "example": "{{foreign-data}}",
     "description": "See the {{foreign-data}} structure."
   },
   "frameEffect": {
@@ -171,7 +171,7 @@
   },
   "rulings": {
     "type": "array(object)",
-    "example": "[{{rulings}}]",
+    "example": "{{rulings}}",
     "description": "See the {{rulings}} structure."
   },
   "scryfallId": {
