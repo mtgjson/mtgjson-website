@@ -1,10 +1,7 @@
-<template>
-  <div class="meta-data" v-if="metaData">
-    <router-link class="version-number" :to="changelogLink">v{{ metaData.version }}</router-link>
-    <!-- <span
-      class="release-date"
-    >({{ metaData.date }})</span>-->
-  </div>
+<template lang="pug">
+  div.meta-data(v-if="metaData")
+    router-link.version-number(
+      :to="changelogLink") {{ metaData.version }}
 </template>
 
 <script>

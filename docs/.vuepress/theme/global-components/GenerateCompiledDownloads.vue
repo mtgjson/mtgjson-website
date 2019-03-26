@@ -30,7 +30,7 @@ export default {
   name: 'GenerateAllDownloads',
   data() {
     return {
-      files: require(`../public/schemas/Files.schema.json`),
+      files: require(`../../public/schemas/Files.schema.json`),
       fileFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       fileFormatsAllSetFiles: ['zip', 'bz2', 'gz', 'xz'],
       fileDirectory: 'json',
@@ -49,7 +49,7 @@ export default {
 </script>
 
 <style lang="stylus">
-@require '../theme/styles/download';
+@require '../styles/download';
 
 .txt-wrap {
   small {
