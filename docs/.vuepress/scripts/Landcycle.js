@@ -8,28 +8,7 @@ let logger = null;
 export default class {
   constructor(hand = [], optional = false) {
     this.shouldNotFertilize = optional;
-    this.className = 'Landcycle';
-    this.lands = [
-      '{{compiled-list}}',
-      '{{translations}}',
-      '{{frame-effect}}',
-      '{{foreign-data}}',
-      '{{card-types}}',
-      '{{legalities}}',
-      '{{all-cards}}',
-      '{{all-sets}}',
-      '{{set-list}}',
-      '{{keywords}}',
-      '{{version}}',
-      '{{rulings}}',
-      '{{token}}',
-      '{{files}}',
-      '{{decks}}',
-      '{{deck}}',
-      '{{type}}',
-      '{{card}}',
-      '{{set}}',
-    ];
+    this.regex = /{{(.*?)}}/g;
     this.hand = hand;
     this.debug = false;
 
@@ -41,17 +20,21 @@ export default class {
 
     logger('The ground is rumbling...', true);
 
-    this.cycle(this.hand);
+    this.cycle();
+
+    return this.hand;
   }
 
   async discard(card = '') {
     logger(`discarding ${card}...`);
 
-    let cardName = (await this.reveal(card)) || card;
+    let value = card.match(/{{(.*?)}}/)[1];
+    let tag = value.split(':')[0];
+    let text = value.split(':')[1];
     let plane = '';
     let land = '';
 
-    switch (cardName) {
+    switch (text) {
       case 'version':
       case 'deck':
         plane = 'files';
@@ -62,9 +45,18 @@ export default class {
         break;
     }
 
-    land = `<a class="code-link" href=/${plane}/${cardName}/>${this.faceUp(
-      cardName
-    )}</a>`;
+    switch(tag){
+      case 'code':
+        land = `<code>${text}</code>`;
+        break;
+
+      case 'link':
+      default:
+        land = `<a class="code-link" href="/${plane}/${text}" />${this.faceUp(
+          text
+        )}</a>`;
+        break;
+    }
 
     logger(`land acquired: ${JSON.stringify(land)}`, true);
 
@@ -72,43 +64,38 @@ export default class {
   }
 
   /**
-   *
-   * @param battlefield DOM elements we want to cycle through and hydrate
+   * Cycle through the JSON schema and replace mustaches as needed,
+   * then return the new JSON
    */
-  async cycle(battlefield = []) {
-    for (let land of battlefield) {
-      for (let color in this.lands) {
-        const cardToCycle = this.lands[color];
-        const canCycle = land.innerText.indexOf(cardToCycle) > -1;
+  async cycle() {
+    for (let currentCard in this.hand) {
+      const thisCard = this.hand[currentCard];
+      
+      for(let ability in thisCard){
+        const card = thisCard[ability];
+        const cardsToCycle = card.match(this.regex);
 
-        if (canCycle) {
-          await this.discard(cardToCycle)
-            .then(async newLand => {
-              land.innerHTML = await land.innerHTML.replace(
-                cardToCycle,
-                newLand
-              );
-            })
-            .catch(err => {
-              logger(`${cardToCycle} :: ${err}`, false);
-            });
+        if (cardsToCycle) {
+          let newText = '';
+          
+          for (let cardToCycle of cardsToCycle) {
+            try {
+              const newCard = await this.discard(cardToCycle);
+              newText = await thisCard[ability].replace(cardToCycle, newCard);
+
+              this.hand[currentCard][ability] = newText;
+            } catch( err ){
+              logger(`${card} :: ${err}`, false);
+            }
+          }
         }
       }
     }
-    return this;
   }
 
   /**
    *
-   * @param card Mustachio'ed card
-   */
-  reveal(card = '') {
-    return card.match(/{{(.*?)}}/)[1];
-  }
-
-  /**
-   *
-   * @param card multiple word normalizing
+   * @param card multiple word normalizing for anchors and URI's
    */
   faceUp(card = '') {
     return card

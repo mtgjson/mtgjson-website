@@ -1,12 +1,12 @@
 {
   "files": {
     "type": "array(object)",
-    "example": "{{files}}",
-    "description": "All possible compiled outputs from MTGJSON. See the {{files}} structure."
+    "example": "{{link:files}}",
+    "description": "All possible compiled outputs from MTGJSON. See the {{link:files}} structure."
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{version}}",
-    "description": "See the {{version}} structure."
+    "example": "{{link:version}}",
+    "description": "See the {{link:version}} structure."
   }
 }

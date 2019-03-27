@@ -31,7 +31,7 @@
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{version}}",
-    "description": "See the {{version}} structure."
+    "example": "{{link:version}}",
+    "description": "See the {{link:version}} structure."
   }
 }

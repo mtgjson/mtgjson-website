@@ -7,7 +7,7 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be black, borderless, gold, silver, or white."
+    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver, or white}}."
   },
   "colorIdentity": {
     "type": "array(string)",
@@ -32,12 +32,12 @@
   "duelDeck": {
     "type": "string",
     "example": "\"a\"",
-    "description": "If the card is in a duel deck product, can be \"a\"(left) or \"b\"(right). (If not in duel deck product, duelDeck is usually ommitted.)"
+    "description": "If the card is in a duel deck product, can be {{code:a}}(left) or {{code:b}}(right). (If not in duel deck product, duelDeck is usually ommitted.)"
   },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
-    "description": "The converted mana cost of the face (half, or part) of the card."
+    "description": "The converted mana cost of the face of either half or part of the card."
   },
   "flavorText": {
     "type": "string",
@@ -46,18 +46,18 @@
   },
   "foreignData": {
     "type": "array(object)",
-    "example": "{{foreign-data}}",
-    "description": "See the {{foreign-data}} structure."
+    "example": "{{link:foreign-data}}",
+    "description": "See the {{link:foreign-data}} structure."
   },
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "See the {{frame-effect}} structure."
+    "description": "See the {{link:frame-effect}} structure."
   },
   "frameVersion": {
     "type": "string",
     "example": "\"2015\"",
-    "description": "Version of the card frame style. Can be 1993, 1997, 2003, 2015, or future."
+    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}}, or {{code:future}}."
   },
   "hand": {
     "type": "string",
@@ -67,27 +67,27 @@
   "hasFoil": {
     "type": "boolean",
     "example": "true",
-    "description": "Can the card be found in foil? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Can the card be found in foil? (If false, it is usually omitted.)"
   },
   "hasNonFoil": {
     "type": "boolean",
     "example": "true",
-    "description": "Can the card be found in non-foil? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Can the card be found in non-foil? (If false, it is usually omitted.)"
   },
   "isOnlineOnly": {
     "type": "boolean",
     "example": "false",
-    "description": "Is the card only available online? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Is the card only available online? (If false, it is usually omitted.)"
   },
   "isOversized": {
     "type": "boolean",
     "example": "false",
-    "description": "Is the card oversized? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Is the card oversized? (If false, it is usually omitted.)"
   },
   "isReserved": {
     "type": "boolean",
     "example": "false",
-    "description": "Is the card on the MTG Reserved List? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Is the card on the MTG Reserved List? (If false, it is usually omitted.)"
   },
   "isStarter": {
     "type": "boolean",
@@ -97,17 +97,17 @@
   "isTimeshifted": {
     "type": "boolean",
     "example": "false",
-    "description": "Card is “timeshifted”, a feature from Time Spiral block. Can be true or false. (If false, it is usually omitted.)"
+    "description": "Card is “timeshifted”, a feature from Time Spiral block. (If false, it is usually omitted.)"
   },
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card. Can be normal, split, flip, transform, meld, leveler, saga, planar, scheme, vanguard, token, double_faced_token, emblem, augment, or host. (If normal, it is usually omitted.)"
+    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, or {{code:host}}. (If normal, it is usually omitted.)"
   },
   "legalities": {
     "type": "object",
-    "example": "{{legalities}}",
-    "description": "See the {{legalities}} structure."
+    "example": "{{link:legalities}}",
+    "description": "See the {{link:legalities}} structure."
   },
   "life": {
     "type": "string",
@@ -171,8 +171,8 @@
   },
   "rulings": {
     "type": "array(object)",
-    "example": "{{rulings}}",
-    "description": "See the {{rulings}} structure."
+    "example": "{{link:rulings}}",
+    "description": "See the {{link:rulings}} structure."
   },
   "scryfallId": {
     "type": "string",
@@ -192,7 +192,7 @@
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be a, b, or c."
+    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."
   },
   "subtypes": {
     "type": "array(string)",
