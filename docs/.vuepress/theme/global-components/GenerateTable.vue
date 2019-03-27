@@ -1,7 +1,7 @@
 <!-- Pug case statements do not work for our hydration purposes -->
 <template lang="pug">
   .schema-table
-    table(v-bind:class="{hidden: showMobileTable}")
+    table(v-if="!showMobileTable")
       thead
         tr
           th(v-for="(value, key) in headings" v:key=key)
@@ -15,11 +15,11 @@
             div(v-if="key === 'type'")
               em {{ value }}
             div(v-else-if="key === 'example'")
-              code.land-cycler {{ value }}
+              code.land-cycler(v-html="value")
             div(v-else)
-              div.land-cycler {{ value }}
+              div.land-cycler(v-html="value")
 
-    div.mobile-doc-tables(v-bind:class="{hidden: !showMobileTable}")
+    div.mobile-doc-tables(v-else)
       div.mobile-doc-table(v-for="(values, key) in schema" v:key=key v-bind:class="{hidden: !showMobileTable}")
         div.mobile-doc-table--row
           div.mobile-doc-table--row-item
@@ -37,12 +37,12 @@
             div.mobile-doc-table--row-item-key
               span {{ key }}
             div.mobile-doc-table--row-item-value
-              code.land-cycler {{ value }}
+              code.land-cycler(v-html="value")
           div.mobile-doc-table--row-item(v-else)
             div.mobile-doc-table--row-item-key
               span {{ key }}
             div.mobile-doc-table--row-item-value
-              div.land-cycler {{ value }}
+              div.land-cycler(v-html="value")
 
 </template>
 
@@ -71,9 +71,8 @@ export default {
       this.isMobile = Math.max(window.innerWidth || 0) < this.isMobileSize;
       this.hydrate();
     },
-    hydrate() {
-      const hand = Array.from(this.$el.querySelectorAll('.land-cycler'));
-      new this.$landcycle(hand);
+    async hydrate() {
+      this.schema = await new this.$landcycle(this.schema);
     }
   },
   computed: {

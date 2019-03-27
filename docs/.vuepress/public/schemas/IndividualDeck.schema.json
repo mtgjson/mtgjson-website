@@ -6,13 +6,13 @@
   },
   "mainBoard": {
     "type": "array(object)",
-    "example": "{{card}}",
-    "description": "The cards in the main-board. See the {{card}} structure."
+    "example": "{{link:card}}",
+    "description": "The cards in the main-board. See the {{link:card}} structure."
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{version}}",
-    "description": "See the {{version}} structure."
+    "example": "{{link:version}}",
+    "description": "See the {{link:version}} structure."
   },
   "name": {
     "type": "string",
@@ -21,8 +21,8 @@
   },
   "sideBoard": {
     "type": "array(object)",
-    "example": "{{card}}",
-    "description": "The cards in the side-board. See the {{card}} structure."
+    "example": "{{link:card}}",
+    "description": "The cards in the side-board. See the {{link:card}} structure."
   },
   "type": {
     "type": "string",

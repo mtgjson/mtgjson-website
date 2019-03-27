@@ -1,12 +1,12 @@
 {
   "decks": {
     "type": "array(object)",
-    "example": "{{decks}}",
-    "description": "List of pre-constructed decks. See the {{decks}} structure."
+    "example": "{{link:decks}}",
+    "description": "List of pre-constructed decks. See the {{link:decks}} structure."
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{version}}",
-    "description": "See the {{version}} structure."
+    "example": "{{link:version}}",
+    "description": "See the {{link:version}} structure."
   }
 }

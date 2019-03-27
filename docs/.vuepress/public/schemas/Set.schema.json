@@ -16,7 +16,7 @@
   },
   "cards": {
     "type": "array(object)",
-    "example": "{{card}}",
+    "example": "{{link:card}}",
     "description": "List of cards in this set."
   },
   "code": {
@@ -37,7 +37,7 @@
   "isOnlineOnly": {
     "type": "boolean",
     "example": "false",
-    "description": "Set available online only. Can be true or false. (If false, it is usually omitted.)"
+    "description": "Set available online only. (If false, it is usually omitted.)"
   },
   "keyruneCode": {
     "type": "string",
@@ -56,8 +56,8 @@
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{version}}",
-    "description": "See the {{version}} structure."
+    "example": "{{link:version}}",
+    "description": "See the {{link:version}} structure."
   },
   "mtgoCode": {
     "type": "string",
@@ -81,8 +81,8 @@
   },
   "tokens": {
     "type": "array(object)",
-    "example": "{{token}}",
-    "description": "Tokens available to the set. See the {{token}} structure."
+    "example": "{{link:token}}",
+    "description": "Tokens available to the set. See the {{link:token}} structure."
   },
   "totalSetSize": {
     "type": "integer",
@@ -91,12 +91,12 @@
   },
   "translations": {
     "type": "object(string: string)",
-    "example": "{{translations}}",
-    "description": "Translated set name by language. See the {{translations}} structure."
+    "example": "{{link:translations}}",
+    "description": "Translated set name by language. See the {{link:translations}} structure."
   },
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "See {{type}} examples."
+    "description": "See {{link:type}} examples."
   }
 }

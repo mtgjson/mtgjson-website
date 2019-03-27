@@ -7,7 +7,7 @@
   "isFoilOnly": {
     "type": "boolean",
     "example": "false",
-    "description": "Set only has foil cards. Can be true or false. (If false, it is usually omitted.)"
+    "description": "Set only has foil cards. (If false, it is usually omitted.)"
   },
   "name": {
     "type": "string",

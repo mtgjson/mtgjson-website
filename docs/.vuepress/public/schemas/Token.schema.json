@@ -7,7 +7,7 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be black, borderless, gold, silver, or white."
+    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver, or white}}."
   },
   "colorIdentity": {
     "type": "array(string)",
@@ -27,7 +27,7 @@
   "isOnlineOnly": {
     "type": "bool",
     "example": "false",
-    "description": "Is the token only available online? Can be true or false. (If false, it is usually omitted.)"
+    "description": "Is the token only available online? (If false, it is usually omitted.)"
   },
   "loyalty": {
     "type": "string",
@@ -62,7 +62,7 @@
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be a, b, or c."
+    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."
   },
   "text": {
     "type": "string",
