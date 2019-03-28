@@ -15,8 +15,8 @@ module.exports = {
       'meta',
       {
         property: 'og:image',
-        content: '/images/og_logo.png'
-      }
+        content: '/images/og_logo.png',
+      },
     ],
     // Keyrun for set images
     [
@@ -26,10 +26,14 @@ module.exports = {
         type: 'text/css',
         href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css',
       },
-    ]
+    ],
   ],
   // Vuepress Themeing
   themeConfig: {
+    algolia: {
+      apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
+      indexName: 'mtgjson',
+    },
     searchMaxSuggestions: 20,
     displayAllHeaders: true,
     lastUpdated: 'Last Updated',
@@ -43,7 +47,7 @@ module.exports = {
       {
         title: 'About MTGJSON',
         path: '/',
-        collapsable: false
+        collapsable: false,
       },
       {
         title: 'Downloads',
@@ -67,10 +71,10 @@ module.exports = {
             path: '/structures/card',
             collapsable: false,
             children: generateSidebarRoutes('/structures/'),
-          }
-        ]
+          },
+        ],
       },
-      '/changelog/'
+      '/changelog/',
     ],
-  }
+  },
 };
