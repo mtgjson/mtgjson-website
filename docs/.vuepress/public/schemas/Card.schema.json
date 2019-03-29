@@ -7,7 +7,7 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver, or white}}."
+    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver or white}}."
   },
   "colorIdentity": {
     "type": "array(string)",
@@ -52,12 +52,12 @@
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "See the {{link:frame-effect}} structure."
+    "description": "As of 03-28-2019, the values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
   },
   "frameVersion": {
     "type": "string",
     "example": "\"2015\"",
-    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}}, or {{code:future}}."
+    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}} or {{code:future}}."
   },
   "hand": {
     "type": "string",
@@ -102,7 +102,7 @@
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, or {{code:host}}. (If normal, it is usually omitted.)"
+    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}} or {{code:host}}. (If normal, it is usually omitted.)"
   },
   "legalities": {
     "type": "object",
@@ -167,7 +167,7 @@
   "rarity": {
     "type": "string",
     "example": "\"mythic\"",
-    "description": "Rarity. Can be basic, common, uncommon, rare, or mythic"
+    "description": "Rarity. Can be basic, common, uncommon, rare or mythic"
   },
   "rulings": {
     "type": "array(object)",
@@ -192,7 +192,7 @@
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."
+    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be {{code:a}}, {{code:b}} or {{code:c}}."
   },
   "subtypes": {
     "type": "array(string)",

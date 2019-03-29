@@ -97,6 +97,6 @@
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "See {{link:type}} examples."
+    "description": "As of 03-28-2019, the possible values are {{code:archenemy}}, {{code:box}}, {{code:core}}, {{code:commander}}, {{code:draft_innovation}}, {{code:duel_deck}}, {{code:expansion}}, {{code:from_the_vault}}, {{code:funny}}, {{code:masters}}, {{code:masterpiece}}, {{code:memorabilia}}, {{code:spellbook}}, {{code:planechase}}, {{code:premium_deck}}, {{code:promo}}, {{code:starter}}, {{code:token}}, {{code:treasure_chest}} or {{code:vanguard}}"
   }
 }
