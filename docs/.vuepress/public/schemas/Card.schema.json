@@ -7,7 +7,7 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver or white}}."
+    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver}} or {{code:white}}."
   },
   "colorIdentity": {
     "type": "array(string)",
@@ -52,7 +52,7 @@
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "As of 03-28-2019, the values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
+    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
   },
   "frameVersion": {
     "type": "string",
