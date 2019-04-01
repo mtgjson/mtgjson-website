@@ -37,7 +37,7 @@
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "See the {{link:frame-effect}} structure."
+    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
   },
   "hand": {
     "type": "string",
