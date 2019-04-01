@@ -1,16 +1,15 @@
 # MTGJSON Website
 
-Built using [VuePress](https://vuepress.vuejs.org/) with Vue, JS/TS and Markdown on Node
+Built using [VuePress](https://vuepress.vuejs.org/), JS and Markdown on Node
 
 ## Dependencies
 - Node
 - Yarn
+- VuePress
 
 ## Installation
 
 Install project dependencies. You'll notice all of them are non-dev, this is because on Heroku you can run in to errors. Heroku prunes what is needed on its own.
-
-> _One thing to know is that the only production dependency is `vuepress`_
 
 ```sh
 yarn install
@@ -35,12 +34,10 @@ killall node
 yarn build
 ```
 
-## Misc
+## Notes
 
-# Notes
+We use the `.schema.json` format for documentation on structures. In some IDE's this will lead to JSON lint errors. Do ignore them.
 
-We use the `.schema` format for docuemntation on structures. In some IDE's this will lead to linting errors. Do ignore them.
+## Landcycle
 
-# Landcycle
-
-Landcycle is a JS class that allows JSON to take mustache variables such as `{{example-variable}}` and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.
+Landcycle is a JS class that allows JSON to take mustache variables such as `{{link:variable}}` (creating an anchor link) or `{{code:variable}}` (creating an inline-code style) and then intercepts the JSON in Vue to hydrate the data in to data of your choosing. On the website we use this to change data structures in to anchor tags that link to other documentation.
