@@ -1,7 +1,7 @@
 // PogChamp
 // A little different than the source but works
 // https://jsbin.com/wowezadolo/edit?js,console
-export default ( event = '', toSort = [] ) => {
+export default (event = '', toSort) => {
   let values = event.currentTarget
     ? event.currentTarget.value.split(':')
     : event.split(':');
@@ -18,7 +18,7 @@ export default ( event = '', toSort = [] ) => {
     let isProp = isObject && this.prop in x;
     return this.parser(isProp ? x[this.prop] : x);
   };
-  
+
   return toSort.sort((a, b) => {
     a = getItem.call(config, a);
     b = getItem.call(config, b);
@@ -26,4 +26,4 @@ export default ( event = '', toSort = [] ) => {
     // integer equivilent: true => 1; false => 0
     return config.desc * (a < b ? -1 : +(a > b));
   });
-}
+};

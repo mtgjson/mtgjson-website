@@ -1,5 +1,5 @@
 <template lang="pug">
-  .download-tables
+  .download-tables(v-if="setsReady")
     .sorting-options
       .sort-row
         div
@@ -43,11 +43,13 @@ export default {
       defaultSets: this.$promisedSets,
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
+      setsReady: false,
       sorter: sorter
     };
   },
-  beforeMount(){
-    this.defaultSets = this.sorter('releaseDate:true', this.defaultSets);
+  async created(){
+    this.defaultSets = await this.sorter('releaseDate:true', this.defaultSets);
+    this.setsReady = true;
   },
   computed: {
     sets() {
