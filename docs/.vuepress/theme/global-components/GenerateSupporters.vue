@@ -47,8 +47,8 @@
 
     .supporters-table.services(v-if="services")
       .supporter.service(v-for="(supporter, key) in services")
-        img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
         a(:href="supporter.link" target="_blank")
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
           h6 {{ supporter.name }}
 
 </template>
@@ -63,8 +63,10 @@ export default {
       supportersReady: false,
     };
   },
-  async beforeMount() {
-    const fetched = await axios.get('https://raw.githubusercontent.com/mtgjson/mtgjson-website/master/resources/supporters.json');
+  async beforeCreate() {
+    const fetched = await axios.get(
+      'https://raw.githubusercontent.com/mtgjson/mtgjson-website/master/resources/supporters.json'
+    );
     const data = await fetched.data;
     this.supporters = data;
     this.supportersReady = true;
@@ -168,6 +170,13 @@ h2 {
         max-width: 200px;
         width: auto;
         height: auto;
+      }
+    }
+
+    // Non-linked Patrons
+    span {
+      img {
+        border-radius: 50%;
       }
     }
 
