@@ -88,7 +88,6 @@ export default {
           name: 'Cardsphere',
           image: 'cardsphere.svg',
           link: 'https://cardsphere.com',
-          since: '2019-04',
         },
         {
           name: 'Combo Deck',
