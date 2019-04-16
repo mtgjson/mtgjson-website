@@ -1,5 +1,5 @@
 <template lang="pug">
-  .download-tables
+  .download-tables(v-if="decksReady")
     .sorting-options
       .sort-row
         div
@@ -37,11 +37,13 @@ export default {
       defaultDecks: this.$promisedDecks,
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
+      decksReady: false,
       sorter: sorter
     };
   },
-  beforeMount(){
-    this.defaultDecks = this.sorter('name', this.defaultDecks);
+  async created(){
+    this.defaultDecks = await this.sorter('name', this.defaultDecks);
+    this.decksReady = true;
   },
   computed: {
     decks() {
