@@ -271,42 +271,20 @@ export default {
   methods: {
     formatTime(time) {
       var totalMonths;
-      var subtract;
+
       const newDate = new Date();
       const year = newDate.getFullYear();
-      const month = newDate.getMonth() + 2; // +1 because arrays are 0, +1 because we consider each resub as a full month
+      const month = newDate.getMonth() + 1; // +1 because arrays are 0
 
       const sinceDate = time.split('-');
       const sinceYear = Number(sinceDate[0]);
       const sinceMonth = Number(sinceDate[1]);
 
-      const sameYear = sinceYear === year;
-      const sameMonth = sinceMonth === month;
-
-      const earlierMonth = month > sinceMonth;
-
-      // Go away. You're not real.
-      if (sameYear && !earlierMonth) {
-        return '';
+      totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1
+      if (totalMonths === 1) {
+       return `(1\&nbsp;Month)`;
       }
-      // First month Patron
-      if (sameYear && sameMonth) {
-        return `(1\&nbsp;Month)`;
-      }
-      // Same year Patron
-      if (sameYear && earlierMonth) {
-        totalMonths = month - sinceMonth;
-        return `(${totalMonths}\&nbsp;Months)`;
-      // Long term Patron
-      } else {
-        // First get the trailing and leading months, then calc the total months of all the years with a +1 offset
-        // to the Patrons year because we already calculated for that
-        totalMonths = 12 - sinceMonth + month + (year - (sinceYear + 1)) * 12;
-        return `(${totalMonths}\&nbsp;Months)`;
-      }
-
-      // Return nothing if all else fails
-      return '';
+      return `(${totalMonths}\&nbsp;Months)`
     },
   },
 };
