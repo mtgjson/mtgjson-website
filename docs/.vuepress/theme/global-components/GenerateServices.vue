@@ -1,9 +1,49 @@
 <template lang="pug">
-  .services-table
-    .service(v-for="(service, key) in services")
-      a(:href="service.link" target="_blank")
-        img(v-if="service.image", :src="'/images/' + service.image", :alt="service.link", :title="service.name")
-        p {{ service.name }}
+  .supporters
+    h2.patreon-headline(v-if="tiers") Our Patreon Supporters
+
+    // Tier 3
+    .supporters-table(v-if="tiers.mythic.length > 0")
+      .supporter(v-for="(supporter, key) in tiers.mythic" :data-tier-size="3")
+        a(v-if="supporter.link" :href="supporter.link" target="_blank")
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          h6 {{ supporter.name }}
+        h6(v-else) {{ supporter.name }}
+        p(v-if="supporter.blurb") {{ supporter.blurb }}
+        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="3" v-html="formatTime(supporter.since)")
+
+    // Tier 2
+    .supporters-table(v-if="tiers.rare.length > 0")
+      .supporter(v-for="(supporter, key) in tiers.rare" :data-tier-size="2")
+        a(v-if="supporter.link" :href="supporter.link" target="_blank")
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          h6 {{ supporter.name }}
+        h6(v-else) {{ supporter.name }}
+        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="2" v-html="formatTime(supporter.since)")
+
+    // Tier 1
+    .supporters-table(v-if="tiers.uncommon.length > 0")
+      .supporter(v-for="(supporter, key) in tiers.uncommon" :data-tier-size="1")
+        a(v-if="supporter.link" :href="supporter.link" target="_blank")
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          h6 {{ supporter.name }}
+        h6(v-else) {{ supporter.name }}
+        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
+
+    // Tier "0". Users without products but deserve credit on the site but are Tier 1 Patrons
+    .supporters-table(v-if="tiers.others.length > 0")
+      .supporter(:data-tier-size="0")
+        h6 {{ tiers.others }}
+        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="0")
+
+    // Not Patrons but services that use MTGJSON
+    h2.patreon-headline Others Powered by MTGJSON
+    .supporters-table.services
+      .supporter.service(v-for="(supporter, key) in services")
+        img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+        a(:href="supporter.link" target="_blank")
+          h6 {{ supporter.name }}
+
 </template>
 
 <script>
@@ -11,7 +51,28 @@ export default {
   name: 'GenerateServices',
   data() {
     return {
-      columns: 4,
+      tiers: {
+        mythic: [
+          {
+            name: 'Cardhoarder',
+            image: 'cardhoarder.png',
+            link: 'https://www.cardhoarder.com/',
+            since: '2018-11',
+          },
+        ],
+        rare: [
+        ],
+        uncommon: [
+          {
+            name: 'Cockatrice',
+            image: 'cockatrice.png',
+            link: 'https://cockatrice.github.io',
+            since: '2019-04',
+          },
+        ],
+        // List of names, separated by commas
+        others: '',
+      },
       services: [
         {
           name: 'Aetherhub',
@@ -24,19 +85,10 @@ export default {
           link: 'https://cardcastle.co',
         },
         {
-          name: 'Cardhoarder',
-          image: 'cardhoarder.png',
-          link: 'https://www.cardhoarder.com/',
-        },
-        {
           name: 'Cardsphere',
           image: 'cardsphere.svg',
           link: 'https://cardsphere.com',
-        },
-        {
-          name: 'Cockatrice',
-          image: 'cockatrice.png',
-          link: 'https://cockatrice.github.io',
+          since: '2019-04',
         },
         {
           name: 'Combo Deck',
@@ -116,7 +168,7 @@ export default {
         {
           name: 'Planestrader',
           image: 'planestrader.png',
-          link: 'https://planestrader.com/'
+          link: 'https://planestrader.com/',
         },
         {
           name: 'Scryfall',
@@ -141,7 +193,8 @@ export default {
         {
           name: 'TCGPlayer',
           image: 'tcgplayer.png',
-          link: 'https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson',
+          link:
+            'https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson',
         },
         {
           name: 'TutorCards',
@@ -213,74 +266,250 @@ export default {
           image: '',
           link: 'https://mtg.wtf',
         },
-        // {
-        //   name: "Bestiaire",
-        //   image: "",
-        //   link: "http://draft.bestiaire.org/"
-        // },
       ],
     };
+  },
+  methods: {
+    formatTime(time) {
+      var totalMonths;
+      var subtract;
+      const newDate = new Date();
+      const year = newDate.getFullYear();
+      const month = newDate.getMonth() + 2; // +1 because arrays are 0, +1 because we consider each resub as a full month
+
+      const sinceDate = time.split('-');
+      const sinceYear = Number(sinceDate[0]);
+      const sinceMonth = Number(sinceDate[1]);
+
+      const sameYear = sinceYear === year;
+      const sameMonth = sinceMonth === month;
+
+      const earlierMonth = month > sinceMonth;
+
+      // Go away. You're not real.
+      if (sameYear && !earlierMonth) {
+        return '';
+      }
+      // First month Patron
+      if (sameYear && sameMonth) {
+        return `(1\&nbsp;Month)`;
+      }
+      // Same year Patron
+      if (sameYear && earlierMonth) {
+        totalMonths = month - sinceMonth;
+        return `(${totalMonths}\&nbsp;Months)`;
+      // Long term Patron
+      } else {
+        // First get the trailing and leading months, then calc the total months of all the years with a +1 offset
+        // to the Patrons year because we already calculated for that
+        totalMonths = 12 - sinceMonth + month + (year - (sinceYear + 1)) * 12;
+        return `(${totalMonths}\&nbsp;Months)`;
+      }
+
+      // Return nothing if all else fails
+      return '';
+    },
   },
 };
 </script>
 
 <style lang="stylus" scoped>
-.services-table {
-  margin-top: 10px;
+h2 {
+  margin-top: 60px;
+}
+
+.supporters-table {
   display: flex;
   flex-wrap: wrap;
-  border: 1px solid #eaecef;
   border-right-width: 0;
   border-bottom: 0;
+  justify-content: center;
+  margin-top: 30px;
 
-  .service {
+  &:first-of-type {
+    margin-top: 10px;
+  }
+
+  &.services {
+    border-top: 1px solid #eaecef;
+
+    .supporter {
+      border-left-width: 0;
+      border-top-width: 0;
+      flex: 0 0 25%;
+    }
+  }
+
+  .supporter {
     display: flex;
-    flex: 0 0 25%;
+    flex: 0 0 33.333%;
+    flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 20px;
+    padding: 30px 15px 60px;
     text-align: center;
     box-sizing: border-box;
-    border-bottom: 1px solid #eaecef;
-    border-right: 1px solid #eaecef;
-    transition: 0.25s all;
+    border: 1px solid #eaecef;
+    position: relative;
+
+    &[data-tier-size='0'] {
+      flex: 0 0 100%;
+
+      &:hover {
+        background: none;
+
+        h6 {
+          text-decoration: none;
+          cursor: initial;
+        }
+      }
+    }
+
+    &[data-tier-size='3'] {
+      flex: 0 0 50%;
+
+      img {
+        max-height: 150px;
+        max-width: 150px;
+        width: auto;
+        height: auto;
+      }
+    }
 
     &:hover {
-      cursor: pointer;
-      background-color: #f3f5f7;
-      transition: 0.25s all;
-
-      a {
+      h6 {
         text-decoration: underline;
       }
     }
 
-    a {
-      display: block;
-      text-align: center;
-      width: 100%;
-      height: 100%;
+    img {
+      max-height: 75px;
+      max-width: 75px;
+      width: auto;
+      height: auto;
+    }
 
-      img {
-        width: auto;
-        max-height: 65px;
-        height: auto;
+    a {
+      text-align: center;
+      flex: 0 0 100%;
+    }
+
+    h6 {
+      flex: 0 0 100%;
+      font-size: 14px;
+      font-weight: bold;
+      line-height: 1.2em;
+      display: block;
+      margin: 15px auto;
+    }
+
+    p {
+      flex: 0 0 100%;
+      margin: 0 auto 15px;
+      font-size: 14px;
+      line-height: 1.2em;
+    }
+
+    h6, p {
+      word-wrap: anywhere;
+    }
+
+    .tier {
+      text-align: center;
+      flex: 0 0 100%;
+      margin: 0 auto;
+      display: block;
+      display: none;
+      position: absolute;
+      left: 15px;
+      right: 15px;
+      bottom: 15px;
+      font-size: 14px;
+      line-height: 1.2em;
+      padding: 5px;
+
+      &:link, &:visited, &:active, &:focus {
+        color: $textColor;
+        text-decoration: none;
       }
 
-      p {
-        font-size: 14px;
-        font-weight: bold;
-        line-height: 1.2em;
-        word-wrap: anywhere;
+      &[data-tier] {
         display: block;
+
+        &:only-of-type {
+          flex: 1;
+        }
+
+        &::before {
+          padding: 0 10px;
+          font-weight: bold;
+        }
+
+        &[data-tier='3'] {
+          background: linear-gradient(135deg, #ef6c2f 0%, #f4a850 100%);
+
+          &:nth-of-type(odd) {
+            border-left: 0;
+          }
+
+          &::before {
+            content: 'Mythic Supporter';
+          }
+        }
+
+        &[data-tier='2'] {
+          background: linear-gradient(135deg, #f9d861 0%, #e8d599 100%);
+
+          &::before {
+            content: 'Rare Supporter';
+          }
+        }
+
+        &[data-tier='0'], &[data-tier='1'] {
+          background: linear-gradient(135deg, #d8d8d8 0%, #efeded 100%);
+
+          &::before {
+            content: 'Uncommon Supporter';
+          }
+        }
+
+        &[data-tier='0'] {
+          &::before {
+            content: 'Uncommon Supporters';
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .supporters-table {
+    &:first-of-type {
+      .supporter {
+        flex: 0 0 100% !important;
+      }
+    }
+
+    .supporter {
+      flex: 0 0 50% !important;
+
+      &.service {
+        flex: 0 0 50% !important;
       }
     }
   }
 }
 
 @media screen and (max-width: 570px) {
-  .service {
-    flex: 0 0 50% !important;
+  .supporters-table {
+    .supporter {
+      flex: 0 0 100% !important;
+
+      &.service {
+        flex: 0 0 50% !important;
+      }
+    }
   }
 }
 </style>
