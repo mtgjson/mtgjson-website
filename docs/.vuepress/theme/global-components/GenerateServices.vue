@@ -270,8 +270,6 @@ export default {
   },
   methods: {
     formatTime(time) {
-      var totalMonths;
-
       const newDate = new Date();
       const year = newDate.getFullYear();
       const month = newDate.getMonth() + 1; // +1 because arrays are 0
@@ -280,7 +278,7 @@ export default {
       const sinceYear = Number(sinceDate[0]);
       const sinceMonth = Number(sinceDate[1]);
 
-      totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1
+      const totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1
       if (totalMonths === 1) {
        return `(1\&nbsp;Month)`;
       }
