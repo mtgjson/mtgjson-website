@@ -28,21 +28,24 @@
 </template>
 
 <script>
+import axios from 'axios';
 import sorter from '../../scripts/Sorter';
 
 export default {
   name: 'GenerateAllDownloads',
   data() {
     return {
-      defaultDecks: this.$promisedDecks,
+      defaultDecks: [],
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
       decksReady: false,
       sorter: sorter
     };
   },
-  async created(){
-    this.defaultDecks = await this.sorter('name', this.defaultDecks);
+  async beforeMount(){
+    const fetched = await axios.get('https://mtgjson.com/json/DeckLists.json');
+    const data = await this.sorter('name', fetched.data.decks);
+    this.defaultDecks = data;
     this.decksReady = true;
   },
   computed: {

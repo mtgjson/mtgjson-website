@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import fetch from 'node-fetch';
+import axios from 'axios';
 
 export default {
   data() {
@@ -14,12 +14,10 @@ export default {
       defaultChangelogLink: '',
     };
   },
-  async beforeCreate() {
-    this.defaultMetaData = await fetch('https://mtgjson.com/json/version.json')
-      .then(res => res.json())
-      .then(res => res)
-      .catch(err => err);
-
+  async beforeMount() {
+    const fetched = await axios.get('https://mtgjson.com/json/version.json');
+    
+    this.defaultMetaData = fetched.data;
     const version = this.defaultMetaData.version.replace(/\./g, '-');
     const date = this.defaultMetaData.date;
 

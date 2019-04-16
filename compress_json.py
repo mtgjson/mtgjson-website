@@ -113,14 +113,14 @@ def main():
     os.chdir(source_dir)
 
     # Compress the system
-    compress_dir_to_archives(".", "AllSetFiles")
-    compress_dir_to_archives("./decks", "AllDeckFiles")
     compress_single_sets(".")
-    compress_single_sets("./decks")
-
+    if sys.argv[2] != "spoiler":
+        compress_dir_to_archives(".", "AllSetFiles")
+        compress_dir_to_archives("./decks", "AllDeckFiles")
+        compress_single_sets("./decks")
 
 if __name__ == "__main__":
-    if len(sys.argv) != 2:
-        print("Usage: " + sys.argv[0] + " <json_directory>")
+    if len(sys.argv) < 1:
+        print("Usage: " + sys.argv[0] + " <json_directory> [\"spoiler\"]")
         sys.exit()
     main()

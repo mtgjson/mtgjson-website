@@ -40,6 +40,4 @@ Eric is a conceptualizer that loves open-source software and cervidae. When he's
 
 Others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [PayPal](https://www.paypal.me/Zachhalpern).
 
-## Who We Serve
-
 <GenerateServices/>
