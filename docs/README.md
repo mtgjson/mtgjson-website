@@ -10,7 +10,10 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json",
     }
-  ]
+  ],
+  "feed": {
+    "enable": "true"
+  }
 }
 ---
 
