@@ -1,215 +1,221 @@
 {
-	"patrons": {
-		"mythic": [
-			{
-				"name": "Cardhoarder",
-				"image": "cardhoarder.png",
-				"link": "https://www.cardhoarder.com/",
-				"since": "2018-11"
-			}
-		],
-		"rare": [],
-		"uncommon": [
-			{
-				"name": "Cockatrice",
-				"image": "cockatrice.png",
-				"link": "https://cockatrice.github.io",
-				"since": "2019-04"
-			},
-			{
-				"name": "MTG Brewmaster",
-				"image": "mtgbrewmaster.png",
-				"link": "http://mtgbrewmaster.com",
-				"since": "2019-04"
-			}
-		],
-		"others": "TheChucklingAtom"
-	},
-	"services": [
-		{
-			"name": "Aetherhub",
-			"image": "aetherhub.png",
-			"link": "https://aetherhub.com"
-		},
-		{
-			"name": "Card Castle",
-			"image": "cardcastle.svg",
-			"link": "https://cardcastle.co"
-		},
-		{
-			"name": "Cardsphere",
-			"image": "cardsphere.svg",
-			"link": "https://cardsphere.com"
-		},
-		{
-			"name": "Combo Deck",
-			"image": "combodeck.png",
-			"link": "http://combodeck.net"
-		},
-		{
-			"name": "Cube Tutor",
-			"image": "cubetutor.png",
-			"link": "http://cubetutor.com"
-		},
-		{
-			"name": "Dr4ft",
-			"image": "dr4ft.png",
-			"link": "https://dr4ft.info"
-		},
-		{
-			"name": "Draftalot",
-			"image": "draftalot.png",
-			"link": "http://draftalot.com/"
-		},
-		{
-			"name": "Draftsim",
-			"image": "draftsim.png",
-			"link": "https://draftsim.com/"
-		},
-		{
-			"name": "EDHrec",
-			"image": "edhrec.png",
-			"link": "https://edhrec.com"
-		},
-		{
-			"name": "Magarena",
-			"image": "magarena.png",
-			"link": "https://github.com/magarena/magarena"
-		},
-		{
-			"name": "Magic Cards Manager",
-			"image": "mcm.png",
-			"link": "https://www.magiccardsmanager.com"
-		},
-		{
-			"name": "Magic Trade Binder",
-			"image": "magic-trade-binder.png",
-			"link": "https://www.magictradebinder.com"
-		},
-		{
-			"name": "Magidex",
-			"image": "magidex.svg",
-			"link": "https://magidex.com"
-		},
-		{
-			"name": "MTG Addict",
-			"image": "mtgaddict.png",
-			"link": "https://mtgaddict.net"
-		},
-		{
-			"name": "MTG Developers",
-			"image": "mtgio.png",
-			"link": "https://magicthegathering.io"
-		},
-		{
-			"name": "MTG Set Builder",
-			"image": "mtgsetbuilder.png",
-			"link": "http://mtgsetbuilder.com"
-		},
-		{
-			"name": "MYPCards",
-			"image": "mypcards.png",
-			"link": "https://mypcards.com/"
-		},
-		{
-			"name": "Planestrader",
-			"image": "planestrader.png",
-			"link": "https://planestrader.com/"
-		},
-		{
-			"name": "Scryfall",
-			"image": "scryfall.svg",
-			"link": "https://scryfall.com"
-		},
-		{
-			"name": "Snapcardster",
-			"image": "snapcardster.png",
-			"link": "https://snapcardster.com"
-		},
-		{
-			"name": "Stream Decker",
-			"image": "streamdecker.png",
-			"link": "https://www.streamdecker.com"
-		},
-		{
-			"name": "Tamiyo Discord Bot",
-			"image": "tamiyodiscordbot.png",
-			"link": "https://mtg.design/tamiyo"
-		},
-		{
-			"name": "TCGPlayer",
-			"image": "tcgplayer.png",
-			"link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
-		},
-		{
-			"name": "TutorCards",
-			"image": "tutorcards.svg",
-			"link": "https://tutor.cards"
-		},
-		{
-			"name": "XMage",
-			"image": "xmage.png",
-			"link": "http://xmage.de"
-		},
-		{
-			"name": "Card Codex",
-			"image": "",
-			"link": "https://cardcodex.com"
-		},
-		{
-			"name": "DeckList.org",
-			"image": "",
-			"link": "https://decklist.org/"
-		},
-		{
-			"name": "DideRobot",
-			"image": "",
-			"link": "https://github.com/Didero/DideRobot"
-		},
-		{
-			"name": "FlavorTexts.com",
-			"image": "",
-			"link": "https://flavortexts.com"
-		},
-		{
-			"name": "Lab Maniac",
-			"image": "",
-			"link": "http://labmaniac.com"
-		},
-		{
-			"name": "Liminal Thoughts",
-			"image": "",
-			"link": "https://brennands.wordpress.com"
-		},
-		{
-			"name": "MagicFetchBot",
-			"image": "",
-			"link": "https://redd.it/55l38e"
-		},
-		{
-			"name": "MTGCardFetcher",
-			"image": "",
-			"link": "https://reddit.com/r/MTGCardFetcher"
-		},
-		{
-			"name": "MTG Lands",
-			"image": "",
-			"link": "http://mtglands.com"
-		},
-		{
-			"name": "MTG On Curve",
-			"image": "",
-			"link": "https://mtgoncurve.com/"
-		},
-		{
-			"name": "MTG Search",
-			"image": "",
-			"link": "https://mtg-search.com"
-		},
-		{
-			"name": "mtg.wtf",
-			"image": "",
-			"link": "https://mtg.wtf"
-		}
-	]
+  "patrons": {
+    "mythic": [
+      {
+        "name": "Cardhoarder",
+        "image": "cardhoarder.png",
+        "link": "https://www.cardhoarder.com/",
+        "since": "2018-11"
+      }
+    ],
+    "rare": [
+      {
+        "name": "Roem",
+        "image": "avatar-roem.jpg",
+        "since": "2019-04"
+      }
+    ],
+    "uncommon": [
+      {
+        "name": "Cockatrice",
+        "image": "cockatrice.png",
+        "link": "https://cockatrice.github.io",
+        "since": "2019-04"
+      },
+      {
+        "name": "MTG Brewmaster",
+        "image": "mtgbrewmaster.png",
+        "link": "http://mtgbrewmaster.com",
+        "since": "2019-04"
+      }
+    ],
+    "others": "TheChucklingAtom"
+  },
+  "services": [
+    {
+      "name": "Aetherhub",
+      "image": "aetherhub.png",
+      "link": "https://aetherhub.com"
+    },
+    {
+      "name": "Card Castle",
+      "image": "cardcastle.svg",
+      "link": "https://cardcastle.co"
+    },
+    {
+      "name": "Cardsphere",
+      "image": "cardsphere.svg",
+      "link": "https://cardsphere.com"
+    },
+    {
+      "name": "Combo Deck",
+      "image": "combodeck.png",
+      "link": "http://combodeck.net"
+    },
+    {
+      "name": "Cube Tutor",
+      "image": "cubetutor.png",
+      "link": "http://cubetutor.com"
+    },
+    {
+      "name": "Dr4ft",
+      "image": "dr4ft.png",
+      "link": "https://dr4ft.info"
+    },
+    {
+      "name": "Draftalot",
+      "image": "draftalot.png",
+      "link": "http://draftalot.com/"
+    },
+    {
+      "name": "Draftsim",
+      "image": "draftsim.png",
+      "link": "https://draftsim.com/"
+    },
+    {
+      "name": "EDHrec",
+      "image": "edhrec.png",
+      "link": "https://edhrec.com"
+    },
+    {
+      "name": "Magarena",
+      "image": "magarena.png",
+      "link": "https://github.com/magarena/magarena"
+    },
+    {
+      "name": "Magic Cards Manager",
+      "image": "mcm.png",
+      "link": "https://www.magiccardsmanager.com"
+    },
+    {
+      "name": "Magic Trade Binder",
+      "image": "magic-trade-binder.png",
+      "link": "https://www.magictradebinder.com"
+    },
+    {
+      "name": "Magidex",
+      "image": "magidex.svg",
+      "link": "https://magidex.com"
+    },
+    {
+      "name": "MTG Addict",
+      "image": "mtgaddict.png",
+      "link": "https://mtgaddict.net"
+    },
+    {
+      "name": "MTG Developers",
+      "image": "mtgio.png",
+      "link": "https://magicthegathering.io"
+    },
+    {
+      "name": "MTG Set Builder",
+      "image": "mtgsetbuilder.png",
+      "link": "http://mtgsetbuilder.com"
+    },
+    {
+      "name": "MYPCards",
+      "image": "mypcards.png",
+      "link": "https://mypcards.com/"
+    },
+    {
+      "name": "Planestrader",
+      "image": "planestrader.png",
+      "link": "https://planestrader.com/"
+    },
+    {
+      "name": "Scryfall",
+      "image": "scryfall.svg",
+      "link": "https://scryfall.com"
+    },
+    {
+      "name": "Snapcardster",
+      "image": "snapcardster.png",
+      "link": "https://snapcardster.com"
+    },
+    {
+      "name": "Stream Decker",
+      "image": "streamdecker.png",
+      "link": "https://www.streamdecker.com"
+    },
+    {
+      "name": "Tamiyo Discord Bot",
+      "image": "tamiyodiscordbot.png",
+      "link": "https://mtg.design/tamiyo"
+    },
+    {
+      "name": "TCGPlayer",
+      "image": "tcgplayer.png",
+      "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
+    },
+    {
+      "name": "TutorCards",
+      "image": "tutorcards.svg",
+      "link": "https://tutor.cards"
+    },
+    {
+      "name": "XMage",
+      "image": "xmage.png",
+      "link": "http://xmage.de"
+    },
+    {
+      "name": "Card Codex",
+      "image": "",
+      "link": "https://cardcodex.com"
+    },
+    {
+      "name": "DeckList.org",
+      "image": "",
+      "link": "https://decklist.org/"
+    },
+    {
+      "name": "DideRobot",
+      "image": "",
+      "link": "https://github.com/Didero/DideRobot"
+    },
+    {
+      "name": "FlavorTexts.com",
+      "image": "",
+      "link": "https://flavortexts.com"
+    },
+    {
+      "name": "Lab Maniac",
+      "image": "",
+      "link": "http://labmaniac.com"
+    },
+    {
+      "name": "Liminal Thoughts",
+      "image": "",
+      "link": "https://brennands.wordpress.com"
+    },
+    {
+      "name": "MagicFetchBot",
+      "image": "",
+      "link": "https://redd.it/55l38e"
+    },
+    {
+      "name": "MTGCardFetcher",
+      "image": "",
+      "link": "https://reddit.com/r/MTGCardFetcher"
+    },
+    {
+      "name": "MTG Lands",
+      "image": "",
+      "link": "http://mtglands.com"
+    },
+    {
+      "name": "MTG On Curve",
+      "image": "",
+      "link": "https://mtgoncurve.com/"
+    },
+    {
+      "name": "MTG Search",
+      "image": "",
+      "link": "https://mtg-search.com"
+    },
+    {
+      "name": "mtg.wtf",
+      "image": "",
+      "link": "https://mtg.wtf"
+    }
+  ]
 }
