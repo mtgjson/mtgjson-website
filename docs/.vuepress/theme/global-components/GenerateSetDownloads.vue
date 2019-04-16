@@ -34,21 +34,24 @@
 </template>
 
 <script>
+import axios from 'axios';
 import sorter from '../../scripts/Sorter';
 
 export default {
   name: 'GenerateSingleSetDownloads',
   data() {
     return {
-      defaultSets: this.$promisedSets,
+      defaultSets: [],
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
       setsReady: false,
       sorter: sorter
     };
   },
-  async created(){
-    this.defaultSets = await this.sorter('releaseDate:true', this.defaultSets);
+  async beforeMount(){
+    const fetched = await axios.get('https://mtgjson.com/json/SetList.json');
+    const data = await this.sorter('releaseDate:true', fetched.data);
+    this.defaultSets = data;
     this.setsReady = true;
   },
   computed: {
