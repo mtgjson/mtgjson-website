@@ -27,6 +27,11 @@
         "image": "mtgbrewmaster.png",
         "link": "http://mtgbrewmaster.com",
         "since": "2019-04"
+      },
+      {
+        "name": "TheChucklingAtom",
+        "image": "avatar-thechucklingatom.jpg",
+        "since": "2019-04"
       }
     ],
     "others": "TheChucklingAtom"

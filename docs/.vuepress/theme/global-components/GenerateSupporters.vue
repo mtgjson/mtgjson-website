@@ -36,12 +36,6 @@
           h6 {{ supporter.name }}
         a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
 
-    // Tier "0". Users without products but deserve credit on the site but are Tier 1 Patrons
-    .supporters-table(v-if="others.length > 0")
-      .supporter(:data-tier-size="0")
-        h6 {{ others }}
-        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="0")
-
     // Not Patrons but services that use MTGJSON
     h2.patreon-headline(v-if="services") Many Others Powered by MTGJSON
 
@@ -59,7 +53,14 @@ export default {
   name: 'GenerateServices',
   data() {
     return {
-      supporters: {},
+      supporters: {
+        patrons: {
+          mythic: [],
+          rare: [],
+          uncommon: [],
+        },
+        services: [],
+      },
       supportersReady: false,
     };
   },
@@ -83,9 +84,6 @@ export default {
     },
     uncommon() {
       return this.supporters.patrons.uncommon;
-    },
-    others() {
-      return this.supporters.patrons.others;
     },
     services() {
       return this.supporters.services;
