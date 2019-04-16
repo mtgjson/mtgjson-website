@@ -40,7 +40,7 @@ module.exports = {
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' },
-      { text: 'Donate', link: 'https://www.paypal.me/Zachhalpern' },
+      { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
     ],
     logo: '/images/logo.svg',
     sidebar: [
