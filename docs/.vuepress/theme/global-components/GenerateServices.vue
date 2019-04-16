@@ -79,6 +79,11 @@ export default {
           link: 'https://www.magiccardsmanager.com',
         },
         {
+          name: 'Magic Trade Binder',
+          image: 'magic-trade-binder.png',
+          link: 'https://www.magictradebinder.com',
+        },
+        {
           name: 'Magidex',
           image: 'magidex.svg',
           link: 'https://magidex.com',
