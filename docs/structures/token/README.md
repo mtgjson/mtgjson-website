@@ -22,10 +22,6 @@
 > Parent property type: `array(anonymous object)`  
 > Property type: `string`  
 
-::: warning
-As of v4.3.2 all token `uuid` values have been re-uniqueified. This will be the last change to `uuid` as they are now stable.
-:::
-
 ### Structure
 
 <GenerateTable/>
