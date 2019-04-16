@@ -37,7 +37,7 @@
         a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
 
     // Not Patrons but services that use MTGJSON
-    h2.patreon-headline(v-if="services") Many Others Powered by MTGJSON
+    h2.patreon-headline(v-if="services") Others Powered by MTGJSON
 
     .supporters-table.services(v-if="services")
       .supporter.service(v-for="(supporter, key) in services")
@@ -130,8 +130,9 @@ h2 {
     border-top: 1px solid #eaecef;
 
     .supporter {
-      border-left-width: 0;
-      border-top-width: 0;
+      // border-left-width: 0;
+      // border-top-width: 0;
+      padding-bottom: 15px;
       flex: 0 0 25%;
     }
   }
@@ -165,7 +166,7 @@ h2 {
 
       img {
         max-height: 200px;
-        max-width: 200px;
+        max-width: 250px;
         width: auto;
         height: auto;
       }
@@ -180,9 +181,10 @@ h2 {
 
     img {
       max-height: 75px;
-      max-width: 75px;
+      max-width: 100px;
       width: auto;
       height: auto;
+      margin-bottom: 15px;
     }
 
     a {
@@ -204,7 +206,7 @@ h2 {
       font-weight: bold;
       line-height: 1.2em;
       display: block;
-      margin: 15px auto;
+      margin: 0 auto 15px;
     }
 
     p {
