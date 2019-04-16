@@ -8,7 +8,9 @@
         a(v-if="supporter.link" :href="supporter.link" target="_blank")
           img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
           h6 {{ supporter.name }}
-        h6(v-else) {{ supporter.name }}
+        span(v-else)
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+          h6 {{ supporter.name }}
         p(v-if="supporter.blurb") {{ supporter.blurb }}
         a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="3" v-html="formatTime(supporter.since)")
 
@@ -18,7 +20,9 @@
         a(v-if="supporter.link" :href="supporter.link" target="_blank")
           img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
           h6 {{ supporter.name }}
-        h6(v-else) {{ supporter.name }}
+        span(v-else)
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+          h6 {{ supporter.name }}
         a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="2" v-html="formatTime(supporter.since)")
 
     // Tier 1
@@ -27,7 +31,9 @@
         a(v-if="supporter.link" :href="supporter.link" target="_blank")
           img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
           h6 {{ supporter.name }}
-        h6(v-else) {{ supporter.name }}
+        span(v-else)
+          img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+          h6 {{ supporter.name }}
         a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
 
     // Tier "0". Users without products but deserve credit on the site but are Tier 1 Patrons
@@ -54,34 +60,34 @@ export default {
   data() {
     return {
       supporters: {},
-      supportersReady: false
+      supportersReady: false,
     };
   },
-  async beforeMount(){
+  async beforeMount() {
     const fetched = await axios.get('https://raw.githubusercontent.com/mtgjson/mtgjson-website/master/resources/supporters.json');
     const data = await fetched.data;
     this.supporters = data;
     this.supportersReady = true;
   },
   computed: {
-    patrons(){
+    patrons() {
       return this.supporters.patrons;
     },
-    mythic(){
+    mythic() {
       return this.supporters.patrons.mythic;
     },
-    rare(){
+    rare() {
       return this.supporters.patrons.rare;
     },
-    uncommon(){
+    uncommon() {
       return this.supporters.patrons.uncommon;
     },
-    others(){
+    others() {
       return this.supporters.patrons.others;
     },
-    services(){
+    services() {
       return this.supporters.services;
-    }
+    },
   },
   methods: {
     formatTime(time) {
@@ -93,11 +99,11 @@ export default {
       const sinceYear = Number(sinceDate[0]);
       const sinceMonth = Number(sinceDate[1]);
 
-      const totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1
+      const totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1;
       if (totalMonths === 1) {
-       return `(1\&nbsp;Month)`;
+        return `(1\&nbsp;Month)`;
       }
-      return `(${totalMonths}\&nbsp;Months)`
+      return `(${totalMonths}\&nbsp;Months)`;
     },
   },
 };
@@ -150,7 +156,6 @@ h2 {
 
         h6 {
           text-decoration: none;
-          cursor: initial;
         }
       }
     }
@@ -166,12 +171,6 @@ h2 {
       }
     }
 
-    &:hover {
-      h6 {
-        text-decoration: underline;
-      }
-    }
-
     img {
       max-height: 75px;
       max-width: 75px;
@@ -182,6 +181,14 @@ h2 {
     a {
       text-align: center;
       flex: 0 0 100%;
+
+      &:link {
+        &:hover {
+          h6 {
+            text-decoration: underline;
+          }
+        }
+      }
     }
 
     h6 {
