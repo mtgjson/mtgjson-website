@@ -38,6 +38,6 @@ Eric is a conceptualizer that loves open-source software and cervidae. When he's
 
 ## Contributing
 
-Others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a class="inline-btn paypal" href="https://www.paypal.me/Zachhalpern">PayPal</a> (one-time donation) or via <a class="inline-btn patreon" href="https://www.patreon.com/MTGJSON">Patreon</a> (reoccurring donations).
+Many others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a class="inline-btn paypal" href="https://www.paypal.me/Zachhalpern">PayPal</a> (one-time donation) or via <a class="inline-btn patreon" href="https://www.patreon.com/MTGJSON">Patreon</a> (reoccurring donations).
 
 <GenerateSupporters/>
