@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!-- Generator: Adobe Illustrator 16.0.0, SVG Export Plug-In . SVG Version: 6.00 Build 0)  -->
+<!DOCTYPE svg PUBLIC "-//W3C//DTD SVG 1.1//EN" "http://www.w3.org/Graphics/SVG/1.1/DTD/svg11.dtd">
+<svg version="1.1" id="Layer_1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px" viewBox="0 0 507 500" enable-background="new 0 0 507 500" xml:space="preserve">
+ <filter id="dropshadow" height="130%">
+   <feGaussianBlur in="SourceAlpha" stdDeviation="25"/> <!-- stdDeviation is how much to blur -->
+   <feOffset dx="0" dy="7" result="offsetblur"/> <!-- how much to offset -->
+   <feMerge>
+     <feMergeNode/> <!-- this contains the offset blurred image -->
+     <feMergeNode in="SourceGraphic"/> <!-- this contains the element that the filter is applied to -->
+   </feMerge>
+ </filter>
+<rect x="42.736" y="102.945" fill="#FFFFFF" width="113.386" height="368.504"/>
+<rect x="342.89" y="106.22" fill="#FFFFFF" width="113.387" height="368.505"/>
+<polygon fill="#35AB4D" points="456.276,102.977 343.354,102.977 249.866,206.464 156.345,102.945 42.736,102.977 249.865,339.819  " style="filter:url(#dropshadow)"/>
+<polygon fill="#35AB4D" points="311.567,75.422 480.042,19.217 444.479,193.223 "/>
+</svg>
