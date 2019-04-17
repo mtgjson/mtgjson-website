@@ -1,7 +1,5 @@
 <template lang="pug">
   .supporters(v-if="supportersReady")
-    h2.patreon-headline(v-if="patrons") Our Patreon Supporters
-
     // Tier 3
     .supporters-table(v-if="mythic.length > 0")
       .supporter(v-for="(supporter, key) in mythic" :data-tier-size="3")
@@ -53,23 +51,20 @@ export default {
   name: 'GenerateServices',
   data() {
     return {
-      supporters: {
-        patrons: {
-          mythic: [],
-          rare: [],
-          uncommon: [],
-        },
-        services: [],
-      },
+      // supporters: {
+      //   patrons: {
+      //     mythic: [],
+      //     rare: [],
+      //     uncommon: [],
+      //   },
+      //   services: [],
+      // },
       supportersReady: false,
     };
   },
-  async beforeCreate() {
-    const fetched = await axios.get(
-      'https://raw.githubusercontent.com/mtgjson/mtgjson-website/master/resources/supporters.json'
-    );
-    const data = await fetched.data;
-    this.supporters = data;
+  async created() {
+    const supporters = await this.$supporters;
+    this.supporters = supporters;
     this.supportersReady = true;
   },
   computed: {
