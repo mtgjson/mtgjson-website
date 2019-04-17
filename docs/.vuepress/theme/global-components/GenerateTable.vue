@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import landcycle from '../../scripts/Landcycle';
 export default {
   name: 'GenerateTable',
   data() {
@@ -72,7 +73,7 @@ export default {
       this.hydrate();
     },
     async hydrate() {
-      this.schema = await new this.$landcycle(this.schema);
+      this.schema = await new landcycle(this.schema);
     }
   },
   computed: {

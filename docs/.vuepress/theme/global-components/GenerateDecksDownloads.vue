@@ -42,10 +42,10 @@ export default {
       sorter: sorter
     };
   },
-  async beforeCreate(){
-    const fetched = await axios.get('https://mtgjson.com/json/DeckLists.json');
-    const data = await this.sorter('name', fetched.data.decks);
-    this.defaultDecks = data;
+  async created(){
+    const decks = await this.$decks;
+    const sortedDecks = await this.sorter('name', decks);
+    this.defaultDecks = sortedDecks;
     this.decksReady = true;
   },
   computed: {
