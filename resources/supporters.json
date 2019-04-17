@@ -112,6 +112,11 @@
 			"image": "mtgsetbuilder.png",
 			"link": "http://mtgsetbuilder.com"
 		},
+    {
+			"name": "MTGStocks",
+			"image": "mtgstocks.svg",
+			"link": "http://mtgstocks.com"
+		},
 		{
 			"name": "MYPCards",
 			"image": "mypcards.png",
