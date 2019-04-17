@@ -165,8 +165,8 @@ h2 {
       flex: 0 0 50%;
 
       img {
-        max-height: 200px;
-        max-width: 250px;
+        max-height: 150px;
+        max-width: 200px;
         width: auto;
         height: auto;
       }
