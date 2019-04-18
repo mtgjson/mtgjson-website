@@ -1,49 +1,49 @@
 <template lang="pug">
-  .supporters
-    h2.patreon-headline(v-if="patrons") Our Patreon Supporters
+  .supporters(v-if="supporters")
+    div(v-if="patrons")
+      h2.patreon-headline Our Patreon Supporters
+      // Tier 3
+      .supporters-table(v-if="mythic.length > 0")
+        .supporter(v-for="(supporter, key) in mythic" :data-tier-size="3")
+          a(v-if="supporter.link" :href="supporter.link" target="_blank")
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+            h6 {{ supporter.name }}
+          span(v-else)
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+            h6 {{ supporter.name }}
+          p(v-if="supporter.blurb") {{ supporter.blurb }}
+          a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="3" v-html="formatTime(supporter.since)")
 
-    // Tier 3
-    .supporters-table(v-if="mythic.length > 0")
-      .supporter(v-for="(supporter, key) in mythic" :data-tier-size="3")
-        a(v-if="supporter.link" :href="supporter.link" target="_blank")
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-          h6 {{ supporter.name }}
-        span(v-else)
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
-          h6 {{ supporter.name }}
-        p(v-if="supporter.blurb") {{ supporter.blurb }}
-        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="3" v-html="formatTime(supporter.since)")
+      // Tier 2
+      .supporters-table(v-if="rare.length > 0")
+        .supporter(v-for="(supporter, key) in rare" :data-tier-size="2")
+          a(v-if="supporter.link" :href="supporter.link" target="_blank")
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+            h6 {{ supporter.name }}
+          span(v-else)
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+            h6 {{ supporter.name }}
+          a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="2" v-html="formatTime(supporter.since)")
 
-    // Tier 2
-    .supporters-table(v-if="rare.length > 0")
-      .supporter(v-for="(supporter, key) in rare" :data-tier-size="2")
-        a(v-if="supporter.link" :href="supporter.link" target="_blank")
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-          h6 {{ supporter.name }}
-        span(v-else)
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
-          h6 {{ supporter.name }}
-        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="2" v-html="formatTime(supporter.since)")
-
-    // Tier 1
-    .supporters-table(v-if="uncommon.length > 0")
-      .supporter(v-for="(supporter, key) in uncommon" :data-tier-size="1")
-        a(v-if="supporter.link" :href="supporter.link" target="_blank")
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-          h6 {{ supporter.name }}
-        span(v-else)
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
-          h6 {{ supporter.name }}
-        a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
+      // Tier 1
+      .supporters-table(v-if="uncommon.length > 0")
+        .supporter(v-for="(supporter, key) in uncommon" :data-tier-size="1")
+          a(v-if="supporter.link" :href="supporter.link" target="_blank")
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+            h6 {{ supporter.name }}
+          span(v-else)
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+            h6 {{ supporter.name }}
+          a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
 
     // Not Patrons but services that use MTGJSON
-    h2.patreon-headline(v-if="services") Others Powered by MTGJSON
-
-    .supporters-table.services(v-if="services")
-      .supporter.service(v-for="(supporter, key) in services")
-        a(:href="supporter.link" target="_blank")
-          img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-          h6 {{ supporter.name }}
+    div(v-if="services")
+      h2.patreon-headline Others Powered by MTGJSON
+      .supporters-table.services
+        .supporter.service(v-for="(supporter, key) in services")
+          a(:href="supporter.link" target="_blank")
+            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+            h6 {{ supporter.name }}
 
 </template>
 
@@ -53,8 +53,7 @@ export default {
   name: 'GenerateServices',
   data() {
     return {
-      supporters: require('../../public/resources/supporters.json'),
-      supportersReady: false,
+      supporters: require('../../public/resources/supporters.json')
     };
   },
   computed: {
@@ -133,6 +132,8 @@ h2 {
     box-sizing: border-box;
     border: 1px solid #eaecef;
     position: relative;
+    margin-top: -1px;
+    margin-left: -1px;
 
     &[data-tier-size='0'] {
       flex: 0 0 100%;

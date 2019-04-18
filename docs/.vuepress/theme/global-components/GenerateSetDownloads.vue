@@ -48,10 +48,10 @@ export default {
       sorter: sorter
     };
   },
-  async beforeCreate(){
-    const fetched = await axios.get('https://mtgjson.com/json/SetList.json');
-    const data = await this.sorter('releaseDate:true', fetched.data);
-    this.defaultSets = data;
+  async created(){
+    const sets = await this.$sets;
+    const sortedSets = await sorter('releaseDate:true', sets);
+    this.defaultSets = sortedSets;
     this.setsReady = true;
   },
   computed: {
