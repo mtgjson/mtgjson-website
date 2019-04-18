@@ -113,6 +113,11 @@
 			"link": "http://mtgsetbuilder.com"
 		},
 		{
+			"name": "MTGStocks",
+			"image": "mtgstocks.jpg",
+			"link": "http://mtgstocks.com"
+		},
+		{
 			"name": "MYPCards",
 			"image": "mypcards.png",
 			"link": "https://mypcards.com/"
