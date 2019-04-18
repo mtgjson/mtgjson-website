@@ -1,5 +1,5 @@
 <template lang="pug">
-  .download-tables(v-if="decksReady")
+  .download-tables(v-if="decks")
     .sorting-options
       .sort-row
         div
@@ -35,18 +35,18 @@ export default {
   name: 'GenerateAllDownloads',
   data() {
     return {
-      defaultDecks: [],
+      defaultDecks: null,
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
-      decksReady: false,
-      sorter: sorter
+      sorter: sorter,
     };
   },
-  async created(){
-    const decks = await this.$decks;
-    const sortedDecks = await this.sorter('name', decks);
-    this.defaultDecks = sortedDecks;
-    this.decksReady = true;
+  async beforeMount() {
+    await axios
+      .get('https://mtgjson.com/json/DeckLists.json')
+      .then(async res => {
+        this.defaultDecks = await sorter('name', res.data.decks);
+      });
   },
   computed: {
     decks() {

@@ -15,13 +15,14 @@ export default {
     };
   },
   async beforeMount() {
-    const fetched = await axios.get('https://mtgjson.com/json/version.json');
-    
-    this.defaultMetaData = fetched.data;
-    const version = this.defaultMetaData.version.replace(/\./g, '-');
-    const date = this.defaultMetaData.date;
+    await axios.get('https://mtgjson.com/json/version.json').then(res => {
+      this.defaultMetaData = res.data;
+      const version = res.data.version.replace(/\./g, '-');
+      const date = res.data.date;
 
-    this.defaultChangelogLink = `/changelog/#_${version}-${date}`;
+      this.defaultChangelogLink = `/changelog/#_${version}-${date}`;
+    })
+    
   },
   computed: {
     metaData() {
