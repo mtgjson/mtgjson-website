@@ -1,5 +1,5 @@
 <template lang="pug">
-  .download-tables(v-if="setsReady")
+  .download-tables(v-if="sets")
     .sorting-options
       .sort-row
         div
@@ -41,18 +41,16 @@ export default {
   name: 'GenerateSingleSetDownloads',
   data() {
     return {
-      defaultSets: [],
+      defaultSets: null,
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
-      setsReady: false,
-      sorter: sorter
+      sorter: sorter,
     };
   },
-  async created(){
-    const sets = await this.$sets;
-    const sortedSets = await sorter('releaseDate:true', sets);
-    this.defaultSets = sortedSets;
-    this.setsReady = true;
+  async beforeMount() {
+    await axios.get('https://mtgjson.com/json/SetList.json').then( async res => {
+      this.defaultSets = await sorter('releaseDate:true', res.data);
+    })
   },
   computed: {
     sets() {

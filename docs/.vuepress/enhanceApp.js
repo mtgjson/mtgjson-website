@@ -1,25 +1,19 @@
-import axios from 'axios';
+// import axios from 'axios';
 
-export default async ({ Vue }) => {
-  axios
-    .get('https://mtgjson.com/json/DeckLists.json')
-    .then(res => res.data)
-    .then(async data => {
-      const decks = await data.decks;
-      Vue.prototype.$decks = decks;
-    })
-    .catch(err => {
-      console.error(err);
-    });
+// export default async ({ Vue }) => {
+//   try {
+//     await axios.get('https://mtgjson.com/json/DeckLists.json').then((res) => {
+//       Vue.prototype.$decks = res.data.decks;
+//     });
+//   } catch (err) {
+//     console.error(err);
+//   }
 
-  axios
-    .get('https://mtgjson.com/json/SetList.json')
-    .then(res => res.data)
-    .then(async data => {
-      const sets = await data;
-      Vue.prototype.$sets = sets;
-    })
-    .catch(err => {
-      console.error(err);
-    });
-};
+//   try {
+//     await axios.get('https://mtgjson.com/json/SetList.json').then((res) => {
+//       Vue.prototype.$sets = res.data;
+//     });
+//   } catch (err) {
+//     console.error(err);
+//   }
+// };
