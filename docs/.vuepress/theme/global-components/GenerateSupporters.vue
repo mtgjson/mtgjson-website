@@ -1,7 +1,7 @@
 <template lang="pug">
   .supporters(v-if="supporters")
     div(v-if="patrons")
-      h2.patreon-headline Our Patreon Supporters
+      // h2.patreon-headline Our Patreon Supporters
       // Tier 3
       .supporters-table(v-if="mythic.length > 0")
         .supporter(v-for="(supporter, key) in mythic" :data-tier-size="3")
@@ -48,7 +48,6 @@
 </template>
 
 <script>
-import axios from 'axios';
 export default {
   name: 'GenerateServices',
   data() {
@@ -107,7 +106,7 @@ h2 {
   margin-top: 30px;
 
   &:first-of-type {
-    margin-top: 10px;
+    margin-top: 30px;
   }
 
   &.services {

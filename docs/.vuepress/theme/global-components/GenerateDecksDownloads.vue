@@ -2,16 +2,15 @@
   .download-tables(v-if="decks")
     .sorting-options
       .sort-row
-        div
-          strong Sort By:
-          select.table-sort-select(@change="sorter($event, decks)")
-            option(value="name" selected) Name (Ascending)
-            option(value="name:true") Name (Descending)
-            option(value="code") Code (Ascending)
-            option(value="code:true") Code (Descending)
+        strong Sort By:
+        select.table-sort-select(@change="$sorter($event, decks)")
+          option(value="name" selected) Name (Ascending)
+          option(value="name:true") Name (Descending)
+          option(value="code") Code (Ascending)
+          option(value="code:true") Code (Descending)
             
-    .download-table(v-if="decks" v-for="(deck, key) in decks")
-      .download-item(v-if="deck")
+    .download-table(v-for="(deck, key) in decks")
+      .download-item
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
@@ -28,25 +27,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-import sorter from '../../scripts/Sorter';
-
 export default {
-  name: 'GenerateAllDownloads',
+  name: 'GenerateDecksDownloads',
   data() {
     return {
       defaultDecks: null,
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
-      sorter: sorter,
     };
   },
-  async beforeMount() {
-    await axios
-      .get('https://mtgjson.com/json/DeckLists.json')
-      .then(async res => {
-        this.defaultDecks = await sorter('name', res.data.decks);
-      });
+  mounted() {
+    this.defaultDecks = this.$decks;
   },
   computed: {
     decks() {

@@ -2,15 +2,14 @@
   .download-tables(v-if="sets")
     .sorting-options
       .sort-row
-        div
-          strong Sort By:
-          select.table-sort-select(@change="sorter($event, sets)")
-            option(value="releaseDate:true" selected) Release Date (Newest)
-            option(value="releaseDate") Release Date (Oldest)
-            option(value="name") Name (Ascending)
-            option(value="name:true") Name (Descending)
-            option(value="code") Code (Ascending)
-            option(value="code:true") Code (Descending)
+        strong Sort By:
+        select.table-sort-select(@change="$sorter($event, sets)")
+          option(value="releaseDate:true" selected) Release Date (Newest)
+          option(value="releaseDate") Release Date (Oldest)
+          option(value="name") Name (Ascending)
+          option(value="name:true") Name (Descending)
+          option(value="code") Code (Ascending)
+          option(value="code:true") Code (Descending)
 
     .download-table(v-for="(set, key) in sets")
       .download-item
@@ -34,23 +33,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-import sorter from '../../scripts/Sorter';
-
 export default {
-  name: 'GenerateSingleSetDownloads',
+  name: 'GenerateSetsDownloads',
   data() {
     return {
       defaultSets: null,
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
-      sorter: sorter,
     };
   },
-  async beforeMount() {
-    await axios.get('https://mtgjson.com/json/SetList.json').then( async res => {
-      this.defaultSets = await sorter('releaseDate:true', res.data);
-    })
+  mounted() {
+    this.defaultSets = this.$sets;
   },
   computed: {
     sets() {
