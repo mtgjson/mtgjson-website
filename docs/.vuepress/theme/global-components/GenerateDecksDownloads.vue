@@ -1,17 +1,16 @@
 <template lang="pug">
-  .download-tables(v-if="decksReady")
+  .download-tables(v-if="decks")
     .sorting-options
       .sort-row
-        div
-          strong Sort By:
-          select.table-sort-select(@change="sorter($event, decks)")
-            option(value="name" selected) Name (Ascending)
-            option(value="name:true") Name (Descending)
-            option(value="code") Code (Ascending)
-            option(value="code:true") Code (Descending)
+        strong Sort By:
+        select.table-sort-select(@change="$sorter($event, decks)")
+          option(value="name" selected) Name (Ascending)
+          option(value="name:true") Name (Descending)
+          option(value="code") Code (Ascending)
+          option(value="code:true") Code (Descending)
             
-    .download-table(v-if="decks" v-for="(deck, key) in decks")
-      .download-item(v-if="deck")
+    .download-table(v-for="(deck, key) in decks")
+      .download-item
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
@@ -28,25 +27,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-import sorter from '../../scripts/Sorter';
-
 export default {
-  name: 'GenerateAllDownloads',
+  name: 'GenerateDecksDownloads',
   data() {
     return {
-      defaultDecks: [],
+      defaultDecks: null,
       deckFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
-      decksReady: false,
-      sorter: sorter
     };
   },
-  async created(){
-    const decks = await this.$decks;
-    const sortedDecks = await this.sorter('name', decks);
-    this.defaultDecks = sortedDecks;
-    this.decksReady = true;
+  mounted() {
+    this.defaultDecks = this.$decks;
   },
   computed: {
     decks() {

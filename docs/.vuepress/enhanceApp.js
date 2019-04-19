@@ -1,12 +1,15 @@
+import landcycle from './scripts/Landcycle';
+import sorter from './scripts/Sorter';
 import axios from 'axios';
 
 export default async ({ Vue }) => {
+  Vue.prototype.$landcycle = landcycle;
+  Vue.prototype.$sorter = sorter;
+
   axios
     .get('https://mtgjson.com/json/DeckLists.json')
-    .then(res => res.data)
-    .then(async data => {
-      const decks = await data.decks;
-      Vue.prototype.$decks = decks;
+    .then(response => {
+      Vue.prototype.$decks = sorter('name', response.data.decks);
     })
     .catch(err => {
       console.error(err);
@@ -14,10 +17,8 @@ export default async ({ Vue }) => {
 
   axios
     .get('https://mtgjson.com/json/SetList.json')
-    .then(res => res.data)
-    .then(async data => {
-      const sets = await data;
-      Vue.prototype.$sets = sets;
+    .then(response => {
+      Vue.prototype.$sets = sorter('releaseDate:true', response.data);
     })
     .catch(err => {
       console.error(err);

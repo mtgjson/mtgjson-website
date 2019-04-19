@@ -1,7 +1,7 @@
 // PogChamp
 // A little different than the source but works
 // https://jsbin.com/wowezadolo/edit?js,console
-export default (event = '', toSort) => {
+export default (event = '', dataToSort) => {
   let values = event.currentTarget
     ? event.currentTarget.value.split(':')
     : event.split(':');
@@ -19,7 +19,7 @@ export default (event = '', toSort) => {
     return this.parser(isProp ? x[this.prop] : x);
   };
 
-  return toSort.sort((a, b) => {
+  return dataToSort.sort((a, b) => {
     a = getItem.call(config, a);
     b = getItem.call(config, b);
     // + operator before a bool will create a bool's

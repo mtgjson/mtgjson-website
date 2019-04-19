@@ -1,16 +1,15 @@
 <template lang="pug">
-  .download-tables(v-if="setsReady")
+  .download-tables(v-if="sets")
     .sorting-options
       .sort-row
-        div
-          strong Sort By:
-          select.table-sort-select(@change="sorter($event, sets)")
-            option(value="releaseDate:true" selected) Release Date (Newest)
-            option(value="releaseDate") Release Date (Oldest)
-            option(value="name") Name (Ascending)
-            option(value="name:true") Name (Descending)
-            option(value="code") Code (Ascending)
-            option(value="code:true") Code (Descending)
+        strong Sort By:
+        select.table-sort-select(@change="$sorter($event, sets)")
+          option(value="releaseDate:true" selected) Release Date (Newest)
+          option(value="releaseDate") Release Date (Oldest)
+          option(value="name") Name (Ascending)
+          option(value="name:true") Name (Descending)
+          option(value="code") Code (Ascending)
+          option(value="code:true") Code (Descending)
 
     .download-table(v-for="(set, key) in sets")
       .download-item
@@ -34,25 +33,17 @@
 </template>
 
 <script>
-import axios from 'axios';
-import sorter from '../../scripts/Sorter';
-
 export default {
-  name: 'GenerateSingleSetDownloads',
+  name: 'GenerateSetsDownloads',
   data() {
     return {
-      defaultSets: [],
+      defaultSets: null,
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
-      setsReady: false,
-      sorter: sorter
     };
   },
-  async created(){
-    const sets = await this.$sets;
-    const sortedSets = await sorter('releaseDate:true', sets);
-    this.defaultSets = sortedSets;
-    this.setsReady = true;
+  mounted() {
+    this.defaultSets = this.$sets;
   },
   computed: {
     sets() {

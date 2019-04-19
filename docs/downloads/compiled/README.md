@@ -14,10 +14,10 @@
 }
 ---
 
-# Compiled
+# Compiled Files
 
 Download MTGJSON outputs.
 
-### Downloads
+### Download Files
 
 <GenerateCompiledDownloads/>
