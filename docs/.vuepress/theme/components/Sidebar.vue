@@ -32,17 +32,19 @@ export default {
   .nav-links {
     display: none;
     border-bottom: 1px solid $borderColor;
-    padding: 0.5rem 0 0.75rem 0;
-
-    a {
-      font-weight: 600;
-    }
+    padding: 1.5rem 1.5rem 1rem 1.5rem;
 
     .nav-item, .repo-link {
-      display: block;
-      line-height: 1.25rem;
-      font-size: 1.1em;
-      padding: 0.5rem 0 0.5rem 1.5rem;
+      display: flex;
+      margin-bottom: 10px;
+      
+      a {
+        min-height: 34px;
+        font-weight: 600;
+        line-height: 1.1rem;
+        font-size: 14px;
+        flex: auto;
+      }
     }
   }
 

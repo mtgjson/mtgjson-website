@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import landcycle from '../../scripts/Landcycle';
 export default {
   name: 'GenerateTable',
   data() {
@@ -54,7 +55,7 @@ export default {
       isMobileSize: 960,
       isMobile: false,
       schema: [],
-      headings: ['property','type','example','description']
+      headings: ['property', 'type', 'example', 'description'],
     };
   },
   created() {
@@ -73,7 +74,7 @@ export default {
     },
     async hydrate() {
       this.schema = await new this.$landcycle(this.schema);
-    }
+    },
   },
   computed: {
     showMobileTable() {
@@ -200,8 +201,7 @@ table {
   }
 }
 
-code,
-pre {
+code, pre {
   &:empty {
     display: none;
   }

@@ -14,14 +14,19 @@ export default {
       defaultChangelogLink: '',
     };
   },
-  async beforeMount() {
-    const fetched = await axios.get('https://mtgjson.com/json/version.json');
-    
-    this.defaultMetaData = fetched.data;
-    const version = this.defaultMetaData.version.replace(/\./g, '-');
-    const date = this.defaultMetaData.date;
+  mounted() {
+    axios
+      .get('https://mtgjson.com/json/version.json')
+      .then(response => {
+        const version = response.data.version.replace(/\./g, '-');
+        const date = response.data.date;
 
-    this.defaultChangelogLink = `/changelog/#_${version}-${date}`;
+        this.defaultMetaData = response.data;
+        this.defaultChangelogLink = `/changelog/#_${version}-${date}`;
+      })
+      .catch(err => {
+        console.error(err);
+      });
   },
   computed: {
     metaData() {
