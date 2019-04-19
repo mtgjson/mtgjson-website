@@ -87,6 +87,8 @@ module.exports = {
       {
         canonical_base: 'https://mtgjson.com',
         description_sources: 'excerpt',
+        // Max is required
+        count: 100,
         feeds: {
           atom1: {
             file_name: 'atom.xml',
