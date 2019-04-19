@@ -14,8 +14,9 @@
 			}
 		],
 		"rare": [{
-			"name": "Roem",
-			"image": "avatar-roem.jpg",
+			"name": "My MTG Collection",
+			"image": "my-mtg-collection-logo.png",
+			"link": "https://www.reddit.com/r/Mymtgapp/",
 			"since": "2019-04"
 		}],
 		"uncommon": [{

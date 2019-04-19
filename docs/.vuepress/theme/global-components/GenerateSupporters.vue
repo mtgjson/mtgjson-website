@@ -157,13 +157,6 @@ h2 {
       }
     }
 
-    // Non-linked Patrons
-    span {
-      img {
-        border-radius: 50%;
-      }
-    }
-
     img {
       max-height: 75px;
       max-width: 100px;
@@ -182,6 +175,12 @@ h2 {
             text-decoration: underline;
           }
         }
+      }
+    }
+    
+    span {
+      img {
+        border-radius: 50%;
       }
     }
 
