@@ -47,6 +47,7 @@
 </template>
 
 <script>
+import landcycle from '../../scripts/Landcycle';
 export default {
   name: 'GenerateTable',
   data() {

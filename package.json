@@ -11,9 +11,8 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "build:dev": "yarn build && yarn delete-build",
-    "delete-build": "rm -rf docs/.vuepress/dist",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "delete-build": "rm -rf docs/.vuepress/dist"
   },
   "dependencies": {
     "axios": "^0.18.0",
@@ -27,7 +26,7 @@
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn build:dev"
+      "pre-commit": "yarn build"
     }
   }
 }
