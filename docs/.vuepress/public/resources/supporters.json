@@ -26,6 +26,12 @@
 				"since": "2019-04"
 			},
 			{
+				"name": "ComboDeck",
+				"image": "combodeck.png",
+				"link": "http://combodeck.net",
+				"since": "2019-04"
+			},
+			{
 				"name": "MTG Brewmaster",
 				"image": "mtgbrewmaster.png",
 				"link": "http://mtgbrewmaster.com",
@@ -47,11 +53,6 @@
 			"name": "Cardsphere",
 			"image": "cardsphere.svg",
 			"link": "https://cardsphere.com"
-		},
-		{
-			"name": "Combo Deck",
-			"image": "combodeck.png",
-			"link": "http://combodeck.net"
 		},
 		{
 			"name": "Cube Tutor",
