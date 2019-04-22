@@ -114,7 +114,7 @@ def main():
 
     # Compress the system
     compress_single_sets(".")
-    if sys.argv[2] != "spoiler":
+    if len(sys.argv) < 3 or sys.argv[2] != "spoiler":
         compress_dir_to_archives(".", "AllSetFiles")
         compress_dir_to_archives("./decks", "AllDeckFiles")
         compress_single_sets("./decks")

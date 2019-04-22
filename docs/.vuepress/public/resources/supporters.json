@@ -9,14 +9,20 @@
 			{
 				"name": "Cardhoarder",
 				"image": "cardhoarder.png",
-				"link": "https://www.cardhoarder.com/",
+				"link": "https://www.cardhoarder.com",
 				"since": "2018-11"
+			},
+			{
+				"name": "MTG Decks",
+				"image": "mtgdecks.png",
+				"link": "https://www.mtgdecks.net",
+				"since": "2019-04"
 			}
 		],
 		"rare": [{
 			"name": "My MTG Collection",
 			"image": "my-mtg-collection-logo.png",
-			"link": "https://www.reddit.com/r/Mymtgapp/",
+			"link": "https://www.reddit.com/r/Mymtgapp",
 			"since": "2019-04"
 		}],
 		"uncommon": [{
