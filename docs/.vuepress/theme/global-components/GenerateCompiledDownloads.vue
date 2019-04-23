@@ -9,8 +9,8 @@
               span {{ file.description }}
           //- All sets sqlite database
           .dl-wrap(v-if="file.example === 'AllSets'")
-            a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'sqlite'" :key="key" :href="`/${fileDirectory}/${file.example}.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}`") {{ format }}
+            a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
+            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
             p
               small
                 span AllSets as an sqlite database. 
@@ -42,9 +42,9 @@ export default {
   data() {
     return {
       files: require(`../../public/schemas/Files.schema.json`),
-      fileFormats: ['json', 'zip', 'bz2', 'gz', 'xz'],
-      fileFormatsAllSetFiles: ['zip', 'bz2', 'gz', 'xz'],
-      fileFormatsAllSetsSQL: ['sqlite', 'zip', 'bz2', 'gz', 'xz'],
+      fileFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
+      fileFormatsAllSetFiles: ['bz2', 'gz', 'xz', 'zip'],
+      fileFormatsAllSetsSQL: ['sqlite', 'bz2', 'gz', 'xz', 'zip'],
       fileDirectory: 'json',
     };
   },
