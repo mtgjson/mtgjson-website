@@ -13,7 +13,7 @@
         OutboundLink
 
       div.last-updated(v-if="lastUpdated")
-        span.prefix {{ lastUpdatedText }}:
+        span.prefix {{ lastUpdatedText }}: 
         span.time {{ lastUpdated }}
 
     div.page-nav(v-if="prev || next")

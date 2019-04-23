@@ -6,10 +6,12 @@
         select.table-sort-select(@change="$sorter($event, sets)")
           option(value="releaseDate:true" selected) Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
-          option(value="name") Name (Ascending)
-          option(value="name:true") Name (Descending)
           option(value="code") Code (Ascending)
           option(value="code:true") Code (Descending)
+          option(value="name") Name (Ascending)
+          option(value="name:true") Name (Descending)
+          option(value="type") Type (Ascending)
+          option(value="type:true") Type (Descending)
 
     .download-table(v-for="(set, key) in sets")
       .download-item
@@ -20,15 +22,16 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
             h3(:id="set.code") {{ set.name }}
-            small Set Code: 
+              a(:href="`#${set.name}`" aria-hidden="true" class="header-anchor") #
+            small Code: 
               span {{ set.code }}
-            small Set Type: 
+            small Type: 
               span.type {{ set.type }}
             small Release Date: 
               span {{ set.releaseDate }}
           .dl-wrap
             a.cta-btn(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key" :href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
+            a.cta-btn(v-else :href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
 
 </template>
 

@@ -11,6 +11,7 @@
           td
             div
               h3 {{ key }}
+                a(:href="`#${key}`" aria-hidden="true" class="header-anchor") #
           td(v-for="(value, key) in value" v:key=key)
             div(v-if="key === 'type'")
               em {{ value }}
@@ -20,11 +21,12 @@
               div.land-cycler(v-html="value")
 
     div.mobile-doc-tables(v-else)
-      div.mobile-doc-table(v-for="(values, key) in schema" v:key=key v-bind:class="{hidden: !showMobileTable}")
+      div.mobile-doc-table(v-for="(values, key) in schema" v:key=key :class="{hidden: !showMobileTable}")
         div.mobile-doc-table--row
           div.mobile-doc-table--row-item
             div.mobile-doc-table--row-item-key
               h3 {{ headings[0] }}
+                a(:href="`#${key}`" aria-hidden="true" class="header-anchor") #
             div.mobile-doc-table--row-item-value
               span {{ key }}
         div.mobile-doc-table--row(v-for="(value, key) in values" v:key=key)

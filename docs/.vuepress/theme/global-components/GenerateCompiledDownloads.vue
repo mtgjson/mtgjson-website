@@ -10,30 +10,30 @@
           //- All sets sqlite database
           .dl-wrap(v-if="file.example === 'AllSets'")
             a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+            a.cta-btn(v-else :href="`/${fileDirectory}/${file.example}.json`") {{ format }}
             p
               small
                 span AllSets as an sqlite database. 
                   span Courtesy of 
                     a(href="https://github.com/mtgjson/mtgsqlive" target="_blank") mtgsqlive
               a.cta-btn(v-for="(format, key) in fileFormatsAllSetsSQL" v-if="format !== 'sqlite'" :key="key" :href="`/${fileDirectory}/${file.example}.sqlite.${format}`") {{ format }}
-              a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.sqlite`") sqlite
+              a.cta-btn(v-else :href="`/${fileDirectory}/${file.example}.sqlite`") sqlite
           //- All set files download
           .dl-wrap(v-else-if="file.example === 'AllSetFiles'")
             a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
+            a.cta-btn(v-else :href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
           //- All deck files download
           .dl-wrap(v-else-if="file.example === 'AllDeckFiles'")
             a.cta-btn(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key" :href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
+            a.cta-btn(v-else :href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
           //- Deck lists
           .dl-wrap(v-else-if="file.example === 'DeckLists'")
             a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+            a.cta-btn(v-else :href="`/${fileDirectory}/${file.example}.json`") {{ format }}
           //- Everything else
           .dl-wrap(v-else)
             a.cta-btn(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key" :href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+            a.cta-btn(v-else :href="`/${fileDirectory}/${file.example}.json`") {{ format }}
 </template>
 
 <script>

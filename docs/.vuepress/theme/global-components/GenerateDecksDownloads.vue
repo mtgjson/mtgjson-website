@@ -4,10 +4,12 @@
       .sort-row
         strong Sort By:
         select.table-sort-select(@change="$sorter($event, decks)")
-          option(value="name" selected) Name (Ascending)
-          option(value="name:true") Name (Descending)
+          option(value="releaseDate:true" selected) Release Date (Newest)
+          option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
           option(value="code:true") Code (Descending)
+          option(value="name") Name (Ascending)
+          option(value="name:true") Name (Descending)
             
     .download-table(v-for="(deck, key) in decks")
       .download-item
@@ -16,14 +18,17 @@
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
           .txt-wrap
             h3(:id="deck.name") {{ deck.name }}
-            small Deck Code: 
+              a(:href="`#${deck.name}`" aria-hidden="true" class="header-anchor") #
+            small Code: 
               span {{ deck.code }}
-              //- @ TODO: Remove condition once added in Py app
-            small(v-if="deck.releaseDate") Release Date: 
+            //- This if/else logic is needed until `type` is added 
+            small(v-if="deck.type") Type: 
+              span {{ deck.type }}
+            small Release Date: 
               span {{ deck.releaseDate }}
           .dl-wrap
             a.cta-btn(v-for="(format, key) in deckFormats" v-if="format !== 'json'" :key="key" :href="`/${deckDirectory}/${deck.fileName}.json.${format}`") {{ format }}
-            a.cta-btn(v-else v-bind:href="`/${deckDirectory}/${deck.fileName}.json`") {{ format }}
+            a.cta-btn(v-else :href="`/${deckDirectory}/${deck.fileName}.json`") {{ format }}
 </template>
 
 <script>
