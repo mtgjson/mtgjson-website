@@ -129,6 +129,21 @@
     "example": "\"{3}{W}{W}\"",
     "description": "Mana cost of the card."
   },
+  "mcmId": {
+    "type": "integer",
+    "example": "371878",
+    "description": "The Magic Card Market card id."
+  },
+  "mcmMetaId": {
+    "type": "integer",
+    "example": "269313",
+    "description": "The Magic Card Market card meta id."
+  },
+  "mcmName": {
+    "type": "string",
+    "example": "\"Angel of Grace\"",
+    "description": "The Magic Card Market card name."
+  },
   "multiverseId": {
     "type": "integer",
     "example": "457145",
@@ -168,6 +183,11 @@
     "type": "array(string)",
     "example": "[\"M19\",\"PM19\"]",
     "description": "List of sets the card was printed in, in uppercase."
+  },
+  "purchaseUrls": {
+    "type": "array(string: string)",
+    "example": "{{link:purchase-urls}}",
+    "description": "See the {{link:purchase-urls}} structure."
   },
   "rarity": {
     "type": "string",
