@@ -28,4 +28,8 @@ The card structure describes the properties and values of a single card.
 
 ### Structure
 
+::: warning Deprecation Warning
+`tcgplayerPurchaseUrl` will be deprecated in v4.5.0. `purchaseUrls` is now a key that will contain multiple purchase urls.
+:::
+
 <GenerateTable/>
