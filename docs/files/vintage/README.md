@@ -11,7 +11,10 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, modern",
     }
-  ]
+  ],
+  "feed": {
+    "enable": "true"
+  }
 }
 ---
 

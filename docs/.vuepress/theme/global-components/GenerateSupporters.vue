@@ -130,6 +130,9 @@ h2 {
     text-align: center;
     box-sizing: border-box;
     border: 1px solid #eaecef;
+    // Prevent double borders on boxes
+    margin-top: -1px;
+    margin-left: -1px;
     position: relative;
     margin-top: -1px;
     margin-left: -1px;

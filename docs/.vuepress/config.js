@@ -1,5 +1,9 @@
 const generateSidebarRoutes = require('./config.sidebar');
 
+const structures = generateSidebarRoutes('/structures/');
+const downloads = generateSidebarRoutes('/downloads/');
+const files = generateSidebarRoutes('/files/');
+
 module.exports = {
   host: '0.0.0.0',
   port: '8080',
@@ -53,7 +57,7 @@ module.exports = {
         title: 'Downloads',
         path: '/downloads/compiled',
         collapsable: false,
-        children: generateSidebarRoutes('/downloads/'),
+        children: downloads,
       },
       {
         title: 'Documentation',
@@ -64,17 +68,39 @@ module.exports = {
             title: 'Files',
             path: '/files/all-cards',
             collapsable: false,
-            children: generateSidebarRoutes('/files/'),
+            children: files,
           },
           {
             title: 'Structures',
             path: '/structures/card',
             collapsable: false,
-            children: generateSidebarRoutes('/structures/'),
+            children: structures,
           },
         ],
       },
       '/changelog/',
     ],
   },
+  plugins: [
+    [
+      'feed',
+      {
+        canonical_base: 'https://mtgjson.com',
+        description_sources: 'excerpt',
+        // Max is required
+        count: 100,
+        feeds: {
+          atom1: {
+            file_name: 'atom.xml',
+          },
+          rss2: {
+            enable: false,
+          },
+          json1: {
+            enable: false,
+          },
+        },
+      },
+    ],
+  ],
 };

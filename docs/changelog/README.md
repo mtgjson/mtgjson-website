@@ -1,14 +1,19 @@
 ---
 {
   'schema': 'Changelog',
-  'meta':
-    [
-      { 'name': 'description', 'content': 'MTGJSON Changelog.' },
-      {
-        'name': 'keywords',
-        'content': 'mtg, magic: the gathering, mtgjson, json, changelog',
-      },
-    ],
+  'meta': [
+    {
+      'name': 'description',
+      'content': 'MTGJSON Changelog.'
+    },
+    {
+      'name': 'keywords',
+      'content': 'mtg, magic: the gathering, mtgjson, json, changelog',
+    },
+  ],
+  "feed": {
+    "enable": "true"
+  }
 }
 ---
 
@@ -30,7 +35,7 @@
 #### Changed
 
 - Updated watermarks for cards that had `set` as the watermark.
-    - Example: `Blood Moon` in `A25` will now have a watermark of `set (DRK)` rather than `set`
+  - Example: `Blood Moon` in `A25` will now have a watermark of `set (DRK)` rather than `set`
 
 ### Tokens
 
