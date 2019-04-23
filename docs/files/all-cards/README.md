@@ -31,7 +31,7 @@ Each card's keys are limited to its atomic data only - data that typically will 
 :::
 
 ::: warning Deprecation Warning
-`tcgplayerPurchaseUrl` will be deprecated in v4.5.0.
+`tcgplayerPurchaseUrl` will be removed in v4.5.0.
 :::
 
 ### Structure
