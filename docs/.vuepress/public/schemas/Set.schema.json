@@ -69,6 +69,11 @@
     "example": "\"Ravnica Allegiance\"",
     "description": "Name of the set."
   },
+  "parentCode": {
+    "type": "string",
+    "example": "\"RNA\"",
+    "description": "The parent set code for set variations like promotions, guild kits, etc."
+  },
   "releaseDate": {
     "type": "string",
     "example": "\"2019-01-25\"",
