@@ -234,6 +234,11 @@
 			"name": "mtg.wtf",
 			"image": "",
 			"link": "https://mtg.wtf"
+		},
+		{
+			"name": "TOP8Draft",
+			"image": "",
+			"link": "http://www.top8draft.com/"
 		}
 	]
 }
