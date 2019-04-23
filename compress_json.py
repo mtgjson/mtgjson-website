@@ -53,6 +53,31 @@ def file_endings(source_dir, ending, ignore_files=False):
                 yield f
 
 
+def compress_sqlite(file_path):
+    if not os.path.exists(file_path):
+        print("Unable to compress sqlite: not found")
+        return
+
+    zip_out = zipfile.ZipFile(file_path + ".zip", "w")
+    zip_out.write(
+        file_path,
+        compress_type=zipfile.ZIP_DEFLATED,
+        arcname=os.path.basename(file_path),
+    )
+    zip_out.close()
+
+    with open(file_path, "rb") as f_in, gzip.open(file_path + ".gz", "wb") as f_out:
+        f_out.writelines(f_in)
+
+    with open(file_path, "rb") as f_in, open(file_path + ".bz2", "wb") as f_out:
+        f_out.write(bz2.compress(f_in.read()))
+
+    with open(file_path, "rb") as f_in, open(file_path + ".xz", "wb") as f_out:
+        f_out.write(xz.compress(f_in.read()))
+
+    print("Compressed " + os.path.basename(file_path))
+
+
 def compress_single_sets(source_dir):
     for f in file_endings(source_dir, ".json"):
         file_root = os.path.splitext(f)[0]
@@ -118,9 +143,11 @@ def main():
         compress_dir_to_archives(".", "AllSetFiles")
         compress_dir_to_archives("./decks", "AllDeckFiles")
         compress_single_sets("./decks")
+        compress_sqlite("./AllSets.sqlite")
+
 
 if __name__ == "__main__":
     if len(sys.argv) < 1:
-        print("Usage: " + sys.argv[0] + " <json_directory> [\"spoiler\"]")
+        print("Usage: " + sys.argv[0] + ' <json_directory> ["spoiler"]')
         sys.exit()
     main()
