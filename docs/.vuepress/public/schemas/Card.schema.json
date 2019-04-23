@@ -186,8 +186,8 @@
   },
   "purchaseUrls": {
     "type": "array(string: string)",
-    "example": "{{link:purchaseUrls}}",
-    "description": "See the {{link:purchaseUrls}} structure."
+    "example": "{{link:purchase-urls}}",
+    "description": "See the {{link:purchase-urls}} structure."
   },
   "rarity": {
     "type": "string",
