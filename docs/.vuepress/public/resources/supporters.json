@@ -13,6 +13,12 @@
 				"since": "2018-11"
 			},
 			{
+				"name": "Custom Standard",
+				"image": "custom-standard.png",
+				"link": "http://discord.gg/DdhxPQQ",
+				"since": "2019-04"
+			},
+			{
 				"name": "MTG Decks",
 				"image": "mtgdecks.png",
 				"link": "https://www.mtgdecks.net",
