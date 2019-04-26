@@ -19,7 +19,7 @@
 
 # Individual Decks
 
-Pre-constructed decks MTGJSON outputs.
+Download pre-constructed decks MTGJSON outputs.
 
 ### Downloads Decks
 

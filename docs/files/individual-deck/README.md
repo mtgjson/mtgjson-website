@@ -1,7 +1,7 @@
 ---
 {
-  "title": "Deck",
-  "schema": "IndividualDeck",
+  "title": "Individual Deck",
+  "schema": "Deck",
   "meta": [
     {
       "name": "description",
@@ -9,7 +9,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, keywords",
+      "content": "mtg, magic: the gathering, mtgjson, json, individual deck",
     }
   ],
   "feed": {
@@ -18,9 +18,9 @@
 }
 ---
 
-# Pre-Constructed Deck
+# Individual Deck
 
-MTGJSON outputs pre-constructed decks and makes them available for download by file name.
+MTGJSON outputs single pre-constructed decks and makes them available for download by file name.
 
 > Data type: `anonymous object(string: any)`   
 > Property type: `string` 

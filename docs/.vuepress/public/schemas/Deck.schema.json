@@ -24,6 +24,11 @@
     "example": "{{link:card}}",
     "description": "The cards in the side-board. See the {{link:card}} structure."
   },
+  "releaseDate": {
+    "type": "string",
+    "example": "\"2018-07-13\"",
+    "description": "Release date (OBDC standard) for the set. If the set was not formally released as a product, can be null."
+  },
   "type": {
     "type": "string",
     "example": "\"Intro Pack\"",

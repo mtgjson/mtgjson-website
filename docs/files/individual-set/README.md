@@ -1,15 +1,15 @@
 ---
 {
-  "title": "set",
+  "title": "Individual Set",
   "schema": "Set",
   "meta": [
     {
       "name": "description",
-      "content": "set data structure for MTGJSON.",
+      "content": "An individual set data structure for MTGJSON.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, set, sets",
+      "content": "mtg, magic: the gathering, mtgjson, json, individual set",
     }
   ],
   "feed": {
@@ -18,9 +18,9 @@
 }
 ---
 
-# Set
+# Individual Set
 
-The set structure describes the properties and values of a single set.
+The individual set structure describes the properties and values of a single set.
  
 > Potential Parent property type: `object(string: any)`  
 > Property type: `string`  
