@@ -69,6 +69,11 @@
     "example": "\"{3}{W}{W}\"",
     "description": "Mana cost of the card."
   },
+  "mtgstocksId": {
+    "type": "integer",
+    "example": "40272",
+    "description": "mtgstocks.com card id."
+  },
   "name": {
     "type": "string",
     "example": "\"Angel of Grace\"",
@@ -83,6 +88,11 @@
     "type": "string",
     "example": "\"5\"",
     "description": "Power of the creature."
+  },
+  "prices": {
+    "type": "object(string: object)",
+    "example": "{{link:prices}}",
+    "description": "See the {{link:prices}} structure."
   },
   "printings": {
     "type": "array(string)",
