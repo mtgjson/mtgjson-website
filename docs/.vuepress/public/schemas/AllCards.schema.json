@@ -19,11 +19,6 @@
     "example": "5.0",
     "description": "The converted mana cost of the card."
   },
-  "duelDeck": {
-    "type": "string",
-    "example": "\"a\"",
-    "description": "If the card is in a duel deck product, can be {{code:a}} or {{code:b}}. (If not in duel deck product, duelDeck is usually ommitted.)"
-  },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
@@ -33,11 +28,6 @@
     "type": "array(object)",
     "example": "{{link:foreign-data}}",
     "description": "See the {{link:foreign-data}} structure."
-  },
-  "frameEffect": {
-    "type": "string",
-    "example": "\"legendary\"",
-    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
   },
   "hand": {
     "type": "string",
@@ -118,16 +108,6 @@
     "type": "array(string)",
     "example": "[\"Legendary\"]",
     "description": "List of card supertypes found before em-dash."
-  },
-  "tcgplayerProductId": {
-    "type": "integer",
-    "example": "183201",
-    "description": "Numeric identifier for the card for TCGPlayer."
-  },
-  "tcgplayerPurchaseUrl": {
-    "type": "string",
-    "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
-    "description": "URL which redirects to TCGPlayer website’s card page."
   },
   "text": {
     "type": "string",
