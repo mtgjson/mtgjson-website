@@ -35,9 +35,15 @@ export default class {
     let tag = value.split(':')[0];
     /**
      * @todo rename these later
+     * 
+     * one day well get soft assignments...
      */
-    let text = card.match(/:(.*?)\$/)[1];
-    let url = card.match(/\$(.*?)}}/)[1] || text;
+    let text = card.match(/:(.*?)\$/);
+        text = text && text[1] ? text[1] : value.split(':')[1];
+        
+    let url = card.match(/\$(.*?)}}/);
+        url = card && card[1] ? card[1] : text;
+
     let plane = '';
     let land = '';
 
