@@ -1,6 +1,9 @@
 /**
  * @Type Class
  * @constructor @arguments
+ * 
+ * The structure of a mustache is as so:
+ * {{tag:first$second}}
  * */
 
 let logger = null;
@@ -30,7 +33,11 @@ export default class {
 
     let value = card.match(/{{(.*?)}}/)[1];
     let tag = value.split(':')[0];
-    let text = value.split(':')[1];
+    /**
+     * @todo rename these later
+     */
+    let text = card.match(/:(.*?)\$/)[1];
+    let url = card.match(/\$(.*?)}}/)[1] || text;
     let plane = '';
     let land = '';
 
@@ -48,6 +55,10 @@ export default class {
     switch(tag){
       case 'code':
         land = `<code>${text}</code>`;
+        break;
+
+      case 'external':
+        land = `<a class="code-link" href="${url}" target="_blank">${text}</a>`;
         break;
 
       case 'link':
