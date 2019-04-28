@@ -157,7 +157,7 @@
   "name": {
     "type": "string",
     "example": "\"Angel of Grace\"",
-    "description": "Name of the card. (If the card is in an Un-set and has multiple printings, a space and letter enclosed in parentheses, starting with (b), follows the name.)"
+    "description": "Names of each face on the card. Meld cards are listed in the order of {{code:CardA}}, {{code:Meld}}, {{code:CardB}}."
   },
   "names": {
     "type": "array(string)",
@@ -227,8 +227,7 @@
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as flip, split, transform cards. Can be {{code:a}}, {{code:b}} or {{code:c}}."
-  },
+    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."  },
   "subtypes": {
     "type": "array(string)",
     "example": "[\"Angel\"]",

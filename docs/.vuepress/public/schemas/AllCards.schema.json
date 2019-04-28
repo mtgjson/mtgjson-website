@@ -19,35 +19,30 @@
     "example": "5.0",
     "description": "The converted mana cost of the card."
   },
-  "duelDeck": {
-    "type": "string",
-    "example": "\"a\"",
-    "description": "If the card is in a duel deck product, can be {{code:a}} or {{code:b}}. (If not in duel deck product, duelDeck is usually ommitted.)"
-  },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
-    "description": "The converted mana cost of the face (half, or part) of the card."
+    "description": "The converted mana cost of the face of either half or part of the card."
   },
   "foreignData": {
     "type": "array(object)",
     "example": "{{link:foreign-data}}",
     "description": "See the {{link:foreign-data}} structure."
   },
-  "frameEffect": {
-    "type": "string",
-    "example": "\"legendary\"",
-    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
-  },
   "hand": {
     "type": "string",
     "example": "\"+0\"",
     "description": "Starting maximum hand size total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards."
   },
+  "isReserved": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card on the MTG Reserved List? (If false, it is usually omitted.)"
+  },
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, or {{code:host}}. (If normal, it is usually omitted.)"
+    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}} or {{code:host}}. (If normal, it is usually omitted.)"
   },
   "legalities": {
     "type": "object",
@@ -99,39 +94,38 @@
     "example": "[\"M19\",\"PM19\"]",
     "description": "List of sets the card was printed in, in uppercase."
   },
+  "purchaseUrls": {
+    "type": "array(string: string)",
+    "example": "{{link:purchase-urls}}",
+    "description": "See the {{link:purchase-urls}} structure."
+  },
   "rulings": {
     "type": "array(object)",
     "example": "{{link:rulings}}",
     "description": "See the {{link:rulings}} structure."
   },
+  "scryfallOracleId": {
+    "type": "string",
+    "example": "\"9b7870df-6bca-499f-bc6e-e57f2ddfe640\"",
+    "description": "A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc)."
+  },
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."
-  },
+    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."  },
   "subtypes": {
     "type": "array(string)",
     "example": "[\"Angel\"]",
-    "description": "List of card subtypes found after em-dash."
+    "description": "List of card subtypes found after em-dash. (\"Legendary Creature — Angel\")"
   },
   "supertypes": {
     "type": "array(string)",
     "example": "[\"Legendary\"]",
-    "description": "List of card supertypes found before em-dash."
-  },
-  "tcgplayerProductId": {
-    "type": "integer",
-    "example": "183201",
-    "description": "Numeric identifier for the card for TCGPlayer."
-  },
-  "tcgplayerPurchaseUrl": {
-    "type": "string",
-    "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
-    "description": "URL which redirects to TCGPlayer website’s card page."
+    "description": "List of card supertypes found before em-dash. (\"Legendary Creature — Angel\")"
   },
   "text": {
     "type": "string",
-    "example": "\"Flash\\nFlying\\nWhen Angel of Grace enters the battlefield, until end of turn, damage that would reduce your life total to less than 1 reduces it to 1 instead.\\n{4}{W}{W}, Exile Angel of Grace from your graveyard: Your life total becomes 10.\"",
+    "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
     "description": "Rules text of the card."
   },
   "toughness": {
@@ -141,8 +135,8 @@
   },
   "type": {
     "type": "string",
-    "example": "\"Creature — Angel\"",
-    "description": "Type of the card. Includes any supertypes and subtypes."
+    "example": "\"Legendary Creature — Angel\"",
+    "description": "Type of the card. Includes any supertypes and subtypes. (\"Creature — Angel\")"
   },
   "types": {
     "type": "array(string)",
@@ -151,7 +145,7 @@
   },
   "uuid": {
     "type": "string",
-    "example": "b408de19-f203-502d-8325-28304ec21602",
+    "example": "\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"",
     "description": "A universal unique id (v5) generated by MTGJSON. Each entry is unique."
   }
 }
