@@ -2,6 +2,6 @@
   "paper": {
     "type": "object(string: float)",
     "example": "\"2019-04-28\": 0.25",
-    "description": "Paper format prices of a card. Courtesy of mtgstocks."
+    "description": "Paper format prices of a card. Courtesy of {{external:mtgstocks.com}}."
   }
 }

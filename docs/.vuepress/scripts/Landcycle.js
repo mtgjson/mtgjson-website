@@ -50,6 +50,10 @@ export default class {
         land = `<code>${text}</code>`;
         break;
 
+      case 'external':
+        land = `<a href="http://${text}" target="_blank">${text}</a>`;
+        break;
+
       case 'link':
       default:
         land = `<a class="code-link" href="/${plane}/${text}" />${this.faceUp(
