@@ -4,6 +4,11 @@
     "example": "\"2000-01-01\"",
     "description": "Date of the MTGJSON build."
   },
+  "pricesDate": {
+    "type": "string",
+    "example": "\"2019-04-28\"",
+    "description": "Date of latest update to card prices."
+  },
   "version": {
     "type": "string",
     "example": "\"x.x.x\"",
