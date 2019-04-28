@@ -58,7 +58,7 @@ export default class {
         break;
 
       case 'external':
-        land = `<a href="${url}" target="_blank">${text}</a>`;
+        land = `<a class="code-link" href="${url}" target="_blank">${text}</a>`;
         break;
 
       case 'link':
