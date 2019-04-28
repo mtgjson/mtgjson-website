@@ -19,6 +19,78 @@
 
 # Changelog
 
+## 4.4.0 <small>(2019-04-28)</small>
+
+### Announcements
+
+<a href="https://patreon.com/mtgjson" target="_blank"><img src="/images/patreon-logo.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MTGStocks"/></a> MTGJSON has long been a free an open-sourced project made for the community, by the community. As time has gone on, the team and our financial situation have changed. While MTGJSON will continue to be a free service for now and forever, the development team has put together a few small perks for those who would like to help support continued and active development of the project, whether it be time-wise or money-wise. For those who can spare a few dollars a month, we have launched a [Patreon](https://patreon.com/mtgjson) to help cover the costs of development and upkeep. We look forward to actively serving the community well and thank you for your support!<br/><br/>
+
+<a href="https://www.mtgstocks.com/news?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson" target="_blank"><img src="/images/mtgstocks.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MTGStocks"/></a> MTGJSON strives to provide our users with the most accurate and complete data possible. As such, we are always looking for new sources to enrich our content. One of the most requested additions to our data was card price history, as there are a large number of analyses that can be run with such data.
+
+As of today, I am pleased to announce that MTGJSON and [MTGStocks](https://www.mtgstocks.com/news?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson) have formed a partnership to bring historic paper pricing data to our users. With the 4.4.0 release, you can access pricing data for any individual card in weekly intervals for the past three months (12 entries). We hope to continue bringing you, our users, the most complete data possible to create the best content.
+
+MTGJSON will be updating on a weekly basis, usually Sundays, with updated card prices. You can confirm the changes via the new meta tag, `pricesDate`, which will update whenever new prices go live.
+
+If you have data you believe would be relevant to MTGJSON and the development community, please feel free to reach out via [zach@mtgjson.com](mailto:zach@mtgjson.com)
+
+### Cards
+#### Added
+- `aftermath` added as `layout` option
+- `mcmId`, `mcmMetaId`, and `mcmName` from Magic Card Market
+- `purchasesUrls` with support for `tcgplayer`, `cardmarket`, and `mtgstocks`
+- `mtgstocksId` for card identification
+- `prices` for historic card prices
+
+#### Deprecation
+- `tcgplayerPurchaseUrl` as it was replaced by `purchaseUrls`
+  - Removal set for 4.5.0 release.
+
+#### Fixed
+- Miscellaneous bug fixes with fields such as `artist` and `faceCMC`
+
+#### Removed
+- `uuidV421` is no longer included (deprecated in 4.3.0)
+
+### Sets
+#### Added
+- `mcmId` and `mcmName` from Magic Card Market
+- WAR and SS2 added
+
+#### Fixed
+- `baseSetSize` re-addressed to be more accurate
+
+### Tokens
+
+#### Fixed
+- Emblems now show in the tokens list
+
+### Decks
+#### Added
+- `releaseDate` to show when the deck was put for sale
+
+### Website
+#### Added
+- atom feeds are now available via [/atom.xml](/atom.xml)
+
+### Other
+#### Added
+- `--skip-cache` to disable built-in caches when compiling
+- `MTGJSONCard` class added to improve OOP of code base
+- `meta` tag added to `SetList.json` entries
+- Compression built-in to MTGJSON for output files (`-z` flag)
+- `pricesDate` added to `meta` tag to alert when updates happen
+
+#### Fixed
+- `AllCards.json` fields re-collated to be accurate for what is atomic.
+  - `scryfallOracleId` added here for better support with UUIDs
+
+#### Removed
+- `--skip-prune` from compiling as it served no real purpose
+- `AbilityWords`, `KeywordActions`, and `KeywordAbilities` from `Keywords.json` (deprecated in 4.3.0)
+
+#### Replaced
+`--skip-tcgplayer` replaced with `--skip-keys` for compiling. If passed, all keys will be ignored.
+
 ## 4.3.2 <small>(2019-03-31)</small>
 
 ### Website
