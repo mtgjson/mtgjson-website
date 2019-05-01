@@ -29,6 +29,10 @@
 			"name": "My MTG Collection",
 			"image": "my-mtg-collection-logo.png",
 			"link": "https://www.reddit.com/r/Mymtgapp",
+ 			"since": "2019-04"
+		}, {
+			"name": "TheChucklingAtom",
+			"image": "avatar-thechucklingatom.jpg",
 			"since": "2019-04"
 		}],
 		"uncommon": [{
@@ -52,11 +56,6 @@
 			{
 				"name": "Seraph Six",
 				"image": "avatar-seraphsix.png",
-				"since": "2019-04"
-			},
-			{
-				"name": "TheChucklingAtom",
-				"image": "avatar-thechucklingatom.jpg",
 				"since": "2019-04"
 			}
 		]
