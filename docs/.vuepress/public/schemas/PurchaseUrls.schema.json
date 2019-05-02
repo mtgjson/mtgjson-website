@@ -2,11 +2,16 @@
   "cardmarket": {
     "type": "string",
     "example": "\"https://mtgjson.com/links/d3387f15f67fdc5b\"",
-    "description": "URL to purchase on magiccardmarket.com."
+    "description": "URL redirect to purchase on {{external:cardmarket.com$https://www.cardmarket.com/en/Magic}}."
   },
   "tcgplayer": {
     "type": "string",
     "example": "\"https://mtgjson.com/links/4327411c4717f8aa\"",
-    "description": "URL to purchase on tcgplayer.com."
+    "description": "URL redirect to purchase on {{external:tcgplayer.com$https://www.tcgplayer.com}}."
+  },
+  "mtgstocks": {
+    "type": "string",
+    "example": "\"https://mtgjson.com/links/80c98df320bf1c16\"",
+    "description": "URL redirect to purchase on {{external:mtgstocks.com$https://www.mtgstocks.com}}."
   }
 }

@@ -42,7 +42,7 @@
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}} or {{code:host}}. (If normal, it is usually omitted.)"
+    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}} or {{code:host}}. (If normal, it is usually omitted.)"
   },
   "legalities": {
     "type": "object",

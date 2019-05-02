@@ -193,9 +193,9 @@ table {
         flex: auto;
         padding: 10px;
         border-left: 1px solid $borderColor;
-        overflow-wrap: anywhere;
 
         code {
+          overflow-wrap: anywhere;
           font-size: 14px;
         }
       }

@@ -282,7 +282,7 @@ If you have data you believe would be relevant to MTGJSON and the development co
 - MTGJSON has a new logo (please do give feedback!)
 - `AllSetFiles.zip`, which contains all individual set files in a folder instead of `AllSets.json` (which is one file with all of the data)
 
-## 4.2 <small>(2018-12-18)</small>
+## 4.2.0 <small>(2018-12-18)</small>
 
 ### Individual Sets
 
@@ -396,7 +396,7 @@ If you have data you believe would be relevant to MTGJSON and the development co
 
 - Windows OS workaround for `CON` now ignored in All Sets file
 
-## 4.1 <small>(2018-11-11)</small>
+## 4.1.0 <small>(2018-11-11)</small>
 
 ### Individual Cards
 
@@ -480,7 +480,7 @@ If you have data you believe would be relevant to MTGJSON and the development co
 }
 ```
 
-## 4.0 <small>(2018-10-13)</small>
+## 4.0.0 <small>(2018-10-13)</small>
 
 ### Individual Cards
 
