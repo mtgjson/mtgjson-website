@@ -23,6 +23,12 @@
         "image": "mtgdecks.png",
         "link": "https://www.mtgdecks.net",
         "since": "2019-04"
+      },
+      {
+        "name": "MTG Set Builder",
+        "image": "mtgsetbuilder.png",
+        "link": "http://mtgsetbuilder.com",
+        "since": "2019-05"
       }
     ],
     "rare": [{
@@ -131,11 +137,6 @@
       "name": "MTG Developers",
       "image": "mtgio.png",
       "link": "https://magicthegathering.io"
-    },
-    {
-      "name": "MTG Set Builder",
-      "image": "mtgsetbuilder.png",
-      "link": "http://mtgsetbuilder.com"
     },
     {
       "name": "MTGStocks",
