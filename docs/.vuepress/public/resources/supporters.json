@@ -1,7 +1,6 @@
 {
   "patrons": {
-    "mythic": [
-      {
+    "mythic": [{
         "name": "CardCastle",
         "image": "cardcastle.svg",
         "link": "https://cardcastle.co",
@@ -26,8 +25,7 @@
         "since": "2019-04"
       }
     ],
-    "rare": [
-      {
+    "rare": [{
         "name": "My MTG Collection",
         "image": "my-mtg-collection-logo.png",
         "link": "https://www.reddit.com/r/Mymtgapp",
@@ -39,8 +37,7 @@
         "since": "2019-04"
       }
     ],
-    "uncommon": [
-      {
+    "uncommon": [{
         "name": "Cockatrice",
         "image": "cockatrice.png",
         "link": "https://cockatrice.github.io",
@@ -65,8 +62,7 @@
       }
     ]
   },
-  "services": [
-    {
+  "services": [{
       "name": "Aetherhub",
       "image": "aetherhub.png",
       "link": "https://aetherhub.com"
@@ -74,7 +70,7 @@
     {
       "name": "Cardmarket",
       "image": "cardmarket.png",
-      "link": "https://cardmarket.com"
+      "link": "https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson"
     },
     {
       "name": "Cardsphere",
@@ -147,8 +143,8 @@
       "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
     },
     {
-			"name": "MTG Tracker",
-			"image": "mtgtracker.jpg",
+      "name": "MTG Tracker",
+      "image": "mtgtracker.jpg",
       "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
     },
     {
