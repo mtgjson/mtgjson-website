@@ -1,7 +1,7 @@
 /**
  * @Type Class
  * @constructor @arguments
- * 
+ *
  * The structure of a mustache is as so:
  * {{tag:first$second}}
  * */
@@ -31,21 +31,22 @@ export default class {
   async discard(card = '') {
     logger(`discarding ${card}...`);
 
+    let plane = '';
+    let land = '';
+
     let value = card.match(/{{(.*?)}}/)[1];
     let tag = value.split(':')[0];
     /**
      * @todo rename these later
-     * 
+     *
      * one day well get soft assignments...
      */
     let text = card.match(/:(.*?)\$/);
-        text = text && text[1] ? text[1] : value.split(':')[1];
-        
-    let url = card.match(/\$(.*?)}}/);
-        url = card && card[1] ? card[1] : text;
+    text = text && text[1] ? text[1] : value.split(':')[1];
 
-    let plane = '';
-    let land = '';
+    let external = card.match(/\$(.*?)}}/);
+    external = external && external[1] ? external[1] : text;
+    
 
     switch (text) {
       case 'version':
@@ -58,20 +59,23 @@ export default class {
         break;
     }
 
-    switch(tag){
+    switch (tag) {
+      case 'external':
+        land = `<a class="code-link" href="${external}" target="_blank">${text}</a>`;
+        break;
+
+      case 'link':
+        land = `<a class="code-link" href="/${plane}/${text}" />${this.faceUp(
+          text
+        )}</a>`;
+        break;
+
       case 'code':
         land = `<code>${text}</code>`;
         break;
 
-      case 'external':
-        land = `<a class="code-link" href="${url}" target="_blank">${text}</a>`;
-        break;
-
-      case 'link':
       default:
-        land = `<a class="code-link" href="/${plane}/${text}" />${this.faceUp(
-          text
-        )}</a>`;
+        land = `<span>Landcycle error. No Tag defined.</span>`;
         break;
     }
 
@@ -87,21 +91,21 @@ export default class {
   async cycle() {
     for (let currentCard in this.hand) {
       const thisCard = this.hand[currentCard];
-      
-      for(let ability in thisCard){
+
+      for (let ability in thisCard) {
         const card = thisCard[ability];
         const cardsToCycle = card.match(this.regex);
 
         if (cardsToCycle) {
           let newText = '';
-          
+
           for (let cardToCycle of cardsToCycle) {
             try {
               const newCard = await this.discard(cardToCycle);
               newText = await thisCard[ability].replace(cardToCycle, newCard);
 
               this.hand[currentCard][ability] = newText;
-            } catch( err ){
+            } catch (err) {
               logger(`${card} :: ${err}`, false);
             }
           }

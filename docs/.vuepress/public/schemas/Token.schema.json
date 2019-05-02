@@ -24,6 +24,11 @@
     "example": "[\"G\",\"W\"]",
     "description": "List of all colors in card’s mana cost and any color indicator."
   },
+  "duelDeck": {
+    "type": "string",
+    "example": "\"a\"",
+    "description": "If the card is in a duel deck product, can be {{code:a}}(left) or {{code:b}}(right). (If not in duel deck product, duelDeck is usually ommitted.)"
+  },
   "isOnlineOnly": {
     "type": "bool",
     "example": "false",
@@ -43,6 +48,11 @@
     "type": "string",
     "example": "\"Elf Knight\"",
     "description": "Name of the token."
+  },
+  "names": {
+    "type": "array(string)",
+    "example": "[\"Nicol Bolas, the Ravager\",\"Nicol Bolas, the Arisen\"]",
+    "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB."
   },
   "number": {
     "type": "string",
