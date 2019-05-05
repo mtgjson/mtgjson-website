@@ -19,13 +19,13 @@
 
 ## Our Mission
 
-MTGJSON is an open‐source project that catalogues all Magic cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community.
+MTGJSON is an open-source project that catalogues all Magic cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community.
 
 ## The Team
 
 ::: tip Zach - Lead Developer &amp; Maintainer
 ![avatar](/images/avatar-zach.jpg "Zach")
-Zach is a 22‐year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open‐source Cockatrice game client.<br/><br/>
+Zach is a 22-year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open-source Cockatrice game client.<br/><br/>
 <em>All inquires about MTGJSON can be sent to <a href="mailto:zach@mtgjson.com">zach@mtgjson.com</a></em>
 :::
 
