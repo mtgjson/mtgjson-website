@@ -12,22 +12,26 @@
   "colorIdentity": {
     "type": "array(string)",
     "example": "[\"B\"]",
-    "description": "List of all colors in card’s mana cost, rules text and any color indicator."
+    "description": "List of all colors in card’s mana cost, rules text and any color indicator.",
+    "isAtomic": true
   },
   "colorIndicator": {
     "type": "array(string)",
     "example": "[\"B\",\"R\"]",
-    "description": "List of all colors in card’s color indicator (a symbol showing the colors of the card). Usually found only on cards without mana costs and other special cards."
+    "description": "List of all colors in card’s color indicator (a symbol showing the colors of the card). Usually found only on cards without mana costs and other special cards.",
+    "isAtomic": true
   },
   "colors": {
     "type": "array(string)",
     "example": "[\"B\",\"R\"]",
-    "description": "List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text)."
+    "description": "List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).",
+    "isAtomic": true
   },
   "convertedManaCost": {
     "type": "float",
     "example": "5.0",
-    "description": "The converted mana cost of the card."
+    "description": "The converted mana cost of the card.",
+    "isAtomic": true
   },
   "duelDeck": {
     "type": "string",
@@ -37,7 +41,8 @@
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
-    "description": "The converted mana cost of the face of either half or part of the card."
+    "description": "The converted mana cost of the face of either half or part of the card.",
+    "isAtomic": true
   },
   "flavorText": {
     "type": "string",
@@ -47,7 +52,8 @@
   "foreignData": {
     "type": "array(object)",
     "example": "{{link:foreign-data}}",
-    "description": "See the {{link:foreign-data}} structure."
+    "description": "See the {{link:foreign-data}} structure.",
+    "isAtomic": true
   },
   "frameEffect": {
     "type": "string",
@@ -62,7 +68,8 @@
   "hand": {
     "type": "string",
     "example": "\"+0\"",
-    "description": "Starting maximum hand size total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards."
+    "description": "Starting maximum hand size total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.",
+    "isAtomic": true
   },
   "hasFoil": {
     "type": "boolean",
@@ -92,7 +99,8 @@
   "isReserved": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card on the MTG Reserved List? (If false, it is usually omitted.)"
+    "description": "Is the card on the MTG Reserved List? (If false, it is usually omitted.)",
+    "isAtomic": true
   },
   "isStarter": {
     "type": "boolean",
@@ -107,27 +115,32 @@
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}} or {{code:host}}. (If normal, it is usually omitted.)"
+    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}} or {{code:host}}. (If normal, it is usually omitted.)",
+    "isAtomic": true
   },
   "legalities": {
     "type": "object",
     "example": "{{link:legalities}}",
-    "description": "See the {{link:legalities}} structure."
+    "description": "See the {{link:legalities}} structure.",
+    "isAtomic": true
   },
   "life": {
     "type": "string",
     "example": "\"+0\"",
-    "description": "Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards."
+    "description": "Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.",
+    "isAtomic": true
   },
   "loyalty": {
     "type": "string",
     "example": "\"7\"",
-    "description": "Planeswalker loyalty value."
+    "description": "Planeswalker loyalty value.",
+    "isAtomic": true
   },
   "manaCost": {
     "type": "string",
     "example": "\"{3}{W}{W}\"",
-    "description": "Mana cost of the card."
+    "description": "Mana cost of the card.",
+    "isAtomic": true
   },
   "mcmId": {
     "type": "integer",
@@ -147,7 +160,8 @@
   "mtgstocksId": {
     "type": "integer",
     "example": "40272",
-    "description": "mtgstocks.com card id."
+    "description": "mtgstocks.com card id.",
+    "isAtomic": true
   },
   "multiverseId": {
     "type": "integer",
@@ -157,12 +171,14 @@
   "name": {
     "type": "string",
     "example": "\"Angel of Grace\"",
-    "description": "Names of each face on the card. Meld cards are listed in the order of {{code:CardA}}, {{code:Meld}}, {{code:CardB}}."
+    "description": "Names of each face on the card. Meld cards are listed in the order of {{code:CardA}}, {{code:Meld}}, {{code:CardB}}.",
+    "isAtomic": true
   },
   "names": {
     "type": "array(string)",
     "example": "[\"Nicol Bolas, the Ravager\",\"Nicol Bolas, the Arisen\"]",
-    "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB."
+    "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB.",
+    "isAtomic": true
   },
   "number": {
     "type": "string",
@@ -182,22 +198,26 @@
   "power": {
     "type": "string",
     "example": "\"5\"",
-    "description": "Power of the creature."
+    "description": "Power of the creature.",
+    "isAtomic": true
   },
   "prices": {
     "type": "object(string: object)",
     "example": "{{link:prices}}",
-    "description": "See the {{link:prices}} structure."
+    "description": "See the {{link:prices}} structure.",
+    "isAtomic": true
   },
   "printings": {
     "type": "array(string)",
     "example": "[\"M19\",\"PM19\"]",
-    "description": "List of sets the card was printed in, in uppercase."
+    "description": "List of sets the card was printed in, in uppercase.",
+    "isAtomic": true
   },
   "purchaseUrls": {
     "type": "array(string: string)",
     "example": "{{link:purchase-urls}}",
-    "description": "See the {{link:purchase-urls}} structure."
+    "description": "See the {{link:purchase-urls}} structure.",
+    "isAtomic": true
   },
   "rarity": {
     "type": "string",
@@ -207,7 +227,8 @@
   "rulings": {
     "type": "array(object)",
     "example": "{{link:rulings}}",
-    "description": "See the {{link:rulings}} structure."
+    "description": "See the {{link:rulings}} structure.",
+    "isAtomic": true
   },
   "scryfallId": {
     "type": "string",
@@ -217,7 +238,8 @@
   "scryfallOracleId": {
     "type": "string",
     "example": "\"9b7870df-6bca-499f-bc6e-e57f2ddfe640\"",
-    "description": "A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc)."
+    "description": "A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc).",
+    "isAtomic": true
   },
   "scryfallIllustrationId": {
     "type": "string",
@@ -227,16 +249,20 @@
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}."  },
+    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}.",
+    "isAtomic": true
+  },
   "subtypes": {
     "type": "array(string)",
     "example": "[\"Angel\"]",
-    "description": "List of card subtypes found after em-dash. (\"Legendary Creature — Angel\")"
+    "description": "List of card subtypes found after em-dash. (\"Legendary Creature — Angel\")",
+    "isAtomic": true
   },
   "supertypes": {
     "type": "array(string)",
     "example": "[\"Legendary\"]",
-    "description": "List of card supertypes found before em-dash. (\"Legendary Creature — Angel\")"
+    "description": "List of card supertypes found before em-dash. (\"Legendary Creature — Angel\")",
+    "isAtomic": true
   },
   "tcgplayerProductId": {
     "type": "integer",
@@ -251,27 +277,32 @@
   "text": {
     "type": "string",
     "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
-    "description": "Rules text of the card."
+    "description": "Rules text of the card.",
+    "isAtomic": true
   },
   "toughness": {
     "type": "string",
     "example": "\"4\"",
-    "description": "Toughness of the card."
+    "description": "Toughness of the card.",
+    "isAtomic": true
   },
   "type": {
     "type": "string",
     "example": "\"Legendary Creature — Angel\"",
-    "description": "Type of the card. Includes any supertypes and subtypes. (\"Creature — Angel\")"
+    "description": "Type of the card. Includes any supertypes and subtypes. (\"Creature — Angel\")",
+    "isAtomic": true
   },
   "types": {
     "type": "array(string)",
     "example": "[\"Creature\"]",
-    "description": "List of types of the card."
+    "description": "List of types of the card.",
+    "isAtomic": true
   },
   "uuid": {
     "type": "string",
     "example": "\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"",
-    "description": "A universal unique id (v5) generated by MTGJSON. Each entry is unique."
+    "description": "A universal unique id (v5) generated by MTGJSON. Each entry is unique.",
+    "isAtomic": true
   },
   "variations": {
     "type": "array(string)",

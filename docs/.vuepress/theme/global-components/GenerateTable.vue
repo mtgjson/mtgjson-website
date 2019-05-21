@@ -12,7 +12,7 @@
             div
               h3 {{ key }}
                 a(:href="`#${key}`" aria-hidden="true" class="header-anchor") #
-          td(v-for="(value, key) in value" v:key=key)
+          td(v-for="(value, key) in value" v:key=key v-if="key !== 'isAtomic'")
             div(v-if="key === 'type'")
               em {{ value }}
             div(v-else-if="key === 'example'")
@@ -100,8 +100,9 @@ export default {
       filteredSchema = {};
 
       for(let key in schema){
-        if(!this.excludes.includes(key)){
-          filteredSchema[key] = schema[key];
+        if(schema[key].isAtomic){
+          let value = schema[key];
+          filteredSchema[key] = value;
         }
       }
     };
