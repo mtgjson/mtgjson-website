@@ -12,7 +12,7 @@
             div
               h3 {{ key }}
                 a(:href="`#${key}`" aria-hidden="true" class="header-anchor") #
-          td(v-for="(value, key) in value" v:key=key)
+          td(v-for="(value, key) in value" v:key=key v-if="key !== 'isAtomic'")
             div(v-if="key === 'type'")
               em {{ value }}
             div(v-else-if="key === 'example'")
@@ -57,13 +57,28 @@ export default {
       isMobileSize: 960,
       isMobile: false,
       schema: [],
-      headings: ['property', 'type', 'example', 'description'],
+      headings: ['property', 'type', 'example', 'description']
     };
   },
   created() {
-    this.schema = require(`../../public/schemas/${
+    let schema = require(`../../public/schemas/${
       this.$page.frontmatter.schema
     }.schema.json`);
+    let filteredSchema = null;
+
+    // Exclude properties that are not included for AllCards
+    if(this.$page.frontmatter.title === "AllCards"){
+      filteredSchema = {};
+
+      for(let key in schema){
+        if(schema[key].isAtomic){
+          let value = schema[key];
+          filteredSchema[key] = value;
+        }
+      }
+    };
+
+    this.schema = filteredSchema || schema;
   },
   mounted() {
     window.addEventListener('resize', this.checkIfMobile);

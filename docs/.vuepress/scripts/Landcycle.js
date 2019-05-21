@@ -94,7 +94,7 @@ export default class {
 
       for (let ability in thisCard) {
         const card = thisCard[ability];
-        const cardsToCycle = card.match(this.regex);
+        const cardsToCycle = card.toString().match(this.regex);
 
         if (cardsToCycle) {
           let newText = '';
