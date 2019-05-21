@@ -57,36 +57,7 @@ export default {
       isMobileSize: 960,
       isMobile: false,
       schema: [],
-      headings: ['property', 'type', 'example', 'description'],
-      excludes: [
-        'artist',
-        'borderColor',
-        'duelDeck',
-        'flavorText',
-        'frameEffect',
-        'frameVersion',
-        'hasFoil',
-        'hasNonFoil',
-        'isAlternative',
-        'isStarter',
-        'isOnlineOnly',
-        'isOversized',
-        'isTimeshifted',
-        'mcmId',
-        'mcmMetaId',
-        'mcmName',
-        'multiverseId',
-        'number',
-        'originalText',
-        'originalType',
-        'rarity',
-        'scryfallId',
-        'scryfallIllustrationId',
-        'tcgplayerProductId',
-        'tcgplayerPurchaseUrl',
-        'variations',
-        'watermark'
-      ]
+      headings: ['property', 'type', 'example', 'description']
     };
   },
   created() {
