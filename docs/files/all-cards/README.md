@@ -1,7 +1,7 @@
 ---
 {
   "title": "AllCards",
-  "schema": "CardAtomic",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",

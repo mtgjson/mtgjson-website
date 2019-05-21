@@ -58,12 +58,55 @@ export default {
       isMobile: false,
       schema: [],
       headings: ['property', 'type', 'example', 'description'],
+      excludes: [
+        'artist',
+        'borderColor',
+        'duelDeck',
+        'flavorText',
+        'frameEffect',
+        'frameVersion',
+        'hasFoil',
+        'hasNonFoil',
+        'isAlternative',
+        'isStarter',
+        'isOnlineOnly',
+        'isOversized',
+        'isTimeshifted',
+        'mcmId',
+        'mcmMetaId',
+        'mcmName',
+        'multiverseId',
+        'number',
+        'originalText',
+        'originalType',
+        'rarity',
+        'scryfallId',
+        'scryfallIllustrationId',
+        'tcgplayerProductId',
+        'tcgplayerPurchaseUrl',
+        'variations',
+        'watermark'
+      ]
     };
   },
   created() {
-    this.schema = require(`../../public/schemas/${
+    let schema = require(`../../public/schemas/${
       this.$page.frontmatter.schema
     }.schema.json`);
+    let filteredSchema = null;
+
+    // Exclude properties that are not included for AllCards
+    if(this.$page.frontmatter.title === "AllCards"){
+      filteredSchema = {};
+
+      for(let key in schema){
+        if(!this.excludes.includes(key)){
+          filteredSchema[key] = schema[key];
+        }
+      }
+    };
+
+    this.schema = filteredSchema || schema;
   },
   mounted() {
     window.addEventListener('resize', this.checkIfMobile);
