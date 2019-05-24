@@ -10,7 +10,7 @@
         tr(v-for="(value, key) in schema" v:key=key)
           td
             div
-              h3 {{ key }}
+              h3(:id="key") {{ key }}
                 a(:href="`#${key}`" aria-hidden="true" class="header-anchor") #
           td(v-for="(value, key) in value" v:key=key v-if="key !== 'isAtomic'")
             div(v-if="key === 'type'")
@@ -25,7 +25,7 @@
         div.mobile-doc-table--row
           div.mobile-doc-table--row-item
             div.mobile-doc-table--row-item-key
-              h3 {{ headings[0] }}
+              h3(:id="key") {{ headings[0] }}
                 a(:href="`#${key}`" aria-hidden="true" class="header-anchor") #
             div.mobile-doc-table--row-item-value
               span {{ key }}

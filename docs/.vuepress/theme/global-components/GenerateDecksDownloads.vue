@@ -17,8 +17,8 @@
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
           .txt-wrap
-            h3(:id="deck.name") {{ deck.name }}
-              a(:href="`#${deck.name}`" aria-hidden="true" class="header-anchor") #
+            h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
+              a(:href="`#${deck.name.replace(/ /g, '_')}`" aria-hidden="true" class="header-anchor") #
             small Code: 
               span {{ deck.code }}
             //- This if/else logic is needed until `type` is added 
