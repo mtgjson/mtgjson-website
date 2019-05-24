@@ -21,8 +21,8 @@
             div(v-else-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
-            h3(:id="set.code") {{ set.name }}
-              a(:href="`#${set.name}`" aria-hidden="true" class="header-anchor") #
+            h3(:id="set.name.replace(/ /g, '_')") {{ set.name }}
+              a(:href="`#${set.name.replace(/ /g, '_')}`" aria-hidden="true" class="header-anchor") #
             small Code: 
               span {{ set.code }}
             small Type: 
