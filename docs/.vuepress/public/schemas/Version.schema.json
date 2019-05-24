@@ -2,16 +2,16 @@
   "date": {
     "type": "string",
     "example": "\"2000-01-01\"",
-    "description": "Date of the MTGJSON build."
+    "description": "ISO-8601 date of the MTGJSON build."
   },
   "pricesDate": {
     "type": "string",
     "example": "\"2019-04-28\"",
-    "description": "Date of latest update to card prices."
+    "description": "ISO-8601 date of latest card prices."
   },
   "version": {
     "type": "string",
-    "example": "\"x.x.x\"",
-    "description": "Version of the MTGJSON build."
+    "example": "\"x.y.z\"",
+    "description": "{{external:SemVer$https://semver.org/}} specification of the MTGJSON build."
   }
 }
