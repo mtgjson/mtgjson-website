@@ -90,7 +90,7 @@ export default {
       this.hydrate();
     },
     async hydrate() {
-      this.schema = await new this.$landcycle(this.schema);
+      this.schema = await new this.$landcycle(this.schema).schema;
     },
   },
   computed: {
