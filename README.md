@@ -17,20 +17,25 @@ yarn install
 
 ## Development Server
 
-```sh
+```
 yarn dev
 ```
 
+or, with a testing watcher
+
+```
+yarn test:dev
+```
 
 _Every now and then when making major changes be sure to kill your server and rebuild to verify everything is still working. The following code will kill all node instances on linux-based systems. When adding new components or modules the server watch may not pick up on changes._
 
-```sh
+```
 killall node
 ```
 
 ## Building for Distribution
 
-```sh
+```
 yarn build
 ```
 
