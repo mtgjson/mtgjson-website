@@ -17,6 +17,6 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2000-01-01\"",
-    "description": "Release date of the deck."
+    "description": "Release date in ISO-8601 format for the deck."
   }
 }

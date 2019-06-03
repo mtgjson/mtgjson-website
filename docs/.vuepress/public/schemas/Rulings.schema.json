@@ -2,7 +2,7 @@
   "date": {
     "type": "string",
     "example": "\"2018-07-13\"",
-    "description": "Date (OBDC standard) of ruling for the card."
+    "description": "Release date in ISO-8601 format for the rule."
   },
   "text": {
     "type": "string",

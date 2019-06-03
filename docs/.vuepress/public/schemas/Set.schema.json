@@ -77,7 +77,7 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2019-01-25\"",
-    "description": "Date of release for the set."
+    "description": "Release date in ISO-8601 format for the set."
   },
   "tcgplayerGroupId": {
     "type": "integer",
