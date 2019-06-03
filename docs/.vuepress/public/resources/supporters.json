@@ -32,6 +32,11 @@
       }
     ],
     "rare": [{
+        "name": "Kevin Solie",
+        "image": "avatar-kevinsolie.png",
+        "since": "2019-06"
+      },
+      {
         "name": "My MTG Collection",
         "image": "my-mtg-collection-logo.png",
         "link": "https://www.reddit.com/r/Mymtgapp",
