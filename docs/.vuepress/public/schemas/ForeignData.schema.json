@@ -12,7 +12,7 @@
   "multiverseId": {
     "type": "integer",
     "example": "447637",
-    "description": "Multiverse ID of the card."
+    "description": "Multiverse ID of the card. Omitted if not available."
   },
   "name": {
     "type": "string",
