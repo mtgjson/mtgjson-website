@@ -83,6 +83,13 @@ module.exports = {
   },
   plugins: [
     [
+      'container',
+      {
+        type: 'tip',
+        defaultTitle: '',
+      },
+    ],
+    [
       'feed',
       {
         canonical_base: 'https://mtgjson.com',
