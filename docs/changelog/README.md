@@ -19,6 +19,38 @@
 
 # Changelog
 
+## 4.4.1 <small>(2019-06-04)</small>
+
+### Cards
+#### Fixed
+- `isAlternative` for WAR planeswalkers
+- Planes now have correct super/sub types
+- Minor corrections to fields among cards
+
+### Sets
+#### Added
+- Modern Horizons (`MH1`)
+- Signature Spellbook: Gideon (`SS2`)
+- `isForeignOnly` key for sets that are not natively printed in English
+
+#### Fixed
+- Handle `GS1` not getting `duelDeck` sides
+- `PRNA` not showing correctly in `AllSets` addressed
+
+### Decks
+#### Added
+- Incorporate `count` and `isFoil` for pre-cons
+
+
+### Other
+#### Fixed
+- `--skip-keys` will now skip MTGStocks
+- Rules went to UTF-8 format, updated parser
+
+#### Removed
+- `AllCards` no longer has `prices` as they are not atomic
+
+
 ## 4.4.0 <small>(2019-04-28)</small>
 
 ### Announcements
