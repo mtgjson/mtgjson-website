@@ -1,6 +1,12 @@
 {
   "patrons": {
     "mythic": [{
+        "name": "ABUGames",
+        "image": "abugames.png",
+        "link": "https://abugames.com/",
+        "since": "2019-06"
+      },
+      {
         "name": "CardCastle",
         "image": "cardcastle.svg",
         "link": "https://cardcastle.co",
