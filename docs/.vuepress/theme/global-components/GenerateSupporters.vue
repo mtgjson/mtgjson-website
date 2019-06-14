@@ -52,7 +52,7 @@ export default {
   name: 'GenerateServices',
   data() {
     return {
-      supporters: require('../../public/resources/supporters.json')
+      supporters: require('../../public/resources/supporters.json'),
     };
   },
   computed: {
@@ -180,7 +180,7 @@ h2 {
         }
       }
     }
-    
+
     span {
       img {
         border-radius: 50%;
@@ -301,6 +301,14 @@ h2 {
 
       &.service {
         flex: 0 0 50% !important;
+      }
+
+      img {
+        max-height: 75px !important;
+      }
+
+      h6 {
+        margin-bottom: 0;
       }
     }
   }
