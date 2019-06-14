@@ -113,8 +113,6 @@ h2 {
     border-top: 1px solid #eaecef;
 
     .supporter {
-      // border-left-width: 0;
-      // border-top-width: 0;
       padding-bottom: 15px;
       flex: 0 0 25%;
     }
@@ -126,7 +124,7 @@ h2 {
     flex-wrap: wrap;
     justify-content: center;
     align-items: center;
-    padding: 30px 15px 60px;
+    padding: 30px 15px 70px;
     text-align: center;
     box-sizing: border-box;
     border: 1px solid #eaecef;
@@ -153,10 +151,8 @@ h2 {
       flex: 0 0 50%;
 
       img {
-        max-height: 150px;
-        max-width: 200px;
-        width: auto;
-        height: auto;
+        max-height: 115px;
+        max-width: 150px;
       }
     }
 
@@ -193,7 +189,7 @@ h2 {
       font-weight: bold;
       line-height: 1.2em;
       display: block;
-      margin: 0 auto 15px;
+      margin: 0 auto;
     }
 
     p {
@@ -211,7 +207,6 @@ h2 {
       text-align: center;
       flex: 0 0 100%;
       margin: 0 auto;
-      display: block;
       display: none;
       position: absolute;
       left: 15px;
@@ -228,6 +223,7 @@ h2 {
 
       &[data-tier] {
         display: block;
+        padding-right: 10px;
 
         &:only-of-type {
           flex: 1;
@@ -236,6 +232,7 @@ h2 {
         &::before {
           padding: 0 10px;
           font-weight: bold;
+          display: inline-block;
         }
 
         &[data-tier='3'] {
@@ -246,7 +243,7 @@ h2 {
           }
 
           &::before {
-            content: 'Mythic Supporter';
+            content: 'Mythic\00a0\00a0Supporter';
           }
         }
 
@@ -254,7 +251,7 @@ h2 {
           background: linear-gradient(135deg, #f9d861 0%, #e8d599 100%);
 
           &::before {
-            content: 'Rare Supporter';
+            content: 'Rare\00a0\00a0Supporter';
           }
         }
 
@@ -262,13 +259,7 @@ h2 {
           background: linear-gradient(135deg, #d8d8d8 0%, #efeded 100%);
 
           &::before {
-            content: 'Uncommon Supporter';
-          }
-        }
-
-        &[data-tier='0'] {
-          &::before {
-            content: 'Uncommon Supporters';
+            content: 'Uncommon\00a0\00a0Supporter';
           }
         }
       }
@@ -303,12 +294,11 @@ h2 {
         flex: 0 0 50% !important;
       }
 
-      img {
-        max-height: 75px !important;
-      }
-
-      h6 {
-        margin-bottom: 0;
+      &[data-tier-size='3'] {
+        img {
+          max-height: 75px;
+          max-width: 100px;
+        }
       }
     }
   }
