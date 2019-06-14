@@ -1,52 +1,52 @@
 {
   "Chinese Simplified": {
     "type": "string",
-    "example": "\"\u6548\u5fe0\u62c9\u5c3c\u5361\"",
+    "example": "\"\u4e59\u592a\u4e4b\u4e71\"",
     "description": "Translation in Chinese Simplified."
   },
   "Chinese Traditional": {
     "type": "string",
-    "example": "\"\u6548\u5fe0\u62c9\u5c3c\u5361\"",
+    "example": "\"\u4e59\u592a\u4e4b\u4e82\"",
     "description": "Translation in Chinese Traditional."
   },
   "French": {
     "type": "string",
-    "example": "\"L'all\u00e9geance de Ravnica\"",
+    "example": "\"\u004c\u0061\u0020\u0072\u00e9\u0076\u006f\u006c\u0074\u0065\u0020\u00e9\u0074\u0068\u00e9\u0072\u0069\u0071\u0075\u0065\"",
     "description": "Translation in French."
   },
   "German": {
     "type": "string",
-    "example": "\"Ravnicas Treue\"",
+    "example": "\"\u00c4\u0074\u0068\u0065\u0072\u002d\u0052\u0065\u0062\u0065\u006c\u006c\u0069\u006f\u006e\"",
     "description": "Translation in German."
   },
   "Italian": {
     "type": "string",
-    "example": "\"Fedelt\u00e0 di Ravnica\"",
+    "example": "\"\u0052\u0069\u0076\u006f\u006c\u0074\u0061\u0020\u0064\u0065\u006c\u006c\u2019\u0045\u0074\u0065\u0072\u0065\"",
     "description": "Translation in Italian."
   },
   "Japanese": {
     "type": "string",
-    "example": "\"\u300e\u30e9\u30f4\u30cb\u30ab\u306e\u732e\u8eab\u300f\"",
+    "example": "\"\u970a\u6c17\u7d1b\u4e89\"",
     "description": "Translation in Japanese."
   },
   "Korean": {
     "type": "string",
-    "example": "\"\ub77c\ube0c\ub2c8\uce74\uc758 \ucda9\uc131\"",
+    "example": "\"\uc5d0\ud14c\ub974\u0020\ubd09\uae30\"",
     "description": "Translation in Korean."
   },
   "Portuguese (Brazil)": {
     "type": "string",
-    "example": "\"Lealdade em Ravnica\"",
+    "example": "\"\u0052\u0065\u0076\u006f\u006c\u0074\u0061\u0020\u0064\u006f\u0020\u00c9\u0074\u0065\u0072\"",
     "description": "Translation in Portuguese (Brazil)."
   },
   "Russian": {
     "type": "string",
-    "example": "\"\u00ab\u0412\u044b\u0431\u043e\u0440 \u0420\u0430\u0432\u043d\u0438\u043a\u0438\u00bb\"",
+    "example": "\"\u00ab\u042d\u0444\u0438\u0440\u043d\u044b\u0439\u0020\u0411\u0443\u043d\u0442\u00bb\"",
     "description": "Translation in Russian."
   },
   "Spanish": {
     "type": "string",
-    "example": "\"La lealtad de R\u00e1vnica\"",
+    "example": "\"\u004c\u0061\u0020\u0072\u0065\u0076\u0075\u0065\u006c\u0074\u0061\u0020\u0064\u0065\u006c\u0020\u00e9\u0074\u0065\u0072\"",
     "description": "Translation in Spanish."
   }
 }
