@@ -67,6 +67,12 @@
         "since": "2019-04"
       },
       {
+        "name": "MagicMerchant",
+        "image": "magicmerchant.svg",
+        "link": "https://magicmerchant.it",
+        "since": "2019-06"
+      },
+      {
         "name": "MTG Brewmaster",
         "image": "mtgbrewmaster.png",
         "link": "http://mtgbrewmaster.com",
