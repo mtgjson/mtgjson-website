@@ -90,6 +90,13 @@ module.exports = {
       },
     ],
     [
+      'container',
+      {
+        type: 'warning',
+        defaultTitle: '',
+      },
+    ],
+    [
       'feed',
       {
         canonical_base: 'https://mtgjson.com',

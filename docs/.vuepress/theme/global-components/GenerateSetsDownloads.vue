@@ -22,13 +22,16 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .txt-wrap
             h3(:id="set.name.replace(/ /g, '_')") {{ set.name }}
-              a(:href="`#${set.name.replace(/ /g, '_')}`" aria-hidden="true" class="header-anchor") #
-            small Code: 
-              span {{ set.code }}
-            small Type: 
-              span.type {{ set.type }}
-            small Release Date: 
-              span {{ set.releaseDate }}
+            ol
+              li
+                small Code: 
+                  span {{ set.code }}
+              li
+                small Type: 
+                  span.type {{ set.type }}
+              li
+                small Release Date: 
+                  span {{ set.releaseDate }}
           .dl-wrap
             a.cta-btn(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key" :href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
             a.cta-btn(v-else :href="`/${downloadDirectory}/${set.code}.json`") {{ format }}

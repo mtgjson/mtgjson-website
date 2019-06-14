@@ -204,8 +204,7 @@
   "prices": {
     "type": "object(string: object)",
     "example": "{{link:prices}}",
-    "description": "See the {{link:prices}} structure.",
-    "isAtomic": true
+    "description": "See the {{link:prices}} structure."
   },
   "printings": {
     "type": "array(string)",

@@ -18,14 +18,18 @@
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
           .txt-wrap
             h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
-              a(:href="`#${deck.name.replace(/ /g, '_')}`" aria-hidden="true" class="header-anchor") #
-            small Code: 
-              span {{ deck.code }}
-            //- This if/else logic is needed until `type` is added 
-            small(v-if="deck.type") Type: 
-              span {{ deck.type }}
-            small Release Date: 
-              span {{ deck.releaseDate }}
+            ol
+              li
+                small Code: 
+                  span {{ deck.code }}
+              //- This if/else logic is needed until `type` is added 
+              li(v-if="deck.type")
+                small Type: 
+                  span {{ deck.type }}
+              li
+                small Release Date: 
+                  span {{ deck.releaseDate }}
+
           .dl-wrap
             a.cta-btn(v-for="(format, key) in deckFormats" v-if="format !== 'json'" :key="key" :href="`/${deckDirectory}/${deck.fileName}.json.${format}`") {{ format }}
             a.cta-btn(v-else :href="`/${deckDirectory}/${deck.fileName}.json`") {{ format }}
