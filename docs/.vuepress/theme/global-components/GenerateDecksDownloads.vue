@@ -3,7 +3,7 @@
     .sorting-options
       .sort-row
         strong Sort By:
-        select.table-sort-select(@change="$sorter($event, decks)")
+        select.table-sort-select(@change="$helpers.sort($event, decks)")
           option(value="releaseDate:true" selected) Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
