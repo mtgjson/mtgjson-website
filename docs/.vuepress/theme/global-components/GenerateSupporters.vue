@@ -224,6 +224,7 @@ h2 {
       &[data-tier] {
         display: block;
         padding-right: 10px;
+        background: linear-gradient(135deg, #d8d8d8 0%, #efeded 100%);
 
         &:only-of-type {
           flex: 1;
@@ -235,6 +236,26 @@ h2 {
           display: inline-block;
         }
 
+        &[data-tier='0'] {
+          &::before {
+            content: 'Uncommon\00a0Supporters';
+          }
+        }
+
+        &[data-tier='1'] {
+          &::before {
+            content: 'Uncommon\00a0Supporter';
+          }
+        }
+
+        &[data-tier='2'] {
+          background: linear-gradient(135deg, #f9d861 0%, #e8d599 100%);
+
+          &::before {
+            content: 'Rare\00a0Supporter';
+          }
+        }
+
         &[data-tier='3'] {
           background: linear-gradient(135deg, #ef6c2f 0%, #f4a850 100%);
 
@@ -243,23 +264,7 @@ h2 {
           }
 
           &::before {
-            content: 'Mythic\00a0\00a0Supporter';
-          }
-        }
-
-        &[data-tier='2'] {
-          background: linear-gradient(135deg, #f9d861 0%, #e8d599 100%);
-
-          &::before {
-            content: 'Rare\00a0\00a0Supporter';
-          }
-        }
-
-        &[data-tier='0'], &[data-tier='1'] {
-          background: linear-gradient(135deg, #d8d8d8 0%, #efeded 100%);
-
-          &::before {
-            content: 'Uncommon\00a0\00a0Supporter';
+            content: 'Mythic\00a0Supporter';
           }
         }
       }
