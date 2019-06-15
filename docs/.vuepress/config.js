@@ -37,6 +37,9 @@ module.exports = {
     algolia: {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',
+      algoliaOptions: {
+        hitsPerPage: 10
+      }
     },
     searchMaxSuggestions: 20,
     displayAllHeaders: true,
