@@ -1,9 +1,9 @@
 <template lang="pug">
-  .download-tables(v-if="sets")
+  .download-tables
     .sorting-options
       .sort-row
         strong Sort By:
-        select.table-sort-select(@change="$sorter($event, sets)")
+        select.table-sort-select(@change="$helpers.sort($event, filtered)")
           option(value="releaseDate:true" selected) Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
@@ -13,7 +13,13 @@
           option(value="type") Type (Ascending)
           option(value="type:true") Type (Descending)
 
-    .download-table(v-for="(set, key) in sets")
+      .sort-row
+        strong Filter By:
+        select.table-sort-select(@change="setFilter($event)")
+          option(value="" selected) All Sets
+          option(v-for="(type, key) in filteredGroups" :value="type") {{ $helpers.prettifyType(type) }}
+
+    .download-table(v-for="(set, key) in filtered")
       .download-item
         .download-wrap
           .img-wrap
@@ -43,18 +49,29 @@ export default {
   name: 'GenerateSetsDownloads',
   data() {
     return {
-      defaultSets: null,
+      defaultSets: [],
+      filteredSets: [],
+      filteredGroups: [],
+      filterKey: '',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
     };
   },
   mounted() {
     this.defaultSets = this.$sets;
+    this.filteredGroups = Array.from(new Set(this.defaultSets.map(cur => cur.type)));
+    this.setFilter(this.filterKey);
+  },
+  methods: {
+    setFilter({currentTarget}) {
+      this.filterKey = currentTarget ? currentTarget.value : '';
+      this.filteredSets = this.$helpers.filter(this.filterKey, this.defaultSets);
+    }
   },
   computed: {
-    sets() {
-      return this.defaultSets;
-    },
+    filtered() {
+      return this.filteredSets;
+    }
   },
 };
 </script>
