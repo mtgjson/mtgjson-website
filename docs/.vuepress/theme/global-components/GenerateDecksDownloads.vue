@@ -20,7 +20,7 @@
             h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
             ol
               li
-                small Code: 
+                small Set Code: 
                   span {{ deck.code }}
               //- This if/else logic is needed until `type` is added 
               li(v-if="deck.type")
@@ -31,8 +31,8 @@
                   span {{ deck.releaseDate }}
 
           .dl-wrap
-            a.cta-btn(v-for="(format, key) in deckFormats" v-if="format !== 'json'" :key="key" :href="`/${deckDirectory}/${deck.fileName}.json.${format}`") {{ format }}
-            a.cta-btn(v-else :href="`/${deckDirectory}/${deck.fileName}.json`") {{ format }}
+            a.cta-btn(v-for="(format, key) in deckFormats" v-if="format !== 'json'" :key="key" :href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
+            a.cta-btn(v-else :href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
 </template>
 
 <script>
