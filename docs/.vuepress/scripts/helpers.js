@@ -19,14 +19,7 @@ export default {
 
     // This/next year and next month or
     // This/next year and this/next month but not today
-    if (
-      (year >= thisYear && month > thisMonth) ||
-      (year >= thisYear && month >= thisMonth && date > thisDate)
-    ){
-      return true;
-    }
-
-    return false;
+    return year >= thisYear && (month > thisMonth || (month == thisMonth && date > thisDate));
   },
   filter: (filter, dataToFilter) => {
     return filter.length === 0
