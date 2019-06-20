@@ -10,10 +10,28 @@ export default {
         .join(' ')
     );
   },
+  isFuture: time => {
+    const now = new Date();
+    const thisYear = now.getFullYear();
+    const thisMonth = now.getMonth() + 1; // Buffer the date as January is 0
+    const thisDate = now.getDate();
+    const [year, month, date] = time.split('-').map(c => Number(c));
+
+    // This/next year and next month or
+    // This/next year and this/next month but not today
+    if (
+      (year >= thisYear && month > thisMonth) ||
+      (year >= thisYear && month >= thisMonth && date > thisDate)
+    ){
+      return true;
+    }
+
+    return false;
+  },
   filter: (filter, dataToFilter) => {
     return filter.length === 0
-      // No filter, return all data
-      ? dataToFilter
+      ? // No filter, return all data
+        dataToFilter
       : dataToFilter.filter(cur => cur.type === filter);
   },
   // A little different than the source but works
@@ -24,7 +42,7 @@ export default {
       : event.split(':');
     const config = {
       prop: values[0],
-      desc: values[1] ? -1 : 1
+      desc: values[1] ? -1 : 1,
     };
 
     const getProp = function(props) {

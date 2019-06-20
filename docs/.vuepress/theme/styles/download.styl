@@ -7,6 +7,24 @@
     font-size: 16px;
     line-height: 1.2em;
     margin: 0 0 10px;
+
+    &.spoiler {
+      display: flex;
+
+      &::after {
+        position: relative;
+        content: 'Spoiler';
+        text-transform: uppercase;
+        font-size: 10px;
+        color: black;
+        display: inline-block;
+        padding: 0 4px;
+        border-radius: 3px;
+        background-color: lighten(yellow, 80%);
+        border: 1px solid darken(yellow, 5%);
+        margin-left: 10px;
+      }
+    }
   }
 
   .sorting-options {
