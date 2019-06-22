@@ -31,9 +31,9 @@
         "since": "2019-04"
       },
       {
-        "name": "MTG Set Builder",
-        "image": "mtgsetbuilder.png",
-        "link": "http://mtgsetbuilder.com",
+        "name": "MTG Labs",
+        "image": "mtglabs.svg",
+        "link": "http://mtglabs.com",
         "since": "2019-05"
       }
     ],
@@ -154,6 +154,11 @@
       "name": "MTG Developers",
       "image": "mtgio.png",
       "link": "https://magicthegathering.io"
+    },
+    {
+      "name": "MTG Set Builder",
+      "image": "mtgsetbuilder.png",
+      "link": "http://mtgsetbuilder.com"
     },
     {
       "name": "MTGStocks",
