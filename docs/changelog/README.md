@@ -19,6 +19,56 @@
 
 # Changelog
 
+## 4.4.2 <small>(2019-06-26)</small>
+
+### Announcements
+
+<img src="/images/mit-license.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MIT License"/>With the 4.4.2 release of MTGJSON, we have officially changed licenses for our project. From this point onward, all code and content are available under the MIT license. We felt that GPLv3 was a bit too restrictive for what we aim to achieve: free, open data for all who have an interest in Magic: the Gathering and development. We look forward to serving our users and cannot wait to see what you can create!<br/><br/>
+
+Do you have a project that uses MTGJSON? Please reach out to us and we will get your project added to our homepage! Want to move up on the list? Consider supporting MTGJSON via [Patreon](https://patreon.com/mtgjson).
+
+### Cards
+#### Added
+- Foil paper prices have arrived! `prices[paperFoil]`
+- `isFullArt` for cards that are full art (duh)
+- `isTextless` cards that normally have a text box, but don't here
+- `isStorySpotlight` cards that have a story spotlight
+- `isReprint` given to all cards that see their 2nd or more printing
+- `isReprint` given to all cards which are a reprint (cards that are not newly printed)
+- `isPromo` given to cards that are promotional print
+- `isPaper` is the card available in paper
+- `isMtgo` is the card available on MTGO
+- `isArena` is the card available on MTG Arena
+- `variations` for Tamiyo's Journal printings added
+
+#### Changed
+- TCGPlayer API updated to 1.27.0
+
+### Decks
+#### Changed
+- Naming conventions changed to `DeckName_SETCODE`
+
+#### Fixed
+- Duplicate cards in decks addressed with better handling
+
+### Sets
+#### Added
+- Magic Core 2020 (`M20`)
+     - GathererIDs will be added in a future weekly build
+
+#### Fixed
+- `HHO` has `variations` field for cards now instead of the (B), (C), ...
+- `boosterV3` details added for several sets
+- `10E` foil cards `printedText` fields better parsed
+
+### Tokens
+#### Fixed
+- `layout` handled better now with emblems
+
+### Other
+#### Fixed
+- Better handling of empty keys file when building
+
 ## 4.4.1 <small>(2019-06-04)</small>
 
 ### Cards
