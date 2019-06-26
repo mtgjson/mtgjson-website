@@ -206,6 +206,11 @@
       "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
     },
     {
+      "name": "Troll and Toad",
+      "image": "trollandtoad.jpg",
+      "link": "https://www.trollandtoad.com"
+    },
+    {
       "name": "TutorCards",
       "image": "tutorcards.svg",
       "link": "https://tutor.cards"
