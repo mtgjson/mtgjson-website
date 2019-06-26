@@ -34,6 +34,7 @@ Do you have a project that uses MTGJSON? Please reach out to us and we will get 
 - `isTextless` cards that normally have a text box, but don't here
 - `isStorySpotlight` cards that have a story spotlight
 - `isReprint` given to all cards that see their 2nd or more printing
+- `isReprint` given to all cards which are a reprint (cards that are not newly printed)
 - `isPromo` given to cards that are promotional print
 - `isPaper` is the card available in paper
 - `isMtgo` is the card available on MTGO
