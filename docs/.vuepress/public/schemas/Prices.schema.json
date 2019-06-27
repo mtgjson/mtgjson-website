@@ -2,7 +2,7 @@
   "paper": {
     "type": "object(string: float)",
     "example": "\"2019-04-28\": 0.25",
-    "description": "Prices of the normal version of a card. Date is in ISO-8601 format. Courtesy of {{external:mtgstocks$https://www.mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson}}."
+    "description": "Prices of a card. Date is in ISO-8601 format. Courtesy of {{external:mtgstocks$https://www.mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson}}."
   },
   "paperFoil": {
     "type": "object(string: float)",
