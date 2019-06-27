@@ -86,6 +86,22 @@
     "example": "true",
     "description": "The card has some kind of alternative variation to its printed counterpart. (If false, it is usually omitted.)"
   },
+
+  "isArena": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card available in Magic: The Gathering Arena? (If false, it is usually omitted.)"
+  },
+  "isFullArt": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card full artwork? (If false, it is usually omitted.)"
+  },
+  "isMtgo": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card available in Magic: The Gathering Online? (If false, it is usually omitted.)"
+  },
   "isOnlineOnly": {
     "type": "boolean",
     "example": "true",
@@ -95,6 +111,21 @@
     "type": "boolean",
     "example": "true",
     "description": "Is the card oversized? (If false, it is usually omitted.)"
+  },
+  "isPaper": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card available in print? (If false, it is usually omitted.)"
+  },
+  "isPromo": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card a promotional print? (If false, it is usually omitted.)"
+  },
+  "isReprint": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Has the card been reprinted? (If false, it is usually omitted.)"
   },
   "isReserved": {
     "type": "boolean",
@@ -106,6 +137,16 @@
     "type": "boolean",
     "example": "true",
     "description": "If this card is found in a booster pack. (If false, it is usually omitted.)"
+  },
+  "isStorySpotlight": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Does the card have a story spotlight? (If false, it is usually omitted.)"
+  },
+  "isTextless": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Does the card normally have a text box, but doesn't on this card? (If false, it is usually omitted.)"
   },
   "isTimeshifted": {
     "type": "boolean",
