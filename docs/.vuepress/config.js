@@ -82,6 +82,10 @@ module.exports = {
         ],
       },
       '/changelog/',
+      {
+        title: 'License (MIT)',
+        path: '/license/'
+      }
     ],
   },
   plugins: [
