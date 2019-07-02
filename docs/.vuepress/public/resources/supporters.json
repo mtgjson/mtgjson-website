@@ -181,6 +181,11 @@
       "link": "https://planestrader.com/"
     },
     {
+      "name": "RDWonlineMagicollection",
+      "image": "rdwonline.png",
+      "link": "https://magicollection.rdwonline.com"
+    },
+    {
       "name": "Scryfall",
       "image": "scryfall.svg",
       "link": "https://scryfall.com"
