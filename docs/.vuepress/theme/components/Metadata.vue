@@ -1,7 +1,7 @@
 <template lang="pug">
   div.meta-data(v-if="metaData")
     router-link.version-number(
-      :to="changelogLink") {{ metaData.version }}
+      :to="`/changelog`") {{ metaData.version }}
 </template>
 
 <script>
@@ -11,18 +11,13 @@ export default {
   data() {
     return {
       defaultMetaData: {},
-      defaultChangelogLink: '',
     };
   },
   mounted() {
     axios
       .get('https://mtgjson.com/json/version.json')
       .then(response => {
-        const version = response.data.version.replace(/\./g, '-');
-        const date = response.data.date;
-
         this.defaultMetaData = response.data;
-        this.defaultChangelogLink = `/changelog/#_${version}-${date}`;
       })
       .catch(err => {
         console.error(err);
@@ -31,9 +26,6 @@ export default {
   computed: {
     metaData() {
       return this.defaultMetaData;
-    },
-    changelogLink() {
-      return this.defaultChangelogLink;
     },
   },
 };

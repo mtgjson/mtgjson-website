@@ -6,9 +6,10 @@
  * {{tag:first$second}}
  * */
 export default class {
-  constructor(schema = {}) {
+  constructor(schema = {}, externalData = {}) {
     this.regex = /{{(.*?)}}/g;
     this.schema = schema;
+    this.externalData = externalData;
 
     this.cycle();
   }
@@ -18,17 +19,23 @@ export default class {
    * @param {String} str mustached string to unwrap
    */
   async hydrate(str = '') {
+    
+    const value = str.match(/{{(.*?)}}/)[1];
+    const tag = value.split(':')[0];
+    const newDate = new Date();
+    
     let locale = '';
     let newStr = '';
-
-    let value = str.match(/{{(.*?)}}/)[1];
-    let tag = value.split(':')[0];
-
     let text = str.match(/:(.*?)\$/);
-    text = text && text[1] ? text[1] : value.split(':')[1];
-
     let external = str.match(/\$(.*?)}}/);
+
+    text = text && text[1] ? text[1] : value.split(':')[1];
     external = external && external[1] ? external[1] : text;
+
+    let currentDate = `${newDate.getFullYear()}-${(
+      '0' +
+      (newDate.getMonth() + 1)
+    ).slice(-2)}-${('0' + newDate.getDate()).slice(-2)}`;
 
     switch (text) {
       case 'version':
@@ -54,6 +61,24 @@ export default class {
 
       case 'code':
         newStr = `<code>${text}</code>`;
+        break;
+
+      case 'buildVersion':
+        const { version } = this.externalData;
+
+        newStr = version || text;
+        break;
+
+      case 'buildDate':
+        const { date } = this.externalData;
+
+        newStr = date || currentDate;
+        break;
+
+      case 'buildPricesDate':
+        const { pricesDate } = this.externalData;
+
+        newStr = pricesDate || currentDate;
         break;
 
       default:
