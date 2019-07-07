@@ -33,6 +33,11 @@
     "description": "The converted mana cost of the card.",
     "isAtomic": true
   },
+  "count": {
+    "type": "integer",
+    "example": "2",
+    "description": "How many of this card exists in a deck. Only available inside of an Individual Deck structure."
+  },
   "duelDeck": {
     "type": "string",
     "example": "\"a\"",
