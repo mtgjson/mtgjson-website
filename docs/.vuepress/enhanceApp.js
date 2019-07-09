@@ -7,9 +7,21 @@ export default async ({ Vue }) => {
   Vue.prototype.$helpers = helpers;
 
   axios
+    .get('https://mtgjson.com/json/version.json')
+    .then(response => {
+      Vue.prototype.$metadata = response.data;
+    })
+    .catch(err => {
+      console.error(err);
+    });
+
+  axios
     .get('https://mtgjson.com/json/DeckLists.json')
     .then(response => {
-      Vue.prototype.$decks = helpers.sort('releaseDate:true', response.data.decks);
+      Vue.prototype.$decks = helpers.sort(
+        'releaseDate:true',
+        response.data.decks
+      );
     })
     .catch(err => {
       console.error(err);
