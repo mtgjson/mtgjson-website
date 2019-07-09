@@ -7,7 +7,7 @@
   "language": {
     "type": "string",
     "example": "\"German\"",
-    "description": "Foreign language of card. Can be {{code:English}}, {{code:Spanish}}, {{code:French}}, {{code:German}}, {{code:Italian}}, {{code:Portuguese (Brazil)}}, {{code:Japanese}}, {{code:Korean}}, {{code:Russian}}, {{code:Chinese Simplified}}, or {{code:Chinese Traditional}}. Promo cards can be in {{code:Hebrew}}, {{code:Latin}}, {{code:Ancient Greek}}, {{code:Arabic}}, {{code:Sanskrit}}, or {{code:Phyrexian}}."
+    "description": "Foreign language of card. Can be {{code:English}}, {{code:Spanish}}, {{code:French}}, {{code:German}}, {{code:Italian}}, {{code:Portuguese (Brazil)}}, {{code:Japanese}}, {{code:Korean}}, {{code:Russian}}, {{code:Chinese Simplified}}, or {{code:Chinese Traditional}}. Promotional cards can also be in {{code:Hebrew}}, {{code:Latin}}, {{code:Ancient Greek}}, {{code:Arabic}}, {{code:Sanskrit}}, or {{code:Phyrexian}}."
   },
   "multiverseId": {
     "type": "integer",
@@ -22,6 +22,6 @@
   "text": {
     "type": "string",
     "example": "\"Fliegend, Wachsamkeit, verursacht Trampelschaden\nPalladia-Mors, die Verwüsterin, hat Fluchsicherheit, falls sie noch keinen Schaden zugefügt hat.\"",
-    "description": "Rules text of the card in foreign language."
+    "description": "Text ruling of the card in foreign language."
   }
 }

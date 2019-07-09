@@ -52,7 +52,7 @@ module.exports = {
     logo: '/images/logo.svg',
     sidebar: [
       {
-        title: 'About MTGJSON',
+        title: 'MTGJSON',
         path: '/',
         collapsable: false,
       },

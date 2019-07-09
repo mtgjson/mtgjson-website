@@ -2,7 +2,7 @@
   "baseSetSize": {
     "type": "integer",
     "example": "259",
-    "description": "Number of cards in the set. Will default to `totalSetSize` if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products."
+    "description": "Number of cards in the set. Will default to {{code:totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products."
   },
   "block": {
     "type": "string",
@@ -27,22 +27,25 @@
   "codeV3": {
     "type": "string",
     "example": "\"XYZ\"",
-    "description": "Alternate set code Wizards uses for a select few duel deck sets. (If there is not an alternate set code, this field is omitted.)"
+    "description": "Alternate set code Wizards uses for a select few duel deck sets.",
+    "traits": ["optional"]
   },
   "isFoilOnly": {
     "type": "boolean",
-    "example": "false",
-    "description": "Set available only in foil. (If false, it is usually omitted.)"
+    "example": "true",
+    "description": "Is the set available only in foil?",
+    "traits": ["optional"]
   },
   "isOnlineOnly": {
     "type": "boolean",
-    "example": "false",
-    "description": "Set available online only. (If false, it is usually omitted.)"
+    "example": "true",
+    "description": "Is the set available online only?",
+    "traits": ["optional"]
   },
   "keyruneCode": {
     "type": "string",
     "example": "\"KTK\"",
-    "description": "The matching keyrune code for keyrune.css image icons."
+    "description": "The matching keyrune code for {{external:Keyrune$https://andrewgioia.github.io/Keyrune/}} image icons."
   },
   "mcmName": {
     "type": "string",
@@ -52,7 +55,7 @@
   "mcmId": {
     "type": "integer",
     "example": "2411",
-    "description": "The Magic Card Market set id."
+    "description": "The Magic Card Market set ID."
   },
   "meta": {
     "type": "object(string: string)",
@@ -77,7 +80,7 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2019-01-25\"",
-    "description": "Release date in ISO-8601 format for the set."
+    "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set."
   },
   "tcgplayerGroupId": {
     "type": "integer",
@@ -102,6 +105,7 @@
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "As of 03-28-2019, the possible values are {{code:archenemy}}, {{code:box}}, {{code:core}}, {{code:commander}}, {{code:draft_innovation}}, {{code:duel_deck}}, {{code:expansion}}, {{code:from_the_vault}}, {{code:funny}}, {{code:masters}}, {{code:masterpiece}}, {{code:memorabilia}}, {{code:spellbook}}, {{code:planechase}}, {{code:premium_deck}}, {{code:promo}}, {{code:starter}}, {{code:token}}, {{code:treasure_chest}} or {{code:vanguard}}"
+    "description": "As of 03-28-2019, the possible values are {{code:archenemy}}, {{code:box}}, {{code:core}}, {{code:commander}}, {{code:draft_innovation}}, {{code:duel_deck}}, {{code:expansion}}, {{code:from_the_vault}}, {{code:funny}}, {{code:masters}}, {{code:masterpiece}}, {{code:memorabilia}}, {{code:spellbook}}, {{code:planechase}}, {{code:premium_deck}}, {{code:promo}}, {{code:starter}}, {{code:token}}, {{code:treasure_chest}} or {{code:vanguard}}",
+    "traits": ["stale"]
   }
 }

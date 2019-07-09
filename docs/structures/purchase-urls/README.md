@@ -27,6 +27,6 @@ Purchase Urls is a structure defining URL paths to purchase a card or other prod
 > Parent property type: `array(anonymous object)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

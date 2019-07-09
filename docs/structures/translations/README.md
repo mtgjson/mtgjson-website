@@ -25,6 +25,6 @@
 > Parent property type: `object(string: string)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

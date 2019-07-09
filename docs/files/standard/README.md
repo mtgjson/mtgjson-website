@@ -25,6 +25,6 @@ All sets, restricted to sets legal in Standard.
 > Data type: `anonymous object(string: object)`  
 > Property type: `string`   
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

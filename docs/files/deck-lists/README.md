@@ -25,6 +25,6 @@ All possible compiled pre-constructed deck outputs from MTGJSON as a single mani
 > Data type: `object(string: any)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

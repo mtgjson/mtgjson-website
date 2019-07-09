@@ -25,6 +25,6 @@
 > Parent property type: `array(anonymous object)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

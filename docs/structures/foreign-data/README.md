@@ -27,6 +27,6 @@ Foreign Data is a structure defining alternate language properties for a card.
 > Parent property type: `array(anonymous object)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

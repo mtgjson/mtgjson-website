@@ -25,6 +25,6 @@ List of all keywords used on Magic cards.
 > Data type: `object(string: any)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

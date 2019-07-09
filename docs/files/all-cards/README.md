@@ -30,10 +30,6 @@ Every card as a unique "atomic" object. May also be outputted as every card in a
 Each card's keys are limited to its atomic data only - data that typically will never change with the cards newer printings.
 :::
 
-::: warning Deprecation Warning
-`tcgplayerPurchaseUrl` will be removed in v4.5.0.
-:::
-
-### Structure
+### Data Structure
 
 <GenerateTable/>
