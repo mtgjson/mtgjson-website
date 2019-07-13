@@ -25,6 +25,6 @@ Every set and all cards in that set.
 > Data type: `array(string: object)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

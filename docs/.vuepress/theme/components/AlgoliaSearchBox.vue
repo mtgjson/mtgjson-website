@@ -65,11 +65,18 @@ export default {
 
   .algolia-autocomplete {
     line-height: normal;
+    height: 100%;
+    display: flex !important;
+
+    input {
+      box-sizing: border-box;
+      height: 100%;
+    }
 
     .ds-dropdown-menu {
       background-color: #fff;
       border: 1px solid #999;
-      border-radius: 4px;
+      border-radius: 5px;
       font-size: 16px;
       margin: 6px 0 0;
       padding: 4px;

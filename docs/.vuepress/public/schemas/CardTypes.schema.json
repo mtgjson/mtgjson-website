@@ -17,7 +17,7 @@
   "enchantment": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Enchanments"
+    "description": "All card types available for Enchantments"
   },
   "instant": {
     "type": "array(object)",

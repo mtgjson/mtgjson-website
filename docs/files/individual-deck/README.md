@@ -1,7 +1,7 @@
 ---
 {
   "title": "Individual Deck",
-  "schema": "Deck",
+  "schema": "IndividualDeck",
   "meta": [
     {
       "name": "description",
@@ -25,8 +25,8 @@ MTGJSON outputs single pre-constructed decks and makes them available for downlo
 > Data type: `anonymous object(string: any)`   
 > Property type: `string` 
 
-### Structure
+### Data Structure
 
-Using `AbzanSiege` as an example:
+Using `AbzanSiege_KTK` as an example:
 
 <GenerateTable/>

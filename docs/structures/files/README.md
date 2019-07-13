@@ -27,6 +27,6 @@ Files Data is a structure defining all possible compiled outputs from MTGJSON.
 > Parent property type: `array(string)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

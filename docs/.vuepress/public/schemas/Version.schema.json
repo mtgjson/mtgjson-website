@@ -2,12 +2,12 @@
   "date": {
     "type": "string",
     "example": "\"{{buildDate:2019-04-28}}\"",
-    "description": "ISO-8601 date of the MTGJSON build."
+    "description": "{{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} date of the MTGJSON build."
   },
   "pricesDate": {
     "type": "string",
     "example": "\"{{buildPricesDate:2019-04-28}}\"",
-    "description": "ISO-8601 date of latest card prices."
+    "description": "{{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} date of latest card prices."
   },
   "version": {
     "type": "string",

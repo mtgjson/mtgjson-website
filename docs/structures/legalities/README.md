@@ -32,7 +32,7 @@ List of play formats that are legal for a specific card.
 
 If a card is "not legal", it will be omitted from the data.
 
-### Structure
+### Data Structure
 
 Using [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) as an example:
 

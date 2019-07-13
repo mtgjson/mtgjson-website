@@ -85,7 +85,7 @@ export default {
       color: #fff;
       background-color: $accentColor;
       padding: 0.8rem 1.6rem;
-      border-radius: 4px;
+      border-radius: 5px;
       transition: background-color 0.1s ease;
       box-sizing: border-box;
       border-bottom: 1px solid darken($accentColor, 10%);

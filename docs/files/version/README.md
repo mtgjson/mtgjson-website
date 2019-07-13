@@ -25,6 +25,6 @@ Metadata object has date (OBDC standard) and version properties of this MTGJSON 
 > Data type: `anonymous object(string: string)`  
 > Property type: `string`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

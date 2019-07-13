@@ -1,6 +1,6 @@
 ---
 {
-  "title": "About",
+  "title": "MTGJSON",
   "meta": [
     {
       "name": "description",
@@ -16,6 +16,8 @@
   }
 }
 ---
+
+# MTGJSON
 
 ## Our Mission
 

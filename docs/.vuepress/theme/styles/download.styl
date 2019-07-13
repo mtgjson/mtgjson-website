@@ -14,15 +14,16 @@
       &::after {
         position: relative;
         content: 'Spoiler';
-        text-transform: uppercase;
-        font-size: 10px;
-        color: black;
-        display: inline-block;
-        padding: 0 4px;
-        border-radius: 3px;
-        background-color: lighten(yellow, 80%);
-        border: 1px solid darken(yellow, 5%);
+        background-color: lighten($yellowColor, 85%);
+        border-radius: 5px;
         margin-left: 10px;
+        margin-right: 5px;
+        font-size: 10px;
+        font-weight: normal;
+        padding: 3px 5px;
+        cursor: help;
+        display: inline-block;
+        text-transform: capitalize;
       }
     }
   }
@@ -141,7 +142,7 @@
           margin-top: 20px;
 
           .cta-btn {
-            background-color: seagreen !important;
+            background-color: $greenColor !important;
             margin-bottom: 10px;
           }
 

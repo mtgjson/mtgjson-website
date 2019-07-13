@@ -26,10 +26,10 @@ The card structure describes the properties and values of a single card.
 > Potential Parent property type: `array(anonymous object)`  
 > Property type: `string`  
 
-### Structure
-
 ::: warning Deprecation Warning
 `tcgplayerPurchaseUrl` will be deprecated in v4.5.0. `purchaseUrls` is now a key that will contain multiple purchase urls.
 :::
+
+### Data Structure
 
 <GenerateTable/>

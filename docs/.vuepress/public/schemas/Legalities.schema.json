@@ -2,46 +2,55 @@
   "commander": {
     "type": "string",
     "example": "Legal",
-    "description": "Card is legal in the Commander play format."
+    "description": "Card is legal in the Commander play format.",
+    "traits": ["optional"]
   },
   "duel": {
     "type": "string",
     "example": "Banned",
-    "description": "Card is legal in the Duel Commander play format."
+    "description": "Card is legal in the Duel Commander play format.",
+    "traits": ["optional"]
   },
   "frontier": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card is not legal in the Frontier play format."
+    "description": "Omitted. Card is not legal in the Frontier play format.",
+    "traits": ["optional"]
   },
   "legacy": {
     "type": "string",
     "example": "Banned",
-    "description": "Card is legal in the Legacy play format."
+    "description": "Card is legal in the Legacy play format.",
+    "traits": ["optional"]
   },
   "modern": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card is not legal in the Modern play format."
+    "description": "Omitted. Card is not legal in the Modern play format.",
+    "traits": ["optional"]
   },
   "pauper": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card is not legal in the Pauper play format."
+    "description": "Omitted. Card is not legal in the Pauper play format.",
+    "traits": ["optional"]
   },
   "penny": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card is not legal in the Penny play format."
+    "description": "Omitted. Card is not legal in the Penny play format.",
+    "traits": ["optional"]
   },
   "standard": {
     "type": "string",
     "example": "",
-    "description": "Omitted. Card is not legal in the Standard play format."
+    "description": "Omitted. Card is not legal in the Standard play format.",
+    "traits": ["optional"]
   },
   "vintage": {
     "type": "string",
     "example": "Restricted",
-    "description": "Card is legal in the Vintage play format."
+    "description": "Card is legal in the Vintage play format.",
+    "traits": ["optional"]
   }
 }

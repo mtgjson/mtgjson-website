@@ -27,6 +27,6 @@ Prices is a structure defining an object of card prices based on date.
 > Parent property type: `object(anonymous object)`  
 > Property type: `object`  
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

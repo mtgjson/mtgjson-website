@@ -32,6 +32,6 @@ The decks structure describes the properties and values of a deck reference.
 If you are looking for an "Individual" deck structure check [here](../../files/individual-deck)
 :::
 
-### Structure
+### Data Structure
 
 <GenerateTable/>

@@ -1,5 +1,5 @@
 {
-  "10E" : {
+  "M20" : {
     "type": "object",
     "example": "{{link:set}}",
     "description": "This set, set data and all cards in this set. See the {{link:set}} structure."
@@ -8,10 +8,5 @@
     "type": "...",
     "example": "...",
     "description": "..."
-  },
-  "ZEN": {
-    "type": "object",
-    "example": "{{link:set}}",
-    "description": "This set, set data and all cards in that set. See the {{link:set}} structure."
   }
 }

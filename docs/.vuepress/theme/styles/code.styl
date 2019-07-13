@@ -1,46 +1,22 @@
-.content {
-  code {
-    color: lighten($textColor, 20%);
-    padding: 0.25rem 0.5rem;
-    margin: 0;
-    font-size: 0.85em;
-    background-color: rgba(27, 31, 35, 0.05);
-    border-radius: 3px;
-
-    .token {
-      &.deleted {
-        color: #EC5975;
-      }
-
-      &.inserted {
-        color: $accentColor;
-      }
-    }
-  }
+code, pre {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-size: 12px;
+  background-color: $tableCodeBgColor;
+  color: $tableCodeTextColor;
+  border-radius: 5px;
+  line-height: 2.7em;
+  padding: 7px 10px;
+  margin: 0;
 }
 
-.content {
-  pre, pre[class*='language-'] {
-    line-height: 1.4;
-    padding: 1.25rem 1.5rem;
-    margin: 0.85rem 0;
-    background-color: $codeBgColor !important;
-    border-radius: 6px;
-    overflow: auto;
-
-    code {
-      color: #fff;
-      padding: 0;
-      background-color: transparent !important;
-      border-radius: 0;
-    }
-  }
+pre, code, kbd, .line-number {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 div[class*='language-'] {
   position: relative;
   background-color: $codeBgColor;
-  border-radius: 6px;
+  border-radius: 5px;
 
   .highlight-lines {
     user-select: none;
@@ -56,10 +32,15 @@ div[class*='language-'] {
     }
   }
 
-  pre, pre[class*='language-'] {
+  code, pre, pre[class*='language-'] {
     background: transparent;
     position: relative;
     z-index: 1;
+
+    code, pre {
+      padding: 0;
+      line-height: 1.7em;
+    }
   }
 
   &::before {
@@ -128,7 +109,7 @@ div[class*='language-'] {
       left: 0;
       width: $lineNumbersWrapperWidth;
       height: 100%;
-      border-radius: 6px 0 0 6px;
+      border-radius: 5px 0 0 5px;
       border-right: 1px solid rgba(0, 0, 0, 66%);
       background-color: $codeBgColor;
     }
