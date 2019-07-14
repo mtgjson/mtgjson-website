@@ -5,18 +5,18 @@
     Content
 
     footer.page-edit
-      div.edit-link(v-if="editLink")
+      .edit-link(v-if="editLink")
         a(
           :href="editLink"
           target="_blank"
           rel="noopener noreferrer") {{ editLinkText }}
         OutboundLink
 
-      div.last-updated(v-if="lastUpdated")
+      .last-updated(v-if="lastUpdated")
         span.prefix {{ lastUpdatedText }}: 
         span.time {{ lastUpdated }}
 
-    div.page-nav(v-if="prev || next")
+    .page-nav(v-if="prev || next")
       p.inner
         span.prev(v-if="prev")
           router-link.prev(
@@ -183,7 +183,13 @@ function flattern(items, res) {
 
 .page {
   padding-bottom: 2rem;
+  padding-left: $sidebarWidth;
   display: block;
+
+  & > * {
+    max-width: 1240px !important;
+    margin-left: 0 !important;
+  }
 }
 
 .page-edit {
@@ -225,7 +231,7 @@ function flattern(items, res) {
   .inner {
     min-height: 2rem;
     margin-top: 0;
-    border-top: 1px solid $borderColor;
+    border-top: 1px solid $bgColorDark;
     padding-top: 1rem;
     overflow: auto; // clear float
   }
@@ -233,9 +239,23 @@ function flattern(items, res) {
   .next {
     float: right;
   }
+
+  .next, .prev {
+    a {
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 @media (max-width: $MQMobile) {
+  .page {
+    padding-left: 0;
+  }
+
   .page-edit {
     .edit-link {
       margin-bottom: 0.5rem;

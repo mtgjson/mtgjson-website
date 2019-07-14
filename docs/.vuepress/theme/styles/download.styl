@@ -1,5 +1,4 @@
 .download-tables {
-  max-width: 800px;
   position: relative;
 
   h3 {
@@ -13,11 +12,12 @@
         position: relative;
         content: 'Spoiler';
         background-color: lighten($yellowColor, 85%);
+        color: $bgColor;
         border-radius: 5px;
         margin-left: 10px;
         margin-right: 5px;
         font-size: 10px;
-        font-weight: normal;
+        font-weight: bold;
         padding: 3px 5px;
         display: inline-block;
         text-transform: capitalize;
@@ -29,9 +29,7 @@
     position: sticky;
     top: 55px;
     z-index: 9;
-    background-color: white;
     padding: 15px 0;
-    border-bottom: 1px solid $borderColor;
 
     .sort-row {
       display: inline-block;
@@ -50,19 +48,18 @@
   }
 
   .download-table {
-    border: 1px solid #eaecef;
+    border: 1px solid $tableBorderColor;
     box-sizing: border-box;
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -1px;
 
     &:nth-of-type(odd) {
-      background-color: #f6f6f6;
+      background-color: $tableColor;
     }
 
     &:nth-of-type(even) {
-      background-color: transparent;
+      background-color: $tableHeadingColor;
     }
 
     .download-item {
@@ -82,7 +79,7 @@
             position: relative;
             height: 50px;
             width: 50px;
-            color: $codeBgColor;
+            color: $textColor;
 
             &::before {
               position: absolute;
@@ -140,6 +137,7 @@
 
           .cta-btn {
             background-color: $greenColor !important;
+            color: $lightColor !important;
             margin-bottom: 10px;
           }
 

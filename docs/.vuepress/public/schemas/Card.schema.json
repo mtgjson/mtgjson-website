@@ -374,8 +374,8 @@
   },
   "types": {
     "type": "array(string)",
-    "example": "[\"Creature\"]",
-    "description": "List of types of the card.",
+    "example": "[\"Lengendary\", \"Creature\", \"Angel\"]",
+    "description": "List of all types of the card.",
     "traits": ["atomic"]
   },
   "uuid": {

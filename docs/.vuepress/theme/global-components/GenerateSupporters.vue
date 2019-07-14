@@ -5,11 +5,13 @@
       // Tier 3
       .supporters-table(v-if="mythic.length > 0")
         .supporter(v-for="(supporter, key) in mythic" :data-tier-size="3")
-          a(v-if="supporter.link" :href="supporter.link" target="_blank")
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
           span(v-else)
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
           p(v-if="supporter.blurb") {{ supporter.blurb }}
           a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="3" v-html="formatTime(supporter.since)")
@@ -17,22 +19,26 @@
       // Tier 2
       .supporters-table(v-if="rare.length > 0")
         .supporter(v-for="(supporter, key) in rare" :data-tier-size="2")
-          a(v-if="supporter.link" :href="supporter.link" target="_blank")
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
           span(v-else)
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
           a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="2" v-html="formatTime(supporter.since)")
 
       // Tier 1
       .supporters-table(v-if="uncommon.length > 0")
         .supporter(v-for="(supporter, key) in uncommon" :data-tier-size="1")
-          a(v-if="supporter.link" :href="supporter.link" target="_blank")
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
           span(v-else)
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :title="supporter.name")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
           a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
 
@@ -41,8 +47,9 @@
       h2.patreon-headline Others Powered by MTGJSON
       .supporters-table.services
         .supporter.service(v-for="(supporter, key) in services")
-          a(:href="supporter.link" target="_blank")
-            img(v-if="supporter.image", :src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+          a.supporter-link(:href="supporter.link" target="_blank")
+            .img-wrap(v-if="supporter.image")
+              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
 
 </template>
@@ -102,10 +109,10 @@ export default {
   margin-bottom: 30px;
 
   &.services {
-    border-top: 1px solid #eaecef;
+    border-top: 1px solid $tableBorderColor;
 
     .supporter {
-      padding-bottom: 15px;
+      padding-bottom: 30px;
       flex: 0 0 25%;
     }
   }
@@ -119,7 +126,8 @@ export default {
     padding: 30px 15px 70px;
     text-align: center;
     box-sizing: border-box;
-    border: 1px solid #eaecef;
+    background-color: $tableColor;
+    border: 1px solid $tableBorderColor;
     // Prevent double borders on boxes
     margin-top: -1px;
     margin-left: -1px;
@@ -127,38 +135,27 @@ export default {
     margin-top: -1px;
     margin-left: -1px;
 
-    &[data-tier-size='0'] {
-      flex: 0 0 100%;
-
-      &:hover {
-        background: none;
-
-        h6 {
-          text-decoration: none;
-        }
-      }
-    }
-
-    &[data-tier-size='3'] {
-      flex: 0 0 50%;
+    .img-wrap {
+      height: 50px;
+      max-width: 100%;
+      margin: 0 auto 15px;
+      display: inline-flex;
+      justify-content: center;
+      align-items: center;
 
       img {
-        max-height: 115px;
-        max-width: 150px;
+        width: auto;
+        height: auto;
+        max-height: 50px;
+        max-width: 100px;
       }
     }
 
-    img {
-      max-height: 75px;
-      max-width: 100px;
-      width: auto;
-      height: auto;
-      margin-bottom: 15px;
-    }
 
-    a {
+    .supporter-link {
       text-align: center;
       flex: 0 0 100%;
+      height: 100%;
 
       &:link {
         &:hover {
@@ -195,6 +192,30 @@ export default {
       word-wrap: anywhere;
     }
 
+    &[data-tier-size='0'] {
+      flex: 0 0 100%;
+
+      &:hover {
+        background: none;
+
+        h6 {
+          text-decoration: none;
+        }
+      }
+    }
+
+    &[data-tier-size='3'] {
+      flex: 0 0 50%;
+
+      .img-wrap {
+        height: 100px;
+
+        img {
+          max-height: 100px;
+        }
+      }
+    }
+
     .tier {
       text-align: center;
       flex: 0 0 100%;
@@ -209,7 +230,7 @@ export default {
       padding: 5px;
 
       &:link, &:visited, &:active, &:focus {
-        color: $textColor;
+        color: $darkColor;
         text-decoration: none;
       }
 

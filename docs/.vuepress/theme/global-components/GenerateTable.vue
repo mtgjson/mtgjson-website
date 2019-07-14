@@ -3,14 +3,12 @@
   .schema
     //- Properties Index
     .schema-item.schema-index(v-if="showIndex")
-      h4.toggle.hide(
-        ref="showMoreToggle"
-        @click="toggleList($event)"
-        title="Tap to show more or less") Property Index
-      ol
+      h4 Property Index
+      ol(:class="{hide: willShowMore}")
         li(v-for="(data, name) in filteredSchema")
           p
             router-link(:to="'#' + name") {{ name }}
+      .show-more(v-if="showMore" @click="toggleIndex") {{ (willShowMore ? 'Show More' : 'Show Less') }}
 
     //- Properties Legend
     .schema-item.schema-legend(v-if="schemaTraits.size")
@@ -71,7 +69,8 @@ export default {
     return {
       schema: [],
       traits: [],
-      showMore: true
+      showMore: true,
+      willShowMore: true,
     };
   },
   created() {
@@ -92,11 +91,6 @@ export default {
     this.showMore = Object.keys(schema).length > 4;
     this.traits = new Set(traits);
     this.schema = new this.$landcycle(schema).schema;
-  },
-  mounted(){
-    if(!this.showMore){
-      this.$refs.showMoreToggle.classList.remove('toggle', 'hide');
-    }
   },
   computed: {
     schemaTraits() {
@@ -131,10 +125,8 @@ export default {
     },
   },
   methods: {
-    toggleList(event) {
-      if(this.showMore){
-        event.currentTarget.classList.toggle('hide');
-      }
+    toggleIndex() {
+      this.willShowMore = !this.willShowMore;
     },
     prettyTrait(trait) {
       return trait.replace('-', ' ');
@@ -182,6 +174,10 @@ h6 {
   }
 }
 
+em {
+  color: $grayColor;
+}
+
 pre, code {
   display: inline-block;
   white-space: pre-line;
@@ -196,32 +192,50 @@ pre {
   line-height: 1.7em;
 }
 
-.toggle {
-  cursor: pointer;
-  position: relative;
-  display: inline-flex;
-  align-items: center;
+.trait {
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+  padding: 3px 5px;
+  cursor: help;
+  display: inline-block;
+  text-transform: capitalize;
+  font-weight: bold;
+  color: $bgColor;
 
-  &::after {
-    content: '';
-    margin-left: 10px;
-    margin-top: 5px;
-    border: 5px solid transparent;
-    border-top: 5px solid $textColor;
+  &.atomic {
+    background-color: lighten($accentColor, 70%);
   }
 
-  &.hide {
-    &::after {
-      margin-top: -5px;
-      border: 5px solid transparent;
-      border-bottom: 5px solid $textColor;
-    }
+  &.optional {
+    background-color: lighten($yellowColor, 70%);
+  }
 
-    & + * {
-      // display: none;
+  &.decks-only {
+    background-color: lighten($greenColor, 70%);
+  }
+
+  &.nullable {
+    background-color: lighten(red, 70%);
+  }
+
+  &.stale {
+    background-color: lighten(gray, 70%);
+  }
+}
+
+.schema {
+  &-item {
+    margin-bottom: 30px;
+  }
+
+  &-index {
+    ol {
+      margin: 0;
+      list-style: disc;
       position: relative;
-      max-height: 90px;
       overflow: hidden;
+      padding-bottom: 30px;
 
       &::after {
         transform: rotateX(180deg);
@@ -233,51 +247,22 @@ pre {
         right: 0;
         z-index: 1;
         content: '';
-        box-shadow: 5px 5px 10px white;
+        box-shadow: 5px 5px 10px $bgColorDark;
+      }
+
+      &.hide {
+        max-height: 90px;
+        padding-bottom: 0;
       }
     }
-  }
-}
 
-.trait {
-  border-radius: 5px;
-  margin-right: 5px;
-  font-size: 10px;
-  padding: 3px 5px;
-  cursor: help;
-  display: inline-block;
-  text-transform: capitalize;
-
-  &.atomic {
-    background-color: lighten($accentColor, 85%);
-  }
-
-  &.optional {
-    background-color: lighten($yellowColor, 85%);
-  }
-
-  &.decks-only {
-    background-color: lighten($greenColor, 85%);
-  }
-
-  &.nullable {
-    background-color: lighten(red, 75%);
-  }
-
-  &.stale {
-    background-color: lighten(gray, 75%);
-  }
-}
-
-.schema {
-  &-item {
-    margin-bottom: 30px;
-  }
-
-  &-index {
-    ol {
-      margin-top: 0;
-      list-style: disc;
+    .show-more {
+      color: $accentColor;
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px auto 0;
+      cursor: pointer;
     }
   }
 
@@ -304,6 +289,7 @@ pre {
 
   &-data {
     &--table, &--table-continued {
+      background-color: $tableColor;
       position: relative;
       display: grid;
       grid-template-columns: minmax(min-content, 150px) 1fr;
@@ -320,14 +306,13 @@ pre {
         height: 100%;
         position: absolute;
         top: 0;
-        border: 1px solid $borderColor;
+        border: 1px solid $tableBorderColor;
         border-radius: 5px;
         pointer-events: none;
         box-sizing: border-box;
       }
 
       &-continued {
-        background-color: $tableAltBgColor;
         display: flex;
         justify-content: center;
         padding: 7px 13px 17px;
@@ -337,7 +322,7 @@ pre {
 
       &-item {
         padding: 7px 13px;
-        border-bottom: 1px solid $borderColor;
+        border-bottom: 1px solid $tableBorderColor;
         grid-column: span 1;
 
         &.heading {
@@ -345,8 +330,8 @@ pre {
           text-align: left;
           text-transform: capitalize;
           font-weight: bold;
-          background-color: $tableAltBgColor;
-          border-right: 1px solid $borderColor;
+          background-color: $tableHeadingColor;
+          border-right: 1px solid $tableBorderColor;
         }
       }
     }

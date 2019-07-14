@@ -1,22 +1,14 @@
-@require './code';
+@require './reset';
 @require './custom-blocks';
+@require './typography';
+@require './buttons';
 @require './arrow';
-@require './wrapper';
-@require './toc';
-@require './navbar';
-@require './sidebar';
+@require './code';
 
 html, body {
-  padding: 0;
-  margin: 0;
-  background-color: #fff;
   min-width: 320px;
   // issue/84
   scroll-behavior: smooth;
-
-  * {
-    box-sizing: border-box;
-  }
 }
 
 html {
@@ -28,139 +20,12 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
+  background-color: $bgColor;
   color: $textColor;
-}
-
-.page {
-  padding-left: $sidebarWidth;
-}
-
-.navbar {
-  position: fixed;
-  z-index: 20;
-  top: 0;
-  left: 0;
-  right: 0;
-  height: $navbarHeight;
-  background-color: #fff;
-  box-sizing: border-box;
-  border-bottom: 1px solid $borderColor;
-}
-
-.sidebar-mask {
-  position: fixed;
-  z-index: 9;
-  top: 0;
-  left: 0;
-  width: 100vw;
-  height: 100vh;
-  display: none;
-}
-
-.sidebar {
-  font-size: 16px;
-  background-color: #fff;
-  width: $sidebarWidth;
-  position: fixed;
-  z-index: 10;
-  margin: 0;
-  top: $navbarHeight;
-  left: 0;
-  bottom: 0;
-  box-sizing: border-box;
-  border-right: 1px solid $borderColor;
-  overflow-y: auto;
-}
-
-.content__default {
-  padding: 30px 25px 50px;
-
-  & > *:first-child {
-    margin-top: 0;
-    padding-top: 0;
-  }
-
-  a:hover {
-    text-decoration: underline;
-  }
-
-  p.demo {
-    padding: 1rem 1.5rem;
-    border: 1px solid #ddd;
-    border-radius: 5px;
-  }
-
-  img {
-    max-width: 100%;
-
-    &.img-license {
-      width: 100%;
-      max-width: 100px;
-      margin: 15px 30px 0 0;
-    }
-  }
-}
-
-a {
-  font-weight: 500;
-  color: $accentColor;
-  text-decoration: none;
-}
-
-p a code {
-  font-weight: 400;
-  color: $accentColor;
-}
-
-kbd {
-  background: #eee;
-  border: solid 0.15rem #ddd;
-  border-bottom: solid 0.25rem #ddd;
-  border-radius: 5px;
-  padding: 0 0.15em;
-}
-
-blockquote {
-  font-size: 0.9rem;
-  color: #999;
-  border-left: 0.5rem solid #dfe2e5;
-  margin: 0 0 25px;
-  padding: 25px;
-
-  & > p {
-    margin: 0;
-  }
 }
 
 ul, ol {
   padding-left: 1.2em;
-}
-
-strong {
-  font-weight: bold;
-}
-
-h1, h2, h3, h4, h5, h6 {
-  font-weight: bold;
-  line-height: 1;
-  margin: 0;
-
-  &:hover .header-anchor {
-    opacity: 1;
-  }
-}
-
-h1, h2, h3 {
-  padding-top: 30px;
-  padding-bottom: 20px;
-}
-
-h1 {
-  font-size: 2.2rem;
-}
-
-h2 {
-  font-size: 1.65rem;
 }
 
 a {
@@ -187,60 +52,9 @@ a {
   }
 }
 
-p, ul, ol {
-  line-height: 1.7;
-}
-
-p {
-  margin: 0;
-  margin-bottom: 15px;
-}
-
 hr {
   border: 0;
-  border-top: 1px solid $borderColor;
-}
-
-table {
-  border-collapse: collapse;
-  margin: 1rem 0;
-  display: block;
-  overflow-x: auto;
-}
-
-tr {
-  border-top: 1px solid #dfe2e5;
-
-  &:nth-child(2n) {
-    background-color: #f6f8fa;
-  }
-}
-
-th, td {
-  border: 1px solid #dfe2e5;
-  padding: 0.6em 1em;
-}
-
-.theme-container {
-  &.sidebar-open {
-    .sidebar-mask {
-      display: block;
-    }
-  }
-
-  &.no-navbar {
-    .sidebar {
-      top: 0;
-    }
-  }
-}
-
-h2 {
-  border-width: 0 !important;
-}
-
-.code-link {
-  font-weight: bold;
+  border-top: 1px solid $tableBorderColor;
 }
 
 img {
@@ -257,147 +71,64 @@ img {
     max-width: 275px !important;
     margin-left: 0;
   }
-}
 
-.page {
-  & > * {
-    max-width: 1240px !important;
-    margin-left: 0 !important;
+  &.img-license {
+    max-width: 100px;
+    margin-bottom: 15px;
   }
 }
 
-.cta-btn, .repo-link, .nav-link {
-  background-color: $codeBgColor !important;
-  color: white !important;
-  font-weight: bold;
-  padding: 6px 15px;
-  border-radius: 5px;
-
-  svg {
-    display: none !important;
+.navbar {
+  .search-box {
+    input {
+      padding: 0 0 0 35px;
+      border-radius: 5px;
+      color: $darkColor;
+      min-width: 8rem;
+    }
   }
 }
 
-.sidebar, .navbar {
-  .nav-links {
-    .nav-item {
-      a {
-        position: relative;
-        padding-left: 40px !important;
+.content__default {
+  padding: 30px 25px 50px;
 
-        &::before {
-          content: '';
-          height: 20px;
-          width: 20px;
-          position: absolute;
-          left: 10px;
-          top: 7px;
-          background-size: contain;
-        }
+  & > *:first-child {
+    padding-top: 0;
+    margin-top: 0;
+  }
 
-        &:hover {
-          opacity: 1;
-        }
-      }
+  a {
+    text-decoration: underline;
 
-      &:nth-of-type(1) { // Discord
-        a {
-          background-color: #7289da !important;
+    &:hover {
+      text-decoration: none;
+    }
+  }
+}
 
-          &::before {
-            background-image: url('/images/discord-logo.svg');
-          }
-        }
-      }
-
-      &:nth-of-type(2) { // Github
-        a {
-          &::before {
-            background-image: url('/images/github-logo.svg');
-          }
-        }
-      }
-
-      &:nth-of-type(3) { // Patreon
-        a {
-          background-color: #f96753 !important;
-
-          &::before {
-            background-image: url('/images/patreon-logo.png');
-          }
-        }
+// .sidebar-mask {
+// position: fixed;
+// z-index: 9;
+// top: 0;
+// left: 0;
+// width: 100vw;
+// height: 100vh;
+// display: none;
+// background-color: rgba(255, 255, 255, 0.8);
+// }
+// .theme-container {
+// &.sidebar-open {
+// .sidebar-mask {
+// display: block;
+// }
+// }
+// }
+@media (max-width: $MQMobile) {
+  .theme-container {
+    &.sidebar-open {
+      .sidebar {
+        transform: translateX(0);
       }
     }
   }
 }
-
-.page-nav {
-  .next, .prev {
-    a {
-      font-weight: bold;
-
-      &:hover {
-        text-decoration: underline;
-      }
-    }
-  }
-}
-
-a.inline-btn {
-  display: inline-block;
-  position: relative;
-  color: white;
-  font-weight: bold;
-  padding: 0 12px 0 32px;
-  border-radius: 5px;
-  line-height: 1.4rem;
-  font-size: 0.9rem;
-  height: 24px;
-
-  &:link:hover {
-    text-decoration: none;
-  }
-
-  &::before {
-    content: '';
-    height: 14px;
-    width: 14px;
-    position: absolute;
-    left: 10px;
-    top: 5px;
-    background-size: contain;
-  }
-
-  &.paypal {
-    background-color: #007cc4;
-
-    &::before {
-      background-image: url('/images/paypal-logo.svg');
-    }
-  }
-
-  &.patreon {
-    background-color: #f96753;
-
-    &::before {
-      background-image: url('/images/patreon-logo.png');
-    }
-  }
-}
-
-a.paypal-btn {
-}
-
-@media (min-width: ($MQMobile + 1px)) {
-  .theme-container.no-sidebar {
-    .sidebar {
-      display: none;
-    }
-
-    .page {
-      padding-left: 0;
-    }
-  }
-}
-
-@require 'mobile.styl';

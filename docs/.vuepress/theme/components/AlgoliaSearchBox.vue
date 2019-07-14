@@ -59,6 +59,8 @@ export default {
 
 <style lang="stylus">
 .algolia-search-wrapper {
+  flex: 1;
+
   & > span {
     vertical-align: middle;
   }
@@ -71,6 +73,11 @@ export default {
     input {
       box-sizing: border-box;
       height: 100%;
+      // max-width: 40px;
+
+      // &:focus {
+      //   max-width: 100%;
+      // }
     }
 
     .ds-dropdown-menu {
@@ -96,7 +103,7 @@ export default {
       }
 
       .ds-suggestion {
-        border-bottom: 1px solid $borderColor;
+        border-bottom: 1px solid $grayColor;
       }
     }
 
@@ -105,7 +112,7 @@ export default {
     }
 
     .algolia-docsearch-suggestion {
-      border-color: $borderColor;
+      border-color: $grayColor;
       padding: 0;
 
       .algolia-docsearch-suggestion--category-header {
@@ -127,13 +134,13 @@ export default {
       .algolia-docsearch-suggestion--title {
         font-weight: 600;
         margin-bottom: 0;
-        color: $textColor;
+        color: $darkColor;
       }
 
       .algolia-docsearch-suggestion--subcategory-column {
         vertical-align: top;
         padding: 5px 7px 5px 5px;
-        border-color: $borderColor;
+        border-color: $grayColor;
         background: #f1f3f5;
 
         &:after {
@@ -147,7 +154,7 @@ export default {
     }
 
     .algolia-docsearch-footer {
-      border-color: $borderColor;
+      border-color: $grayColor;
     }
 
     .ds-cursor .algolia-docsearch-suggestion--content {

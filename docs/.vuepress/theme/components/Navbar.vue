@@ -9,17 +9,14 @@
         :title="$siteTitle"
       )
     
-    Metadata
+    Metadata.meta-link
 
-    div.links(
-      :style="{'max-width': linksWrapMaxWidth ? linksWrapMaxWidth + 'px': '100%'}")
+    .links
       AlgoliaSearchBox(
         v-if="isAlgoliaSearch"
         :options="algolia")
       SearchBox(v-else-if="$site.themeConfig.search !== false")
       NavLinks.can-hide
-    </div>
-  </header>
 </template>
 
 <script>
@@ -36,30 +33,6 @@ export default {
     NavLinks,
     SearchBox,
     AlgoliaSearchBox,
-  },
-  data() {
-    return {
-      linksWrapMaxWidth: null,
-    };
-  },
-  mounted() {
-    const MOBILE_DESKTOP_BREAKPOINT = 719; // refer to config.styl
-    const NAVBAR_VERTICAL_PADDING =
-      parseInt(css(this.$el, 'paddingLeft')) +
-      parseInt(css(this.$el, 'paddingRight'));
-    const handleLinksWrapWidth = () => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.linksWrapMaxWidth = null;
-      } else {
-        this.linksWrapMaxWidth =
-          this.$el.offsetWidth -
-          NAVBAR_VERTICAL_PADDING -
-          ((this.$refs.versionNumber && this.$refs.versionNumber.offsetWidth) ||
-            0);
-      }
-    };
-    handleLinksWrapWidth();
-    window.addEventListener('resize', handleLinksWrapWidth, false);
   },
   computed: {
     algolia() {
@@ -86,12 +59,14 @@ $navbar-vertical-padding = 0.7rem;
 $navbar-horizontal-padding = 1.5rem;
 
 .navbar {
+  position: fixed;
+  z-index: 20;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: $navbarHeight;
+  background-color: $lightColor;
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
-  line-height: $navbarHeight - 1.4rem;
-
-  a, span, img {
-    display: inline-block;
-  }
 
   .logo {
     height: $navbarHeight - 1.4rem;
@@ -99,20 +74,43 @@ $navbar-horizontal-padding = 1.5rem;
     vertical-align: top;
   }
 
+  .meta-link {
+    display: inline-flex;
+    align-items: center;
+    height: 100%;
+
+    a {
+      color: $grayColor;
+    }
+  }
+
   .links {
-    padding-left: 1.5rem;
-    box-sizing: border-box;
-    background-color: white;
+    padding-left: 25px;
     white-space: nowrap;
-    font-size: 0.9rem;
     position: absolute;
-    right: $navbar-horizontal-padding;
     top: $navbar-vertical-padding;
+    right: 25px;
     display: flex;
+    justify-content: flex-end;
 
     .search-box {
       flex: 0 0 auto;
       vertical-align: top;
+    }
+  }
+  
+  .nav-links {
+    .nav-item, .repo-link {
+      margin-left: 10px !important;
+    }
+  }
+
+  .search-box {
+    margin-right: 0 !important;
+
+    input {
+      // Prevent zoom on mobile
+      font-size: 16px !important;
     }
   }
 }

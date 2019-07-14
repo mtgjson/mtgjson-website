@@ -29,7 +29,7 @@ The decks structure describes the properties and values of a deck reference.
 
 ::: tip The below documents the deck structure for the DeckLists.json
 
-If you are looking for an "Individual" deck structure check [here](../../files/individual-deck)
+If you are looking for an "Individual" deck structure check [here](../../files/individual-deck).
 :::
 
 ### Data Structure

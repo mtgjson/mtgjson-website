@@ -19,6 +19,30 @@ export default {
 
 <style lang="stylus">
 .sidebar {
+  font-size: 16px;
+  background-color: $bgColor;
+  width: $sidebarWidth;
+  position: fixed;
+  z-index: 10;
+  margin: 0;
+  top: $navbarHeight;
+  left: 0;
+  bottom: 0;
+  box-sizing: border-box;
+  border-right: 1px solid $bgColorDark;
+  overflow-y: auto;
+
+  & > .sidebar-links {
+    padding-bottom: 100px !important;
+
+    .is-sub-group {
+      .sidebar-heading {
+        font-weight: bold;
+        font-size: 16px;
+      }
+    }
+  }
+  
   ul {
     padding: 0;
     margin: 0;
@@ -31,7 +55,7 @@ export default {
 
   .nav-links {
     display: none;
-    border-bottom: 1px solid $borderColor;
+    border-bottom: 1px solid $bgColorDark;
     padding: 1.5rem 1.5rem 1rem 1.5rem;
 
     .nav-item, .repo-link {
@@ -65,6 +89,11 @@ export default {
 
 @media (max-width: $MQMobile) {
   .sidebar {
+    // top: 0;
+    // padding-top: $navbarHeight;
+    transform: translateX(-100%);
+    transition: transform 0.2s ease;
+
     .nav-links {
       display: block;
 

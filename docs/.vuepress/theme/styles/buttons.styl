@@ -1,0 +1,111 @@
+.cta-btn, .repo-link, .nav-link {
+  background-color: $textColor !important;
+  color: $bgColor !important;
+  font-weight: bold;
+  padding: 6px 15px;
+  border-radius: 5px;
+
+  svg {
+    display: none !important;
+  }
+}
+
+.inline-btn {
+  display: inline-block;
+  position: relative;
+  color: white;
+  font-weight: bold;
+  padding: 0 12px 0 32px;
+  border-radius: 5px;
+  line-height: 1.4rem;
+  font-size: 0.9rem;
+  height: 24px;
+
+  &:link:hover {
+    text-decoration: none;
+  }
+
+  &::before {
+    content: '';
+    height: 14px;
+    width: 14px;
+    position: absolute;
+    left: 10px;
+    top: 5px;
+    background-size: contain;
+  }
+
+  &.paypal {
+    background-color: #007cc4;
+
+    &::before {
+      background-image: url('/images/paypal-logo.svg');
+    }
+  }
+
+  &.patreon {
+    background-color: #f96753;
+
+    &::before {
+      background-image: url('/images/patreon-logo.png');
+    }
+  }
+}
+
+.sidebar, .navbar {
+  .nav-links {
+    .nav-item {
+      display: inline-flex;
+
+      a {
+        position: relative;
+        font-size: 12px;
+        padding-left: 35px !important;
+        color: $lightColor !important;
+
+        &::before {
+          content: '';
+          height: 18px;
+          width: 18px;
+          position: absolute;
+          left: 10px;
+          top: 9px;
+          background-size: contain;
+        }
+
+        &:hover {
+          opacity: 1;
+        }
+      }
+
+      &:nth-of-type(1) { // Github
+        a {
+          background-color: #24292e !important;
+          &::before {
+            background-image: url('/images/github-logo.svg');
+          }
+        }
+      }
+
+      &:nth-of-type(2) { // Discord
+        a {
+          background-color: #7289da !important;
+
+          &::before {
+            background-image: url('/images/discord-logo.svg');
+          }
+        }
+      }
+
+      &:nth-of-type(3) { // Patreon
+        a {
+          background-color: #f96753 !important;
+
+          &::before {
+            background-image: url('/images/patreon-logo.svg');
+          }
+        }
+      }
+    }
+  }
+}

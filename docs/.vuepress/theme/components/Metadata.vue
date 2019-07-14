@@ -1,13 +1,14 @@
 <template lang="pug">
   div.meta-data(v-if="metaData")
     router-link.version-number(
-      :to="`/changelog`") {{ metaData.version }}
+      :to="`/changelog`") v{{ metaData.version }}
 </template>
 
 <script>
 import axios from 'axios';
 
 export default {
+  name: "Metadata",
   data() {
     return {
       defaultMetaData: {},

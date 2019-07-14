@@ -1,4 +1,7 @@
 .custom-block {
+  border-radius: 5px;
+  border-left: 0.5rem solid transparent;
+
   &, p {
     &::before, &::after {
       content: '';
@@ -20,40 +23,35 @@
   &.tip, &.warning, &.danger {
     padding: 25px;
     border-left-width: 0.5rem;
-    border-left-style: solid;
     margin-bottom: 15px;
   }
 
   &.tip {
-    background-color: #f3f5f7;
     border-color: $accentColor;
+    background-color: $tableColor;
+
+    .custom-block-title {
+      color: $accentColor;
+    }
   }
 
   &.warning {
-    background-color: rgba(255, 229, 100, 0.3);
-    border-color: darken(#ffe564, 35%);
-    color: darken(#ffe564, 70%);
+    background-color: lighten($yellowColor, 60%);
+    border-color: darken($yellowColor, 50%);
+    color: darken($yellowColor, 50%);
 
     .custom-block-title {
-      color: darken(#ffe564, 50%);
-    }
-
-    a {
-      color: $textColor;
+      color: darken($yellowColor, 50%);
     }
   }
 
   &.danger {
-    background-color: #ffe6e6;
+    background-color: lighten(red, 75%);
     border-color: darken(red, 20%);
     color: darken(red, 70%);
 
     .custom-block-title {
       color: darken(red, 40%);
-    }
-
-    a {
-      color: $textColor;
     }
   }
 }

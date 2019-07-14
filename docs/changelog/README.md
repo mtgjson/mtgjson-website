@@ -18,6 +18,8 @@
 
 # Changelog
 
+Below you can find all the changes made on each MTGJSON build release. Versions marked with "rebuild" are built to update prices and often do no have additional changes.
+
 ## 4.4.2 <small>(2019-06-26)</small>
 
 ### Announcements

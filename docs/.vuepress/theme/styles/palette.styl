@@ -1,10 +1,26 @@
-$accentColor = dodgerblue;
-$textColor = #2c3e50;
-$borderColor = #eaecef;
-$codeBgColor = #282c34;
+// Auxillery colors
 $yellowColor = #e7c000;
 $greenColor = seagreen;
+$redColor = #9b2e2e;
+$grayColor = #aaaaaa;
+// Main theme colors
+$lightColor = #ffffff;
+$darkColor = #212e3c;
+$accentColor = #61c6ed;
+// Color Themes
+$bgColor = $darkColor;
+$textColor = $lightColor;
+$bgColorDark = darken($bgColor, 40%);
+$textColorLight = lighten($textColor, 50%);
+// Data Presentation
+$tableColor = darken($bgColor, 15%);
+$tableHeadingColor = darken($bgColor, 30%);
+$tableBorderColor = darken($bgColor, 40%);
+// Code colors
+// Light theme requires different colors completely
+// $codeBgColor = #ffeeec;
+// $codeTextColor = $redColor;
+$codeBgColor = $bgColorDark;
+$codeTextColor = $yellowColor;
+
 $sidebarWidth = 220px;
-$tableCodeBgColor = #ffeeec;
-$tableCodeTextColor = #9b2e2e;
-$tableAltBgColor = #f6f8fa;
