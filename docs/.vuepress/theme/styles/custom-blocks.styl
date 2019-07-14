@@ -7,16 +7,21 @@
     }
   }
 
+  p {
+    &:last-of-type {
+      margin: 0;
+    }
+  }
+
   .custom-block-title {
-    font-weight: 600;
-    margin-bottom: -0.4rem;
+    font-weight: bold;
   }
 
   &.tip, &.warning, &.danger {
-    padding: 0.1rem 1.5rem;
+    padding: 25px;
     border-left-width: 0.5rem;
     border-left-style: solid;
-    margin: 1rem 0;
+    margin-bottom: 15px;
   }
 
   &.tip {
@@ -75,16 +80,6 @@ pre.vue-container {
     em {
       color: #808080;
       font-weight: light;
-    }
-  }
-}
-
-@media (max-width: $MQMobile) {
-  .custom-block {
-    img {
-      display: block;
-      margin: 15px auto 15px 0 !important;
-      float: none !important;
     }
   }
 }

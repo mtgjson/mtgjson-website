@@ -93,21 +93,13 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-h2 {
-  margin-top: 60px;
-}
-
 .supporters-table {
   display: flex;
   flex-wrap: wrap;
   border-right-width: 0;
   border-bottom: 0;
   justify-content: center;
-  margin-top: 30px;
-
-  &:first-of-type {
-    margin-top: 30px;
-  }
+  margin-bottom: 30px;
 
   &.services {
     border-top: 1px solid #eaecef;

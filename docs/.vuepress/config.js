@@ -81,7 +81,10 @@ module.exports = {
           },
         ],
       },
-      '/changelog/',
+      {
+        title: 'Changelog',
+        path: '/changelog/'
+      },
       {
         title: 'License (MIT)',
         path: '/license/'

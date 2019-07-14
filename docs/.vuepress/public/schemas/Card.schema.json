@@ -220,6 +220,24 @@
     "example": "\"Angel of Grace\"",
     "description": "The Magic Card Market card name."
   },
+  "mtgArenaId": {
+    "type": "integer",
+    "example": "67330",
+    "description": "The Magic: The Gathering Arena card ID.",
+    "traits": ["optional"]
+  },
+  "mtgoFoilId": {
+    "type": "integer",
+    "example": "34645",
+    "description": "The Magic: The Gathering Online card foil ID.",
+    "traits": ["optional"]
+  },
+  "mtgoId": {
+    "type": "integer",
+    "example": "34644",
+    "description": "The Magic: The Gathering Online card ID.",
+    "traits": ["optional"]
+  },
   "mtgstocksId": {
     "type": "integer",
     "example": "40272",

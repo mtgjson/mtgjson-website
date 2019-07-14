@@ -22,6 +22,6 @@
 
 Download MTGJSON outputs as individual sets with their associated data.
 
-### Downloads Sets
+### Download Sets
 
 <GenerateSetsDownloads/>
