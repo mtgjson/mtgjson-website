@@ -1,6 +1,5 @@
 ---
 {
-  'schema': 'Changelog',
   'meta': [
     {
       'name': 'description',

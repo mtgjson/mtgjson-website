@@ -116,7 +116,7 @@ kbd {
   background: #eee;
   border: solid 0.15rem #ddd;
   border-bottom: solid 0.25rem #ddd;
-  border-radius: 0.15rem;
+  border-radius: 5px;
   padding: 0 0.15em;
 }
 
@@ -124,8 +124,8 @@ blockquote {
   font-size: 0.9rem;
   color: #999;
   border-left: 0.5rem solid #dfe2e5;
-  margin: 0.5rem 0;
-  padding: 1rem 1.5rem;
+  margin: 0 0 25px;
+  padding: 25px;
 
   & > p {
     margin: 0;
@@ -143,10 +143,16 @@ strong {
 h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1;
+  margin: 0;
 
   &:hover .header-anchor {
     opacity: 1;
   }
+}
+
+h1, h2, h3 {
+  padding-top: 30px;
+  padding-bottom: 20px;
 }
 
 h1 {
@@ -155,12 +161,6 @@ h1 {
 
 h2 {
   font-size: 1.65rem;
-  padding-bottom: 0.3rem;
-  border-bottom: 1px solid $borderColor;
-}
-
-h3 {
-  font-size: 1.35rem;
 }
 
 a {
@@ -189,6 +189,11 @@ a {
 
 p, ul, ol {
   line-height: 1.7;
+}
+
+p {
+  margin: 0;
+  margin-bottom: 15px;
 }
 
 hr {

@@ -20,15 +20,10 @@
 
 # AllCards
 
-Every card as a unique "atomic" object. May also be outputted as every card in a specific set.
+Every card as a unique "atomic" object. May also be outputted as every card in a specific set. Each card's keys are limited to its atomic data only - data that typically will never change with the cards newer printings.
 
 > Data type: `array(anonymous object)`  
-> Property type: `string`      
-
-::: tip AllCards.json is strictly a unique record of every magic card and does not include all finite details about each card.
-
-Each card's keys are limited to its atomic data only - data that typically will never change with the cards newer printings.
-:::
+> Property type: `string`  
 
 ### Data Structure
 

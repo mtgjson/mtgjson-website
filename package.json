@@ -29,7 +29,7 @@
     "jest": "^24.8.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
-    "vuepress": "^1.0.0-alpha.48",
+    "vuepress": "^1.0.2",
     "vuepress-plugin-container": "^2.0.1",
     "vuepress-plugin-feed": "^0.1.6"
   },
