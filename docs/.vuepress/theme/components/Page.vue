@@ -184,6 +184,7 @@ function flattern(items, res) {
 .page {
   padding-bottom: 2rem;
   padding-left: $sidebarWidth;
+  background-color: $bgColorDark;
   display: block;
 
   & > * {

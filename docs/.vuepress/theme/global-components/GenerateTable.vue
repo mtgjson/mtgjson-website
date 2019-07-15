@@ -1,74 +1,88 @@
 <!-- Pug case statements do not work for our hydration purposes -->
 <template lang="pug">
-  .schema
+  .schema(v-if="schema")
+    //- Properties Legend
+    .schema-item.schema-legend(v-if="schemaAttributes.size")
+      h4 Property Attributes
+      p The property attributes you see below earmark possible conditions for a field in this data structure.
+      ol
+        li(v-for="(attribute, key) in schemaAttributes")
+          .attribute(:class="attribute") {{ attribute }}
+          span {{ getTitle(attribute) }}
+
     //- Properties Index
     .schema-item.schema-index(v-if="showIndex")
       h4 Property Index
-      ol(:class="{hide: willShowMore}")
+      p A list of all available properties.
+      ol(:class="{hide: willShowMore, wontHide: !showMore}")
         li(v-for="(data, name) in filteredSchema")
           p
             router-link(:to="'#' + name") {{ name }}
       .show-more(v-if="showMore" @click="toggleIndex") {{ (willShowMore ? 'Show More' : 'Show Less') }}
 
-    //- Properties Legend
-    .schema-item.schema-legend(v-if="schemaTraits.size")
-      h4 Property Traits
-      p The property trait tags you see below earmark possible conditions for a field in this data structure.
-      .schema-legend--item(v-for="(trait, key) in schemaTraits")
-        .trait(:class="trait") {{ prettyTrait(trait)}}
-        span {{generateTitle(trait)}}
-
     //- Properties Table
     .schema-item.schema-data
       h4 Property Information
       .schema-data--table(v-for="(data, name) in filteredSchema" v-if="name !== '...'")
-        //- Field Name
-        .schema-data--table-item.heading
-          p Name
-        .schema-data--table-item.name
-          h6(:id="name") {{ name }}
-            a(:href="`#${name}`" aria-hidden="true" class="header-anchor") #
+        //- Property Name
+        .schema-data--table-item
+          .heading
+            p Name
+          .name
+            h6(:id="name") {{ name }}
+              a(:href="`#${name}`" aria-hidden="true" class="header-anchor") #
 
-        //- Field Type
-        .schema-data--table-item.heading
-          p Type
-        .schema-data--table-item.type
-          p
-            em(v-html="data.type")
+        //- Property Type
+        .schema-data--table-item
+          .heading
+            p Type
+          .type
+            p
+              em {{ data.type }}
 
-        //- Field Traits
-        .schema-data--table-item.heading(v-if="data.traits && data.traits.length")
-          p Traits
-        .schema-data--table-item.traits(v-if="data.traits && data.traits.length")
-          .trait(
-            v-for="(trait, key) in data.traits"
-            :class="trait" v-html="prettyTrait(trait)"
-            :title="generateTitle(trait)")
+        //- Property Introduction
+        .schema-data--table-item(v-if="data.introduced")
+          .heading
+            p Introduced
+          .introduced
+            p
+              em {{ data.introduced }}
 
-        //- Field Example
-        .schema-data--table-item.heading
-          p Example
-        .schema-data--table-item.example
-          p
-            pre(v-html="data.example")
+        //- Property Attributes
+        .schema-data--table-item(v-if="data.attributes")
+          .heading
+            p Attributes
+          .attributes
+            .attribute(
+              v-for="(attribute, key) in data.attributes"
+              :class="attribute"
+              :title="getTitle(attribute)") {{ attribute }}
 
-        //- Field Description
-        .schema-data--table-item.heading
-          p Description
-        .schema-data--table-item.description
-          p(v-html="data.description")
+        //- Property Example
+        .schema-data--table-item
+          .heading
+            p Example
+          .example
+            p
+              pre(v-html="data.example")
+
+        //- Property Description
+        .schema-data--table-item
+          .heading
+            p Description
+          .description
+            p(v-html="data.description")
           
       .schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
 </template>
 
 <script>
-import landcycle from '../../scripts/Landcycle';
 export default {
   name: 'GenerateTable',
   data() {
     return {
-      schema: [],
-      traits: [],
+      schema: undefined,
+      attributes: undefined,
       showMore: true,
       willShowMore: true,
     };
@@ -78,23 +92,23 @@ export default {
       this.$page.frontmatter.schema
     }.schema.json`);
 
-    // Store the schema traits for properties
-    let traits = [];
+    // Store the schema attributes for properties
+    let attributes = [];
     for (let name in schema) {
       const field = schema[name];
 
-      if (field.traits) {
-        traits = traits.concat(field.traits);
+      if (field.attributes) {
+        attributes = attributes.concat(field.attributes);
       }
     }
 
     this.showMore = Object.keys(schema).length > 4;
-    this.traits = new Set(traits);
+    this.attributes = new Set(attributes);
     this.schema = new this.$landcycle(schema).schema;
   },
   computed: {
-    schemaTraits() {
-      return new Set(this.traits);
+    schemaAttributes() {
+      return new Set(Array.from(this.attributes).sort());
     },
     showIndex() {
       return !Object.keys(this.schema).includes('...');
@@ -106,16 +120,16 @@ export default {
       if (this.$page.frontmatter.title === 'AllCards') {
         schema = {};
 
-        for (let trait of Array.from(this.traits)) {
-          if (trait !== 'atomic' && trait !== 'optional') {
-            this.traits.delete(trait);
+        for (let attribute of Array.from(this.attributes)) {
+          if (attribute !== 'atomic' && attribute !== 'optional') {
+            this.attributes.delete(attribute);
           }
         }
 
         for (let name in this.schema) {
           const field = this.schema[name];
 
-          if (field.traits && field.traits.includes('atomic')) {
+          if (field.attributes && field.attributes.includes('atomic')) {
             schema[name] = field;
           }
         }
@@ -128,21 +142,20 @@ export default {
     toggleIndex() {
       this.willShowMore = !this.willShowMore;
     },
-    prettyTrait(trait) {
-      return trait.replace('-', ' ');
-    },
-    generateTitle(title) {
-      switch (title) {
+    getTitle(attribute) {
+      switch (attribute) {
         case 'atomic':
-          return 'Field available in AllCards JSON';
+          return 'Property available in AllCards JSON';
         case 'optional':
-          return 'Field omitted when value returns falsey or expected value';
-        case 'decks-only':
-          return 'Field only available in an Individual Deck';
+          return 'Property omitted when value returns falsey or expected value';
+        case 'deprecated':
+          return 'Property will be removed in a future major or minor version release';
+        case 'decks':
+          return 'Property only available in an Individual Deck JSON';
         case 'nullable':
-          return 'Field may return a null value';
+          return 'Property may return a null value';
         case 'stale':
-          return 'Field may return an undocumented value';
+          return 'Property may return an undocumented value';
         default:
           break;
       }
@@ -192,7 +205,7 @@ pre {
   line-height: 1.7em;
 }
 
-.trait {
+.attribute {
   border-radius: 5px;
   margin-right: 5px;
   font-size: 10px;
@@ -204,19 +217,23 @@ pre {
   color: $bgColor;
 
   &.atomic {
-    background-color: lighten($accentColor, 70%);
+    background-color: lighten($accentColor, 25%);
   }
 
   &.optional {
-    background-color: lighten($yellowColor, 70%);
+    background-color: lighten($yellowColor, 50%);
   }
 
-  &.decks-only {
-    background-color: lighten($greenColor, 70%);
+  &.deprecated {
+    background-color: lighten(red, 30%);
+  }
+
+  &.decks {
+    background-color: lighten($greenColor, 50%);
   }
 
   &.nullable {
-    background-color: lighten(red, 70%);
+    background-color: lighten(red, 60%);
   }
 
   &.stale {
@@ -236,6 +253,7 @@ pre {
       position: relative;
       overflow: hidden;
       padding-bottom: 30px;
+      border-bottom: 1px solid $bgColor;
 
       &::after {
         transform: rotateX(180deg);
@@ -254,6 +272,19 @@ pre {
         max-height: 90px;
         padding-bottom: 0;
       }
+
+      &.wontHide {
+        max-height: 100%;
+        border-width: 0;
+
+        &::after {
+          box-shadow: none;
+        }
+      }
+    }
+
+    small {
+      color: $grayColor;
     }
 
     .show-more {
@@ -271,12 +302,11 @@ pre {
       margin-bottom: 10px;
     }
 
-    &--item {
-      * {
-        display: inline;
-      }
+    ol {
+      padding-left: 0;
 
-      .trait {
+      li {
+        display: block;
         cursor: initial;
       }
 
@@ -289,12 +319,9 @@ pre {
 
   &-data {
     &--table, &--table-continued {
-      background-color: $tableColor;
       position: relative;
-      display: grid;
-      grid-template-columns: minmax(min-content, 150px) 1fr;
       border-radius: 5px;
-      margin-bottom: 20px;
+      margin-bottom: 25px;
       margin-top: 10px;
       overflow: hidden;
       box-sizing: border-box;
@@ -321,17 +348,28 @@ pre {
       }
 
       &-item {
-        padding: 7px 13px;
+        display: grid;
+        grid-template-columns: minmax(min-content, 150px) 1fr;
+        background-color: $tableColor;
         border-bottom: 1px solid $tableBorderColor;
-        grid-column: span 1;
 
-        &.heading {
+        .heading {
           grid-column: span 1;
           text-align: left;
           text-transform: capitalize;
           font-weight: bold;
           background-color: $tableHeadingColor;
           border-right: 1px solid $tableBorderColor;
+          padding: 7px 13px;
+          display: flex;
+          align-items: center;
+
+          & + * {
+            padding: 7px 13px;
+            display: flex;
+            align-items: center;
+            grid-column: span 1;
+          }
         }
       }
     }
@@ -342,8 +380,9 @@ pre {
   .schema {
     &-data {
       &--table {
-        grid-template-columns: 1fr;
-        margin-bottom: 30px;
+        &-item {
+          grid-template-columns: 1fr;
+        }
       }
     }
   }

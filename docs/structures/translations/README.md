@@ -23,7 +23,6 @@
 > Parent structure: [set](../set)  
 > Parent property: `translations`  
 > Parent property type: `object(string: string)`  
-> Property type: `string`  
 
 ### Data Structure
 

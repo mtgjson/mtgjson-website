@@ -28,7 +28,7 @@
     "type": "string",
     "example": "\"2018-07-13\"",
     "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set. Returns {{code:null}} if the set was not formally released as a product.",
-    "traits": ["nullable"]
+    "attributes": ["nullable"]
   },
   "type": {
     "type": "string",

@@ -44,7 +44,6 @@ export default {
   }
   
   ul {
-    padding: 0;
     margin: 0;
     list-style-type: none;
   }
@@ -75,9 +74,10 @@ export default {
   & > .sidebar-links {
     padding: 1.5rem 0;
 
+    // First link as a header
     & > li > a.sidebar-link {
-      font-size: 1.1em;
-      line-height: 1.7;
+      font-size: 1em;
+      line-height: 2;
       font-weight: bold;
     }
 
@@ -89,8 +89,6 @@ export default {
 
 @media (max-width: $MQMobile) {
   .sidebar {
-    // top: 0;
-    // padding-top: $navbarHeight;
     transform: translateX(-100%);
     transition: transform 0.2s ease;
 

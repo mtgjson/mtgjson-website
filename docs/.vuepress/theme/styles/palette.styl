@@ -7,20 +7,21 @@ $grayColor = #aaaaaa;
 $lightColor = #ffffff;
 $darkColor = #212e3c;
 $accentColor = #61c6ed;
+$spoilerColor = lighten($yellowColor, 50%);
 // Color Themes
 $bgColor = $darkColor;
 $textColor = $lightColor;
 $bgColorDark = darken($bgColor, 40%);
 $textColorLight = lighten($textColor, 50%);
 // Data Presentation
-$tableColor = darken($bgColor, 15%);
-$tableHeadingColor = darken($bgColor, 30%);
+$tableColor = $bgColor;
+$tableHeadingColor = darken($bgColor, 20%);
 $tableBorderColor = darken($bgColor, 40%);
 // Code colors
 // Light theme requires different colors completely
 // $codeBgColor = #ffeeec;
 // $codeTextColor = $redColor;
-$codeBgColor = $bgColorDark;
+$codeBgColor = #2d2d2d;
 $codeTextColor = $yellowColor;
 
-$sidebarWidth = 220px;
+$sidebarWidth = 250px;

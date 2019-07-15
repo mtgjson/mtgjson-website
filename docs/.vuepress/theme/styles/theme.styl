@@ -7,8 +7,7 @@
 
 html, body {
   min-width: 320px;
-  // issue/84
-  scroll-behavior: smooth;
+  height: 100%;
 }
 
 html {
@@ -20,26 +19,22 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  background-color: $bgColor;
+  background-color: $bgColorDark;
   color: $textColor;
 }
 
 ul, ol {
-  padding-left: 1.2em;
+  padding-left: 25px;
 }
 
 a {
   &.header-anchor {
     font-size: 0.85em;
     float: left;
-    margin-left: -0.87em;
-    padding-right: 0.23em;
-    margin-top: 0.125em;
+    margin-left: -0.75em;
+    margin-top: 0.1em;
+    text-decoration: none !important;
     opacity: 0;
-
-    &:hover {
-      text-decoration: none;
-    }
   }
 
   &, &:link {
@@ -49,6 +44,10 @@ a {
     &:hover {
       transition: 0.25s color;
     }
+  }
+
+  svg {
+    display: none !important;
   }
 }
 
@@ -106,23 +105,27 @@ img {
   }
 }
 
-// .sidebar-mask {
-// position: fixed;
-// z-index: 9;
-// top: 0;
-// left: 0;
-// width: 100vw;
-// height: 100vh;
-// display: none;
-// background-color: rgba(255, 255, 255, 0.8);
-// }
-// .theme-container {
-// &.sidebar-open {
-// .sidebar-mask {
-// display: block;
-// }
-// }
-// }
+.sidebar-group-items, .sidebar-sub-headers {
+  .sidebar-link {
+    &.active {
+      position: relative;
+      font-weight: bold;
+      color: $accentColor;
+
+      &::after {
+        content: '';
+        width: 5px;
+        border-radius: 5px 0 0 5px;
+        background-color: $accentColor;
+        height: 100%;
+        position: absolute;
+        right: 0;
+        top: 0;
+      }
+    }
+  }
+}
+
 @media (max-width: $MQMobile) {
   .theme-container {
     &.sidebar-open {

@@ -13,43 +13,43 @@
     "type": "array(string)",
     "example": "[\"B\"]",
     "description": "List of all colors in card’s mana cost, rules text and any color indicator.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "colorIndicator": {
     "type": "array(string)",
     "example": "[\"B\",\"R\"]",
     "description": "List of all colors in card's color indicator (The symbol showing the colors of the card).",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "colors": {
     "type": "array(string)",
     "example": "[\"B\",\"R\"]",
     "description": "List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "convertedManaCost": {
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the card.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "count": {
     "type": "integer",
     "example": "2",
     "description": "How many of this card exists in a deck.",
-    "traits": ["decks-only"]
+    "attributes": ["decks"]
   },
   "duelDeck": {
     "type": "string",
     "example": "\"a\"",
     "description": "If the card is in a duel deck product, can be {{code:a}}(left) or {{code:b}}(right).",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the face of either half or part of the card.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "flavorText": {
     "type": "string",
@@ -60,7 +60,7 @@
     "type": "array(object)",
     "example": "{{link:foreign-data}}",
     "description": "See the {{link:foreign-data}} structure.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "frameEffect": {
     "type": "string",
@@ -76,134 +76,134 @@
     "type": "string",
     "example": "\"+0\"",
     "description": "Starting maximum hand size total modifier. A plus or minus character preceeds an integer.",
-    "traits": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"]
   },
   "hasFoil": {
     "type": "boolean",
     "example": "true",
     "description": "Can the card be found in foil?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "hasNonFoil": {
     "type": "boolean",
     "example": "true",
     "description": "Can the card be found in non-foil?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isAlternative": {
     "type": "boolean",
     "example": "true",
     "description": "The card has some kind of alternative variation to its printed counterpart.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
 
   "isArena": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card available in Magic: The Gathering Arena?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isFullArt": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card full artwork?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isMtgo": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card available in Magic: The Gathering Online?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isOnlineOnly": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card only available online?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isOversized": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card oversized?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isPaper": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card available in print?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isPromo": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card a promotional print?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isReprint": {
     "type": "boolean",
     "example": "true",
     "description": "Has the card been reprinted?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isReserved": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card on the MTG Reserved List?",
-    "traits": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"]
   },
   "isStarter": {
     "type": "boolean",
     "example": "true",
     "description": "Is this card found in a booster pack?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isStorySpotlight": {
     "type": "boolean",
     "example": "true",
     "description": "Does the card have a story spotlight?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isTextless": {
     "type": "boolean",
     "example": "true",
     "description": "Does the card normally have a text box, but doesn't on this card?",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "isTimeshifted": {
     "type": "boolean",
     "example": "true",
     "description": "Is this card \"timeshifted\"? (A feature from Time Spiral block)",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "layout": {
     "type": "string",
     "example": "\"normal\"",
     "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}} or {{code:host}}.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "legalities": {
     "type": "object",
     "example": "{{link:legalities}}",
     "description": "See the {{link:legalities}} structure.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "life": {
     "type": "string",
     "example": "\"+0\"",
     "description": "Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "loyalty": {
     "type": "string",
     "example": "\"7\"",
     "description": "Planeswalker loyalty value.",
-    "traits": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"]
   },
   "manaCost": {
     "type": "string",
     "example": "\"{3}{W}{W}\"",
     "description": "Mana cost of the card.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "mcmId": {
     "type": "integer",
@@ -224,25 +224,25 @@
     "type": "integer",
     "example": "67330",
     "description": "The Magic: The Gathering Arena card ID.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "mtgoFoilId": {
     "type": "integer",
     "example": "34645",
     "description": "The Magic: The Gathering Online card foil ID.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "mtgoId": {
     "type": "integer",
     "example": "34644",
     "description": "The Magic: The Gathering Online card ID.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "mtgstocksId": {
     "type": "integer",
     "example": "40272",
     "description": "mtgstocks.com card ID.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "multiverseId": {
     "type": "integer",
@@ -253,13 +253,13 @@
     "type": "string",
     "example": "\"Angel of Grace\"",
     "description": "Names of each face on the card. Meld cards are listed in the order of {{code:CardA}}, {{code:Meld}}, {{code:CardB}}.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "names": {
     "type": "array(string)",
     "example": "[\"Nicol Bolas, the Ravager\",\"Nicol Bolas, the Arisen\"]",
     "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "number": {
     "type": "string",
@@ -280,7 +280,7 @@
     "type": "string",
     "example": "\"5\"",
     "description": "Power of the creature.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "prices": {
     "type": "object(string: object)",
@@ -291,13 +291,13 @@
     "type": "array(string)",
     "example": "[\"M19\",\"PM19\"]",
     "description": "List of sets the card was printed in, in uppercase.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "purchaseUrls": {
     "type": "array(string: string)",
     "example": "{{link:purchase-urls}}",
     "description": "See the {{link:purchase-urls}} structure.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "rarity": {
     "type": "string",
@@ -308,7 +308,7 @@
     "type": "array(object)",
     "example": "{{link:rulings}}",
     "description": "See the {{link:rulings}} structure.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "scryfallId": {
     "type": "string",
@@ -319,7 +319,7 @@
     "type": "string",
     "example": "\"9b7870df-6bca-499f-bc6e-e57f2ddfe640\"",
     "description": "A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc).",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "scryfallIllustrationId": {
     "type": "string",
@@ -330,19 +330,19 @@
     "type": "string",
     "example": "\"a\"",
     "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}.",
-    "traits": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"]
   },
   "subtypes": {
     "type": "array(string)",
     "example": "[\"Angel\"]",
     "description": "List of card subtypes found after em-dash.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "supertypes": {
     "type": "array(string)",
     "example": "[\"Legendary\"]",
     "description": "List of card supertypes found before em-dash.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "tcgplayerProductId": {
     "type": "integer",
@@ -352,37 +352,38 @@
   "tcgplayerPurchaseUrl": {
     "type": "string",
     "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
-    "description": "URL which redirects to TCGPlayer website’s card page."
+    "description": "URL which redirects to TCGPlayer website’s card page.",
+    "attributes": ["deprecated"]
   },
   "text": {
     "type": "string",
     "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
     "description": "Rules text of the card.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "toughness": {
     "type": "string",
     "example": "\"4\"",
     "description": "Toughness of the card.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "type": {
     "type": "string",
     "example": "\"Legendary Creature — Angel\"",
     "description": "Type of the card. Includes any supertypes and subtypes.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "types": {
     "type": "array(string)",
     "example": "[\"Lengendary\", \"Creature\", \"Angel\"]",
     "description": "List of all types of the card.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "uuid": {
     "type": "string",
     "example": "\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"",
     "description": "A universal unique ID (v5) generated by MTGJSON. Each entry is unique.",
-    "traits": ["atomic"]
+    "attributes": ["atomic"]
   },
   "variations": {
     "type": "array(string)",
@@ -393,6 +394,6 @@
     "type": "string",
     "example": "\"wotc\"",
     "description": "Name of the watermark on the card.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   }
 }

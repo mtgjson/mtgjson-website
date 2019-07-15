@@ -2,7 +2,7 @@
  * In order to have each documentation page to have its own meta data
  * and URI we break them out in to individual routes.
  */
-fs = require('fs');
+const fs = require('fs');
 
 module.exports = route => {
   const files = fs.readdirSync(`./docs${route}`);

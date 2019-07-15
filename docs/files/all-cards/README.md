@@ -23,7 +23,6 @@
 Every card as a unique "atomic" object. May also be outputted as every card in a specific set. Each card's keys are limited to its atomic data only - data that typically will never change with the cards newer printings.
 
 > Data type: `array(anonymous object)`  
-> Property type: `string`  
 
 ### Data Structure
 

@@ -23,7 +23,6 @@
 All sets, restricted to sets legal in Vintage.
 
 > Data type: `anonymous object(string: object)`  
-> Property type: `string`  
 
 ### Data Structure
 

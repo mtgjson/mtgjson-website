@@ -65,7 +65,8 @@ $navbar-horizontal-padding = 1.5rem;
   left: 0;
   right: 0;
   height: $navbarHeight;
-  background-color: $lightColor;
+  background-color: $bgColor;
+  border-bottom: 1px solid $bgColorDark;
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
 
   .logo {

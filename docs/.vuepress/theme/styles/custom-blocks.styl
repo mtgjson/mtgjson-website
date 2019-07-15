@@ -1,6 +1,11 @@
+blockquote,
 .custom-block {
+  font-size: 14px;
   border-radius: 5px;
-  border-left: 0.5rem solid transparent;
+  border-left: 10px solid transparent;
+  background-color: $bgColor;
+  padding: 25px;
+  margin-bottom: 15px;
 
   &, p {
     &::before, &::after {
@@ -10,25 +15,19 @@
     }
   }
 
-  p {
+  * {
     &:last-of-type {
-      margin: 0;
+      margin-bottom: 0;
     }
   }
 
   .custom-block-title {
     font-weight: bold;
-  }
-
-  &.tip, &.warning, &.danger {
-    padding: 25px;
-    border-left-width: 0.5rem;
-    margin-bottom: 15px;
+    font-size: 16px;
   }
 
   &.tip {
     border-color: $accentColor;
-    background-color: $tableColor;
 
     .custom-block-title {
       color: $accentColor;
@@ -36,24 +35,17 @@
   }
 
   &.warning {
-    background-color: lighten($yellowColor, 60%);
-    border-color: darken($yellowColor, 50%);
-    color: darken($yellowColor, 50%);
+    border-color: $yellowColor;
 
     .custom-block-title {
-      color: darken($yellowColor, 50%);
+      color: $yellowColor;
     }
   }
+}
 
-  &.danger {
-    background-color: lighten(red, 75%);
-    border-color: darken(red, 20%);
-    color: darken(red, 70%);
-
-    .custom-block-title {
-      color: darken(red, 40%);
-    }
-  }
+blockquote {
+  color: $grayColor;
+  border-left: 10px solid $grayColor;
 }
 
 pre.vue-container {

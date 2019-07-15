@@ -3,54 +3,54 @@
     "type": "string",
     "example": "Legal",
     "description": "Card is legal in the Commander play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "duel": {
     "type": "string",
     "example": "Banned",
     "description": "Card is legal in the Duel Commander play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "frontier": {
     "type": "string",
     "example": "",
     "description": "Omitted. Card is not legal in the Frontier play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "legacy": {
     "type": "string",
     "example": "Banned",
     "description": "Card is legal in the Legacy play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "modern": {
     "type": "string",
     "example": "",
     "description": "Omitted. Card is not legal in the Modern play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "pauper": {
     "type": "string",
     "example": "",
     "description": "Omitted. Card is not legal in the Pauper play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "penny": {
     "type": "string",
     "example": "",
     "description": "Omitted. Card is not legal in the Penny play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "standard": {
     "type": "string",
     "example": "",
     "description": "Omitted. Card is not legal in the Standard play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "vintage": {
     "type": "string",
     "example": "Restricted",
     "description": "Card is legal in the Vintage play format.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   }
 }
