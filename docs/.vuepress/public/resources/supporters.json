@@ -151,6 +151,11 @@
       "link": "https://magicthegathering.io"
     },
     {
+      "name": "MTGO Wiki Price",
+      "image": "mtgowikiprice.png",
+      "link": "http://mtgowikiprice.com"
+    },
+    {
       "name": "MTG Set Builder",
       "image": "mtgsetbuilder.png",
       "link": "http://mtgsetbuilder.com"
