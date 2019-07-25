@@ -1,51 +1,47 @@
 <template lang="pug">
-  div.meta-data(v-if="metaData")
+  div.version(v-if="version")
     router-link.version-number(
-      :to="`/changelog`") v{{ metaData.version }}
+      :to="`/changelog`") Build: {{ version.version }}
 </template>
 
 <script>
 import axios from 'axios';
 
 export default {
-  name: "Metadata",
+  name: "Version",
   data() {
     return {
-      defaultMetaData: {},
+      defaultVersion: {},
     };
   },
   mounted() {
     axios
       .get('https://mtgjson.com/json/version.json')
       .then(response => {
-        this.defaultMetaData = response.data;
+        this.defaultVersion = response.data;
       })
       .catch(err => {
         console.error(err);
       });
   },
   computed: {
-    metaData() {
-      return this.defaultMetaData;
+    version() {
+      return this.defaultVersion;
     },
   },
 };
 </script>
 
-<style lang="stylus">
-.meta-data {
+<style lang="stylus" scoped>
+.version {
   display: inline-block;
-  margin-left: 0.8rem;
-  font-size: 12px;
   color: $textColor;
   position: relative;
 
-  .version-number {
-    font-weight: 600;
-  }
-
-  .release-date {
-    font-weight: normal;
+  &-number {
+    font-size: 12px;
+    font-weight: bold;
+    color: $grayColor;
   }
 }
 </style>

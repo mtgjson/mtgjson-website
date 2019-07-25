@@ -1,55 +1,66 @@
 <template lang="pug">
   .supporters(v-if="supporters")
-    div(v-if="patrons")
-      // h2.patreon-headline Our Patreon Supporters
+    .supporters-wrap(v-if="patrons")
+      h3 Our Patreon Supporters
+      p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project.
+      small(v-html="projectMsg")
       // Tier 3
-      .supporters-table(v-if="mythic.length > 0")
-        .supporter(v-for="(supporter, key) in mythic" :data-tier-size="3")
+      .supporters-grid(v-if="mythic.length > 0" :data-tier="3")
+        blockquote.supporter(v-for="(supporter, key) in mythic")
           a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
           span(v-else)
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
           p(v-if="supporter.blurb") {{ supporter.blurb }}
-          a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="3" v-html="formatTime(supporter.since)")
+          .tier(v-html="formatTime(supporter.since)")
 
       // Tier 2
-      .supporters-table(v-if="rare.length > 0")
-        .supporter(v-for="(supporter, key) in rare" :data-tier-size="2")
+      .supporters-grid(v-if="rare.length > 0" :data-tier="2")
+        blockquote.supporter(v-for="(supporter, key) in rare")
           a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
           span(v-else)
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
-          a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="2" v-html="formatTime(supporter.since)")
-
+          .tier(v-html="formatTime(supporter.since)")
+        
       // Tier 1
-      .supporters-table(v-if="uncommon.length > 0")
-        .supporter(v-for="(supporter, key) in uncommon" :data-tier-size="1")
+      .supporters-grid(v-if="uncommon.length > 0" :data-tier="1")
+        blockquote.supporter(v-for="(supporter, key) in uncommon")
           a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
           span(v-else)
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
-          a.tier(href="https://www.patreon.com/MTGJSON" :data-tier="1" v-html="formatTime(supporter.since)")
+          .tier(v-html="formatTime(supporter.since)")
 
     // Not Patrons but services that use MTGJSON
-    div(v-if="services")
-      h2.patreon-headline Others Powered by MTGJSON
-      .supporters-table.services
-        .supporter.service(v-for="(supporter, key) in services")
+    .supporters-wrap(v-if="services")
+      h3 Others Powered by MTGJSON
+      p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here.
+      small(v-html="projectMsg")
+      .supporters-grid.services
+        blockquote.supporter.service(v-for="(supporter, key) in services")
           a.supporter-link(:href="supporter.link" target="_blank")
             .img-wrap(v-if="supporter.image")
-              img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
+              .img-wrap--container
+                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
             h6 {{ supporter.name }}
 
 </template>
@@ -60,6 +71,7 @@ export default {
   data() {
     return {
       supporters: require('../../public/resources/supporters.json'),
+      projectMsg: 'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" target="_blank">Discord</a> and let us know. We\'ll be happy to add it to this list.'
     };
   },
   computed: {
@@ -100,225 +112,175 @@ export default {
 </script>
 
 <style lang="stylus" scoped>
-.supporters-table {
-  display: flex;
-  flex-wrap: wrap;
-  border-right-width: 0;
-  border-bottom: 0;
-  justify-content: center;
-  margin-bottom: 30px;
+.supporters {
+  &-wrap {
+    justify-content: center;
 
-  &.services {
-    border-top: 1px solid $tableBorderColor;
-
-    .supporter {
-      padding-bottom: 30px;
-      flex: 0 0 25%;
+    & > small {
+      display: block;
+      margin-bottom: 25px;
+      color: $grayColor;
     }
   }
 
-  .supporter {
-    display: flex;
-    flex: 0 0 33.333%;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    padding: 30px 15px 70px;
-    text-align: center;
-    box-sizing: border-box;
-    background-color: $tableColor;
-    border: 1px solid $tableBorderColor;
-    // Prevent double borders on boxes
-    margin-top: -1px;
-    margin-left: -1px;
-    position: relative;
-    margin-top: -1px;
-    margin-left: -1px;
+  &-grid {
+    display: grid;
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    grid-gap: 25px;
+    margin-bottom: 25px;
 
-    .img-wrap {
-      height: 50px;
-      max-width: 100%;
-      margin: 0 auto 15px;
-      display: inline-flex;
+    .supporter {
+      display: flex;
+      flex-wrap: wrap;
       justify-content: center;
       align-items: center;
-
-      img {
-        width: auto;
-        height: auto;
-        max-height: 50px;
-        max-width: 100px;
-      }
-    }
-
-
-    .supporter-link {
       text-align: center;
-      flex: 0 0 100%;
-      height: 100%;
+      margin-bottom: 0;
+      background-color: $tableColor;
+      position: relative;
 
-      &:link {
-        &:hover {
-          h6 {
-            text-decoration: underline;
+      .img-wrap {
+        display: inline-flex;
+        justify-content: center;
+        align-items: center;
+        flex: 0 0 100%;
+        margin-bottom: 15px;
+
+        &--container {
+          background-color: $lightColor;
+          border-radius: 50%;
+          overflow: hidden;
+          width: 90px;
+          height: 90px;
+          padding: 15px;
+          display: flex;
+          align-items: center;
+
+          img {
+            width: 100%;
+            height: auto;
           }
         }
       }
-    }
 
-    span {
-      img {
-        border-radius: 50%;
-      }
-    }
-
-    h6 {
-      flex: 0 0 100%;
-      font-size: 14px;
-      font-weight: bold;
-      line-height: 1.2em;
-      display: block;
-      margin: 0 auto;
-    }
-
-    p {
-      flex: 0 0 100%;
-      margin: 0 auto 15px;
-      font-size: 14px;
-      line-height: 1.2em;
-    }
-
-    h6, p {
-      word-wrap: anywhere;
-    }
-
-    &[data-tier-size='0'] {
-      flex: 0 0 100%;
-
-      &:hover {
-        background: none;
-
-        h6 {
-          text-decoration: none;
-        }
-      }
-    }
-
-    &[data-tier-size='3'] {
-      flex: 0 0 50%;
-
-      .img-wrap {
-        height: 100px;
-
-        img {
-          max-height: 100px;
-        }
-      }
-    }
-
-    .tier {
-      text-align: center;
-      flex: 0 0 100%;
-      margin: 0 auto;
-      display: none;
-      position: absolute;
-      left: 15px;
-      right: 15px;
-      bottom: 15px;
-      font-size: 14px;
-      line-height: 1.2em;
-      padding: 5px;
-
-      &:link, &:visited, &:active, &:focus {
-        color: $darkColor;
-        text-decoration: none;
-      }
-
-      &[data-tier] {
+      h6 {
+        flex: 0 0 100%;
+        font-size: 14px;
+        color: $textColor;
         display: block;
-        padding-right: 10px;
-        background: linear-gradient(135deg, #d8d8d8 0%, #efeded 100%);
+        margin: 0 auto;
+      }
 
-        &:only-of-type {
-          flex: 1;
+      a {
+        h6 {
+          color: $accentColor;
         }
+      }
+
+      p {
+        flex: 0 0 100%;
+        margin: 0 auto 15px;
+        font-size: 14px;
+        line-height: 1.2em;
+      }
+
+      h6, p {
+        word-wrap: anywhere;
+      }
+
+      .tier {
+        text-align: center;
+        flex: 0 0 100%;
+        margin: 15px auto 0;
+        font-size: 14px;
+        line-height: 1.2em;
+        padding: 5px;
+        color: $textColor;
 
         &::before {
-          padding: 0 10px;
+          padding-right: 5px;
           font-weight: bold;
           display: inline-block;
         }
-
-        &[data-tier='0'] {
-          &::before {
-            content: 'Uncommon\00a0Supporters';
-          }
-        }
-
-        &[data-tier='1'] {
-          &::before {
-            content: 'Uncommon\00a0Supporter';
-          }
-        }
-
-        &[data-tier='2'] {
-          background: linear-gradient(135deg, #f9d861 0%, #e8d599 100%);
-
-          &::before {
-            content: 'Rare\00a0Supporter';
-          }
-        }
-
-        &[data-tier='3'] {
-          background: linear-gradient(135deg, #ef6c2f 0%, #f4a850 100%);
-
-          &:nth-of-type(odd) {
-            border-left: 0;
-          }
-
-          &::before {
-            content: 'Mythic\00a0Supporter';
-          }
-        }
       }
     }
-  }
-}
 
-@media screen and (max-width: 960px) {
-  .supporters-table {
-    &:first-of-type {
+    &[data-tier='3'] {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+
       .supporter {
-        flex: 0 0 100% !important;
+        border-left-color: #ef6c2f;
+
+        .img-wrap {
+          &--container {
+            height: 125px;
+            width: 125px;
+            padding: 20px;
+          }
+        }
+
+        .tier {
+          color: #ef6c2f;
+
+          &::before {
+            content: 'Mythic Supporter';
+          }
+        }
       }
     }
 
-    .supporter {
-      flex: 0 0 50% !important;
+    &[data-tier='2'] {
+      .supporter {
+        border-left-color: #f9d861;
 
-      &.service {
-        flex: 0 0 50% !important;
+        .tier {
+          color: #f9d861;
+
+          &::before {
+            content: 'Rare Supporter';
+          }
+        }
+      }
+    }
+
+    &[data-tier='2'], &[data-tier='1'] {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+
+      .supporter {
+        .img-wrap {
+          &--container {
+            height: 100px;
+            width: 100px;
+          }
+        }
+      }
+    }
+
+    &[data-tier='1'] {
+      .supporter {
+        .tier {
+          &::before {
+            content: 'Uncommon Supporter';
+          }
+        }
       }
     }
   }
 }
 
-@media screen and (max-width: 570px) {
-  .supporters-table {
-    .supporter {
-      flex: 0 0 100% !important;
+@media (max-width: 960px) {
+  .supporters-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
 
-      &.service {
-        flex: 0 0 50% !important;
-      }
-
-      &[data-tier-size='3'] {
-        img {
-          max-height: 75px;
-          max-width: 100px;
-        }
-      }
+    &[data-tier='3'] {
+      grid-template-columns: minmax(0, 1fr) !important;
     }
+  }
+}
+
+@media (max-width: 400px) {
+  .supporters-grid {
+    grid-template-columns: minmax(0, 1fr) !important;
   }
 }
 </style>

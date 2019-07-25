@@ -36,7 +36,7 @@
   "count": {
     "type": "integer",
     "example": "2",
-    "description": "How many of this card exists in a deck.",
+    "description": "How many of this card exists in a relevant deck.",
     "attributes": ["decks"]
   },
   "duelDeck": {

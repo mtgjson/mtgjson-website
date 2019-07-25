@@ -1,11 +1,16 @@
-blockquote,
-.custom-block {
+blockquote, .custom-block {
   font-size: 14px;
   border-radius: 5px;
   border-left: 10px solid transparent;
   background-color: $bgColor;
   padding: 25px;
-  margin-bottom: 15px;
+  margin-bottom: 25px;
+  transition: 0.25s ease-in-out;
+
+  &:hover {
+    transition: 0.25s ease-in-out;
+    transform: scale(1.025);
+  }
 
   &, p {
     &::before, &::after {
@@ -45,7 +50,11 @@ blockquote,
 
 blockquote {
   color: $grayColor;
-  border-left: 10px solid $grayColor;
+  border-color: $grayColor;
+
+  &:hover {
+    border-left-color: $accentColor;
+  }
 }
 
 pre.vue-container {

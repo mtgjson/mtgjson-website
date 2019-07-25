@@ -8,8 +8,6 @@
         :src="$withBase($site.themeConfig.logo)"
         :title="$siteTitle"
       )
-    
-    Metadata.meta-link
 
     .links
       AlgoliaSearchBox(
@@ -20,15 +18,13 @@
 </template>
 
 <script>
-import Metadata from './Metadata.vue';
-import SidebarButton from './SidebarButton.vue';
+import SidebarButton from './SidebarButton';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
 import SearchBox from '@SearchBox';
-import NavLinks from './NavLinks.vue';
+import NavLinks from './NavLinks';
 
 export default {
   components: {
-    Metadata,
     SidebarButton,
     NavLinks,
     SearchBox,
@@ -55,7 +51,7 @@ function css(el, property) {
 </script>
 
 <style lang="stylus">
-$navbar-vertical-padding = 0.7rem;
+$navbar-vertical-padding = 0.9rem;
 $navbar-horizontal-padding = 1.5rem;
 
 .navbar {
@@ -69,20 +65,15 @@ $navbar-horizontal-padding = 1.5rem;
   border-bottom: 1px solid $bgColorDark;
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
 
+  .home-link {
+    display: inline-block;
+    height: 100%;
+  }
+  
   .logo {
-    height: $navbarHeight - 1.4rem;
+    height: 100%;
     width: auto;
     vertical-align: top;
-  }
-
-  .meta-link {
-    display: inline-flex;
-    align-items: center;
-    height: 100%;
-
-    a {
-      color: $grayColor;
-    }
   }
 
   .links {
@@ -110,6 +101,7 @@ $navbar-horizontal-padding = 1.5rem;
     margin-right: 0 !important;
 
     input {
+      left: 0;
       // Prevent zoom on mobile
       font-size: 16px !important;
     }

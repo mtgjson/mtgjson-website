@@ -19,28 +19,31 @@
           option(value="" selected) All Sets
           option(v-for="(type, key) in filteredGroups" :value="type") {{ $helpers.prettifyType(type) }}
 
-    .download-table(v-for="(set, key) in filtered")
-      .download-item
-        .download-wrap
-          .img-wrap
-            div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
-            div(v-else-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
-            div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
-          .txt-wrap
-            h3(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFuture(set.releaseDate)}") {{ set.name }}
-            ol
-              li
-                small Set Code: 
-                  span {{ set.code }}
-              li
-                small Type: 
-                  span.type {{ set.type }}
-              li
-                small Release Date: 
-                  span {{ set.releaseDate }}
-          .dl-wrap
-            a.cta-btn(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key" :href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
-            a.cta-btn(v-else :href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
+    blockquote.download-item(v-for="(set, key) in filtered")
+      .download-wrap
+        .img-wrap
+          div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
+          div(v-else-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
+          div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
+        .txt-wrap
+          h3(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFuture(set.releaseDate)}") {{ set.name }}
+          ol
+            li
+              small Set Code: 
+                span {{ set.code }}
+            li
+              small Type: 
+                span.type {{ set.type }}
+            li
+              small Release Date: 
+                span {{ set.releaseDate }}
+          ol.dl-wrap
+            li
+              small Files: 
+                span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key") , 
+                  a(:href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
+                span(v-else)
+                  a(:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
 
 </template>
 

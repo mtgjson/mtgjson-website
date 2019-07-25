@@ -1,17 +1,13 @@
 @require './reset';
 @require './custom-blocks';
 @require './typography';
+@require './wrapper';
 @require './buttons';
 @require './arrow';
 @require './code';
 
 html, body {
   min-width: 320px;
-  height: 100%;
-}
-
-html {
-  margin-top: $navbarHeight;
 }
 
 body {
@@ -21,6 +17,7 @@ body {
   font-size: 16px;
   background-color: $bgColorDark;
   color: $textColor;
+  // transform: translateY($navbarHeight);
 }
 
 ul, ol {
@@ -30,11 +27,11 @@ ul, ol {
 a {
   &.header-anchor {
     font-size: 0.85em;
-    float: left;
     margin-left: -0.75em;
     margin-top: 0.1em;
     text-decoration: none !important;
     opacity: 0;
+    float: left;
   }
 
   &, &:link {
@@ -89,7 +86,13 @@ img {
 }
 
 .content__default {
-  padding: 30px 25px 50px;
+  @extend $wrapper;
+  max-width: 100%;
+  padding-top: 50px;
+
+  & > * {
+    max-width: $contentWidth;
+  }
 
   & > *:first-child {
     padding-top: 0;
@@ -100,7 +103,7 @@ img {
     text-decoration: underline;
 
     &:hover {
-      text-decoration: none;
+      text-decoration: none !important;
     }
   }
 }
@@ -127,6 +130,10 @@ img {
 }
 
 @media (max-width: $MQMobile) {
+  .content__default {
+    padding-top: 25px;
+  }
+
   .theme-container {
     &.sidebar-open {
       .sidebar {

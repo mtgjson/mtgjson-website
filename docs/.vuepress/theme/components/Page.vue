@@ -182,15 +182,10 @@ function flattern(items, res) {
 @require '../styles/wrapper.styl';
 
 .page {
+  padding-top: $navbarHeight;
   padding-bottom: 2rem;
   padding-left: $sidebarWidth;
   background-color: $bgColorDark;
-  display: block;
-
-  & > * {
-    max-width: 1240px !important;
-    margin-left: 0 !important;
-  }
 }
 
 .page-edit {

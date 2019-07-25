@@ -1,18 +1,20 @@
 <template lang="pug">
   aside.sidebar
     NavLinks
+    Version.version-link
     slot(name="top")
     SidebarLinks(:depth="0" :items="items")
     slot(name="bottom")
 </template>
 
 <script>
-import SidebarLinks from './SidebarLinks.vue';
-import NavLinks from './NavLinks.vue';
+import Version from './Version';
+import SidebarLinks from './SidebarLinks';
+import NavLinks from './NavLinks';
 
 export default {
   name: 'Sidebar',
-  components: { SidebarLinks, NavLinks },
+  components: { Version, SidebarLinks, NavLinks },
   props: ['items'],
 };
 </script>
@@ -33,14 +35,29 @@ export default {
   overflow-y: auto;
 
   & > .sidebar-links {
-    padding-bottom: 100px !important;
+    padding: 25px 0 100px;
+
+    // First link as a header
+    & > li > a.sidebar-link {
+      font-size: 1em;
+      line-height: 2;
+      font-weight: bold;
+    }
+
+    & > li:not(:first-child) {
+      margin-top: 0.75rem;
+    }
 
     .is-sub-group {
       .sidebar-heading {
         font-weight: bold;
-        font-size: 16px;
+        font-size: 14px;
       }
     }
+  }
+
+  .version-link {
+    padding: 25px 25px 0;
   }
   
   ul {
@@ -62,27 +79,10 @@ export default {
       margin-bottom: 10px;
       
       a {
-        min-height: 34px;
         font-weight: 600;
-        line-height: 1.1rem;
         font-size: 14px;
         flex: auto;
       }
-    }
-  }
-
-  & > .sidebar-links {
-    padding: 1.5rem 0;
-
-    // First link as a header
-    & > li > a.sidebar-link {
-      font-size: 1em;
-      line-height: 2;
-      font-weight: bold;
-    }
-
-    & > li:not(:first-child) {
-      margin-top: 0.75rem;
     }
   }
 }

@@ -2,11 +2,11 @@
 <template lang="pug">
   .schema(v-if="schema")
     //- Properties Legend
-    .schema-item.schema-legend(v-if="schemaAttributes.size")
+    .schema-item.schema-legend(v-if="filteredAttributes.size")
       h4 Property Attributes
       p The property attributes you see below earmark possible conditions for a field in this data structure.
       ol
-        li(v-for="(attribute, key) in schemaAttributes")
+        li(v-for="(attribute, key) in filteredAttributes")
           .attribute(:class="attribute") {{ attribute }}
           span {{ getTitle(attribute) }}
 
@@ -23,14 +23,15 @@
     //- Properties Table
     .schema-item.schema-data
       h4 Property Information
-      .schema-data--table(v-for="(data, name) in filteredSchema" v-if="name !== '...'")
+      blockquote.schema-data--table(v-for="(data, name) in filteredSchema" v-if="name !== '...'")
+        .schema-data--table-anchor(:id="name" aria-hidden="true")
         //- Property Name
         .schema-data--table-item
           .heading
             p Name
           .name
-            h6(:id="name") {{ name }}
-              a(:href="`#${name}`" aria-hidden="true" class="header-anchor") #
+            a(:href="`#${name}`")
+              h6 {{ name }}
 
         //- Property Type
         .schema-data--table-item
@@ -48,16 +49,6 @@
             p
               em {{ data.introduced }}
 
-        //- Property Attributes
-        .schema-data--table-item(v-if="data.attributes")
-          .heading
-            p Attributes
-          .attributes
-            .attribute(
-              v-for="(attribute, key) in data.attributes"
-              :class="attribute"
-              :title="getTitle(attribute)") {{ attribute }}
-
         //- Property Example
         .schema-data--table-item
           .heading
@@ -72,8 +63,18 @@
             p Description
           .description
             p(v-html="data.description")
+
+        //- Property Attributes
+        .schema-data--table-item(v-if="data.attributes")
+          .heading
+            p Attributes
+          .attributes
+            .attribute(
+              v-for="(attribute, key) in data.attributes"
+              :class="attribute"
+              :title="getTitle(attribute)") {{ attribute }}
           
-      .schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
+      blockquote.schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
 </template>
 
 <script>
@@ -82,7 +83,6 @@ export default {
   data() {
     return {
       schema: undefined,
-      attributes: undefined,
       showMore: true,
       willShowMore: true,
     };
@@ -92,39 +92,32 @@ export default {
       this.$page.frontmatter.schema
     }.schema.json`);
 
-    // Store the schema attributes for properties
-    let attributes = [];
-    for (let name in schema) {
-      const field = schema[name];
-
-      if (field.attributes) {
-        attributes = attributes.concat(field.attributes);
-      }
-    }
-
     this.showMore = Object.keys(schema).length > 4;
-    this.attributes = new Set(attributes);
     this.schema = new this.$landcycle(schema).schema;
   },
   computed: {
-    schemaAttributes() {
-      return new Set(Array.from(this.attributes).sort());
-    },
     showIndex() {
-      return !Object.keys(this.schema).includes('...');
+      return !Object.keys(this.filteredSchema).includes('...');
+    },
+    filteredAttributes() {
+      // Store the schema attributes for properties
+      let attributes = [];
+      for (let name in this.filteredSchema) {
+        const field = this.filteredSchema[name];
+
+        if (field.attributes) {
+          attributes = attributes.concat(field.attributes);
+        }
+      }
+
+      return new Set(attributes.sort());
     },
     filteredSchema() {
-      const filteredTraits = [];
       let schema = undefined;
 
+      // Logic to filter down the card schema for AllCards
       if (this.$page.frontmatter.title === 'AllCards') {
         schema = {};
-
-        for (let attribute of Array.from(this.attributes)) {
-          if (attribute !== 'atomic' && attribute !== 'optional') {
-            this.attributes.delete(attribute);
-          }
-        }
 
         for (let name in this.schema) {
           const field = this.schema[name];
@@ -147,7 +140,7 @@ export default {
         case 'atomic':
           return 'Property available in AllCards JSON';
         case 'optional':
-          return 'Property omitted when value returns falsey or expected value';
+          return 'Property omitted when value returns a falsey or expected value';
         case 'deprecated':
           return 'Property will be removed in a future major or minor version release';
         case 'decks':
@@ -171,12 +164,14 @@ h4 {
 }
 
 h6, p {
+  color: $lightColor;
   margin: 0;
   font-size: 14px;
   line-height: 1.7em;
 }
 
 h6 {
+  transition: 0.25s ease-in-out;
   position: relative;
   padding: 0;
   margin: 0;
@@ -318,25 +313,24 @@ pre {
   }
 
   &-data {
+    &--table {
+      padding: 0;
+    }
+
     &--table, &--table-continued {
       position: relative;
-      border-radius: 5px;
-      margin-bottom: 25px;
       margin-top: 10px;
       overflow: hidden;
       box-sizing: border-box;
+      margin-bottom: 25px;
 
-      // Visually correct border radius w/ border
-      &::after {
-        content: '';
-        width: 100%;
-        height: 100%;
-        position: absolute;
-        top: 0;
-        border: 1px solid $tableBorderColor;
-        border-radius: 5px;
-        pointer-events: none;
-        box-sizing: border-box;
+      &:hover {
+        .name {
+          h6 {
+            color: $accentColor;
+            transition: 0.25s ease-in-out;
+          }
+        }
       }
 
       &-continued {
@@ -347,11 +341,21 @@ pre {
         cursor: help;
       }
 
+      // Allows us to anchor to a screen safe position
+      &-anchor {
+        position: absolute;
+        top: -($navbarHeight + 1rem);
+      }
+
       &-item {
         display: grid;
         grid-template-columns: minmax(min-content, 150px) 1fr;
         background-color: $tableColor;
         border-bottom: 1px solid $tableBorderColor;
+
+        &:last-of-type {
+          border-bottom-width: 0;
+        }
 
         .heading {
           grid-column: span 1;
@@ -371,6 +375,12 @@ pre {
             grid-column: span 1;
           }
         }
+
+        .name {
+          a {
+            text-decoration: none;
+          }
+        }
       }
     }
   }
@@ -382,6 +392,10 @@ pre {
       &--table {
         &-item {
           grid-template-columns: 1fr;
+
+          &, .heading {
+            border-width: 0;
+          }
         }
       }
     }

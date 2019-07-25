@@ -8,7 +8,7 @@
   "duel": {
     "type": "string",
     "example": "Banned",
-    "description": "Card is legal in the Duel Commander play format.",
+    "description": "Card is banned in the Duel Commander play format.",
     "attributes": ["optional"]
   },
   "frontier": {
@@ -20,7 +20,7 @@
   "legacy": {
     "type": "string",
     "example": "Banned",
-    "description": "Card is legal in the Legacy play format.",
+    "description": "Card is banned in the Legacy play format.",
     "attributes": ["optional"]
   },
   "modern": {
@@ -50,7 +50,7 @@
   "vintage": {
     "type": "string",
     "example": "Restricted",
-    "description": "Card is legal in the Vintage play format.",
+    "description": "Card is restricted in the Vintage play format.",
     "attributes": ["optional"]
   }
 }
