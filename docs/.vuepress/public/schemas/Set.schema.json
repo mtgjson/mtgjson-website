@@ -42,6 +42,12 @@
     "description": "Is the set available online only?",
     "traits": ["optional"]
   },
+  "isPartialPreview": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the set still in preview? Preview sets do not have complete data.",
+    "traits": ["optional"]
+  },
   "keyruneCode": {
     "type": "string",
     "example": "\"KTK\"",
