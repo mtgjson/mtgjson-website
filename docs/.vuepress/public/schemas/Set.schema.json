@@ -46,7 +46,7 @@
     "type": "boolean",
     "example": "true",
     "description": "Is the set still in preview? Preview sets do not have complete data.",
-    "traits": ["optional"]
+    "attributes": ["optional"]
   },
   "keyruneCode": {
     "type": "string",
