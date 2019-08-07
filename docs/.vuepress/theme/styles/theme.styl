@@ -6,8 +6,43 @@
 @require './arrow';
 @require './code';
 
+:root {
+  // Auxillery colors
+  --yellow-color: #e7c000;
+  --green-color: lightgreen;
+  --red-color: salmon;
+  --gray-color: #aaaaaa;
+  --light-gray-color: #f6f8fa;
+  --medium-gray-color: #eaecef;
+  --dark-gray-color: #2d2d2d;
+  // Main theme colors
+  --light-color: #ffffff;
+  --dark-color: #212e3c;
+  --darker-color: #1a2530;
+  --darkest-color: #141c24;
+  --accent-color: #61c6ed;
+  --spoiler-color: #ffe774;
+  // Color Themes
+  --text-color: var(--light-color);
+  --bg-color: var(--dark-color);
+  --bg-border-color: var(--darkest-color);
+  --bg-dark-color: var(--darkest-color);
+  --shadow-color: var(--darkest-color);
+  --blockquote-color: var(--dark-color);
+  --search-bg-color: var(--medium-gray-color);
+  // Data Presentation
+  --table-color: var(--bg-color);
+  --table-bg-color: var(--dark-color);
+  --table-heading-color: var(--darker-color);
+  --table-border-color: var(--dark-color);
+  // Code colors
+  --code-bg-color: var(--dark-gray-color);
+  --code-text-color: var(--yellow-color);
+}
+
 html, body {
   min-width: 320px;
+  color: var(--text-color);
 }
 
 body {
@@ -15,9 +50,31 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  background-color: $bgColorDark;
-  color: $textColor;
-  // transform: translateY($navbarHeight);
+  background-color: var(--bg-dark-color);
+  color: var(--text-color);
+}
+
+#app {
+  &.light {
+    // Color Themes
+    --text-color: var(--dark-color);
+    --bg-color: var(--light-color);
+    --bg-border-color: var(--medium-gray-color);
+    --bg-dark-color: var(--light-color);
+    --shadow-color: var(--light-gray-color);
+    --blockquote-color: var(--light-gray-color);
+    // // Data Presentation
+    --table-color: var(--text-color);
+    --table-bg-color: var(--bg-color);
+    --table-heading-color: var(--light-gray-color);
+    --table-border-color: var(--medium-gray-color);
+    // Code colors
+    --code-bg-color: #ffeeec;
+    --code-text-color: #9b2e2e;
+
+    background-color: var(--bg-dark-color);
+    color: var(--text-color);
+  }
 }
 
 ul, ol {
@@ -50,7 +107,7 @@ a {
 
 hr {
   border: 0;
-  border-top: 1px solid $tableBorderColor;
+  border-top: 1px solid var(--table-border-color);
 }
 
 img {
@@ -74,13 +131,17 @@ img {
   }
 }
 
-.navbar {
-  .search-box {
-    input {
-      padding: 0 0 0 35px;
-      border-radius: 5px;
-      color: $darkColor;
-      min-width: 8rem;
+.search-box {
+  input {
+    background-color: var(--search-bg-color);
+    border-color: var(--medium-gray-color);
+    padding: 0 0 0 35px;
+    border-radius: 5px;
+    color: var(--dark-color);
+    min-width: 8rem;
+
+    &:focus {
+      border-color: var(--accent-color);
     }
   }
 }
@@ -113,13 +174,13 @@ img {
     &.active {
       position: relative;
       font-weight: bold;
-      color: $accentColor;
+      color: var(--accent-color);
 
       &::after {
         content: '';
         width: 5px;
         border-radius: 5px 0 0 5px;
-        background-color: $accentColor;
+        background-color: var(--accent-color);
         height: 100%;
         position: absolute;
         right: 0;

@@ -22,7 +22,7 @@ export default {
 <style lang="stylus">
 .sidebar {
   font-size: 16px;
-  background-color: $bgColor;
+  background-color: var(--bg-color);
   width: $sidebarWidth;
   position: fixed;
   z-index: 10;
@@ -31,7 +31,7 @@ export default {
   left: 0;
   bottom: 0;
   box-sizing: border-box;
-  border-right: 1px solid $bgColorDark;
+  border-right: 1px solid var(--bg-border-color);
   overflow-y: auto;
 
   & > .sidebar-links {
@@ -71,7 +71,7 @@ export default {
 
   .nav-links {
     display: none;
-    border-bottom: 1px solid $bgColorDark;
+    border-bottom: 1px solid var(--bg-dark-color);
     padding: 1.5rem 1.5rem 1rem 1.5rem;
 
     .nav-item, .repo-link {

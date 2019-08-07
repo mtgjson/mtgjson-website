@@ -1,4 +1,10 @@
 {
+  "brawl": {
+    "type": "string",
+    "example": "",
+    "description": "Card is legal in the Brawl play format.",
+    "attributes": ["optional"]
+  },
   "commander": {
     "type": "string",
     "example": "Legal",

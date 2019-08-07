@@ -7,7 +7,7 @@
   "language": {
     "type": "string",
     "example": "\"German\"",
-    "description": "Foreign language of card. Can be {{code:English}}, {{code:Spanish}}, {{code:French}}, {{code:German}}, {{code:Italian}}, {{code:Portuguese (Brazil)}}, {{code:Japanese}}, {{code:Korean}}, {{code:Russian}}, {{code:Chinese Simplified}}, or {{code:Chinese Traditional}}. Promotional cards can also be in {{code:Hebrew}}, {{code:Latin}}, {{code:Ancient Greek}}, {{code:Arabic}}, {{code:Sanskrit}}, or {{code:Phyrexian}}."
+    "description": "Foreign language of card. Can be {{code:English}}, {{code:Spanish}}, {{code:French}}, {{code:German}}, {{code:Italian}}, {{code:Portuguese (Brazil)}}, {{code:Japanese}}, {{code:Korean}}, {{code:Russian}}, {{code:Chinese Simplified}}, or {{code:Chinese Traditional}}.<br />Promotional cards can also be in {{code:Hebrew}}, {{code:Latin}}, {{code:Ancient Greek}}, {{code:Arabic}}, {{code:Sanskrit}}, or {{code:Phyrexian}}."
   },
   "multiverseId": {
     "type": "integer",

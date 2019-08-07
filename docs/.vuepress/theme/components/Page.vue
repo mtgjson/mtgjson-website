@@ -1,5 +1,7 @@
 <template lang="pug">
   main.page
+    ThemeSwitcher
+
     slot(name="top")
 
     Content
@@ -32,10 +34,12 @@
 </template>
 
 <script>
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util';
 
 export default {
   props: ['sidebarItems'],
+  components: { ThemeSwitcher },
   computed: {
     lastUpdated() {
       const date = this.$page.lastUpdated;
@@ -185,7 +189,7 @@ function flattern(items, res) {
   padding-top: $navbarHeight;
   padding-bottom: 2rem;
   padding-left: $sidebarWidth;
-  background-color: $bgColorDark;
+  background-color: var(--bg-dark-color);
 }
 
 .page-edit {
@@ -198,7 +202,7 @@ function flattern(items, res) {
     display: inline-block;
 
     a {
-      color: lighten($textColor, 25%);
+      color: var(--light-gray-color);
       margin-right: 0.25rem;
     }
   }
@@ -209,7 +213,7 @@ function flattern(items, res) {
 
     .prefix {
       font-weight: 500;
-      color: lighten($textColor, 25%);
+      color: var(--light-gray-color);
     }
 
     .time {
@@ -227,7 +231,7 @@ function flattern(items, res) {
   .inner {
     min-height: 2rem;
     margin-top: 0;
-    border-top: 1px solid $bgColorDark;
+    border-top: 1px solid var(--bg-dark-color);
     padding-top: 1rem;
     overflow: auto; // clear float
   }

@@ -7,8 +7,8 @@
       p The property attributes you see below earmark possible conditions for a field in this data structure.
       ol
         li(v-for="(attribute, key) in filteredAttributes")
-          .attribute(:class="attribute") {{ attribute }}
-          span {{ getTitle(attribute) }}
+          .attribute(:class="attribute.split('-')[0]") {{ attribute.split('-')[0] }}
+          span {{ getTitle(attribute.split('-')[0]) }}
 
     //- Properties Index
     .schema-item.schema-index(v-if="showIndex")
@@ -71,8 +71,8 @@
           .attributes
             .attribute(
               v-for="(attribute, key) in data.attributes"
-              :class="attribute"
-              :title="getTitle(attribute)") {{ attribute }}
+              :class="attribute.split('-')[0]"
+              :title="getTitle(attribute.split('-')[0])") {{ attribute.replace('-', ' ') }}
           
       blockquote.schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
 </template>
@@ -164,7 +164,7 @@ h4 {
 }
 
 h6, p {
-  color: $lightColor;
+  color: var(--text-color);
   margin: 0;
   font-size: 14px;
   line-height: 1.7em;
@@ -183,7 +183,7 @@ h6 {
 }
 
 em {
-  color: $grayColor;
+  color: var(--gray-color);
 }
 
 pre, code {
@@ -206,33 +206,60 @@ pre {
   font-size: 10px;
   padding: 3px 5px;
   cursor: help;
+  position: relative;
   display: inline-block;
   text-transform: capitalize;
+  overflow: hidden;
+  z-index: 2;
+  color: var(--dark-color);
   font-weight: bold;
-  color: $bgColor;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
 
   &.atomic {
-    background-color: lighten($accentColor, 25%);
+    &::before {
+      background-color: var(--accent-color);
+    }
   }
 
   &.optional {
-    background-color: lighten($yellowColor, 50%);
+    &::before {
+      background-color: var(--spoiler-color);
+    }
   }
 
   &.deprecated {
-    background-color: lighten(red, 30%);
+    &::before {
+      background-color: var(--red-color);
+    }
   }
 
   &.decks {
-    background-color: lighten($greenColor, 50%);
+    &::before {
+      background-color: var(--green-color);
+    }
   }
 
   &.nullable {
-    background-color: lighten(red, 60%);
+    &::before {
+      background-color: var(--red-color);
+    }
   }
 
   &.stale {
-    background-color: lighten(gray, 70%);
+    &::before {
+      background-color: var(--light-gray-color);
+    }
   }
 }
 
@@ -248,7 +275,7 @@ pre {
       position: relative;
       overflow: hidden;
       padding-bottom: 30px;
-      border-bottom: 1px solid $bgColor;
+      border-bottom: 1px solid var(--bg-color);
 
       &::after {
         transform: rotateX(180deg);
@@ -260,7 +287,7 @@ pre {
         right: 0;
         z-index: 1;
         content: '';
-        box-shadow: 5px 5px 10px $bgColorDark;
+        box-shadow: 5px 5px 10px var(--shadow-color);
       }
 
       &.hide {
@@ -279,11 +306,11 @@ pre {
     }
 
     small {
-      color: $grayColor;
+      color: var(--gray-color);
     }
 
     .show-more {
-      color: $accentColor;
+      color: var(--accent-color);
       font-size: 14px;
       font-weight: bold;
       text-align: center;
@@ -301,8 +328,12 @@ pre {
       padding-left: 0;
 
       li {
-        display: block;
-        cursor: initial;
+        display: flex;
+        margin-top: 5px;
+
+        .attribute {
+          cursor: initial;
+        }
       }
 
       span {
@@ -313,6 +344,11 @@ pre {
   }
 
   &-data {
+    blockquote {
+      background-color: var(--table-bg-color);
+      border-left-color: var(--table-border-color);
+    }
+
     &--table {
       padding: 0;
     }
@@ -327,7 +363,7 @@ pre {
       &:hover {
         .name {
           h6 {
-            color: $accentColor;
+            color: var(--accent-color);
             transition: 0.25s ease-in-out;
           }
         }
@@ -350,8 +386,7 @@ pre {
       &-item {
         display: grid;
         grid-template-columns: minmax(min-content, 150px) 1fr;
-        background-color: $tableColor;
-        border-bottom: 1px solid $tableBorderColor;
+        border-bottom: 1px solid var(--table-border-color);
 
         &:last-of-type {
           border-bottom-width: 0;
@@ -362,8 +397,8 @@ pre {
           text-align: left;
           text-transform: capitalize;
           font-weight: bold;
-          background-color: $tableHeadingColor;
-          border-right: 1px solid $tableBorderColor;
+          background-color: var(--table-heading-color);
+          border-right: 1px solid var(--table-border-color);
           padding: 7px 13px;
           display: flex;
           align-items: center;

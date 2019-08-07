@@ -104,7 +104,7 @@ export default {
     color: inherit;
 
     &:hover, &.router-link-active {
-      color: $accentColor;
+      color: var(--accent-color);
     }
   }
 
@@ -135,14 +135,14 @@ export default {
 @media (min-width: $MQMobile) {
   .nav-links a {
     &:hover, &.router-link-active {
-      color: $textColor;
+      color: var(--text-color);
     }
   }
 
   .nav-item > a:not(.external) {
     &:hover, &.router-link-active {
       margin-bottom: -2px;
-      border-bottom: 2px solid lighten($accentColor, 8%);
+      border-bottom: 2px solid var(--accent-color);
     }
   }
 }

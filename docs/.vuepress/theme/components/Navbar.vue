@@ -61,8 +61,8 @@ $navbar-horizontal-padding = 1.5rem;
   left: 0;
   right: 0;
   height: $navbarHeight;
-  background-color: $bgColor;
-  border-bottom: 1px solid $bgColorDark;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--bg-border-color);
   padding: $navbar-vertical-padding $navbar-horizontal-padding;
 
   .home-link {

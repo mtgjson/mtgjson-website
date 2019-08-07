@@ -119,7 +119,7 @@ export default {
     & > small {
       display: block;
       margin-bottom: 25px;
-      color: $grayColor;
+      color: var(--gray-color);
     }
   }
 
@@ -136,7 +136,7 @@ export default {
       align-items: center;
       text-align: center;
       margin-bottom: 0;
-      background-color: $tableColor;
+      background-color: var(--table-color);
       position: relative;
 
       .img-wrap {
@@ -147,7 +147,7 @@ export default {
         margin-bottom: 15px;
 
         &--container {
-          background-color: $lightColor;
+          background-color: var(--light-color);
           border-radius: 50%;
           overflow: hidden;
           width: 90px;
@@ -166,14 +166,14 @@ export default {
       h6 {
         flex: 0 0 100%;
         font-size: 14px;
-        color: $textColor;
+        color: var(--text-color);
         display: block;
         margin: 0 auto;
       }
 
       a {
         h6 {
-          color: $accentColor;
+          color: var(--accent-color);
         }
       }
 
@@ -195,7 +195,7 @@ export default {
         font-size: 14px;
         line-height: 1.2em;
         padding: 5px;
-        color: $textColor;
+        color: var(--text-color);
 
         &::before {
           padding-right: 5px;

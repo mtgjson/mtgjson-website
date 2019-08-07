@@ -7,7 +7,7 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver}} or {{code:white}}."
+    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver}}, or {{code:white}}."
   },
   "colorIdentity": {
     "type": "array(string)",
@@ -65,12 +65,12 @@
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}} or {{code:tombstone}}."
+    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}."
   },
   "frameVersion": {
     "type": "string",
     "example": "\"2015\"",
-    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}} or {{code:future}}."
+    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}}, or {{code:future}}."
   },
   "hand": {
     "type": "string",
@@ -178,7 +178,7 @@
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}} or {{code:host}}.",
+    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}}, or {{code:host}}.",
     "attributes": ["atomic"]
   },
   "legalities": {
@@ -302,7 +302,7 @@
   "rarity": {
     "type": "string",
     "example": "\"mythic\"",
-    "description": "Rarity. Can be {{code:basic}}, {{code:common}}, {{code:uncommon}}, {{code:rare}} or {{code:mythic}}"
+    "description": "Rarity. Can be {{code:basic}}, {{code:common}}, {{code:uncommon}}, {{code:rare}}, or {{code:mythic}}"
   },
   "rulings": {
     "type": "array(object)",
@@ -353,7 +353,7 @@
     "type": "string",
     "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
     "description": "URL which redirects to TCGPlayer website’s card page.",
-    "attributes": ["deprecated"]
+    "attributes": ["deprecated-v4.4.3"]
   },
   "text": {
     "type": "string",

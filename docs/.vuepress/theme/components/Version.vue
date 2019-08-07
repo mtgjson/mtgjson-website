@@ -35,13 +35,13 @@ export default {
 <style lang="stylus" scoped>
 .version {
   display: inline-block;
-  color: $textColor;
+  color: var(--text-color);
   position: relative;
 
   &-number {
     font-size: 12px;
     font-weight: bold;
-    color: $grayColor;
+    color: var(--gray-color);
   }
 }
 </style>

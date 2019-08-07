@@ -92,14 +92,14 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 a.sidebar-link {
   font-size: 14px;
   display: inline-block;
-  color: $textColor;
+  color: var(--text-color);
   padding: 0 25px;
   line-height: 2;
   width: 100%;
   box-sizing: border-box;
 
   &:hover {
-    color: $accentColor;
+    color: var(--accent-color);
   }
 }
 </style>

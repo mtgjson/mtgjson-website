@@ -59,7 +59,7 @@ export default {
 }
 
 .sidebar-heading {
-  color: $textColor;
+  color: var(--text-color);
   transition: color 0.15s ease;
   font-weight: bold;
   line-height: 2;
@@ -74,7 +74,7 @@ export default {
   }
 
   &:hover {
-    color: $accentColor;
+    color: var(--accent-color);
   }
 }
 

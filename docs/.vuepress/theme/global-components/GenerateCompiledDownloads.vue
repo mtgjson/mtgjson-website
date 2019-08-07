@@ -100,7 +100,7 @@ export default {
             text-transform: lowercase !important;
             &::after {
               content: ".";
-              color: $textColor;
+              color: var(--text-color);
             }
           }
         }

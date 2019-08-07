@@ -4,7 +4,7 @@
   h3 {
     font-size: 14px;
     padding: 0 0 5px;
-    color: $lightColor;
+    color: var(--light-color);
 
     &.spoiler {
       display: flex;
@@ -12,8 +12,8 @@
       &::after {
         position: relative;
         content: 'Spoiler';
-        background-color: $spoilerColor;
-        color: $bgColor;
+        background-color: var(--spoiler-color);
+        color: var(--bg-color);
         border-radius: 5px;
         margin-left: 10px;
         margin-right: 5px;
@@ -28,7 +28,7 @@
 
   .sorting-options {
     position: sticky;
-    background-color: $bgColorDark;
+    background-color: var(--bg-dark-color);
     top: 55px;
     z-index: 9;
     padding: 15px 0;
@@ -67,7 +67,7 @@
           position: relative;
           height: 50px;
           width: 50px;
-          color: $textColor;
+          color: var(--text-color);
 
           &::before {
             position: absolute;
