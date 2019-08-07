@@ -208,12 +208,11 @@ function flattern(items, res) {
   }
 
   .last-updated {
-    float: right;
     font-size: 0.9em;
 
     .prefix {
       font-weight: 500;
-      color: var(--light-gray-color);
+      color: var(--text-color);
     }
 
     .time {
@@ -229,6 +228,7 @@ function flattern(items, res) {
   padding-bottom: 0;
 
   .inner {
+    max-width: $contentWidth;
     min-height: 2rem;
     margin-top: 0;
     border-top: 1px solid var(--bg-dark-color);

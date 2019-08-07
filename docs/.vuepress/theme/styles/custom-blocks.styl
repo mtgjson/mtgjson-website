@@ -2,15 +2,16 @@ blockquote, .custom-block {
   font-size: 14px;
   border-radius: 5px;
   border: 1px solid var(--table-border-color);
-  background-color: var(--blockquote-color);
+  background-color: var(--blockquote-bg-color);
   border-left-width: 10px;
   padding: 25px;
   margin-bottom: 25px;
-  transition: 0.25s ease-in-out;
+  transition: border 0.25s ease-in-out;
 
   &:hover {
-    transition: 0.25s ease-in-out;
-    transform: scale(1.025);
+    transition: border 0.25s ease-in-out;
+    border-color: var(--accent-color);
+    // transform: scale(1.025);
   }
 
   &, p {
@@ -33,16 +34,12 @@ blockquote, .custom-block {
   }
 
   &.tip {
-    border-color: var(--accent-color);
-
     .custom-block-title {
       color: var(--accent-color);
     }
   }
 
   &.warning {
-    border-color: var(--yellow-color);
-
     .custom-block-title {
       color: var(--yellow-color);
     }
@@ -51,10 +48,9 @@ blockquote, .custom-block {
 
 blockquote {
   color: var(--gray-color);
-  border-left-color: var(--accent-color);
   
   &:hover {
-    border-left-color: var(--accent-color) !important;
+    border-color: var(--accent-color);
   }
 }
 

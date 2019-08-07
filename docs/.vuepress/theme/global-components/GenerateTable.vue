@@ -346,7 +346,11 @@ pre {
   &-data {
     blockquote {
       background-color: var(--table-bg-color);
-      border-left-color: var(--table-border-color);
+      border-color: var(--table-border-color);
+
+      &:hover {
+        border-color: var(--accent-color);
+      }
     }
 
     &--table {
@@ -425,6 +429,8 @@ pre {
   .schema {
     &-data {
       &--table {
+        border-left-width: 1px;
+        
         &-item {
           grid-template-columns: 1fr;
 

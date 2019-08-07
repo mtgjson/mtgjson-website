@@ -102,8 +102,6 @@ $navbar-horizontal-padding = 1.5rem;
 
     input {
       left: 0;
-      // Prevent zoom on mobile
-      font-size: 16px !important;
     }
   }
 }

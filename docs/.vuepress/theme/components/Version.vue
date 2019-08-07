@@ -11,7 +11,9 @@ export default {
   name: "Version",
   data() {
     return {
-      defaultVersion: {},
+      defaultVersion: {
+        version: '...'
+      },
     };
   },
   mounted() {

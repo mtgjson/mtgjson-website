@@ -2,7 +2,7 @@
   form#search-form.algolia-search-wrapper.search-box(
     role="search")
 
-    input#algolia-search-input.search-query
+    input#algolia-search-input.search-query(placeholder="Search...")
 </template>
 
 <script>

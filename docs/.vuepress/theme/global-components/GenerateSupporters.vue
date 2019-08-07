@@ -136,7 +136,6 @@ export default {
       align-items: center;
       text-align: center;
       margin-bottom: 0;
-      background-color: var(--table-color);
       position: relative;
 
       .img-wrap {
@@ -209,7 +208,9 @@ export default {
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
       .supporter {
-        border-left-color: #ef6c2f;
+        &:hover {
+          border-color: var(--orange-color);
+        }
 
         .img-wrap {
           &--container {
@@ -220,7 +221,7 @@ export default {
         }
 
         .tier {
-          color: #ef6c2f;
+          color: var(--orange-color);
 
           &::before {
             content: 'Mythic Supporter';
@@ -231,10 +232,13 @@ export default {
 
     &[data-tier='2'] {
       .supporter {
-        border-left-color: #f9d861;
+
+        &:hover {
+          border-color: var(--yellow-color);
+        }
 
         .tier {
-          color: #f9d861;
+          color: var(--yellow-color);
 
           &::before {
             content: 'Rare Supporter';

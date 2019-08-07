@@ -8,9 +8,10 @@
 
 :root {
   // Auxillery colors
-  --yellow-color: #e7c000;
+  --yellow-color: #e3bd34;
   --green-color: lightgreen;
   --red-color: salmon;
+  --orange-color: #ef6c2f;
   --gray-color: #aaaaaa;
   --light-gray-color: #f6f8fa;
   --medium-gray-color: #eaecef;
@@ -28,8 +29,9 @@
   --bg-border-color: var(--darkest-color);
   --bg-dark-color: var(--darkest-color);
   --shadow-color: var(--darkest-color);
-  --blockquote-color: var(--dark-color);
+  --blockquote-bg-color: var(--darker-color);
   --search-bg-color: var(--medium-gray-color);
+  // --supporter-bg-color: var(--dark-color);
   // Data Presentation
   --table-color: var(--bg-color);
   --table-bg-color: var(--dark-color);
@@ -42,7 +44,6 @@
 
 html, body {
   min-width: 320px;
-  color: var(--text-color);
 }
 
 body {
@@ -52,17 +53,18 @@ body {
   font-size: 16px;
   background-color: var(--bg-dark-color);
   color: var(--text-color);
-}
 
-#app {
   &.light {
+    // Main Color
+    --accent-color: #5da0c9;
     // Color Themes
     --text-color: var(--dark-color);
     --bg-color: var(--light-color);
     --bg-border-color: var(--medium-gray-color);
     --bg-dark-color: var(--light-color);
     --shadow-color: var(--light-gray-color);
-    --blockquote-color: var(--light-gray-color);
+    --blockquote-bg-color: var(--light-gray-color);
+    // --supporter-bg-color: var(--bg-color);
     // // Data Presentation
     --table-color: var(--text-color);
     --table-bg-color: var(--bg-color);
@@ -72,9 +74,12 @@ body {
     --code-bg-color: #ffeeec;
     --code-text-color: #9b2e2e;
 
-    background-color: var(--bg-dark-color);
+    background-color: var(--bg-color);
     color: var(--text-color);
   }
+}
+
+#app {
 }
 
 ul, ol {
@@ -138,7 +143,10 @@ img {
     padding: 0 0 0 35px;
     border-radius: 5px;
     color: var(--dark-color);
-    min-width: 8rem;
+    min-width: 7rem;
+    // Prevent zoom on mobile with 16px. Bye bye for now.
+    font-size: 12px !important;
+    font-weight: bold;
 
     &:focus {
       border-color: var(--accent-color);
@@ -148,7 +156,6 @@ img {
 
 .content__default {
   @extend $wrapper;
-  max-width: 100%;
   padding-top: 50px;
 
   & > * {

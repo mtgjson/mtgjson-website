@@ -17,7 +17,7 @@ export default {
   name: 'ThemeSwitcher',
   methods: {
     switchTheme(){
-      document.getElementById('app').classList.toggle('light');
+      document.body.classList.toggle('light');
     }
   }
 };
@@ -26,8 +26,8 @@ export default {
 <style lang="stylus" scoped>
 .theme-switcher {
   position: fixed;
-  bottom: 10px;
-  right: 10px;
+  bottom: 30px;
+  right: 30px;
   z-index: 999;
 
   &--button {

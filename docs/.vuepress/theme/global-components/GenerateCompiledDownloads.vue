@@ -89,15 +89,19 @@ export default {
 .dl-wrap {
   p {
     flex: 0 0 100%;
+
     small {
       span {
         display: block;
         margin-bottom: 17px;
+
         span {
           display: inline-block;
           margin: 0;
+          
           a {
             text-transform: lowercase !important;
+
             &::after {
               content: ".";
               color: var(--text-color);

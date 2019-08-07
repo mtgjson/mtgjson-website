@@ -4,7 +4,7 @@
   h3 {
     font-size: 14px;
     padding: 0 0 5px;
-    color: var(--light-color);
+    color: var(--text-color);
 
     &.spoiler {
       display: flex;
@@ -13,7 +13,7 @@
         position: relative;
         content: 'Spoiler';
         background-color: var(--spoiler-color);
-        color: var(--bg-color);
+        color: var(--dark-color);
         border-radius: 5px;
         margin-left: 10px;
         margin-right: 5px;
@@ -26,10 +26,14 @@
     }
   }
 
+  small {
+    color: var(--text-color);
+  }
+
   .sorting-options {
     position: sticky;
     background-color: var(--bg-dark-color);
-    top: 55px;
+    top: 64px;
     z-index: 9;
     padding: 15px 0;
 
@@ -119,7 +123,7 @@
       .dl-wrap {
         flex: 0 0 100%;
         padding: 0;
-        margin: 0;
+        margin: 10px 0 0;
 
         li {
           list-style: none;
