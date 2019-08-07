@@ -2,9 +2,9 @@
 <template lang="pug">
   .theme-switcher
     .theme-switcher--button(
-      @click="switchTheme"
-      data-new-theme='light'
-      data-old-theme='dark')
+      v-if="activeTheme === darkTheme"
+      :data-theme='lightTheme'
+      @click="switchTheme")
       svg(
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -12,9 +12,9 @@
         viewBox="0 0 24 24")
         path(d="M4.069 13h-4.069v-2h4.069c-.041.328-.069.661-.069 1s.028.672.069 1zm3.034-7.312l-2.881-2.881-1.414 1.414 2.881 2.881c.411-.529.885-1.003 1.414-1.414zm11.209 1.414l2.881-2.881-1.414-1.414-2.881 2.881c.528.411 1.002.886 1.414 1.414zm-6.312-3.102c.339 0 .672.028 1 .069v-4.069h-2v4.069c.328-.041.661-.069 1-.069zm0 16c-.339 0-.672-.028-1-.069v4.069h2v-4.069c-.328.041-.661.069-1 .069zm7.931-9c.041.328.069.661.069 1s-.028.672-.069 1h4.069v-2h-4.069zm-3.033 7.312l2.88 2.88 1.415-1.414-2.88-2.88c-.412.528-.886 1.002-1.415 1.414zm-11.21-1.415l-2.88 2.88 1.414 1.414 2.88-2.88c-.528-.411-1.003-.885-1.414-1.414zm2.312-4.897c0 2.206 1.794 4 4 4s4-1.794 4-4-1.794-4-4-4-4 1.794-4 4zm10 0c0 3.314-2.686 6-6 6s-6-2.686-6-6 2.686-6 6-6 6 2.686 6 6z")
     .theme-switcher--button(
-      @click="switchTheme"
-      data-new-theme='dark'
-      data-old-theme='light')
+      v-if="activeTheme === lightTheme"
+      :data-theme='darkTheme'
+      @click="switchTheme")
       svg(
         xmlns="http://www.w3.org/2000/svg"
         width="24"
@@ -26,37 +26,42 @@
 <script>
 export default {
   name: 'ThemeSwitcher',
+  data() {
+    return {
+      activeTheme: 'dark',
+      darkTheme: 'dark',
+      lightTheme: 'light',
+    };
+  },
   mounted() {
+    // Attempt to retrieve localStorage state
     if (window && window.localStorage) {
       const savedTheme = window.localStorage.getItem('theme');
 
       if (savedTheme) {
+        // Apply the state to the button
         const selectedTheme = document.querySelector(
-          `.theme-switcher--button[data-new-theme='${savedTheme}']`
+          `.theme-switcher--button[data-theme='${savedTheme}']`
         );
+        // Apply the state overall
         selectedTheme.click();
       }
+
+      this.activeTheme = savedTheme;
     }
   },
   methods: {
     switchTheme(e) {
-      const $els = document.querySelectorAll('.theme-switcher--button');
-      const $target = e.currentTarget;
-      const oldTheme = $target.dataset.oldTheme;
-      const newTheme = $target.dataset.newTheme;
-      // Remove other active states
-      Array.from($els).forEach($el => {
-        $el.classList.remove('active');
-      });
-      // Set current active state
-      $target.classList.add('active');
+      const newTheme = e.currentTarget.dataset.theme;
       // Set state on body
-      document.body.classList.remove(oldTheme);
+      document.body.classList.remove(this.activeTheme);
       document.body.classList.add(newTheme);
       // Store state in localStorage
       if (window && window.localStorage) {
         window.localStorage.setItem('theme', newTheme);
       }
+
+      this.activeTheme = newTheme;
     },
   },
 };
@@ -70,11 +75,8 @@ export default {
   z-index: 999;
   background-color: var(--text-color);
   border: 1px solid var(--bg-border-color);
-  border-radius: 6px;
+  border-radius: 50%;
   padding: 5px;
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  grid-gap: 5px;
 
   &--button {
     width: 30px;
@@ -83,19 +85,9 @@ export default {
     display: flex;
     justify-content: center;
     align-items: center;
-    border-radius: 6px;
-    padding: 5px;
 
     svg {
       fill: var(--bg-color);
-    }
-
-    &.active {
-      background-color: var(--bg-border-color);
-
-      svg {
-        fill: var(--text-color);
-      }
     }
   }
 }
