@@ -55,7 +55,7 @@
       h3 Others Powered by MTGJSON
       p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here.
       small(v-html="projectMsg")
-      .supporters-grid.services
+      .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="(supporter, key) in services")
           a.supporter-link(:href="supporter.link" target="_blank")
             .img-wrap(v-if="supporter.image")
@@ -71,7 +71,8 @@ export default {
   data() {
     return {
       supporters: require('../../public/resources/supporters.json'),
-      projectMsg: 'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" target="_blank">Discord</a> and let us know. We\'ll be happy to add it to this list.'
+      projectMsg:
+        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" target="_blank">Discord</a> and let us know. We\'ll be happy to add it to this list.',
     };
   },
   computed: {
@@ -232,7 +233,6 @@ export default {
 
     &[data-tier='2'] {
       .supporter {
-
         &:hover {
           border-color: var(--yellow-color);
         }
@@ -266,6 +266,14 @@ export default {
           &::before {
             content: 'Uncommon Supporter';
           }
+        }
+      }
+    }
+
+    &[data-tier='1'], &[data-tier='0'] {
+      .supporter {
+        &:hover {
+          border-color: var(--accent-color);
         }
       }
     }

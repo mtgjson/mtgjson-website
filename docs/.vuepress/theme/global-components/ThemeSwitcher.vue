@@ -17,7 +17,12 @@ export default {
   name: 'ThemeSwitcher',
   methods: {
     switchTheme(){
+      const nextTheme = document.body.classList.contains('light') ? '': 'light';
       document.body.classList.toggle('light');
+
+      if(window && window.localStorage){
+        window.localStorage.setItem('theme', nextTheme);
+      }
     }
   }
 };
