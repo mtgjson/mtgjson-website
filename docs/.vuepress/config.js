@@ -45,9 +45,9 @@ module.exports = {
     displayAllHeaders: true,
     lastUpdated: 'Last Updated',
     nav: [
-      { text: 'Contribute', link: 'https://github.com/mtgjson' },
-      { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
-      { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
+      { text: '', link: 'https://discord.gg/74GUQDE' },
+      { text: '', link: 'https://www.patreon.com/MTGJSON' },
+      { text: '', link: 'https://github.com/mtgjson' },
     ],
     logo: '/images/logo.svg',
     sidebar: [

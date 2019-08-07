@@ -1,7 +1,5 @@
 <template lang="pug">
   main.page
-    ThemeSwitcher
-
     slot(name="top")
 
     Content
@@ -34,12 +32,10 @@
 </template>
 
 <script>
-import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util';
 
 export default {
   props: ['sidebarItems'],
-  components: { ThemeSwitcher },
   computed: {
     lastUpdated() {
       const date = this.$page.lastUpdated;

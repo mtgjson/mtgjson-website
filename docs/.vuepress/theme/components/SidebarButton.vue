@@ -8,18 +8,18 @@
 .sidebar-button {
   cursor: pointer;
   display: none;
-  width: 1.25rem;
-  height: 1.25rem;
+  width: 24px;
+  height: 24px;
   position: absolute;
-  padding: 0.6rem;
-  top: 0.6rem;
+  padding: 5px;
+  top: 5px;
   left: 1rem;
 
   .icon {
     display: block;
-    width: 1.25rem;
-    height: 1.25rem;
-    color: white;
+    width: 24px;
+    height: 24px;
+    color: var(--text-color);
   }
 }
 

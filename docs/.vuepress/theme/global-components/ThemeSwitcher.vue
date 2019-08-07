@@ -69,25 +69,26 @@ export default {
 
 <style lang="stylus" scoped>
 .theme-switcher {
-  position: fixed;
-  bottom: 30px;
-  right: 30px;
-  z-index: 999;
-  background-color: var(--text-color);
-  border: 1px solid var(--bg-border-color);
-  border-radius: 50%;
+  position: relative;
+  width: 34px;
+  height: 34px;
   padding: 5px;
+  // background-color: var(--text-color);
+  // border: 1px solid var(--bg-border-color);
+  // border-radius: 5px;
+  // padding: 5px;
+  margin-left: 10px;
 
   &--button {
-    width: 30px;
-    height: 30px;
     cursor: pointer;
     display: flex;
     justify-content: center;
     align-items: center;
 
     svg {
-      fill: var(--bg-color);
+      width: 100%;
+      height: 100%;
+      fill: var(--text-color);
     }
   }
 }

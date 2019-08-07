@@ -2,7 +2,6 @@
 @require './custom-blocks';
 @require './typography';
 @require './wrapper';
-@require './buttons';
 @require './arrow';
 @require './code';
 
@@ -31,6 +30,7 @@
   --shadow-color: var(--darkest-color);
   --blockquote-bg-color: var(--darker-color);
   --search-bg-color: var(--medium-gray-color);
+  --light-only-dark: var(--dark-color);
   // --supporter-bg-color: var(--dark-color);
   // Data Presentation
   --table-color: var(--bg-color);
@@ -65,7 +65,7 @@ body {
     --shadow-color: var(--light-gray-color);
     --blockquote-bg-color: var(--light-gray-color);
     // --supporter-bg-color: var(--bg-color);
-    // // Data Presentation
+    // Data Presentation
     --table-color: var(--text-color);
     --table-bg-color: var(--bg-color);
     --table-heading-color: var(--light-gray-color);
@@ -139,11 +139,11 @@ img {
 .search-box {
   input {
     background-color: var(--search-bg-color);
-    border-color: var(--medium-gray-color);
+    border-width: 0 !important;
     padding: 0 0 0 35px;
     border-radius: 5px;
     color: var(--dark-color);
-    min-width: 7rem;
+    min-width: 10rem;
     // Prevent zoom on mobile with 16px. Bye bye for now.
     font-size: 12px !important;
     font-weight: bold;

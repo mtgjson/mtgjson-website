@@ -14,21 +14,21 @@
         v-if="isAlgoliaSearch"
         :options="algolia")
       SearchBox(v-else-if="$site.themeConfig.search !== false")
-      NavLinks.can-hide
+      ThemeSwitcher
 </template>
 
 <script>
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import SidebarButton from './SidebarButton';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
 import SearchBox from '@SearchBox';
-import NavLinks from './NavLinks';
 
 export default {
   components: {
     SidebarButton,
-    NavLinks,
     SearchBox,
     AlgoliaSearchBox,
+    ThemeSwitcher,
   },
   computed: {
     algolia() {
@@ -69,7 +69,7 @@ $navbar-horizontal-padding = 1.5rem;
     display: inline-block;
     height: 100%;
   }
-  
+
   .logo {
     height: 100%;
     width: auto;
@@ -90,12 +90,6 @@ $navbar-horizontal-padding = 1.5rem;
       vertical-align: top;
     }
   }
-  
-  .nav-links {
-    .nav-item, .repo-link {
-      margin-left: 10px !important;
-    }
-  }
 
   .search-box {
     margin-right: 0 !important;
@@ -108,10 +102,54 @@ $navbar-horizontal-padding = 1.5rem;
 
 @media (max-width: $MQMobile) {
   .navbar {
-    padding-left: 4rem;
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+    border-bottom-width: 0;
+
+    .sidebar-button, .home-link {
+      position: relative;
+    }
+
+    .sidebar-button {
+      display: inline-table;
+      top: 0;
+      left: -0.5rem;
+    }
+
+    .home-link {
+      text-align: center;
+    }
+
+    .links {
+      position: static;
+      right: 0;
+      top: 0;
+
+      .search-box {
+        background-color: var(--bg-color);
+        border-bottom: 1px solid var(--bg-border-color);
+        position: absolute;
+        top: $navbarHeight;
+        left: 0;
+        right: 0;
+        margin: 0 auto;
+        z-index: 999;
+
+        .algolia-autocomplete {
+          margin: 0 1.5rem 1rem;
+
+          input {
+            width: 60%;
+            margin: 0 auto;
+          }
+        }
+      }
+    }
 
     .logo {
       height: $navbarHeight - 1.8rem;
+      margin: 0 auto;
       vertical-align: middle;
     }
 

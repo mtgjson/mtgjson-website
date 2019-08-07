@@ -1,7 +1,7 @@
 <template lang="pug">
   aside.sidebar
-    NavLinks
     Version.version-link
+    NavLinks
     slot(name="top")
     SidebarLinks(:depth="0" :items="items")
     slot(name="bottom")
@@ -57,9 +57,11 @@ export default {
   }
 
   .version-link {
-    padding: 25px 25px 0;
+    padding: 1.5rem;
+    width: 100%;
+    // border-bottom: 1px solid var(--bg-border-color);
   }
-  
+
   ul {
     margin: 0;
     list-style-type: none;
@@ -70,20 +72,8 @@ export default {
   }
 
   .nav-links {
-    display: none;
-    border-bottom: 1px solid var(--bg-dark-color);
-    padding: 1.5rem 1.5rem 1rem 1.5rem;
-
-    .nav-item, .repo-link {
-      display: flex;
-      margin-bottom: 10px;
-      
-      a {
-        font-weight: 600;
-        font-size: 14px;
-        flex: auto;
-      }
-    }
+    // border-bottom: 1px solid var(--bg-border-color);
+    padding: 1.5rem;
   }
 }
 
@@ -91,9 +81,10 @@ export default {
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
+    top: $navbarHeight + 3rem;
 
     .nav-links {
-      display: block;
+      padding-left: 1.5rem;
 
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after {
         top: calc(1rem - 2px);

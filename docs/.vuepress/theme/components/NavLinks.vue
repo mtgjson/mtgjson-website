@@ -1,6 +1,7 @@
 <template lang="pug">
   nav.nav-links(v-if="userLinks.length || repoLink")
-    div.nav-item(
+    h6 Connect With Us
+    .nav-item(
       v-for="item in userLinks"
       :key="item.link")
       DropdownLink(
@@ -97,52 +98,82 @@ export default {
 
 <style lang="stylus">
 .nav-links {
-  display: inline-block;
+  position: relative;
+  display: inline-flex;
+  flex-wrap: wrap;
+  width: 100%;
 
-  a {
-    line-height: 1.4rem;
-    color: inherit;
-
-    &:hover, &.router-link-active {
-      color: var(--accent-color);
-    }
+  h6 {
+    flex: 0 0 100%;
+    margin-bottom: 1rem;
   }
 
   .nav-item {
     position: relative;
-    display: inline-block;
-    margin-left: 1.5rem;
-    line-height: 2rem;
+    margin-left: 10px;
+    flex: none;
 
-    &:first-child {
+    &:first-of-type {
       margin-left: 0;
     }
-  }
 
-  .repo-link {
-    margin-left: 1.5rem;
-  }
-}
+    a {
+      text-align: center;
+      display: block;
+      margin: 0 auto;
+      height: 25px;
+      width: 25px;
 
-@media (max-width: $MQMobile) {
-  .nav-links {
-    .nav-item, .repo-link {
-      margin-left: 0;
+      &::before {
+        content: '';
+        height: 25px;
+        width: 25px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        right: 0;
+        bottom: 0;
+        margin: 0 auto;
+        background-position: center;
+        background-size: cover
+      }
     }
-  }
-}
 
-@media (min-width: $MQMobile) {
-  .nav-links a {
-    &:hover, &.router-link-active {
-      color: var(--text-color);
+    &:nth-of-type(3) { // Github
+      a {
+        &::before {
+          border: 2px solid var(--light-only-dark);
+          border-radius: 4px;
+          background-color: var(--light-only-dark);
+          background-image: url('/images/logo-github.svg');
+          width: 22px;
+          height: 22px;
+          top: -1px;
+        }
+      }
     }
-  }
 
-  .nav-item > a:not(.external) {
-    &:hover, &.router-link-active {
-      margin-bottom: -2px;
-      border-bottom: 2px solid var(--accent-color);
+    &:nth-of-type(1) { // Discord
+      a {
+        &,
+        &::before {
+          width: 30px;
+          height: 30px;
+        }
+        &::before {
+          top: -2px;
+          background-image: url('/images/discord-logo.svg');
+        }
+      }
+    }
+
+    &:nth-of-type(2) { // Patreon
+      a {
+
+        &::before {
+          background-image: url('/images/patreon-logo.svg');
+        }
+      }
     }
   }
 }

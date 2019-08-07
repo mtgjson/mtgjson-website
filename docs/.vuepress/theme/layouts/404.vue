@@ -1,41 +1,32 @@
-<template>
-  <div
-    class="theme-container"
+<template lang="pug">
+  .theme-container(
     :class="pageClasses"
     @touchstart="onTouchStart"
-    @touchend="onTouchEnd"
-  >
-    <Navbar
+    @touchend="onTouchEnd")
+
+    Navbar(
       v-if="shouldShowNavbar"
-      @toggle-sidebar="toggleSidebar"
-    />
+      @toggle-sidebar="toggleSidebar")
 
-    <div
-      class="sidebar-mask"
-      @click="toggleSidebar(false)"
-    ></div>
+    .sidebar-mask(
+      @click="toggleSidebar(false)")
 
-    <Sidebar
+    Sidebar(
       :items="sidebarItems"
-      @toggle-sidebar="toggleSidebar"
-    >
-      <slot
+      @toggle-sidebar="toggleSidebar")
+      
+      slot(
         name="sidebar-top"
-        slot="top"
-      />
-      <slot
+        slot="top")
+      slot(
         name="sidebar-bottom"
-        slot="bottom"
-      />
-    </Sidebar>
+        slot="bottom")
 
-    <div class="page">
-      <div class="content default">
-        <h1>Sorry, we can't find this page...</h1>
-        <p>Go back to your previous page, check the URL or check out one of the helpful links in the page navigation.</p>
-      </div>
-    </div>
-  </div>
+    .page
+      .content__default
+        h1 Sorry, we can't find this page...
+        p Go back to your previous page, check the URL or check out one of the helpful links in the page navigation.
+
 </template>
 
 <script>
