@@ -20,16 +20,16 @@ export default async ({ Vue }) => {
   Vue.prototype.$sets = [];
 
   // Set user's last theme
-  try {
-    if (window && window.localStorage) {
-      const savedTheme = window.localStorage.getItem('theme');
-      const lightTheme = 'light';
+  // try {
+  //   if (window && window.localStorage) {
+  //     const savedTheme = window.localStorage.getItem('theme');
+  //     const lightTheme = 'light';
 
-      if (savedTheme === lightTheme) {
-        document.body.classList.add(lightTheme);
-      }
-    }
-  } catch (err) {}
+  //     if (savedTheme === lightTheme) {
+  //       document.body.classList.add(lightTheme);
+  //     }
+  //   }
+  // } catch (err) {}
 
   try {
     axios

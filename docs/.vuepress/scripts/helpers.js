@@ -61,5 +61,5 @@ export default {
       // integer equivilent: true => 1; false => 0
       return config.desc * (a < b ? -1 : +(a > b));
     });
-  },
+  }
 };
