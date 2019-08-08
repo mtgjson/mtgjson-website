@@ -60,6 +60,11 @@ export default {
       downloadDirectory: 'json',
     };
   },
+  computed: {
+    filtered() {
+      return this.filteredSets;
+    }
+  },
   mounted() {
     this.defaultSets = this.$sets;
     this.filteredGroups = Array.from(new Set(this.defaultSets.map(cur => cur.type)));
@@ -69,11 +74,6 @@ export default {
     setFilter({currentTarget}) {
       this.filterKey = currentTarget ? currentTarget.value : '';
       this.filteredSets = this.$helpers.filter(this.filterKey, this.defaultSets);
-    }
-  },
-  computed: {
-    filtered() {
-      return this.filteredSets;
     }
   },
 };

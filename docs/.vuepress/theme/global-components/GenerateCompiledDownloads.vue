@@ -62,15 +62,18 @@ export default {
     };
   },
   created(){
-    for(let file in this.files){
-      const example = this.files[file].example;
-
-      if(example.includes('\"')){
-        this.files[file].example = example.split('\"')[1]; // remove quotes
+    let files = this.files;
+    
+    // Remove quotes
+    for(let file in files){
+      if (hasOwnProperty.call(files, file)) {
+        const { example } = files[file];
+        
+        files[file].example = example.replace(/['"]+/g, '');
       }
     }
 
-    this.files = new this.$landcycle(this.files).schema;
+    this.files = new this.$landcycle(files).schema;
   }
 };
 </script>

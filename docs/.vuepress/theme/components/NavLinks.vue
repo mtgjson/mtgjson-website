@@ -20,12 +20,13 @@
 </template>
 
 <script>
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import DropdownLink from './DropdownLink.vue';
 import { resolveNavLinkItem } from '../util';
 import NavLink from './NavLink.vue';
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: { NavLink, DropdownLink, ThemeSwitcher },
   computed: {
     userNav() {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];
@@ -72,10 +73,14 @@ export default {
       const { repo } = this.$site.themeConfig;
       if (repo) {
         return /^https?:/.test(repo) ? repo : `https://github.com/${repo}`;
+      } else {
+        return '';
       }
     },
     repoLabel() {
-      if (!this.repoLink) return;
+      if (!this.repoLink) {
+        return;
+      }
       if (this.$site.themeConfig.repoLabel) {
         return this.$site.themeConfig.repoLabel;
       }
@@ -99,80 +104,41 @@ export default {
 <style lang="stylus">
 .nav-links {
   position: relative;
-  display: inline-flex;
-  flex-wrap: wrap;
-  width: 100%;
 
   h6 {
-    flex: 0 0 100%;
-    margin-bottom: 1rem;
+    margin-bottom: 10px;
   }
 
   .nav-item {
     position: relative;
-    margin-left: 10px;
-    flex: none;
-
-    &:first-of-type {
-      margin-left: 0;
-    }
+    display: block;
+    margin-left: 1.5rem;
 
     a {
-      text-align: center;
+      font-size: 14px;
+      line-height: 1.75rem;
       display: block;
-      margin: 0 auto;
-      height: 25px;
-      width: 25px;
+      font-weight: bold;
+      color: var(--text-color);
 
-      &::before {
-        content: '';
-        height: 25px;
-        width: 25px;
-        position: absolute;
-        left: 0;
-        top: 0;
-        right: 0;
-        bottom: 0;
-        margin: 0 auto;
-        background-position: center;
-        background-size: cover
+      // margin: 0 auto;
+      // height: 25px;
+      // width: 25px;
+      svg {
+        // display: none;
+        margin-left: 3px;
       }
     }
 
-    &:nth-of-type(3) { // Github
+    &:nth-of-type(1) {
       a {
-        &::before {
-          border: 2px solid var(--light-only-dark);
-          border-radius: 4px;
-          background-color: var(--light-only-dark);
-          background-image: url('/images/logo-github.svg');
-          width: 22px;
-          height: 22px;
-          top: -1px;
-        }
+        color: var(--discord-color) !important;
       }
     }
 
-    &:nth-of-type(1) { // Discord
+    &:nth-of-type(2) {
       a {
-        &,
-        &::before {
-          width: 30px;
-          height: 30px;
-        }
-        &::before {
-          top: -2px;
-          background-image: url('/images/discord-logo.svg');
-        }
-      }
-    }
-
-    &:nth-of-type(2) { // Patreon
-      a {
-
-        &::before {
-          background-image: url('/images/patreon-logo.svg');
-        }
+        color: var(--patreon-color);
       }
     }
   }

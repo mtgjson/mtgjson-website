@@ -5,13 +5,6 @@
     Content
 
     footer.page-edit
-      .edit-link(v-if="editLink")
-        a(
-          :href="editLink"
-          target="_blank"
-          rel="noopener noreferrer") {{ editLinkText }}
-        OutboundLink
-
       .last-updated(v-if="lastUpdated")
         span.prefix {{ lastUpdatedText }}: 
         span.time {{ lastUpdated }}
@@ -72,7 +65,7 @@ export default {
     prev() {
       const prev = this.$page.frontmatter.prev;
       if (prev === false) {
-        return;
+        return undefined;
       } else if (prev) {
         return resolvePage(this.$site.pages, prev, this.$route.path);
       } else {
@@ -82,41 +75,12 @@ export default {
     next() {
       const next = this.$page.frontmatter.next;
       if (next === false) {
-        return;
+        return undefined;
       } else if (next) {
         return resolvePage(this.$site.pages, next, this.$route.path);
       } else {
         return resolveNext(this.$page, this.sidebarItems);
       }
-    },
-    editLink() {
-      if (this.$page.frontmatter.editLink === false) {
-        return;
-      }
-      const {
-        repo,
-        editLinks,
-        docsDir = '',
-        docsBranch = 'master',
-        docsRepo = repo,
-      } = this.$site.themeConfig;
-
-      let path = normalize(this.$page.path);
-      if (endingSlashRE.test(path)) {
-        path += 'README.md';
-      } else {
-        path += '.md';
-      }
-      if (docsRepo && editLinks) {
-        return this.createEditLink(repo, docsRepo, docsDir, docsBranch, path);
-      }
-    },
-    editLinkText() {
-      return (
-        this.$themeLocaleConfig.editLinkText ||
-        this.$site.themeConfig.editLinkText ||
-        `Edit this page`
-      );
     },
   },
   methods: {
@@ -182,10 +146,29 @@ function flattern(items, res) {
 @require '../styles/wrapper.styl';
 
 .page {
-  padding-top: $navbarHeight;
-  padding-bottom: 2rem;
+  position: relative;
+  z-index: 1;
+  padding-top: 1.5rem;
+  padding-bottom: 5rem;
+  padding-top: $navbarHeight + 3rem;
   padding-left: $sidebarWidth;
   background-color: var(--bg-dark-color);
+  margin-top: 1px;
+
+  .options {
+    @extend $wrapper;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    &-wrap {
+      left: $sidebarWidth;
+      max-width: $contentWidth;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
 
 .page-edit {
@@ -225,10 +208,7 @@ function flattern(items, res) {
 
   .inner {
     max-width: $contentWidth;
-    min-height: 2rem;
-    margin-top: 0;
-    border-top: 1px solid var(--bg-dark-color);
-    padding-top: 1rem;
+    margin-bottom: 0;
     overflow: auto; // clear float
   }
 

@@ -48,13 +48,13 @@ export default {
       deckDirectory: 'json/decks',
     };
   },
-  mounted() {
-    this.defaultDecks = this.$decks;
-  },
   computed: {
     decks() {
       return this.defaultDecks;
     },
+  },
+  mounted() {
+    this.defaultDecks = this.$decks;
   },
 };
 </script>

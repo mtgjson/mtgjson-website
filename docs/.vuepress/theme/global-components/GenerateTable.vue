@@ -28,23 +28,23 @@
         //- Property Name
         .schema-data--table-item
           .heading
-            p Name
+            p(title="The name of the property") Name
           .name
             a(:href="`#${name}`")
-              h6 {{ name }}
+              h6(:title="data.description") {{ name }}
 
         //- Property Type
         .schema-data--table-item
           .heading
-            p Type
+            p(title="The type of the property") Type
           .type
-            p
+            p(:title="`Property is of type: ${data.type}`")
               em {{ data.type }}
 
         //- Property Introduction
         .schema-data--table-item(v-if="data.introduced")
           .heading
-            p Introduced
+            p(title="When the property was introduced") Introduced
           .introduced
             p
               em {{ data.introduced }}
@@ -52,7 +52,7 @@
         //- Property Example
         .schema-data--table-item
           .heading
-            p Example
+            p(title="An example of the property value") Example
           .example
             p
               pre(v-html="data.example")
@@ -60,14 +60,14 @@
         //- Property Description
         .schema-data--table-item
           .heading
-            p Description
+            p(title="The description of the property and its value") Description
           .description
             p(v-html="data.description")
 
         //- Property Attributes
         .schema-data--table-item(v-if="data.attributes")
           .heading
-            p Attributes
+            p(title="Any attributes of the property and its value") Attributes
           .attributes
             .attribute(
               v-for="(attribute, key) in data.attributes"
@@ -87,6 +87,49 @@ export default {
       willShowMore: true,
     };
   },
+  computed: {
+    showIndex() {
+      return !Object.keys(this.filteredSchema).includes('...');
+    },
+    filteredAttributes() {
+      // Store the schema attributes for properties
+      const schema = this.filteredSchema;
+      let attributes = [];
+
+      for (let name in schema) {
+        if (hasOwnProperty.call(schema, name)) {
+          const field = schema[name];
+
+          if (field.attributes) {
+            attributes = attributes.concat(field.attributes);
+          }
+        }
+      }
+
+      return new Set(attributes.sort());
+    },
+    filteredSchema() {
+      const schema = this.schema;
+      let newSchema = undefined;
+
+      // Logic to filter down the card schema for AllCards
+      if (this.$page.frontmatter.title === 'AllCards') {
+        newSchema = {};
+
+        for (let name in schema) {
+          if (hasOwnProperty.call(schema, name)) {
+            const field = schema[name];
+
+            if (field.attributes && field.attributes.includes('atomic')) {
+              newSchema[name] = field;
+            }
+          }
+        }
+      }
+
+      return newSchema || schema;
+    },
+  },
   created() {
     const schema = require(`../../public/schemas/${
       this.$page.frontmatter.schema
@@ -95,62 +138,26 @@ export default {
     this.showMore = Object.keys(schema).length > 4;
     this.schema = new this.$landcycle(schema).schema;
   },
-  computed: {
-    showIndex() {
-      return !Object.keys(this.filteredSchema).includes('...');
-    },
-    filteredAttributes() {
-      // Store the schema attributes for properties
-      let attributes = [];
-      for (let name in this.filteredSchema) {
-        const field = this.filteredSchema[name];
-
-        if (field.attributes) {
-          attributes = attributes.concat(field.attributes);
-        }
-      }
-
-      return new Set(attributes.sort());
-    },
-    filteredSchema() {
-      let schema = undefined;
-
-      // Logic to filter down the card schema for AllCards
-      if (this.$page.frontmatter.title === 'AllCards') {
-        schema = {};
-
-        for (let name in this.schema) {
-          const field = this.schema[name];
-
-          if (field.attributes && field.attributes.includes('atomic')) {
-            schema[name] = field;
-          }
-        }
-      }
-
-      return schema || this.schema;
-    },
-  },
   methods: {
     toggleIndex() {
       this.willShowMore = !this.willShowMore;
     },
     getTitle(attribute) {
       switch (attribute) {
-        case 'atomic':
-          return 'Property available in AllCards JSON';
-        case 'optional':
-          return 'Property omitted when value returns a falsey or expected value';
-        case 'deprecated':
-          return 'Property will be removed in a future major or minor version release';
-        case 'decks':
-          return 'Property only available in an Individual Deck JSON';
-        case 'nullable':
-          return 'Property may return a null value';
-        case 'stale':
-          return 'Property may return an undocumented value';
-        default:
-          break;
+      case 'atomic':
+        return 'Property available in AllCards JSON';
+      case 'optional':
+        return 'Property omitted when value returns a falsey or expected value';
+      case 'deprecated':
+        return 'Property will be removed in a future major or minor version release';
+      case 'decks':
+        return 'Property only available in an Individual Deck JSON';
+      case 'nullable':
+        return 'Property may return a null value';
+      case 'stale':
+        return 'Property may return an undocumented value';
+      default:
+        break;
       }
     },
   },
@@ -228,7 +235,7 @@ pre {
 
   &.atomic {
     &::before {
-      background-color: var(--accent-color);
+      background-color: var(--blue-color);
     }
   }
 
@@ -258,7 +265,7 @@ pre {
 
   &.stale {
     &::before {
-      background-color: var(--light-gray-color);
+      background-color: var(--medium-gray-color);
     }
   }
 }
@@ -407,11 +414,22 @@ pre {
           display: flex;
           align-items: center;
 
+          & > * {
+            cursor: help;
+          }
+
           & + * {
             padding: 7px 13px;
             display: flex;
             align-items: center;
             grid-column: span 1;
+          }
+        }
+
+        .name,
+        .type {
+          & > * {
+            cursor: help;
           }
         }
 
@@ -430,7 +448,7 @@ pre {
     &-data {
       &--table {
         border-left-width: 1px;
-        
+
         &-item {
           grid-template-columns: 1fr;
 

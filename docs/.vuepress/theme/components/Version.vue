@@ -1,7 +1,7 @@
 <template lang="pug">
   div.version(v-if="version")
     router-link.version-number(
-      :to="`/changelog`") Build: {{ version.version }}
+      :to="`/changelog`") {{ version.version }}
 </template>
 
 <script>
@@ -16,6 +16,11 @@ export default {
       },
     };
   },
+  computed: {
+    version() {
+      return this.defaultVersion;
+    },
+  },
   mounted() {
     axios
       .get('https://mtgjson.com/json/version.json')
@@ -25,11 +30,6 @@ export default {
       .catch(err => {
         console.error(err);
       });
-  },
-  computed: {
-    version() {
-      return this.defaultVersion;
-    },
   },
 };
 </script>

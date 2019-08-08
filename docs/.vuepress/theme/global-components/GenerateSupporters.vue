@@ -104,9 +104,9 @@ export default {
 
       const totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1;
       if (totalMonths === 1) {
-        return `(1\&nbsp;Month)`;
+        return `(1 Month)`;
       }
-      return `(${totalMonths}\&nbsp;Months)`;
+      return `(${totalMonths} Months)`;
     },
   },
 };

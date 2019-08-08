@@ -9,7 +9,7 @@ module.exports = route => {
 
   return (
     files
-      .filter(file => !/(^|\/)\.[^\/\.]/g.test(file))
+      .filter(file => !/(^|\/)\.[^.]/g.test(file))
       .filter(file => file !== 'README.md')
       .map(file => (file = `${route}${file}/`))
   );

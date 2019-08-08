@@ -34,12 +34,16 @@ blockquote, .custom-block {
   }
 
   &.tip {
+    border-color: var(--accent-color);
+
     .custom-block-title {
       color: var(--accent-color);
     }
   }
 
   &.warning {
+    border-color: var(--yellow-color);
+
     .custom-block-title {
       color: var(--yellow-color);
     }
@@ -48,6 +52,7 @@ blockquote, .custom-block {
 
 blockquote {
   color: var(--gray-color);
+  border-color: var(--accent-color);
   
   &:hover {
     border-color: var(--accent-color);

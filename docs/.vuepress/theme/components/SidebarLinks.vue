@@ -32,13 +32,13 @@ export default {
       openGroupIndex: 0,
     };
   },
-  created() {
-    this.refreshIndex();
-  },
   watch: {
     $route() {
       this.refreshIndex();
     },
+  },
+  created() {
+    this.refreshIndex();
   },
   methods: {
     refreshIndex() {

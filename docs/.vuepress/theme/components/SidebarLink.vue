@@ -31,7 +31,7 @@ export default {
       $themeLocaleConfig.sidebarDepth ||
       $themeConfig.sidebarDepth;
 
-    const maxDepth = configDepth == null ? 1 : configDepth;
+    const maxDepth = configDepth === null ? 1 : configDepth;
 
     const displayAllHeaders =
       $themeLocaleConfig.displayAllHeaders || $themeConfig.displayAllHeaders;
@@ -73,7 +73,7 @@ function renderLink(h, to, text, active) {
 }
 
 function renderChildren(h, children, path, route, maxDepth, depth = 1) {
-  if (!children || depth > maxDepth) return null;
+  if (!children || depth > maxDepth) {return null;}
   return h(
     'ul',
     { class: 'sidebar-sub-headers' },
@@ -90,10 +90,10 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 
 <style lang="stylus">
 a.sidebar-link {
-  font-size: 14px;
+  font-size: 16px;
+  font-weight: bold;
   display: inline-block;
   color: var(--text-color);
-  padding: 0 25px;
   line-height: 2;
   width: 100%;
   box-sizing: border-box;

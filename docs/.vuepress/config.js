@@ -41,18 +41,20 @@ module.exports = {
         hitsPerPage: 10
       }
     },
-    searchMaxSuggestions: 20,
+    searchMaxSuggestions: 10,
     displayAllHeaders: true,
+    sidebarDepth: 1,
     lastUpdated: 'Last Updated',
     nav: [
-      { text: '', link: 'https://discord.gg/74GUQDE' },
-      { text: '', link: 'https://www.patreon.com/MTGJSON' },
-      { text: '', link: 'https://github.com/mtgjson' },
+      { text: 'Discord', link: 'https://discord.gg/74GUQDE' },
+      { text: 'Patreon', link: 'https://www.patreon.com/MTGJSON' },
+      { text: 'GitHub', link: 'https://github.com/mtgjson' },
     ],
-    logo: '/images/logo.svg',
+    title: "MTGJSON",
+    logo: '/images/logo-3.svg',
     sidebar: [
       {
-        title: 'MTGJSON',
+        title: 'About Us',
         path: '/',
         collapsable: false,
       },

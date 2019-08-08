@@ -3,7 +3,7 @@
     :class="pageClasses"
     @touchstart="onTouchStart"
     @touchend="onTouchEnd")
-    
+
     Navbar(v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar")
 
     .sidebar-mask(@click="toggleSidebar(false)")

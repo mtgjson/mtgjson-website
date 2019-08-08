@@ -30,15 +30,15 @@ import DropdownTransition from './DropdownTransition.vue';
 
 export default {
   components: { NavLink, DropdownTransition },
-  data() {
-    return {
-      open: false,
-    };
-  },
   props: {
     item: {
       required: true,
     },
+  },
+  data() {
+    return {
+      open: false,
+    };
   },
   methods: {
     toggle() {

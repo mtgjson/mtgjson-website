@@ -7,25 +7,15 @@
 <style lang="stylus">
 .sidebar-button {
   cursor: pointer;
-  display: none;
   width: 24px;
   height: 24px;
-  position: absolute;
-  padding: 5px;
-  top: 5px;
   left: 1rem;
 
   .icon {
     display: block;
     width: 24px;
     height: 24px;
-    color: var(--text-color);
-  }
-}
-
-@media (max-width: $MQMobile) {
-  .sidebar-button {
-    display: block;
+    color: var(--accent-color);
   }
 }
 </style>

@@ -34,7 +34,7 @@ export default {
   filter: (filter, dataToFilter) => {
     return filter.length === 0
       ? // No filter, return all data
-        dataToFilter
+      dataToFilter
       : dataToFilter.filter(cur => cur.type === filter);
   },
   // A little different than the source but works
@@ -49,7 +49,7 @@ export default {
     };
 
     const getProp = function(props) {
-      let isObject = props != null && typeof props === 'object';
+      let isObject = props !== null && typeof props === 'object';
       let isProp = isObject && this.prop in props;
       return isProp ? props[this.prop] : props;
     };

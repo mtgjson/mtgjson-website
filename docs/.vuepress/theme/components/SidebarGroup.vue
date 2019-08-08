@@ -36,8 +36,8 @@ import DropdownTransition from './DropdownTransition.vue';
 
 export default {
   name: 'SidebarGroup',
-  props: ['item', 'open', 'collapsable', 'depth'],
   components: { DropdownTransition },
+  props: ['item', 'open', 'collapsable', 'depth'],
   // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
   beforeCreate() {
     this.$options.components.SidebarLinks = require('./SidebarLinks.vue').default;
@@ -47,23 +47,11 @@ export default {
 </script>
 
 <style lang="stylus">
-.sidebar-group {
-  .sidebar-group {
-    padding-left: 25px;
-  }
-
-  // refine styles of nested sidebar groups
-  &.is-sub-group {
-    padding-left: 0;
-  }
-}
-
 .sidebar-heading {
   color: var(--text-color);
   transition: color 0.15s ease;
   font-weight: bold;
   line-height: 2;
-  padding: 0 25px;
   cursor: pointer;
   margin: 0;
 

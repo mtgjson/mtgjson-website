@@ -4,10 +4,6 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd")
 
-    Navbar(
-      v-if="shouldShowNavbar"
-      @toggle-sidebar="toggleSidebar")
-
     .sidebar-mask(
       @click="toggleSidebar(false)")
 
@@ -30,14 +26,13 @@
 </template>
 
 <script>
-import Home from '../components/Home.vue'
-import Navbar from '../components/Navbar.vue'
-import Page from '../components/Page.vue'
-import Sidebar from '../components/Sidebar.vue'
+import Home from '../components/Home'
+import Page from '../components/Page'
+import Sidebar from '../components/Sidebar'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Home, Page, Sidebar },
 
   data () {
     return {

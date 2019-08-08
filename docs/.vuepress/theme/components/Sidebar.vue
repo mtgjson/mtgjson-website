@@ -1,69 +1,79 @@
 <template lang="pug">
   aside.sidebar
-    Version.version-link
-    NavLinks
-    slot(name="top")
-    SidebarLinks(:depth="0" :items="items")
-    slot(name="bottom")
+    .sidebar-wrap
+      router-link.home-meta(:to="$localePath")
+        Logo.home-meta--logo
+        .home-meta--link
+          h3 {{ $siteTitle }}
+          Version.version-link
+
+      AlgoliaSearchBox(
+        v-if="isAlgoliaSearch"
+        :options="algolia")
+      SearchBox(
+        v-else-if="$site.themeConfig.search !== false")
+
+      NavLinks
+
+      slot(name="top")
+
+      SidebarLinks(:depth="0" :items="items")
+
+      slot(name="bottom")
+
+
 </template>
 
 <script>
 import Version from './Version';
 import SidebarLinks from './SidebarLinks';
+import AlgoliaSearchBox from '@AlgoliaSearchBox';
+import SearchBox from '@SearchBox';
 import NavLinks from './NavLinks';
+import Logo from './Logo';
 
 export default {
   name: 'Sidebar',
-  components: { Version, SidebarLinks, NavLinks },
+  components: {
+    Version,
+    SidebarLinks,
+    Logo,
+    NavLinks,
+    SearchBox,
+    AlgoliaSearchBox,
+  },
   props: ['items'],
+
+  computed: {
+    algolia() {
+      return (
+        this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
+      );
+    },
+    isAlgoliaSearch() {
+      return this.algolia && this.algolia.apiKey && this.algolia.indexName;
+    },
+  },
 };
 </script>
 
 <style lang="stylus">
 .sidebar {
-  font-size: 16px;
   background-color: var(--bg-color);
   width: $sidebarWidth;
-  position: fixed;
-  z-index: 10;
-  margin: 0;
-  top: $navbarHeight;
+  z-index: 2;
+  top: 0;
   left: 0;
   bottom: 0;
-  box-sizing: border-box;
-  border-right: 1px solid var(--bg-border-color);
-  overflow-y: auto;
+  position: fixed;
+  padding: 0 2rem;
+  overflow-x: auto;
 
-  & > .sidebar-links {
-    padding: 25px 0 100px;
-
-    // First link as a header
-    & > li > a.sidebar-link {
-      font-size: 1em;
-      line-height: 2;
-      font-weight: bold;
-    }
-
-    & > li:not(:first-child) {
-      margin-top: 0.75rem;
-    }
-
-    .is-sub-group {
-      .sidebar-heading {
-        font-weight: bold;
-        font-size: 14px;
-      }
-    }
+  ol, ul {
+    margin-bottom: 0;
   }
 
-  .version-link {
-    padding: 1.5rem;
-    width: 100%;
-    // border-bottom: 1px solid var(--bg-border-color);
-  }
-
-  ul {
-    margin: 0;
+  li {
     list-style-type: none;
   }
 
@@ -71,9 +81,83 @@ export default {
     display: inline-block;
   }
 
-  .nav-links {
-    // border-bottom: 1px solid var(--bg-border-color);
-    padding: 1.5rem;
+  &-wrap {
+    position: relative;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-gap: 3rem;
+    padding: 4rem 0 4rem;
+    overflow: initial;
+
+    & > .sidebar-links {
+      padding-left: 0 !important;
+      margin-bottom: 0 !important;
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1.5rem;
+
+      & .sidebar-group-items {
+        margin-bottom: 0;
+        overflow: initial;
+      }
+
+      // First link as a header
+      & > li > a.sidebar-link {
+        font-size: 1em;
+        line-height: 2;
+        font-weight: bold;
+      }
+
+      .is-sub-group {
+        .sidebar-heading {
+          font-weight: bold;
+          font-size: 14px;
+          margin-top: 0;
+        }
+      }
+    }
+  }
+
+  .home-meta {
+    display: flex;
+    align-items: center;
+
+    &--link {
+      margin-left: 20px;
+    }
+
+    &--link {
+      h3 {
+        color: var(--text-color);
+        margin-bottom: 5px;
+        padding: 0;
+      }
+    }
+  }
+
+  .search-box {
+    position: static;
+    background-color: var(--bg-color);
+    width: 100%;
+    position: relative;
+    margin-right: 0;
+    text-align: center;
+    z-index: 999 !important;
+
+    .algolia-autocomplete {
+      display: grid !important;
+      grid-grid-template-columns: 1fr;
+
+      input {
+        left: 0 !important;
+        width: 100%;
+      }
+
+      .ds-dropdown-menu {
+        top: 30px !important;
+        position: relative;
+      }
+    }
   }
 }
 
@@ -81,18 +165,16 @@ export default {
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
-    top: $navbarHeight + 3rem;
+    top: $navbarHeight;
+
+    &-wrap {
+      padding-top: 3rem;
+    }
 
     .nav-links {
-      padding-left: 1.5rem;
-
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after {
         top: calc(1rem - 2px);
       }
-    }
-
-    & > .sidebar-links {
-      padding: 1rem 0;
     }
   }
 }

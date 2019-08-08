@@ -11,10 +11,13 @@
   --green-color: lightgreen;
   --red-color: salmon;
   --orange-color: #ef6c2f;
+  --blue-color: #85d3ff;
   --gray-color: #aaaaaa;
   --light-gray-color: #f6f8fa;
   --medium-gray-color: #eaecef;
   --dark-gray-color: #2d2d2d;
+  --discord-color: #7289da;
+  --patreon-color: #f96753;
   // Main theme colors
   --light-color: #ffffff;
   --dark-color: #212e3c;
@@ -29,7 +32,8 @@
   --bg-dark-color: var(--darkest-color);
   --shadow-color: var(--darkest-color);
   --blockquote-bg-color: var(--darker-color);
-  --search-bg-color: var(--medium-gray-color);
+  --search-bg-color: var(--darkest-color);
+  --search-text-color: var(--text-color);
   --light-only-dark: var(--dark-color);
   // --supporter-bg-color: var(--dark-color);
   // Data Presentation
@@ -56,24 +60,25 @@ body {
 
   &.light {
     // Main Color
-    --accent-color: #5da0c9;
+    --accent-color: #1e90ff;
     // Color Themes
     --text-color: var(--dark-color);
     --bg-color: var(--light-color);
     --bg-border-color: var(--medium-gray-color);
-    --bg-dark-color: var(--light-color);
-    --shadow-color: var(--light-gray-color);
-    --blockquote-bg-color: var(--light-gray-color);
+    --bg-dark-color: var(--light-gray-color);
+    --shadow-color: var(--medium-gray-color);
+    --search-bg-color: var(--medium-gray-color);
+    --search-text-color: var(--text-color);
+    --blockquote-bg-color: var(--medium-gray-color);
     // --supporter-bg-color: var(--bg-color);
     // Data Presentation
     --table-color: var(--text-color);
-    --table-bg-color: var(--bg-color);
+    --table-bg-color: var(--light-color);
     --table-heading-color: var(--light-gray-color);
     --table-border-color: var(--medium-gray-color);
     // Code colors
     --code-bg-color: #ffeeec;
     --code-text-color: #9b2e2e;
-
     background-color: var(--bg-color);
     color: var(--text-color);
   }
@@ -103,10 +108,6 @@ a {
     &:hover {
       transition: 0.25s color;
     }
-  }
-
-  svg {
-    display: none !important;
   }
 }
 
@@ -139,10 +140,10 @@ img {
 .search-box {
   input {
     background-color: var(--search-bg-color);
+    color: var(--search-text-color);
     border-width: 0 !important;
     padding: 0 0 0 35px;
     border-radius: 5px;
-    color: var(--dark-color);
     min-width: 10rem;
     // Prevent zoom on mobile with 16px. Bye bye for now.
     font-size: 12px !important;
@@ -156,7 +157,6 @@ img {
 
 .content__default {
   @extend $wrapper;
-  padding-top: 50px;
 
   & > * {
     max-width: $contentWidth;
@@ -178,30 +178,23 @@ img {
 
 .sidebar-group-items, .sidebar-sub-headers {
   .sidebar-link {
+    font-size: 14px;
+    font-weight: normal;
+
     &.active {
       position: relative;
-      font-weight: bold;
       color: var(--accent-color);
+    }
+  }
 
-      &::after {
-        content: '';
-        width: 5px;
-        border-radius: 5px 0 0 5px;
-        background-color: var(--accent-color);
-        height: 100%;
-        position: absolute;
-        right: 0;
-        top: 0;
-      }
+  .sidebar-sub-headers {
+    &:empty {
+      display: none;
     }
   }
 }
 
 @media (max-width: $MQMobile) {
-  .content__default {
-    padding-top: 25px;
-  }
-
   .theme-container {
     &.sidebar-open {
       .sidebar {
