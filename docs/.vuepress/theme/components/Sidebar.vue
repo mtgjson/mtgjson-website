@@ -1,7 +1,7 @@
 <template lang="pug">
   aside.sidebar
     .sidebar-wrap-fixed
-      ThemeSwitcher
+      //- Logo.sidebar-logo.desktop-hide
       AlgoliaSearchBox(
         v-if="isAlgoliaSearch"
         :options="algolia")
@@ -9,13 +9,8 @@
         v-else-if="$site.themeConfig.search !== false")
 
     .sidebar-wrap
-      router-link.home-meta(:to="$localePath")
-        Logo.home-meta--logo
-        .home-meta--link
-          h3 {{ $siteTitle }}
-          Version.version-link
 
-      NavLinks
+      NavLinks.desktop-hide
 
       slot(name="top")
 
@@ -27,24 +22,23 @@
 </template>
 
 <script>
-import ThemeSwitcher from '../global-components/ThemeSwitcher';
+import Logo from './Logo';
 import Version from './Version';
+import NavLinks from './NavLinks';
 import SidebarLinks from './SidebarLinks';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
 import SearchBox from '@SearchBox';
-import NavLinks from './NavLinks';
-import Logo from './Logo';
+// import Logo from './Logo';
 
 export default {
   name: 'Sidebar',
   components: {
     Version,
-    SidebarLinks,
-    Logo,
     NavLinks,
+    SidebarLinks,
     SearchBox,
+    Logo,
     AlgoliaSearchBox,
-    ThemeSwitcher,
   },
   props: ['items'],
 
@@ -66,23 +60,11 @@ export default {
   position: fixed;
   width: $sidebarWidth;
   z-index: 2;
-  top: 0;
+  top: $navbarHeight;
   left: 0;
   bottom: 0;
   overflow: visible;
   background-color: var(--bg-color);
-
-  ol, ul {
-    margin-bottom: 0;
-  }
-
-  li {
-    list-style-type: none;
-  }
-
-  a {
-    display: inline-block;
-  }
 
   &-wrap {
     display: grid;
@@ -90,13 +72,31 @@ export default {
     height: 100%;
     grid-gap: 2rem;
     overflow-y: auto;
-    padding: 0 2rem;
+    padding: 2rem 2rem 0;
 
     &-fixed {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: 1fr;
       padding: 1rem 2rem;
       border-bottom: 1px solid var(--bg-border-color);
+
+      .sidebar-logo {
+        margin-bottom: 1rem;
+
+        .logo-meta {
+          &--logo {
+            display: none;
+          }
+
+          &--link {
+            margin-left: 0;
+          }
+        }
+
+        .mobile-hide {
+          display: block !important;
+        }
+      }
     }
 
     & > *:last-child {
@@ -131,48 +131,6 @@ export default {
       }
     }
   }
-
-  .home-meta {
-    margin-top: 2rem;
-    display: flex;
-    align-items: center;
-
-    &--link {
-      margin-left: 20px;
-    }
-
-    &--link {
-      h3 {
-        color: var(--text-color);
-        margin-bottom: 5px;
-        padding: 0;
-      }
-    }
-  }
-
-  .search-box {
-    position: static;
-    background-color: var(--bg-color);
-    width: 100%;
-    margin-right: 0;
-    text-align: center;
-    z-index: 999 !important;
-
-    .algolia-autocomplete {
-      display: grid !important;
-      grid-grid-template-columns: 1fr;
-
-      input {
-        left: 0 !important;
-        width: 100%;
-      }
-
-      .ds-dropdown-menu {
-        top: 30px !important;
-        position: relative;
-      }
-    }
-  }
 }
 
 @media (max-width: $MQMobile) {
@@ -180,12 +138,12 @@ export default {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     top: $navbarHeight;
+  }
+}
 
-    .nav-links {
-      .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after {
-        top: calc(1rem - 2px);
-      }
-    }
+@media (min-width: $MQMobile) {
+  .hide {
+    display: none;
   }
 }
 </style>

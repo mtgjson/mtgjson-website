@@ -152,7 +152,7 @@ function flattern(items, res) {
   position: relative;
   z-index: 1;
   padding-bottom: 5rem;
-  padding-top: $navbarHeight + 2.75rem;
+  padding-top: $navbarHeight + 4rem;
   padding-left: $sidebarWidth;
   background-color: var(--bg-dark-color);
 

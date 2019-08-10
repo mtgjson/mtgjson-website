@@ -22,12 +22,13 @@ export default {
   },
   methods: {
     initialize(userOptions, lang) {
-      const { algoliaOptions = {} } = userOptions;
       Promise.all([
-        import('docsearch.js/dist/cdn/docsearch.min.css'),
-        import('docsearch.js/dist/cdn/docsearch.min.js'),
-      ]).then(docsearch => {
-        docsearch.default(
+        import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
+        import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css'),
+      ]).then(([docsearch]) => {
+        docsearch = docsearch.default;
+        const { algoliaOptions = {} } = userOptions;
+        docsearch(
           Object.assign({}, userOptions, {
             inputSelector: '#algolia-search-input',
             // #697 Make docsearch work well at i18n mode.
@@ -39,6 +40,9 @@ export default {
               },
               algoliaOptions
             ),
+            handleSelected: (input, event, suggestion) => {
+              this.$router.push(new URL(suggestion.url).pathname);
+            },
           })
         );
       });

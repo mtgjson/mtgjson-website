@@ -1,6 +1,5 @@
 <template lang="pug">
-  nav.nav-links(v-if="userLinks.length || repoLink")
-    h6 Connect With Us
+  nav.nav-links
     .nav-item(
       v-for="item in userLinks"
       :key="item.link")
@@ -17,6 +16,8 @@
       target="_blank"
       rel="noopener noreferrer") {{ repoLabel }}
       OutboundLink
+
+    ThemeSwitcher.mobile-hide
 </template>
 
 <script>
@@ -104,19 +105,17 @@ export default {
 <style lang="stylus">
 .nav-links {
   position: relative;
-
-  h6 {
-    margin-bottom: 10px;
-  }
+  display: flex;
+  align-items: center;
 
   .nav-item {
     position: relative;
-    display: block;
-    margin-left: 1.5rem;
+    display: inline-block;
+    line-height: 1.7rem;
+    margin-right: 1rem;
 
     a {
-      font-size: 14px;
-      line-height: 1.75rem;
+      font-size: 16px;
       display: block;
       font-weight: bold;
       color: var(--text-color);
@@ -125,7 +124,7 @@ export default {
       // height: 25px;
       // width: 25px;
       svg {
-        // display: none;
+        display: none;
         margin-left: 3px;
       }
     }

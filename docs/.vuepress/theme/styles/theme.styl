@@ -87,6 +87,18 @@ body {
 #app {
 }
 
+ol, ul {
+  margin-bottom: 0;
+}
+
+li {
+  list-style-type: none;
+}
+
+a {
+  display: inline-block;
+}
+
 ul, ol {
   padding-left: 25px;
 }
@@ -110,6 +122,12 @@ a {
     }
   }
 }
+
+.desktop-hide {
+  display: none !important;
+}
+
+.mobile-hide {}
 
 hr {
   border: 0;
@@ -141,12 +159,14 @@ img {
   input {
     background-color: var(--search-bg-color);
     color: var(--search-text-color);
-    border-width: 0 !important;
+    border-width: 0;
     padding: 0 0 0 35px;
     border-radius: 5px;
-    min-width: 10rem;
+    left: 0;
+    width: auto;
+    transition: all 0s;
     // Prevent zoom on mobile with 16px. Bye bye for now.
-    font-size: 12px !important;
+    font-size: 12px;
     font-weight: bold;
 
     &:focus {
@@ -191,5 +211,15 @@ img {
     &:empty {
       display: none;
     }
+  }
+}
+
+@media (max-width: $MQMobile) {
+  .desktop-hide {
+    display: block !important;
+  }
+
+  .mobile-hide {
+    display: none !important;
   }
 }

@@ -1,14 +1,15 @@
 <template lang="pug">
   header.navbar
     .navbar-options
-      SidebarButton.can-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-      Logo.logo.can-hide
-      ThemeSwitcher
+      SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
+      Logo
+      NavLinks.mobile-hide
+      ThemeSwitcher.desktop-hide
 </template>
 
 <script>
-import NavLinks from './NavLinks';
 import ThemeSwitcher from '../global-components/ThemeSwitcher';
+import NavLinks from './NavLinks';
 import SidebarButton from './SidebarButton';
 import Logo from './Logo';
 
@@ -33,31 +34,24 @@ export default {
 @require '../styles/wrapper.styl';
 
 .navbar {
-  display: none;
+  display: flex;
+  background-color: var(--bg-color);
   position: fixed;
   z-index: 9;
   top: 0;
   right: 0;
-  left: $sidebarWidth;
+  left: 0;
   height: $navbarHeight;
   align-items: center;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
   @extend $wrapper;
 
-  .logo {
-    width: 50px;
-  }
-
   &-options {
     width: 100%;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
-  }
-
-  .can-hide {
-    display: none;
   }
 }
 
@@ -73,18 +67,11 @@ export default {
     .sidebar-button {
       left: -0.5rem;
     }
-
-    .can-hide {
-      display: block;
-    }
   }
 }
 
 @media (max-width: $MQMobile) {
   .navbar {
-    display: flex;
-    background-color: var(--bg-color);
-
     &-options {
       max-width: $contentWidth;
     }
