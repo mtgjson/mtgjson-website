@@ -35,6 +35,19 @@ export default {
   mounted() {
     let savedTheme = undefined;
 
+    // Attempt to retrieve localStorage state
+    if (window && window.localStorage) {
+      const savedTheme = window.localStorage.getItem('theme');
+      if (savedTheme) {
+        // Apply the state to the button
+        const selectedTheme = document.querySelector(
+          `.theme-switcher--button[data-theme='${savedTheme}']`
+        );
+        // Apply the state overall
+        selectedTheme.click();
+      }
+    }
+
     this.activeTheme = savedTheme || this.activeTheme;
   },
   methods: {
@@ -43,7 +56,20 @@ export default {
       // Set state on body
       document.body.classList.remove(this.activeTheme);
       document.body.classList.add(newTheme);
-
+      // Change favicon to match
+      const oldLink = document.querySelector("link[rel*='icon']");
+      let link = document.createElement('link');
+      link.type = 'image/x-icon';
+      link.rel = 'shortcut icon';
+      link.href = `/favicon-${newTheme}.ico`;
+      // Don't clog up the <head> with cascade
+      oldLink.remove();
+      // Add new favicon
+      document.getElementsByTagName('head')[0].appendChild(link);
+      // Store state in localStorage
+      if (window && window.localStorage) {
+        window.localStorage.setItem('theme', newTheme);
+      }
       this.activeTheme = newTheme;
     },
   },

@@ -14,12 +14,13 @@ module.exports = {
   ga: 'UA-131358443-1',
   // Head Tags
   head: [
+    ['link', { rel: 'icon', href: '/favicon-dark.ico' }],
     // SEO Image
     [
       'meta',
       {
         property: 'og:image',
-        content: '/images/og_logo.png',
+        content: '/images/logo-mtgjson-thumbnail.png',
       },
     ],
     // Keyrun for set images

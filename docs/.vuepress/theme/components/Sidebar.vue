@@ -65,6 +65,7 @@ export default {
   bottom: 0;
   overflow: visible;
   background-color: var(--bg-color);
+  border-right: 1px solid var(--bg-border-color);
 
   &-wrap {
     display: grid;
@@ -75,8 +76,6 @@ export default {
     padding: 2rem 2rem 0;
 
     &-fixed {
-      display: grid;
-      grid-template-columns: 1fr;
       padding: 1rem 2rem;
       border-bottom: 1px solid var(--bg-border-color);
 
@@ -138,12 +137,6 @@ export default {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     top: $navbarHeight;
-  }
-}
-
-@media (min-width: $MQMobile) {
-  .hide {
-    display: none;
   }
 }
 </style>

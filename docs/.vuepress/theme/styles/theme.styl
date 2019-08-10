@@ -156,21 +156,25 @@ img {
 }
 
 .search-box {
+  margin-right: 0;
+  display: initial;
+
   input {
     background-color: var(--search-bg-color);
     color: var(--search-text-color);
     border-width: 0;
-    padding: 0 0 0 35px;
+    padding: 0;
+    padding-left: 32px;
     border-radius: 5px;
     left: 0;
-    width: auto;
+    width: 100%;
     transition: all 0s;
     // Prevent zoom on mobile with 16px. Bye bye for now.
     font-size: 12px;
     font-weight: bold;
 
     &:focus {
-      border-color: var(--accent-color);
+      width: 100%;
     }
   }
 }
