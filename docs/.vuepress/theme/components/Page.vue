@@ -2,6 +2,8 @@
   main.page
     slot(name="top")
 
+    //- ThemeSwitcher.page-theme-switcher
+
     Content
 
     footer.page-edit
@@ -26,8 +28,9 @@
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util';
-
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 export default {
+  components: { ThemeSwitcher },
   props: ['sidebarItems'],
   computed: {
     lastUpdated() {
@@ -148,12 +151,16 @@ function flattern(items, res) {
 .page {
   position: relative;
   z-index: 1;
-  padding-top: 1.5rem;
   padding-bottom: 5rem;
-  padding-top: $navbarHeight + 3rem;
+  padding-top: $navbarHeight + 2.75rem;
   padding-left: $sidebarWidth;
   background-color: var(--bg-dark-color);
-  margin-top: 1px;
+
+  .page-theme-switcher {
+    position: absolute;
+    left: $sidebarWidth + 48rem;
+    top: 1.25rem;
+  }
 
   .options {
     @extend $wrapper;
@@ -229,7 +236,12 @@ function flattern(items, res) {
 
 @media (max-width: $MQMobile) {
   .page {
+    padding-top: $navbarHeight + 3rem;
     padding-left: 0;
+  }
+
+  .page-theme-switcher {
+    display: none !important;
   }
 
   .page-edit {

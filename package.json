@@ -11,13 +11,12 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "test": "jest",
-    "test:watch": "jest --watch",
-    "test:dev": "concurrently \"yarn dev\" \"yarn test:watch\"",
-    "test:build": "yarn test && yarn lint && yarn build && yarn delete:build",
     "lint": "yarn lint:js",
     "lint:js": "eslint --fix --ext .js,.vue docs/.vuepress",
-    "clean": "rm -rf node_modules && yarn cache clean",
+    "purge": "rm -rf node_modules && yarn cache clean",
+    "test": "jest && yarn build && yarn delete:build",
+    "test:watch": "jest --watch",
+    "test:dev": "concurrently \"yarn dev\" \"yarn test:watch\"",
     "delete:build": "rm -rf docs/.vuepress/dist",
     "heroku-postbuild": "yarn build"
   },
@@ -35,13 +34,13 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "vue-eslint-parser": "^6.0.4",
-    "vuepress": "^1.0.3",
+    "vuepress": "^1.0.2",
     "vuepress-plugin-container": "^2.0.1",
     "vuepress-plugin-feed": "^0.1.6"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "yarn test:build"
+      "pre-commit": "yarn test"
     }
   }
 }

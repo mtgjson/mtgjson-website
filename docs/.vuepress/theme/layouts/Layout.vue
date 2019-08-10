@@ -6,8 +6,6 @@
 
     Navbar(v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar")
 
-    .sidebar-mask(@click="toggleSidebar(false)")
-
     Sidebar(:items="sidebarItems" @toggle-sidebar="toggleSidebar")
       slot(name="sidebar-top" slot="top")
       slot(name="sidebar-bottom" slot="bottom")
@@ -119,3 +117,14 @@ export default {
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="../styles/theme.styl" lang="stylus"></style>
+<style lang="stylus">
+@media (max-width: $MQMobile) {
+  .theme-container {
+    &.sidebar-open {
+      .sidebar {
+        transform: translateX(0);
+      }
+    }
+  }
+}
+</style>

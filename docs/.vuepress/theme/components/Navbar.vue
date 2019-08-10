@@ -33,19 +33,20 @@ export default {
 @require '../styles/wrapper.styl';
 
 .navbar {
+  display: none;
   position: fixed;
   z-index: 9;
   top: 0;
   right: 0;
   left: $sidebarWidth;
   height: $navbarHeight;
-  background-color: var(--bg-color);
-  display: flex;
   align-items: center;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--bg-border-color);
   @extend $wrapper;
 
   .logo {
-    transform: scale(.7);
+    width: 50px;
   }
 
   &-options {
@@ -53,7 +54,6 @@ export default {
     display: flex;
     justify-content: flex-end;
     align-items: center;
-    max-width: $contentWidth;
   }
 
   .can-hide {
@@ -76,6 +76,17 @@ export default {
 
     .can-hide {
       display: block;
+    }
+  }
+}
+
+@media (max-width: $MQMobile) {
+  .navbar {
+    display: flex;
+    background-color: var(--bg-color);
+
+    &-options {
+      max-width: $contentWidth;
     }
   }
 }

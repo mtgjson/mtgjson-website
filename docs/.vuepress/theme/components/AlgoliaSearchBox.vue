@@ -6,8 +6,6 @@
 </template>
 
 <script>
-import 'docsearch.js/dist/cdn/docsearch.min.css';
-import * as docsearch from 'docsearch.js/dist/cdn/docsearch.min.js';
 export default {
   props: ['options'],
   watch: {
@@ -25,20 +23,25 @@ export default {
   methods: {
     initialize(userOptions, lang) {
       const { algoliaOptions = {} } = userOptions;
-      docsearch.default(
-        Object.assign({}, userOptions, {
-          inputSelector: '#algolia-search-input',
-          // #697 Make docsearch work well at i18n mode.
-          algoliaOptions: Object.assign(
-            {
-              facetFilters: [`lang:${lang}`].concat(
-                algoliaOptions.facetFilters || []
-              ),
-            },
-            algoliaOptions
-          ),
-        })
-      );
+      Promise.all([
+        import('docsearch.js/dist/cdn/docsearch.min.css'),
+        import('docsearch.js/dist/cdn/docsearch.min.js'),
+      ]).then(docsearch => {
+        docsearch.default(
+          Object.assign({}, userOptions, {
+            inputSelector: '#algolia-search-input',
+            // #697 Make docsearch work well at i18n mode.
+            algoliaOptions: Object.assign(
+              {
+                facetFilters: [`lang:${lang}`].concat(
+                  algoliaOptions.facetFilters || []
+                ),
+              },
+              algoliaOptions
+            ),
+          })
+        );
+      });
     },
 
     update(options, lang) {

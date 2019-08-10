@@ -1,17 +1,19 @@
 <template lang="pug">
   aside.sidebar
+    .sidebar-wrap-fixed
+      ThemeSwitcher
+      AlgoliaSearchBox(
+        v-if="isAlgoliaSearch"
+        :options="algolia")
+      SearchBox(
+        v-else-if="$site.themeConfig.search !== false")
+
     .sidebar-wrap
       router-link.home-meta(:to="$localePath")
         Logo.home-meta--logo
         .home-meta--link
           h3 {{ $siteTitle }}
           Version.version-link
-
-      AlgoliaSearchBox(
-        v-if="isAlgoliaSearch"
-        :options="algolia")
-      SearchBox(
-        v-else-if="$site.themeConfig.search !== false")
 
       NavLinks
 
@@ -25,6 +27,7 @@
 </template>
 
 <script>
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import Version from './Version';
 import SidebarLinks from './SidebarLinks';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
@@ -41,6 +44,7 @@ export default {
     NavLinks,
     SearchBox,
     AlgoliaSearchBox,
+    ThemeSwitcher,
   },
   props: ['items'],
 
@@ -59,15 +63,14 @@ export default {
 
 <style lang="stylus">
 .sidebar {
-  background-color: var(--bg-color);
+  position: fixed;
   width: $sidebarWidth;
   z-index: 2;
   top: 0;
   left: 0;
   bottom: 0;
-  position: fixed;
-  padding: 0 2rem;
-  overflow-x: auto;
+  overflow: visible;
+  background-color: var(--bg-color);
 
   ol, ul {
     margin-bottom: 0;
@@ -82,12 +85,23 @@ export default {
   }
 
   &-wrap {
-    position: relative;
     display: grid;
     grid-template-columns: 1fr;
-    grid-gap: 3rem;
-    padding: 4rem 0 4rem;
-    overflow: initial;
+    height: 100%;
+    grid-gap: 2rem;
+    overflow-y: auto;
+    padding: 0 2rem;
+
+    &-fixed {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 1rem 2rem;
+      border-bottom: 1px solid var(--bg-border-color);
+    }
+
+    & > *:last-child {
+      padding-bottom: 10rem;
+    }
 
     & > .sidebar-links {
       padding-left: 0 !important;
@@ -119,6 +133,7 @@ export default {
   }
 
   .home-meta {
+    margin-top: 2rem;
     display: flex;
     align-items: center;
 
@@ -139,7 +154,6 @@ export default {
     position: static;
     background-color: var(--bg-color);
     width: 100%;
-    position: relative;
     margin-right: 0;
     text-align: center;
     z-index: 999 !important;
@@ -166,10 +180,6 @@ export default {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     top: $navbarHeight;
-
-    &-wrap {
-      padding-top: 3rem;
-    }
 
     .nav-links {
       .dropdown-wrapper .nav-dropdown .dropdown-item a.router-link-active::after {
