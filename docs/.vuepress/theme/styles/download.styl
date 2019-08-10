@@ -125,7 +125,7 @@
       .dl-wrap {
         flex: 0 0 100%;
         padding: 0;
-        margin: 10px 0 0;
+        margin-top: 10px !important;
 
         li {
           list-style: none;
@@ -140,11 +140,28 @@
           font-weight: bold;
         }
 
-        a {
-          text-transform: lowercase;
+        a.dl-btn {
+          text-align: center;
+          padding: 3px 5px;
+          text-transform: uppercase;
+          background-color: var(--accent-color);
+          color: var(--bg-color);
+          line-height: 1rem;
+          text-decoration: none;
+          margin-right: 5px;
+          margin-bottom: 5px;
+          border-radius: 5px;
           font-weight: bold;
         }
       }
+    }
+  }
+}
+
+@media (max-width: $MQMobile) {
+  .download-wrap {
+    & > * {
+      flex: 0 0 100% !important;
     }
   }
 }

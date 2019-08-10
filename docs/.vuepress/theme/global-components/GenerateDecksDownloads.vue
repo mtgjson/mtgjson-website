@@ -28,13 +28,13 @@
             li
               small Release Date: 
                 span {{ deck.releaseDate }}
-          ol.dl-wrap
-            li
-              small Files: 
-                span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key") , 
-                  a(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
-                span(v-else)
-                  a(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
+        ol.dl-wrap
+          li
+            small Downloads: 
+              span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
+                a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
+              span(v-else)
+                a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
                     
 </template>
 

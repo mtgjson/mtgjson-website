@@ -37,13 +37,13 @@
             li
               small Release Date: 
                 span {{ set.releaseDate }}
-          ol.dl-wrap
-            li
-              small Files: 
-                span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key") , 
-                  a(:href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
-                span(v-else)
-                  a(:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
+        ol.dl-wrap
+          li
+            small Downloads: 
+              span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
+                a.dl-btn(:href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
+              span(v-else)
+                a.dl-btn(:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
 
 </template>
 

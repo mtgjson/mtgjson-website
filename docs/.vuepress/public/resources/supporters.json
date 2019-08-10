@@ -1,6 +1,7 @@
 {
   "patrons": {
-    "mythic": [{
+    "mythic": [
+      {
         "name": "ABUGames",
         "image": "abugames.png",
         "link": "https://abugames.com/",
@@ -37,7 +38,8 @@
         "since": "2019-05"
       }
     ],
-    "rare": [{
+    "rare": [
+      {
         "name": "My MTG Collection",
         "image": "my-mtg-collection-logo.png",
         "link": "https://www.reddit.com/r/Mymtgapp",
@@ -49,7 +51,8 @@
         "since": "2019-04"
       }
     ],
-    "uncommon": [{
+    "uncommon": [
+      {
         "name": "Cockatrice",
         "image": "cockatrice.png",
         "link": "https://cockatrice.github.io",
@@ -80,7 +83,8 @@
       }
     ]
   },
-  "services": [{
+  "services": [
+    {
       "name": "Aetherhub",
       "image": "aetherhub.png",
       "link": "https://aetherhub.com"
@@ -254,8 +258,16 @@
       "link": "https://redd.it/55l38e"
     },
     {
+      "name": "Metadeck",
+      "link": "http://metadeck.me/"
+    },
+    {
       "name": "MTGCardFetcher",
       "link": "https://reddit.com/r/MTGCardFetcher"
+    },
+    {
+      "name": "MtgDesktopCompanion",
+      "link": "https://github.com/nicho92/MtgDesktopCompanion"
     },
     {
       "name": "MTG Korean",
@@ -283,4 +295,3 @@
     }
   ]
 }
-

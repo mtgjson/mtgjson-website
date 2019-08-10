@@ -151,7 +151,6 @@ function flattern(items, res) {
 .page {
   position: relative;
   z-index: 1;
-  padding-bottom: 5rem;
   padding-top: $navbarHeight + 4rem;
   padding-left: $sidebarWidth;
   background-color: var(--bg-dark-color);
@@ -211,7 +210,7 @@ function flattern(items, res) {
 .page-nav {
   @extend $wrapper;
   padding-top: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 5rem;
 
   .inner {
     max-width: $contentWidth;
