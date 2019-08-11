@@ -308,6 +308,10 @@ pre {
 .schema {
   &-item {
     margin-bottom: 30px;
+
+    ol, ul {
+      margin-left: 0;
+    }
   }
 
   &-index {

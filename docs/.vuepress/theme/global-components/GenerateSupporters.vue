@@ -34,7 +34,7 @@
                 img(:src="'/images/' + supporter.image", :title="supporter.name")
             h6 {{ supporter.name }}
           .tier(v-html="formatTime(supporter.since)")
-        
+
       // Tier 1
       .supporters-grid(v-if="uncommon.length > 0" :data-tier="1")
         blockquote.supporter(v-for="(supporter, key) in uncommon")
@@ -206,7 +206,7 @@ export default {
     }
 
     &[data-tier='3'] {
-      grid-template-columns: repeat(2, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
 
       .supporter {
         &:hover {
@@ -232,6 +232,7 @@ export default {
     }
 
     &[data-tier='2'] {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       .supporter {
         &:hover {
           border-color: var(--yellow-color);
@@ -248,7 +249,6 @@ export default {
     }
 
     &[data-tier='2'], &[data-tier='1'] {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
 
       .supporter {
         .img-wrap {

@@ -68,6 +68,7 @@ export default {
   border-right: 1px solid var(--bg-border-color);
 
   ol, ul {
+    margin-left: 0;
     margin-bottom: 0;
   }
 

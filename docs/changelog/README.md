@@ -23,6 +23,7 @@ Below you can find all the changes made on each MTGJSON build release. Versions 
 ## 4.5.0 <small>(2019-08-11)</small>
 ### Cards
 #### Added
+- `edhrecRank` Rank of card on [EDHRec.com](https://www.edhrec.com)
 - `mtgArenaId` self explanatory
 - `mtgoFoilId` self explanatory
 - `mtgoId` self explanatory
