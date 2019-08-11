@@ -67,6 +67,22 @@ export default {
   background-color: var(--bg-color);
   border-right: 1px solid var(--bg-border-color);
 
+  ol, ul {
+    margin-bottom: 0;
+  }
+
+  li {
+    list-style-type: none;
+  }
+
+  a {
+    display: inline-block;
+  }
+
+  ul, ol {
+    padding-left: 25px;
+  }
+
   &-wrap {
     display: grid;
     grid-template-columns: 1fr;
