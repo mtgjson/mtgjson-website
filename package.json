@@ -18,7 +18,8 @@
     "test:watch": "jest --watch",
     "test:dev": "concurrently \"yarn dev\" \"yarn test:watch\"",
     "delete:build": "rm -rf docs/.vuepress/dist",
-    "heroku-postbuild": "yarn build"
+    "heroku-postbuild": "yarn build",
+    "schema-builder": "node ./utils/schema-builder.js"
   },
   "dependencies": {
     "@babel/core": "^7.4.5",
