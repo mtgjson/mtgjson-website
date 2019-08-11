@@ -20,6 +20,38 @@
 
 Below you can find all the changes made on each MTGJSON build release. Versions marked with "rebuild" are built to update prices and often do no have additional changes.
 
+## 4.5.0 <small>(2019-08-11)</small>
+### Cards
+#### Added
+- `mtgArenaId` self explanatory
+- `mtgoFoilId` self explanatory
+- `mtgoId` self explanatory
+
+#### Changed
+- `text` for Planeswalkers now has brackets around costs
+    -  Ex: `"-2:"` is now `"[-2]:"`
+
+#### Fixed
+- `artist` fixed for split cards
+- `printings` now has all entries
+
+### Sets
+#### Added
+- Commander: 2019 (`C19`)
+- `isPartialPreview` to denote a set is in spoiler mode and may not be complete
+- `boosterV3` values for newer sets
+
+### Tokens
+#### Removed
+- `duelDeck` as it's too hard to determine the correct value right now
+
+### Other
+- A brand new site and logo!
+- Better caching of MTGJSON resources
+- Build command improvements
+- Update TCGPlayer API to 1.32.0
+- Added `baseSetSize` and `totalSetSize` to `SetList.json` entries
+
 ## 4.4.2 <small>(2019-06-26)</small>
 
 ### Announcements
