@@ -18,10 +18,10 @@
 
 # Brand Assets
 
-When working on a project you may want to credit MTGJSON (It's not required, but we would like you to!). Below you can find some of assets to use in your projects to credit MTGJSON.
+When working on your project, you may want to credit MTGJSON (It's not required, but we would like you to!). Below you can find some of our assets.
 
-We currently do not have a style guide but please use what you can without altering the assets in any way.
+As of the moment, we only require you not to alter the assets and not to use them in a way that would indicate of imply MTGJSON endorses you or your project.
 
 <small>P.S. Working on a project that uses MTGJSON? Reach out to us and we'll add your project to our homepage!</small>
 
-<BrandingGuide/>
+<BrandAssets/>

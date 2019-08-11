@@ -5,7 +5,7 @@
       .branding-container--col
         h3 Current Logo
         .img-wrap
-          Logo(:hideText="true" :width="`100px`")
+          Logo(:hideText="true" :width="`70px`")
         .dl-wrap
           h6 Download:
           a.dl-btn(href="/images/logo-mtgjson-light-blue.svg" download) Light Blue SVG
@@ -14,8 +14,8 @@
           a.dl-btn(href="/images/logo-mtgjson-white.svg" download) White SVG
         .embed-wrap
           h6 Embedded Code:
-          pre(ref="embedCode" contenteditable spellcheck="false") {{ renderEmbed() }}
-          a.dl-btn(@click="copyEmbed") Copy Embed
+          pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
+          a.dl-btn(@click="copyEmbed" data-which="0") Copy Embed
       .branding-container--col
         h3 Legacy Logo
         .img-wrap
@@ -37,10 +37,12 @@ export default {
     };
   },
   methods: {
-    copyEmbed() {
+    copyEmbed(e) {
       if (document && window) {
         const textRange = document.createRange();
-        const embedCode = this.$refs.embedCode;
+        const which = e.currentTarget.dataset.which;
+        const embedCopies = document.querySelectorAll('.embed-copy');
+        const embedCode = embedCopies[which];
 
         textRange.setStartBefore(embedCode);
         textRange.setEndAfter(embedCode);
@@ -49,12 +51,11 @@ export default {
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
 
-        this.showDidCopy();
+        this.showDidCopy(embedCode);
       }
     },
-    showDidCopy() {
-      if (!this.didCopy) {
-        const embedCode = this.$refs.embedCode;
+    showDidCopy(embedCode) {
+      if (!this.didCopy && embedCode) {
         this.didCopy = true;
 
         embedCode.classList.add('copied');
@@ -67,19 +68,8 @@ export default {
         }
       }
     },
-    renderEmbed() {
-      return `<a
-  href="http://mtgjson.com"
-  style="
-    display: inline-flex;
-    align-items: center;">
-  <img
-    src="http://mtgjson.com/images/logo-mtgjson-light-blue.svg"
-    width="60px"
-    alt="MTGJSON logo">
-  <p
-    style="margin-left: 10px">Powered by MTGJSON</p>
-</a>`;
+    renderAttributionEmbed() {
+      return `<a href="http://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
     },
   },
 };
@@ -88,6 +78,9 @@ export default {
 <style lang="stylus" scoped>
 .branding {
   &-container {
+    display: grid;
+    grid-gap: 2rem;
+    grid-template-columns: 1fr;
     padding: 0;
 
     &--col {
@@ -102,7 +95,7 @@ export default {
       }
 
       .img-wrap {
-        height: 75px;
+        height: 50px;
         overflow: hidden;
 
         img {
@@ -145,7 +138,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 940px) {
   .branding {
     &-container {
       grid-template-columns: 1fr;
