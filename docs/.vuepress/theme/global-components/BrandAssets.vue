@@ -8,10 +8,10 @@
           Logo(:hideText="true" :width="`70px`")
         .dl-wrap
           h6 Download:
-          a.dl-btn(href="/images/logo-mtgjson-light-blue.svg" download) Light Blue SVG
-          a.dl-btn(href="/images/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
-          a.dl-btn(href="/images/logo-mtgjson-black.svg" download) Black SVG
-          a.dl-btn(href="/images/logo-mtgjson-white.svg" download) White SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-black.svg" download) Black SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-white.svg" download) White SVG
         .embed-wrap
           h6 Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
@@ -19,10 +19,10 @@
       .branding-container--col
         h3 Legacy Logo
         .img-wrap
-          img(src="/images/logo-mtgjson-previous.svg" title="Previous MTGJSON logo")
+          img(src="/images/assets/logo-mtgjson-previous.svg" title="Previous MTGJSON logo")
         .dl-wrap
           h6 Download:
-          a.dl-btn(href="/images/logo-mtgjson-previous.svg" download) Standard SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-previous.svg" download) Standard SVG
 </template>
 
 <script>
@@ -69,7 +69,7 @@ export default {
       }
     },
     renderAttributionEmbed() {
-      return `<a href="http://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
+      return `<a href="http://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
     },
   },
 };

@@ -20,7 +20,7 @@ module.exports = {
       'meta',
       {
         property: 'og:image',
-        content: '/images/logo-mtgjson-thumbnail.png',
+        content: '/images/assets/logo-mtgjson-thumbnail.png',
       },
     ],
     // Keyrun for set images
