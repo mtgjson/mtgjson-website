@@ -7,7 +7,8 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver}}, or {{code:white}}."
+    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver}}, or {{code:white}}.",
+    "introduced": "v4.0.0"
   },
   "colorIdentity": {
     "type": "array(string)",
@@ -19,7 +20,8 @@
     "type": "array(string)",
     "example": "[\"B\",\"R\"]",
     "description": "List of all colors in card's color indicator (The symbol showing the colors of the card).",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.0.2"
   },
   "colors": {
     "type": "array(string)",
@@ -31,7 +33,8 @@
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the card.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.0.0"
   },
   "count": {
     "type": "integer",
@@ -43,65 +46,75 @@
     "type": "string",
     "example": "\"a\"",
     "description": "If the card is in a duel deck product, can be {{code:a}}(left) or {{code:b}}(right).",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.2.0"
   },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the face of either half or part of the card.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.1.1"
   },
   "flavorText": {
     "type": "string",
     "example": "\"Whatever hatred destroys, a single act of trust can revive.\"",
-    "description": "Italicized text found below the rules text that has no game function."
+    "description": "Italicized text found below the rules text that has no game function.",
+    "introduced": "v4.0.0"
   },
   "foreignData": {
     "type": "array(object)",
     "example": "{{link:foreign-data}}",
     "description": "See the {{link:foreign-data}} structure.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.0.0"
   },
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}."
+    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}.",
+    "introduced": "v4.2.0"
   },
   "frameVersion": {
     "type": "string",
     "example": "\"2015\"",
-    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}}, or {{code:future}}."
+    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}}, or {{code:future}}.",
+    "introduced": "v4.0.0"
   },
   "hand": {
     "type": "string",
     "example": "\"+0\"",
     "description": "Starting maximum hand size total modifier. A plus or minus character preceeds an integer.",
-    "attributes": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"],
+    "introduced": "v4.2.1"
   },
   "hasFoil": {
     "type": "boolean",
     "example": "true",
     "description": "Can the card be found in foil?",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.0.0"
   },
   "hasNonFoil": {
     "type": "boolean",
     "example": "true",
     "description": "Can the card be found in non-foil?",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.0.0"
   },
   "isAlternative": {
     "type": "boolean",
     "example": "true",
     "description": "The card has some kind of alternative variation to its printed counterpart.",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.2.0"
   },
-
   "isArena": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card available in Magic: The Gathering Arena?",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.4.2"
   },
   "isFullArt": {
     "type": "boolean",
@@ -119,13 +132,15 @@
     "type": "boolean",
     "example": "true",
     "description": "Is the card only available online?",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.0.0"
   },
   "isOversized": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card oversized?",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.0.0"
   },
   "isPaper": {
     "type": "boolean",
@@ -149,7 +164,8 @@
     "type": "boolean",
     "example": "true",
     "description": "Is the card on the MTG Reserved List?",
-    "attributes": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"],
+    "introduced": "v4.0.1"
   },
   "isStarter": {
     "type": "boolean",
@@ -173,7 +189,8 @@
     "type": "boolean",
     "example": "true",
     "description": "Is this card \"timeshifted\"? (A feature from Time Spiral block)",
-    "attributes": ["optional"]
+    "attributes": ["optional"],
+    "introduced": "v4.4.1"
   },
   "layout": {
     "type": "string",
@@ -191,7 +208,8 @@
     "type": "string",
     "example": "\"+0\"",
     "description": "Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.2.1"
   },
   "loyalty": {
     "type": "string",
@@ -208,17 +226,20 @@
   "mcmId": {
     "type": "integer",
     "example": "371878",
-    "description": "The Magic Card Market card ID."
+    "description": "The Magic Card Market card ID.",
+    "introduced": "v4.4.0"
   },
   "mcmMetaId": {
     "type": "integer",
     "example": "269313",
-    "description": "The Magic Card Market card meta ID."
+    "description": "The Magic Card Market card meta ID.",
+    "introduced": "v4.4.0"
   },
   "mcmName": {
     "type": "string",
     "example": "\"Angel of Grace\"",
-    "description": "The Magic Card Market card name."
+    "description": "The Magic Card Market card name.",
+    "introduced": "v4.4.0"
   },
   "mtgArenaId": {
     "type": "integer",
@@ -242,12 +263,14 @@
     "type": "integer",
     "example": "40272",
     "description": "mtgstocks.com card ID.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.4.0"
   },
   "multiverseId": {
     "type": "integer",
     "example": "457145",
-    "description": "An integer most cards have which Wizards of the Coast uses as a card identifier."
+    "description": "An integer most cards have which Wizards of the Coast uses as a card identifier.",
+    "introduced": "v4.0.0"
   },
   "name": {
     "type": "string",
@@ -285,7 +308,8 @@
   "prices": {
     "type": "object(string: object)",
     "example": "{{link:prices}}",
-    "description": "See the {{link:prices}} structure."
+    "description": "See the {{link:prices}} structure.",
+    "introduced": "v4.4.0"
   },
   "printings": {
     "type": "array(string)",
@@ -297,7 +321,8 @@
     "type": "array(string: string)",
     "example": "{{link:purchase-urls}}",
     "description": "See the {{link:purchase-urls}} structure.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.4.0"
   },
   "rarity": {
     "type": "string",
@@ -319,18 +344,21 @@
     "type": "string",
     "example": "\"9b7870df-6bca-499f-bc6e-e57f2ddfe640\"",
     "description": "A unique ID for this card’s oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc).",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.3.1"
   },
   "scryfallIllustrationId": {
     "type": "string",
     "example": "\"4ab49865-ff4c-4dae-94e8-a5ce273138da\"",
-    "description": "A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet."
+    "description": "A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet.",
+    "introduced": "v4.3.1"
   },
   "side": {
     "type": "string",
     "example": "\"a\"",
     "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}.",
-    "attributes": ["atomic", "optional"]
+    "attributes": ["atomic", "optional"],
+    "introduced": "v4.1.0"
   },
   "subtypes": {
     "type": "array(string)",
@@ -347,13 +375,15 @@
   "tcgplayerProductId": {
     "type": "integer",
     "example": "183201",
-    "description": "Numeric identifier for the card for TCGPlayer."
+    "description": "Numeric identifier for the card for TCGPlayer.",
+    "introduced": "v4.2.1"
   },
   "tcgplayerPurchaseUrl": {
     "type": "string",
     "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
     "description": "URL which redirects to TCGPlayer website’s card page.",
-    "attributes": ["deprecated-v4.4.3"]
+    "attributes": ["deprecated-v4.4.3"],
+    "introduced": "v4.2.1"
   },
   "text": {
     "type": "string",
@@ -383,12 +413,14 @@
     "type": "string",
     "example": "\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"",
     "description": "A universal unique ID (v5) generated by MTGJSON. Each entry is unique.",
-    "attributes": ["atomic"]
+    "attributes": ["atomic"],
+    "introduced": "v4.0.0"
   },
   "variations": {
     "type": "array(string)",
     "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
-    "description": "List of uuid id's of this card with alternate printings in the same set. Excludes Un-sets."
+    "description": "List of uuid id's of this card with alternate printings in the same set. Excludes Un-sets.",
+    "introduced": "v4.1.2"
   },
   "watermark": {
     "type": "string",
