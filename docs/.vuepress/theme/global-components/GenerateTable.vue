@@ -1,4 +1,3 @@
-<!-- Pug case statements do not work for our hydration purposes -->
 <template lang="pug">
   .schema(v-if="schema")
     //- Properties Legend
@@ -85,6 +84,30 @@ export default {
       schema: undefined,
       showMore: true,
       willShowMore: true,
+      tokenOnlyFields: [
+        'artist',
+        'borderColor',
+        'colorIdentity',
+        'colorIndicator',
+        'colors',
+        'isOnlineOnly',
+        'layout',
+        'loyalty',
+        'name',
+        'names',
+        'number',
+        'power',
+        'reverseRelated',
+        'scryfallId',
+        'scryfallOracleId',
+        'scryfallIllustrationId',
+        'side',
+        'text',
+        'toughness',
+        'type',
+        'uuid',
+        'watermark',
+      ],
     };
   },
   computed: {
@@ -127,13 +150,25 @@ export default {
         }
       }
 
+      if (this.$page.frontmatter.title === 'token') {
+        newSchema = {};
+
+        for (let name in schema) {
+          if (hasOwnProperty.call(schema, name)) {
+            const field = schema[name];
+
+            if (this.tokenOnlyFields.includes(name)) {
+              newSchema[name] = field;
+            }
+          }
+        }
+      }
+
       return newSchema || schema;
     },
   },
   created() {
-    const schema = require(`../../public/schemas/${
-      this.$page.frontmatter.schema
-    }.schema.json`);
+    const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
 
     this.showMore = Object.keys(schema).length > 4;
     this.schema = new this.$landcycle(schema).schema;
@@ -278,11 +313,16 @@ pre {
   &-index {
     ol {
       margin: 0;
+      padding-left: 15px;
       list-style: disc;
       position: relative;
       overflow: hidden;
       padding-bottom: 30px;
       border-bottom: 1px solid var(--bg-color);
+
+      li {
+        list-style: disc;
+      }
 
       &::after {
         transform: rotateX(180deg);

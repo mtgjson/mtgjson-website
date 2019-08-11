@@ -1,7 +1,7 @@
 ---
 {
   "title": "token",
-  "schema": "Token",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",
