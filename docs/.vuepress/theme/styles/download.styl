@@ -35,12 +35,13 @@
   .sorting-options {
     position: sticky;
     background-color: var(--bg-dark-color);
-    top: 64px;
+    top: $navbarHeight;
     z-index: 9;
-    padding: 15px 0;
+    padding: 1rem 0 1rem;
 
     .sort-row {
       display: inline-block;
+      min-height: 2rem;
       margin-right: 30px;
     }
 
@@ -139,29 +140,32 @@
           display: inline-block;
           font-weight: bold;
         }
-
-        a.dl-btn {
-          text-align: center;
-          padding: 3px 5px;
-          text-transform: uppercase;
-          background-color: var(--accent-color);
-          color: var(--bg-color);
-          line-height: 1rem;
-          text-decoration: none;
-          margin-right: 5px;
-          margin-bottom: 5px;
-          border-radius: 5px;
-          font-weight: bold;
-        }
       }
     }
   }
 }
 
 @media (max-width: $MQMobile) {
-  .download-wrap {
-    & > * {
-      flex: 0 0 100% !important;
+  .download-tables {
+    .sorting-options {
+      .sort-row {
+        display: block;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        select {
+          margin: 5px 0 0 0;
+          display: block;
+        }
+      }
+    }
+
+    .download-wrap {
+      & > * {
+        flex: 0 0 100% !important;
+      }
     }
   }
 }

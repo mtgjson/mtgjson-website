@@ -43,8 +43,11 @@ export default {
         const selectedTheme = document.querySelector(
           `.theme-switcher--button[data-theme='${savedTheme}']`
         );
-        // Apply the state overall
-        selectedTheme.click();
+
+        if(selectedTheme){
+          // Apply the state overall
+          selectedTheme.click();
+        }
       }
     }
 

@@ -4,8 +4,7 @@
     @touchstart="onTouchStart"
     @touchend="onTouchEnd")
 
-    .sidebar-mask(
-      @click="toggleSidebar(false)")
+    Navbar(v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar")
 
     Sidebar(
       :items="sidebarItems"
@@ -28,11 +27,12 @@
 <script>
 import Home from '../components/Home'
 import Page from '../components/Page'
+import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Sidebar },
+  components: { Home, Page, Navbar, Sidebar },
 
   data () {
     return {

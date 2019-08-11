@@ -89,6 +89,10 @@ module.exports = {
         path: '/changelog/'
       },
       {
+        title: 'Brand Assets',
+        path: '/brand-assets/'
+      },
+      {
         title: 'License (MIT)',
         path: '/license/'
       }
