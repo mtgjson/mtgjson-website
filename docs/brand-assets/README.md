@@ -18,10 +18,10 @@
 
 # Brand Assets
 
-When working on your project, you may want to credit MTGJSON (It's not required, but we would like you to!). Below you can find some of our assets.
+When creating your project a credit to MTGJSON is greatly appreciated, though it is not required. We've provided assets below to assist in crediting MTGJSON.
 
-As of the moment, we only require you not to alter the assets and not to use them in a way that would indicate of imply MTGJSON endorses you or your project.
+As of the moment, we only require you to not alter the assets or use them in any way that implies MTGJSON endorses you or your project.
 
-<small>P.S. Working on a project that uses MTGJSON? Reach out to us and we'll add your project to our homepage!</small>
+Do you have a cool project to share that uses MTGJSON's data? Let us know and we may feature it on our homepage! Do note that featured projects are not officially endorsed by MTGJSON.
 
 <BrandAssets/>
