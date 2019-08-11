@@ -72,7 +72,7 @@
     "attributes": [
       "optional", "atomic"
     ],
-    "introduced": "v4.4.2"
+    "introduced": "v4.5.0"
   },
   "faceConvertedManaCost": {
     "type": "float",
@@ -336,7 +336,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.4.2"
+    "introduced": "v4.5.0"
   },
   "mtgoFoilId": {
     "type": "integer",
@@ -345,7 +345,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.4.2"
+    "introduced": "v4.5.0"
   },
   "mtgoId": {
     "type": "integer",
@@ -354,7 +354,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.4.2"
+    "introduced": "v4.5.0"
   },
   "mtgstocksId": {
     "type": "integer",
