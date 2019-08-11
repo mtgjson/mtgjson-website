@@ -3,31 +3,31 @@
     "type": "string",
     "example": "\"KTK\"",
     "description": "Set code for the deck.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   },
   "mainBoard": {
     "type": "array(object)",
     "example": "{{link:card}}",
     "description": "The cards in the main-board. See the {{link:card}} structure.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   },
   "meta": {
     "type": "object(string: string)",
     "example": "{{link:version}}",
     "description": "See the {{link:version}} structure.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   },
   "name": {
     "type": "string",
     "example": "\"Abzan Siege\"",
     "description": "Name of the deck.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   },
   "sideBoard": {
     "type": "array(object)",
     "example": "{{link:card}}",
     "description": "The cards in the side-board. See the {{link:card}} structure.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   },
   "releaseDate": {
     "type": "string",
@@ -36,12 +36,12 @@
     "attributes": [
       "nullable"
     ],
-    "introduced": "v4.4.0"
+    "introduced": "v4.3.0"
   },
   "type": {
     "type": "string",
     "example": "\"Intro Pack\"",
     "description": "The type of deck.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   }
 }

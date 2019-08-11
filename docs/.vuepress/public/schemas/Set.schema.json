@@ -14,7 +14,7 @@
   "boosterV3": {
     "type": "array(array, string)",
     "example": "[[mythic, rare], uncommon]",
-    "description": "The card rarity contents of a typical booster pack.",
+    "description": "The card rarity contents of a typical booster pack. This field is backwards compatible with MTGJSON v3.",
     "introduced": "v4.1.0"
   },
   "cards": {
@@ -72,7 +72,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "keyruneCode": {
     "type": "string",
@@ -126,7 +126,7 @@
     "type": "integer",
     "example": "2366",
     "description": "Group ID of the set on TCGPlayer.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.2.1"
   },
   "tokens": {
     "type": "array(object)",

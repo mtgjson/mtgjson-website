@@ -31,7 +31,7 @@
             p(title="The name of the property") Name
           .name
             a(:href="`#${name}`")
-              h6(:title="data.description") {{ name }}
+              h6 {{ name }}
 
         //- Property Type
         .schema-data--table-item
@@ -73,7 +73,7 @@
               v-for="(attribute, key) in data.attributes"
               :class="attribute.split('-')[0]"
               :title="getTitle(attribute.split('-')[0])") {{ attribute.replace('-', ' ') }}
-          
+
       blockquote.schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
 </template>
 
@@ -426,9 +426,8 @@ pre {
           }
         }
 
-        .name,
         .type {
-          & > * {
+          & > *[title] {
             cursor: help;
           }
         }

@@ -3,12 +3,12 @@
     "type": "array(object)",
     "example": "{{link:files}}",
     "description": "All possible compiled outputs from MTGJSON. See the {{link:files}} structure.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   },
   "meta": {
     "type": "object(string: string)",
     "example": "{{link:version}}",
     "description": "See the {{link:version}} structure.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.3.0"
   }
 }

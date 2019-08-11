@@ -1,6 +1,5 @@
 import landcycle from './scripts/Landcycle';
 import helpers from './scripts/helpers';
-import axios from 'axios';
 
 /**
  * Why all the try/catch-ing you ask?
@@ -20,27 +19,24 @@ export default async ({ Vue }) => {
   Vue.prototype.$sets = [];
 
   try {
-    axios
-      .get('https://mtgjson.com/json/version.json')
+    fetch('https://mtgjson.com/json/version.json')
+      .then(response => response.json())
       .then(response => {
-        Vue.prototype.$metadata = response.data;
+        Vue.prototype.$metadata = response;
       })
       .catch(err => {});
 
-    axios
-      .get('https://mtgjson.com/json/DeckLists.json')
+    fetch('https://mtgjson.com/json/DeckLists.json')
+      .then(response => response.json())
       .then(response => {
-        Vue.prototype.$decks = helpers.sort(
-          'releaseDate:true',
-          response.data.decks
-        );
+        Vue.prototype.$decks = helpers.sort('releaseDate:true', response.decks);
       })
       .catch(err => {});
 
-    axios
-      .get('https://mtgjson.com/json/SetList.json')
+    fetch('https://mtgjson.com/json/SetList.json')
+      .then(response => response.json())
       .then(response => {
-        Vue.prototype.$sets = helpers.sort('releaseDate:true', response.data);
+        Vue.prototype.$sets = helpers.sort('releaseDate:true', response);
       })
       .catch(err => {});
   } catch (err) {}

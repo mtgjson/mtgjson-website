@@ -501,15 +501,6 @@
     "description": "Numeric identifier for the card for TCGPlayer.",
     "introduced": "v4.2.1"
   },
-  "tcgplayerPurchaseUrl": {
-    "type": "string",
-    "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
-    "description": "URL which redirects to TCGPlayer website’s card page.",
-    "attributes": [
-      "deprecated-v4.4.3"
-    ],
-    "introduced": "v4.2.1"
-  },
   "text": {
     "type": "string",
     "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",

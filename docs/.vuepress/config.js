@@ -39,8 +39,8 @@ module.exports = {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',
       algoliaOptions: {
-        hitsPerPage: 10
-      }
+        hitsPerPage: 10,
+      },
     },
     searchMaxSuggestions: 10,
     displayAllHeaders: true,
@@ -51,7 +51,7 @@ module.exports = {
       { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' },
     ],
-    title: "MTGJSON",
+    title: 'MTGJSON',
     logo: '/images/logo-3.svg',
     sidebar: [
       {
@@ -86,16 +86,16 @@ module.exports = {
       },
       {
         title: 'Changelog',
-        path: '/changelog/'
+        path: '/changelog/',
       },
       {
         title: 'Brand Assets',
-        path: '/brand-assets/'
+        path: '/brand-assets/',
       },
       {
         title: 'License (MIT)',
-        path: '/license/'
-      }
+        path: '/license/',
+      },
     ],
   },
   plugins: [

@@ -54,7 +54,7 @@
     "attributes": [
       "decks"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.1"
   },
   "duelDeck": {
     "type": "string",
@@ -154,7 +154,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isMtgo": {
     "type": "boolean",
@@ -163,7 +163,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isOnlineOnly": {
     "type": "boolean",
@@ -172,7 +172,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.0.1"
   },
   "isOversized": {
     "type": "boolean",
@@ -190,7 +190,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isPromo": {
     "type": "boolean",
@@ -199,7 +199,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isReprint": {
     "type": "boolean",
@@ -208,7 +208,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isReserved": {
     "type": "boolean",
@@ -236,7 +236,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isTextless": {
     "type": "boolean",
@@ -245,7 +245,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "isTimeshifted": {
     "type": "boolean",
@@ -327,7 +327,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "mtgoFoilId": {
     "type": "integer",
@@ -336,7 +336,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "mtgoId": {
     "type": "integer",
@@ -345,7 +345,7 @@
     "attributes": [
       "optional"
     ],
-    "introduced": "v4.0.0"
+    "introduced": "v4.4.2"
   },
   "mtgstocksId": {
     "type": "integer",
@@ -499,15 +499,6 @@
     "type": "integer",
     "example": "183201",
     "description": "Numeric identifier for the card for TCGPlayer.",
-    "introduced": "v4.2.1"
-  },
-  "tcgplayerPurchaseUrl": {
-    "type": "string",
-    "example": "\"https://mtgjson.com/links/c9231e9296c7917d\"",
-    "description": "URL which redirects to TCGPlayer website’s card page.",
-    "attributes": [
-      "deprecated-v4.4.3"
-    ],
     "introduced": "v4.2.1"
   },
   "text": {

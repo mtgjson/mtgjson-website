@@ -5,8 +5,6 @@
 </template>
 
 <script>
-import axios from 'axios';
-
 export default {
   name: "Version",
   data() {
@@ -22,10 +20,10 @@ export default {
     },
   },
   mounted() {
-    axios
-      .get('https://mtgjson.com/json/version.json')
+    fetch('https://mtgjson.com/json/version.json')
+      .then(response => response.json())
       .then(response => {
-        this.defaultVersion = response.data;
+        this.defaultVersion = response;
       })
       .catch(err => {
         console.error(err);

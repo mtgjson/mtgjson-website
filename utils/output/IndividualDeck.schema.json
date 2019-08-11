@@ -5,12 +5,6 @@
     "description": "Set code for the deck.",
     "introduced": "v4.0.0"
   },
-  "count": {
-    "type": "integer",
-    "example": "60",
-    "description": "The total card count of the deck.",
-    "introduced": "v4.4.1"
-  },
   "mainBoard": {
     "type": "array(object)",
     "example": "{{link:card}}",
