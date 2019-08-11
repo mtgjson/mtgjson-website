@@ -65,6 +65,15 @@
     ],
     "introduced": "v4.2.0"
   },
+  "edhrecRank": {
+    "type": "integer",
+    "example": "1000",
+    "description": "Card rank on {{external:EDHRec$https://www.edhrec.com}}.",
+    "attributes": [
+      "optional", "atomic"
+    ],
+    "introduced": "v4.4.2"
+  },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
