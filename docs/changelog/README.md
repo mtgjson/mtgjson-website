@@ -18,7 +18,7 @@
 
 # Changelog
 
-Below you can find all the changes made on each MTGJSON build release. Versions marked with "rebuild" are built to update prices and often do no have additional changes.
+Below you can find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain price updates and data improvements.
 
 ## 4.5.0 <small>(2019-08-11)</small>
 ### Cards
