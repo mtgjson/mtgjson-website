@@ -3,7 +3,7 @@
     "type": "array(string)",
     "example": "[\"undergrowth\"]",
     "description": "List of ability words found in rules text on cards.",
-    "introduced": "v4.030"
+    "introduced": "v4.3.0"
   },
   "keywordAbilities": {
     "type": "array(string)",
