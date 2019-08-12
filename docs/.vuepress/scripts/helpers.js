@@ -17,9 +17,7 @@ export default {
     let compDate = now.getDate();
 
     if (comparison) {
-      [compYear, compMonth, compDate] = comparison
-        .split('-')
-        .map(c => Number(c));
+      [compYear, compMonth, compDate] = comparison.split('-').map(c => Number(c));
     }
 
     const [year, month, date] = time.split('-').map(c => Number(c));
@@ -27,22 +25,24 @@ export default {
     // This/next year and next month or
     // This/next year and this/next month but not today
     return (
-      year >= compYear &&
-      (month > compMonth || (month == compMonth && date > compDate))
+      year > compYear ||
+      (year === compYear && (month > compMonth || (month == compMonth && date > compDate)))
     );
   },
   filter: (filter, dataToFilter) => {
     return filter.length === 0
       ? // No filter, return all data
-      dataToFilter
+        dataToFilter
       : dataToFilter.filter(cur => cur.type === filter);
   },
   // A little different than the source but works
   // https://jsbin.com/wowezadolo/edit?js,console
   sort: (event = '', dataToSort) => {
-    const values = event.currentTarget
-      ? event.currentTarget.value.split(':')
-      : event.split(':');
+    if (event.length === 0) {
+      return dataToSort;
+    }
+
+    const values = event.currentTarget ? event.currentTarget.value.split(':') : event.split(':');
     const config = {
       prop: values[0],
       desc: values[1] ? -1 : 1,
@@ -61,5 +61,5 @@ export default {
       // integer equivilent: true => 1; false => 0
       return config.desc * (a < b ? -1 : +(a > b));
     });
-  }
+  },
 };
