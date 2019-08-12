@@ -31,7 +31,7 @@ export default {
       $themeLocaleConfig.sidebarDepth ||
       $themeConfig.sidebarDepth;
 
-    const maxDepth = configDepth == null ? 1 : configDepth;
+    const maxDepth = configDepth === null ? 1 : configDepth;
 
     const displayAllHeaders =
       $themeLocaleConfig.displayAllHeaders || $themeConfig.displayAllHeaders;
@@ -73,7 +73,7 @@ function renderLink(h, to, text, active) {
 }
 
 function renderChildren(h, children, path, route, maxDepth, depth = 1) {
-  if (!children || depth > maxDepth) return null;
+  if (!children || depth > maxDepth) {return null;}
   return h(
     'ul',
     { class: 'sidebar-sub-headers' },
@@ -89,44 +89,17 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 </script>
 
 <style lang="stylus">
-.sidebar .sidebar-sub-headers {
-  padding-left: 1rem;
-  font-size: 0.95em;
-}
-
 a.sidebar-link {
-  font-size: 1em;
-  font-weight: 400;
+  font-size: 16px;
+  font-weight: bold;
   display: inline-block;
-  color: $textColor;
-  border-left: 0.25rem solid transparent;
-  padding: 0.35rem 1rem 0.35rem 1.25rem;
-  line-height: 1.4;
+  color: var(--text-color);
+  line-height: 2;
   width: 100%;
   box-sizing: border-box;
 
   &:hover {
-    color: $accentColor;
-  }
-
-  &.active {
-    font-weight: 600;
-    color: $accentColor;
-    border-left-color: $accentColor;
-  }
-
-  .sidebar-group & {
-    padding-left: 2rem;
-  }
-
-  .sidebar-sub-headers & {
-    padding-top: 0.25rem;
-    padding-bottom: 0.25rem;
-    border-left: none;
-
-    &.active {
-      font-weight: 500;
-    }
+    color: var(--accent-color);
   }
 }
 </style>

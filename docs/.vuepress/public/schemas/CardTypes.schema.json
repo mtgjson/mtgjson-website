@@ -2,71 +2,85 @@
   "artifact": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Artifacts"
+    "description": "All card types available for Artifacts",
+    "introduced": "v4.3.0"
   },
   "conspiracy": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Conspiracies"
+    "description": "All card types available for Conspiracies",
+    "introduced": "v4.3.0"
   },
   "creature": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Creatures"
+    "description": "All card types available for Creatures",
+    "introduced": "v4.3.0"
   },
   "enchantment": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Enchantments"
+    "description": "All card types available for Enchantments",
+    "introduced": "v4.3.0"
   },
   "instant": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Instants"
+    "description": "All card types available for Instants",
+    "introduced": "v4.3.0"
   },
   "land": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Lands"
+    "description": "All card types available for Lands",
+    "introduced": "v4.3.0"
   },
   "phenomenons": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Phenomenons"
+    "description": "All card types available for Phenomenons",
+    "introduced": "v4.3.0"
   },
   "plane": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Planes"
+    "description": "All card types available for Planes",
+    "introduced": "v4.3.0"
   },
   "planeswalker": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Planeswalkers"
+    "description": "All card types available for Planeswalkers",
+    "introduced": "v4.3.0"
   },
   "scheme": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Schemes"
+    "description": "All card types available for Schemes",
+    "introduced": "v4.3.0"
   },
   "sorcery": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Sorceries"
+    "description": "All card types available for Sorceries",
+    "introduced": "v4.3.0"
   },
   "tribal": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Tribals"
+    "description": "All card types available for Tribals",
+    "introduced": "v4.3.0"
   },
   "vanguard": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "All card types available for Vanguards"
+    "description": "All card types available for Vanguards",
+    "introduced": "v4.3.0"
   },
   "meta": {
     "type": "object(string: string)",
     "example": "{{link:version}}",
-    "description": "See the {{link:version}} structure."
+    "description": "See the {{link:version}} structure.",
+    "introduced": "v4.3.0"
   }
 }

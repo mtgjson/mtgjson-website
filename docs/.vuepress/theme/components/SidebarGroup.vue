@@ -36,8 +36,8 @@ import DropdownTransition from './DropdownTransition.vue';
 
 export default {
   name: 'SidebarGroup',
-  props: ['item', 'open', 'collapsable', 'depth'],
   components: { DropdownTransition },
+  props: ['item', 'open', 'collapsable', 'depth'],
   // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
   beforeCreate() {
     this.$options.components.SidebarLinks = require('./SidebarLinks.vue').default;
@@ -47,66 +47,13 @@ export default {
 </script>
 
 <style lang="stylus">
-.sidebar-group {
-  .sidebar-group {
-    padding-left: 0.5em;
-  }
-
-  &:not(.collapsable) {
-    .sidebar-heading:not(.clickable) {
-      cursor: auto;
-      color: inherit;
-    }
-  }
-
-  // refine styles of nested sidebar groups
-  &.is-sub-group {
-    padding-left: 0;
-
-    & > .sidebar-heading {
-      font-size: 0.95em;
-      line-height: 1.4;
-      font-weight: normal;
-      padding-left: 2rem;
-
-      &:not(.clickable) {
-        opacity: 0.5;
-      }
-    }
-
-    & > .sidebar-group-items {
-      padding-left: 1rem;
-
-      & > li > .sidebar-link {
-        font-size: 0.95em;
-        border-left: none;
-      }
-    }
-  }
-
-  &.depth-2 {
-    & > .sidebar-heading {
-      border-left: none;
-    }
-  }
-}
-
 .sidebar-heading {
-  color: $textColor;
+  color: var(--text-color);
   transition: color 0.15s ease;
-  cursor: pointer;
-  font-size: 1.1em;
   font-weight: bold;
-  // text-transform uppercase
-  padding: 0.35rem 1.5rem 0.35rem 1.25rem;
-  width: 100%;
-  box-sizing: border-box;
+  line-height: 2;
+  cursor: pointer;
   margin: 0;
-  border-left: 0.25rem solid transparent;
-
-  &.open, &:hover {
-    color: inherit;
-  }
 
   .arrow {
     position: relative;
@@ -114,22 +61,13 @@ export default {
     left: 0.5em;
   }
 
-  &.clickable {
-    &.active {
-      font-weight: 600;
-      color: $accentColor;
-      border-left-color: $accentColor;
-    }
-
-    &:hover {
-      color: $accentColor;
-    }
+  &:hover {
+    color: var(--accent-color);
   }
 }
 
 .sidebar-group-items {
   transition: height 0.1s ease-out;
-  font-size: 0.95em;
   overflow: hidden;
 }
 </style>

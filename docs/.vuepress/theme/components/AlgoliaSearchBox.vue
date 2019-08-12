@@ -2,49 +2,12 @@
   form#search-form.algolia-search-wrapper.search-box(
     role="search")
 
-    input#algolia-search-input.search-query
+    input#algolia-search-input.search-query(placeholder="Search...")
 </template>
 
 <script>
 export default {
   props: ['options'],
-
-  mounted() {
-    this.initialize(this.options, this.$lang);
-  },
-
-  methods: {
-    initialize(userOptions, lang) {
-      Promise.all([
-        import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
-        import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css'),
-      ]).then(([docsearch]) => {
-        docsearch = docsearch.default;
-        const { algoliaOptions = {} } = userOptions;
-        docsearch(
-          Object.assign({}, userOptions, {
-            inputSelector: '#algolia-search-input',
-            // #697 Make docsearch work well at i18n mode.
-            algoliaOptions: Object.assign(
-              {
-                facetFilters: [`lang:${lang}`].concat(
-                  algoliaOptions.facetFilters || []
-                ),
-              },
-              algoliaOptions
-            ),
-          })
-        );
-      });
-    },
-
-    update(options, lang) {
-      this.$el.innerHTML =
-        '<input id="algolia-search-input" class="search-query">';
-      this.initialize(options, lang);
-    },
-  },
-
   watch: {
     $lang(newValue) {
       this.update(this.options, newValue);
@@ -54,11 +17,47 @@ export default {
       this.update(newValue, this.$lang);
     },
   },
+  mounted() {
+    this.initialize(this.options, this.$lang);
+  },
+  methods: {
+    async initialize(userOptions, lang) {
+      const { algoliaOptions = {} } = userOptions;
+      const docsearch = await require('docsearch.js/dist/cdn/docsearch.min.js');
+      await require('docsearch.js/dist/cdn/docsearch.min.css');
+
+      docsearch(
+        Object.assign({}, userOptions, {
+          inputSelector: '#algolia-search-input',
+          // #697 Make docsearch work well at i18n mode.
+          algoliaOptions: Object.assign(
+            {
+              facetFilters: [`lang:${lang}`].concat(
+                algoliaOptions.facetFilters || []
+              ),
+            },
+            algoliaOptions
+          ),
+          handleSelected: (input, event, suggestion) => {
+            this.$router.push(new URL(suggestion.url).pathname);
+          },
+        })
+      );
+    },
+
+    update(options, lang) {
+      this.$el.innerHTML =
+        '<input id="algolia-search-input" class="search-query">';
+      this.initialize(options, lang);
+    },
+  },
 };
 </script>
 
 <style lang="stylus">
 .algolia-search-wrapper {
+  flex: 1;
+
   & > span {
     vertical-align: middle;
   }
@@ -71,6 +70,7 @@ export default {
     input {
       box-sizing: border-box;
       height: 100%;
+      // max-width: 40px;
     }
 
     .ds-dropdown-menu {
@@ -96,7 +96,7 @@ export default {
       }
 
       .ds-suggestion {
-        border-bottom: 1px solid $borderColor;
+        border-bottom: 1px solid var(--gray-color);
       }
     }
 
@@ -105,13 +105,13 @@ export default {
     }
 
     .algolia-docsearch-suggestion {
-      border-color: $borderColor;
+      border-color: var(--gray-color);
       padding: 0;
 
       .algolia-docsearch-suggestion--category-header {
         padding: 5px 10px;
         margin-top: 0;
-        background: $accentColor;
+        background: var(--accent-color);
         color: #fff;
         font-weight: 600;
 
@@ -127,13 +127,13 @@ export default {
       .algolia-docsearch-suggestion--title {
         font-weight: 600;
         margin-bottom: 0;
-        color: $textColor;
+        color: var(--dark-color);
       }
 
       .algolia-docsearch-suggestion--subcategory-column {
         vertical-align: top;
         padding: 5px 7px 5px 5px;
-        border-color: $borderColor;
+        border-color: var(--gray-color);
         background: #f1f3f5;
 
         &:after {
@@ -147,12 +147,12 @@ export default {
     }
 
     .algolia-docsearch-footer {
-      border-color: $borderColor;
+      border-color: var(--gray-color);
     }
 
     .ds-cursor .algolia-docsearch-suggestion--content {
       background-color: #e7edf3 !important;
-      color: $textColor;
+      color: var(--text-color);
     }
   }
 }

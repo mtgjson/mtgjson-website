@@ -1,8 +1,6 @@
 const generateSidebarRoutes = require('./config.sidebar');
 
-const structures = generateSidebarRoutes('/structures/');
-const downloads = generateSidebarRoutes('/downloads/');
-const files = generateSidebarRoutes('/files/');
+const [ structures, downloads, files ] = generateSidebarRoutes(['/structures/','/downloads/','/files/']);
 
 module.exports = {
   host: '0.0.0.0',
@@ -14,12 +12,13 @@ module.exports = {
   ga: 'UA-131358443-1',
   // Head Tags
   head: [
+    ['link', { rel: 'icon', href: '/favicon-dark.ico' }],
     // SEO Image
     [
       'meta',
       {
         property: 'og:image',
-        content: '/images/og_logo.png',
+        content: '/images/assets/logo-mtgjson-thumbnail.png',
       },
     ],
     // Keyrun for set images
@@ -38,21 +37,23 @@ module.exports = {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',
       algoliaOptions: {
-        hitsPerPage: 10
-      }
+        hitsPerPage: 10,
+      },
     },
-    searchMaxSuggestions: 20,
+    searchMaxSuggestions: 10,
     displayAllHeaders: true,
+    sidebarDepth: 1,
     lastUpdated: 'Last Updated',
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
-      { text: 'Contribute', link: 'https://github.com/mtgjson' },
       { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
+      { text: 'Contribute', link: 'https://github.com/mtgjson' },
     ],
-    logo: '/images/logo.svg',
+    title: 'MTGJSON',
+    logo: '/images/logo-3.svg',
     sidebar: [
       {
-        title: 'MTGJSON',
+        title: 'About Us',
         path: '/',
         collapsable: false,
       },
@@ -83,12 +84,16 @@ module.exports = {
       },
       {
         title: 'Changelog',
-        path: '/changelog/'
+        path: '/changelog/',
+      },
+      {
+        title: 'Brand Assets',
+        path: '/brand-assets/',
       },
       {
         title: 'License (MIT)',
-        path: '/license/'
-      }
+        path: '/license/',
+      },
     ],
   },
   plugins: [

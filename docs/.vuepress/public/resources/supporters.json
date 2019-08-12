@@ -93,7 +93,7 @@
     {
       "name": "Cardsphere",
       "image": "cardsphere.svg",
-      "link": "https://cardsphere.com"
+      "link": "https://www.cardsphere.com"
     },
     {
       "name": "Cube Tutor",
@@ -129,6 +129,11 @@
       "name": "Magic Cards Manager",
       "image": "mcm.png",
       "link": "https://www.magiccardsmanager.com"
+    },
+    {
+      "name": "Magic The Gathering Companion",
+      "image": "logo-mtg-desktop-companion.png",
+      "link": "https://github.com/nicho92/MtgDesktopCompanion"
     },
     {
       "name": "Magic Trade Binder",
@@ -181,7 +186,7 @@
       "link": "https://planestrader.com/"
     },
     {
-      "name": "RDWonlineMagicollection",
+      "name": "RDWonline Magicollection",
       "image": "rdwonline.png",
       "link": "https://magicollection.rdwonline.com"
     },
@@ -254,6 +259,10 @@
       "link": "https://redd.it/55l38e"
     },
     {
+      "name": "Metadeck",
+      "link": "http://metadeck.me/"
+    },
+    {
       "name": "MTGCardFetcher",
       "link": "https://reddit.com/r/MTGCardFetcher"
     },
@@ -283,4 +292,3 @@
     }
   ]
 }
-

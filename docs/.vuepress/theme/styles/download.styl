@@ -1,40 +1,47 @@
 .download-tables {
-  max-width: 800px;
   position: relative;
 
   h3 {
-    font-size: 16px;
+    font-size: 14px;
+    line-height: 1rem;
     padding: 0 0 5px;
+    color: var(--text-color);
 
     &.spoiler {
       display: flex;
+      align-items: center;
 
       &::after {
         position: relative;
         content: 'Spoiler';
-        background-color: lighten($yellowColor, 85%);
+        background-color: var(--spoiler-color);
+        color: var(--dark-color);
         border-radius: 5px;
         margin-left: 10px;
         margin-right: 5px;
         font-size: 10px;
-        font-weight: normal;
+        font-weight: bold;
         padding: 3px 5px;
-        display: inline-block;
+        display: inline-table;
         text-transform: capitalize;
       }
     }
   }
 
+  small {
+    color: var(--text-color);
+  }
+
   .sorting-options {
     position: sticky;
-    top: 55px;
+    background-color: var(--bg-dark-color);
+    top: $navbarHeight;
     z-index: 9;
-    background-color: white;
-    padding: 15px 0;
-    border-bottom: 1px solid $borderColor;
+    padding: 1rem 0 1rem;
 
     .sort-row {
       display: inline-block;
+      min-height: 2rem;
       margin-right: 30px;
     }
 
@@ -49,111 +56,117 @@
     }
   }
 
-  .download-table {
-    border: 1px solid #eaecef;
-    box-sizing: border-box;
+  .download-item {
     width: 100%;
     display: flex;
     flex-wrap: wrap;
-    margin-top: -1px;
 
-    &:nth-of-type(odd) {
-      background-color: #f6f6f6;
-    }
+    .download-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
 
-    &:nth-of-type(even) {
-      background-color: transparent;
-    }
+      .img-wrap {
+        flex: none;
 
-    .download-item {
-      flex: 0 0 100%;
+        div {
+          margin-right: 20px;
+          position: relative;
+          height: 50px;
+          width: 50px;
+          color: var(--text-color);
 
-      .download-wrap {
-        padding: 15px 20px 20px;
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-
-        .img-wrap {
-          flex: none;
-
-          div {
-            margin-right: 20px;
-            position: relative;
-            height: 50px;
-            width: 50px;
-            color: $codeBgColor;
-
-            &::before {
-              position: absolute;
-              text-align: center;
-              line-height: 1em;
-              font-size: 50px;
-              width: 100%;
-              height: 100%;
-              transition: 0.25s color;
-            }
+          &::before {
+            position: absolute;
+            text-align: center;
+            line-height: 1em;
+            font-size: 50px;
+            width: 100%;
+            height: 100%;
+            transition: 0.25s color;
           }
         }
+      }
 
-        .txt-wrap {
-          flex: 1;
+      .txt-wrap {
+        flex: 1;
 
-          p {
-            display: block;
-            font-weight: bold;
+        p {
+          display: block;
+          margin: 0;
+        }
+
+        ol {
+          padding: 0;
+          margin: 0;
+
+          li {
             margin: 0;
-          }
-
-          ol {
-            padding: 0;
-            margin: 0;
-
-            li {
-              margin: 0;
-              list-style: none;
-              display: inline-block;
-            }
-          }
-
-          small {
+            list-style: none;
             display: inline-block;
-            font-weight: bold;
-            margin-right: 30px;
-
-            span {
-              font-weight: normal;
-              text-transform: capitalize;
-
-              &.type {
-                text-transform: none;
-              }
-            }
           }
         }
 
-        .dl-wrap {
-          display: flex;
-          flex: 0 0 100%;
-          flex-wrap: wrap;
-          margin-top: 20px;
+        small {
+          display: inline-block;
+          font-weight: bold;
+          margin-right: 30px;
 
-          .cta-btn {
-            background-color: $greenColor !important;
-            margin-bottom: 10px;
-          }
+          span {
+            font-weight: normal;
+            text-transform: capitalize;
 
-          a {
-            text-decoration: none;
-            margin-right: 10px;
-            font-weight: bold;
-            text-transform: uppercase;
-
-            &:last-of-type {
-              margin-right: 0;
+            &.type {
+              text-transform: none;
             }
           }
         }
+      }
+
+      .dl-wrap {
+        flex: 0 0 100%;
+        padding: 0;
+        margin-top: 10px !important;
+        margin-left: 0;
+
+        li {
+          list-style: none;
+
+          &.sqlite {
+            margin-top: 10px;
+          }
+        }
+
+        small {
+          display: inline-block;
+          margin: 0 10px 5px 0;
+          font-weight: bold;
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: $MQMobile) {
+  .download-tables {
+    .sorting-options {
+      .sort-row {
+        display: block;
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+
+        select {
+          margin: 5px 0 0 0;
+          display: block;
+        }
+      }
+    }
+
+    .download-wrap {
+      & > * {
+        flex: 0 0 100% !important;
       }
     }
   }

@@ -1,6 +1,6 @@
 <template lang="pug">
-  nav.nav-links(v-if="userLinks.length || repoLink")
-    div.nav-item(
+  nav.nav-links
+    .nav-item(
       v-for="item in userLinks"
       :key="item.link")
       DropdownLink(
@@ -16,17 +16,18 @@
       target="_blank"
       rel="noopener noreferrer") {{ repoLabel }}
       OutboundLink
-    </a>
-  </nav>
+
+    ThemeSwitcher.mobile-hide
 </template>
 
 <script>
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import DropdownLink from './DropdownLink.vue';
 import { resolveNavLinkItem } from '../util';
 import NavLink from './NavLink.vue';
 
 export default {
-  components: { NavLink, DropdownLink },
+  components: { NavLink, DropdownLink, ThemeSwitcher },
   computed: {
     userNav() {
       return this.$themeLocaleConfig.nav || this.$site.themeConfig.nav || [];
@@ -73,10 +74,14 @@ export default {
       const { repo } = this.$site.themeConfig;
       if (repo) {
         return /^https?:/.test(repo) ? repo : `https://github.com/${repo}`;
+      } else {
+        return '';
       }
     },
     repoLabel() {
-      if (!this.repoLink) return;
+      if (!this.repoLink) {
+        return;
+      }
       if (this.$site.themeConfig.repoLabel) {
         return this.$site.themeConfig.repoLabel;
       }
@@ -99,52 +104,41 @@ export default {
 
 <style lang="stylus">
 .nav-links {
-  display: inline-block;
-
-  a {
-    line-height: 1.4rem;
-    color: inherit;
-
-    &:hover, &.router-link-active {
-      color: $accentColor;
-    }
-  }
+  position: relative;
+  display: flex;
+  align-items: center;
 
   .nav-item {
     position: relative;
     display: inline-block;
-    margin-left: 1.5rem;
-    line-height: 2rem;
+    line-height: 1.7rem;
+    margin-right: 1rem;
 
-    &:first-child {
-      margin-left: 0;
+    a {
+      font-size: 16px;
+      display: block;
+      font-weight: bold;
+      color: var(--text-color);
+
+      // margin: 0 auto;
+      // height: 25px;
+      // width: 25px;
+      svg {
+        display: none;
+        margin-left: 3px;
+      }
     }
-  }
 
-  .repo-link {
-    margin-left: 1.5rem;
-  }
-}
-
-@media (max-width: $MQMobile) {
-  .nav-links {
-    .nav-item, .repo-link {
-      margin-left: 0;
+    &:nth-of-type(1) {
+      a {
+        color: var(--discord-color) !important;
+      }
     }
-  }
-}
 
-@media (min-width: $MQMobile) {
-  .nav-links a {
-    &:hover, &.router-link-active {
-      color: $textColor;
-    }
-  }
-
-  .nav-item > a:not(.external) {
-    &:hover, &.router-link-active {
-      margin-bottom: -2px;
-      border-bottom: 2px solid lighten($accentColor, 8%);
+    &:nth-of-type(2) {
+      a {
+        color: var(--patreon-color);
+      }
     }
   }
 }

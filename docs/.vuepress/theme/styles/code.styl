@@ -1,21 +1,22 @@
-code, pre {
+.codeblock, code, pre {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
-  background-color: $tableCodeBgColor;
-  color: $tableCodeTextColor;
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
   border-radius: 5px;
   line-height: 2.7em;
   padding: 7px 10px;
   margin: 0;
 }
 
-pre, code, kbd, .line-number {
+.codeblock, pre, code, kbd, .line-number {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 }
 
 div[class*='language-'] {
   position: relative;
-  background-color: $codeBgColor;
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
   border-radius: 5px;
 
   .highlight-lines {
@@ -33,7 +34,6 @@ div[class*='language-'] {
   }
 
   code, pre, pre[class*='language-'] {
-    background: transparent;
     position: relative;
     z-index: 1;
 
@@ -111,7 +111,7 @@ div[class*='language-'] {
       height: 100%;
       border-radius: 5px 0 0 5px;
       border-right: 1px solid rgba(0, 0, 0, 66%);
-      background-color: $codeBgColor;
+      background-color: var(--code-bg-color);
     }
   }
 }

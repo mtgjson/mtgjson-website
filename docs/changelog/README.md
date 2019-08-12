@@ -18,6 +18,45 @@
 
 # Changelog
 
+Below you can find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain price updates and data improvements.
+
+## 4.5.0 <small>(2019-08-11)</small>
+
+### Announcements
+<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>We are pleased to introduce MTGJSON v4.5.0, a substantial update to the MTGJSON project. This release debuts our brand new website, and we can't be happier with the results! With improved documentation and dark mode support, the website will accommodate a wide range of ideas and projects, no matter a expertise. The site also comes with an upgrade to our brand image; with an amazing new logo! The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
+
+### Cards
+#### Added
+- `edhrecRank` Rank of card on [EDHRec.com](https://www.edhrec.com)
+- `mtgArenaId` self explanatory
+- `mtgoFoilId` self explanatory
+- `mtgoId` self explanatory
+
+#### Changed
+- `text` for Planeswalkers now has brackets around costs
+    -  Ex: `"-2:"` is now `"[-2]:"`
+
+#### Fixed
+- `artist` fixed for split cards
+- `printings` now has all entries
+
+### Sets
+#### Added
+- Commander: 2019 (`C19`)
+- `isPartialPreview` to denote a set is in spoiler mode and may not be complete
+- `boosterV3` values for newer sets
+
+### Tokens
+#### Removed
+- `duelDeck` as it's too hard to determine the correct value right now
+
+### Other
+- A brand new site and logo!
+- Better caching of MTGJSON resources
+- Build command improvements
+- Update TCGPlayer API to 1.32.0
+- Added `baseSetSize` and `totalSetSize` to `SetList.json` entries
+
 ## 4.4.2 <small>(2019-06-26)</small>
 
 ### Announcements
@@ -104,7 +143,7 @@ Do you have a project that uses MTGJSON? Please reach out to us and we will get 
 
 ### Announcements
 
-<a href="https://patreon.com/mtgjson" target="_blank"><img src="/images/patreon-logo.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MTGStocks"/></a> MTGJSON has long been a free and open-sourced project made for the community, by the community. As time has gone on, our financial situation have unfortunately changed and we are looking for your help. While MTGJSON will continue to be a free service forever, the development team has put together a few small perks for those who would like to help support continued and active development of the project, whether it be via code contributions or financial support. If you have benefited from the MTGJSON project in the past and can spare a few dollars a month, we have launched a [Patreon](https://patreon.com/mtgjson) to help cover the costs of development and upkeep. You can see [our current supporters](https://mtgjson.com/#patreon-supporters) on the homepage. We look forward to actively serving the community well and thank you for your support!<br/><br/>
+<a href="https://patreon.com/mtgjson" target="_blank"><img src="/images/patreon-logo.svg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MTGJSON"/></a> MTGJSON has long been a free and open-sourced project made for the community, by the community. As time has gone on, our financial situation have unfortunately changed and we are looking for your help. While MTGJSON will continue to be a free service forever, the development team has put together a few small perks for those who would like to help support continued and active development of the project, whether it be via code contributions or financial support. If you have benefited from the MTGJSON project in the past and can spare a few dollars a month, we have launched a [Patreon](https://patreon.com/mtgjson) to help cover the costs of development and upkeep. You can see [our current supporters](https://mtgjson.com/#patreon-supporters) on the homepage. We look forward to actively serving the community well and thank you for your support!<br/><br/>
 
 <a href="https://www.mtgstocks.com/news?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson" target="_blank"><img src="/images/mtgstocks.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MTGStocks"/></a> MTGJSON strives to provide our users with the most accurate and complete data possible. As such, we are always looking for new sources to enrich our content. One of the most requested additions to our data was card price history, as there are a large number of analyses that can be run with such data.
 

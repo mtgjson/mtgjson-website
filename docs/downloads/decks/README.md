@@ -23,4 +23,4 @@ Download pre-constructed decks MTGJSON outputs.
 
 ### Download Decks
 
-<GenerateDecksDownloads/>
+<DownloadDecks/>

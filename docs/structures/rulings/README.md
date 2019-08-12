@@ -29,4 +29,4 @@ List of rulings that are for a specific card.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

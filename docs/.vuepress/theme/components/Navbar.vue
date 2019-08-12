@@ -1,137 +1,80 @@
 <template lang="pug">
   header.navbar
-    SidebarButton(@toggle-sidebar="$emit('toggle-sidebar')")
-
-    router-link.home-link(:to="$localePath")
-      img.logo(
-        v-if="$site.themeConfig.logo"
-        :src="$withBase($site.themeConfig.logo)"
-        :title="$siteTitle"
-      )
-    
-    Metadata
-
-    div.links(
-      :style="{'max-width': linksWrapMaxWidth ? linksWrapMaxWidth + 'px': '100%'}")
-      AlgoliaSearchBox(
-        v-if="isAlgoliaSearch"
-        :options="algolia")
-      SearchBox(v-else-if="$site.themeConfig.search !== false")
-      NavLinks.can-hide
-    </div>
-  </header>
+    .navbar-options
+      SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
+      router-link(:to="$localePath")
+        Logo(:width="`60px`")
+      NavLinks.mobile-hide
+      ThemeSwitcher.desktop-hide
 </template>
 
 <script>
-import Metadata from './Metadata.vue';
-import SidebarButton from './SidebarButton.vue';
-import AlgoliaSearchBox from '@AlgoliaSearchBox';
-import SearchBox from '@SearchBox';
-import NavLinks from './NavLinks.vue';
+import NavLinks from './NavLinks';
+import SidebarButton from './SidebarButton';
+import Logo from '../global-components/Logo';
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 
 export default {
   components: {
-    Metadata,
     SidebarButton,
+    ThemeSwitcher,
     NavLinks,
-    SearchBox,
-    AlgoliaSearchBox,
-  },
-  data() {
-    return {
-      linksWrapMaxWidth: null,
-    };
-  },
-  mounted() {
-    const MOBILE_DESKTOP_BREAKPOINT = 719; // refer to config.styl
-    const NAVBAR_VERTICAL_PADDING =
-      parseInt(css(this.$el, 'paddingLeft')) +
-      parseInt(css(this.$el, 'paddingRight'));
-    const handleLinksWrapWidth = () => {
-      if (document.documentElement.clientWidth < MOBILE_DESKTOP_BREAKPOINT) {
-        this.linksWrapMaxWidth = null;
-      } else {
-        this.linksWrapMaxWidth =
-          this.$el.offsetWidth -
-          NAVBAR_VERTICAL_PADDING -
-          ((this.$refs.versionNumber && this.$refs.versionNumber.offsetWidth) ||
-            0);
-      }
-    };
-    handleLinksWrapWidth();
-    window.addEventListener('resize', handleLinksWrapWidth, false);
-  },
-  computed: {
-    algolia() {
-      return (
-        this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-      );
-    },
-    isAlgoliaSearch() {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName;
-    },
+    Logo,
   },
 };
 
-function css(el, property) {
-  // NOTE: Known bug, will return 'auto' if style value is 'auto'
-  const win = el.ownerDocument.defaultView;
-  // null means not to return pseudo styles
-  return win.getComputedStyle(el, null)[property];
-}
+// function css(el, property) {
+//   // NOTE: Known bug, will return 'auto' if style value is 'auto'
+//   const win = el.ownerDocument.defaultView;
+//   // null means not to return pseudo styles
+//   return win.getComputedStyle(el, null)[property];
+// }
 </script>
 
 <style lang="stylus">
-$navbar-vertical-padding = 0.7rem;
-$navbar-horizontal-padding = 1.5rem;
+@require '../styles/wrapper.styl';
 
 .navbar {
-  padding: $navbar-vertical-padding $navbar-horizontal-padding;
-  line-height: $navbarHeight - 1.4rem;
+  display: flex;
+  background-color: var(--bg-color);
+  position: fixed;
+  z-index: 9;
+  top: 0;
+  right: 0;
+  left: 0;
+  height: $navbarHeight;
+  align-items: center;
+  background-color: var(--bg-color);
+  border-bottom: 1px solid var(--bg-border-color);
+  @extend $wrapper;
 
-  a, span, img {
-    display: inline-block;
-  }
-
-  .logo {
-    height: $navbarHeight - 1.4rem;
-    width: auto;
-    vertical-align: top;
-  }
-
-  .links {
-    padding-left: 1.5rem;
-    box-sizing: border-box;
-    background-color: white;
-    white-space: nowrap;
-    font-size: 0.9rem;
-    position: absolute;
-    right: $navbar-horizontal-padding;
-    top: $navbar-vertical-padding;
+  &-options {
+    width: 100%;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+}
 
-    .search-box {
-      flex: 0 0 auto;
-      vertical-align: top;
+@media (max-width: $MQMobile) {
+  .navbar {
+    left: 0;
+
+    &-options {
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .sidebar-button {
+      left: -0.5rem;
     }
   }
 }
 
 @media (max-width: $MQMobile) {
   .navbar {
-    padding-left: 4rem;
-
-    .logo {
-      height: $navbarHeight - 1.8rem;
-      vertical-align: middle;
-    }
-
-    .can-hide {
-      display: none;
-    }
-
-    .links {
-      padding-left: 1.5rem;
+    &-options {
+      max-width: $contentWidth;
     }
   }
 }

@@ -1,52 +1,62 @@
 {
   "Chinese Simplified": {
     "type": "string",
-    "example": "\"\u4e59\u592a\u4e4b\u4e71\"",
-    "description": "Translation in Chinese Simplified."
+    "example": "\"乙太之乱\"",
+    "description": "Translation in Chinese Simplified.",
+    "introduced": "v4.0.0"
   },
   "Chinese Traditional": {
     "type": "string",
-    "example": "\"\u4e59\u592a\u4e4b\u4e82\"",
-    "description": "Translation in Chinese Traditional."
+    "example": "\"乙太之亂\"",
+    "description": "Translation in Chinese Traditional.",
+    "introduced": "v4.0.0"
   },
   "French": {
     "type": "string",
-    "example": "\"\u004c\u0061\u0020\u0072\u00e9\u0076\u006f\u006c\u0074\u0065\u0020\u00e9\u0074\u0068\u00e9\u0072\u0069\u0071\u0075\u0065\"",
-    "description": "Translation in French."
+    "example": "\"La révolte éthérique\"",
+    "description": "Translation in French.",
+    "introduced": "v4.0.0"
   },
   "German": {
     "type": "string",
-    "example": "\"\u00c4\u0074\u0068\u0065\u0072\u002d\u0052\u0065\u0062\u0065\u006c\u006c\u0069\u006f\u006e\"",
-    "description": "Translation in German."
+    "example": "\"Äther-Rebellion\"",
+    "description": "Translation in German.",
+    "introduced": "v4.0.0"
   },
   "Italian": {
     "type": "string",
-    "example": "\"\u0052\u0069\u0076\u006f\u006c\u0074\u0061\u0020\u0064\u0065\u006c\u006c\u2019\u0045\u0074\u0065\u0072\u0065\"",
-    "description": "Translation in Italian."
+    "example": "\"Rivolta dell’Etere\"",
+    "description": "Translation in Italian.",
+    "introduced": "v4.0.0"
   },
   "Japanese": {
     "type": "string",
-    "example": "\"\u970a\u6c17\u7d1b\u4e89\"",
-    "description": "Translation in Japanese."
+    "example": "\"霊気紛争\"",
+    "description": "Translation in Japanese.",
+    "introduced": "v4.0.0"
   },
   "Korean": {
     "type": "string",
-    "example": "\"\uc5d0\ud14c\ub974\u0020\ubd09\uae30\"",
-    "description": "Translation in Korean."
+    "example": "\"에테르 봉기\"",
+    "description": "Translation in Korean.",
+    "introduced": "v4.0.0"
   },
   "Portuguese (Brazil)": {
     "type": "string",
-    "example": "\"\u0052\u0065\u0076\u006f\u006c\u0074\u0061\u0020\u0064\u006f\u0020\u00c9\u0074\u0065\u0072\"",
-    "description": "Translation in Portuguese (Brazil)."
+    "example": "\"Revolta do Éter\"",
+    "description": "Translation in Portuguese (Brazil).",
+    "introduced": "v4.0.0"
   },
   "Russian": {
     "type": "string",
-    "example": "\"\u00ab\u042d\u0444\u0438\u0440\u043d\u044b\u0439\u0020\u0411\u0443\u043d\u0442\u00bb\"",
-    "description": "Translation in Russian."
+    "example": "\"«Эфирный Бунт»\"",
+    "description": "Translation in Russian.",
+    "introduced": "v4.0.0"
   },
   "Spanish": {
     "type": "string",
-    "example": "\"\u004c\u0061\u0020\u0072\u0065\u0076\u0075\u0065\u006c\u0074\u0061\u0020\u0064\u0065\u006c\u0020\u00e9\u0074\u0065\u0072\"",
-    "description": "Translation in Spanish."
+    "example": "\"La revuelta del éter\"",
+    "description": "Translation in Spanish.",
+    "introduced": "v4.0.0"
   }
 }

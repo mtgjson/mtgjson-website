@@ -2,23 +2,31 @@
   "code": {
     "type": "string",
     "example": "\"M19\"",
-    "description": "Set code for the set."
+    "description": "Set code for the set.",
+    "introduced": "v4.0.0"
   },
   "isFoilOnly": {
     "type": "boolean",
     "example": "true",
     "description": "Set only has foil cards.",
-    "traits": ["optional"]
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.0.0"
   },
   "name": {
     "type": "string",
     "example": "\"Core Set 2019\"",
-    "description": "Name for the set."
+    "description": "Name for the set.",
+    "introduced": "v4.0.0"
   },
   "releaseDate": {
     "type": "string",
     "example": "\"2018-07-13\"",
     "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set. Returns {{code:null}} if the set was not formally released as a product.",
-    "traits": ["nullable"]
+    "attributes": [
+      "nullable"
+    ],
+    "introduced": "v4.0.0"
   }
 }

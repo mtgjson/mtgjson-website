@@ -1,7 +1,7 @@
 ---
 {
   "title": "token",
-  "schema": "Token",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",
@@ -23,8 +23,7 @@
 > Parent structure: [set](../set)  
 > Parent property: `tokens`  
 > Parent property type: `array(anonymous object)`  
-> Property type: `string`  
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

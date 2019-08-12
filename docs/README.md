@@ -40,13 +40,13 @@ Martin is an avid strategy gamer and Magic player since late 1994. When he’s n
 
 ::: tip Eric - Documentation Developer
 ![avatar](/images/avatar-eric.gif "Eric")
-Eric is a conceptualizer that loves open-source software and cervidae. When he's not delving into any code he can find, he enjoys watching 'B'-rated horror movies, camping, and hiking.
+Eric is a conceptualizer that loves cervidae, nature, cheesy sci-fi movies and delving in to any code he can find. He has worked on the MTGJSON documentation since 2018 and is an avid supporter of open-source software and the MTG community.
 :::
 
 ## Contributing
 
-Many others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a class="inline-btn paypal" href="https://www.paypal.me/Zachhalpern">PayPal</a> (one-time donation) or via <a class="inline-btn patreon" href="https://www.patreon.com/MTGJSON">Patreon</a> (reoccurring donations).
+Many others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [Paypal](https://www.paypal.me/Zachhalpern) (one-time donation) or via [Patreon](https://www.patreon.com/MTGJSON) (reoccurring donations).
 
-## Patreon Supporters
+## Supporters
 
-<GenerateSupporters/>
+<Supporters/>

@@ -23,4 +23,4 @@ Download MTGJSON outputs.
 
 ### Download Files
 
-<GenerateCompiledDownloads/>
+<DownloadCompiled/>

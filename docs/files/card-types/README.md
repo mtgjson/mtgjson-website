@@ -23,8 +23,7 @@
 Every card type of any type of card.
 
 > Data type: `object(string: object)`  
-> Property type: `string`  
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

@@ -76,28 +76,28 @@ export default {
       max-width: 35rem;
       font-size: 1.6rem;
       line-height: 1.3;
-      color: lighten($textColor, 40%);
+      color: var(--light-gray-color);
     }
 
     .action-button {
       display: inline-block;
       font-size: 1.2rem;
       color: #fff;
-      background-color: $accentColor;
+      background-color: var(--accent-color);
       padding: 0.8rem 1.6rem;
       border-radius: 5px;
       transition: background-color 0.1s ease;
       box-sizing: border-box;
-      border-bottom: 1px solid darken($accentColor, 10%);
+      border-bottom: 1px solid var(--accent-color);
 
       &:hover {
-        background-color: lighten($accentColor, 10%);
+        background-color: var(--accent-color);
       }
     }
   }
 
   .features {
-    border-top: 1px solid $borderColor;
+    border-top: 1px solid var(--gray-color);
     padding: 1.2rem 0;
     margin-top: 2.5rem;
     display: flex;
@@ -117,19 +117,19 @@ export default {
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: lighten($textColor, 10%);
+      color: var(--light-gray-color);
     }
 
     p {
-      color: lighten($textColor, 25%);
+      color: var(--light-gray-color);
     }
   }
 
   .footer {
     padding: 2.5rem;
-    border-top: 1px solid $borderColor;
+    border-top: 1px solid var(--gray-color);
     text-align: center;
-    color: lighten($textColor, 25%);
+    color: var(--light-gray-color);
   }
 }
 

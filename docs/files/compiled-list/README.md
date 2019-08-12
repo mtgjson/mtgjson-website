@@ -23,8 +23,7 @@
 All possible compiled outputs from MTGJSON.
 
 > Data type: `object(string: any)`  
-> Property type: `string`  
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

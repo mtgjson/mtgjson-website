@@ -23,8 +23,7 @@
 All sets, restricted to sets legal in Modern.
 
 > Data type: `array(string: object)`  
-> Property type: `string`  
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

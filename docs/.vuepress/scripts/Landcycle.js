@@ -38,52 +38,52 @@ export default class {
     ).slice(-2)}-${('0' + newDate.getDate()).slice(-2)}`;
 
     switch (text) {
-      case 'version':
-      case 'deck':
-        locale = 'files';
-        break;
+    case 'version':
+    case 'deck':
+      locale = 'files';
+      break;
 
-      default:
-        locale = 'structures';
-        break;
+    default:
+      locale = 'structures';
+      break;
     }
 
     switch (tag) {
-      case 'external':
-        newStr = `<a class="code-link" href="${external}" target="_blank">${text}</a>`;
-        break;
+    case 'external':
+      newStr = `<a class="code-link" href="${external}" target="_blank">${text}</a>`;
+      break;
 
-      case 'link':
-        newStr = `<a class="code-link" href="/${locale}/${text}" />${this.unwrap(
-          text
-        )}</a>`;
-        break;
+    case 'link':
+      newStr = `<a class="code-link" href="/${locale}/${text}" />${this.unwrap(
+        text
+      )}</a>`;
+      break;
 
-      case 'code':
-        newStr = `<code>${text}</code>`;
-        break;
+    case 'code':
+      newStr = `<code>${text}</code>`;
+      break;
 
-      case 'buildVersion':
-        const { version } = this.externalData;
+    case 'buildVersion':
+      const { version } = this.externalData;
 
-        newStr = version || text;
-        break;
+      newStr = version || text;
+      break;
 
-      case 'buildDate':
-        const { date } = this.externalData;
+    case 'buildDate':
+      const { date } = this.externalData;
 
-        newStr = date || currentDate;
-        break;
+      newStr = date || currentDate;
+      break;
 
-      case 'buildPricesDate':
-        const { pricesDate } = this.externalData;
+    case 'buildPricesDate':
+      const { pricesDate } = this.externalData;
 
-        newStr = pricesDate || currentDate;
-        break;
+      newStr = pricesDate || currentDate;
+      break;
 
-      default:
-        newStr = `<span>Landcycle error. No Tag defined.</span>`;
-        break;
+    default:
+      newStr = `<span>Landcycle error. No Tag defined.</span>`;
+      break;
     }
 
     return await newStr;
@@ -94,27 +94,33 @@ export default class {
    * then return the new JSON
    */
   async cycle() {
+    const { hasOwnProperty } = Object.prototype;
+
     for (let key in this.schema) {
-      const keyValue = this.schema[key];
-
-      for (let innerKey in keyValue) {
-        const value = keyValue[innerKey];
-        const strings = value.toString().match(this.regex);
-
-        if (strings) {
-          let newText = '';
-
-          for (let stringToHydrate of strings) {
-            try {
-              const newString = await this.hydrate(stringToHydrate);
-              newText = await keyValue[innerKey].replace(
-                stringToHydrate,
-                newString
-              );
-
-              this.schema[key][innerKey] = newText;
-            } catch (err) {
-              console.err(`${value} :: ${err}`);
+      if (hasOwnProperty.call(this.schema, key)) {
+        const keyValue = this.schema[key];
+  
+        for (let innerKey in keyValue) {
+          if (hasOwnProperty.call(keyValue, innerKey)) {
+            const value = keyValue[innerKey];
+            const strings = value.toString().match(this.regex);
+    
+            if (strings) {
+              let newText = '';
+              
+              for (let stringToHydrate of strings) {
+                try {
+                  const newString = await this.hydrate(stringToHydrate);
+                  newText = await keyValue[innerKey].replace(
+                    stringToHydrate,
+                    newString
+                  );
+    
+                  this.schema[key][innerKey] = newText;
+                } catch (err) {
+                  console.err(`${value} :: ${err}`);
+                }
+              }
             }
           }
         }

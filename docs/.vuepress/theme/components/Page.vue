@@ -2,21 +2,16 @@
   main.page
     slot(name="top")
 
+    //- ThemeSwitcher.page-theme-switcher
+
     Content
 
     footer.page-edit
-      div.edit-link(v-if="editLink")
-        a(
-          :href="editLink"
-          target="_blank"
-          rel="noopener noreferrer") {{ editLinkText }}
-        OutboundLink
-
-      div.last-updated(v-if="lastUpdated")
+      .last-updated(v-if="lastUpdated")
         span.prefix {{ lastUpdatedText }}: 
         span.time {{ lastUpdated }}
 
-    div.page-nav(v-if="prev || next")
+    .page-nav(v-if="prev || next")
       p.inner
         span.prev(v-if="prev")
           router-link.prev(
@@ -33,8 +28,9 @@
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util';
-
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 export default {
+  components: { ThemeSwitcher },
   props: ['sidebarItems'],
   computed: {
     lastUpdated() {
@@ -72,7 +68,7 @@ export default {
     prev() {
       const prev = this.$page.frontmatter.prev;
       if (prev === false) {
-        return;
+        return undefined;
       } else if (prev) {
         return resolvePage(this.$site.pages, prev, this.$route.path);
       } else {
@@ -82,41 +78,12 @@ export default {
     next() {
       const next = this.$page.frontmatter.next;
       if (next === false) {
-        return;
+        return undefined;
       } else if (next) {
         return resolvePage(this.$site.pages, next, this.$route.path);
       } else {
         return resolveNext(this.$page, this.sidebarItems);
       }
-    },
-    editLink() {
-      if (this.$page.frontmatter.editLink === false) {
-        return;
-      }
-      const {
-        repo,
-        editLinks,
-        docsDir = '',
-        docsBranch = 'master',
-        docsRepo = repo,
-      } = this.$site.themeConfig;
-
-      let path = normalize(this.$page.path);
-      if (endingSlashRE.test(path)) {
-        path += 'README.md';
-      } else {
-        path += '.md';
-      }
-      if (docsRepo && editLinks) {
-        return this.createEditLink(repo, docsRepo, docsDir, docsBranch, path);
-      }
-    },
-    editLinkText() {
-      return (
-        this.$themeLocaleConfig.editLinkText ||
-        this.$site.themeConfig.editLinkText ||
-        `Edit this page`
-      );
     },
   },
   methods: {
@@ -182,8 +149,32 @@ function flattern(items, res) {
 @require '../styles/wrapper.styl';
 
 .page {
-  padding-bottom: 2rem;
-  display: block;
+  position: relative;
+  z-index: 1;
+  padding-top: $navbarHeight + 4rem;
+  padding-left: $sidebarWidth;
+  background-color: var(--bg-dark-color);
+
+  .page-theme-switcher {
+    position: absolute;
+    left: $sidebarWidth + 48rem;
+    top: 1.25rem;
+  }
+
+  .options {
+    @extend $wrapper;
+    margin-bottom: 1rem;
+    width: 100%;
+
+    &-wrap {
+      left: $sidebarWidth;
+      max-width: $contentWidth;
+      display: flex;
+      flex-direction: row-reverse;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 }
 
 .page-edit {
@@ -196,18 +187,17 @@ function flattern(items, res) {
     display: inline-block;
 
     a {
-      color: lighten($textColor, 25%);
+      color: var(--light-gray-color);
       margin-right: 0.25rem;
     }
   }
 
   .last-updated {
-    float: right;
     font-size: 0.9em;
 
     .prefix {
       font-weight: 500;
-      color: lighten($textColor, 25%);
+      color: var(--text-color);
     }
 
     .time {
@@ -220,22 +210,39 @@ function flattern(items, res) {
 .page-nav {
   @extend $wrapper;
   padding-top: 1rem;
-  padding-bottom: 0;
+  padding-bottom: 5rem;
 
   .inner {
-    min-height: 2rem;
-    margin-top: 0;
-    border-top: 1px solid $borderColor;
-    padding-top: 1rem;
+    max-width: $contentWidth;
+    margin-bottom: 0;
     overflow: auto; // clear float
   }
 
   .next {
     float: right;
   }
+
+  .next, .prev {
+    a {
+      font-weight: bold;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
 }
 
 @media (max-width: $MQMobile) {
+  .page {
+    padding-top: $navbarHeight + 3rem;
+    padding-left: 0;
+  }
+
+  .page-theme-switcher {
+    display: none !important;
+  }
+
   .page-edit {
     .edit-link {
       margin-bottom: 0.5rem;
