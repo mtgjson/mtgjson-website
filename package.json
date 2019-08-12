@@ -12,9 +12,9 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "test": "jest && yarn build",
+    "test": "jest && yarn lint && yarn build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
-    "purge": "rm -rf node_modules && yarn cache clean",
+    "purge": "rm -rf node_modules",
     "schema-builder": "node ./utils/schema-builder.js"
   },
   "dependencies": {

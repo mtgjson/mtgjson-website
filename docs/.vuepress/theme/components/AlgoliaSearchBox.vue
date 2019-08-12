@@ -21,31 +21,28 @@ export default {
     this.initialize(this.options, this.$lang);
   },
   methods: {
-    initialize(userOptions, lang) {
-      Promise.all([
-        import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.js'),
-        import(/* webpackChunkName: "docsearch" */ 'docsearch.js/dist/cdn/docsearch.min.css'),
-      ]).then(([docsearch]) => {
-        docsearch = docsearch.default;
-        const { algoliaOptions = {} } = userOptions;
-        docsearch(
-          Object.assign({}, userOptions, {
-            inputSelector: '#algolia-search-input',
-            // #697 Make docsearch work well at i18n mode.
-            algoliaOptions: Object.assign(
-              {
-                facetFilters: [`lang:${lang}`].concat(
-                  algoliaOptions.facetFilters || []
-                ),
-              },
-              algoliaOptions
-            ),
-            handleSelected: (input, event, suggestion) => {
-              this.$router.push(new URL(suggestion.url).pathname);
+    async initialize(userOptions, lang) {
+      const { algoliaOptions = {} } = userOptions;
+      const docsearch = await require('docsearch.js/dist/cdn/docsearch.min.js');
+      await require('docsearch.js/dist/cdn/docsearch.min.css');
+
+      docsearch(
+        Object.assign({}, userOptions, {
+          inputSelector: '#algolia-search-input',
+          // #697 Make docsearch work well at i18n mode.
+          algoliaOptions: Object.assign(
+            {
+              facetFilters: [`lang:${lang}`].concat(
+                algoliaOptions.facetFilters || []
+              ),
             },
-          })
-        );
-      });
+            algoliaOptions
+          ),
+          handleSelected: (input, event, suggestion) => {
+            this.$router.push(new URL(suggestion.url).pathname);
+          },
+        })
+      );
     },
 
     update(options, lang) {
