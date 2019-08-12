@@ -15,7 +15,7 @@ module.exports = routes => {
         .filter(file => file !== 'README.md')
         .map(file => (file = `${route}${file}/`))
     );
-  };
+  }
 
   return newRoutes;
 };
