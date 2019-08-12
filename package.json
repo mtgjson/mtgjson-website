@@ -6,13 +6,13 @@
   "license": "MIT",
   "engines": {
     "node": "^12.8.0",
-    "yarn": "^1.17.3",
     "npm": "^6.10.2"
   },
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
-    "test": "jest && yarn lint && yarn build",
+    "bootstrap": "npm install && npm audit --fix",
+    "test": "jest && npm run lint && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "purge": "rm -rf node_modules",
     "regenerate-schema": "node ./utils/schema-regenerator.js"
@@ -20,7 +20,7 @@
   "dependencies": {
     "vuepress": "^1.0.3",
     "vuepress-plugin-container": "^2.0.1",
-    "vuepress-plugin-feed": "^0.1.6"
+    "vuepress-plugin-feed": "^0.1.7"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",
@@ -34,6 +34,10 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "vue-eslint-parser": "^6.0.4"
+  },
+  "peerDependencies": {
+    "ajv": "^6.9.1",
+    "eslint": "^5.0.0"
   },
   "husky": {
     "hooks": {

@@ -10,26 +10,23 @@
 ## Dependencies
 - [Node](https://www.nodejs.com)
   - You can directly download Node but if you are able to use [Brew](https://brew.sh/) then you can quickly switch between Node version using the `n` package that Brew provides.
-- `yarn` or `npm`
-  - `yarn` is a wrapper around `npm` (We will be deprecating normal operations of `yarn` soon).
-  - `npm` automatically comes installed with Node.
 
 ## Installation
 
 ```
-yarn install # OR npm install
+npm run bootstrap
 ```
 
 ## Developing
 
 ```
-yarn dev # OR npm run dev
+npm run dev
 ```
 
 ## Linting
 
 ```
-yarn test # OR npm run test
+npm run test
 ```
 
 ## Testing
@@ -37,13 +34,13 @@ yarn test # OR npm run test
 Tests project using Jest tests and attempts to run a build. This command will also automatically run during Husky's pre-commit checks.
 
 ```
-yarn lint # OR npm run lint
+npm run lint
 ```
 
 ## Building
 
 ```
-yarn build # OR npm run build
+npm run build
 ```
 
 ## Purging
@@ -51,7 +48,7 @@ yarn build # OR npm run build
 Remove all packages
 
 ```
-yarn purge
+npm run purge
 ```
 
 ## Notes
