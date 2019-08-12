@@ -29,21 +29,21 @@
           h3(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFuture(set.releaseDate)}") {{ set.name }}
           ol
             li
-              small Set Code: 
+              small Set Code:
                 span {{ set.code }}
             li
-              small Type: 
+              small Type:
                 span.type {{ set.type }}
             li
-              small Release Date: 
+              small Release Date:
                 span {{ set.releaseDate }}
         ol.dl-wrap
           li
-            small Downloads: 
-              span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                a.dl-btn(:href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
-              span(v-else)
-                a.dl-btn(:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
+            small Downloads:
+            span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
+              a.dl-btn(:href="`/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
+            span(v-else)
+              a.dl-btn(:href="`/${downloadDirectory}/${set.code}.json`") {{ format }}
 
 </template>
 

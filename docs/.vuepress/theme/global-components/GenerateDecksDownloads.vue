@@ -10,7 +10,7 @@
           option(value="code:true") Code (Descending)
           option(value="name") Name (Ascending)
           option(value="name:true") Name (Descending)
-            
+
     blockquote.download-item(v-for="(deck, key) in decks")
       .download-wrap
         .img-wrap
@@ -19,23 +19,23 @@
           h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
           ol
             li
-              small Set Code: 
+              small Set Code:
                 span {{ deck.code }}
-            //- This if/else logic is needed until `type` is added 
+            //- This if/else logic is needed until `type` is added
             li(v-if="deck.type")
-              small Type: 
+              small Type:
                 span {{ deck.type }}
             li
-              small Release Date: 
+              small Release Date:
                 span {{ deck.releaseDate }}
         ol.dl-wrap
           li
-            small Downloads: 
-              span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
-              span(v-else)
-                a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
-                    
+            small Downloads:
+            span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
+              a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
+            span(v-else)
+              a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
+
 </template>
 
 <script>

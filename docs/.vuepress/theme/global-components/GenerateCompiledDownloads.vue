@@ -10,41 +10,41 @@
         //- All sets sqlite database
         ol.dl-wrap(v-if="file.example === 'AllSets'")
           li
-            small Downloads: 
-              span(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key")
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-              span(v-else)
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+            small Downloads:
+            span(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key")
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
+            span(v-else)
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
           li.sqlite
-            small AllSets as an sqlite database. 
-              span Courtesy of 
+            small AllSets as an sqlite database.
+              span Courtesy of
                 a(href="https://github.com/mtgjson/mtgsqlive" target="_blank") mtgsqlive
                 span .
           li
-            small Downloads: 
-              span(v-for="(format, key) in fileFormatsAllSetsSQL" v-if="format !== 'sqlite'" :key="key")
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.sqlite.${format}`") {{ format }}
-              span(v-else)
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.sqlite`") {{ format }}
+            small Downloads:
+            span(v-for="(format, key) in fileFormatsAllSetsSQL" v-if="format !== 'sqlite'" :key="key")
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.sqlite.${format}`") {{ format }}
+            span(v-else)
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.sqlite`") {{ format }}
 
         //- All set files download
         //- All deck files download
         ol.dl-wrap(v-else-if="file.example === 'AllSetFiles' || file.example === 'AllDeckFiles'" )
           li
-            small Downloads: 
-              span(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key")
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
-              span(v-else)
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
+            small Downloads:
+            span(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'" :key="key")
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
+            span(v-else)
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.zip`") {{ format }}
 
         //- Everything else
         ol.dl-wrap(v-else)
           li
-            small Downloads: 
-              span(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key") 
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-              span(v-else)
-                a.dl-btn(:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
+            small Downloads:
+            span(v-for="(format, key) in fileFormats" v-if="format !== 'json'" :key="key")
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
+            span(v-else)
+              a.dl-btn(:href="`/${fileDirectory}/${file.example}.json`") {{ format }}
 
 </template>
 
@@ -62,12 +62,12 @@ export default {
   },
   created(){
     let files = this.files;
-    
+
     // Remove quotes
     for(let file in files){
       if (hasOwnProperty.call(files, file)) {
         const { example } = files[file];
-        
+
         files[file].example = example.replace(/['"]+/g, '');
       }
     }
@@ -100,7 +100,7 @@ export default {
         span {
           display: inline-block;
           margin: 0;
-          
+
           a {
             text-transform: lowercase !important;
 
