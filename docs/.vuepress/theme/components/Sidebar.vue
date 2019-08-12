@@ -22,8 +22,6 @@
 </template>
 
 <script>
-import Logo from './Logo';
-import Version from './Version';
 import NavLinks from './NavLinks';
 import SidebarLinks from './SidebarLinks';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
@@ -33,11 +31,9 @@ import SearchBox from '@SearchBox';
 export default {
   name: 'Sidebar',
   components: {
-    Version,
     NavLinks,
     SidebarLinks,
     SearchBox,
-    Logo,
     AlgoliaSearchBox,
   },
   props: ['items'],

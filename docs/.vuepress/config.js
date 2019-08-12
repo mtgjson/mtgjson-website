@@ -1,8 +1,6 @@
 const generateSidebarRoutes = require('./config.sidebar');
 
-const structures = generateSidebarRoutes('/structures/');
-const downloads = generateSidebarRoutes('/downloads/');
-const files = generateSidebarRoutes('/files/');
+const [ structures, downloads, files ] = generateSidebarRoutes(['/structures/','/downloads/','/files/']);
 
 module.exports = {
   host: '0.0.0.0',

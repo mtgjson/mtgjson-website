@@ -29,4 +29,4 @@ Prices is a structure defining an object of card prices based on date.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

@@ -35,4 +35,4 @@ If a card is "not legal", it will be omitted from the data.
 
 Using [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) as an example:
 
-<GenerateTable/>
+<Documentation/>

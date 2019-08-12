@@ -26,4 +26,4 @@ Every card type of any type of card.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

@@ -26,7 +26,7 @@
 </template>
 
 <script>
-import Logo from '../components/Logo';
+import Logo from './Logo';
 export default {
   name: 'BrandingGuide',
   components: { Logo },

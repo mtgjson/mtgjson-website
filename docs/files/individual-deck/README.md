@@ -29,4 +29,4 @@ MTGJSON outputs single pre-constructed decks and makes them available for downlo
 
 Using `AbzanSiege_KTK` as an example:
 
-<GenerateTable/>
+<Documentation/>

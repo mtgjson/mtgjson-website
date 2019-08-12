@@ -26,4 +26,4 @@ All sets, restricted to sets legal in Standard.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

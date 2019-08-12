@@ -33,4 +33,4 @@ If you are looking for an "Individual" deck structure check [here](../../files/i
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

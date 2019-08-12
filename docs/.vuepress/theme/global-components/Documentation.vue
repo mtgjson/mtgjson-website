@@ -78,7 +78,7 @@
 
 <script>
 export default {
-  name: 'GenerateTable',
+  name: 'Documentation',
   data() {
     return {
       schema: undefined,

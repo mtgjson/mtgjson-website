@@ -26,4 +26,4 @@ All possible compiled outputs from MTGJSON.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

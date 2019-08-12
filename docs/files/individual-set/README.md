@@ -26,4 +26,4 @@ The individual set structure describes the properties and values of a single set
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

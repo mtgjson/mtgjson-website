@@ -49,7 +49,7 @@
 
 <script>
 export default {
-  name: 'GenerateSetsDownloads',
+  name: 'SetsDownloads',
   data() {
     return {
       defaultSets: [],

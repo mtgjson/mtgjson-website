@@ -28,4 +28,4 @@ Purchase Urls is a structure defining URL paths to purchase a card or other prod
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

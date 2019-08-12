@@ -26,4 +26,4 @@
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

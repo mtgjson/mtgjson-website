@@ -26,4 +26,4 @@ List of all keywords used on Magic cards.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

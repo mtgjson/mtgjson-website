@@ -40,7 +40,7 @@
 
 <script>
 export default {
-  name: 'GenerateDecksDownloads',
+  name: 'DecksDownloads',
   data() {
     return {
       defaultDecks: null,

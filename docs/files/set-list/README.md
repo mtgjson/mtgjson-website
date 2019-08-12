@@ -26,4 +26,4 @@ List of codes, names and release dates of all sets.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

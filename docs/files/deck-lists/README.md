@@ -26,4 +26,4 @@ All possible compiled pre-constructed deck outputs from MTGJSON as a single mani
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

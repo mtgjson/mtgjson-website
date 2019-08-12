@@ -67,7 +67,7 @@
 
 <script>
 export default {
-  name: 'GenerateServices',
+  name: 'Services',
   data() {
     return {
       supporters: require('../../public/resources/supporters.json'),

@@ -50,7 +50,7 @@
 
 <script>
 export default {
-  name: 'GenerateAllDownloads',
+  name: 'AllDownloads',
   data() {
     return {
       files: require(`../../public/schemas/Files.schema.json`),

@@ -9,10 +9,10 @@
 </template>
 
 <script>
-import ThemeSwitcher from '../global-components/ThemeSwitcher';
 import NavLinks from './NavLinks';
 import SidebarButton from './SidebarButton';
-import Logo from './Logo';
+import Logo from '../global-components/Logo';
+import ThemeSwitcher from '../global-components/ThemeSwitcher';
 
 export default {
   components: {

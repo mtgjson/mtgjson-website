@@ -49,4 +49,4 @@ Many others have devoted their time and effort in to this project. If you have s
 
 ## Supporters
 
-<GenerateSupporters/>
+<Supporters/>

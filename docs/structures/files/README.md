@@ -28,4 +28,4 @@ Files Data is a structure defining all possible compiled outputs from MTGJSON.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

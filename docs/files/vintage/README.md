@@ -26,4 +26,4 @@ All sets, restricted to sets legal in Vintage.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

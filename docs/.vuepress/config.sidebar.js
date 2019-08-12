@@ -4,13 +4,18 @@
  */
 const fs = require('fs');
 
-module.exports = route => {
-  const files = fs.readdirSync(`./docs${route}`);
+module.exports = routes => {
+  const newRoutes = [];
 
-  return (
-    files
-      .filter(file => !/(^|\/)\.[^.]/g.test(file))
-      .filter(file => file !== 'README.md')
-      .map(file => (file = `${route}${file}/`))
-  );
+  for(const route of routes) {
+    const files = fs.readdirSync(`./docs${route}`);
+    newRoutes.push(
+      files
+        .filter(file => !/(^|\/)\.[^.]/g.test(file))
+        .filter(file => file !== 'README.md')
+        .map(file => (file = `${route}${file}/`))
+    );
+  };
+
+  return newRoutes;
 };

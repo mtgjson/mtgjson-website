@@ -28,5 +28,11 @@
     "example": "\"Fliegend, Wachsamkeit, verursacht Trampelschaden\nPalladia-Mors, die Verwüsterin, hat Fluchsicherheit, falls sie noch keinen Schaden zugefügt hat.\"",
     "description": "Text ruling of the card in foreign language.",
     "introduced": "v4.0.0"
+  },
+  "type": {
+    "type": "string",
+    "example": "Legendäre Kreatur — Ältester, Drache",
+    "description": "Type of the card. Includes any supertypes and subtypes.",
+    "introduced": "v4.0.0"
   }
 }

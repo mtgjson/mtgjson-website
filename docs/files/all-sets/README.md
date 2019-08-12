@@ -26,4 +26,4 @@ Every set and all cards in that set.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

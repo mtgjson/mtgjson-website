@@ -26,4 +26,4 @@ Metadata object has date (OBDC standard) and version properties of this MTGJSON 
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>

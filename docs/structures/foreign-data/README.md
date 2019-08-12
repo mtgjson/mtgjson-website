@@ -28,4 +28,4 @@ Foreign Data is a structure defining alternate language properties for a card.
 
 ### Data Structure
 
-<GenerateTable/>
+<Documentation/>
