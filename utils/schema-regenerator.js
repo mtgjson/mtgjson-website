@@ -9,14 +9,13 @@ const fs = require('fs');
 
 (() => {
   const config = require('../.schemarc');
-  const { srcDir, outDir, fields } = config;
-  const { insert } = fields;
+  const { srcDir, outDir, insert, ignore } = config;
 
   if (typeof config === 'object') {
     const schemas = fs.readdirSync(srcDir);
 
     if (insert) {
-      const { field, ignore } = insert;
+      const { fields } = insert;
       let newSchema = {};
 
       schemas
@@ -26,14 +25,16 @@ const fs = require('fs');
 
           for (let fieldName in schema) {
             if (hasOwnProperty.call(schema, fieldName)) {
-              const { name, value } = field;
-              const obj = schema[fieldName];
+              for(let field of fields){
+                const { name, defaultValue } = field;
+                const obj = schema[fieldName];
 
-              if (!obj[name]) {
-                obj[name] = value;
+                if (!obj[name]) {
+                  obj[name] = defaultValue;
+                }
+
+                newSchema[fieldName] = obj;
               }
-
-              newSchema[fieldName] = obj;
             }
           }
 

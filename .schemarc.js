@@ -1,18 +1,19 @@
 module.exports = {
   srcDir: './docs/.vuepress/public/schemas',
   outDir: './utils/output',
-  fields: {
-    insert: {
-      field: {
+  ignore: [
+    'Modern.schema.json',
+    'Vintage.schema.json',
+    'Standard.schema.json',
+    'AllSets.schema.json',
+  ],
+  insert: {
+    fields: [
+      // Add new field objects with a default value
+      {
         name: 'introduced',
-        value: 'v4.0.0',
-      },
-      ignore: [
-        'Modern.schema.json',
-        'Vintage.schema.json',
-        'Standard.schema.json',
-        'AllSets.schema.json',
-      ],
-    },
+        defaultValue: 'v4.0.0',
+      }
+    ]
   },
 };
