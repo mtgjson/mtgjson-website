@@ -38,10 +38,5 @@
   "peerDependencies": {
     "ajv": "^6.9.1",
     "eslint": "^5.0.0"
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "yarn test"
-    }
   }
 }
