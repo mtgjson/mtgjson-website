@@ -1,8 +1,7 @@
 
-<div class="display: flex;">
-  <img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" width="100px">
-  <h1>MTGJSON Website</h1>
-</div>
+<img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" width="100px">
+
+# MTGJSON Website
 
 [![Generic badge](https://img.shields.io/badge/Made_with_Vuepress-1.0-green.svg)](https://shields.io/)
 [![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://GitHub.com/ericlakatos/windfish-app/graphs/commit-activity)
@@ -11,21 +10,11 @@
 ## Dependencies
 - [Node](https://www.nodejs.com)
   - You can directly download Node but if you are able to use [Brew](https://brew.sh/) then you can quickly switch between Node version using the `n` package that Brew provides.
-- [VuePress](https://www.vuepress.com)
-  - Vuepress is a static site generator that uses API's and Markdown.
 - `yarn` or `npm`
   - `yarn` is a wrapper around `npm` (We will be deprecating normal operations of `yarn` soon).
   - `npm` automatically comes installed with Node.
 
 ## Installation
-
-Install Vuepress globally.
-
-```
-yarn global add vuepress # OR npm install -g vuepress
-```
-
-Install project dependencies (inside the repository).
 
 ```
 yarn install # OR npm install
