@@ -21,6 +21,10 @@
 Below you can find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain price updates and data improvements.
 
 ## 4.5.0 <small>(2019-08-11)</small>
+
+### Announcements
+<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>We are pleased to introduce MTGJSON v4.5.0, a substantial update to the MTGJSON project. This release debuts our brand new website, and we can't be happier with the results! With improved documentation and dark mode support, the website will accommodate a wide range of ideas and projects, no matter a expertise. The site also comes with an upgrade to our brand image; with an amazing new logo! The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
+
 ### Cards
 #### Added
 - `edhrecRank` Rank of card on [EDHRec.com](https://www.edhrec.com)
