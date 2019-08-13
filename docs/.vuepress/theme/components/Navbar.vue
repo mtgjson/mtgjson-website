@@ -36,7 +36,6 @@ export default {
 
 .navbar {
   display: flex;
-  background-color: var(--bg-color);
   position: fixed;
   z-index: 9;
   top: 0;

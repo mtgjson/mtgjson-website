@@ -39,9 +39,8 @@ export default {
 
     &--logo {
       svg {
-        width: 100%;
         height: auto;
-        
+
         g {
           fill: var(--accent-color);
         }
