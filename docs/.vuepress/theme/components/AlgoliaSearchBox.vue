@@ -69,7 +69,7 @@ export default {
 
     input {
       box-sizing: border-box;
-      height: 100%;
+      // height: 100%;
       // max-width: 40px;
     }
 
