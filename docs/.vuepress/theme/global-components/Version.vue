@@ -23,6 +23,7 @@ export default {
     fetch('https://mtgjson.com/json/version.json')
       .then(response => response.json())
       .then(response => {
+        response.version = 'v' + response.version;
         this.defaultVersion = response;
       })
       .catch(err => {
