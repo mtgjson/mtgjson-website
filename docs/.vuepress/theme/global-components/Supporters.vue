@@ -72,7 +72,7 @@ export default {
     return {
       supporters: require('../../public/resources/supporters.json'),
       projectMsg:
-        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" target="_blank">Discord</a> and let us know. We\'ll be happy to add it to this list.',
+        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.',
     };
   },
   computed: {
