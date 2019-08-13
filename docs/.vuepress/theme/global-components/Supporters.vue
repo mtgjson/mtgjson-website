@@ -4,51 +4,16 @@
       h3 Our Patreon Supporters
       p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project.
       small(v-html="projectMsg")
-      // Tier 3
-      .supporters-grid(v-if="mythic.length > 0" :data-tier="3")
-        blockquote.supporter(v-for="(supporter, key) in mythic")
-          a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
-            .img-wrap(v-if="supporter.image")
+      .supporters-grid
+        blockquote.supporter(v-for="({ link, image, name, since, tier, blurb } = patron, key) in patrons" :data-tier="tier")
+          .supporter-link
+            .img-wrap(v-if="image")
               .img-wrap--container
-                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-            h6 {{ supporter.name }}
-          span(v-else)
-            .img-wrap(v-if="supporter.image")
-              .img-wrap--container
-                img(:src="'/images/' + supporter.image", :title="supporter.name")
-            h6 {{ supporter.name }}
-          p(v-if="supporter.blurb") {{ supporter.blurb }}
-          .tier(v-html="formatTime(supporter.since)")
-
-      // Tier 2
-      .supporters-grid(v-if="rare.length > 0" :data-tier="2")
-        blockquote.supporter(v-for="(supporter, key) in rare")
-          a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
-            .img-wrap(v-if="supporter.image")
-              .img-wrap--container
-                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-            h6 {{ supporter.name }}
-          span(v-else)
-            .img-wrap(v-if="supporter.image")
-              .img-wrap--container
-                img(:src="'/images/' + supporter.image", :title="supporter.name")
-            h6 {{ supporter.name }}
-          .tier(v-html="formatTime(supporter.since)")
-
-      // Tier 1
-      .supporters-grid(v-if="uncommon.length > 0" :data-tier="1")
-        blockquote.supporter(v-for="(supporter, key) in uncommon")
-          a.supporter-link(v-if="supporter.link" :href="supporter.link" target="_blank")
-            .img-wrap(v-if="supporter.image")
-              .img-wrap--container
-                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-            h6 {{ supporter.name }}
-          span(v-else)
-            .img-wrap(v-if="supporter.image")
-              .img-wrap--container
-                img(:src="'/images/' + supporter.image", :title="supporter.name")
-            h6 {{ supporter.name }}
-          .tier(v-html="formatTime(supporter.since)")
+                img(:src="'/images/' + image" :alt="link" :title="name")
+            a(:href="link" target="_blank")
+              h6 {{ name }}
+            p.tier {{ tier }} Supporter
+            p.tier-time(v-if="since" v-html="formatTime(since)")
 
     // Not Patrons but services that use MTGJSON
     .supporters-wrap(v-if="services")
@@ -56,12 +21,13 @@
       p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here.
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")
-        blockquote.supporter.service(v-for="(supporter, key) in services")
-          a.supporter-link(:href="supporter.link" target="_blank")
-            .img-wrap(v-if="supporter.image")
+        blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services")
+          .supporter-link(:href="link" target="_blank")
+            .img-wrap(v-if="image")
               .img-wrap--container
-                img(:src="'/images/' + supporter.image", :alt="supporter.link", :title="supporter.name")
-            h6 {{ supporter.name }}
+                img(:src="'/images/' + image" :alt="link" :title="name")
+            a(:href="link" target="_blank")
+              h6 {{ name }}
 
 </template>
 
@@ -78,15 +44,6 @@ export default {
   computed: {
     patrons() {
       return this.supporters.patrons;
-    },
-    mythic() {
-      return this.supporters.patrons.mythic;
-    },
-    rare() {
-      return this.supporters.patrons.rare;
-    },
-    uncommon() {
-      return this.supporters.patrons.uncommon;
     },
     services() {
       return this.supporters.services;
@@ -126,11 +83,18 @@ export default {
 
   &-grid {
     display: grid;
-    grid-template-columns: repeat(4, minmax(0, 1fr));
-    grid-gap: 25px;
-    margin-bottom: 25px;
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+    grid-template-rows: auto;
+    justify-items: center;
+    grid-gap: 1rem;
+    margin-bottom: 2rem;
+
+    &.services {
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 
     .supporter {
+      width: 100%;
       display: flex;
       flex-wrap: wrap;
       justify-content: center;
@@ -138,6 +102,10 @@ export default {
       text-align: center;
       margin-bottom: 0;
       position: relative;
+      padding-left: 1rem;
+      padding-right: 1rem;
+      border-width: 1px;
+      border-color: var(--table-bg-color);
 
       .img-wrap {
         display: inline-flex;
@@ -169,6 +137,8 @@ export default {
         color: var(--text-color);
         display: block;
         margin: 0 auto;
+        padding-bottom: 10px;
+        line-height: 1.2rem;
       }
 
       a {
@@ -178,8 +148,8 @@ export default {
       }
 
       p {
+        display: block;
         flex: 0 0 100%;
-        margin: 0 auto 15px;
         font-size: 14px;
         line-height: 1.2em;
       }
@@ -191,108 +161,58 @@ export default {
       .tier {
         text-align: center;
         flex: 0 0 100%;
-        margin: 15px auto 0;
+        margin: 0 auto;
         font-size: 14px;
         line-height: 1.2em;
-        padding: 5px;
-        color: var(--text-color);
+        font-weight: bold;
+        text-transform: capitalize;
 
-        &::before {
-          padding-right: 5px;
-          font-weight: bold;
-          display: inline-block;
+        &, &-time {
+          color: var(--text-color);
         }
       }
     }
 
-    &[data-tier='3'] {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-
-      .supporter {
-        &:hover {
-          border-color: var(--orange-color);
+    .supporter[data-tier='mythic'] {
+      .img-wrap {
+        &--container {
+          height: 125px;
+          width: 125px;
+          padding: 20px;
         }
+      }
 
-        .img-wrap {
-          &--container {
-            height: 125px;
-            width: 125px;
-            padding: 20px;
-          }
-        }
-
-        .tier {
-          color: var(--orange-color);
-
-          &::before {
-            content: 'Mythic Supporter';
-          }
-        }
+      .tier {
+        color: var(--orange-color);
       }
     }
 
-    &[data-tier='2'] {
-      grid-template-columns: repeat(3, minmax(0, 1fr));
-      .supporter {
-        &:hover {
-          border-color: var(--yellow-color);
-        }
-
-        .tier {
-          color: var(--yellow-color);
-
-          &::before {
-            content: 'Rare Supporter';
-          }
-        }
-      }
-    }
-
-    &[data-tier='2'], &[data-tier='1'] {
-
-      .supporter {
-        .img-wrap {
-          &--container {
-            height: 100px;
-            width: 100px;
-          }
-        }
-      }
-    }
-
-    &[data-tier='1'] {
-      .supporter {
-        .tier {
-          &::before {
-            content: 'Uncommon Supporter';
-          }
-        }
-      }
-    }
-
-    &[data-tier='1'], &[data-tier='0'] {
-      .supporter {
-        &:hover {
-          border-color: var(--accent-color);
-        }
+    .supporter[data-tier='rare'] {
+      .tier {
+        color: var(--yellow-color);
       }
     }
   }
+
 }
 
 @media (max-width: 960px) {
   .supporters-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr)) !important;
+    grid-template-columns: repeat(2, minmax(0, 1fr));
 
-    &[data-tier='3'] {
-      grid-template-columns: minmax(0, 1fr) !important;
+    &.services {
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
   }
 }
 
 @media (max-width: 400px) {
   .supporters-grid {
-    grid-template-columns: minmax(0, 1fr) !important;
+    grid-template-columns: minmax(0, 1fr);
+
+    &.services {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
   }
 }
 </style>
