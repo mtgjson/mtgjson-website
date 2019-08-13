@@ -2,8 +2,9 @@
   header.navbar
     .navbar-options
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-      router-link(:to="$localePath")
+      <router-link :to="$localePath">
         Logo(:width="`60px`")
+      </router-link>
       NavLinks.mobile-hide
       ThemeSwitcher.desktop-hide
 </template>
