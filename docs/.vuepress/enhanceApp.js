@@ -13,6 +13,7 @@ import helpers from './scripts/helpers';
 export default async ({ Vue }) => {
   Vue.prototype.$landcycle = landcycle;
   Vue.prototype.$helpers = helpers;
+  Vue.prototype.$env = 'https://www.mtgjson.com';
   // Set these to default in case we fail for some reason
   Vue.prototype.$metadata = {};
   Vue.prototype.$decks = {};

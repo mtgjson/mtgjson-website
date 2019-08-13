@@ -19,22 +19,16 @@
           h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
           ol
             li
-              small Set Code:
-                span {{ deck.code }}
-            //- This if/else logic is needed until `type` is added
-            li(v-if="deck.type")
-              small Type:
-                span {{ deck.type }}
+              small Deck Code:&nbsp;{{ deck.code }}
             li
-              small Release Date:
-                span {{ deck.releaseDate }}
+              small Release Date:&nbsp;{{ deck.releaseDate }}
         ol.dl-wrap
           li
             small Downloads:
             span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-              a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
+              a.dl-btn(:href="`${$env}/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
             span(v-else)
-              a.dl-btn(:href="`/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
+              a.dl-btn(:href="`${$env}/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
 
 </template>
 

@@ -98,6 +98,10 @@ a.sidebar-link {
   width: 100%;
   box-sizing: border-box;
 
+  &.active {
+    font-weight: bold;
+  }
+
   &:hover {
     color: var(--accent-color);
   }
