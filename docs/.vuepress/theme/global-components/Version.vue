@@ -1,16 +1,16 @@
 <template lang="pug">
   div.version(v-if="version")
     router-link.version-number(
-      :to="`/changelog`") {{ version.version }}
+      :to="`/changelog`") Build: v{{ version.version }}
 </template>
 
 <script>
 export default {
-  name: "Version",
+  name: 'Version',
   data() {
     return {
       defaultVersion: {
-        version: '...'
+        version: '...',
       },
     };
   },
@@ -42,6 +42,14 @@ export default {
     font-size: 12px;
     font-weight: bold;
     color: var(--gray-color);
+  }
+}
+
+@media (max-width: $MQMobile) {
+  .version {
+    &-number {
+      font-size: 16px;
+    }
   }
 }
 </style>
