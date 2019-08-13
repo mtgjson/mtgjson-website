@@ -9,6 +9,7 @@
         v-else-if="$site.themeConfig.search !== false")
 
     .sidebar-wrap
+      Version.desktop-hide
 
       NavLinks.desktop-hide
 
@@ -26,7 +27,7 @@ import NavLinks from './NavLinks';
 import SidebarLinks from './SidebarLinks';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
 import SearchBox from '@SearchBox';
-// import Logo from './Logo';
+import Version from '../global-components/Version';
 
 export default {
   name: 'Sidebar',
@@ -35,6 +36,7 @@ export default {
     SidebarLinks,
     SearchBox,
     AlgoliaSearchBox,
+    Version
   },
   props: ['items'],
 
