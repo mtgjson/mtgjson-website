@@ -4,8 +4,8 @@
 # MTGJSON Website
 
 [![Generic badge](https://img.shields.io/badge/Made_with_Vuepress-1.0-green.svg)](https://shields.io/)
-[![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://GitHub.com/ericlakatos/windfish-app/graphs/commit-activity)
-[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/ericlakatos/windfish-app/blob/master/LICENSE.md)
+[![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://GitHub.com/mtgjson/mtgjson-website/graphs/commit-activity)
+[![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mtgjson/mtgjson-website/blob/master/LICENSE)
 
 ## Dependencies
 - [Node](https://www.nodejs.com)
