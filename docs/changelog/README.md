@@ -18,7 +18,7 @@
 
 # Changelog
 
-Below you can find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain price and EDH rank updates, as well as data improvements.
+Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
 ## 4.5.0 <small>(2019-08-11)</small>
 
