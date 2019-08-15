@@ -3,7 +3,7 @@
     "type": "integer",
     "example": "259",
     "description": "Number of cards in the set. Will default to {{code:totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
-    "introduced": "v4.1.0"
+    "introduced": "v4.5.0"
   },
   "code": {
     "type": "string",
@@ -39,6 +39,6 @@
     "type": "integer",
     "example": "273",
     "description": "Total number of cards in the set, including promos and related supplemental products.",
-    "introduced": "v4.1.0"
+    "introduced": "v4.5.0"
   }
 }
