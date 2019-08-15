@@ -25,3 +25,7 @@ dist/
 utils/output/*.json
 
 logo/
+*.psd
+*.ai
+*.tif
+*.tiff
