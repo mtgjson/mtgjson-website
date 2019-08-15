@@ -14,7 +14,7 @@
 
 ### **Installation**
 
-Install Node.
+Install `node`, `n` + `yarn` (optional).
 
 **Note**: We like to use the latest version unless there is a serious issue.
 
@@ -23,50 +23,56 @@ Install Node.
 ```js
 brew install node
 brew install n
+brew install yarn
 n latest // may need audo
 ```
 
 **Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
 
 Install project dependencies.
-```
-npm run bootstrap
+
+```js
+yarn bootstrap // npm run bootstrap
 ```
 
 ### **Developing**
 
 Runs the local build server with hot module reloading.
-```
-npm run dev
+
+```js
+yarn dev // npm run dev
 ```
 
 ### **Linting**
 
 Lint's the files for any breaking changes.
-```
-npm run lint
+
+```js
+yarn lint // npm run lint
 ```
 
 ### **Testing**
 
 Tests project using Jest tests and attempts to run a build. This command will also automatically run during Husky's pre-commit checks.
 
-```
-npm run test
+```js
+yarn test // npm run test
 ```
 
 ### **Building**
 
 Build out the entire site as a static project.
-```
-npm run build
+
+```js
+yarn build // npm run build
 ```
 
 ### **Purging**
 
 Clean out all Node packages.
-```
-npm run purge
+
+```js
+yarn purge // npm run purge
 ```
 
 ## Notes
