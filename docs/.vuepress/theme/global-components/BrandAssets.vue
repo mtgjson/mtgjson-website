@@ -47,6 +47,7 @@ export default {
         textRange.setStartBefore(embedCode);
         textRange.setEndAfter(embedCode);
 
+        window.getSelection().removeAllRanges(); // Chrome bug, requires ensuring no selections first
         window.getSelection().addRange(textRange);
         document.execCommand('copy');
         window.getSelection().removeAllRanges();
