@@ -12,7 +12,8 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "bootstrap": "npm install && npm audit --fix",
-    "test": "jest && npm run lint && npm run build",
+    "test": "jest && codecov && npm run lint",
+    "test:full": "npm run test && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "purge": "rm -rf node_modules",
     "regenerate-schema": "node ./utils/schema-regenerator.js"
@@ -28,12 +29,18 @@
     "ajv": "^6.9.1",
     "babel-eslint": "^10.0.2",
     "babel-jest": "^24.8.0",
+    "codecov": "^3.5.0",
     "eslint": "^5.0.0",
     "eslint-plugin-vue": "^5.2.3",
     "husky": "^1.3.1",
     "jest": "^24.8.0",
+    "node-fetch": "^2.6.0",
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "vue-eslint-parser": "^6.0.4"
+  },
+  "jest": {
+    "coverageDirectory": "./coverage/",
+    "collectCoverage": true
   }
 }
