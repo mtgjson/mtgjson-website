@@ -36,6 +36,9 @@ Below you will find all the changes made on each MTGJSON build release. Versions
 - `text` for Planeswalkers now has brackets around costs
     -  Ex: `"-2:"` is now `"[-2]:"`
 
+#### Removed
+- `tcgplayerPurchaseUrl` has been removed (deprecated in 4.4.0)
+
 #### Fixed
 - `artist` fixed for split cards
 - `printings` now has all entries
