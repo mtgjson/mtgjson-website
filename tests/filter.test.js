@@ -1,5 +1,4 @@
-import helpers from '../docs/.vuepress/scripts/helpers';
-const { filter } = helpers;
+import filter from '../docs/.vuepress/scripts/filter';
 
 describe('filter', () => {
   it('filter should return the same data if no filter is passed', async () => {

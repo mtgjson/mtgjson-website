@@ -6,10 +6,15 @@
  * {{tag:first$second}}
  * */
 export default class {
-  constructor(schema = {}, externalData = {}) {
+  constructor(schema, externalData = {}) {
     this.regex = /{{(.*?)}}/g;
     this.schema = schema;
+    this.hasHydrated = false;
     this.externalData = externalData;
+
+    if (!schema) {
+      throw TypeError('You must pass in a json schema');
+    }
 
     this.cycle();
   }
@@ -18,110 +23,89 @@ export default class {
    *
    * @param {String} str mustached string to unwrap
    */
-  async hydrate(str = '') {
-    
+  hydrate(str) {
     const value = str.match(/{{(.*?)}}/)[1];
     const tag = value.split(':')[0];
     const newDate = new Date();
-    
+
     let locale = '';
-    let newStr = '';
+    let newStr = str;
     let text = str.match(/:(.*?)\$/);
     let external = str.match(/\$(.*?)}}/);
 
     text = text && text[1] ? text[1] : value.split(':')[1];
     external = external && external[1] ? external[1] : text;
 
-    let currentDate = `${newDate.getFullYear()}-${(
-      '0' +
-      (newDate.getMonth() + 1)
-    ).slice(-2)}-${('0' + newDate.getDate()).slice(-2)}`;
+    let currentDate = `${newDate.getFullYear()}-${('0' + (newDate.getMonth() + 1)).slice(-2)}-${(
+      '0' + newDate.getDate()
+    ).slice(-2)}`;
 
     switch (text) {
-    case 'version':
-    case 'deck':
-      locale = 'files';
-      break;
+      case 'version':
+      case 'deck':
+        locale = 'files';
+        break;
 
-    default:
-      locale = 'structures';
-      break;
+      default:
+        locale = 'structures';
+        break;
     }
 
     switch (tag) {
-    case 'external':
-      newStr = `<a class="code-link" href="${external}" target="_blank">${text}</a>`;
-      break;
+      case 'external':
+        newStr = `<a class="code-link" href="${external}" target="_blank">${text}</a>`;
+        break;
 
-    case 'link':
-      newStr = `<a class="code-link" href="/${locale}/${text}" />${this.unwrap(
-        text
-      )}</a>`;
-      break;
+      case 'link':
+        newStr = `<a class="code-link" href="/${locale}/${text}" />${this.unwrap(text)}</a>`;
+        break;
 
-    case 'code':
-      newStr = `<code>${text}</code>`;
-      break;
+      case 'code':
+        newStr = `<code>${text}</code>`;
+        break;
 
-    case 'buildVersion':
-      const { version } = this.externalData;
+      case 'buildVersion':
+        const { version } = this.externalData;
 
-      newStr = version || text;
-      break;
+        newStr = version || text;
+        break;
 
-    case 'buildDate':
-      const { date } = this.externalData;
+      case 'buildDate':
+        const { date } = this.externalData;
 
-      newStr = date || currentDate;
-      break;
+        newStr = date || currentDate;
+        break;
 
-    case 'buildPricesDate':
-      const { pricesDate } = this.externalData;
+      case 'buildPricesDate':
+        const { pricesDate } = this.externalData;
 
-      newStr = pricesDate || currentDate;
-      break;
-
-    default:
-      newStr = `<span>Landcycle error. No Tag defined.</span>`;
-      break;
+        newStr = pricesDate || currentDate;
+        break;
     }
 
-    return await newStr;
+    return newStr;
   }
 
   /**
    * Cycle through the JSON schema and replace mustaches as needed,
    * then return the new JSON
    */
-  async cycle() {
-    const { hasOwnProperty } = Object.prototype;
-
+  cycle() {
     for (let key in this.schema) {
-      if (hasOwnProperty.call(this.schema, key)) {
-        const keyValue = this.schema[key];
-  
-        for (let innerKey in keyValue) {
-          if (hasOwnProperty.call(keyValue, innerKey)) {
-            const value = keyValue[innerKey];
-            const strings = value.toString().match(this.regex);
-    
-            if (strings) {
-              let newText = '';
-              
-              for (let stringToHydrate of strings) {
-                try {
-                  const newString = await this.hydrate(stringToHydrate);
-                  newText = await keyValue[innerKey].replace(
-                    stringToHydrate,
-                    newString
-                  );
-    
-                  this.schema[key][innerKey] = newText;
-                } catch (err) {
-                  console.err(`${value} :: ${err}`);
-                }
-              }
-            }
+      const keyValue = this.schema[key];
+
+      for (let innerKey in keyValue) {
+        const value = keyValue[innerKey];
+        const strings = value.toString().match(this.regex);
+
+        if (strings) {
+          let newText = '';
+
+          for (let stringToHydrate of strings) {
+            const newString = this.hydrate(stringToHydrate);
+            newText = keyValue[innerKey].replace(stringToHydrate, newString);
+
+            this.schema[key][innerKey] = newText;
           }
         }
       }
@@ -132,7 +116,7 @@ export default class {
    *
    * @param {String} str multiple word normalizing for anchors and URI's
    */
-  unwrap(str = '') {
+  unwrap(str) {
     return str
       .split('-')
       .map((n, i) => {

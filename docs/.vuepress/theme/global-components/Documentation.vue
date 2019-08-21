@@ -179,20 +179,20 @@ export default {
     },
     getTitle(attribute) {
       switch (attribute) {
-      case 'atomic':
-        return 'Property available in AllCards JSON';
-      case 'optional':
-        return 'Property omitted when value returns a falsey or expected value';
-      case 'deprecated':
-        return 'Property will be removed in a future major or minor version release';
-      case 'decks':
-        return 'Property only available in an Individual Deck JSON';
-      case 'nullable':
-        return 'Property may return a null value';
-      case 'stale':
-        return 'Property may return an undocumented value';
-      default:
-        break;
+        case 'atomic':
+          return 'Property available in AllCards JSON';
+        case 'optional':
+          return 'Property omitted when value returns a falsey or expected value';
+        case 'deprecated':
+          return 'Property will be removed in a future major or minor version release';
+        case 'decks':
+          return 'Property only available in an Individual Deck JSON';
+        case 'nullable':
+          return 'Property may return a null value';
+        case 'stale':
+          return 'Property may return an undocumented value';
+        default:
+          break;
       }
     },
   },

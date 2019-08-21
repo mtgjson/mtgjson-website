@@ -4,7 +4,7 @@ const [ structures, downloads, files ] = generateSidebarRoutes(['/structures/','
 
 module.exports = {
   host: '0.0.0.0',
-  port: '8080',
+  port: '3001',
   // SEO
   title: 'MTGJSON',
   description: 'Magic: The Gathering card data in JSON.',
