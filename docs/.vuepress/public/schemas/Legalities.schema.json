@@ -1,8 +1,8 @@
 {
   "brawl": {
     "type": "string",
-    "example": "",
-    "description": "Card is legal in the Brawl play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Brawl play format.",
     "attributes": [
       "optional"
     ],
@@ -11,7 +11,7 @@
   "commander": {
     "type": "string",
     "example": "Legal",
-    "description": "Card is legal in the Commander play format.",
+    "description": "Sol Ring is legal in the Commander play format.",
     "attributes": [
       "optional"
     ],
@@ -20,7 +20,16 @@
   "duel": {
     "type": "string",
     "example": "Banned",
-    "description": "Card is banned in the Duel Commander play format.",
+    "description": "Sol Ring is banned in the Duel Commander play format.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.0.0"
+  },
+  "future": {
+    "type": "string",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Future play format.",
     "attributes": [
       "optional"
     ],
@@ -28,8 +37,8 @@
   },
   "frontier": {
     "type": "string",
-    "example": "",
-    "description": "Omitted. Card is not legal in the Frontier play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Frontier play format.",
     "attributes": [
       "optional"
     ],
@@ -38,7 +47,7 @@
   "legacy": {
     "type": "string",
     "example": "Banned",
-    "description": "Card is banned in the Legacy play format.",
+    "description": "Sol Ring is banned in the Legacy play format.",
     "attributes": [
       "optional"
     ],
@@ -46,8 +55,8 @@
   },
   "modern": {
     "type": "string",
-    "example": "",
-    "description": "Omitted. Card is not legal in the Modern play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Modern play format.",
     "attributes": [
       "optional"
     ],
@@ -55,8 +64,8 @@
   },
   "pauper": {
     "type": "string",
-    "example": "",
-    "description": "Omitted. Card is not legal in the Pauper play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Pauper play format.",
     "attributes": [
       "optional"
     ],
@@ -64,8 +73,8 @@
   },
   "penny": {
     "type": "string",
-    "example": "",
-    "description": "Omitted. Card is not legal in the Penny play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Penny play format.",
     "attributes": [
       "optional"
     ],
@@ -73,8 +82,8 @@
   },
   "standard": {
     "type": "string",
-    "example": "",
-    "description": "Omitted. Card is not legal in the Standard play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Standard play format.",
     "attributes": [
       "optional"
     ],
@@ -83,7 +92,7 @@
   "vintage": {
     "type": "string",
     "example": "Restricted",
-    "description": "Card is restricted in the Vintage play format.",
+    "description": "Sol Ring is restricted in the Vintage play format.",
     "attributes": [
       "optional"
     ],

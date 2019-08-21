@@ -25,14 +25,12 @@ List of play formats that are legal for a specific card.
 > Parent structure: [card](../card)  
 > Parent property: `legalities`  
 > Parent property type: `array(object)`  
-> Property values: `Legal`, `Restricted`, `Banned`, or `Future`  
+> Property values: `Legal`, `Not Legal`, `Restricted`, or `Banned` 
 
-`Future` is used for a revision of the format in which the card will be legal soon. If the format is not listed, it is assumed the card is not legal in that format.)
-
-If a card is "not legal", it will be omitted from the data.
+::: tip
+Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example data structure.
+:::
 
 ### Data Structure
-
-Using [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) as an example:
 
 <Documentation/>
