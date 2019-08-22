@@ -1,5 +1,8 @@
 module.exports = {
   parser: 'vue-eslint-parser',
+  parserOptions: {
+    ecmaVersion: 2018,
+  },
   // Allow Node style require and other node-based functions
   env: {
     node: true,
