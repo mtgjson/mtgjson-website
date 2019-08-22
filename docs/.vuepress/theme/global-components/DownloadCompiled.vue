@@ -17,9 +17,7 @@
               a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json`") {{ format }}
           li.sqlite
             small AllSets as an sqlite database.
-              span Courtesy of&nbsp;
-                a(href="https://github.com/mtgjson/mtgsqlive" target="_blank") mtgsqlive
-                span .
+              span  Courtesy of <a href="https://github.com/mtgjson/mtgsqlive" target="_blank">mtgsqlive</a>.
           li
             small Downloads:
             span(v-for="(format, key) in fileFormatsAllSetsSQL" v-if="format !== 'sqlite'")
