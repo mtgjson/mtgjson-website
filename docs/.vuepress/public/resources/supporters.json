@@ -1,11 +1,17 @@
 {
-  "patrons": [
-    {
+  "patrons": [{
       "name": "ABUGames",
       "image": "avatar-abugames.png",
       "link": "https://abugames.com/",
       "tier": "mythic",
       "since": "2019-06"
+    },
+    {
+      "name": "CardBoard Live",
+      "image": "avatar-cardboardlive.jpg",
+      "link": "https://cardboard.live",
+      "tier": "mythic",
+      "since": "2019-09"
     },
     {
       "name": "CardCastle",
@@ -90,16 +96,10 @@
       "since": "2019-04"
     }
   ],
-  "services": [
-    {
+  "services": [{
       "name": "Aetherhub",
       "image": "avatar-aetherhub.png",
       "link": "https://aetherhub.com"
-    },
-    {
-      "name": "CardBoard Live",
-      "image": "avatar-cardboardlive.png",
-      "link": "https://cardboard.live"
     },
     {
       "name": "Cardmarket",
@@ -147,12 +147,12 @@
       "link": "https://brennands.wordpress.com"
     },
     {
-      "name": "LRR",
+      "name": "LoadingReadyRun",
       "image": "avatar-lrr.png",
       "link": "https://www.youtube.com/channel/UCwjN2uVdL9A0i3gaIHKFzuA"
     },
     {
-      "name": "LRR Bot",
+      "name": "LoadingReadyRun Bot",
       "image": "avatar-lrrbot.png",
       "link": "https://lrrbot.com/"
     },
