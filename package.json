@@ -13,7 +13,7 @@
     "build": "vuepress build docs",
     "purge": "rm -rf node_modules",
     "bootstrap": "npm install && npm audit --fix",
-    "test": "npm run lint && jest",
+    "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "test:deploy": "npm run test:full && codecov -t CODECOV_TOKEN",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
@@ -39,9 +39,5 @@
     "pug": "^2.0.3",
     "pug-plain-loader": "^1.0.0",
     "vue-eslint-parser": "^6.0.4"
-  },
-  "jest": {
-    "coverageDirectory": "./__coverage__/",
-    "collectCoverage": true
   }
 }
