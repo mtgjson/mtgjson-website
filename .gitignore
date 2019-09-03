@@ -27,6 +27,9 @@ utils/output/*.json
 # Coverage reports
 __coverage__/
 
+# Env variables
+.env
+
 logo/
 *.psd
 *.ai

@@ -13,7 +13,7 @@
     "build": "vuepress build docs",
     "purge": "rm -rf node_modules",
     "bootstrap": "npm install && npm audit --fix",
-    "test": "npm run lint && jest && codecov",
+    "test": "npm run lint && jest && codecov -t CODECOV_TOKEN",
     "test:full": "npm run test && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/schema-regenerator.js"
