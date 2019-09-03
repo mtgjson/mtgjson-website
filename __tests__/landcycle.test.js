@@ -3,7 +3,7 @@ import Landcycle from '../docs/.vuepress/scripts/Landcycle';
 import cardSchema from '../docs/.vuepress/public/schemas/Card.schema.json';
 import decksSchema from '../docs/.vuepress/public/schemas/Decks.schema.json';
 import deckListsSchema from '../docs/.vuepress/public/schemas/DeckLists.schema.json';
-import versionSchema from '../docs/.vuepress/public/schemas/version.schema.json';
+import versionSchema from '../docs/.vuepress/public/schemas/Version.schema.json';
 
 function willHydrate(schema) {
   let isHydrated = true;

@@ -25,7 +25,10 @@ dist/
 utils/output/*.json
 
 # Coverage reports
-__coverage__/
+__coverage__
+
+# Env variables
+.env
 
 logo/
 *.psd
