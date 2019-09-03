@@ -2,8 +2,8 @@
 
 # MTGJSON Website (Documentation)
 
-[![Build Status](https://travis-ci.org/staghouse/js-essentials.png?branch=master)](https://travis-ci.org/mtgjson/mtgjson-website)
-[![codecov](https://codecov.io/gh/staghouse/js-essentials/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
+[![Build Status](https://travis-ci.org/mtgjson/mtgjson-website.svg?branch=master)](https://travis-ci.org/mtgjson/mtgjson-website)
+[![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
 
 [![Generic badge](https://img.shields.io/badge/Made_with_Node-latest-green.svg)](https://shields.io/)
 [![Generic badge](https://img.shields.io/badge/Made_with_Vuepress-1.x-green.svg)](https://shields.io/)
