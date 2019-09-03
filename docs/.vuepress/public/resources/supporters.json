@@ -102,6 +102,11 @@
       "link": "https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson"
     },
     {
+      "name": "Cards Info",
+      "image": "avatar-cardsinfo.png",
+      "link": "https://play.google.com/store/apps/details?id=com.dbottillo.mtgsearchfree"
+    },
+    {
       "name": "Cardsphere",
       "image": "avatar-cardsphere.svg",
       "link": "https://www.cardsphere.com"
@@ -267,6 +272,10 @@
       "link": "http://xmage.de"
     },
     {
+      "name": "CardBoard Live",
+      "link": "https://cardboard.live"
+    },
+    {
       "name": "Card Codex",
       "link": "https://cardcodex.com"
     },
@@ -285,6 +294,14 @@
     {
       "name": "Lab Maniac",
       "link": "http://labmaniac.com"
+    },
+    {
+      "name": "LRR",
+      "link": "https://www.youtube.com/channel/UCwjN2uVdL9A0i3gaIHKFzuA"
+    },
+    {
+      "name": "LRR Bot",
+      "link": "https://lrrbot.com/"
     },
     {
       "name": "MagicFetchBot",
