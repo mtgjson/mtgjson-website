@@ -1,7 +1,7 @@
 import isFuture from '../docs/.vuepress/scripts/isFuture';
 
 describe('isFuture', () => {
-  it('should return false today is in the future', async () => {
+  it('should return false if today is in the future', async () => {
     const now = new Date();
     const year = now.getUTCFullYear();
     const month = now.getUTCMonth() + 1;
@@ -12,7 +12,7 @@ describe('isFuture', () => {
     expect(isInFuture).toBe(false);
   });
 
-  it('should return false today is in the future when compared against new Date', async () => {
+  it('should return false if today is in the future when compared against new Date', async () => {
     const now = new Date();
     const year = now.getUTCFullYear();
     const month = now.getUTCMonth() + 1;
@@ -62,6 +62,39 @@ describe('isFuture', () => {
     expect(isInFuture).toBe(true);
   });
 
+  it('should return false that last year but next month is in the future', async () => {
+    const now = new Date();
+    const year = now.getUTCFullYear() - 1;
+    const month = now.getUTCMonth() + 2;
+    const date = now.getUTCDate();
+    const time = `${year}-${month}-${date}`;
+    const isInFuture = await isFuture(time, new Date());
+
+    expect(isInFuture).toBe(false);
+  });
+
+  it('should return true that this year but this month and tomorrow is in the future', async () => {
+    const now = new Date();
+    const year = now.getUTCFullYear();
+    const month = now.getUTCMonth() + 1;
+    const date = now.getUTCDate() + 1;
+    const time = `${year}-${month}-${date}`;
+    const isInFuture = await isFuture(time, new Date());
+
+    expect(isInFuture).toBe(true);
+  });
+
+  it('should return true that this year but last month and a future date is in the future', async () => {
+    const now = new Date();
+    const year = now.getUTCFullYear();
+    const month = now.getUTCMonth() + 1;
+    const date = now.getUTCDate() + 1;
+    const time = `${year}-${month}-${date}`;
+    const isInFuture = await isFuture(time, new Date());
+
+    expect(isInFuture).toBe(true);
+  });
+
   it('should return true that next year via Date is passed in', async () => {
     const now = new Date();
     now.setUTCFullYear(now.getUTCFullYear() + 1);
@@ -71,7 +104,7 @@ describe('isFuture', () => {
     expect(isInFuture).toBe(true);
   });
 
-  it('should return true when the comparison is a string in the future', async () => {
+  it('should return false when the comparison is a string in the future', async () => {
     const now = new Date();
     const year = now.getUTCFullYear();
     const month = now.getUTCMonth() + 1;
@@ -79,7 +112,13 @@ describe('isFuture', () => {
     const time = `${year}-${month}-${date}`;
     const isInFuture = await isFuture(time, '9999-01-01');
 
-    expect(isInFuture).toBe(true);
+    expect(isInFuture).toBe(false);
+  });
+
+  it('should raise error when now argument is empty', async () => {
+    expect(() => {
+      isFuture();
+    }).toThrow(TypeError);
   });
 
   it('should raise error when now argument is not a valid type', async () => {

@@ -1,32 +1,37 @@
-export default (now, future) => {
-  let isFuture = undefined;
-  let comparison = undefined;
-  let typeOfNow = typeof now;
-  let typeOfFuture = typeof future;
+export default (when, against) => {
+  const typeOfWhen = typeof when;
+  const typeOfAgainst = typeof against;
 
-  if (!future) {
-    comparison = new Date();
+  let now = undefined;
+  let then = undefined;
+  let future = undefined;
+  let isFuture = undefined;
+
+  if(!when){
+    throw TypeError('You must pass in a type of Date or String');
   } else {
-    if (typeOfFuture === 'string' || typeOfFuture === 'number') {
-      comparison = new Date(future);
-    } else if (future instanceof Date) {
-      comparison = future;
+    if (typeOfWhen === 'string') {
+      then = new Date(when);
+    } else if (when instanceof Date) {
+      then = when;
     } else {
-      throw TypeError('future must be of type String or Date');
+      throw TypeError('You must pass in a type of Date or String');
     }
   }
 
-  if (typeOfNow === 'string' || typeOfNow === 'number') {
-    now = new Date(now);
-  } else if (!(now instanceof Date)) {
-    throw TypeError('now must be of type string, number or Date');
+  if (against) {
+    if (typeOfAgainst === 'string') {
+      future = new Date(against);
+    } else if (against instanceof Date) {
+      future = against;
+    } else {
+      throw TypeError('You must pass in a comparison of type of Date or String');
+    }
   }
 
-  const futureYear = now.getUTCFullYear() > comparison.getUTCFullYear();
-  const futureMonth = now.getUTCMonth() > comparison.getUTCMonth();
-  const futureDate = now.getUTCDate() > comparison.getUTCDate();
+  now = future ? future : new Date();
 
-  isFuture = (futureYear || futureMonth || futureDate);
+  isFuture = then > now;
 
   return isFuture;
-}
+};
