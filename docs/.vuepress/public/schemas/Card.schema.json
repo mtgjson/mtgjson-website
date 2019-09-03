@@ -450,7 +450,7 @@
   "reverseRelated": {
     "type": "array(string)",
     "example": "[\"Ajani, Strength of the Pride\", ...]",
-    "description": "The token name that is on the opposite side of the token card.",
+    "description": "The names of the cards that produce this token.",
     "attributes": [
       "optional",
       "token"
