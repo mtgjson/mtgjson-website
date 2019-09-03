@@ -52,7 +52,7 @@
     "example": "2",
     "description": "How many of this card exists in a relevant deck.",
     "attributes": [
-      "decks"
+      "deck"
     ],
     "introduced": "v4.4.1"
   },
@@ -446,6 +446,15 @@
     "example": "\"mythic\"",
     "description": "Rarity. Can be {{code:basic}}, {{code:common}}, {{code:uncommon}}, {{code:rare}}, or {{code:mythic}}",
     "introduced": "v4.0.0"
+  },
+  "reverseRelated": {
+    "type": "array(string)",
+    "example": "[\"Ajani, Strength of the Pride\", ...]",
+    "description": "The names of the cards that produce this token.",
+    "attributes": [
+      "optional",
+      "token"
+    ]
   },
   "rulings": {
     "type": "array(object)",

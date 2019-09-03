@@ -185,12 +185,14 @@ export default {
           return 'Property omitted when value returns a falsey or expected value';
         case 'deprecated':
           return 'Property will be removed in a future major or minor version release';
-        case 'decks':
-          return 'Property only available in an Individual Deck JSON';
+        case 'deck':
+          return 'Property only available on a card within an Individual Deck JSON';
         case 'nullable':
           return 'Property may return a null value';
         case 'stale':
           return 'Property may return an undocumented value';
+        case 'token':
+          return 'Property only available on token cards';
         default:
           break;
       }
@@ -286,7 +288,7 @@ pre {
     }
   }
 
-  &.decks {
+  &.deck {
     &::before {
       background-color: var(--green-color);
     }
@@ -301,6 +303,12 @@ pre {
   &.stale {
     &::before {
       background-color: var(--medium-gray-color);
+    }
+  }
+
+  &.token {
+    &::before {
+      background-color: plum;
     }
   }
 }
