@@ -11,11 +11,11 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
+    "purge": "rm -rf node_modules",
     "bootstrap": "npm install && npm audit --fix",
-    "test": "jest && codecov && npm run lint",
+    "test": "npm run lint && jest && codecov",
     "test:full": "npm run test && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
-    "purge": "rm -rf node_modules",
     "regenerate-schema": "node ./utils/schema-regenerator.js"
   },
   "dependencies": {
@@ -40,7 +40,7 @@
     "vue-eslint-parser": "^6.0.4"
   },
   "jest": {
-    "coverageDirectory": "./coverage/",
+    "coverageDirectory": "./__coverage__/",
     "collectCoverage": true
   }
 }

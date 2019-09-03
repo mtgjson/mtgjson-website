@@ -24,6 +24,9 @@ dist/
 # Experimental Schemas
 utils/output/*.json
 
+# Coverage reports
+__coverage__/
+
 logo/
 *.psd
 *.ai
