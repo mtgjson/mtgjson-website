@@ -7,4 +7,4 @@ install:
 script:
   - npm run test:full
 after_success:
-  - codecov -t CODECOV_TOKEN
+  - codecov
