@@ -15,7 +15,7 @@
     "bootstrap": "npm install && npm audit --fix",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
-    "test:deploy": "npm run test:full && codecov -t CODECOV_TOKEN",
+    "coverage": "codecov -t CODECOV_TOKEN",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/schema-regenerator.js"
   },
