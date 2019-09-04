@@ -1,5 +1,6 @@
 {
-  "patrons": [{
+  "patrons": [
+    {
       "name": "ABUGames",
       "image": "avatar-abugames.png",
       "link": "https://abugames.com/",
@@ -28,13 +29,6 @@
       "since": "2018-11"
     },
     {
-      "name": "Custom Standard",
-      "image": "avatar-custom-standard.png",
-      "link": "http://discord.gg/DdhxPQQ",
-      "tier": "mythic",
-      "since": "2019-04"
-    },
-    {
       "name": "MTG Decks",
       "image": "avatar-mtgdecks.png",
       "link": "https://www.mtgdecks.net",
@@ -47,6 +41,13 @@
       "link": "http://mtglabs.com",
       "tier": "mythic",
       "since": "2019-05"
+    },
+    {
+      "name": "Custom Standard",
+      "image": "avatar-custom-standard.png",
+      "link": "http://discord.gg/DdhxPQQ",
+      "tier": "rare",
+      "since": "2019-04"
     },
     {
       "name": "My MTG Collection",
@@ -96,7 +97,8 @@
       "since": "2019-04"
     }
   ],
-  "services": [{
+  "services": [
+    {
       "name": "Aetherhub",
       "image": "avatar-aetherhub.png",
       "link": "https://aetherhub.com"
