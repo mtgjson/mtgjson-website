@@ -345,12 +345,6 @@
     "description": "The Magic Card Market card meta ID.",
     "introduced": "v4.4.0"
   },
-  "mcmName": {
-    "type": "string",
-    "example": "\"Angel of Grace\"",
-    "description": "The Magic Card Market card name.",
-    "introduced": "v4.4.0"
-  },
   "mtgArenaId": {
     "type": "integer",
     "example": "67330",
