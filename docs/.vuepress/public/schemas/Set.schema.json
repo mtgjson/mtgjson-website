@@ -9,6 +9,9 @@
     "type": "string",
     "example": "\"Guilds of Ravnica\"",
     "description": "Block name the set was in.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "boosterV3": {

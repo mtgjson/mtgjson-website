@@ -20,6 +20,31 @@
 
 Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
+## 4.5.1 <small>(2019-08-23)</small>
+
+### Cards
+#### Added
+- `leadershipSkills` which identifies what format a card is a legal commander in.
+- `hasNoDeckLimit` to indicate a card has a unique deck restriction.
+    - `Seven Dwarves` was revealed the day after this feature went live... We'll be working on a change, so this field will come right away with a deprecation notice, with removal slated for `4.6.0`.
+- Support for `adventure` type cards.
+
+### Sets
+#### Added
+- Throne of Eldraine (`ELD`)
+    - GathererIDs will be added in a future weekly build
+- Throne of Eldraine Promos (`PELD`)
+- Throne of Eldraine Collectors Product (`CELD`)
+
+### Other
+#### Changed
+- The outputs of MTGJSON are now minified.
+    - `--pretty-outputs` can be passed to the build to have pretty outputs.
+
+#### Fixed
+- `Keywords.json` had some issues due to Wizards change of file formats (again...).
+- Bad internal caching of translations.
+
 ## 4.5.0 <small>(2019-08-11)</small>
 
 ### Announcements

@@ -130,6 +130,17 @@
     ],
     "introduced": "v4.0.0"
   },
+  "hasNoDeckLimit": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Does this card allow more than 4 copies in a deck?",
+    "attributes": [
+      "atomic",
+      "optional",
+      "deprecated"
+    ],
+    "introduced": "v4.5.1"
+  },
   "hasNonFoil": {
     "type": "boolean",
     "example": "true",
@@ -274,6 +285,16 @@
       "atomic"
     ],
     "introduced": "v4.0.0"
+  },
+  "leadershipSkills": {
+  	"type": "array(string: string)",
+  	"example": "{{link:leadershipSkills}}",
+  	"description": "See the {{link:leadershipSkills}} structure. Will be included only if one value is true.",
+  	"attributes": [
+  	  "atomic",
+  	  "optional"
+  	],
+  	"introduced": "v4.5.1"
   },
   "legalities": {
     "type": "object",
