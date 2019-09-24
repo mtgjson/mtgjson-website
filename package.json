@@ -12,7 +12,7 @@
     "dev": "vuepress dev docs",
     "build": "vuepress build docs",
     "purge": "rm -rf node_modules",
-    "bootstrap": "npm install && npm audit --fix",
+    "bootstrap": "npm install && npm audit fix",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "coverage": "codecov -t CODECOV_TOKEN",
