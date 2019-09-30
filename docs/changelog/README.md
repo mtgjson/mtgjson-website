@@ -20,7 +20,7 @@
 
 Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
-## 4.5.1 <small>(2019-08-23)</small>
+## 4.5.1 <small>(2019-09-23)</small>
 
 ### Cards
 #### Added
