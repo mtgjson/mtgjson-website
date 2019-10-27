@@ -103,7 +103,16 @@
     "type": "string",
     "example": "\"legendary\"",
     "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}.",
+    "attributes": [
+      "deprecated"
+    ],
     "introduced": "v4.2.0"
+  },
+  "frameEffects": {
+    "type": "array[string]",
+    "example": "\"legendary\"",
+    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}.",
+    "introduced": "v4.6.0"
   },
   "frameVersion": {
     "type": "string",
