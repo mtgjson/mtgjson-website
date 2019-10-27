@@ -24,7 +24,7 @@ List of play formats that are legal for a specific card.
 
 > Parent structure: [card](../card)  
 > Parent property: `legalities`  
-> Parent property type: `array(object)`  
+> Parent property type: `object(string: string)`  
 > Property values: `Legal`, `Not Legal`, `Restricted`, or `Banned` 
 
 ::: tip
