@@ -1,7 +1,7 @@
 ---
 {
-  "title": "Vintage",
-  "schema": "Vintage",
+  "title": "VintagePrintings",
+  "schema": "VintagePrintings",
   "meta": [
     {
       "name": "description",
@@ -9,7 +9,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, modern",
+      "content": "mtg, magic: the gathering, mtgjson, json, vintage",
     }
   ],
   "feed": {
@@ -18,7 +18,7 @@
 }
 ---
 
-# Vintage
+# VintagePrintings
 
 All sets, restricted to sets legal in Vintage.
 
