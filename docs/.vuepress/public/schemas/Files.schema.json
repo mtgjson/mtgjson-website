@@ -8,7 +8,7 @@
   "AllPrintingsCSVFiles": {
     "type": "string",
     "example": "\"AllPrintingsCSVFiles\"",
-    "description": "Every printing in individual CSV format and all cards in each printing.",
+    "description": "A directory of .csv files containing all data from AllPrintings.json.",
     "introduced": "v4.6.0"
   },
   "AllDeckFiles": {

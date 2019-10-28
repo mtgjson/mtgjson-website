@@ -20,7 +20,7 @@
 
 # AllPrintings
 
-Every printing and all cards in that printing.
+All cards, including all printings and variations, categorized by set.
 
 > Data type: `array(string: object)`  
 
