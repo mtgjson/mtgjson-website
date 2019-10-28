@@ -55,8 +55,8 @@
   },
   "pioneer": {
     "type": "string",
-    "example": "Legal",
-    "description": "Sol Ring is legal in the Pioneer play format.",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Pioneer play format.",
     "introduced": "v4.6.0"
   },
   "standard": {
