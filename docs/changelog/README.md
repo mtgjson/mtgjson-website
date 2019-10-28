@@ -20,7 +20,7 @@
 
 Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
-## 4.6.0 <small>(2019-10-27)</small>
+## 4.6.0 <small>(2019-10-28)</small>
 ### Announcements
 <img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>Since the release of MTJSON v4.5.0, we've been working hard on bringing more and more data for our users. Today, we are pleased to announce several awesome changes coming to the project.
 
