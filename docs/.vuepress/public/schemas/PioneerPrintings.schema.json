@@ -1,0 +1,12 @@
+{
+  "RTR" : {
+    "type": "object",
+    "example": "{{link:set}}",
+    "description": "This set, set data and all cards in this set. See the {{link:set}} structure."
+  },
+  "..." : {
+    "type": "...",
+    "example": "...",
+    "description": "..."
+  }
+}

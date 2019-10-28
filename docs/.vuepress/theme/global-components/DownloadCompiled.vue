@@ -7,42 +7,40 @@
           small
             span(v-html="file.description")
 
-        //- All sets sqlite database
-        ol.dl-wrap(v-if="file.example === 'AllSets'")
-          li
-            small Downloads:
-            span(v-for="(format, key) in fileFormats" v-if="format !== 'json'")
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-            span(v-else)
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json`") {{ format }}
-          li.sqlite
-            small AllSets as an sqlite database.
-              span  Courtesy of <a href="https://github.com/mtgjson/mtgsqlive" target="_blank">mtgsqlive</a>.
-          li
-            small Downloads:
-            span(v-for="(format, key) in fileFormatsAllSetsSQL" v-if="format !== 'sqlite'")
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite.${format}`") {{ format }}
-            span(v-else)
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite`") {{ format }}
+        ol.dl-wrap
+          //- Individual Files
+          span(v-if="!file.example.includes('Files')")
+            li.dl-wrap--btn-wrap
+              small JSON Files:
+              span
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json`") JSON
+              span(v-for="(compression, key) in fileBaseCompression")
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json.${compression}`") {{ compression }}
 
-        //- All set files download
-        //- All deck files download
-        ol.dl-wrap(v-else-if="file.example === 'AllSetFiles' || file.example === 'AllDeckFiles'" )
-          li
-            small Downloads:
-            span(v-for="(format, key) in fileFormatsAllSetFiles" v-if="format !== 'zip'")
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
-            span(v-else)
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.zip`") {{ format }}
+          //- Directory Files
+          span(v-if="file.example.includes('Files')")
+            li.dl-wrap--btn-wrap
+              small Directory Files:
+              span(v-for="(format, key) in fileBaseCompression" v-if="format !== 'zip'")
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
+              span(v-else)
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.zip`") {{ format }}
 
-        //- Everything else
-        ol.dl-wrap(v-else)
-          li
-            small Downloads:
-            span(v-for="(format, key) in fileFormats" v-if="format !== 'json'")
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json.${format}`") {{ format }}
-            span(v-else)
-              a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json`") {{ format }}
+          span(v-if="file.example === 'AllPrintings'")
+            li.dl-wrap--btn-wrap
+              small SQL Files:
+              span
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sql`") SQL
+              span(v-for="(compression, key) in fileBaseCompression")
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sql.${compression}`") {{ compression }}
+            li.dl-wrap--btn-wrap
+              small SQLite Files:
+              span
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite`") SQLite
+              span(v-for="(compression, key) in fileBaseCompression")
+                a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite.${compression}`") {{ compression }}
+            li.sqlite
+              small SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" target="_blank">mtgsqlive</a>.
 
 </template>
 
@@ -52,10 +50,9 @@ export default {
   data() {
     return {
       files: require(`../../public/schemas/Files.schema.json`),
-      fileFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
-      fileFormatsAllSetFiles: ['bz2', 'gz', 'xz', 'zip'],
-      fileFormatsAllSetsSQL: ['sqlite', 'bz2', 'gz', 'xz', 'zip'],
-      fileDirectory: 'json',
+      fileBaseCompression: ['bz2', 'gz', 'xz', 'zip'],
+      fileSQLCompression: ['sql','sqlite'],
+      fileDirectory: 'files',
     };
   },
   created(){
@@ -86,29 +83,14 @@ export default {
   }
 }
 
+.download-item:first-of-type {
+  border-color:orange;
+}
+
 .dl-wrap {
-  p {
-    flex: 0 0 100%;
-
+  &--btn-wrap {
     small {
-      span {
-        display: block;
-        margin-bottom: 17px;
-
-        span {
-          display: inline-block;
-          margin: 0;
-
-          a {
-            text-transform: lowercase !important;
-
-            &::after {
-              content: ".";
-              color: var(--text-color);
-            }
-          }
-        }
-      }
+      color: var(--gray-color)
     }
   }
 }

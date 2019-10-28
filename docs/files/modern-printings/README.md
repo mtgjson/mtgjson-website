@@ -1,11 +1,11 @@
 ---
 {
-  "title": "Modern",
-  "schema": "Modern",
+  "title": "ModernPrintings",
+  "schema": "ModernPrintings",
   "meta": [
     {
       "name": "description",
-      "content": "Modern compiled output schema for MTGJSON.",
+      "content": "Modern printings compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -18,11 +18,11 @@
 }
 ---
 
-# Modern
+# ModernPrintings
 
 All sets, restricted to sets legal in Modern.
 
-> Data type: `array(string: object)`  
+> Data type: `anonymous object(string: object)`  
 
 ### Data Structure
 

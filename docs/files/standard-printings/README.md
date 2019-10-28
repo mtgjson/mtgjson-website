@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Standard",
-  "schema": "Standard",
+  "title": "StandardPrintings",
+  "schema": "StandardPrintings",
   "meta": [
     {
       "name": "description",
-      "content": "Standard compiled output schema for MTGJSON.",
+      "content": "Standard printings compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, modern",
+      "content": "mtg, magic: the gathering, mtgjson, json, printings",
     }
   ],
   "feed": {
@@ -18,7 +18,7 @@
 }
 ---
 
-# Standard
+# StandardPrintings
 
 All sets, restricted to sets legal in Standard.
 

@@ -53,6 +53,12 @@
     "description": "Sol Ring is not legal in the Penny play format.",
     "introduced": "v4.0.0"
   },
+  "pioneer": {
+    "type": "string",
+    "example": "Not Legal",
+    "description": "Sol Ring is not legal in the Pioneer play format.",
+    "introduced": "v4.6.0"
+  },
   "standard": {
     "type": "string",
     "example": "Not Legal",
