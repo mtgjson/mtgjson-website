@@ -1,11 +1,11 @@
 ---
 {
-  "title": "PioneerPrintings",
-  "schema": "PioneerPrintings",
+  "title": "PioneerCards",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",
-      "content": "Pioneer printings compiled output schema for MTGJSON.",
+      "content": "Pioneer cards compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -18,9 +18,9 @@
 }
 ---
 
-# PioneerPrintings
+# PioneerCards
 
-All printings, restricted to sets legal in Pioneer.
+All cards, restricted to sets legal in Pioneer.
 
 > Data type: `anonymous object(string: object)`  
 

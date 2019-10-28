@@ -1,11 +1,11 @@
 ---
 {
-  "title": "VintagePrintings",
-  "schema": "VintagePrintings",
+  "title": "VintageCards",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",
-      "content": "Vintage printings compiled output schema for MTGJSON.",
+      "content": "Vintage cards compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -18,9 +18,9 @@
 }
 ---
 
-# VintagePrintings
+# VintageCards
 
-All printings, restricted to sets legal in Vintage.
+All cards, restricted to sets legal in Vintage.
 
 > Data type: `anonymous object(string: object)`  
 

@@ -1,11 +1,11 @@
 ---
 {
-  "title": "LegacyPrintings",
-  "schema": "LegacyPrintings",
+  "title": "LegacyCards",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",
-      "content": "Legacy printings compiled output schema for MTGJSON.",
+      "content": "Legacy cards compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -18,9 +18,9 @@
 }
 ---
 
-# LegacyPrintings
+# LegacyCards
 
-All sets, restricted to sets legal in Legacy.
+All cards, restricted to sets legal in Legacy.
 
 > Data type: `anonymous object(string: object)`  
 

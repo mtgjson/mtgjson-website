@@ -1,11 +1,11 @@
 ---
 {
-  "title": "ModernPrintings",
-  "schema": "ModernPrintings",
+  "title": "ModernCards",
+  "schema": "Card",
   "meta": [
     {
       "name": "description",
-      "content": "Modern printings compiled output schema for MTGJSON.",
+      "content": "Modern cards compiled output schema for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -18,9 +18,9 @@
 }
 ---
 
-# ModernPrintings
+# ModernCards
 
-All sets, restricted to sets legal in Modern.
+All cards, restricted to sets legal in Modern.
 
 > Data type: `anonymous object(string: object)`  
 
