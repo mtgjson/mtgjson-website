@@ -20,6 +20,59 @@
 
 Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
+## 4.6.0 <small>(2019-10-27)</small>
+### Announcements
+<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>Since the release of MTJSON v4.5.0, we've been working hard on bringing more and more data for our users. Today, we are pleased to announce several awesome changes coming to the project.
+
+First, this release is the first of many releases to be compiled on AWS infrastructure. Thanks to the kind folks who have and continue to pledge on our [Patreon page](https://patreon.com/mtgjson), we are able to offer **daily builds of MTGJSON**! For the time being, we only plan on building price data daily, but we plan on expanding that further to full data releases as well.
+
+Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `Prices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/structures/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
+
+Next, in order to alleviate a large percentage of confusion with our project, we have renamed `AllSets` to `AllPrintings`, with better descriptions and upgraded site layouts. Redirects will be in place to ensure current projects do not suffer due to this change.
+
+Finally, we have several new compiled download-ables available. You can find more information on that down below. As we've said before, and will continue to reiterate: The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
+
+
+### Cards
+#### Added
+- Digital Pricing, courtesy of CardHoarder!
+	- `prices[mtgo]` and `prices[mtgoFoil]`
+- `frameEffects`, which is an enhancement of `frameEffect`.
+- Support for pioneer in `legalities`.
+#### Changed
+- `prices` map will only contain one entry for each field, maximum
+	- Full price data can be found in the new `Prices` file :)
+
+#### Deprecated
+- `frameEffect` slated for removal in 4.7.0, superseded by `frameEffects`.
+
+### Sets
+#### Changed
+- Added Throne of Eldraine draft booster information.
+
+### Tokens
+### Added
+- `supertypes`, `subtypes`, and `types`.
+- Brackets around planeswalker text (if necessary).
+
+### Fixed
+- `uuid` re-added for Tokens... sorry.
+- That one weird `duelDeck = c` entry is fixed.
+
+### Other
+### Added
+- New format download files have arrived!
+	- New Lineup: `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`.
+- New unique card download files, too!
+	- New Lineup: `StandardCards`, `PioneerCards`, `ModernCards`, `LegacyCards`, `VintageCards`, and `PauperCards`.
+- Better documentation for new contributors.
+- AWS Support integrated!
+- MTGJSON Pricing data split up into its own file: `Prices`.
+- CSV support has arrived!
+
+### Fixed
+- `Keywords` fixed to handle yet another Wizards change
+
 ## 4.5.1 <small>(2019-09-23)</small>
 
 ### Cards
