@@ -20,7 +20,7 @@
 
 # PioneerPrintings
 
-All sets, restricted to sets legal in Legacy.
+All sets, restricted to sets legal in Pioneer.
 
 > Data type: `array(string: object)`  
 
