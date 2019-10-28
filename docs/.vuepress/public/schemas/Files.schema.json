@@ -1,9 +1,15 @@
 {
-  "AllCards": {
+  "AllPrintings": {
     "type": "string",
-    "example": "\"AllCards\"",
-    "description": "Every card as a unique \"atomic\" object. May also be outputted as every card in a specific set. Some data properties will be omitted if they have differing examples from set to set.",
-    "introduced": "v4.0.0"
+    "example": "\"AllPrintings\"",
+    "description": "Every printing and all cards in each printing.",
+    "introduced": "v4.6.0"
+  },
+  "AllPrintingsCSVFiles": {
+    "type": "string",
+    "example": "\"AllPrintingsCSVFiles\"",
+    "description": "Every printing in individual CSV format and all cards in each printing.",
+    "introduced": "v4.6.0"
   },
   "AllDeckFiles": {
     "type": "string",
@@ -11,17 +17,17 @@
     "description": "Pre-constructed decks, compressed.",
     "introduced": "v4.3.0"
   },
-  "AllSets": {
-    "type": "string",
-    "example": "\"AllSets\"",
-    "description": "Every set and all cards in that set.",
-    "introduced": "v4.0.0"
-  },
   "AllSetFiles": {
     "type": "string",
     "example": "\"AllSetFiles\"",
     "description": "Each individual set file in a directory, compressed.",
     "introduced": "v4.2.1"
+  },
+  "AllCards": {
+    "type": "string",
+    "example": "\"AllCards\"",
+    "description": "Every card as a unique \"atomic\" object. May also be outputted as every card in a specific set. Some data properties will be omitted if they have differing examples from set to set.",
+    "introduced": "v4.0.0"
   },
   "CardTypes": {
     "type": "string",
@@ -32,7 +38,7 @@
   "CompiledList": {
     "type": "string",
     "example": "\"CompiledList\"",
-    "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllSets, Modern, SetList, etc.",
+    "description": "All possible compiled outputs from MTGJSON, such as, AllCards, AllPrintings, Modern, SetList, etc.",
     "introduced": "v4.3.0"
   },
   "DeckLists": {
