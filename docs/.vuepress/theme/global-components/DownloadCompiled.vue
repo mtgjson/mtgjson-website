@@ -83,6 +83,10 @@ export default {
   }
 }
 
+.download-item:first-of-type {
+  border-color:orange;
+}
+
 .dl-wrap {
   &--btn-wrap {
     small {
