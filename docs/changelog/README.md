@@ -30,7 +30,9 @@ Speaking of pricing, we now have MTGO pricing available thanks to our friends at
 
 Next, in order to alleviate a large percentage of confusion with our project, we have renamed `AllSets` to `AllPrintings`, with better descriptions and upgraded site layouts. Redirects will be in place to ensure current projects do not suffer due to this change.
 
-Finally, we have several new compiled download-ables available. You can find more information on that down below. As we've said before, and will continue to reiterate: The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
+Finally, we have several new compiled download-ables available. You can find more information on that down below. We now support JSON, SQL, SQLite, and CSV downloads of many components. With this change, we have renamed our `/json/<filename>` endpoint to `/files/<filename>`. More information found below.
+
+As we've said before, and will continue to reiterate: The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
 
 
 ### Cards
@@ -72,6 +74,7 @@ Finally, we have several new compiled download-ables available. You can find mor
 - SQL support has arrived! `AllPrintings.sql` can easily be imported into an SQL database.
 
 ### Changed
+- Downloading files has moved from `/json/<filename>` to `/files/<filename>`, to accomodate our change in file offerings. The `/json/` access point is deprecated, but can still be used. We will continue supporting this endpoint for the foreseeable future.
 - Versioning will now include `MAJ.MIN.PATCH+YYYYMMDD` to indicate the build date (instead of `rebuild.X`)
 
 ### Fixed
