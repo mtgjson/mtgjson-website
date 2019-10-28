@@ -66,9 +66,13 @@ Finally, we have several new compiled download-ables available. You can find mor
 - New unique card download files, too!
 	- New Lineup: `StandardCards`, `PioneerCards`, `ModernCards`, `LegacyCards`, `VintageCards`, and `PauperCards`.
 - Better documentation for new contributors.
-- AWS Support integrated!
+- AWS Support integrated! Automated builds will occur daily for prices, with full builds happening weekly on Sundays!
 - MTGJSON Pricing data split up into its own file: `Prices`.
-- CSV support has arrived!
+- CSV support has arrived! Downloads based on `AllPrintings` types will be available in CSV format.
+- SQL support has arrived! `AllPrintings.sql` can easily be imported into an SQL database.
+
+### Changed
+- Versioning will now include `MAJ.MIN.PATCH+YYYYMMDD` to indicate the build date (instead of `rebuild.X`)
 
 ### Fixed
 - `Keywords` fixed to handle yet another Wizards change
