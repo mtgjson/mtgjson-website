@@ -2,7 +2,7 @@
   "AllPrintings": {
     "type": "string",
     "example": "\"AllPrintings\"",
-    "description": "Every printing and all cards in each printing.",
+    "description": "All cards, including all printings and variations, categorized by set.",
     "introduced": "v4.6.0"
   },
   "AllPrintingsCSVFiles": {
