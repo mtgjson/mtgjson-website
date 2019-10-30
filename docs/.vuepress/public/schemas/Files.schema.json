@@ -14,8 +14,14 @@
   "AllDeckFiles": {
     "type": "string",
     "example": "\"AllDeckFiles\"",
-    "description": "Pre-constructed decks, compressed.",
+    "description": "All pre-constructed decks, compressed.",
     "introduced": "v4.3.0"
+  },
+  "AllPrices": {
+    "type": "string",
+    "example": "\"AllPrices\"",
+    "description": "All prices of cards in various formats.",
+    "introduced": "v4.6.0"
   },
   "AllSetFiles": {
     "type": "string",

@@ -18,7 +18,7 @@
 
 # Changelog
 
-Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
+Below you will find all the changes made on each MTGJSON build release. Versions marked with dates are rebuilds and fully backwards compatible with the release, and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
 ## 4.6.0 <small>(2019-10-28)</small>
 ### Announcements
@@ -26,7 +26,7 @@ Below you will find all the changes made on each MTGJSON build release. Versions
 
 First, this release is the first of many releases to be compiled on AWS infrastructure. Thanks to the kind folks who have and continue to pledge on our [Patreon page](https://patreon.com/mtgjson), we are able to offer **daily builds of MTGJSON**! For the time being, we only plan on building price data daily, but we plan on expanding that further to full data releases as well.
 
-Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `Prices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/structures/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
+Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `AllPrices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/structures/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
 
 Next, in order to alleviate a large percentage of confusion with our project, we have renamed `AllSets` to `AllPrintings`, with better descriptions and upgraded site layouts. Redirects will be in place to ensure current projects do not suffer due to this change.
 
@@ -43,7 +43,7 @@ As we've said before, and will continue to reiterate: The future looks bright fo
 - Support for pioneer in `legalities`.
 #### Changed
 - `prices` map will only contain one entry for each field, maximum
-	- Full price data can be found in the new `Prices` file :)
+	- Full price data can be found in the new `AllPrices` file :)
 
 #### Deprecated
 - `frameEffect` slated for removal in 4.7.0, superseded by `frameEffects`.

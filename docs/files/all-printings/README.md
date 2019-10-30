@@ -22,7 +22,7 @@
 
 All cards, including all printings and variations, categorized by set.
 
-> Data type: `array(string: object)`  
+> Data type: `anonymous object(string: object)`  
 
 ### Data Structure
 
