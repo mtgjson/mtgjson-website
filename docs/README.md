@@ -33,14 +33,19 @@ Zach is a 22-year old hippo fanatic who loves playing with big data and giving b
 <em>All inquires about MTGJSON can be sent to <a href="mailto:zach@mtgjson.com">zach@mtgjson.com</a></em>
 :::
 
-::: tip Martin - Web Developer
-![avatar](/images/avatar-martin.jpg "Martin")
-Martin is an avid strategy gamer and Magic player since late 1994. When he’s not looking at Javascript or playing commander, he’s likely spending time on a host of smaller projects, including the custom card creator MTG.Design.
-:::
-
 ::: tip Eric - Documentation Developer
 ![avatar](/images/avatar-eric.gif "Eric")
 Eric is a conceptualizer that loves cervidae, nature, cheesy sci-fi movies and delving in to any code he can find. He has worked on the MTGJSON documentation since 2018 and is an avid supporter of open-source software and the MTG community.
+:::
+
+::: tip Mark - Cloud Developer
+![avatar](/images/avatar-mark.png "Mark")
+Mark is an old man obsessed with learning anything he can, a self-proclaimed Jack of All Trades, yet Master of None. He spends his time gaming, writing, farming, cuddling with his dogs, and providing comedic relief.
+:::
+
+::: tip Martin - Web Developer
+![avatar](/images/avatar-martin.jpg "Martin")
+Martin is an avid strategy gamer and Magic player since late 1994. When he’s not looking at Javascript or playing commander, he’s likely spending time on a host of smaller projects, including the custom card creator MTG.Design.
 :::
 
 ## Contributing
