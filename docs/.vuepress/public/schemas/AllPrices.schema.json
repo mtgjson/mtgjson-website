@@ -1,0 +1,12 @@
+{
+  "[Unique card UUID]": {
+    "type": "object(string: object)",
+    "example": "\"prices\": {{link:prices}}",
+    "description": "The key is the UUID of a card. See the {{link:prices}} structure for a UUID's value."
+  },
+  "..." : {
+    "type": "...",
+    "example": "...",
+    "description": "..."
+  }
+}

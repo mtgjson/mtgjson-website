@@ -27,7 +27,7 @@
         //- Property Name
         .schema-data--table-item
           .heading
-            p(title="The name of the property") Name
+            p(title="The name of the property") Key
           .name
             a(:href="`#${name}`")
               h6 {{ name }}
