@@ -18,7 +18,7 @@
 
 # Changelog
 
-Below you will find all the changes made on each MTGJSON build release. Versions marked as rebuilds are fully backwards compatible with the release and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
+Below you will find all the changes made on each MTGJSON build release. Versions marked with dates are rebuilds and fully backwards compatible with the release, and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
 ## 4.6.0 <small>(2019-10-28)</small>
 ### Announcements
@@ -43,7 +43,7 @@ As we've said before, and will continue to reiterate: The future looks bright fo
 - Support for pioneer in `legalities`.
 #### Changed
 - `prices` map will only contain one entry for each field, maximum
-	- Full price data can be found in the new `Prices` file :)
+	- Full price data can be found in the new `AllPrices` file :)
 
 #### Deprecated
 - `frameEffect` slated for removal in 4.7.0, superseded by `frameEffects`.
