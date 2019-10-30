@@ -59,9 +59,9 @@
     "description": "List of all keywords used on Magic cards.",
     "introduced": "v4.1.0"
   },
-  "Legacy": {
+  "LegacyPrintings": {
     "type": "string",
-    "example": "\"Legacy\"",
+    "example": "\"LegacyPrintings\"",
     "description": "All sets, restricted to sets legal in Legacy.",
     "introduced": "v4.6.0"
   },
@@ -71,9 +71,9 @@
     "description": "All cards, restricted to cards legal in Legacy.",
     "introduced": "v4.6.0"
   },
-  "Modern": {
+  "ModernPrintings": {
     "type": "string",
-    "example": "\"Modern\"",
+    "example": "\"ModernPrintings\"",
     "description": "All sets, restricted to sets legal in Modern.",
     "introduced": "v4.1.3"
   },
@@ -95,9 +95,9 @@
     "description": "List of codes, names and release dates of all sets.",
     "introduced": "v4.1.0"
   },
-  "Standard": {
+  "StandardPrintings": {
     "type": "string",
-    "example": "\"Standard\"",
+    "example": "\"StandardPrintings\"",
     "description": "All sets, restricted to sets legal in Standard.",
     "introduced": "v4.1.3"
   },
@@ -113,9 +113,9 @@
     "description": "Metadata object has {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
     "introduced": "v4.0.0"
   },
-  "Vintage": {
+  "VintagePrintings": {
     "type": "string",
-    "example": "\"Vintage\"",
+    "example": "\"VintagePrintings\"",
     "description": "All sets, restricted to sets legal in Vintage.",
     "introduced": "v4.0.0"
   },
