@@ -85,7 +85,7 @@
   },
   "PioneerPrintings": {
     "type": "string",
-    "example": "\"ModernPrintings\"",
+    "example": "\"PioneerPrintings\"",
     "description": "All sets, restricted to sets legal in the Pioneer format.",
     "introduced": "v4.1.3"
   },
