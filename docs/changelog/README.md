@@ -49,6 +49,10 @@ As we've said before, and will continue to reiterate: The future looks bright fo
 - `frameEffect` slated for removal in 4.7.0, superseded by `frameEffects`.
 
 ### Sets
+#### Added
+- Ponies: The Galloping (`PTG`)
+- Game Night 2019 (`GN2`)
+
 #### Changed
 - Added Throne of Eldraine draft booster information.
 
