@@ -59,35 +59,47 @@
     "description": "List of all keywords used on Magic cards.",
     "introduced": "v4.1.0"
   },
-  "LegacyPrintings": {
-    "type": "string",
-    "example": "\"LegacyPrintings\"",
-    "description": "All sets, restricted to sets legal in Legacy.",
-    "introduced": "v4.6.0"
-  },
   "LegacyCards": {
     "type": "string",
     "example": "\"LegacyCards\"",
-    "description": "All cards, restricted to cards legal in Legacy.",
+    "description": "All cards, restricted to cards legal in the Legacy format.",
     "introduced": "v4.6.0"
   },
-  "ModernPrintings": {
+  "LegacyPrintings": {
     "type": "string",
-    "example": "\"ModernPrintings\"",
-    "description": "All sets, restricted to sets legal in Modern.",
-    "introduced": "v4.1.3"
-  },
-  "ModernCards": {
-    "type": "string",
-    "example": "\"ModernCards\"",
-    "description": "All cards, restricted to cards legal in Modern.",
+    "example": "\"LegacyPrintings\"",
+    "description": "All sets, restricted to sets legal in the Legacy format.",
     "introduced": "v4.6.0"
   },
   "PauperCards": {
     "type": "string",
     "example": "\"PauperCards\"",
-    "description": "All cards, restricted to cards legal in Pauper.",
+    "description": "All cards, restricted to cards legal in the Pauper format.",
     "introduced": "v4.6.0"
+  },
+  "PioneerCards": {
+    "type": "string",
+    "example": "\"PioneerCards\"",
+    "description": "All cards, restricted to cards legal in the Pioneer format.",
+    "introduced": "v4.6.0"
+  },
+  "PioneerPrintings": {
+    "type": "string",
+    "example": "\"ModernPrintings\"",
+    "description": "All sets, restricted to sets legal in the Pioneer format.",
+    "introduced": "v4.1.3"
+  },
+  "ModernCards": {
+    "type": "string",
+    "example": "\"ModernCards\"",
+    "description": "All cards, restricted to cards legal in the Modern format.",
+    "introduced": "v4.6.0"
+  },
+  "ModernPrintings": {
+    "type": "string",
+    "example": "\"ModernPrintings\"",
+    "description": "All sets, restricted to sets legal in the Modern format.",
+    "introduced": "v4.1.3"
   },
   "SetList": {
     "type": "string",
@@ -95,17 +107,17 @@
     "description": "List of codes, names and release dates of all sets.",
     "introduced": "v4.1.0"
   },
-  "StandardPrintings": {
-    "type": "string",
-    "example": "\"StandardPrintings\"",
-    "description": "All sets, restricted to sets legal in Standard.",
-    "introduced": "v4.1.3"
-  },
   "StandardCards": {
     "type": "string",
     "example": "\"StandardCards\"",
-    "description": "All cards, restricted to cards legal in Standard.",
+    "description": "All cards, restricted to cards legal in the Standard format.",
     "introduced": "v4.6.0"
+  },
+  "StandardPrintings": {
+    "type": "string",
+    "example": "\"StandardPrintings\"",
+    "description": "All sets, restricted to sets legal in the Standard format.",
+    "introduced": "v4.1.3"
   },
   "version": {
     "type": "string",
@@ -113,16 +125,16 @@
     "description": "Metadata object has {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
     "introduced": "v4.0.0"
   },
-  "VintagePrintings": {
-    "type": "string",
-    "example": "\"VintagePrintings\"",
-    "description": "All sets, restricted to sets legal in Vintage.",
-    "introduced": "v4.0.0"
-  },
   "VintageCards": {
     "type": "string",
     "example": "\"VintageCards\"",
-    "description": "All cards, restricted to cards legal in Vintage.",
+    "description": "All cards, restricted to cards legal in the Vintage format.",
     "introduced": "v4.6.0"
+  },
+  "VintagePrintings": {
+    "type": "string",
+    "example": "\"VintagePrintings\"",
+    "description": "All sets, restricted to sets legal in the Vintage format.",
+    "introduced": "v4.0.0"
   }
 }
