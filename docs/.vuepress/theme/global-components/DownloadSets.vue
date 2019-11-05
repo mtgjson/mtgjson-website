@@ -26,7 +26,7 @@
           div(v-else-if="set.parentCode" :class="`ss ss-${set.parentCode.toLowerCase()}`")
           div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
         .txt-wrap
-          h3(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFuture(set.releaseDate)}") {{ set.name }}
+          h3(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFutureDate(set.releaseDate)}") {{ set.name }}
           ol
             li
               small Set Code:&nbsp;{{ set.code }}
