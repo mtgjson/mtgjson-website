@@ -2,13 +2,13 @@ import fetch from 'node-fetch';
 
 import landcycle from './scripts/Landcycle';
 import prettifyType from './scripts/prettifyType';
-import isFuture from './scripts/isFuture';
+import isFutureDate from './scripts/isFutureDate';
 import filter from './scripts/filter';
 import sort from './scripts/sort';
 
 const helpers = {
   prettifyType,
-  isFuture,
+  isFutureDate,
   filter,
   sort,
 };
