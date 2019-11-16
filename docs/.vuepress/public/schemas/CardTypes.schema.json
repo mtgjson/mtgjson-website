@@ -79,8 +79,8 @@
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{link:version}}",
-    "description": "See the {{link:version}} structure.",
+    "example": "{{link@version@/files/version}}",
+    "description": "See the {{link@version@/files/version}} file.",
     "introduced": "v4.3.0"
   }
 }

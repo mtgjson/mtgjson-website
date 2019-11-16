@@ -122,7 +122,7 @@
   "version": {
     "type": "string",
     "example": "\"version\"",
-    "description": "Metadata object has {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
+    "description": "Metadata object has {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
     "introduced": "v4.0.0"
   },
   "VintageCards": {

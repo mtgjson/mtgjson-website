@@ -8,7 +8,7 @@
   "fileName": {
     "type": "string",
     "example": "\"AbzanSiege_KTK\"",
-    "description": "File name for the deck. Combines the {{code:name}} and {{code:code}} fields to avoid namespace collisions.",
+    "description": "File name for the deck. Combines the {{code@name}} and {{code@code}} fields to avoid namespace collisions.",
     "introduced": "v4.3.0"
   },
   "name": {
@@ -20,7 +20,7 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2000-01-01\"",
-    "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the deck.",
+    "description": "Release date in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the deck.",
     "introduced": "v4.3.0"
   }
 }

@@ -2,7 +2,7 @@
   "baseSetSize": {
     "type": "integer",
     "example": "259",
-    "description": "Number of cards in the set. Will default to {{code:totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
+    "description": "Number of cards in the set. Will default to {{code@totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
     "introduced": "v4.5.0"
   },
   "code": {
@@ -29,7 +29,7 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2018-07-13\"",
-    "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set. Returns {{code:null}} if the set was not formally released as a product.",
+    "description": "Release date in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set. Returns {{code@null}} if the set was not formally released as a product.",
     "attributes": [
       "nullable"
     ],
@@ -44,7 +44,7 @@
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "As of 03-28-2019, the possible values are {{code:archenemy}}, {{code:box}}, {{code:core}}, {{code:commander}}, {{code:draft_innovation}}, {{code:duel_deck}}, {{code:expansion}}, {{code:from_the_vault}}, {{code:funny}}, {{code:masters}}, {{code:masterpiece}}, {{code:memorabilia}}, {{code:spellbook}}, {{code:planechase}}, {{code:premium_deck}}, {{code:promo}}, {{code:starter}}, {{code:token}}, {{code:treasure_chest}}, or {{code:vanguard}}",
+    "description": "As of 03-28-2019, the possible values are {{code@archenemy}}, {{code@box}}, {{code@core}}, {{code@commander}}, {{code@draft_innovation}}, {{code@duel_deck}}, {{code@expansion}}, {{code@from_the_vault}}, {{code@funny}}, {{code@masters}}, {{code@masterpiece}}, {{code@memorabilia}}, {{code@spellbook}}, {{code@planechase}}, {{code@premium_deck}}, {{code@promo}}, {{code@starter}}, {{code@token}}, {{code@treasure_chest}}, or {{code@vanguard}}",
     "attributes": [
       "stale"
     ],

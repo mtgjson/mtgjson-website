@@ -9,7 +9,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, leadership, skills, commander",
+      "content": "mtg, magic: the gathering, mtgjson, json, leadership skills, commander",
     }
   ],
   "feed": {

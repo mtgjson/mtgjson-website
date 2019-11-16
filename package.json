@@ -1,6 +1,6 @@
 {
   "name": "mtgjson-website",
-  "version": "4.5.0",
+  "version": "4.6.0",
   "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
@@ -20,6 +20,7 @@
     "regenerate-schema": "node ./utils/schema-regenerator.js"
   },
   "dependencies": {
+    "js-essentials": "0.0.5",
     "vuepress": "^1.0.3",
     "vuepress-plugin-container": "^2.0.1",
     "vuepress-plugin-feed": "^0.1.7"

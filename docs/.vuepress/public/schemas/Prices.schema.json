@@ -2,25 +2,25 @@
   "paper": {
     "type": "object(string: float)",
     "example": "\"2019-04-28\": 0.25",
-    "description": "Prices of a card. Date is in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{external:MTGStocks$https://www.mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson}} and {{external:TCGPlayer$https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
+    "description": "Prices of a card. Date is in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{link@MTGStocks@https://www.mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson}} and {{link@TCGPlayer@https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
     "introduced": "v4.4.0"
   },
   "paperFoil": {
     "type": "object(string: float)",
     "example": "\"2019-04-28\": 0.55",
-    "description": "Prices of the premium version of a card. Date is in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{external:MTGStocks$https://www.mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson}} and {{external:TCGPlayer$https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
+    "description": "Prices of the premium version of a card. Date is in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{link@MTGStocks@https://www.mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson}} and {{link@TCGPlayer@https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
     "introduced": "v4.4.2"
   },
   "mtgo": {
     "type": "object(string: float)",
     "example": "\"2019-04-28\": 0.25",
-    "description": "Prices of a MTGO version card. Date is in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{external:Cardhoarder$https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card}}.",
+    "description": "Prices of a MTGO version card. Date is in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{link@Cardhoarder@https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card}}.",
     "introduced": "v4.6.0"
   },
   "mtgoFoil": {
     "type": "object(string: float)",
     "example": "\"2019-04-28\": 0.55",
-    "description": "Prices of the premium MTGO version of a card. Date is in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{external:Cardhoarder$https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card}}.",
+    "description": "Prices of the premium MTGO version of a card. Date is in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format. Prices courtesy of {{link@Cardhoarder@https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card}}.",
     "introduced": "v4.6.0"
   }
 }

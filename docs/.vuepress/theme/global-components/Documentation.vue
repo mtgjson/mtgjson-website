@@ -170,11 +170,12 @@ export default {
       return newSchema || schema;
     },
   },
-  created() {
+  async created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
+    const landcycle = await new this.$landcycle(schema).cycle();
 
     this.showMore = Object.keys(schema).length > 4;
-    this.schema = new this.$landcycle(schema).schema;
+    this.schema = landcycle.schema;
   },
   methods: {
     toggleIndex() {

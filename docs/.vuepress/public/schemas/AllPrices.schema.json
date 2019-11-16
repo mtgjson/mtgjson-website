@@ -1,8 +1,8 @@
 {
-  "[Unique card UUID]": {
+  "[Unique {{link@card@/structures/card}} UUID]": {
     "type": "object(string: object)",
-    "example": "\"prices\": {{link:prices}}",
-    "description": "The key is the UUID of a card. See the {{link:prices}} structure for a UUID's value."
+    "example": "\"prices\": {{link@prices@/structures/prices}}",
+    "description": "The key is the UUID of a card. See the {{link@prices@/structures/prices}} structure for a UUID's value."
   },
   "..." : {
     "type": "...",
