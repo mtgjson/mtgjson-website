@@ -29,8 +29,8 @@
           .heading
             p(title="The name of the property") Key
           .name
-            a(:href="`#${name}`")
-              h6 {{ name }}
+            a(:href="`#${data.propName}`")
+              h6(v-html="data.propName")
 
         //- Property Type
         .schema-data--table-item
@@ -170,9 +170,10 @@ export default {
       return newSchema || schema;
     },
   },
-  async created() {
+  created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
-    const landcycle = await new this.$landcycle(schema).cycle();
+    const landcycle = new this.$landcycle(schema);
+    landcycle._init();
 
     this.showMore = Object.keys(schema).length > 4;
     this.schema = landcycle.schema;

@@ -20,7 +20,7 @@
     "regenerate-schema": "node ./utils/schema-regenerator.js"
   },
   "dependencies": {
-    "js-essentials": "0.0.5",
+    "js-essentials": "0.0.6",
     "vuepress": "^1.0.3",
     "vuepress-plugin-container": "^2.0.1",
     "vuepress-plugin-feed": "^0.1.7"
