@@ -25,7 +25,8 @@
     "example": "[\"B\",\"R\"]",
     "description": "List of all colors in card's color indicator (The symbol showing the colors of the card).",
     "attributes": [
-      "atomic"
+      "atomic",
+      "optional"
     ],
     "introduced": "v4.0.2"
   },
@@ -88,6 +89,9 @@
     "type": "string",
     "example": "\"Whatever hatred destroys, a single act of trust can revive.\"",
     "description": "Italicized text found below the rules text that has no game function.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "foreignData": {
@@ -319,7 +323,8 @@
     "example": "\"+0\"",
     "description": "Starting life total modifier. A plus or minus character preceeds an integer. Used only on Vanguard cards.",
     "attributes": [
-      "atomic"
+      "atomic",
+      "optional"
     ],
     "introduced": "v4.2.1"
   },
@@ -410,7 +415,8 @@
     "example": "[\"Nicol Bolas, the Ravager\",\"Nicol Bolas, the Arisen\"]",
     "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB.",
     "attributes": [
-      "atomic"
+      "atomic",
+      "optional"
     ],
     "introduced": "v4.0.0"
   },
