@@ -18,8 +18,6 @@
 
 # Changelog
 
-Below you will find all the changes made on each MTGJSON build release. Versions marked with dates are rebuilds and fully backwards compatible with the release, and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
-
 ## 4.6.0
 Release Date: 2019-10-28
 

@@ -118,8 +118,6 @@ a {
   display: none !important;
 }
 
-.mobile-hide {}
-
 hr {
   border: 0;
   border-top: 1px solid var(--table-border-color);
@@ -193,9 +191,26 @@ img {
     max-width: $contentWidth;
   }
 
-  & > *:first-child {
-    padding-top: 0;
+  & > :first-child {
     margin-top: 0;
+    padding-top: 0;
+  }
+
+  & > * {
+    .header-anchor {
+      opacity: 0;
+    }
+  }
+
+  // Deal with the scrolling issue with anchors being hidden
+  // by the fixed navigation
+  & > h2,
+  & > h3 {
+    padding-top: 100px;
+
+    &:first-of-type {
+      margin-top: -100px;
+    }
   }
 
   a {
