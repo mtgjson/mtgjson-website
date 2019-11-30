@@ -20,7 +20,9 @@
 
 Below you will find all the changes made on each MTGJSON build release. Versions marked with dates are rebuilds and fully backwards compatible with the release, and contain updates for fields that require more frequent updating (e.g. prices and EDH Rank), as well as data improvements.
 
-## 4.6.0 <small>(2019-10-28)</small>
+## 4.6.0
+Release Date: 2019-10-28
+
 ### Announcements
 <img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>Since the release of MTJSON v4.5.0, we've been working hard on bringing more and more data for our users. Today, we are pleased to announce several awesome changes coming to the project.
 
@@ -33,7 +35,6 @@ Next, in order to alleviate a large percentage of confusion with our project, we
 Finally, we have several new compiled download-ables available. You can find more information on that down below. We now support JSON, SQL, SQLite, and CSV downloads of many components. With this change, we have renamed our `/json/<filename>` endpoint to `/files/<filename>`. More information found below.
 
 As we've said before, and will continue to reiterate: The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
-
 
 ### Cards
 #### Added
@@ -84,7 +85,8 @@ As we've said before, and will continue to reiterate: The future looks bright fo
 ### Fixed
 - `Keywords` fixed to handle yet another Wizards change
 
-## 4.5.1 <small>(2019-09-23)</small>
+## 4.5.1
+Release Date: 2019-09-23
 
 ### Cards
 #### Added
@@ -109,7 +111,8 @@ As we've said before, and will continue to reiterate: The future looks bright fo
 - `Keywords.json` had some issues due to Wizards change of file formats (again...).
 - Bad internal caching of translations.
 
-## 4.5.0 <small>(2019-08-11)</small>
+## 4.5.0
+Release Date: 2019-08-11
 
 ### Announcements
 <img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>We are pleased to introduce MTGJSON v4.5.0, a substantial update to the MTGJSON project. This release debuts our brand new website, and we can't be happier with the results! With improved documentation and dark mode support, the website will accommodate a wide range of ideas and projects, no matter a expertise. The site also comes with an upgrade to our brand image; with an amazing new logo! The future looks bright for MTGJSON and we would like to thank the community for its continued support and we look forward to serving you well.
@@ -149,7 +152,8 @@ As we've said before, and will continue to reiterate: The future looks bright fo
 - Update TCGPlayer API to 1.32.0
 - Added `baseSetSize` and `totalSetSize` to `SetList.json` entries
 
-## 4.4.2 <small>(2019-06-26)</small>
+## 4.4.2
+Release Date: 2019-06-26
 
 ### Announcements
 
@@ -199,7 +203,9 @@ Do you have a project that uses MTGJSON? Please reach out to us and we will get 
 #### Fixed
 - Better handling of empty keys file when building
 
-## 4.4.1 <small>(2019-06-04)</small>
+## 4.4.1
+Release Date: 2019-06-04
+
 
 ### Cards
 #### Fixed
@@ -231,7 +237,8 @@ Do you have a project that uses MTGJSON? Please reach out to us and we will get 
 - `AllCards` no longer has `prices` as they are not atomic
 
 
-## 4.4.0 <small>(2019-04-28)</small>
+## 4.4.0
+Release Date: 2019-04-28
 
 ### Announcements
 
@@ -303,7 +310,9 @@ If you have data you believe would be relevant to MTGJSON and the development co
 #### Replaced
 `--skip-tcgplayer` replaced with `--skip-keys` for compiling. If passed, all keys will be ignored.
 
-## 4.3.2 <small>(2019-03-31)</small>
+## 4.3.2
+Release Date: 2019-03-31
+
 
 ### Website
 
@@ -349,7 +358,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 
 - Added caching for development and spoiler purposes
 
-## 4.3.1 <small>(2019-03-04)</small>
+## 4.3.1
+Release Date: 2019-03-04
 
 ### Website
 
@@ -372,7 +382,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 - Several Planeswalkers were using an incorrect dash
 - Base set size for `PRNA` and `GK2` has been corrected
 
-## 4.3.0 <small>(2019-02-22)</small>
+## 4.3.0
+Release Date: 2019-02-22
 
 ### Website
 
@@ -432,7 +443,9 @@ If you have data you believe would be relevant to MTGJSON and the development co
 - `foreignData` is now more accurate
 - Some fields on tokens were mistakenly left blank. This has been addressed
 
-## 4.2.2 <small>(2019-01-30)</small>
+## 4.2.2
+Release Date: 2019-01-30
+
 
 ### Individual Sets
 
@@ -458,7 +471,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 
 - Old School (`oldschool`) is now a supported format
 
-## 4.2.1 <small>(2019-01-12)</small>
+## 4.2.1
+Release Date: 2019-01-12
 
 ### Individual Sets
 
@@ -494,7 +508,9 @@ If you have data you believe would be relevant to MTGJSON and the development co
 - MTGJSON has a new logo (please do give feedback!)
 - `AllSetFiles.zip`, which contains all individual set files in a folder instead of `AllSets.json` (which is one file with all of the data)
 
-## 4.2.0 <small>(2018-12-18)</small>
+## 4.2.0
+Release Date: 2018-12-18
+
 
 ### Individual Sets
 
@@ -533,13 +549,14 @@ If you have data you believe would be relevant to MTGJSON and the development co
 
 - Removed `SetCodes.json` (same information can be found in `SetLists.json`)
 
-## 4.1.3 <small>(2018-12-07)</small>
+## 4.1.3
+Release Date: 2018-12-07
 
 ### Individual Sets
 
 #### Added
 
-- Compiled outputs now avaiable for different formats, including `AllCardsNoUn.json`, `AllSetsNoUn.json`, `Standard.json`, and `Modern.json`
+- Compiled outputs now available for different formats, including `AllCardsNoUn.json`, `AllSetsNoUn.json`, `Standard.json`, and `Modern.json`
 - New formats available for set downloads: `.gz`, `.bz2`, `.xz`
 
 ### Individual Cards
@@ -554,7 +571,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 - Meld cards now assign the values “a”, “b”, and “c” to the `side` field, where “a” and “b” are for the two front sides and “c” is the meld back sides
 - UUIDs for split cards, meld cards, and split tokens are 37 characters in length (with the first 36 characters being the same between them)
 
-## 4.1.2 <small>(2018-11-30)</small>
+## 4.1.2
+Release Date: 2018-11-30
 
 ### Individual Cards
 
@@ -580,7 +598,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
   - `Very Cryptic Command (e)`
   - `Very Cryptic Command (f)`
 
-## 4.1.1 <small>(2018-11-26)</small>
+## 4.1.1
+Release Date: 2018-11-26
 
 ### Individual Cards
 
@@ -608,7 +627,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 
 - Windows OS workaround for `CON` now ignored in All Sets file
 
-## 4.1.0 <small>(2018-11-11)</small>
+## 4.1.0
+Release Date: 2018-11-11
 
 ### Individual Cards
 
@@ -640,7 +660,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 - Better system checks
 - Better handling of set files for Windows OS
 
-## 4.0.2 <small>(2018-10-17)</small>
+## 4.0.2
+Release Date: 2018-10-17
 
 ### Individual Sets
 
@@ -667,7 +688,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 }
 ```
 
-## 4.0.1 <small>(2018-10-15)</small>
+## 4.0.1
+Release Date: 2018-10-15
 
 ### Individual Sets
 
@@ -692,7 +714,8 @@ If you have data you believe would be relevant to MTGJSON and the development co
 }
 ```
 
-## 4.0.0 <small>(2018-10-13)</small>
+## 4.0.0
+Release Date: 2018-10-13
 
 ### Individual Cards
 
