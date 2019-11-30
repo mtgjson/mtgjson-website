@@ -1,12 +1,11 @@
 {
   "name": "mtgjson-website",
-  "version": "4.6.0",
+  "version": "4.7.0",
   "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
   "engines": {
-    "node": "^12.8.0",
-    "npm": "^6.10.2"
+    "node": "^12.8.0"
   },
   "scripts": {
     "dev": "vuepress dev docs",
