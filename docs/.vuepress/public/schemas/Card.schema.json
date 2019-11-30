@@ -471,6 +471,15 @@
     ],
     "introduced": "v4.4.0"
   },
+  "otherFaceIds": {
+    "type": "array(string)",
+    "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
+    "description": "List of uuid's of this card with counterparts, such as transformed or melded faces.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.7.0"
+  },
   "rarity": {
     "type": "string",
     "example": "\"mythic\"",
