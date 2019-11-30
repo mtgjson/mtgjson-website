@@ -4,10 +4,12 @@ import { jsonMustaches, isFutureDate } from 'js-essentials';
 import prettifyType from './scripts/prettifyType';
 import filter from './scripts/filter';
 import sort from './scripts/sort';
+import searchFilter from './scripts/searchFilter';
 
 const helpers = {
   prettifyType,
   isFutureDate,
+  searchFilter,
   filter,
   sort,
 };

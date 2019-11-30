@@ -1,9 +1,17 @@
 <template lang="pug">
-  .download-tables(v-if="decks")
+  .download-tables(v-if="filtered")
     .sorting-options
+      .sort-row.search
+        strong Search By:
+        input.table-sort-select(
+          placeholder="name, code, etc..."
+          type="text"
+          v-model="searchKey"
+          @input="handleSearch")
+
       .sort-row
         strong Sort By:
-        select.table-sort-select(@change="$helpers.sort($event, decks)")
+        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, filtered)")
           option(value="releaseDate:true" selected) Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
@@ -11,7 +19,7 @@
           option(value="name") Name (Ascending)
           option(value="name:true") Name (Descending)
 
-    blockquote.download-item(v-for="(deck, key) in decks")
+    blockquote.download-item(v-for="(deck, key) in filtered")
       .download-wrap
         .img-wrap
           div(:class="`ss ss-${deck.code.toLowerCase()}`")
@@ -37,19 +45,35 @@ export default {
   name: 'DecksDownloads',
   data() {
     return {
-      defaultDecks: null,
+      defaultDecks: [],
+      filteredDecks: [],
+      searchKey: '',
+      sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
     };
   },
   computed: {
-    decks() {
-      return this.defaultDecks;
+    filtered() {
+      return this.filteredDecks;
     },
   },
   mounted() {
     this.defaultDecks = this.$decks;
+    this.filteredDecks = this.$decks;
   },
+  methods: {
+    handleSearch() {
+      clearTimeout(this.timeout);
+
+      this.timeout = window.setTimeout(() => {
+        const searched = this.$helpers.searchFilter(this.searchKey, this.defaultDecks);
+        const sorted = this.$helpers.sort(this.sortKey, searched);
+
+        this.filteredDecks = sorted;
+      }, 300);
+    }
+  }
 };
 </script>
 

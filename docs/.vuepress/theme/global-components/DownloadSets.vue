@@ -1,10 +1,24 @@
 <template lang="pug">
   .download-tables
     .sorting-options
+      .sort-row.search
+        strong Search By:
+        input.table-sort-select(
+          placeholder="name, code, etc..."
+          type="text"
+          v-model="searchKey"
+          @input="handleSearch")
+
+      .sort-row
+        strong Filter By:
+        select.table-sort-select(@change="handleFilter($event)")
+          option(value="" selected) All Sets
+          option(v-for="(type, key) in filteredGroups" :value="type") {{ $helpers.prettifyType(type) }}
+
       .sort-row
         strong Sort By:
-        select.table-sort-select(@change="$helpers.sort($event, filtered)")
-          option(value="releaseDate:true" selected) Release Date (Newest)
+        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, filtered)")
+          option(value="releaseDate:true") Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
           option(value="code:true") Code (Descending)
@@ -12,12 +26,6 @@
           option(value="name:true") Name (Descending)
           option(value="type") Type (Ascending)
           option(value="type:true") Type (Descending)
-
-      .sort-row
-        strong Filter By:
-        select.table-sort-select(@change="setFilter($event)")
-          option(value="" selected) All Sets
-          option(v-for="(type, key) in filteredGroups" :value="type") {{ $helpers.prettifyType(type) }}
 
     blockquote.download-item(v-for="(set, key) in filtered")
       .download-wrap
@@ -53,25 +61,42 @@ export default {
       filteredSets: [],
       filteredGroups: [],
       filterKey: '',
+      searchKey: '',
+      sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
+      timeout: null,
     };
   },
   computed: {
     filtered() {
       return this.filteredSets;
-    }
+    },
   },
   mounted() {
     this.defaultSets = this.$sets;
     this.filteredGroups = Array.from(new Set(this.defaultSets.map(cur => cur.type)));
-    this.setFilter(this.filterKey);
+    this.handleFilter(this.filterKey);
   },
   methods: {
-    setFilter({currentTarget}) {
+    handleFilter({ currentTarget }) {
       this.filterKey = currentTarget ? currentTarget.value : '';
-      this.filteredSets = this.$helpers.filter(this.filterKey, this.defaultSets);
-    }
+      const filtered = this.$helpers.filter(this.filterKey, this.defaultSets);
+      const sorted = this.$helpers.sort(this.sortKey, filtered);
+
+      this.filteredSets = sorted;
+    },
+    handleSearch() {
+      clearTimeout(this.timeout);
+
+      this.timeout = window.setTimeout(() => {
+        const searched = this.$helpers.searchFilter(this.searchKey, this.defaultSets);
+        const filtered = this.$helpers.filter(this.filterKey, searched);
+        const sorted = this.$helpers.sort(this.sortKey, filtered);
+
+        this.filteredSets = sorted;
+      }, 300);
+    },
   },
 };
 </script>
