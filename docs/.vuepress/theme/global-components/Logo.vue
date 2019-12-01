@@ -1,8 +1,7 @@
 <template lang="pug">
   .logo
     .logo-meta
-      .logo-meta--logo(
-        :title="$siteTitle")
+      .logo-meta--logo(title="MTGJSON.com")
         svg(
           xmlns="http://www.w3.org/2000/svg"
           version="1.0"
@@ -19,7 +18,7 @@
             path(d="M321,2496 l-105,-71 l-107,-342 l-108,-342 l108,-395 c59,-218 110,-398 112,-400 c2,-2 49,-33 104,-70 l100,-66 l3,440 c1,242 1,637 0,879 l-3,439 l-104,-72 z")
             path(d="M4480,1689 l0,-881 l29,19 c187,120 181,115 196,168 c8,28 57,207 109,398 l95,348 l-108,342 l-107,342 l-107,73 l-107,73 l0,-882 z")
       .logo-meta--link.mobile-hide(v-if="!hideText")
-        h3 {{ $siteTitle }}
+        h3 MTGJSON
         Version.version-link
 </template>
 <script>
