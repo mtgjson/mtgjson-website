@@ -1,8 +1,7 @@
 import fetch from 'node-fetch';
+import { jsonMustaches, isFutureDate } from 'js-essentials';
 
-import landcycle from './scripts/Landcycle';
 import prettifyType from './scripts/prettifyType';
-import isFutureDate from './scripts/isFutureDate';
 import filter from './scripts/filter';
 import sort from './scripts/sort';
 
@@ -15,7 +14,7 @@ const helpers = {
 
 export default async ({ Vue }) => {
   Vue.prototype.$env = 'https://www.mtgjson.com';
-  Vue.prototype.$landcycle = landcycle;
+  Vue.prototype.$landcycle = jsonMustaches;
   Vue.prototype.$helpers = helpers;
   // Set these to default in case we fail for some reason
   Vue.prototype.$metadata = {};

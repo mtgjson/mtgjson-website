@@ -2,7 +2,7 @@
   "baseSetSize": {
     "type": "integer",
     "example": "259",
-    "description": "Number of cards in the set. Will default to {{code:totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
+    "description": "Number of cards in the set. Will default to {{code@totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
     "introduced": "v4.1.0"
   },
   "block": {
@@ -22,8 +22,8 @@
   },
   "cards": {
     "type": "array(object)",
-    "example": "{{link:card}}",
-    "description": "List of cards in this set.",
+    "example": "[{{link@card@/structures/card}}]",
+    "description": "List of cards in this set. See the {{link@card@/structures/card}} structure.",
     "introduced": "v4.0.0"
   },
   "code": {
@@ -80,7 +80,7 @@
   "keyruneCode": {
     "type": "string",
     "example": "\"KTK\"",
-    "description": "The matching keyrune code for {{external:Keyrune$https://andrewgioia.github.io/Keyrune/}} image icons.",
+    "description": "The matching keyrune code for {{link@Keyrune@https://andrewgioia.github.io/Keyrune/}} image icons.",
     "introduced": "v4.3.2"
   },
   "mcmName": {
@@ -97,8 +97,8 @@
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{link:version}}",
-    "description": "See the {{link:version}} structure.",
+    "example": "{{link@version@/files/version}}",
+    "description": "See the {{link@version@/files/version}} structure.",
     "introduced": "v4.0.0"
   },
   "mtgoCode": {
@@ -122,7 +122,7 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2019-01-25\"",
-    "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set.",
+    "description": "Release date in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set.",
     "introduced": "v4.0.0"
   },
   "tcgplayerGroupId": {
@@ -133,8 +133,8 @@
   },
   "tokens": {
     "type": "array(object)",
-    "example": "{{link:token}}",
-    "description": "Tokens available to the set. See the {{link:token}} structure.",
+    "example": "{{link@token@/structures/token}}",
+    "description": "Tokens available to the set. See the {{link@token@/structures/token}} structure.",
     "introduced": "v4.0.0"
   },
   "totalSetSize": {
@@ -145,14 +145,14 @@
   },
   "translations": {
     "type": "object(string: string)",
-    "example": "{{link:translations}}",
-    "description": "Translated set name by language. See the {{link:translations}} structure.",
+    "example": "{{link@translations@/structures/translations}}",
+    "description": "Translated set name by language. See the {{link@translations@/structures/translations}} structure.",
     "introduced": "v4.3.2"
   },
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "As of 03-28-2019, the possible values are {{code:archenemy}}, {{code:box}}, {{code:core}}, {{code:commander}}, {{code:draft_innovation}}, {{code:duel_deck}}, {{code:expansion}}, {{code:from_the_vault}}, {{code:funny}}, {{code:masters}}, {{code:masterpiece}}, {{code:memorabilia}}, {{code:spellbook}}, {{code:planechase}}, {{code:premium_deck}}, {{code:promo}}, {{code:starter}}, {{code:token}}, {{code:treasure_chest}}, or {{code:vanguard}}",
+    "description": "As of 03-28-2019, the possible values are {{code@archenemy}}, {{code@box}}, {{code@core}}, {{code@commander}}, {{code@draft_innovation}}, {{code@duel_deck}}, {{code@expansion}}, {{code@from_the_vault}}, {{code@funny}}, {{code@masters}}, {{code@masterpiece}}, {{code@memorabilia}}, {{code@spellbook}}, {{code@planechase}}, {{code@premium_deck}}, {{code@promo}}, {{code@starter}}, {{code@token}}, {{code@treasure_chest}}, or {{code@vanguard}}",
     "attributes": [
       "stale"
     ],

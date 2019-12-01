@@ -1,20 +1,20 @@
 {
   "date": {
     "type": "string",
-    "example": "\"{{buildDate:2019-04-28}}\"",
-    "description": "{{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} date of the MTGJSON build.",
+    "example": "\"2019-04-28\"",
+    "description": "{{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} date of the MTGJSON build.",
     "introduced": "v4.0.0"
   },
   "pricesDate": {
     "type": "string",
-    "example": "\"{{buildPricesDate:2019-04-28}}\"",
-    "description": "{{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} date of latest card prices.",
+    "example": "\"2019-04-28\"",
+    "description": "{{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} date of latest card prices.",
     "introduced": "v4.4.0"
   },
   "version": {
     "type": "string",
-    "example": "\"{{buildVersion:x.y.z}}\"",
-    "description": "{{external:SemVer$https://semver.org/}} specification of the MTGJSON build.",
+    "example": "\"major.minor.patch-yyyymmdd\"",
+    "description": "{{link@SemVer@https://semver.org/}} specification of the MTGJSON build.",
     "introduced": "v4.0.0"
   }
 }

@@ -8,7 +8,7 @@
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
-    "description": "Color of the border. Can be {{code:black}}, {{code:borderless}}, {{code:gold}}, {{code:silver}}, or {{code:white}}.",
+    "description": "Color of the border. Can be {{code@black}}, {{code@borderless}}, {{code@gold}}, {{code@silver}}, or {{code@white}}.",
     "introduced": "v4.0.0"
   },
   "colorIdentity": {
@@ -60,7 +60,7 @@
   "duelDeck": {
     "type": "string",
     "example": "\"a\"",
-    "description": "If the card is in a duel deck product, can be {{code:a}}(left) or {{code:b}}(right).",
+    "description": "If the card is in a duel deck product, can be {{code@a}}(left) or {{code@b}}(right).",
     "attributes": [
       "optional"
     ],
@@ -69,7 +69,7 @@
   "edhrecRank": {
     "type": "integer",
     "example": "1000",
-    "description": "Card rank on {{external:EDHRec$https://www.edhrec.com}}.",
+    "description": "Card rank on {{link@EDHRec@https://www.edhrec.com}}.",
     "attributes": [
       "atomic",
       "optional"
@@ -96,8 +96,8 @@
   },
   "foreignData": {
     "type": "array(object)",
-    "example": "{{link:foreign-data}}",
-    "description": "See the {{link:foreign-data}} structure.",
+    "example": "{{link@foreign-data@/structures/foreign-data}}",
+    "description": "See the {{link@foreign-data@/structures/foreign-data}} structure.",
     "attributes": [
       "atomic"
     ],
@@ -106,7 +106,7 @@
   "frameEffect": {
     "type": "string",
     "example": "\"legendary\"",
-    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}.",
+    "description": "Values can be {{code@colorshifted}}, {{code@compasslanddfc}}, {{code@devoid}}, {{code@draft}}, {{code@legendary}}, {{code@miracle}}, {{code@mooneldrazidfc}}, {{code@nyxtouched}}, {{code@originpwdfc}}, {{code@sunmoondfc}}, or {{code@tombstone}}.",
     "attributes": [
       "deprecated"
     ],
@@ -115,13 +115,13 @@
   "frameEffects": {
     "type": "array[string]",
     "example": "\"legendary\"",
-    "description": "Values can be {{code:colorshifted}}, {{code:compasslanddfc}}, {{code:devoid}}, {{code:draft}}, {{code:legendary}}, {{code:miracle}}, {{code:mooneldrazidfc}}, {{code:nyxtouched}}, {{code:originpwdfc}}, {{code:sunmoondfc}}, or {{code:tombstone}}.",
+    "description": "Values can be {{code@colorshifted}}, {{code@compasslanddfc}}, {{code@devoid}}, {{code@draft}}, {{code@legendary}}, {{code@miracle}}, {{code@mooneldrazidfc}}, {{code@nyxtouched}}, {{code@originpwdfc}}, {{code@sunmoondfc}}, or {{code@tombstone}}.",
     "introduced": "v4.6.0"
   },
   "frameVersion": {
     "type": "string",
     "example": "\"2015\"",
-    "description": "Version of the card frame style. Can be {{code:1993}}, {{code:1997}}, {{code:2003}}, {{code:2015}}, or {{code:future}}.",
+    "description": "Version of the card frame style. Can be {{code@1993}}, {{code@1997}}, {{code@2003}}, {{code@2015}}, or {{code@future}}.",
     "introduced": "v4.0.0"
   },
   "hand": {
@@ -293,7 +293,7 @@
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code:normal}}, {{code:split}}, {{code:flip}}, {{code:transform}}, {{code:meld}}, {{code:leveler}}, {{code:saga}}, {{code:planar}}, {{code:scheme}}, {{code:vanguard}}, {{code:token}}, {{code:double_faced_token}}, {{code:emblem}}, {{code:augment}}, {{code:aftermath}}, or {{code:host}}.",
+    "description": "Type of card layout. Can be {{code@normal}}, {{code@split}}, {{code@flip}}, {{code@transform}}, {{code@meld}}, {{code@leveler}}, {{code@saga}}, {{code@planar}}, {{code@scheme}}, {{code@vanguard}}, {{code@token}}, {{code@double_faced_token}}, {{code@emblem}}, {{code@augment}}, {{code@aftermath}}, or {{code@host}}.",
     "attributes": [
       "atomic"
     ],
@@ -301,8 +301,8 @@
   },
   "leadershipSkills": {
   	"type": "array(string: string)",
-  	"example": "{{link:leadershipSkills}}",
-  	"description": "See the {{link:leadershipSkills}} structure. Will be included only if one value is true.",
+  	"example": "{{link@leadershipSkills@/structures/leadership-skills}}",
+  	"description": "See the {{link@leadershipSkills@/structures/leadership-skills}} structure. Will be included only if one value is true.",
   	"attributes": [
   	  "atomic",
   	  "optional"
@@ -311,8 +311,8 @@
   },
   "legalities": {
     "type": "object",
-    "example": "{{link:legalities}}",
-    "description": "See the {{link:legalities}} structure.",
+    "example": "{{link@legalities@/structures/legalities}}",
+    "description": "See the {{link@legalities@/structures/legalities}} structure.",
     "attributes": [
       "atomic"
     ],
@@ -404,9 +404,10 @@
   "name": {
     "type": "string",
     "example": "\"Angel of Grace\"",
-    "description": "Names of each face on the card. Meld cards are listed in the order of {{code:CardA}}, {{code:Meld}}, {{code:CardB}}.",
+    "description": "Names of each face on the card. Meld cards are listed in the order of {{code@CardA}}, {{code@Meld}}, {{code@CardB}}.",
     "attributes": [
-      "atomic"
+      "atomic",
+      "optional"
     ],
     "introduced": "v4.0.0"
   },
@@ -458,8 +459,8 @@
   },
   "prices": {
     "type": "object(string: object)",
-    "example": "{{link:prices}}",
-    "description": "See the {{link:prices}} structure.",
+    "example": "{{link@prices@/structures/prices}}",
+    "description": "See the {{link@prices@/structures/prices}} structure.",
     "introduced": "v4.4.0"
   },
   "printings": {
@@ -473,8 +474,8 @@
   },
   "purchaseUrls": {
     "type": "array(string: string)",
-    "example": "{{link:purchase-urls}}",
-    "description": "See the {{link:purchase-urls}} structure.",
+    "example": "{{link@purchase-urls@/structures/purchase-urls}}",
+    "description": "See the {{link@purchase-urls@/structures/purchase-urls}} structure.",
     "attributes": [
       "atomic"
     ],
@@ -483,7 +484,7 @@
   "rarity": {
     "type": "string",
     "example": "\"mythic\"",
-    "description": "Rarity. Can be {{code:basic}}, {{code:common}}, {{code:uncommon}}, {{code:rare}}, or {{code:mythic}}",
+    "description": "Rarity. Can be {{code@basic}}, {{code@common}}, {{code@uncommon}}, {{code@rare}}, or {{code@mythic}}",
     "introduced": "v4.0.0"
   },
   "reverseRelated": {
@@ -497,8 +498,8 @@
   },
   "rulings": {
     "type": "array(object)",
-    "example": "{{link:rulings}}",
-    "description": "See the {{link:rulings}} structure.",
+    "example": "{{link@rulings@/structures/rulings}}",
+    "description": "See the {{link@rulings@/structures/rulings}} structure.",
     "attributes": [
       "atomic"
     ],
@@ -531,7 +532,7 @@
   "side": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code:flip}}, {{code:split}}, {{code:transform}} cards. Can be {{code:a}}, {{code:b}}, or {{code:c}}.",
+    "description": "Identifier of the side. Used on cards with multiple faces, such as {{code@flip}}, {{code@split}}, {{code@transform}} cards. Can be {{code@a}}, {{code@b}}, or {{code@c}}.",
     "attributes": [
       "atomic",
       "optional"

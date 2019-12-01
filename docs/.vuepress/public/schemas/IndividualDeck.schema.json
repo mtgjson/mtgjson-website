@@ -7,14 +7,14 @@
   },
   "mainBoard": {
     "type": "array(object)",
-    "example": "{{link:card}}",
-    "description": "The cards in the main-board. See the {{link:card}} structure.",
+    "example": "{{link@card@/structures/card}}",
+    "description": "The cards in the main-board. See the {{link@card@/structures/card}} structure.",
     "introduced": "v4.3.0"
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{link:version}}",
-    "description": "See the {{link:version}} structure.",
+    "example": "{{link@version@/files/version}}",
+    "description": "See the {{link@version@/files/version}} structure.",
     "introduced": "v4.3.0"
   },
   "name": {
@@ -25,14 +25,14 @@
   },
   "sideBoard": {
     "type": "array(object)",
-    "example": "{{link:card}}",
-    "description": "The cards in the side-board. See the {{link:card}} structure.",
+    "example": "{{link@card@/structures/card}}",
+    "description": "The cards in the side-board. See the {{link@card@/structures/card}} structure.",
     "introduced": "v4.3.0"
   },
   "releaseDate": {
     "type": "string",
     "example": "\"2018-07-13\"",
-    "description": "Release date in {{external:ISO-8601$https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set. Returns {{code:null}} if the set was not formally released as a product.",
+    "description": "Release date in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set. Returns {{code@null}} if the set was not formally released as a product.",
     "attributes": [
       "nullable"
     ],
