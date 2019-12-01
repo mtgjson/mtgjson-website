@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card data structure for MTGJSON.",
+      "content": "Card data structure documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, card, cards",
+      "content": "mtg, magic: the gathering, mtgjson, json, card",
     }
   ],
   "feed": {

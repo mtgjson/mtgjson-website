@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "AllPrices compiled output schema for MTGJSON.",
+      "content": "AllPrices compiled output documentation.",
     },
     {
       "name": "keywords",

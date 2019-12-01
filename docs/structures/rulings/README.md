@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "rulings data structure for MTGJSON.",
+      "content": "Rulings data structure for MTGJSON.",
     },
     {
       "name": "keywords",

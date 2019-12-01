@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "set data structure for MTGJSON.",
+      "content": "Set data structure for MTGJSON.",
     },
     {
       "name": "keywords",

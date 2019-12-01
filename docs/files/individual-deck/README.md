@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "An individual deck compiled output schema for MTGJSON.",
+      "content": "Individual decks compiled output documentation.",
     },
     {
       "name": "keywords",
@@ -22,8 +22,7 @@
 
 MTGJSON outputs single pre-constructed decks and makes them available for download by file name.
 
-> Data type: `anonymous object(string: any)`   
-> Property type: `string` 
+> Parent property type: `anonymous object(string: any)`    
 
 ### Data Structure
 

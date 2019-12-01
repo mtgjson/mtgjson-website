@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Modern cards compiled output schema for MTGJSON.",
+      "content": "ModernCards compiled output documentation.",
     },
     {
       "name": "keywords",

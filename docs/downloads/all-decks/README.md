@@ -4,7 +4,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Pre-constructed decks MTGJSON outputs.",
+      "content": "All pre-constructed deck outputs from MTGJSON.",
     },
     {
       "name": "keywords",

@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "files data structure for MTGJSON.",
+      "content": "Files data structure documentation.",
     },
     {
       "name": "keywords",

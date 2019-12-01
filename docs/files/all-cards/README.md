@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "AllCards compiled output schema for MTGJSON.",
+      "content": "AllCards compiled output documentation.",
     },
     {
       "name": "keywords",

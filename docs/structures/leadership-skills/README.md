@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "leadershipSkills data structure for MTGJSON.",
+      "content": "LeadershipSkills data structure documentation.",
     },
     {
       "name": "keywords",
@@ -20,7 +20,7 @@
 
 # Leadership Skills (Play Formats)
 
-List of play formats that a speific card is legal to be your commander.
+List of play formats that a specific card is legal to be your commander.
 
 > Parent structure: [card](../card)  
 > Parent property: `leadershipSkills`  

@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Standard printings compiled output schema for MTGJSON.",
+      "content": "StandardPrintings compiled output documentation.",
     },
     {
       "name": "keywords",

@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "CompiledList compiled output schema for MTGJSON.",
+      "content": "CompiledList compiled output documentation.",
     },
     {
       "name": "keywords",

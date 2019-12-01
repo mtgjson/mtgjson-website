@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "DeckLists compiled output schema for MTGJSON.",
+      "content": "DeckLists compiled output documentation.",
     },
     {
       "name": "keywords",

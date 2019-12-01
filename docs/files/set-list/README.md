@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "SetList compiled output schema for MTGJSON.",
+      "content": "SetList compiled output documentation.",
     },
     {
       "name": "keywords",

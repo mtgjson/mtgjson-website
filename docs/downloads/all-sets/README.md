@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Downloads outputted by MTGJSON as an individual set.",
+      "content": "All individual set downloads outputs from MTGJSON.",
     },
     {
       "name": "keywords",

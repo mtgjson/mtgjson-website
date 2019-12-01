@@ -3,7 +3,7 @@
   'meta': [
     {
       'name': 'description',
-      'content': 'MTGJSON branding assets.'
+      'content': 'MTGJSON brand assets.'
     },
     {
       'name': 'keywords',

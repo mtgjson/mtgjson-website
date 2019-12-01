@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card data structure for MTGJSON.",
+      "content": "Decks data structure documentation.",
     },
     {
       "name": "keywords",

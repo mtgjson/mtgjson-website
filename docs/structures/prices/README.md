@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "prices data structure for MTGJSON.",
+      "content": "Prices data structure documentation.",
     },
     {
       "name": "keywords",
