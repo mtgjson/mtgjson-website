@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Compiled",
+  "title": "All Files",
   "meta": [
     {
       "name": "description",
@@ -8,7 +8,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, downloads, download",
+      "content": "mtg, magic: the gathering, mtgjson, json, downloads, download, files, all files",
     }
   ],
   "feed": {
@@ -17,10 +17,8 @@
 }
 ---
 
-# Compiled Files
+# All Files
 
-Download MTGJSON outputs.
-
-### Download Files
+All outputted files to download provided by MTGJSON.
 
 <DownloadCompiled/>

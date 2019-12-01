@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Individual Decks",
+  "title": "All Decks",
   "meta": [
     {
       "name": "description",
@@ -8,7 +8,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, downloads, decks, pre-constructed decks",
+      "content": "mtg, magic: the gathering, mtgjson, json, downloads, all decks, pre-constructed decks",
     }
   ],
   "feed": {
@@ -17,10 +17,8 @@
 }
 ---
 
-# Individual Decks
+# All Decks
 
-Download pre-constructed decks MTGJSON outputs.
-
-### Download Decks
+All pre-constructed deck files to download provided by MTGJSON.
 
 <DownloadDecks/>

@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Individual Sets",
+  "title": "All Sets",
   "download": "SetList",
   "meta": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, downloads, download set, individual sets, sets",
+      "content": "mtg, magic: the gathering, mtgjson, json, downloads, download set, individual sets, all sets",
     }
   ],
   "feed": {
@@ -18,10 +18,8 @@
 }
 ---
 
-# Individual Sets
+# All Sets
 
-Download MTGJSON outputs as individual sets with their associated data.
-
-### Download Sets
+All individual set files to download provided by MTGJSON.
 
 <DownloadSets/>
