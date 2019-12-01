@@ -29,9 +29,9 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
   - `pricesDate` When card prices were updated on cards. (Prices data is updated)
   - `version` What version all files are on. (Updates with `pricesDate`.)
 
-<strong>Builds for JSON files run weekly at 4PM EST (typically on Sundays) while rebuilds for new prices are run daily.</strong>
+<strong>Builds for JSON files run weekly at 4PM EST (typically on Sundays) while rebuilds for new prices are run daily around the same time.</strong>
 
-In the [version](/files/version.json) file and `meta` in associated files, when the files are rebuilt to update card prices, the `pricesDate` value will update and that date will be appended to the current `version`, for example, `v4.6.0+2019-11-29`. Rebuilds that update card prices are fully backwards compatible with its primary release.
+In the [version](/files/version.json) file and `meta` in associated files, when the files are rebuilt to update card prices, the `pricesDate` value will update and that date will be appended to the current `version`, for example, `v4.6.0+20191129`. Rebuilds that update card prices are fully backwards compatible with its primary release.
 
 ## The Team
 
