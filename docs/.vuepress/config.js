@@ -119,7 +119,11 @@ module.exports = {
       'feed',
       {
         canonical_base: 'https://mtgjson.com',
-        description_sources: 'excerpt',
+        description_sources: [
+          'frontmatter',
+          'description',
+          'excerpt'
+        ],
         // Max is required
         count: 100,
         feeds: {
@@ -127,10 +131,10 @@ module.exports = {
             file_name: 'atom.xml',
           },
           rss2: {
-            enable: false,
+            file_name: 'site.rss',
           },
           json1: {
-            enable: false,
+            file_name: 'site.json',
           },
         },
       },
