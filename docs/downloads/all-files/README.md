@@ -4,7 +4,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Downloads outputted by MTGJSON as complete compilations.",
+      "content": "All compiled file download outputs by MTGJSON.",
     },
     {
       "name": "keywords",

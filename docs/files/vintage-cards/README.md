@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Vintage cards compiled output schema for MTGJSON.",
+      "content": "VintageCards compiled output documentation.",
     },
     {
       "name": "keywords",

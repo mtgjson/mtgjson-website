@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Legacy cards compiled output schema for MTGJSON.",
+      "content": "LegacyCards compiled output documentation.",
     },
     {
       "name": "keywords",

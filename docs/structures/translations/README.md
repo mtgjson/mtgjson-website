@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "translations data structure for MTGJSON.",
+      "content": "Translations data structure documentation.",
     },
     {
       "name": "keywords",

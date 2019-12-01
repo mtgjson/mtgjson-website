@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Pioneer printings compiled output schema for MTGJSON.",
+      "content": "PioneerPrintings compiled output documentation.",
     },
     {
       "name": "keywords",

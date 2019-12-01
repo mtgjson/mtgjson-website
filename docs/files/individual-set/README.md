@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "An individual set data structure for MTGJSON.",
+      "content": "Individual set compiled output documentation.",
     },
     {
       "name": "keywords",
@@ -22,7 +22,7 @@
 
 The individual set structure describes the properties and values of a single set.
  
-> Parent property type: `object(string: any)`  
+> Parent property type: `anonymous object(string: any)`  
 
 ### Data Structure
 

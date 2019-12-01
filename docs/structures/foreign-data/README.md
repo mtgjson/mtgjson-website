@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "foreignData data structure for MTGJSON.",
+      "content": "ForeignData data structure documentation.",
     },
     {
       "name": "keywords",

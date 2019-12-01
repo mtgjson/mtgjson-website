@@ -3,10 +3,6 @@
   "title": "Portable formats for Magic: The Gathering card data",
   "meta": [
     {
-      "name": "description",
-      "content": "Magic: The Gathering card data in JSON.",
-    },
-    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json",
     }

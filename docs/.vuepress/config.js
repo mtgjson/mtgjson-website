@@ -6,8 +6,8 @@ module.exports = {
   host: '0.0.0.0',
   port: '3001',
   // SEO
-  title: 'MTGJSON',
-  description: 'Magic: The Gathering card data in JSON.',
+  title: 'MTGJSON | Portable formats for Magic: The Gathering card data',
+  description: 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.',
   // Google Analytics
   ga: 'UA-131358443-1',
   // Head Tags

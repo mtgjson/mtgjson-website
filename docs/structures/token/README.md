@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "token data structure for MTGJSON.",
+      "content": "Token data structure documentation.",
     },
     {
       "name": "keywords",

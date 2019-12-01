@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Pioneer cards compiled output schema for MTGJSON.",
+      "content": "PioneerCards compiled output documentation.",
     },
     {
       "name": "keywords",

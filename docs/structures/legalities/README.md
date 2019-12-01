@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "legalities data structure for MTGJSON.",
+      "content": "Legalities data structure documentation.",
     },
     {
       "name": "keywords",

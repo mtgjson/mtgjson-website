@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "version data structure for MTGJSON.",
+      "content": "Version compiled output documentation.",
     },
     {
       "name": "keywords",
