@@ -18,6 +18,35 @@
 
 # Changelog
 
+## 4.6.1
+Release Date: 2019-12-04
+
+### Cards
+#### Added
+- `otherFaceIds` which goes with `names` to point end user towards the correct MTGJSON card objects.
+
+### Sets
+#### Added
+- Mystery Booster (`MB1`)
+- Playtest Cards (`CMB1`)
+- Historic Anthology 1 (`HA1`)
+- Secret Lair (`SLD`)
+- MagicFest 2020 Promo (`PF20`)
+- Judge 2020 Promos (`J20`)
+    - To be retroactively added on 2019-12-08
+
+#### Fixed
+- `translations` seemed to disappear by mistake. Fixed.
+
+### Other
+### Added
+- Daily prices for paper cards added to `AllPrices` from TCGPlayer.
+
+### Changed
+- Daily prices can operate in a more self-sustaining way.
+- `version` gets updated with price builds now.
+
+
 ## 4.6.0
 Release Date: 2019-10-28
 
