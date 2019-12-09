@@ -108,7 +108,7 @@
     "example": "\"legendary\"",
     "description": "Values can be {{code@colorshifted}}, {{code@compasslanddfc}}, {{code@devoid}}, {{code@draft}}, {{code@legendary}}, {{code@miracle}}, {{code@mooneldrazidfc}}, {{code@nyxtouched}}, {{code@originpwdfc}}, {{code@sunmoondfc}}, or {{code@tombstone}}.",
     "attributes": [
-      "deprecated"
+      "deprecated-v4.7.0"
     ],
     "introduced": "v4.2.0"
   },
@@ -150,7 +150,7 @@
     "attributes": [
       "atomic",
       "optional",
-      "deprecated"
+      "deprecated-future"
     ],
     "introduced": "v4.5.1"
   },

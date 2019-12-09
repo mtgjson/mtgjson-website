@@ -119,7 +119,7 @@ Release Date: 2019-09-23
 #### Added
 - `leadershipSkills` which identifies what format a card is a legal commander in.
 - `hasNoDeckLimit` to indicate a card has a unique deck restriction.
-    - `Seven Dwarves` was revealed the day after this feature went live... We'll be working on a change, so this field will come right away with a deprecation notice, with removal slated for `4.6.0`.
+    - `Seven Dwarves` was revealed the day after this feature went live... We'll be working on a change, so this field will come right away with a deprecation notice, with removal slated for a future time (updated for clarity 2019-12-08).
 - Support for `adventure` type cards.
 
 ### Sets
