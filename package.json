@@ -22,7 +22,8 @@
     "js-essentials": "0.0.6",
     "vuepress": "^1.0.3",
     "vuepress-plugin-container": "^2.0.1",
-    "vuepress-plugin-feed": "^0.1.7"
+    "vuepress-plugin-feed": "^0.1.7",
+    "vuex": "^3.1.2"
   },
   "devDependencies": {
     "@babel/core": "^7.4.5",

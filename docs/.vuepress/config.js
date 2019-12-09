@@ -1,7 +1,7 @@
+// Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-
 const [ structures, files ] = generateSidebarRoutes(['/structures/','/files/']);
-
+// SEO data
 const title = 'MTGJSON | Portable formats for Magic: The Gathering card data';
 const description = 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
@@ -45,6 +45,47 @@ module.exports = {
         rel: 'stylesheet',
         type: 'text/css',
         href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css',
+      },
+    ],
+  ],
+  enhanceAppFiles: './store.js',
+  plugins: [
+    [
+      'container',
+      {
+        type: 'tip',
+        defaultTitle: '',
+      },
+    ],
+    [
+      'container',
+      {
+        type: 'warning',
+        defaultTitle: '',
+      },
+    ],
+    [
+      'feed',
+      {
+        canonical_base: 'https://mtgjson.com',
+        description_sources: [
+          'frontmatter',
+          'description',
+          'excerpt'
+        ],
+        // Max is required
+        count: 100,
+        feeds: {
+          atom1: {
+            file_name: 'atom.xml',
+          },
+          rss2: {
+            file_name: 'site.rss',
+          },
+          json1: {
+            file_name: 'site.json',
+          },
+        },
       },
     ],
   ],
@@ -117,44 +158,4 @@ module.exports = {
       },
     ],
   },
-  plugins: [
-    [
-      'container',
-      {
-        type: 'tip',
-        defaultTitle: '',
-      },
-    ],
-    [
-      'container',
-      {
-        type: 'warning',
-        defaultTitle: '',
-      },
-    ],
-    [
-      'feed',
-      {
-        canonical_base: 'https://mtgjson.com',
-        description_sources: [
-          'frontmatter',
-          'description',
-          'excerpt'
-        ],
-        // Max is required
-        count: 100,
-        feeds: {
-          atom1: {
-            file_name: 'atom.xml',
-          },
-          rss2: {
-            file_name: 'site.rss',
-          },
-          json1: {
-            file_name: 'site.json',
-          },
-        },
-      },
-    ],
-  ],
 };

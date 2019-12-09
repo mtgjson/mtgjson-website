@@ -1,23 +1,17 @@
 <template lang="pug">
   .download-tables
     .sorting-options
-      .sort-row.search
-        strong Search By:
-        input.table-sort-select(
-          placeholder="name, code, etc..."
-          type="text"
-          v-model="searchKey"
-          @input="handleSearch")
-
       .sort-row
         strong Filter By:
-        select.table-sort-select(@change="handleFilter($event)")
+        select.table-sort-select(
+          v-model="filterKey"
+          @change="onHandleChange")
           option(value="" selected) All Sets
-          option(v-for="(type, key) in filteredGroups" :value="type") {{ $helpers.prettifyType(type) }}
+          option(v-for="(type, key) in filters" :value="type") {{ $helpers.prettifyType(type) }}
 
       .sort-row
         strong Sort By:
-        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, filtered)")
+        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, sets)")
           option(value="releaseDate:true") Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
@@ -27,7 +21,17 @@
           option(value="type") Type (Ascending)
           option(value="type:true") Type (Descending)
 
-    blockquote.download-item(v-for="(set, key) in filtered")
+      .sort-row.search
+        strong Search By:
+        input.table-sort-select(
+          placeholder="name, code, etc..."
+          type="text"
+          v-model="searchKey"
+          @input="onHandleChange")
+
+    p.no-result(v-if="sets.length === 0")
+      em {{ message }}
+    blockquote.download-item(v-else v-for="(set, key) in sets")
       .download-wrap
         .img-wrap
           div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -59,42 +63,45 @@ export default {
     return {
       defaultSets: [],
       filteredSets: [],
-      filteredGroups: [],
+      filters: [],
       filterKey: '',
       searchKey: '',
       sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
       timeout: null,
+      message: 'Loading...',
     };
   },
+  async created() {
+    if(this.$store.getters.sets.length < 1){
+      await this.$store.dispatch('UPDATE_SETS');
+    }
+
+    this.defaultSets = this.$store.getters.sets;
+    this.filteredSets = this.$helpers.sort('releaseDate:true', this.defaultSets);
+    this.filters = Array.from(new Set(this.filteredSets.map(cur => cur.type)));
+  },
   computed: {
-    filtered() {
+    sets() {
       return this.filteredSets;
     },
   },
-  mounted() {
-    this.defaultSets = this.$sets;
-    this.filteredGroups = Array.from(new Set(this.defaultSets.map(cur => cur.type)));
-    this.handleFilter(this.filterKey);
-  },
   methods: {
-    handleFilter({ currentTarget }) {
-      this.filterKey = currentTarget ? currentTarget.value : '';
-      const filtered = this.$helpers.filter(this.filterKey, this.defaultSets);
-      const sorted = this.$helpers.sort(this.sortKey, filtered);
-
-      this.filteredSets = sorted;
+    handleMessage(length = 0) {
+      this.message = `${length} results found...`;
     },
-    handleSearch() {
+    onHandleChange() {
+      // Throttle so we don't go nuts
       clearTimeout(this.timeout);
 
       this.timeout = window.setTimeout(() => {
-        const searched = this.$helpers.searchFilter(this.searchKey, this.defaultSets);
-        const filtered = this.$helpers.filter(this.filterKey, searched);
-        const sorted = this.$helpers.sort(this.sortKey, filtered);
+        const searched = this.$helpers.search(this.searchKey, this.defaultSets);
+        const sorted = this.$helpers.sort(this.sortKey, searched);
+        const filtered = this.$helpers.filter(this.filterKey, sorted);
 
-        this.filteredSets = sorted;
+        this.handleMessage(filtered.length);
+        this.filteredSets = filtered;
       }, 300);
     },
   },

@@ -1,34 +1,21 @@
 <template lang="pug">
-  div.version(v-if="version")
+  div.version
     router-link.version-number(
-      :to="`/changelog`") Build: {{ version.version }}
+      :to="`/changelog`") Build: {{ version }}
 </template>
 
 <script>
 export default {
   name: 'Version',
-  data() {
-    return {
-      defaultVersion: {
-        version: '...',
-      },
-    };
+  async created() {
+    if(Object.keys(this.$store.getters.metadata).length < 1){
+      await this.$store.dispatch('UPDATE_METADATA');
+    }
   },
   computed: {
     version() {
-      return this.defaultVersion;
+      return this.$store.getters.metadata.version;
     },
-  },
-  mounted() {
-    fetch('https://mtgjson.com/files/version.json')
-      .then(response => response.json())
-      .then(response => {
-        response.version = 'v' + response.version;
-        this.defaultVersion = response;
-      })
-      .catch(err => {
-        console.error(err);
-      });
   },
 };
 </script>

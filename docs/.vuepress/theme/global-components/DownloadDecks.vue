@@ -1,14 +1,6 @@
 <template lang="pug">
-  .download-tables(v-if="filtered")
+  .download-tables
     .sorting-options
-      .sort-row.search
-        strong Search By:
-        input.table-sort-select(
-          placeholder="name, code, etc..."
-          type="text"
-          v-model="searchKey"
-          @input="handleSearch")
-
       .sort-row
         strong Sort By:
         select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, filtered)")
@@ -19,7 +11,17 @@
           option(value="name") Name (Ascending)
           option(value="name:true") Name (Descending)
 
-    blockquote.download-item(v-for="(deck, key) in filtered")
+      .sort-row.search
+        strong Search By:
+        input.table-sort-select(
+          placeholder="name, code, etc..."
+          type="text"
+          v-model="searchKey"
+          @input="onHandleChange")
+
+    p.no-result(v-if="decks.length === 0")
+      em {{ message }}
+    blockquote.download-item(v-for="(deck, key) in decks")
       .download-wrap
         .img-wrap
           div(:class="`ss ss-${deck.code.toLowerCase()}`")
@@ -51,29 +53,39 @@ export default {
       sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       deckDirectory: 'json/decks',
+      message: 'Loading...',
     };
   },
+  async created() {
+    if(this.$store.getters.decks.length < 1){
+      await this.$store.dispatch('UPDATE_DECKS');
+    }
+
+    this.defaultDecks = this.$store.getters.decks;
+    this.filteredDecks = this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
+  },
   computed: {
-    filtered() {
+    decks() {
       return this.filteredDecks;
     },
   },
-  mounted() {
-    this.defaultDecks = this.$decks;
-    this.filteredDecks = this.$decks;
-  },
   methods: {
-    handleSearch() {
+    handleMessage(length = 0) {
+      this.message = `${length} results found...`;
+    },
+    onHandleChange() {
+      // Throttle so we don't go nuts
       clearTimeout(this.timeout);
 
       this.timeout = window.setTimeout(() => {
-        const searched = this.$helpers.searchFilter(this.searchKey, this.defaultDecks);
+        const searched = this.$helpers.search(this.searchKey, this.defaultDecks);
         const sorted = this.$helpers.sort(this.sortKey, searched);
 
+        this.handleMessage(sorted.length);
         this.filteredDecks = sorted;
       }, 300);
     }
-  }
+  },
 };
 </script>
 
