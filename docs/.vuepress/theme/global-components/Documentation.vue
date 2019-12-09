@@ -127,7 +127,7 @@ export default {
           const field = schema[name];
 
           if (field.attributes) {
-            attributes = attributes.concat(field.attributes);
+            attributes = attributes.concat(field.attributes.map(attr => attr.split('-')[0]));
           }
         }
       }
