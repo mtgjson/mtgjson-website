@@ -73,6 +73,11 @@ export default {
       message: 'Loading...',
     };
   },
+  computed: {
+    sets() {
+      return this.filteredSets;
+    },
+  },
   async created() {
     if(this.$store.getters.sets.length < 1){
       await this.$store.dispatch('UPDATE_SETS');
@@ -81,11 +86,6 @@ export default {
     this.defaultSets = this.$store.getters.sets;
     this.filteredSets = this.$helpers.sort('releaseDate:true', this.defaultSets);
     this.filters = Array.from(new Set(this.filteredSets.map(cur => cur.type)));
-  },
-  computed: {
-    sets() {
-      return this.filteredSets;
-    },
   },
   methods: {
     handleMessage(length = 0) {

@@ -56,6 +56,11 @@ export default {
       message: 'Loading...',
     };
   },
+  computed: {
+    decks() {
+      return this.filteredDecks;
+    },
+  },
   async created() {
     if(this.$store.getters.decks.length < 1){
       await this.$store.dispatch('UPDATE_DECKS');
@@ -63,11 +68,6 @@ export default {
 
     this.defaultDecks = this.$store.getters.decks;
     this.filteredDecks = this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
-  },
-  computed: {
-    decks() {
-      return this.filteredDecks;
-    },
   },
   methods: {
     handleMessage(length = 0) {

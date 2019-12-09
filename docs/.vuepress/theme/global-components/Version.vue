@@ -7,15 +7,15 @@
 <script>
 export default {
   name: 'Version',
-  async created() {
-    if(Object.keys(this.$store.getters.metadata).length < 1){
-      await this.$store.dispatch('UPDATE_METADATA');
-    }
-  },
   computed: {
     version() {
       return this.$store.getters.metadata.version;
     },
+  },
+  async created() {
+    if(Object.keys(this.$store.getters.metadata).length < 1){
+      await this.$store.dispatch('UPDATE_METADATA');
+    }
   },
 };
 </script>
