@@ -20,7 +20,7 @@ export default {
     },
   },
   mounted() {
-    fetch('https://mtgjson.com/json/version.json')
+    fetch('https://mtgjson.com/files/version.json')
       .then(response => response.json())
       .then(response => {
         response.version = 'v' + response.version;
