@@ -57,6 +57,8 @@ export default {
   },
   created(){
     let files = this.files;
+    const landcycle = new this.$landcycle(files);
+    landcycle._init();
 
     // Remove quotes
     for(let file in files){
@@ -67,7 +69,8 @@ export default {
       }
     }
 
-    this.files = new this.$landcycle(files).schema;
+
+    this.files = landcycle.schema;
   }
 };
 </script>
