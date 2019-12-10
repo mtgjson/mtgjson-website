@@ -1,14 +1,11 @@
 // A little different than the source but works
 // https://jsbin.com/wowezadolo/edit?js,console
-export default (event = '', dataToSort) => {
-  const target = event.currentTarget ? event.currentTarget : event;
-  const value = target.value ? target.value : target;
-
+export default (value = '', dataToSort) => {
   if (!dataToSort) {
     throw TypeError('You must pass in a data to sort');
   }
 
-  if (!event || event.length === 0 || typeof value !== 'string') {
+  if (!value || value.length < 1 || typeof value !== 'string') {
     return dataToSort;
   }
 

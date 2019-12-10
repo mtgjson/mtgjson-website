@@ -43,16 +43,29 @@
       display: inline-block;
       min-height: 2rem;
       margin-right: 30px;
+      margin-bottom: 10px;
+
+      &.search {
+        display: block;
+      }
     }
 
     .show-sort-row {
       display: inline-block;
     }
 
-    select {
+    select,
+    input {
       display: inline;
       font-size: 16px;
       margin-left: 10px;
+      padding: 3px;
+    }
+
+    input {
+      border-radius: 5px;
+      border: 1px solid lightgray;
+      padding: 3px 8px;
     }
   }
 
@@ -156,7 +169,8 @@
           margin-bottom: 0;
         }
 
-        select {
+        select,
+        input {
           margin: 5px 0 0 0;
           display: block;
         }

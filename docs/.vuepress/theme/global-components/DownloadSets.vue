@@ -2,9 +2,17 @@
   .download-tables
     .sorting-options
       .sort-row
+        strong Filter By:
+        select.table-sort-select(
+          v-model="filterKey"
+          @change="onHandleChange")
+          option(value="" selected) All Sets
+          option(v-for="(type, key) in filters" :value="type") {{ $helpers.prettifyType(type) }}
+
+      .sort-row
         strong Sort By:
-        select.table-sort-select(@change="$helpers.sort($event, filtered)")
-          option(value="releaseDate:true" selected) Release Date (Newest)
+        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, sets)")
+          option(value="releaseDate:true") Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
           option(value="code:true") Code (Descending)
@@ -13,13 +21,17 @@
           option(value="type") Type (Ascending)
           option(value="type:true") Type (Descending)
 
-      .sort-row
-        strong Filter By:
-        select.table-sort-select(@change="setFilter($event)")
-          option(value="" selected) All Sets
-          option(v-for="(type, key) in filteredGroups" :value="type") {{ $helpers.prettifyType(type) }}
+      .sort-row.search
+        strong Search By:
+        input.table-sort-select(
+          placeholder="name, code, etc..."
+          type="text"
+          v-model="searchKey"
+          @input="onHandleChange")
 
-    blockquote.download-item(v-for="(set, key) in filtered")
+    p.no-result(v-if="sets.length === 0")
+      em {{ message }}
+    blockquote.download-item(v-else v-for="(set, key) in sets")
       .download-wrap
         .img-wrap
           div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -31,7 +43,8 @@
             li
               small Set Code:&nbsp;{{ set.code }}
             li
-              small Type:&nbsp;{{ set.type }}
+              small Type:&nbsp;
+                span {{ set.type.replace('_', ' ') }}
             li
               small Release Date:&nbsp;{{ set.releaseDate }}
         ol.dl-wrap
@@ -46,32 +59,50 @@
 
 <script>
 export default {
-  name: 'SetsDownloads',
+  name: 'DownloadSets',
   data() {
     return {
-      defaultSets: [],
       filteredSets: [],
-      filteredGroups: [],
+      filters: [],
       filterKey: '',
+      searchKey: '',
+      sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
       downloadDirectory: 'json',
+      timeout: null,
+      message: 'Loading...',
     };
   },
   computed: {
-    filtered() {
+    sets() {
       return this.filteredSets;
-    }
+    },
   },
-  mounted() {
-    this.defaultSets = this.$sets;
-    this.filteredGroups = Array.from(new Set(this.defaultSets.map(cur => cur.type)));
-    this.setFilter(this.filterKey);
+  async created() {
+    if(this.$store.getters.sets.length < 1){
+      await this.$store.dispatch('UPDATE_SETS');
+    }
+
+    this.filteredSets = this.$helpers.sort('releaseDate:true', this.$store.getters.sets);
+    this.filters = Array.from(new Set(this.filteredSets.map(cur => cur.type)));
   },
   methods: {
-    setFilter({currentTarget}) {
-      this.filterKey = currentTarget ? currentTarget.value : '';
-      this.filteredSets = this.$helpers.filter(this.filterKey, this.defaultSets);
-    }
+    handleMessage(length = 0) {
+      this.message = `${length} results found...`;
+    },
+    onHandleChange() {
+      // Throttle so we don't go nuts
+      clearTimeout(this.timeout);
+
+      this.timeout = window.setTimeout(() => {
+        const searched = this.$helpers.search(this.searchKey, this.$store.getters.sets);
+        const sorted = this.$helpers.sort(this.sortKey, searched);
+        const filtered = this.$helpers.filter(this.filterKey, sorted);
+
+        this.handleMessage(filtered.length);
+        this.filteredSets = filtered;
+      }, this.$store.getters.throttleSpeed);
+    },
   },
 };
 </script>

@@ -1,50 +1,25 @@
-import fetch from 'node-fetch';
-import { jsonMustaches, isFutureDate } from 'js-essentials';
+import Vuex from 'vuex';
+import store from './store';
 
+import { jsonMustaches, isFutureDate } from 'js-essentials';
 import prettifyType from './scripts/prettifyType';
 import filter from './scripts/filter';
+import search from './scripts/search';
 import sort from './scripts/sort';
 
 const helpers = {
   prettifyType,
   isFutureDate,
+  search,
   filter,
   sort,
 };
 
-export default async ({ Vue }) => {
+export default ({ Vue }) => {
   Vue.prototype.$env = 'https://www.mtgjson.com';
   Vue.prototype.$landcycle = jsonMustaches;
   Vue.prototype.$helpers = helpers;
-  // Set these to default in case we fail for some reason
-  Vue.prototype.$metadata = {};
-  Vue.prototype.$decks = {};
-  Vue.prototype.$sets = [];
 
-  fetch('https://mtgjson.com/json/version.json')
-    .then(response => response.json())
-    .then(response => {
-      Vue.prototype.$metadata = response;
-    })
-    .catch(err => {
-      throw Error(err);
-    });
-
-  fetch('https://mtgjson.com/json/DeckLists.json')
-    .then(response => response.json())
-    .then(response => {
-      Vue.prototype.$decks = helpers.sort('releaseDate:true', response.decks);
-    })
-    .catch(err => {
-      throw Error(err);
-    });
-
-  fetch('https://mtgjson.com/json/SetList.json')
-    .then(response => response.json())
-    .then(response => {
-      Vue.prototype.$sets = helpers.sort('releaseDate:true', response);
-    })
-    .catch(err => {
-      throw Error(err);
-    });
+  Vue.use(Vuex);
+  Vue.mixin({ store: store });
 };
