@@ -43,7 +43,8 @@
             li
               small Set Code:&nbsp;{{ set.code }}
             li
-              small Type:&nbsp;{{ set.type }}
+              small Type:&nbsp;
+                span {{ set.type.replace('_', ' ') }}
             li
               small Release Date:&nbsp;{{ set.releaseDate }}
         ol.dl-wrap
@@ -58,10 +59,9 @@
 
 <script>
 export default {
-  name: 'SetsDownloads',
+  name: 'DownloadSets',
   data() {
     return {
-      defaultSets: [],
       filteredSets: [],
       filters: [],
       filterKey: '',
@@ -83,8 +83,7 @@ export default {
       await this.$store.dispatch('UPDATE_SETS');
     }
 
-    this.defaultSets = this.$store.getters.sets;
-    this.filteredSets = this.$helpers.sort('releaseDate:true', this.defaultSets);
+    this.filteredSets = this.$helpers.sort('releaseDate:true', this.$store.getters.sets);
     this.filters = Array.from(new Set(this.filteredSets.map(cur => cur.type)));
   },
   methods: {
@@ -96,13 +95,13 @@ export default {
       clearTimeout(this.timeout);
 
       this.timeout = window.setTimeout(() => {
-        const searched = this.$helpers.search(this.searchKey, this.defaultSets);
+        const searched = this.$helpers.search(this.searchKey, this.$store.getters.sets);
         const sorted = this.$helpers.sort(this.sortKey, searched);
         const filtered = this.$helpers.filter(this.filterKey, sorted);
 
         this.handleMessage(filtered.length);
         this.filteredSets = filtered;
-      }, 300);
+      }, this.$store.getters.throttleSpeed);
     },
   },
 };

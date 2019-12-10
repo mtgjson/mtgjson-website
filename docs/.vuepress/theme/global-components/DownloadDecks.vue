@@ -3,7 +3,7 @@
     .sorting-options
       .sort-row
         strong Sort By:
-        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, filtered)")
+        select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, decks)")
           option(value="releaseDate:true" selected) Release Date (Newest)
           option(value="releaseDate") Release Date (Oldest)
           option(value="code") Code (Ascending)
@@ -44,10 +44,9 @@
 
 <script>
 export default {
-  name: 'DecksDownloads',
+  name: 'DownloadDecks',
   data() {
     return {
-      defaultDecks: [],
       filteredDecks: [],
       searchKey: '',
       sortKey: 'releaseDate:true',
@@ -66,7 +65,6 @@ export default {
       await this.$store.dispatch('UPDATE_DECKS');
     }
 
-    this.defaultDecks = this.$store.getters.decks;
     this.filteredDecks = this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
   },
   methods: {
@@ -78,12 +76,12 @@ export default {
       clearTimeout(this.timeout);
 
       this.timeout = window.setTimeout(() => {
-        const searched = this.$helpers.search(this.searchKey, this.defaultDecks);
+        const searched = this.$helpers.search(this.searchKey, this.$store.getters.decks);
         const sorted = this.$helpers.sort(this.sortKey, searched);
 
         this.handleMessage(sorted.length);
         this.filteredDecks = sorted;
-      }, 300);
+      }, this.$store.getters.throttleSpeed);
     }
   },
 };

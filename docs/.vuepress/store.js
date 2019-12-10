@@ -6,11 +6,13 @@ Vue.use(Vuex);
 
 export default new Vuex.Store({
   state: {
+    throttleSpeed: 300,
     metadata: {},
     decks: [],
     sets: [],
   },
   getters: {
+    throttleSpeed: state => state.throttleSpeed,
     metadata: state => state.metadata,
     decks: state => state.decks,
     sets: state => state.sets,
