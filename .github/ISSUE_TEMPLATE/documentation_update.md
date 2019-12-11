@@ -1,8 +1,8 @@
 ---
-name: Bug Report
-about: Report a bug on this project
+name: Documentation Update
+about: Report documentation being outdated or needing an update
 title: ''
-labels: bug
+labels: docs update
 assignees: ''
 
 ---

@@ -1,19 +1,19 @@
 {
   "name": "mtgjson-website",
-  "version": "4.7.0",
+  "version": "2.0.0",
   "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
   "engines": {
-    "node": "^12.8.0"
+    "node": "^12.8.0",
+    "yarn": ">=1.19.2"
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs && npm run generate-version-atom",
-    "purge": "rm -rf node_modules",
-    "bootstrap": "npm install && npm audit fix",
-    "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
-    "test:full": "npm run test && npm run build",
+    "build": "vuepress build docs && yarn generate-version-atom",
+    "purge": "rm -rf node_modules && yarn cache clean",
+    "test": "yarn lint && jest --coverage --coverageDirectory='__coverage__'",
+    "test:full": "yarn test && yarn build",
     "coverage": "codecov -t CODECOV_TOKEN",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
@@ -22,25 +22,25 @@
   "dependencies": {
     "js-essentials": "0.0.6",
     "uuid": "^3.3.3",
-    "vuepress": "^1.0.3",
-    "vuepress-plugin-container": "^2.0.1",
-    "vuepress-plugin-feed": "^0.1.7",
+    "vuepress": "^1.2.0",
+    "vuepress-plugin-container": "^2.1.2",
+    "vuepress-plugin-feed": "^0.1.8",
     "vuex": "^3.1.2"
   },
   "devDependencies": {
-    "@babel/core": "^7.4.5",
-    "@babel/preset-env": "^7.4.5",
-    "ajv": "^6.9.1",
-    "babel-eslint": "^10.0.2",
-    "babel-jest": "^24.8.0",
-    "codecov": "^3.5.0",
-    "eslint": "^5.0.0",
-    "eslint-plugin-vue": "^5.2.3",
-    "husky": "^1.3.1",
-    "jest": "^24.8.0",
+    "@babel/core": "^7.7.5",
+    "@babel/preset-env": "^7.7.6",
+    "ajv": "^6.10.2",
+    "babel-eslint": "^10.0.3",
+    "babel-jest": "^24.9.0",
+    "codecov": "^3.6.1",
+    "eslint": "^6.7.2",
+    "eslint-plugin-vue": "^6.0.1",
+    "husky": "^3.1.0",
+    "jest": "^24.9.0",
     "node-fetch": "^2.6.0",
-    "pug": "^2.0.3",
+    "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
-    "vue-eslint-parser": "^6.0.4"
+    "vue-eslint-parser": "^7.0.0"
   }
 }
