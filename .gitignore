@@ -22,7 +22,7 @@ node_modules/
 dist/
 
 # Experimental Schemas
-utils/output/*.json
+utils/output/**/*.*
 
 # Coverage reports
 __coverage__
