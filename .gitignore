@@ -21,7 +21,7 @@ node_modules/
 # Build folder
 dist/
 
-# Experimental Schemas
+# Utility testing output
 utils/output/**/*.*
 
 # Coverage reports
@@ -30,6 +30,7 @@ __coverage__
 # Env variables
 .env
 
+# Large design files
 logo/
 *.psd
 *.ai

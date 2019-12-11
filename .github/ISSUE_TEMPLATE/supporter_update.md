@@ -1,6 +1,6 @@
 ---
-name: Supporter update
-about: Add a new supporter/service/patreon to the list
+name: Supporter Update
+about: Add a new supporter, service, or patreon to the list
 title: ''
 labels: supporter update
 assignees: ''
@@ -11,6 +11,6 @@ assignees: ''
 
 ### Describe the web URL for this supporter
 
-### Provide an image if available for this supporter (at least 200 width or height)
+### Provide an image if available for this supporter (at least 200px width or height)
 
 ### If Patreon, describe Tier and start date as "YYYY-MM"
