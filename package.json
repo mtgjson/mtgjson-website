@@ -9,17 +9,19 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs",
+    "build": "vuepress build docs && npm run generate-version-atom",
     "purge": "rm -rf node_modules",
     "bootstrap": "npm install && npm audit fix",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "coverage": "codecov -t CODECOV_TOKEN",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
-    "regenerate-schema": "node ./utils/schema-regenerator.js"
+    "regenerate-schema": "node ./utils/regenerate-schema.js",
+    "generate-version-atom": "node ./utils/generate-version-atom.js"
   },
   "dependencies": {
     "js-essentials": "0.0.6",
+    "uuid": "^3.3.3",
     "vuepress": "^1.0.3",
     "vuepress-plugin-container": "^2.0.1",
     "vuepress-plugin-feed": "^0.1.7",

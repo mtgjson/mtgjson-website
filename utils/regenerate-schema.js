@@ -8,7 +8,32 @@
 const fs = require('fs');
 
 (() => {
-  const config = require('../.schemarc');
+  const config = {
+    srcDir: './docs/.vuepress/public/schemas',
+    /** This is the testing outDir, when validated, change to srcDir */
+    outDir: './utils/output',
+    /** schemas that have no intrinsic values */
+    ignore: [
+      'AllPrices.schema.json',
+      'AllPrintings.schema.json',
+      'AllSets.schema.json',
+      'LegacyPrintings.schema.json',
+      'ModernPrintings.schema.json',
+      'PioneerPrintings.schema.json',
+      'StandardPrintings.schema.json',
+      'VintagePrintings.schema.json'
+    ],
+    insert: {
+      fields: [
+        // Add new field objects with a default value
+        {
+          /** example */
+          // name: 'introduced',
+          // defaultValue: 'v4.0.0',
+        }
+      ]
+    },
+  };
   const { srcDir, outDir, insert, ignore } = config;
 
   if (typeof config === 'object') {
