@@ -1,71 +1,83 @@
 .download-tables {
   position: relative;
 
-  h3 {
-    font-size: 14px;
-    line-height: 1rem;
-    padding: 0 0 5px;
-    color: var(--text-color);
-
-    &.spoiler {
-      display: flex;
-      align-items: center;
-
-      &::after {
-        position: relative;
-        content: 'Spoiler';
-        background-color: var(--spoiler-color);
-        color: var(--dark-color);
-        border-radius: 5px;
-        margin-left: 10px;
-        margin-right: 5px;
-        font-size: 10px;
-        font-weight: bold;
-        padding: 3px 5px;
-        display: inline-table;
-        text-transform: capitalize;
-      }
-    }
-  }
-
-  small {
-    color: var(--text-color);
-  }
-
   .sorting-options {
     position: sticky;
     background-color: var(--bg-dark-color);
     top: $navbarHeight;
     z-index: 9;
-    padding: 1rem 0 1rem;
+    padding: 1rem 0 1.5rem;
 
-    .sort-row {
+    h6.show-options {
       display: inline-block;
-      min-height: 2rem;
-      margin-right: 30px;
-      margin-bottom: 10px;
+      padding: 0 0 1.5rem;
+      margin-bottom: 0;
+      position: relative;
+      color: var(--accent-color);
+      text-decoration: underline;
+      cursor: pointer;
 
-      &.search {
-        display: block;
+      &::after {
+        right: -15px;
+        top: 6px;
+        border: solid transparent;
+        content: ' ';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-top-color: var(--accent-color);
+        border-width: 5px;
+      }
+
+      &.hide-options {
+        padding: 0;
+
+        &::after {
+          border-top-color: transparent;
+          border-bottom-color: var(--accent-color);
+          top: 0px;
+        }
       }
     }
 
-    .show-sort-row {
-      display: inline-block;
-    }
+    .sort-rows {
+      .sort-row {
+        display: block;
+        min-height: 2rem;
+        margin-right: 30px;
+        margin-bottom: 10px;
 
-    select,
-    input {
-      display: inline;
-      font-size: 16px;
-      margin-left: 10px;
-      padding: 3px;
-    }
+        label {
+          font-weight: bold;
+        }
 
-    input {
-      border-radius: 5px;
-      border: 1px solid lightgray;
-      padding: 3px 8px;
+        select, input {
+          display: inline;
+          font-size: 16px;
+          margin-left: 10px;
+          padding: 3px 5px 5px 0;
+        }
+
+        input {
+          border-radius: 5px;
+          border: 1px solid #c8c8c8;
+          padding: 3px 8px;
+        }
+
+        &.search {
+          display: block;
+        }
+
+        &.checkbox {
+          min-height: auto;
+        }
+
+        &:last-of-type {
+          margin-bottom: 0;
+        }
+      }
     }
   }
 
@@ -101,8 +113,35 @@
         }
       }
 
-      .txt-wrap {
+      .text-wrap {
         flex: 1;
+
+        h3 {
+          font-size: 15px;
+          padding: 0 0 5px;
+          line-height: 1rem;
+          color: var(--text-color);
+
+          &.spoiler {
+            display: flex;
+            align-items: center;
+
+            &::after {
+              position: relative;
+              content: 'Spoiler';
+              background-color: var(--spoiler-color);
+              color: var(--dark-color);
+              border-radius: 5px;
+              margin-left: 10px;
+              margin-right: 5px;
+              font-size: 10px;
+              font-weight: bold;
+              padding: 3px 5px;
+              display: inline-table;
+              text-transform: capitalize;
+            }
+          }
+        }
 
         p {
           display: block;
@@ -117,42 +156,26 @@
             margin: 0;
             list-style: none;
             display: inline-block;
+            margin-right: 30px;
           }
         }
 
         small {
+          color: var(--text-color);
           display: inline-block;
-          margin-right: 30px;
+          text-transform: capitalize;
 
-          span {
-            font-weight: normal;
-            text-transform: capitalize;
-
-            &.type {
-              text-transform: none;
-            }
-          }
-        }
-      }
-
-      .dl-wrap {
-        flex: 0 0 100%;
-        padding: 0;
-        margin-top: 10px !important;
-        margin-left: 0;
-
-        li {
-          list-style: none;
-
-          &.sqlite {
-            margin-top: 10px;
+          &:first-of-type {
+            font-weight: bold;
           }
         }
 
-        small {
-          display: inline-block;
-          margin: 0 10px 5px 0;
-          font-weight: bold;
+        &--downloads {
+          margin-top: 15px;
+
+          small {
+            margin-right: 5px;
+          }
         }
       }
     }
@@ -162,17 +185,17 @@
 @media (max-width: $MQMobile) {
   .download-tables {
     .sorting-options {
-      .sort-row {
-        display: block;
+      .sort-rows {
+        .sort-row {
+          select, input {
+            margin: 5px 0 0 0;
+            display: block;
+          }
 
-        &:last-of-type {
-          margin-bottom: 0;
-        }
-
-        select,
-        input {
-          margin: 5px 0 0 0;
-          display: block;
+          input[type='checkbox'] {
+            display: inline-block;
+            margin-left: 10px;
+          }
         }
       }
     }
@@ -180,6 +203,18 @@
     .download-wrap {
       & > * {
         flex: 0 0 100% !important;
+      }
+
+      .img-wrap {
+        margin-bottom: 10px;
+      }
+
+      .text-wrap {
+        ol {
+          li {
+            display: block !important;
+          }
+        }
       }
     }
   }
