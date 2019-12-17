@@ -1,11 +1,12 @@
 <img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" width="100px">
 
-# MTGJSON Website (Documentation) 
+# MTGJSON Website (Documentation)
 
+[![Actions Status](https://github.com/mtgjson/mtgjson-website/workflows/Node%20CI/badge.svg)](https://github.com/mtgjson/mtgjson-website/actions)
 [![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
 
-[![Generic badge](https://img.shields.io/badge/Made_with_Node-latest-green.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/Made_with_Vuepress-1.x-green.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Made_with_Node-12.8.0-green.svg)](https://shields.io/)
+[![Generic badge](https://img.shields.io/badge/Made_with_Vuepress-1.2.0-green.svg)](https://shields.io/)
 [![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://GitHub.com/mtgjson/mtgjson-website/graphs/commit-activity)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mtgjson/mtgjson-website/blob/master/LICENSE)
 
