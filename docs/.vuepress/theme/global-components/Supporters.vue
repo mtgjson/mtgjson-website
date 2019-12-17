@@ -29,7 +29,11 @@
           .supporter-link(:href="link" rel="noopener noreferrer" target="_blank")
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(:src="'/images/' + image" :alt="link" :title="name")
+                picture
+                  source(
+                    v-if="image.split('.')[1] !== 'svg'"
+                    type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
+                  img(:src="'/images/' + image" :alt="link" :title="name")
             a(:href="link" rel="noopener noreferrer" target="_blank")
               h6 {{ name }}
 

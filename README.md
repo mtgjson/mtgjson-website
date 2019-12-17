@@ -28,10 +28,10 @@ sudo n 12.8.0
 
 **Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
 
-Install global dependencies.
+Install global dependencies. (May need admin rights)
 
 ```
-yarn global add imagemin-cli imagemin-webp
+yarn boostrap
 ```
 
 Install project dependencies.
