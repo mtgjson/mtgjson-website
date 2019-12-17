@@ -20,12 +20,14 @@ jobs:
     - name: Install latest yarn
       run: |
         yarn policies set-version
-    - name: Install imagemin
+    - name: Install global dependencies
       run: |
-        yarn global add imagemin-cli imagemin-webp
-    - name: yarn install, then test and build
+        yarn bootstrap
+    - name: Install local dependencies
       run: |
         yarn install
+    - name: Test and build project
+      run: |
         yarn test:full
       env:
         CI: true

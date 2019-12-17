@@ -68,7 +68,7 @@ const fs = require('fs');
             JSON.stringify(newSchema, null, 2),
             'utf-8',
             res => {
-              console.error('done');
+              console.warn(res);
             }
           );
 

@@ -10,14 +10,16 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs && yarn generate-version-atom",
-    "purge": "rm -rf node_modules",
+    "build": "yarn optimize-images && vuepress build docs && yarn generate-version-atom",
+    "purge": "rm -rf node_modules && yarn cache clean",
     "test": "yarn lint && jest --coverage --coverageDirectory='__coverage__'",
-    "test:full": "yarn test && yarn build",
-    "coverage": "codecov -t CODECOV_TOKEN",
+    "test:full": "yarn test && yarn build && git add .",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
-    "generate-version-atom": "node ./utils/generate-version-atom.js"
+    "generate-version-atom": "node ./utils/generate-version-atom.js",
+    "optimize-images": "imagemin --plugin.webp.quality=80 docs/.vuepress/public/images --out-dir=docs/.vuepress/public/images",
+    "bootstrap": "yarn global add imagemin-cli imagemin-webp",
+    "heroku-prebuild": "yarn bootstrap"
   },
   "dependencies": {
     "js-essentials": "0.0.6",

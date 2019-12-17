@@ -41,7 +41,7 @@
                   span(v-for="(compression, key) in fileBaseCompression")
                     a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite.${compression}`") {{ compression }}
                 li.sqlite
-                  p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" target="_blank">mtgsqlive</a>.
+                  p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>.
 
 </template>
 

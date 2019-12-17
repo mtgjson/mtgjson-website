@@ -43,7 +43,7 @@ Eric is a conceptualizer that loves cervidae, nature, cheesy sci-fi movies and d
 :::
 
 ::: tip Mark - Cloud Developer
-![avatar](/images/avatar-mark.png "Mark")
+![avatar](/images/avatar-mark.jpg "Mark")
 Mark is an old man obsessed with learning anything he can, a self-proclaimed Jack of All Trades, yet Master of None. He spends his time gaming, writing, farming, cuddling with his dogs, and providing comedic relief.
 :::
 

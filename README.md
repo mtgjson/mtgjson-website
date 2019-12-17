@@ -17,7 +17,7 @@
 
 ### **Installation**
 
-Install `node`, `n`, and `yarn` (optional).
+Install `node`, `n`, and `yarn`.
 
 **Option #1 (Preferred)**: Install Node with [brew](https://brew.sh).
 
@@ -27,6 +27,12 @@ sudo n 12.8.0
 ```
 
 **Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
+
+Install global dependencies. (May need admin rights)
+
+```
+yarn boostrap
+```
 
 Install project dependencies.
 

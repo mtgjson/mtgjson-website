@@ -9,24 +9,32 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(:src="'/images/' + image" :alt="link" :title="name")
-            a(:href="link" target="_blank")
+                picture
+                  source(
+                    v-if="image.split('.')[1] !== 'svg'"
+                    type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
+                  img(:src="'/images/' + image" :alt="link" :title="name")
+            a(:href="link" rel="noopener noreferrer" target="_blank")
               h6 {{ name }}
             p.tier {{ tier }} Supporter
             p.tier-time(v-if="since" v-html="formatTime(since)")
 
-    // Not Patrons but services that use MTGJSON
+    //- Not Patrons but services that use MTGJSON
     .supporters-wrap(v-if="services")
       h3 Others Powered by MTGJSON
       p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here.
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services")
-          .supporter-link(:href="link" target="_blank")
+          .supporter-link(:href="link" rel="noopener noreferrer" target="_blank")
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(:src="'/images/' + image" :alt="link" :title="name")
-            a(:href="link" target="_blank")
+                picture
+                  source(
+                    v-if="image.split('.')[1] !== 'svg'"
+                    type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
+                  img(:src="'/images/' + image" :alt="link" :title="name")
+            a(:href="link" rel="noopener noreferrer" target="_blank")
               h6 {{ name }}
 
 </template>
@@ -38,7 +46,7 @@ export default {
     return {
       supporters: require('../../public/resources/supporters.json'),
       projectMsg:
-        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.',
+        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.',
     };
   },
   computed: {
@@ -124,10 +132,12 @@ export default {
           display: flex;
           align-items: center;
 
-          img {
-            width: 100%;
-            height: auto;
-            max-height: 100%;
+          picture {
+            &, source, img {
+              width: 100%;
+              height: auto;
+              max-height: 100%;
+            }
           }
         }
       }
@@ -194,7 +204,6 @@ export default {
       }
     }
   }
-
 }
 
 @media (max-width: 960px) {
