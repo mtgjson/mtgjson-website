@@ -1,7 +1,6 @@
 {
   "name": "mtgjson-website",
   "description": "Heroku configuration for review apps",
-  "scripts": {},
   "formation": {
     "web": {
       "quantity": 1
@@ -14,5 +13,8 @@
     {
       "url": "https://github.com/heroku/heroku-buildpack-static.git"
     }
-  ]
+  ],
+  "scripts": {},
+  "env": {},
+  "addons": []
 }

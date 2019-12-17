@@ -6,11 +6,11 @@
   "license": "MIT",
   "engines": {
     "node": "^12.8.0",
-    "npm": "^6.10.2"
+    "yarn": "^1.21.1"
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs && npm run generate-version-atom",
+    "build": "vuepress build docs && yarn generate-version-atom",
     "purge": "rm -rf node_modules",
     "test": "yarn lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "yarn test && yarn build",
