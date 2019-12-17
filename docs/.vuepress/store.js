@@ -25,7 +25,7 @@ export default new Vuex.Store({
 
         commit('SET_METADATA', promised);
       } catch (err) {
-        console.error(err);
+        commit('SET_METADATA', {});
       }
     },
     UPDATE_DECKS: async ({ commit }) => {
@@ -35,7 +35,7 @@ export default new Vuex.Store({
 
         commit('SET_DECKS', promised);
       } catch (err) {
-        console.error(err);
+        commit('SET_DECKS', []);
       }
     },
     UPDATE_SETS: async ({ commit }) => {
@@ -45,7 +45,7 @@ export default new Vuex.Store({
 
         commit('SET_SETS', promised);
       } catch (err) {
-        console.error(err);
+        commit('SET_DECKS', []);
       }
     }
   },
