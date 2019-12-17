@@ -6,7 +6,7 @@
   "license": "MIT",
   "engines": {
     "node": "^12.8.0",
-    "yarn": ">=1.19.2"
+    "npm": "^6.10.2"
   },
   "scripts": {
     "dev": "vuepress dev docs",
