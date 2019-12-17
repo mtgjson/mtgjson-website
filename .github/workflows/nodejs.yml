@@ -20,8 +20,9 @@ jobs:
     - name: Install latest yarn
       run: |
         yarn policies set-version
-    - name: yarn install, build, and test
+    - name: yarn install, then test and build
       run: |
+        yarn install
         yarn test:full
       env:
         CI: true
