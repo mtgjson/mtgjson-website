@@ -20,9 +20,12 @@ jobs:
     - name: Install latest yarn
       run: |
         yarn policies set-version
-    - name: Bootstrap global dependencies
+    - name: Install global dependencies
       run: |
         yarn bootstrap
+    - name: Install local dependencies
+      run: |
+        yarn install
     - name: Test and build project
       run: |
         yarn test:full
