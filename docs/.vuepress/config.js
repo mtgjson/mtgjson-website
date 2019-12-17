@@ -44,6 +44,7 @@ module.exports = {
       {
         rel: 'stylesheet',
         type: 'text/css',
+        media: 'screen',
         href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css',
       },
     ],
