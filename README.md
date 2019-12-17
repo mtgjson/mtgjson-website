@@ -1,6 +1,6 @@
 <img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" width="100px">
 
-# MTGJSON Website (Documentation)
+# MTGJSON Website (Documentation) 
 
 [![Build Status](https://travis-ci.org/mtgjson/mtgjson-website.svg?branch=master)](https://travis-ci.org/mtgjson/mtgjson-website)
 [![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
