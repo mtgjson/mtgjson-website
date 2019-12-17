@@ -16,7 +16,7 @@
     },
     {
       "name": "CardCastle",
-      "image": "avatar-cardcastle.svg",
+      "image": "avatar-cardcastle.png",
       "link": "https://cardcastle.co",
       "tier": "mythic",
       "since": "2019-04"
@@ -37,7 +37,7 @@
     },
     {
       "name": "MTG Labs",
-      "image": "avatar-mtglabs.svg",
+      "image": "avatar-mtglabs.png",
       "link": "http://mtglabs.com",
       "tier": "mythic",
       "since": "2019-05"
@@ -78,7 +78,7 @@
     },
     {
       "name": "MagicMerchant",
-      "image": "avatar-magicmerchant.svg",
+      "image": "avatar-magicmerchant.png",
       "link": "https://magicmerchant.it",
       "tier": "uncommon",
       "since": "2019-06"
@@ -120,7 +120,7 @@
     },
     {
       "name": "Cardsphere",
-      "image": "avatar-cardsphere.svg",
+      "image": "avatar-cardsphere.png",
       "link": "https://www.cardsphere.com"
     },
     {
@@ -200,7 +200,7 @@
     },
     {
       "name": "mtg.onl",
-      "image": "avatar-mtgonl.svg",
+      "image": "avatar-mtgonl.png",
       "link": "https://mtg.onl"
     },
     {
@@ -265,7 +265,7 @@
     },
     {
       "name": "Scryfall",
-      "image": "avatar-scryfall.svg",
+      "image": "avatar-scryfall.png",
       "link": "https://scryfall.com"
     },
     {
@@ -295,7 +295,7 @@
     },
     {
       "name": "TutorCards",
-      "image": "avatar-tutorcards.svg",
+      "image": "avatar-tutorcards.png",
       "link": "https://tutor.cards"
     },
     {

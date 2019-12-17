@@ -132,10 +132,12 @@ export default {
           display: flex;
           align-items: center;
 
-          img {
-            width: 100%;
-            height: auto;
-            max-height: 100%;
+          picture {
+            &, source, img {
+              width: 100%;
+              height: auto;
+              max-height: 100%;
+            }
           }
         }
       }
@@ -202,7 +204,6 @@ export default {
       }
     }
   }
-
 }
 
 @media (max-width: 960px) {
