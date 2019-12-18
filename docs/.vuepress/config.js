@@ -38,6 +38,13 @@ module.exports = {
         content: '/images/assets/logo-mtgjson-thumbnail.png',
       },
     ],
+    [
+      'meta',
+      {
+        name: 'google-site-verification',
+        content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
+      }
+    ],
     // Keyrun for set images
     [
       'link',
