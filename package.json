@@ -10,10 +10,10 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "yarn optimize-images && vuepress build docs && yarn generate-version-atom",
+    "build": "vuepress build docs && yarn generate-version-atom",
     "purge": "rm -rf node_modules && yarn cache clean",
     "test": "yarn lint && jest --coverage --coverageDirectory='__coverage__'",
-    "test:full": "yarn test && yarn build && git add .",
+    "test:full": "yarn test && yarn build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
