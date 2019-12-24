@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Portable formats for Magic: The Gathering card data",
+  "title": "",
   "meta": [
     {
       "name": "keywords",
