@@ -224,24 +224,29 @@
       "link": "https://mtg-search.com"
     },
     {
-      "name": "MTGO Wiki Price",
-      "image": "avatar-mtgowikiprice.png",
-      "link": "http://mtgowikiprice.com"
-    },
-    {
       "name": "MTG Set Builder",
       "image": "avatar-mtgsetbuilder.png",
       "link": "http://mtgsetbuilder.com"
     },
     {
-      "name": "MTGStocks",
-      "image": "avatar-mtgstocks.jpg",
-      "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
-    },
-    {
       "name": "MTG Tracker",
       "image": "avatar-mtgtracker.jpg",
       "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
+    },
+    {
+      "name": "MTGNexus",
+      "image": "avatar-mtgnexus.png",
+      "link": "https://www.mtgnexus.com/"
+    },
+    {
+      "name": "MTGO Wiki Price",
+      "image": "avatar-mtgowikiprice.png",
+      "link": "http://mtgowikiprice.com"
+    },
+    {
+      "name": "MTGStocks",
+      "image": "avatar-mtgstocks.jpg",
+      "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
     },
     {
       "name": "MYPCards",
