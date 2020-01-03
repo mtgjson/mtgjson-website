@@ -43,13 +43,6 @@
       "since": "2019-05"
     },
     {
-      "name": "Custom Standard",
-      "image": "avatar-custom-standard.png",
-      "link": "http://discord.gg/DdhxPQQ",
-      "tier": "rare",
-      "since": "2019-04"
-    },
-    {
       "name": "My MTG Collection",
       "image": "avatar-my-mtg-collection-logo.png",
       "link": "https://www.reddit.com/r/Mymtgapp",
@@ -127,6 +120,11 @@
       "name": "Cube Tutor",
       "image": "avatar-cubetutor.png",
       "link": "http://cubetutor.com"
+    },
+    {
+      "name": "Custom Standard",
+      "image": "avatar-custom-standard.png",
+      "link": "http://discord.gg/DdhxPQQ"
     },
     {
       "name": "dr4ft",
