@@ -29,8 +29,8 @@
           .heading
             p(title="The name of the property") Key
           .name
-            a(:href="`#${data.propName}`")
-              h6(v-html="data.propName")
+            a(:href="`#${data.propName || name}`")
+              h6(v-html="data.propName || name")
 
         //- Property Type
         .schema-data--table-item
