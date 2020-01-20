@@ -1,4 +1,5 @@
-#changelog {
+#changelog,
+#frequently-asked-questions {
   padding-bottom: 0; // h1
 
   & ~ h2,
@@ -16,5 +17,20 @@
 
   & .header-anchor {
     display: none;
+  }
+}
+
+#frequently-asked-questions {
+  & ~ h3 {
+    padding-top: 30px;
+  }
+
+  & ~ * .attribute {
+    cursor: initial !important;
+    margin: 0 3px;
+    vertical-align: middle;
+
+    &:hover {
+    }
   }
 }

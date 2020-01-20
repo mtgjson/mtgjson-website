@@ -259,3 +259,72 @@ img {
     display: none !important;
   }
 }
+
+.attribute {
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+  padding: 3px 5px;
+  cursor: help;
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  overflow: hidden;
+  z-index: 2;
+  color: var(--dark-color);
+  font-weight: bold;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &.atomic {
+    &::before {
+      background-color: var(--blue-color);
+    }
+  }
+
+  &.optional {
+    &::before {
+      background-color: var(--spoiler-color);
+    }
+  }
+
+  &.deprecated {
+    &::before {
+      background-color: var(--red-color);
+    }
+  }
+
+  &.deck {
+    &::before {
+      background-color: var(--green-color);
+    }
+  }
+
+  &.nullable {
+    &::before {
+      background-color: var(--red-color);
+    }
+  }
+
+  &.stale {
+    &::before {
+      background-color: var(--medium-gray-color);
+    }
+  }
+
+  &.token {
+    &::before {
+      background-color: plum;
+    }
+  }
+}
