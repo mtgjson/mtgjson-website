@@ -424,7 +424,7 @@
   "number": {
     "type": "string",
     "example": "\"218\"",
-    "description": "Number of the card.",
+    "description": "Number of the card. Can be prefixed or suffixed with a {{code@*}} or other character for promo sets.",
     "introduced": "v4.0.0"
   },
   "originalText": {
