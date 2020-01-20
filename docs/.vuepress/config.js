@@ -124,6 +124,10 @@ module.exports = {
         collapsable: false,
       },
       {
+        title: 'F.A.Q.',
+        path: '/faq/',
+      },
+      {
         title: 'Downloads',
         path: '/downloads/all-files',
         collapsable: false,
