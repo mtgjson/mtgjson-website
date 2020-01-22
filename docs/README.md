@@ -33,7 +33,7 @@ In the [version](/files/version.json) file and `meta` in associated files, when 
 
 ::: tip Zach - Lead Developer &amp; Maintainer
 ![avatar](/images/avatar-zach.jpg "Zach")
-Zach is a 22-year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open-source Cockatrice game client.<br/><br/>
+Zach is a 23-year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of version 4. His work can also be seen heavily in the open-source Cockatrice game client.<br/><br/>
 <em>All inquires about MTGJSON can be sent to <a href="mailto:zach@mtgjson.com">zach@mtgjson.com</a></em>
 :::
 
