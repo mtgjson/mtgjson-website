@@ -27,13 +27,13 @@
       .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services")
           .supporter-link(:href="link" rel="noopener noreferrer" target="_blank")
-            .img-wrap(v-if="image")
-              .img-wrap--container
-                picture
-                  source(
-                    v-if="image.split('.')[1] !== 'svg'"
-                    type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
-                  img(:src="'/images/' + image" :alt="link" :title="name")
+            //- .img-wrap(v-if="image")
+            //-   .img-wrap--container
+            //-     picture
+            //-       source(
+            //-         v-if="image.split('.')[1] !== 'svg'"
+            //-         type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
+            //-       img(:src="'/images/' + image" :alt="link" :title="name")
             a(:href="link" rel="noopener noreferrer" target="_blank")
               h6 {{ name }}
 

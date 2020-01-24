@@ -102,19 +102,13 @@
       "link": "https://www.boutiqueawesome.com/"
     },
     {
-      "name": "Cardmarket",
-      "image": "avatar-cardmarket.png",
-      "link": "https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson"
+      "name": "Card Codex",
+      "link": "https://cardcodex.com"
     },
     {
       "name": "Cards Info",
       "image": "avatar-cardsinfo.png",
       "link": "https://play.google.com/store/apps/details?id=com.dbottillo.mtgsearchfree"
-    },
-    {
-      "name": "Cardsphere",
-      "image": "avatar-cardsphere.png",
-      "link": "https://www.cardsphere.com"
     },
     {
       "name": "Cube Tutor",
@@ -125,6 +119,24 @@
       "name": "Custom Standard",
       "image": "avatar-custom-standard.png",
       "link": "http://discord.gg/DdhxPQQ"
+    },
+    {
+      "name": "Cardmarket",
+      "image": "avatar-cardmarket.png",
+      "link": "https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson"
+    },
+    {
+      "name": "Cardsphere",
+      "image": "avatar-cardsphere.png",
+      "link": "https://www.cardsphere.com"
+    },
+    {
+      "name": "DeckList",
+      "link": "https://decklist.org/"
+    },
+    {
+      "name": "DideRobot",
+      "link": "https://github.com/Didero/DideRobot"
     },
     {
       "name": "dr4ft",
@@ -147,9 +159,17 @@
       "link": "https://edhrec.com"
     },
     {
+      "name": "FlavorTexts",
+      "link": "https://flavortexts.com"
+    },
+    {
       "name": "IPGTree",
       "image": "avatar-ipgtree.jpg",
       "link": "http://alfchaval.epizy.com/ipgtree/"
+    },
+    {
+      "name": "Lab Maniac",
+      "link": "http://labmaniac.com"
     },
     {
       "name": "Liminal Thoughts",
@@ -192,6 +212,10 @@
       "link": "https://www.magictradebinder.com"
     },
     {
+      "name": "MagicFetchBot",
+      "link": "https://redd.it/55l38e"
+    },
+    {
       "name": "Magidex",
       "image": "avatar-magidex.jpg",
       "link": "https://magidex.com"
@@ -217,6 +241,14 @@
       "link": "http://mtg-kr.com"
     },
     {
+      "name": "MTG Lands",
+      "link": "http://mtglands.com"
+    },
+    {
+      "name": "MTG On Curve",
+      "link": "https://mtgoncurve.com/"
+    },
+    {
       "name": "MTG Search",
       "image": "avatar-mtg-search.jpg",
       "link": "https://mtg-search.com"
@@ -232,14 +264,22 @@
       "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
     },
     {
+      "name": "MTGO Wiki Price",
+      "image": "avatar-mtgowikiprice.png",
+      "link": "http://mtgowikiprice.com"
+    },
+    {
+      "name": "MTGCardFetcher",
+      "link": "https://reddit.com/r/MTGCardFetcher"
+    },
+    {
       "name": "MTGNexus",
       "image": "avatar-mtgnexus.png",
       "link": "https://www.mtgnexus.com/"
     },
     {
-      "name": "MTGO Wiki Price",
-      "image": "avatar-mtgowikiprice.png",
-      "link": "http://mtgowikiprice.com"
+      "name": "MTGEN",
+      "link": "http://mtgen.net/thb/"
     },
     {
       "name": "MTGStocks",
@@ -267,6 +307,10 @@
       "link": "https://magicollection.rdwonline.com"
     },
     {
+      "name": "RulesGuru",
+      "link": "http://rulesguru.net"
+    },
+    {
       "name": "Scryfall",
       "image": "avatar-scryfall.png",
       "link": "https://scryfall.com"
@@ -292,9 +336,17 @@
       "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
     },
     {
+      "name": "TOP8Draft",
+      "link": "http://www.top8draft.com/"
+    },
+    {
       "name": "Troll and Toad",
       "image": "avatar-trollandtoad.jpg",
       "link": "https://www.trollandtoad.com"
+    },
+    {
+      "name": "Venser's Journal",
+      "link": "https://vensersjournal.com/"
     },
     {
       "name": "TutorCards",
@@ -305,54 +357,6 @@
       "name": "XMage",
       "image": "avatar-xmage.png",
       "link": "http://xmage.de"
-    },
-    {
-      "name": "Card Codex",
-      "link": "https://cardcodex.com"
-    },
-    {
-      "name": "DeckList",
-      "link": "https://decklist.org/"
-    },
-    {
-      "name": "DideRobot",
-      "link": "https://github.com/Didero/DideRobot"
-    },
-    {
-      "name": "FlavorTexts",
-      "link": "https://flavortexts.com"
-    },
-    {
-      "name": "Lab Maniac",
-      "link": "http://labmaniac.com"
-    },
-    {
-      "name": "MagicFetchBot",
-      "link": "https://redd.it/55l38e"
-    },
-    {
-      "name": "MTGCardFetcher",
-      "link": "https://reddit.com/r/MTGCardFetcher"
-    },
-    {
-      "name": "MTG Lands",
-      "link": "http://mtglands.com"
-    },
-    {
-      "name": "MTG On Curve",
-      "link": "https://mtgoncurve.com/"
-    },
-    {
-      "name": "RulesGuru",
-      "link": "http://rulesguru.net"
-    },
-    {
-      "name": "TOP8Draft",
-      "link": "http://www.top8draft.com/"
-    },
-    {
-      "name": "Venser's Journal",
-      "link": "https://vensersjournal.com/"
     }
   ]
 }
