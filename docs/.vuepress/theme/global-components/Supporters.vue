@@ -10,7 +10,7 @@
             .img-wrap(v-if="image")
               .img-wrap--container
                 img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
-            a(:href="link" rel="noopener noreferrer" target="_blank")
+            a(:href="link" rel="nofollow" target="_blank")
               h6 {{ name }}
             p.tier {{ tier }} Supporter
             p.tier-time(v-if="since" v-html="formatTime(since)")
@@ -22,11 +22,11 @@
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services")
-          .supporter-link(:href="link" rel="noopener noreferrer" target="_blank")
+          .supporter-link(:href="link" rel="nofollow" target="_blank")
             .img-wrap(v-if="image")
               .img-wrap--container
                 img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
-            a(:href="link" rel="noopener noreferrer" target="_blank")
+            a(:href="link" rel="nofollow" target="_blank")
               h6 {{ name }}
 
 </template>

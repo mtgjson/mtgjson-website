@@ -390,9 +390,6 @@
     "type": "integer",
     "example": "40272",
     "description": "mtgstocks.com card ID.",
-    "attributes": [
-      "atomic"
-    ],
     "introduced": "v4.4.0"
   },
   "multiverseId": {
