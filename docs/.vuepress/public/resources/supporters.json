@@ -84,6 +84,13 @@
       "since": "2019-04"
     },
     {
+      "name": "MagicHunter",
+      "image": "avatar-magic-hunter.png",
+      "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
+      "tier": "uncommon",
+      "since": "2020-02"
+    },
+    {
       "name": "Seraph Six",
       "image": "avatar-seraphsix.png",
       "tier": "uncommon",
@@ -100,6 +107,11 @@
       "name": "Boutique Awesome",
       "image": "avatar-boutique-awesome.png",
       "link": "https://www.boutiqueawesome.com/"
+    },
+    {
+      "name": "CardConduit",
+      "image": "avatar-card-conduit.svg",
+      "link": "https://cardconduit.com/mtgjson"
     },
     {
       "name": "Cardmarket",
@@ -165,6 +177,11 @@
       "name": "LoadingReadyRun Bot",
       "image": "avatar-lrrbot.png",
       "link": "https://lrrbot.com/"
+    },
+    {
+      "name": "mtg.wtf",
+      "image": "avatar-mtg-wtf.png",
+      "link": "https://mtg.wtf"
     },
     {
       "name": "Metadeck",
@@ -252,11 +269,6 @@
       "link": "https://mypcards.com/"
     },
     {
-      "name": "mtg.wtf",
-      "image": "avatar-mtg-wtf.png",
-      "link": "https://mtg.wtf"
-    },
-    {
       "name": "Planestrader",
       "image": "avatar-planestrader.png",
       "link": "https://planestrader.com/"
@@ -333,6 +345,10 @@
     {
       "name": "MTGCardFetcher",
       "link": "https://reddit.com/r/MTGCardFetcher"
+    },
+    {
+      "name": "mtgen.net",
+      "link": "http://mtgen.net/thb/"
     },
     {
       "name": "MTG Lands",
