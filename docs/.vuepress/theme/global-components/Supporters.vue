@@ -9,11 +9,7 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                picture
-                  source(
-                    v-if="image.split('.')[1] !== 'svg'"
-                    type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
-                  img(:src="'/images/' + image" :alt="link" :title="name")
+                img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
             a(:href="link" rel="noopener noreferrer" target="_blank")
               h6 {{ name }}
             p.tier {{ tier }} Supporter
@@ -29,11 +25,7 @@
           .supporter-link(:href="link" rel="noopener noreferrer" target="_blank")
             .img-wrap(v-if="image")
               .img-wrap--container
-                picture
-                  source(
-                    v-if="image.split('.')[1] !== 'svg'"
-                    type="image/webp" :srcset="'/images/' + image.split('.')[0] + '.webp'")
-                  img(:src="'/images/' + image" :alt="link" :title="name")
+                img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
             a(:href="link" rel="noopener noreferrer" target="_blank")
               h6 {{ name }}
 
@@ -41,7 +33,7 @@
 
 <script>
 export default {
-  name: 'Services',
+  name: 'Supporters',
   data() {
     return {
       supporters: require('../../public/resources/supporters.json'),
@@ -56,6 +48,33 @@ export default {
     services() {
       return this.supporters.services;
     },
+  },
+  mounted() {
+    const lazyImages = Array.from(document.querySelectorAll('img.lazy'));
+
+    if ('IntersectionObserver' in window) {
+      let lazyImageObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            let lazyImage = entry.target;
+            lazyImage.src = lazyImage.dataset.src;
+            lazyImage.classList.remove('lazy');
+            lazyImageObserver.unobserve(lazyImage);
+          }
+        });
+      });
+
+      lazyImages.forEach(lazyImage => {
+        lazyImageObserver.observe(lazyImage);
+      });
+    } else {
+      // Boo, no observer
+      lazyImages.forEach(lazyImage => {
+        lazyImage.src = lazyImage.dataset.src;
+        lazyImage.classList.remove('lazy');
+        lazyImage.classList.add('not-lazy');
+      });
+    }
   },
   methods: {
     formatTime(time) {
@@ -132,12 +151,10 @@ export default {
           display: flex;
           align-items: center;
 
-          picture {
-            &, source, img {
-              width: 100%;
-              height: auto;
-              max-height: 100%;
-            }
+          img {
+            width: 100%;
+            height: auto;
+            max-height: 100%;
           }
         }
       }
