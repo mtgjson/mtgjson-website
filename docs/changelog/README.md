@@ -18,6 +18,29 @@
 
 # Changelog
 
+## 4.6.2
+Release Date: 2020-02-01
+### Cards
+#### Added
+- Added `isDateStamped` to identify promo printings
+- Added `isBuyABox` to identify promo printings
+- `variations` added for Unstable cards (to better identify)
+
+### Sets
+#### Added
+- Theros Beyond Death (`THB`, `PTHB`)
+- Unsanctioned (`UND`)
+
+### Tokens
+#### Fixed
+- Handled `scryfallIllustrationId`s for split cards
+
+### Other
+#### Added
+- `AllPrices` now has a new entry, `uuid` to better iterate the collection
+- `SetList` now has `isOnlineOnly` and `isPaperOnly`
+
+
 ## 4.6.1
 Release Date: 2019-12-04
 

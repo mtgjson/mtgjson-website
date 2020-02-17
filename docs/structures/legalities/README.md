@@ -25,7 +25,7 @@ List of play formats that are legal for a specific card.
 > Parent structure: [card](../card)  
 > Parent property: `legalities`  
 > Parent property type: `object(string: string)`  
-> Property values: `Legal`, `Not Legal`, `Restricted`, or `Banned` 
+> Property values: `Legal`, `Restricted`, or `Banned`
 
 ::: tip
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example data structure.

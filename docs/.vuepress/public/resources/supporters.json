@@ -29,13 +29,6 @@
       "since": "2018-11"
     },
     {
-      "name": "MTG Decks",
-      "image": "avatar-mtgdecks.png",
-      "link": "https://www.mtgdecks.net",
-      "tier": "mythic",
-      "since": "2019-04"
-    },
-    {
       "name": "MTG Labs",
       "image": "avatar-mtglabs.png",
       "link": "http://mtglabs.com",
@@ -80,6 +73,13 @@
       "name": "MTG Brewmaster",
       "image": "avatar-mtgbrewmaster.png",
       "link": "http://mtgbrewmaster.com",
+      "tier": "uncommon",
+      "since": "2019-04"
+    },
+    {
+      "name": "MTG Decks",
+      "image": "avatar-mtgdecks.png",
+      "link": "https://www.mtgdecks.net",
       "tier": "uncommon",
       "since": "2019-04"
     },
