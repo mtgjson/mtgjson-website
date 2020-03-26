@@ -53,13 +53,16 @@ export default {
       files: require(`../../public/schemas/Files.schema.json`),
       fileBaseCompression: ['bz2', 'gz', 'xz', 'zip'],
       fileSQLCompression: ['sql', 'sqlite'],
-      fileDirectory: 'files',
+      fileDirectory: undefined,
     };
   },
-  created() {
+  async created() {
     let files = this.files;
+
     const landcycle = new this.$landcycle(files);
     landcycle._init();
+
+    this.fileDirectory = await this.$themeConfig.api;
 
     // Remove quotes
     for (let file in files) {
@@ -70,7 +73,7 @@ export default {
       }
     }
 
-    this.files = landcycle.schema;
+    this.files = await landcycle.schema;
   },
 };
 </script>

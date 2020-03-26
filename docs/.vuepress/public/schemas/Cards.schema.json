@@ -1,0 +1,12 @@
+{
+  "[Unique {{link@card@/structures/card}} Name]" : {
+    "type": "object",
+    "example": "{{link@card@/structures/card}}",
+    "description": "This card and all card data. See the {{link@card@/structures/card}} structure."
+  },
+  "..." : {
+    "type": "...",
+    "example": "...",
+    "description": "..."
+  }
+}

@@ -43,6 +43,8 @@
     "node-fetch": "^2.6.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
+    "sass": "^1.26.3",
+    "sass-loader": "^8.0.2",
     "vue-eslint-parser": "^7.0.0"
   }
 }

@@ -31,6 +31,6 @@ List of play formats that are legal for a specific card.
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example data structure.
 :::
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

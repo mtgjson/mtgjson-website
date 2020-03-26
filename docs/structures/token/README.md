@@ -24,6 +24,6 @@
 > Parent property: `tokens`  
 > Parent property type: `array(anonymous object)`  
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

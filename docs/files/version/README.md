@@ -20,10 +20,8 @@
 
 # Version
 
-Metadata object has date (OBDC standard) and version properties of this MTGJSON release.
+Metadata object has app build and prices build date (ISO 8601), and version data of this MTGJSON release.
 
-> Data type: `anonymous object(string: string)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

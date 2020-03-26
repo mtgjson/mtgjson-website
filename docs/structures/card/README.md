@@ -25,6 +25,6 @@ The card structure describes the properties and values of a single card.
 > Parent property: `cards`  
 > Parent property type: `array(anonymous object)`  
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

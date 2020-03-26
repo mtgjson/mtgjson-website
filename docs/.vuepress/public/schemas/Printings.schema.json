@@ -1,5 +1,5 @@
 {
-  "M20" : {
+  "[Unique {{link@set@/structures/set}} ID]" : {
     "type": "object",
     "example": "{{link@set@/structures/set}}",
     "description": "This set, set data and all card printings in this set. See the {{link@set@/structures/set}} structure."

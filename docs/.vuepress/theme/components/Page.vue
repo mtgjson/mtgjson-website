@@ -2,13 +2,11 @@
   main.page
     slot(name="top")
 
-    //- ThemeSwitcher.page-theme-switcher
-
     Content
 
     footer.page-edit
       .last-updated(v-if="lastUpdated")
-        span.prefix {{ lastUpdatedText }}: 
+        span.prefix {{ lastUpdatedText }}:
         span.time {{ lastUpdated }}
 
     .page-nav(v-if="prev || next")
@@ -28,9 +26,7 @@
 
 <script>
 import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util';
-import ThemeSwitcher from '../global-components/ThemeSwitcher';
 export default {
-  components: { ThemeSwitcher },
   props: ['sidebarItems'],
   computed: {
     lastUpdated() {

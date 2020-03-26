@@ -87,7 +87,7 @@ export default {
       showOptions: false,
       sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
-      downloadDirectory: 'json',
+      downloadDirectory: undefined,
       timeout: null,
       message: 'Loading...',
     };
@@ -98,6 +98,8 @@ export default {
     },
   },
   async created() {
+    this.downloadDirectory = this.$themeConfig.api;
+
     if(this.$store.getters.sets.length < 1){
       await this.$store.dispatch('UPDATE_SETS');
     }

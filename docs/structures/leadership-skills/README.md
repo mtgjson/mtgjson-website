@@ -27,4 +27,6 @@ List of play formats that a specific card is legal to be your commander.
 > Parent property type: `array(string: boolean)`  
 > Property values: `true`, `false`
 
+### Data Properties
+
 <Documentation/>

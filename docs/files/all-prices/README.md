@@ -22,8 +22,6 @@
 
 All prices of cards in various formats, referenced by key using the card UUID.
 
-> Data type: `anonymous object(string: object)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

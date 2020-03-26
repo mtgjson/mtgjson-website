@@ -26,6 +26,6 @@ Foreign Data is a structure defining alternate language properties for a card.
 > Parent property: `foreignData`  
 > Parent property type: `array(anonymous object)`  
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

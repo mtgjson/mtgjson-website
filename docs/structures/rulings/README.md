@@ -27,6 +27,6 @@ List of rulings that are for a specific card.
 > Parent property type: `array(anonymous object)`  
 > Property type: `string`
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

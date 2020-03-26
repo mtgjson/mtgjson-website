@@ -24,6 +24,6 @@
 > Parent property: `translations`  
 > Parent property type: `object(string: string)`  
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

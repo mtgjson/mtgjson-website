@@ -24,6 +24,6 @@ The set structure describes the properties and values of a single set.
  
 > Parent property type: `object(string: any)`  
 
-### Data Structure
+### Data Properties
 
 <Documentation/>

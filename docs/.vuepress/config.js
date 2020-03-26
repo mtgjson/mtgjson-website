@@ -99,6 +99,8 @@ module.exports = {
   ],
   // Vuepress Themeing
   themeConfig: {
+    // API Config
+    api: 'api/v5/files',
     algolia: {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',

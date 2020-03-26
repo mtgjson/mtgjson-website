@@ -22,8 +22,6 @@
 
 List of all keywords used on Magic cards.
 
-> Data type: `object(string: any)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

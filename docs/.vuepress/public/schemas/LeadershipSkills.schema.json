@@ -2,7 +2,7 @@
   "brawl": {
     "type": "boolean",
     "example": "false",
-    "description": "Is this card able to be your commander in brawl?",
+    "description": "Is this card able to be your commander in the Brawl Format?",
     "attributes": [
       "atomic"
     ],
@@ -11,7 +11,7 @@
   "commander": {
     "type": "boolean",
     "example": "true",
-    "description": "Is this card able to be your commander in commander?",
+    "description": "Is this card able to be your commander in the Commander format?",
     "attributes": [
       "atomic"
     ],
@@ -20,7 +20,7 @@
   "oathbreaker": {
     "type": "boolean",
     "example": "true",
-    "description": "Is this card able to be your commander in oathbreaker?",
+    "description": "Is this card able to be your commander in the Oathbreaker format?",
     "attributes": [
       "atomic"
     ],

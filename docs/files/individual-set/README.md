@@ -22,8 +22,6 @@
 
 The individual set structure describes the properties and values of a single set.
  
-> Parent property type: `anonymous object(string: any)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

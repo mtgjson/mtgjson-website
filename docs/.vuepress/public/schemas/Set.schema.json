@@ -95,12 +95,6 @@
     "description": "The Magic Card Market set ID.",
     "introduced": "v4.4.0"
   },
-  "meta": {
-    "type": "object(string: string)",
-    "example": "{{link@version@/files/version}}",
-    "description": "See the {{link@version@/files/version}} structure.",
-    "introduced": "v4.0.0"
-  },
   "mtgoCode": {
     "type": "string",
     "example": "\"RNA\"",
@@ -122,7 +116,7 @@
   "releaseDate": {
     "type": "string",
     "example": "\"2019-01-25\"",
-    "description": "Release date in {{link@ISO-8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set.",
+    "description": "Release date in {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set.",
     "introduced": "v4.0.0"
   },
   "tcgplayerGroupId": {

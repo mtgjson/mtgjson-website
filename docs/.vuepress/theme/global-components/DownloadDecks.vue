@@ -60,7 +60,7 @@ export default {
       showOptions: false,
       sortKey: 'releaseDate:true',
       downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
-      deckDirectory: 'json/decks',
+      deckDirectory: undefined,
       message: 'Loading...',
     };
   },
@@ -70,11 +70,13 @@ export default {
     },
   },
   async created() {
+    this.deckDirectory = this.$themeConfig.api + '/decks';
+
     if(this.$store.getters.decks.length < 1){
       await this.$store.dispatch('UPDATE_DECKS');
     }
 
-    this.filteredDecks = this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
+    this.filteredDecks = await this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
   },
   methods: {
     handleMessage(length = 0) {

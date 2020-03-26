@@ -22,8 +22,6 @@
 
 All possible compiled outputs from MTGJSON.
 
-> Data type: `object(string: any)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

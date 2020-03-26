@@ -1,6 +1,18 @@
 <template lang="pug">
   .schema(v-if="schema")
+    //- File Information
+    //- This is the same throughout all "files" but not "structures"
+    .fileInfo(v-if="isFilePage")
+      .schema-item
+        blockquote
+          <span class="md-code">meta: { <<router-link :to="'/files/version/'">version</router-link> Properties> },</span></br>
+          <span class="md-code">data: { <<router-link :to="'#data-properties'">Data</router-link> Properties> }</span>
+
+      h3#data-properties
+        <a href="#data-properties" class="header-anchor">#</a> Data Properties
+
     //- Properties Legend
+    //- This fills out a filtered list of tags that a property may have
     .schema-item.schema-legend(v-if="filteredAttributes.size")
       h4 Property Attributes
       p The property attributes you see below earmark possible conditions for a field in this data structure.
@@ -10,6 +22,7 @@
           span {{ getTitle(attribute.split('-')[0]) }}
 
     //- Properties Index
+    //- This fills out an anchored list of all the properties
     .schema-item.schema-index(v-if="showIndex")
       h4 Property Index
       p A list of all available properties.
@@ -20,6 +33,7 @@
       .show-more(v-if="showMore" @click="toggleIndex") {{ (willShowMore ? 'Show More' : 'Show Less') }}
 
     //- Properties Table
+    //- This fills out a fully descriptive list of all the properties
     .schema-item.schema-data
       h4 Property Information
       blockquote.schema-data--table(v-for="(data, name) in filteredSchema" v-if="name !== '...'")
@@ -82,6 +96,7 @@ export default {
   data() {
     return {
       schema: [],
+      isFilePage: false,
       showMore: true,
       willShowMore: true,
       tokenOnlyFields: [
@@ -175,6 +190,7 @@ export default {
     const landcycle = new this.$landcycle(schema);
     landcycle._init();
 
+    this.isFilePage = this.$page.path.split('/')[1] === 'files';
     this.showMore = Object.keys(schema).length > 4;
     this.schema = landcycle.schema;
   },

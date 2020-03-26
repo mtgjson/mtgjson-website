@@ -22,8 +22,6 @@
 
 List of codes, names and release dates of all sets.
 
-> Data type: `array(anonymous object)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

@@ -22,8 +22,6 @@
 
 Every card type of any type of card.
 
-> Data type: `object(string: object)`  
-
-### Data Structure
+### File Structure
 
 <Documentation/>

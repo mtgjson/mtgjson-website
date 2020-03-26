@@ -16,11 +16,5 @@
     "example": "[\"surveil\"]",
     "description": "List of keyword actions found in rules text on cards.",
     "introduced": "v4.3.0"
-  },
-  "meta": {
-    "type": "object(string: string)",
-    "example": "{{link@version@/files/version}}",
-    "description": "See the {{link@version@/files/version}} structure.",
-    "introduced": "v4.1.0"
   }
 }

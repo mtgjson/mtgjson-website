@@ -76,11 +76,5 @@
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
     "description": "All card types available for Vanguards",
     "introduced": "v4.3.0"
-  },
-  "meta": {
-    "type": "object(string: string)",
-    "example": "{{link@version@/files/version}}",
-    "description": "See the {{link@version@/files/version}} file.",
-    "introduced": "v4.3.0"
   }
 }
