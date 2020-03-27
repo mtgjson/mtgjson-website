@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Set",
-  "schema": "Set",
+  "title": "Set (Individual)",
+  "schema": "SetIndividual",
   "meta": [
     {
       "name": "description",
-      "content": "Set data structure for MTGJSON.",
+      "content": "Set (Individual) data structure for MTGJSON.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, set, sets",
+      "content": "mtg, magic: the gathering, mtgjson, json, set, individual",
     }
   ],
   "feed": {
@@ -18,9 +18,9 @@
 }
 ---
 
-# Set
+# Set (Individual)
 
-The set structure describes the properties and values of a single set.
+The Set (Individual) structure describes the properties and values of an individual set.
 
 > Possible parent files: `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`  
 

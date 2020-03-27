@@ -12,7 +12,7 @@
             //- Individual Files
             ol(v-if="!file.example.includes('Files')")
               li.text-wrap--download--btn-wrap
-                small JSON Files:
+                small Download Files:
                 span
                   a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json`") JSON
                 span(v-for="(compression, key) in fileBaseCompression")
@@ -21,7 +21,7 @@
             //- Directory Files
             ol(v-if="file.example.includes('Files')")
               li.text-wrap--download--btn-wrap
-                small Directory Files:
+                small Download Files:
                 span(v-for="(format, key) in fileBaseCompression" v-if="format !== 'zip'")
                   a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
                 span(v-else)
@@ -29,13 +29,13 @@
 
             ol(v-if="file.example === 'AllPrintings'")
                 li.text-wrap--download--btn-wrap
-                  small SQL Files:
+                  small SQL Download Files:
                   span
                     a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sql`") SQL
                   span(v-for="(compression, key) in fileBaseCompression")
                     a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
-                  small SQLite Files:
+                  small SQLite Download Files:
                   span
                     a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite`") SQLite
                   span(v-for="(compression, key) in fileBaseCompression")
@@ -50,7 +50,7 @@ export default {
   name: 'AllDownloads',
   data() {
     return {
-      files: require(`../../public/schemas/Files.schema.json`),
+      files: require(`../../public/schemas/CompiledList.schema.json`),
       fileBaseCompression: ['bz2', 'gz', 'xz', 'zip'],
       fileSQLCompression: ['sql', 'sqlite'],
       fileDirectory: undefined,

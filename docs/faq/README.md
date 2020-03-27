@@ -24,7 +24,7 @@ In most cases, [AllPrintings.json](/files/AllPrintings.json) is the correct file
 ### What information is in AllCards.json?
 AllCards.json only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 
-For a full list of properties, see the [card](/structures/card/) structure documentation. Only properties marked with the <span class="attribute atomic">atomic</span> attribute will be included in AllCards.json.
+For a full list of properties, see the [Card (Atomic)](/data-structures/card-atomic/) data structure documentation.
 
 ### Where does the data come from?
 Data is collected from a variety of sources, including Gatherer, Scryfall, TCGPlayer, and many more.

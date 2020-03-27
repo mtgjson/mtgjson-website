@@ -1,7 +1,7 @@
 ---
 {
-  "title": "Set List",
-  "schema": "SetList",
+  "title": "Set (Manifest)",
+  "schema": "SetManifest",
   "meta": [
     {
       "name": "description",
@@ -9,7 +9,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, setList",
+      "content": "mtg, magic: the gathering, mtgjson, json, set (manifest)",
     }
   ],
   "feed": {
@@ -18,9 +18,9 @@
 }
 ---
 
-# Set List
+# Set (Manifest)
 
-The set list structure describes the properties and values of a single set manifest.
+The Set (Manifest) structure describes the properties and values of a single set manifest.
 
 > Parent file: `SetList`
 

@@ -7,8 +7,8 @@
   },
   "mainBoard": {
     "type": "array(object)",
-    "example": "{{link@card@/structures/card}}",
-    "description": "The cards in the main-board. See the {{link@card@/structures/card}} structure.",
+    "example": "{{link@card@/data-structures/card}}",
+    "description": "The cards in the main-board. See the {{link@card@/data-structures/card}} structure.",
     "introduced": "v4.3.0"
   },
   "name": {
@@ -19,8 +19,8 @@
   },
   "sideBoard": {
     "type": "array(object)",
-    "example": "{{link@card@/structures/card}}",
-    "description": "The cards in the side-board. See the {{link@card@/structures/card}} structure.",
+    "example": "{{link@card@/data-structures/card}}",
+    "description": "The cards in the side-board. See the {{link@card@/data-structures/card}} structure.",
     "introduced": "v4.3.0"
   },
   "releaseDate": {

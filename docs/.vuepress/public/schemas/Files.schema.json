@@ -1,12 +1,12 @@
 {
   "meta": {
     "type": "object",
-    "example": "{{link@Version@/structures/version}}",
-    "description": "Application metadata object. See the {{link@Version@/structures/version}} structure."
+    "example": "{{link@Version@/data-structures/version}}",
+    "description": "Application metadata object. See the {{link@Version@/data-structures/version}} structure."
   },
   "data": {
     "type": "object, array",
-    "example": "Multiple {{link@Set@/structures/set}}, Multiple {{link@Deck (Manifest)@/structures/deck-manifest}}, {{link@Card Types@/structures/card-types}}, {{link@Keywords@/structures/keywords}}, etc.",
+    "example": "Multiple {{link@Set (Individual)@/data-structures/set-individual}}, Multiple {{link@Deck (Manifest)@/data-structures/deck-manifest}}, {{link@Card Types@/data-structures/card-types}}, {{link@Keywords@/data-structures/keywords}}, etc.",
     "description": "Top-level key that holds the \"API\" data. The returned data is based on the file."
   }
 }

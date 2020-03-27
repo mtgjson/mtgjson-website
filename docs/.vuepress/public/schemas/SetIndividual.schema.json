@@ -22,8 +22,8 @@
   },
   "cards": {
     "type": "array(object)",
-    "example": "[{{link@card@/structures/card}}]",
-    "description": "List of cards in this set. See the {{link@card@/structures/card}} structure.",
+    "example": "[{{link@card@/data-structures/card}}]",
+    "description": "List of cards in this set. See the {{link@card@/data-structures/card}} structure.",
     "introduced": "v4.0.0"
   },
   "code": {
@@ -127,8 +127,8 @@
   },
   "tokens": {
     "type": "array(object)",
-    "example": "{{link@token@/structures/token}}",
-    "description": "Tokens available to the set. See the {{link@token@/structures/token}} structure.",
+    "example": "{{link@token@/data-structures/token}}",
+    "description": "Tokens available to the set. See the {{link@token@/data-structures/token}} structure.",
     "introduced": "v4.0.0"
   },
   "totalSetSize": {
@@ -139,8 +139,8 @@
   },
   "translations": {
     "type": "object(string: string)",
-    "example": "{{link@translations@/structures/translations}}",
-    "description": "Translated set name by language. See the {{link@translations@/structures/translations}} structure.",
+    "example": "{{link@translations@/data-structures/translations}}",
+    "description": "Translated set name by language. See the {{link@translations@/data-structures/translations}} structure.",
     "introduced": "v4.3.2"
   },
   "type": {

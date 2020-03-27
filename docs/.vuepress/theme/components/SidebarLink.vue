@@ -99,6 +99,7 @@ a.sidebar-link {
   box-sizing: border-box;
 
   &.active {
+    color: var(--accent-color);
     font-weight: bold;
   }
 

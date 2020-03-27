@@ -20,6 +20,24 @@
     ],
     "introduced": "v4.0.0"
   },
+  "isOnlineOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Set is only available online.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.6.2"
+  },
+  "isPaperOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Set in only physically printed.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.6.2"
+  },
   "name": {
     "type": "string",
     "example": "\"Core Set 2019\"",

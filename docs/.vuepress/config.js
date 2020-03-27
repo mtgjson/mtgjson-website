@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [structures] = generateSidebarRoutes(['/structures/']);
+const [structures] = generateSidebarRoutes(['/data-structures/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
@@ -106,7 +106,7 @@ module.exports = {
       },
     },
     searchMaxSuggestions: 10,
-    displayAllHeaders: true,
+    displayAllHeaders: false,
     sidebarDepth: 1,
     lastUpdated: 'Last Updated',
     nav: [
@@ -120,7 +120,6 @@ module.exports = {
       {
         title: 'About Us',
         path: '/',
-        collapsable: false,
       },
       {
         title: 'Downloads',
@@ -133,12 +132,12 @@ module.exports = {
         path: '/faq/',
       },
       {
-        title: 'Understanding Files',
-        path: '/understanding-files/',
+        title: 'File Structures',
+        path: '/file-structures/',
       },
       {
-        title: 'Structures',
-        path: '/structures/card',
+        title: 'Data Structures',
+        path: '/data-structures/card',
         collapsable: false,
         children: structures,
       },

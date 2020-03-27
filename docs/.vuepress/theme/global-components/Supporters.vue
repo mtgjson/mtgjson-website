@@ -1,7 +1,7 @@
 <template lang="pug">
   .supporters(v-if="supporters")
     .supporters-wrap(v-if="patrons")
-      h3 Our Patreon Supporters
+      h4 Our Patreon Supporters
       p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project.
       small(v-html="projectMsg")
       .supporters-grid
@@ -17,7 +17,7 @@
 
     //- Not Patrons but services that use MTGJSON
     .supporters-wrap(v-if="services")
-      h3 Others Powered by MTGJSON
+      h4 Others Powered by MTGJSON
       p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here.
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")

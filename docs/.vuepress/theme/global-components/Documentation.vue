@@ -12,7 +12,7 @@
 
     //- Properties Index
     //- This fills out an anchored list of all the properties
-    .schema-item.schema-index(v-if="showIndex")
+    .schema-item.schema-index(v-if="showMore")
       h4 Property Index
       p A list of all available properties.
       ol(:class="{hide: willShowMore, wontHide: !showMore}")
@@ -76,7 +76,6 @@
               :class="attribute.split('-')[0]"
               :title="getTitle(attribute.split('-')[0])") {{ attribute.replace('-', ' ') }}
 
-      blockquote.schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
 </template>
 
 <script>
@@ -85,42 +84,13 @@ export default {
   data() {
     return {
       schema: null,
-      isFilePage: false,
       showMore: true,
       willShowMore: true,
-      tokenOnlyFields: [
-        'artist',
-        'borderColor',
-        'colorIdentity',
-        'colorIndicator',
-        'colors',
-        'isOnlineOnly',
-        'layout',
-        'loyalty',
-        'name',
-        'names',
-        'number',
-        'power',
-        'reverseRelated',
-        'scryfallId',
-        'scryfallOracleId',
-        'scryfallIllustrationId',
-        'subtypes',
-        'supertypes',
-        'side',
-        'text',
-        'toughness',
-        'type',
-        'types',
-        'uuid',
-        'watermark',
-      ],
+      isAtomicCard: false,
+      isTokenCard: false
     };
   },
   computed: {
-    showIndex() {
-      return !Object.keys(this.filteredSchema).includes('...');
-    },
     filteredAttributes() {
       // Store the schema attributes for properties
       const schema = this.filteredSchema;
@@ -131,7 +101,9 @@ export default {
           const field = schema[name];
 
           if (field.attributes) {
-            attributes = attributes.concat(field.attributes.map(attr => attr.split('-')[0]));
+            attributes = attributes.concat(
+              field.attributes.map(attr => attr.split('-')[0])
+            );
           }
         }
       }
@@ -142,33 +114,45 @@ export default {
       const schema = this.schema;
       let newSchema = undefined;
 
-      // Logic to filter down the card schema for AllCards
-      if (this.$page.frontmatter.title === 'AllCards') {
+      if (this.isAtomicCard) {
         newSchema = {};
 
         for (let name in schema) {
           if (hasOwnProperty.call(schema, name)) {
             const field = schema[name];
 
-            if (field.attributes && field.attributes.includes('atomic')) {
+            if (field.isAtomicProperty) {
               newSchema[name] = field;
             }
           }
         }
-      }
-
-      if (this.$page.frontmatter.title === 'token') {
+      } else if (this.isTokenCard) {
         newSchema = {};
 
         for (let name in schema) {
           if (hasOwnProperty.call(schema, name)) {
             const field = schema[name];
 
-            if (this.tokenOnlyFields.includes(name)) {
+            if (field.isTokenProperty) {
+              if(!field.attributes || (field.attributes && !field.attributes.includes('deck'))){
+                newSchema[name] = field;
+              }
+            }
+          }
+        }
+      } else {
+        newSchema = {};
+
+        for (let name in schema) {
+          if (hasOwnProperty.call(schema, name)) {
+            const field = schema[name];
+
+            if (!field.isTokenOnlyProperty) {
               newSchema[name] = field;
             }
           }
         }
+
       }
 
       return newSchema || schema;
@@ -179,7 +163,8 @@ export default {
     const landcycle = new this.$landcycle(schema);
     landcycle._init();
 
-    this.isFilePage = this.$page.path.split('/')[1] === 'files';
+    this.isAtomicCard = this.$page.frontmatter.title === 'Card (Atomic)';
+    this.isTokenCard = this.$page.frontmatter.title === 'Card (Token)';
     this.showMore = Object.keys(schema).length > 4;
     this.schema = landcycle.schema;
   },
@@ -189,20 +174,16 @@ export default {
     },
     getTitle(attribute) {
       switch (attribute) {
-        case 'atomic':
-          return 'Property available in AllCards JSON';
         case 'optional':
-          return 'Property omitted when value returns a falsey or expected value';
+          return 'Property omitted when value returns a falsey or expected value.';
         case 'deprecated':
-          return 'Property will be removed in a future major or minor version release';
+          return 'Property will be removed in a future major or minor version release.';
         case 'deck':
-          return 'Property only available on a card within an Individual Deck JSON';
+          return 'Property only available on a card within a Deck (Individual) file.';
         case 'nullable':
-          return 'Property may return a null value';
+          return 'Property may return a null value.';
         case 'stale':
-          return 'Property may return an undocumented value';
-        case 'token':
-          return 'Property only available on token cards';
+          return 'Property may return an undocumented value.';
         default:
           break;
       }
