@@ -1,6 +1,6 @@
 ---
 {
-  "title": "token",
+  "title": "Token",
   "schema": "Card",
   "meta": [
     {
@@ -20,9 +20,8 @@
 
 # Token
 
-> Parent structure: [set](../set)  
-> Parent property: `tokens`  
-> Parent property type: `array(anonymous object)`  
+> Possible parent property: `tokens`
+> Possible parent structure: [set](../set)
 
 ### Data Properties
 

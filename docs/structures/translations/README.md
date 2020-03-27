@@ -1,6 +1,6 @@
 ---
 {
-  "title": "translations",
+  "title": "Translations",
   "schema": "Translations",
   "meta": [
     {
@@ -20,9 +20,8 @@
 
 # Translations
 
-> Parent structure: [set](../set)  
-> Parent property: `translations`  
-> Parent property type: `object(string: string)`  
+> Possible parent property: `translations`
+> Possible parent structure: [card](../card)
 
 ### Data Properties
 

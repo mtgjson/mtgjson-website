@@ -1,12 +1,12 @@
 {
-  "[Unique {{link@set@/structures/set}} ID]" : {
+  "meta" : {
     "type": "object",
-    "example": "{{link@set@/structures/set}}",
-    "description": "This set, set data and all card printings in this set. See the {{link@set@/structures/set}} structure."
+    "example": "{{link@version@/files/version}}",
+    "description": "The metadata object. See the {{link@version@/files/version}} file."
   },
-  "..." : {
-    "type": "...",
-    "example": "...",
-    "description": "..."
+  "data" : {
+    "type": "object",
+    "example": "{ \"M20\": {{link@set@/structures/set}} }",
+    "description": "A JSON object containing key/value pairs of unique set IDs and their associated JSON object data. See the {{link@set@/structures/set}} structure."
   }
 }

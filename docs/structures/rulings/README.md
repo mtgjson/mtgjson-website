@@ -1,6 +1,6 @@
 ---
 {
-  "title": "rulings",
+  "title": "Rulings",
   "schema": "Rulings",
   "meta": [
     {
@@ -22,10 +22,7 @@
 
 List of rulings that are for a specific card.
 
-> Parent structure: [card](../card)  
-> Parent property: `rulings`  
-> Parent property type: `array(anonymous object)`  
-> Property type: `string`
+> Possible parent property: `rulings`
 
 ### Data Properties
 

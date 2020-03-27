@@ -1,6 +1,6 @@
 ---
 {
-  "title": "CardTypes",
+  "title": "Card Types",
   "schema": "CardTypes",
   "meta": [
     {
@@ -18,10 +18,12 @@
 }
 ---
 
-# CardTypes
+# Card Types
 
 Every card type of any type of card.
 
-### File Structure
+> Parent file: `CardTypes`
+
+### Data Properties
 
 <Documentation/>

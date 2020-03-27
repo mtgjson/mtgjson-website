@@ -1,6 +1,6 @@
 ---
 {
-  "title": "legalities",
+  "title": "Legalities",
   "schema": "Legalities",
   "meta": [
     {
@@ -22,10 +22,7 @@
 
 List of play formats that are legal for a specific card.
 
-> Parent structure: [card](../card)  
-> Parent property: `legalities`  
-> Parent property type: `object(string: string)`  
-> Property values: `Legal`, `Restricted`, or `Banned`
+> Possible parent property: `legalities`  
 
 ::: tip
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example data structure.

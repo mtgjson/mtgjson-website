@@ -1,6 +1,6 @@
 ---
 {
-  "title": "prices",
+  "title": "Prices",
   "schema": "Prices",
   "meta": [
     {
@@ -22,10 +22,7 @@
 
 Prices is a structure defining an object of card prices based on date.
 
-> Parent structure: [AllPrices](../../files/all-prices)  
-> Parent property: `prices`  
-> Parent property type: `object(anonymous object)`  
-> Property type: `object`  
+> Parent file: `AllPrices`
 
 ### Data Properties
 

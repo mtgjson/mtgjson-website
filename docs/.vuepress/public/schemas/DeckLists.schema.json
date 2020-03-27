@@ -1,8 +1,0 @@
-{
-  "decks": {
-    "type": "array(object)",
-    "example": "{{link@decks@/structures/decks}}",
-    "description": "List of pre-constructed decks. See the {{link@decks@/structures/decks}} structure.",
-    "introduced": "v4.3.0"
-  }
-}

@@ -1,12 +1,12 @@
 {
-  "[Unique {{link@card@/structures/card}} UUID]": {
-    "type": "object(string: object)",
-    "example": "\"prices\": {{link@prices@/structures/prices}}",
-    "description": "The key is the UUID of a card. See the {{link@prices@/structures/prices}} structure for a UUID's value."
+  "meta" : {
+    "type": "object",
+    "example": "{{link@version@/files/version}}",
+    "description": "The metadata object. See the {{link@version@/files/version}} file."
   },
-  "..." : {
-    "type": "...",
-    "example": "...",
-    "description": "..."
+  "data" : {
+    "type": "object",
+    "example": "{ \"d7a38484-2acc-49a6-b32d-d54dddb14d31\": {{link@prices@/structures/prices}} }",
+    "description": "A JSON object containing key/value pairs of unique card UUIDs and their associated JSON object data. See the {{link@prices@/structures/prices}} structure."
   }
 }

@@ -1,6 +1,6 @@
 ---
 {
-  "title": "version",
+  "title": "Version",
   "schema": "Version",
   "meta": [
     {
@@ -20,8 +20,12 @@
 
 # Version
 
-Metadata object has app build and prices build date (ISO 8601), and version data of this MTGJSON release.
+The version or `meta` object has application build and prices build date (ISO 8601), and versioning data of this MTGJSON release.
 
-### File Structure
+> Parent file: `version`  
+> Possible parent property: `meta`  
+> Note: All files reference this structure in the top-level `meta` key.  
+
+### Data Properties
 
 <Documentation/>

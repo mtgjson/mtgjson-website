@@ -1,6 +1,6 @@
 ---
 {
-  "title": "card",
+  "title": "Card",
   "schema": "Card",
   "meta": [
     {
@@ -22,8 +22,9 @@
 
 The card structure describes the properties and values of a single card.
 
-> Parent property: `cards`  
-> Parent property type: `array(anonymous object)`  
+> Possible parent files: `AllCards`, `StandardCards`, `PauperCards`, `PioneerCards`, `ModernCards`, `LegacyCards`, `VintageCards`  
+> Possible parent property: `data`, `cards`  
+> Possible parent structure: [set](../set)    
 
 ### Data Properties
 

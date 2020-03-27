@@ -1,6 +1,6 @@
 ---
 {
-  "title": "purchaseUrls",
+  "title": "Purchase Urls",
   "schema": "PurchaseUrls",
   "meta": [
     {
@@ -21,10 +21,8 @@
 # Purchase Urls
 
 Purchase Urls is a structure defining URL paths to purchase a card or other product.
-
-> Parent structure: [card](../card)  
-> Parent property: `purchaseUrls`  
-> Parent property type: `array(anonymous object)`  
+  
+> Possible parent property: `purchaseUrls`  
 
 ### Data Properties
 

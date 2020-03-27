@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Keywords compiled output documentation.",
+      "content": "All keywords used on Magic: The Gathering cards.",
     },
     {
       "name": "keywords",
@@ -20,8 +20,10 @@
 
 # Keywords
 
-List of all keywords used on Magic cards.
+List of all keywords used on Magic: The Gathering cards.
 
-### File Structure
+> Parent file: `Keywords`  
+
+### Data Properties
 
 <Documentation/>

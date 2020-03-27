@@ -1,6 +1,6 @@
 ---
 {
-  "title": "leadershipSkills",
+  "title": "Leadership Skills",
   "schema": "LeadershipSkills",
   "meta": [
     {
@@ -22,10 +22,7 @@
 
 List of play formats that a specific card is legal to be your commander.
 
-> Parent structure: [card](../card)  
-> Parent property: `leadershipSkills`  
-> Parent property type: `array(string: boolean)`  
-> Property values: `true`, `false`
+> Possible parent property: `leadershipSkills`  
 
 ### Data Properties
 

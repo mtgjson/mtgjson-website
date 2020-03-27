@@ -1,9 +1,10 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [ structures, files ] = generateSidebarRoutes(['/structures/','/files/']);
+const [structures] = generateSidebarRoutes(['/structures/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
-const description = 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
+const description =
+  'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
 module.exports = {
   host: '0.0.0.0',
@@ -21,15 +22,15 @@ module.exports = {
       'meta',
       {
         property: 'og:title',
-        content: title
-      }
+        content: title,
+      },
     ],
     [
       'meta',
       {
         property: 'og:description',
-        content: description
-      }
+        content: description,
+      },
     ],
     [
       'meta',
@@ -42,8 +43,8 @@ module.exports = {
       'meta',
       {
         name: 'google-site-verification',
-        content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
-      }
+        content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY',
+      },
     ],
     // Keyrun for set images
     [
@@ -76,11 +77,7 @@ module.exports = {
       'feed',
       {
         canonical_base: 'https://mtgjson.com',
-        description_sources: [
-          'frontmatter',
-          'description',
-          'excerpt'
-        ],
+        description_sources: ['frontmatter', 'description', 'excerpt'],
         // Max is required
         count: 100,
         feeds: {
@@ -126,37 +123,24 @@ module.exports = {
         collapsable: false,
       },
       {
+        title: 'Downloads',
+        path: '/downloads/all-files',
+        collapsable: false,
+        children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/'],
+      },
+      {
         title: 'F.A.Q.',
         path: '/faq/',
       },
       {
-        title: 'Downloads',
-        path: '/downloads/all-files',
-        collapsable: false,
-        children: [
-          '/downloads/all-files/',
-          '/downloads/all-sets/',
-          '/downloads/all-decks/'
-        ]
+        title: 'Understanding Files',
+        path: '/understanding-files/',
       },
       {
-        title: 'Documentation',
-        path: '/files/all-cards',
+        title: 'Structures',
+        path: '/structures/card',
         collapsable: false,
-        children: [
-          {
-            title: 'Files',
-            path: '/files/all-cards',
-            collapsable: false,
-            children: files,
-          },
-          {
-            title: 'Structures',
-            path: '/structures/card',
-            collapsable: false,
-            children: structures,
-          },
-        ],
+        children: structures,
       },
       {
         title: 'Changelog',

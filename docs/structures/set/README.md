@@ -1,6 +1,6 @@
 ---
 {
-  "title": "set",
+  "title": "Set",
   "schema": "Set",
   "meta": [
     {
@@ -21,8 +21,8 @@
 # Set
 
 The set structure describes the properties and values of a single set.
- 
-> Parent property type: `object(string: any)`  
+
+> Possible parent files: `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`  
 
 ### Data Properties
 

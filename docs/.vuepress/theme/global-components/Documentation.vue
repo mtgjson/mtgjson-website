@@ -1,16 +1,5 @@
 <template lang="pug">
   .schema(v-if="schema")
-    //- File Information
-    //- This is the same throughout all "files" but not "structures"
-    .fileInfo(v-if="isFilePage")
-      .schema-item
-        blockquote
-          <span class="md-code">meta: { <<router-link :to="'/files/version/'">version</router-link> Properties> },</span></br>
-          <span class="md-code">data: { <<router-link :to="'#data-properties'">Data</router-link> Properties> }</span>
-
-      h3#data-properties
-        <a href="#data-properties" class="header-anchor">#</a> Data Properties
-
     //- Properties Legend
     //- This fills out a filtered list of tags that a property may have
     .schema-item.schema-legend(v-if="filteredAttributes.size")
@@ -95,7 +84,7 @@ export default {
   name: 'Documentation',
   data() {
     return {
-      schema: [],
+      schema: null,
       isFilePage: false,
       showMore: true,
       willShowMore: true,

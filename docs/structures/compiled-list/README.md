@@ -1,6 +1,6 @@
 ---
 {
-  "title": "CompiledList",
+  "title": "Compiled List",
   "schema": "CompiledList",
   "meta": [
     {
@@ -18,10 +18,12 @@
 }
 ---
 
-# CompiledList
+# Compiled List
 
 All possible compiled outputs from MTGJSON.
 
-### File Structure
+> Parent file: `CompiledList`
+
+### Data Properties
 
 <Documentation/>

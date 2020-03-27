@@ -1,6 +1,6 @@
 ---
 {
-  "title": "foreignData",
+  "title": "Foreign Data",
   "schema": "ForeignData",
   "meta": [
     {
@@ -22,9 +22,7 @@
 
 Foreign Data is a structure defining alternate language properties for a card.
 
-> Parent structure: [card](../card)  
-> Parent property: `foreignData`  
-> Parent property type: `array(anonymous object)`  
+> Possible parent property: `foreignData`  
 
 ### Data Properties
 
