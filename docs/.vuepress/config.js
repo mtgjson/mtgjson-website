@@ -106,7 +106,6 @@ module.exports = {
       },
     },
     searchMaxSuggestions: 10,
-    displayAllHeaders: false,
     sidebarDepth: 1,
     lastUpdated: 'Last Updated',
     nav: [

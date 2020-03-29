@@ -200,27 +200,27 @@ img {
     max-width: $contentWidth;
   }
 
-  & > :first-child {
+  & > *:first-child {
     margin-top: 0;
     padding-top: 0;
   }
 
-  & > * {
+  & > *:hover {
     .header-anchor {
-      opacity: 0;
+      display: none;
     }
   }
 
   // Deal with the scrolling issue with anchors being hidden
   // by the fixed navigation
-  & > h2,
-  & > h3 {
-    padding-top: 100px;
+  // & > h2,
+  // & > h3 {
+  //   padding-top: 100px;
 
-    &:first-of-type {
-      margin-top: -100px;
-    }
-  }
+  //   &:first-of-type {
+  //     margin-top: -100px;
+  //   }
+  // }
 
   a {
     text-decoration: underline;
@@ -286,12 +286,6 @@ img {
     z-index: -1;
   }
 
-  &.atomic {
-    &::before {
-      background-color: var(--blue-color);
-    }
-  }
-
   &.optional {
     &::before {
       background-color: var(--spoiler-color);
@@ -319,12 +313,6 @@ img {
   &.stale {
     &::before {
       background-color: var(--medium-gray-color);
-    }
-  }
-
-  &.token {
-    &::before {
-      background-color: plum;
     }
   }
 }

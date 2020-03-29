@@ -3,27 +3,18 @@
     "type": "boolean",
     "example": "false",
     "description": "Is this card able to be your commander in the Brawl Format?",
-    "attributes": [
-      "atomic"
-    ],
     "introduced": "v4.5.1"
   },
   "commander": {
     "type": "boolean",
     "example": "true",
     "description": "Is this card able to be your commander in the Commander format?",
-    "attributes": [
-      "atomic"
-    ],
     "introduced": "v4.5.1"
   },
   "oathbreaker": {
     "type": "boolean",
     "example": "true",
     "description": "Is this card able to be your commander in the Oathbreaker format?",
-    "attributes": [
-      "atomic"
-    ],
     "introduced": "v4.5.1"
   }
 }

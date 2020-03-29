@@ -159,6 +159,11 @@
       "link": "https://edhrec.com"
     },
     {
+      "name": "FlavorTexts",
+      "image": "avatar-flavortexts.gif",
+      "link": "https://flavortexts.com"
+    },
+    {
       "name": "IPGTree",
       "image": "avatar-ipgtree.jpg",
       "link": "http://alfchaval.epizy.com/ipgtree/"
@@ -314,6 +319,11 @@
       "link": "https://tutor.cards"
     },
     {
+      "name": "Venser's Journal",
+      "image": "avatar-vensersjournal.jpg",
+      "link": "https://vensersjournal.com/"
+    },
+    {
       "name": "XMage",
       "image": "avatar-xmage.png",
       "link": "http://xmage.de"
@@ -329,10 +339,6 @@
     {
       "name": "DideRobot",
       "link": "https://github.com/Didero/DideRobot"
-    },
-    {
-      "name": "FlavorTexts",
-      "link": "https://flavortexts.com"
     },
     {
       "name": "Lab Maniac",
@@ -365,10 +371,6 @@
     {
       "name": "TOP8Draft",
       "link": "http://www.top8draft.com/"
-    },
-    {
-      "name": "Venser's Journal",
-      "link": "https://vensersjournal.com/"
     }
   ]
 }

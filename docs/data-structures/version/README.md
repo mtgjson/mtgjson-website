@@ -20,7 +20,7 @@
 
 # Version
 
-The version or `meta` object has application build and prices build date (ISO 8601), and versioning data of this MTGJSON release.
+The version or `meta` object has application build and prices build date [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html/), and versioning data of this MTGJSON release.
 
 > Parent file: `version`  
 > Possible parent property: `meta`  

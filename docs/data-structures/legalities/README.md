@@ -24,8 +24,8 @@ List of play formats that are legal for a specific card.
 
 > Possible parent property: `legalities`  
 
-::: tip
-Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example data structure.
+::: warning
+Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example in the data structure.
 :::
 
 ### Data Properties

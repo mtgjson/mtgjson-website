@@ -27,16 +27,18 @@ Release Date: ???????????
 
 More placeholder about the announcement.
 
-The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please do so!
+The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please let us know!
 
 ### Website
-#### Updated
+#### Removed
 - Files are longer documented individually, instead their contents are pure data structures.
+- The "About Us" page no longer uses a table of contents.
+#### Added
 - More data structures are clearly defined now that the files deliver all the same top-level keys.
-- Atomic cards are now documented outright as a structure for clarity.
-- Data structures now reference more accurately its parents.
-- The About Us section will become a single page in the sidebar.
-- Some text and spacing adjustments for scrolling and viewports.
+- Atomic cards are now documented outright as a data structure for clarity.
+#### Updated
+- Data structures now reference their parent keys and parent files more accurately.
+- Some text and spacing adjustments for the "Changelog" page.
 
 ## 4.6.2
 Release Date: 2020-02-01

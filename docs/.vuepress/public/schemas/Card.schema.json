@@ -93,8 +93,8 @@
   },
   "foreignData": {
     "type": "array(object)",
-    "example": "{{link@foreign-data@/data-structures/foreign-data}}",
-    "description": "See the {{link@foreign-data@/data-structures/foreign-data}} structure.",
+    "example": "{{link@Foreign Data@/data-structures/foreign-data}}",
+    "description": "See the {{link@Foreign Data@/data-structures/foreign-data}} structure.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -166,6 +166,24 @@
       "optional"
     ],
     "introduced": "v4.4.2"
+  },
+  "isBuyABox": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card a Buy-a-Box promotional printing?",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.6.2"
+  },
+  "isDateStamped": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card printed with a date stamp? (Often used in pre-release cards)",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.6.2"
   },
   "isFullArt": {
     "type": "boolean",
@@ -290,8 +308,8 @@
   },
   "leadershipSkills": {
   	"type": "array(string: string)",
-  	"example": "{{link@leadershipSkills@/data-structures/leadership-skills}}",
-  	"description": "See the {{link@leadershipSkills@/data-structures/leadership-skills}} structure. Will be included only if one value is true.",
+  	"example": "{{link@Leadership Skills@/data-structures/leadership-skills}}",
+  	"description": "See the {{link@Leadership Skills@/data-structures/leadership-skills}} structure. Will be included only if one value is true.",
   	"attributes": [
   	  "optional"
   	],
@@ -300,8 +318,8 @@
   },
   "legalities": {
     "type": "object",
-    "example": "{{link@legalities@/data-structures/legalities}}",
-    "description": "See the {{link@legalities@/data-structures/legalities}} structure.",
+    "example": "{{link@Legalities@/data-structures/legalities}}",
+    "description": "See the {{link@Legalities@/data-structures/legalities}} structure.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -451,8 +469,8 @@
   },
   "purchaseUrls": {
     "type": "array(string: string)",
-    "example": "{{link@purchase-urls@/data-structures/purchase-urls}}",
-    "description": "See the {{link@purchase-urls@/data-structures/purchase-urls}} structure.",
+    "example": "{{link@Purchase Urls@/data-structures/purchase-urls}}",
+    "description": "See the {{link@Purchase Urls@/data-structures/purchase-urls}} structure.",
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
@@ -475,8 +493,8 @@
   },
   "rulings": {
     "type": "array(object)",
-    "example": "{{link@rulings@/data-structures/rulings}}",
-    "description": "See the {{link@rulings@/data-structures/rulings}} structure.",
+    "example": "{{link@Rulings@/data-structures/rulings}}",
+    "description": "See the {{link@Rulings@/data-structures/rulings}} structure.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
