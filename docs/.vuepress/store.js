@@ -2,6 +2,8 @@ import Vue from 'vue';
 import Vuex from 'vuex';
 import fetch from 'node-fetch';
 
+const api = 'https://mtgjson.com/api/v5/';
+
 Vue.use(Vuex);
 
 export default new Vuex.Store({
@@ -20,30 +22,33 @@ export default new Vuex.Store({
   actions: {
     UPDATE_METADATA: async ({ commit }) => {
       try {
-        const awaited = await fetch('https://mtgjson.com/files/version.json');
+        const awaited = await fetch(api + 'Meta.json');
         const promised = await awaited.json();
+        const { data } = promised;
 
-        commit('SET_METADATA', promised);
+        commit('SET_METADATA', data);
       } catch (err) {
         commit('SET_METADATA', {});
       }
     },
     UPDATE_DECKS: async ({ commit }) => {
       try {
-        const awaited = await fetch('https://mtgjson.com/files/DeckLists.json');
+        const awaited = await fetch(api + 'DeckLists.json');
         const promised = await awaited.json();
+        const { data } = promised;
 
-        commit('SET_DECKS', promised);
+        commit('SET_DECKS', data);
       } catch (err) {
         commit('SET_DECKS', []);
       }
     },
     UPDATE_SETS: async ({ commit }) => {
       try {
-        const awaited = await fetch('https://mtgjson.com/files/SetList.json');
+        const awaited = await fetch(api + 'SetList.json');
         const promised = await awaited.json();
+        const { data } = promised;
 
-        commit('SET_SETS', promised);
+        commit('SET_SETS', data);
       } catch (err) {
         commit('SET_DECKS', []);
       }
@@ -54,7 +59,7 @@ export default new Vuex.Store({
       state.metadata = data;
     },
     SET_DECKS: (state, data) => {
-      state.decks = data.decks;
+      state.decks = data;
     },
     SET_SETS: (state, data) => {
       state.sets = data;

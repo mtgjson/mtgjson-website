@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [structures] = generateSidebarRoutes(['/data-structures/']);
+const [models] = generateSidebarRoutes(['/data-models/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
@@ -97,7 +97,7 @@ module.exports = {
   // Vuepress Themeing
   themeConfig: {
     // API Config
-    api: 'api/v5/files',
+    api: 'api/v5',
     algolia: {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',
@@ -135,10 +135,10 @@ module.exports = {
         path: '/file-structures/',
       },
       {
-        title: 'Data Structures',
-        path: '/data-structures/card',
+        title: 'Data Models',
+        path: '/data-models/card',
         collapsable: false,
-        children: structures,
+        children: models,
       },
       {
         title: 'Changelog',

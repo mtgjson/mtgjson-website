@@ -29,15 +29,31 @@ More placeholder about the announcement.
 
 The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please let us know!
 
+### Cards
+#### Added
+- Added `asciiName`, which give the name of the card with replaced unicode characters.
+- Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
+#### Removed
+- Removed `names` in favor of `otherFaceIds`.
+- Removed `hasNoDeckLimit` in favor of `hasAlternativeDeckLimit`.
+
+### Files
+#### Changed
+- All files are now available via the `/api/v5/*` web-based url.
+- The `*Cards` files are now renamed `*AtomicCards` to better clarify that these files only contain atomic card data. Subsequently, `AllCards` is now `AtomicCards`.
+- The `version` file is now renamed `Meta`.
+- All files now used a top-level `data` and `meta` key. Any data models inside of `data` will lose the nested `meta` object.
+
 ### Website
 #### Removed
-- Files are longer documented individually, instead their contents are pure data structures.
+- Files are longer documented individually, instead their contents are pure data models.
 - The "About Us" page no longer uses a table of contents.
 #### Added
-- More data structures are clearly defined now that the files deliver all the same top-level keys.
-- Atomic cards are now documented outright as a data structure for clarity.
+- More data models are clearly defined now that the files deliver all the same top-level keys.
+- Atomic cards are now documented outright as a data model for clarity.
 #### Updated
-- Data structures now reference their parent keys and parent files more accurately.
+- "Data Structures" are now logically named "Data Models" and will be referenced as such.
+- Data models now reference their parent keys and parent files more accurately.
 - Some text and spacing adjustments for the "Changelog" page.
 
 ## 4.6.2
@@ -99,7 +115,7 @@ Release Date: 2019-10-28
 
 First, this release is the first of many releases to be compiled on AWS infrastructure. Thanks to the kind folks who have and continue to pledge on our [Patreon page](https://patreon.com/mtgjson), we are able to offer **daily builds of MTGJSON**! For the time being, we only plan on building price data daily, but we plan on expanding that further to full data releases as well.
 
-Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `AllPrices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/data-structures/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
+Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `AllPrices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/data-models/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
 
 Next, in order to alleviate a large percentage of confusion with our project, we have renamed `AllSets` to `AllPrintings`, with better descriptions and upgraded site layouts. Redirects will be in place to ensure current projects do not suffer due to this change.
 
@@ -424,8 +440,8 @@ Release Date: 2019-03-04
 
 ### Individual Sets
 #### Added
-- `scryfallOracleId` can be used as a UUID for unique cards and tokens - See [documentation](/data-structures/card) for more information
-- `scryfallIllustrationId` can be used as a UUID for unique artwork - See [documentation](/data-structures/card) for more information
+- `scryfallOracleId` can be used as a UUID for unique cards and tokens - See [documentation](/data-models/card) for more information
+- `scryfallIllustrationId` can be used as a UUID for unique artwork - See [documentation](/data-models/card) for more information
 
 #### Changed
 - `baseSetSize` defaults to `totalSetSize` if not manually adjusted - Found an error in the value? Provide a correction [on GitHub](https://github.com/mtgjson/mtgjson/blob/master/mtgjson4/resources/base_set_sizes.json)

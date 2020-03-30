@@ -5,7 +5,7 @@
 'use strict';
 
 const fetch = require('node-fetch');
-const uuidv4 = require('uuid/v4');
+const uuidv4 = require('uuid').v4;
 const fs = require('fs');
 
 (async () => {

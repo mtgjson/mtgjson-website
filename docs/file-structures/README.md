@@ -20,19 +20,20 @@
 
 # File Structures
 
-> The "Web API" or more commonly known as "files" that MTGJSON.com provides varies from JSON to compressed files to database files. The following documentation describes the JSON-based files and how they are served. Compressed versions of these files have the same data inside of them.
+> The "Web API" or more commonly known as "files" that MTGJSON.com provides varies from JSON to compressed files to SQL databases. The following documentation describes the JSON-based files and how they are served. Compressed versions of these files have the same data inside of them.
 
-While MTGJSON.com serves a variety of files, there are 4 major file types and variation to those types that one or more data structures...  
+While MTGJSON.com serves a variety of files, there are 4 major file types and variation to those types that one or more data models...  
 
-- *Cards: Serves data variations of the [Card](../data-structures/card) or [Card (Atomic)](../data-structures/card-atomic) data structure.
-- *Printings: Serves data variations of the [Set](../data-structures/set) data structure.
-- AllPrices: Serves data variations of [Prices](../data-structures/prices) data structure.
-- Other: Serves data for specific a data structure, like [Card Types](../data-structures/card-types) or [Deck (Individual)](../data-structures/deck-individual).
+- *AtomicCards: Serves variable data using the [Card (Atomic)](../data-models/card-atomic/) data model.
+- *Printings: Serves variable data using the [Set (Individual)](../data-models/set-individual/) data model.
+- Other files serve specific data using data models such as [Card Types](../data-models/card-types/) or [Deck (Individual)](../data-models/deck-individual/).
 
-The following is the data structure for all files:
+For a full list of files, see [All Files](../downloads/all-files/) downloads page.
+
+The following is the data model for all files:
 </br>
 </br>
 
-### Data Properties
+### Model Properties
 
 <Documentation/>

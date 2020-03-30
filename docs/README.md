@@ -20,10 +20,7 @@
 MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.
 
 ::: warning
-As of MTGJSON version 5, and going forward, web-served files will be available via a version specific "Web API" path: `/api/v5/files/*`. If your project depends on the web-served files please update your project to the new API as soon as possible.
-</br>
-</br>
-Legacy files for version 4 are still available during transition at `/json/*` or `/files/*` (both serve the same files). 
+As of MTGJSON version 5, and going forward, web-served files will be available via a version specific "Web API" path: `/api/v5/*`. If your project depends on the web-served files please update your project to the new API as soon as possible.
 :::
 
 ### The Team

@@ -6,6 +6,17 @@
     "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
+  "asciiName": {
+    "type": "string",
+    "example": "\"Lim-Dul's Vault\"",
+    "description": "The extended {{link@ASCII@http://www.asciitable.com/}} code formatted card name with no special unicode characters.",
+    "attributes": [
+      "optional"
+    ],
+    "isAtomicProperty": true,
+    "isTokenProperty": true,
+    "introduced": "5.0.0"
+  },
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
@@ -49,7 +60,7 @@
   },
   "count": {
     "type": "integer",
-    "example": "2",
+    "example": "3",
     "description": "How many of this card exists in a relevant deck.",
     "attributes": [
       "deck"
@@ -93,13 +104,13 @@
   },
   "foreignData": {
     "type": "array(object)",
-    "example": "{{link@Foreign Data@/data-structures/foreign-data}}",
-    "description": "See the {{link@Foreign Data@/data-structures/foreign-data}} structure.",
+    "example": "{{link@Foreign Data@/data-models/foreign-data}}",
+    "description": "See the {{link@Foreign Data@/data-models/foreign-data}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
   "frameEffects": {
-    "type": "array[string]",
+    "type": "array(string)",
     "example": "\"legendary\"",
     "description": "Values can be {{code@colorshifted}}, {{code@compasslanddfc}}, {{code@devoid}}, {{code@draft}}, {{code@legendary}}, {{code@miracle}}, {{code@mooneldrazidfc}}, {{code@nyxtouched}}, {{code@originpwdfc}}, {{code@sunmoondfc}}, or {{code@tombstone}}.",
     "introduced": "v4.6.0"
@@ -129,16 +140,15 @@
     ],
     "introduced": "v4.0.0"
   },
-  "hasNoDeckLimit": {
+  "hasAlternativeDeckLimit": {
     "type": "boolean",
     "example": "true",
-    "description": "Does this card allow more than 4 copies in a deck?",
+    "description": "Does this card allow a value other than 4 copies in a deck?",
     "attributes": [
-      "optional",
-      "deprecated-future"
+      "optional"
     ],
     "isAtomicProperty": true,
-    "introduced": "v4.5.1"
+    "introduced": "v5.0.0"
   },
   "hasNonFoil": {
     "type": "boolean",
@@ -308,8 +318,8 @@
   },
   "leadershipSkills": {
   	"type": "array(string: string)",
-  	"example": "{{link@Leadership Skills@/data-structures/leadership-skills}}",
-  	"description": "See the {{link@Leadership Skills@/data-structures/leadership-skills}} structure. Will be included only if one value is true.",
+  	"example": "{{link@Leadership Skills@/data-models/leadership-skills}}",
+  	"description": "See the {{link@Leadership Skills@/data-models/leadership-skills}} data model.",
   	"attributes": [
   	  "optional"
   	],
@@ -318,8 +328,8 @@
   },
   "legalities": {
     "type": "object",
-    "example": "{{link@Legalities@/data-structures/legalities}}",
-    "description": "See the {{link@Legalities@/data-structures/legalities}} structure.",
+    "example": "{{link@Legalities@/data-models/legalities}}",
+    "description": "See the {{link@Legalities@/data-models/legalities}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -393,7 +403,7 @@
   "mtgstocksId": {
     "type": "integer",
     "example": "40272",
-    "description": "mtgstocks.com card ID.",
+    "description": "{{link@mtgstocks@https://mtgstocks.com}} card ID.",
     "introduced": "v4.4.0"
   },
   "multiverseId": {
@@ -406,17 +416,6 @@
     "type": "string",
     "example": "\"Angel of Grace\"",
     "description": "Names of each face on the card. Meld cards are listed in the order of {{code@CardA}}, {{code@Meld}}, {{code@CardB}}.",
-    "attributes": [
-      "optional"
-    ],
-    "isAtomicProperty": true,
-    "isTokenProperty": true,
-    "introduced": "v4.0.0"
-  },
-  "names": {
-    "type": "array(string)",
-    "example": "[\"Nicol Bolas, the Ravager\",\"Nicol Bolas, the Arisen\"]",
-    "description": "Names of each face on the card. Meld cards are listed in the order of CardA, Meld, CardB.",
     "attributes": [
       "optional"
     ],
@@ -446,7 +445,7 @@
   "otherFaceIds": {
     "type": "array(string)",
     "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
-    "description": "List of uuid's of this card with counterparts, such as transformed or melded faces.",
+    "description": "List of UUID's of this card with counterparts, such as transformed or melded faces.",
     "attributes": [
       "optional"
     ],
@@ -469,8 +468,8 @@
   },
   "purchaseUrls": {
     "type": "array(string: string)",
-    "example": "{{link@Purchase Urls@/data-structures/purchase-urls}}",
-    "description": "See the {{link@Purchase Urls@/data-structures/purchase-urls}} structure.",
+    "example": "{{link@Purchase Urls@/data-models/purchase-urls}}",
+    "description": "See the {{link@Purchase Urls@/data-models/purchase-urls}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
@@ -493,8 +492,8 @@
   },
   "rulings": {
     "type": "array(object)",
-    "example": "{{link@Rulings@/data-structures/rulings}}",
-    "description": "See the {{link@Rulings@/data-structures/rulings}} structure.",
+    "example": "{{link@Rulings@/data-models/rulings}}",
+    "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -599,7 +598,7 @@
   "variations": {
     "type": "array(string)",
     "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
-    "description": "List of uuid id's of this card with alternate printings in the same set. Excludes Un-sets.",
+    "description": "List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.",
     "introduced": "v4.1.2"
   },
   "watermark": {

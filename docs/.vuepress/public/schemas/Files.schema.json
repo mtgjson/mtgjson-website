@@ -1,12 +1,12 @@
 {
-  "meta": {
-    "type": "object",
-    "example": "{{link@Version@/data-structures/version}}",
-    "description": "Application metadata object. See the {{link@Version@/data-structures/version}} structure."
-  },
   "data": {
     "type": "object, array",
-    "example": "Multiple {{link@Set (Individual)@/data-structures/set-individual}}, Multiple {{link@Deck (Manifest)@/data-structures/deck-manifest}}, {{link@Card Types@/data-structures/card-types}}, {{link@Keywords@/data-structures/keywords}}, etc.",
-    "description": "Top-level key that holds the \"API\" data. The returned data is based on the file."
+    "example": "Multiple {{link@Set (Individual)@/data-models/set-individual}}, Multiple {{link@Deck (Manifest)@/data-models/deck-manifest}}, {{link@Card Types@/data-models/card-types}}, {{link@Keywords@/data-models/keywords}}, etc.",
+    "description": "Top-level key that holds the \"Web API\" data. The returned data is based on the file."
+  },
+  "meta": {
+    "type": "object",
+    "example": "{{link@Meta@/data-models/meta}}",
+    "description": "Application metadata object. See the {{link@Meta@/data-models/meta}} data model."
   }
 }

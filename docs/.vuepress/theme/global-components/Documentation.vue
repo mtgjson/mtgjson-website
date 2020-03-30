@@ -4,7 +4,7 @@
     //- This fills out a filtered list of tags that a property may have
     .schema-item.schema-legend(v-if="filteredAttributes.size")
       h4 Property Attributes
-      p The property attributes you see below earmark possible conditions for a field in this data structure.
+      p The property attributes you see below earmark possible conditions for a field in this data model.
       ol
         li(v-for="(attribute, key) in filteredAttributes")
           .attribute(:class="attribute.split('-')[0]") {{ attribute.split('-')[0] }}
