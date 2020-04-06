@@ -31,7 +31,7 @@ The documentation of the website overall was changed in a drastic way with such 
 
 ### Cards
 #### Added
-- Added `asciiName`, which give the name of the card with replaced unicode characters.
+- Added `asciiName` for the name of the card with replaced unicode characters.
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
 #### Removed
 - Removed `names` in favor of `otherFaceIds`.
@@ -45,16 +45,17 @@ The documentation of the website overall was changed in a drastic way with such 
 - All files now used a top-level `data` and `meta` key. Any data models inside of `data` will lose the nested `meta` object.
 
 ### Website
-#### Removed
-- Files are longer documented individually, instead their contents are pure data models.
-- The "About Us" page no longer uses a table of contents.
+#### Changed
+- "Data Structures" are now named "Data Models".
+- Data models now reference their parent keys and parent files more accurately.
+- Data models now have the "optional" attribute marked on more properties for clarity.
+- Some text and spacing adjustments for the "Changelog" page.
 #### Added
 - More data models are clearly defined now that the files deliver all the same top-level keys.
 - Atomic cards are now documented outright as a data model for clarity.
-#### Updated
-- "Data Structures" are now logically named "Data Models" and will be referenced as such.
-- Data models now reference their parent keys and parent files more accurately.
-- Some text and spacing adjustments for the "Changelog" page.
+#### Removed
+- Files are longer documented individually, instead their contents are pure data models.
+- The "About Us" page no longer uses a table of contents.
 
 ## 4.6.2
 Release Date: 2020-02-01

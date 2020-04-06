@@ -3,13 +3,16 @@
     "type": "string",
     "example": "\"Ryan Yee\"",
     "description": "Name of the artist that illustrated the card art.",
+    "attributes": [
+      "optional"
+    ],
     "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "asciiName": {
     "type": "string",
     "example": "\"Lim-Dul's Vault\"",
-    "description": "The extended {{link@ASCII@http://www.asciitable.com/}} code formatted card name with no special unicode characters.",
+    "description": "The {{link@ASCII@http://www.asciitable.com}} (Basic/128) code formatted card name with no special unicode characters.",
     "attributes": [
       "optional"
     ],
@@ -26,7 +29,7 @@
   },
   "colorIdentity": {
     "type": "array(string)",
-    "example": "[\"B\"]",
+    "example": "[ \"B\", ... ]",
     "description": "List of all colors in card’s mana cost, rules text and any color indicator.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -34,7 +37,7 @@
   },
   "colorIndicator": {
     "type": "array(string)",
-    "example": "[\"B\",\"R\"]",
+    "example": "[ \"B\", \"R\", ... ]",
     "description": "List of all colors in card's color indicator (The symbol showing the colors of the card).",
     "attributes": [
       "optional"
@@ -45,7 +48,7 @@
   },
   "colors": {
     "type": "array(string)",
-    "example": "[\"B\",\"R\"]",
+    "example": "[ \"B\", \"R\", ... ]",
     "description": "List of all colors in card’s mana cost and any color indicator. Some cards are special (such as Devoid cards or other cards with certain rules text).",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -90,6 +93,9 @@
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the face of either half or part of the card.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "introduced": "v4.1.1"
   },
@@ -104,15 +110,19 @@
   },
   "foreignData": {
     "type": "array(object)",
-    "example": "{{link@Foreign Data@/data-models/foreign-data}}",
+    "example": "[ {{link@Foreign Data@/data-models/foreign-data}}, ... ]",
     "description": "See the {{link@Foreign Data@/data-models/foreign-data}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
   "frameEffects": {
     "type": "array(string)",
-    "example": "\"legendary\"",
-    "description": "Values can be {{code@colorshifted}}, {{code@compasslanddfc}}, {{code@devoid}}, {{code@draft}}, {{code@legendary}}, {{code@miracle}}, {{code@mooneldrazidfc}}, {{code@nyxtouched}}, {{code@originpwdfc}}, {{code@sunmoondfc}}, or {{code@tombstone}}.",
+    "example": "[ \"legendary\", ... ]",
+    "description": "Values can be {{code@adventure}}, {{code@colorshifted}}, {{code@compasslanddfc}}, {{code@devoid}}, {{code@draft}}, {{code@extendedart}}, {{code@inverted}}, {{code@legendary}}, {{code@miracle}}, {{code@mooneldrazidfc}}, {{code@nyxborn}}, {{code@nyxtouched}}, {{code@originpwdfc}}, {{code@showcase}}, {{code@sunmoondfc}}, {{code@tombstone}}, {{code@waxingandwaningmoonfc}}, or some undocumented value.",
+    "attributes": [
+      "optional",
+      "stale"
+    ],
     "introduced": "v4.6.0"
   },
   "frameVersion": {
@@ -308,7 +318,7 @@
   "layout": {
     "type": "string",
     "example": "\"normal\"",
-    "description": "Type of card layout. Can be {{code@normal}}, {{code@split}}, {{code@flip}}, {{code@transform}}, {{code@meld}}, {{code@leveler}}, {{code@saga}}, {{code@planar}}, {{code@scheme}}, {{code@vanguard}}, {{code@token}}, {{code@double_faced_token}}, {{code@emblem}}, {{code@augment}}, {{code@aftermath}}, or {{code@host}}.",
+    "description": "Type of card layout. Can be {{code@aftermath}}, {{code@augment}}, {{code@double_faced_token}}, {{code@emblem}}, {{code@flip}}, {{code@host}}, {{code@leveler}}, {{code@meld}}, {{code@normal}}, {{code@planar}}, {{code@saga}}, {{code@scheme}}, {{code@split}}, {{code@token}}, {{code@transform}}, {{code@vanguard}}, or some undocumented value.",
     "attributes": [
       "stale"
     ],
@@ -317,7 +327,7 @@
     "introduced": "v4.0.0"
   },
   "leadershipSkills": {
-  	"type": "array(string: string)",
+  	"type": "object",
   	"example": "{{link@Leadership Skills@/data-models/leadership-skills}}",
   	"description": "See the {{link@Leadership Skills@/data-models/leadership-skills}} data model.",
   	"attributes": [
@@ -365,12 +375,18 @@
     "type": "integer",
     "example": "371878",
     "description": "The Magic Card Market card ID.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.4.0"
   },
   "mcmMetaId": {
     "type": "integer",
     "example": "269313",
     "description": "The Magic Card Market card meta ID.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.4.0"
   },
   "mtgArenaId": {
@@ -404,12 +420,18 @@
     "type": "integer",
     "example": "40272",
     "description": "{{link@mtgstocks@https://mtgstocks.com}} card ID.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.4.0"
   },
   "multiverseId": {
     "type": "integer",
     "example": "457145",
-    "description": "An integer most cards have which Wizards of the Coast uses as a card identifier.",
+    "description": "An integer cards have which Wizards of the Coast uses as a card identifier.",
+    "attributes": [
+  	  "optional"
+  	],
     "introduced": "v4.0.0"
   },
   "name": {
@@ -434,17 +456,23 @@
     "type": "string",
     "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
     "description": "Text on the card as originally printed.",
+    "attributes": [
+  	  "optional"
+  	],
     "introduced": "v4.0.0"
   },
   "originalType": {
     "type": "string",
     "example": "\"Legendary Creature — Angel\"",
     "description": "Type as originally printed. Includes any supertypes and subtypes.",
+    "attributes": [
+  	  "optional"
+  	],
     "introduced": "v4.0.0"
   },
   "otherFaceIds": {
     "type": "array(string)",
-    "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
+    "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with counterparts, such as transformed or melded faces.",
     "attributes": [
       "optional"
@@ -454,22 +482,28 @@
   "power": {
     "type": "string",
     "example": "\"5\"",
-    "description": "Power of the creature.",
+    "description": "Power of the card.",
+    "attributes": [
+  	  "optional"
+  	],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "printings": {
     "type": "array(string)",
-    "example": "[\"M19\",\"PM19\"]",
+    "example": "[ \"M19\", \"PM19\", ... ]",
     "description": "List of sets the card was printed in, in uppercase.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
   "purchaseUrls": {
-    "type": "array(string: string)",
+    "type": "object",
     "example": "{{link@Purchase Urls@/data-models/purchase-urls}}",
     "description": "See the {{link@Purchase Urls@/data-models/purchase-urls}} data model.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
@@ -481,7 +515,7 @@
   },
   "reverseRelated": {
     "type": "array(string)",
-    "example": "[\"Ajani, Strength of the Pride\", ...]",
+    "example": "[ \"Ajani, Strength of the Pride\", ... ]",
     "description": "The names of the cards that produce this token.",
     "attributes": [
       "optional"
@@ -492,7 +526,7 @@
   },
   "rulings": {
     "type": "array(object)",
-    "example": "{{link@Rulings@/data-models/rulings}}",
+    "example": "[ {{link@Rulings@/data-models/rulings}}, ... ]",
     "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
@@ -535,7 +569,7 @@
   },
   "subtypes": {
     "type": "array(string)",
-    "example": "[\"Angel\"]",
+    "example": "[ \"Angel\", ... ]",
     "description": "List of card subtypes found after em-dash.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -543,7 +577,7 @@
   },
   "supertypes": {
     "type": "array(string)",
-    "example": "[\"Legendary\"]",
+    "example": "[ \"Legendary\", \"Creature\", ... ]",
     "description": "List of card supertypes found before em-dash.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -553,12 +587,18 @@
     "type": "integer",
     "example": "183201",
     "description": "Numeric identifier for the card for TCGPlayer.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.2.1"
   },
   "text": {
     "type": "string",
     "example": "\"Reach (This creature can block creatures with flying.)\\nDeathtouch (Any amount of damage this deals to a creature is enough to destroy it.)\"",
     "description": "Rules text of the card.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -567,6 +607,9 @@
     "type": "string",
     "example": "\"4\"",
     "description": "Toughness of the card.",
+    "attributes": [
+  	  "optional"
+  	],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -581,7 +624,7 @@
   },
   "types": {
     "type": "array(string)",
-    "example": "[\"Lengendary\", \"Creature\", \"Angel\"]",
+    "example": "[ \"Lengendary\", \"Creature\", \"Angel\", ... ]",
     "description": "List of all types of the card.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -597,8 +640,11 @@
   },
   "variations": {
     "type": "array(string)",
-    "example": "[\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\"]",
+    "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.1.2"
   },
   "watermark": {

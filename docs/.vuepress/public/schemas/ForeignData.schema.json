@@ -3,18 +3,27 @@
     "type": "string",
     "example": "\"Schwester von Nicol Bolas. Überlebende des Krieges der Drachenältesten. Die bösartigste ihrer Art.\"",
     "description": "Flavor text in foreign language.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "language": {
     "type": "string",
     "example": "\"German\"",
-    "description": "Foreign language of card. Can be {{code@English}}, {{code@Spanish}}, {{code@French}}, {{code@German}}, {{code@Italian}}, {{code@Portuguese (Brazil)}}, {{code@Japanese}}, {{code@Korean}}, {{code@Russian}}, {{code@Chinese Simplified}}, or {{code@Chinese Traditional}}.<br />Promotional cards can also be in {{code@Hebrew}}, {{code@Latin}}, {{code@Ancient Greek}}, {{code@Arabic}}, {{code@Sanskrit}}, or {{code@Phyrexian}}.",
+    "description": "Foreign language of card. Can be {{code@English}}, {{code@Spanish}}, {{code@French}}, {{code@German}}, {{code@Italian}}, {{code@Portuguese (Brazil)}}, {{code@Japanese}}, {{code@Korean}}, {{code@Russian}}, {{code@Chinese Simplified}}, {{code@Chinese Traditional}} or some undocumented value. Promotional cards can also be in {{code@Hebrew}}, {{code@Latin}}, {{code@Ancient Greek}}, {{code@Arabic}}, {{code@Sanskrit}}, {{code@Phyrexian}}, or some undocumented value.",
+    "attributes": [
+      "stale"
+    ],
     "introduced": "v4.0.0"
   },
   "multiverseId": {
     "type": "integer",
     "example": "447637",
-    "description": "Multiverse ID of the card. Omitted if not available.",
+    "description": "Multiverse ID of the card.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "name": {
@@ -27,12 +36,18 @@
     "type": "string",
     "example": "\"Fliegend, Wachsamkeit, verursacht Trampelschaden\nPalladia-Mors, die Verwüsterin, hat Fluchsicherheit, falls sie noch keinen Schaden zugefügt hat.\"",
     "description": "Text ruling of the card in foreign language.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "type": {
     "type": "string",
     "example": "Legendäre Kreatur — Ältester, Drache",
     "description": "Type of the card. Includes any supertypes and subtypes.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   }
 }

@@ -1,6 +1,6 @@
 {
   "data": {
-    "type": "object, array",
+    "type": "object | array(object)",
     "example": "Multiple {{link@Set (Individual)@/data-models/set-individual}}, Multiple {{link@Deck (Manifest)@/data-models/deck-manifest}}, {{link@Card Types@/data-models/card-types}}, {{link@Keywords@/data-models/keywords}}, etc.",
     "description": "Top-level key that holds the \"Web API\" data. The returned data is based on the file."
   },

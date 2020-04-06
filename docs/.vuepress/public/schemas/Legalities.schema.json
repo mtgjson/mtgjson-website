@@ -10,7 +10,7 @@
   },
   "commander": {
     "type": "string",
-    "example": "Legal",
+    "example": "\"Legal\"",
     "description": "Sol Ring is legal in the Commander play format.",
     "introduced": "v4.0.0",
     "attributes": [
@@ -19,7 +19,7 @@
   },
   "duel": {
     "type": "string",
-    "example": "Banned",
+    "example": "\"Banned\"",
     "description": "Sol Ring is banned in the Duel Commander play format.",
     "introduced": "v4.0.0",
     "attributes": [
@@ -46,7 +46,7 @@
   },
   "legacy": {
     "type": "string",
-    "example": "Banned",
+    "example": "\"Banned\"",
     "description": "Sol Ring is banned in the Legacy play format.",
     "introduced": "v4.0.0",
     "attributes": [
@@ -100,7 +100,7 @@
   },
   "vintage": {
     "type": "string",
-    "example": "Restricted",
+    "example": "\"Restricted\"",
     "description": "Sol Ring is restricted in the Vintage play format.",
     "introduced": "v4.0.0",
     "attributes": [

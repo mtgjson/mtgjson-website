@@ -22,7 +22,7 @@
 
 > The "Web API" or more commonly known as "files" that MTGJSON.com provides varies from JSON to compressed files to SQL databases. The following documentation describes the JSON-based files and how they are served. Compressed versions of these files have the same data inside of them.
 
-While MTGJSON.com serves a variety of files, there are 4 major file types and variation to those types that one or more data models...  
+While MTGJSON.com serves a variety of files, there are 3 major file types, and variations to those types, that utilize one or more data models...  
 
 - *AtomicCards: Serves variable data using the [Card (Atomic)](../data-models/card-atomic/) data model.
 - *Printings: Serves variable data using the [Set (Individual)](../data-models/set-individual/) data model.

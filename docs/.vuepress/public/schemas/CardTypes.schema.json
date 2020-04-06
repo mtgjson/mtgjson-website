@@ -1,85 +1,85 @@
 {
   "artifact": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Artifacts.",
     "introduced": "v4.3.0"
   },
   "conspiracy": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Conspiracies.",
     "introduced": "v4.3.0"
   },
   "creature": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Creatures.",
     "introduced": "v4.3.0"
   },
   "enchantment": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Enchantments.",
     "introduced": "v4.3.0"
   },
   "instant": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Instants.",
     "introduced": "v4.3.0"
   },
   "land": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Lands.",
     "introduced": "v4.3.0"
   },
   "phenomenons": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Phenomenons.",
     "introduced": "v4.3.0"
   },
   "plane": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Planes.",
     "introduced": "v4.3.0"
   },
   "planeswalker": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Planeswalkers.",
     "introduced": "v4.3.0"
   },
   "saga": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Sagas.",
     "introduced": "v5.0.0"
   },
   "scheme": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Schemes.",
     "introduced": "v4.3.0"
   },
   "sorcery": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Sorceries.",
     "introduced": "v4.3.0"
   },
   "tribal": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Tribals.",
     "introduced": "v4.3.0"
   },
   "vanguard": {
     "type": "object",
-    "example": "{\"subTypes\": array(string), \"superTypes\": array(string)}",
+    "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
     "description": "All card types available for Vanguards.",
     "introduced": "v4.3.0"
   }

@@ -1,6 +1,6 @@
 <template lang="pug">
   .download-tables
-    .sorting-options
+    .sorting-options(v-if="decks.length !== 0")
       h6.show-options(
         @click="showOptions = !showOptions"
         :class="{'hide-options': !showOptions}") Toggle Options

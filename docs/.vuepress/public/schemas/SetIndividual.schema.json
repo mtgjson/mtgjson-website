@@ -16,13 +16,13 @@
   },
   "boosterV3": {
     "type": "array(array, string)",
-    "example": "[[mythic, rare], uncommon]",
+    "example": "[ [ \"mythic\", \"rare\" ], \"uncommon\", ... ]",
     "description": "The card rarity contents of a typical booster pack. This field is backwards compatible with MTGJSON v3.",
     "introduced": "v4.1.0"
   },
   "cards": {
     "type": "array(object)",
-    "example": "[{{link@Card@/data-models/card}}, {{link@Card@/data-models/card}}, ...]",
+    "example": "[ {{link@Card@/data-models/card}}, ... ]",
     "description": "List of cards in this set. See the {{link@Card@/data-models/card}} data model.",
     "introduced": "v4.0.0"
   },
@@ -87,18 +87,27 @@
     "type": "string",
     "example": "\"Ravnica Allegiance\"",
     "description": "The Magic Card Market set name.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.4.0"
   },
   "mcmId": {
     "type": "integer",
     "example": "2411",
     "description": "The Magic Card Market set ID.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.4.0"
   },
   "mtgoCode": {
     "type": "string",
     "example": "\"RNA\"",
     "description": "Set code for the set as it appears on Magic: The Gathering Online.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "name": {
@@ -111,6 +120,9 @@
     "type": "string",
     "example": "\"RNA\"",
     "description": "The parent set code for set variations like promotions, guild kits, etc.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.3.0"
   },
   "releaseDate": {
@@ -123,11 +135,14 @@
     "type": "integer",
     "example": "2366",
     "description": "Group ID of the set on TCGPlayer.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.2.1"
   },
   "tokens": {
     "type": "array(object)",
-    "example": "{{link@Card (Token)@/data-models/card-token}}",
+    "example": "[ {{link@Card (Token)@/data-models/card-token}}, ... ]",
     "description": "Tokens available to the set. See the {{link@Card (Token)@/data-models/card-token}} data model.",
     "introduced": "v4.0.0"
   },
@@ -138,7 +153,7 @@
     "introduced": "v4.1.0"
   },
   "translations": {
-    "type": "object(string: string)",
+    "type": "object",
     "example": "{{link@Translations@/data-models/translations}}",
     "description": "Translated set name by language. See the {{link@Translations@/data-models/translations}} data model.",
     "introduced": "v4.3.2"
@@ -146,7 +161,7 @@
   "type": {
     "type": "string",
     "example": "\"expansion\"",
-    "description": "As of 03-28-2019, the possible values are {{code@archenemy}}, {{code@box}}, {{code@core}}, {{code@commander}}, {{code@draft_innovation}}, {{code@duel_deck}}, {{code@expansion}}, {{code@from_the_vault}}, {{code@funny}}, {{code@masters}}, {{code@masterpiece}}, {{code@memorabilia}}, {{code@spellbook}}, {{code@planechase}}, {{code@premium_deck}}, {{code@promo}}, {{code@starter}}, {{code@token}}, {{code@treasure_chest}}, or {{code@vanguard}}",
+    "description": "The possible values are {{code@archenemy}}, {{code@box}}, {{code@core}}, {{code@commander}}, {{code@draft_innovation}}, {{code@duel_deck}}, {{code@expansion}}, {{code@from_the_vault}}, {{code@funny}}, {{code@masters}}, {{code@masterpiece}}, {{code@memorabilia}}, {{code@spellbook}}, {{code@planechase}}, {{code@premium_deck}}, {{code@promo}}, {{code@starter}}, {{code@token}}, {{code@treasure_chest}}, {{code@vanguard}}, or some undocumented value.",
     "attributes": [
       "stale"
     ],
