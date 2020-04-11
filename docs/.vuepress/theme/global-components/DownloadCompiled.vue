@@ -50,7 +50,7 @@ export default {
   name: 'AllDownloads',
   data() {
     return {
-      files: require(`../../public/schemas/CompiledList.schema.json`),
+      files: require(`../../public/schemas/compiledList.schema.json`),
       fileBaseCompression: ['bz2', 'gz', 'xz', 'zip'],
       fileSQLCompression: ['sql', 'sqlite'],
       fileDirectory: undefined,

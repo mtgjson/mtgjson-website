@@ -14,14 +14,6 @@ const fs = require('fs');
     outDir: './utils/output',
     /** schemas that have no intrinsic values */
     ignore: [
-      'AllPrices.schema.json',
-      'AllPrintings.schema.json',
-      'AllSets.schema.json',
-      'LegacyPrintings.schema.json',
-      'ModernPrintings.schema.json',
-      'PioneerPrintings.schema.json',
-      'StandardPrintings.schema.json',
-      'VintagePrintings.schema.json'
     ],
     insert: {
       fields: [
