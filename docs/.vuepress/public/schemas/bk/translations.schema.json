@@ -1,0 +1,62 @@
+{
+  "Chinese Simplified": {
+    "type": "string",
+    "example": "\"乙太之乱\"",
+    "description": "Translation in Chinese Simplified.",
+    "introduced": "v4.0.0"
+  },
+  "Chinese Traditional": {
+    "type": "string",
+    "example": "\"乙太之亂\"",
+    "description": "Translation in Chinese Traditional.",
+    "introduced": "v4.0.0"
+  },
+  "French": {
+    "type": "string",
+    "example": "\"La révolte éthérique\"",
+    "description": "Translation in French.",
+    "introduced": "v4.0.0"
+  },
+  "German": {
+    "type": "string",
+    "example": "\"Äther-Rebellion\"",
+    "description": "Translation in German.",
+    "introduced": "v4.0.0"
+  },
+  "Italian": {
+    "type": "string",
+    "example": "\"Rivolta dell'Etere\"",
+    "description": "Translation in Italian.",
+    "introduced": "v4.0.0"
+  },
+  "Japanese": {
+    "type": "string",
+    "example": "\"霊気紛争\"",
+    "description": "Translation in Japanese.",
+    "introduced": "v4.0.0"
+  },
+  "Korean": {
+    "type": "string",
+    "example": "\"에테르 봉기\"",
+    "description": "Translation in Korean.",
+    "introduced": "v4.0.0"
+  },
+  "Portuguese (Brazil)": {
+    "type": "string",
+    "example": "\"Revolta do Éter\"",
+    "description": "Translation in Portuguese (Brazil).",
+    "introduced": "v4.0.0"
+  },
+  "Russian": {
+    "type": "string",
+    "example": "\"«Эфирный Бунт»\"",
+    "description": "Translation in Russian.",
+    "introduced": "v4.0.0"
+  },
+  "Spanish": {
+    "type": "string",
+    "example": "\"La revuelta del éter\"",
+    "description": "Translation in Spanish.",
+    "introduced": "v4.0.0"
+  }
+}

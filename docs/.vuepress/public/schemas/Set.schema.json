@@ -1,0 +1,185 @@
+{
+  "baseSetSize": {
+    "type": "integer",
+    "example": "259",
+    "description": "Number of cards in the set. Will default to {{code@totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
+    "introduced": "v4.1.0",
+    "isManifestProperty": true
+  },
+  "block": {
+    "type": "string",
+    "example": "\"Guilds of Ravnica\"",
+    "description": "Block name the set was in.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.0.0"
+  },
+  "boosterV3": {
+    "type": "array(array, string)",
+    "example": "[ [ \"mythic\", \"rare\" ], \"uncommon\", ... ]",
+    "description": "The card rarity contents of a typical booster pack. This field is backwards compatible with MTGJSON v3.",
+    "introduced": "v4.1.0"
+  },
+  "cards": {
+    "type": "array(object)",
+    "example": "[ {{link@Card@/data-models/card}}, ... ]",
+    "description": "List of cards in this set. See the {{link@Card@/data-models/card}} data model.",
+    "introduced": "v4.0.0"
+  },
+  "code": {
+    "type": "string",
+    "example": "\"RNA\"",
+    "description": "Set code for the set.",
+    "introduced": "v4.0.0",
+    "isManifestProperty": true
+  },
+  "codeV3": {
+    "type": "string",
+    "example": "\"XYZ\"",
+    "description": "Alternate set code Wizards uses for a select few duel deck sets.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.2.1"
+  },
+  "isForeignOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is this set available only outside the United States?",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.4.1"
+  },
+  "isFoilOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the set available only in foil?",
+    "attributes": [
+      "optional"
+    ],
+    "isManifestProperty": true,
+    "introduced": "v4.0.0"
+  },
+  "isOnlineOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the set available online only?",
+    "attributes": [
+      "optional"
+    ],
+    "isManifestProperty": true,
+    "introduced": "v4.0.0"
+  },
+  "isPaperOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Set in only physically printed.",
+    "attributes": [
+      "optional"
+    ],
+    "isManifestProperty": true,
+    "introduced": "v4.6.2"
+  },
+  "isPartialPreview": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the set still in preview? Preview sets do not have complete data.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.4.2"
+  },
+  "keyruneCode": {
+    "type": "string",
+    "example": "\"KTK\"",
+    "description": "The matching keyrune code for {{link@Keyrune@https://andrewgioia.github.io/Keyrune}} image icons.",
+    "introduced": "v4.3.2"
+  },
+  "mcmName": {
+    "type": "string",
+    "example": "\"Ravnica Allegiance\"",
+    "description": "The Magic Card Market set name.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.4.0"
+  },
+  "mcmId": {
+    "type": "integer",
+    "example": "2411",
+    "description": "The Magic Card Market set ID.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.4.0"
+  },
+  "mtgoCode": {
+    "type": "string",
+    "example": "\"RNA\"",
+    "description": "Set code for the set as it appears on Magic: The Gathering Online.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.0.0"
+  },
+  "name": {
+    "type": "string",
+    "example": "\"Ravnica Allegiance\"",
+    "description": "Name of the set.",
+    "isManifestProperty": true,
+    "introduced": "v4.0.0"
+  },
+  "parentCode": {
+    "type": "string",
+    "example": "\"RNA\"",
+    "description": "The parent set code for set variations like promotions, guild kits, etc.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.3.0"
+  },
+  "releaseDate": {
+    "type": "string",
+    "example": "\"2019-01-25\"",
+    "description": "Release date in {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set.",
+    "isManifestProperty": true,
+    "introduced": "v4.0.0"
+  },
+  "tcgplayerGroupId": {
+    "type": "integer",
+    "example": "2366",
+    "description": "Group ID of the set on TCGPlayer.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v4.2.1"
+  },
+  "tokens": {
+    "type": "array(object)",
+    "example": "[ {{link@Card (Token)@/data-models/card-token}}, ... ]",
+    "description": "Tokens available to the set. See the {{link@Card (Token)@/data-models/card-token}} data model.",
+    "introduced": "v4.0.0"
+  },
+  "totalSetSize": {
+    "type": "integer",
+    "example": "273",
+    "description": "Total number of cards in the set, including promos and related supplemental products.",
+    "isManifestProperty": true,
+    "introduced": "v4.1.0"
+  },
+  "translations": {
+    "type": "object",
+    "example": "{{link@Translations@/data-models/translations}}",
+    "description": "Translated set name by language. See the {{link@Translations@/data-models/translations}} data model.",
+    "introduced": "v4.3.2"
+  },
+  "type": {
+    "type": "string",
+    "example": "\"archenemy\"",
+    "description": "Expansion type of the set.",
+    "isManifestProperty": true,
+    "introduced": "v4.0.0"
+  }
+}

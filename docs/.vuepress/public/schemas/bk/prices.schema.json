@@ -1,0 +1,8 @@
+{
+  "[Unique card UUID]": {
+    "type": "object(string: object)",
+    "example": "\"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\": { \"2020-03-30\": {{link@Price Formats@/data-models/price-formats}} }",
+    "description": "UUID of the card. Contains {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} date as keys holding the {{link@Prices (Source)@/data-models/prices-source}} data model.",
+    "introduced": "v4.6.0"
+  }
+}
