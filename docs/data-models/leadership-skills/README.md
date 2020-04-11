@@ -1,7 +1,7 @@
 ---
 {
   "title": "Leadership Skills",
-  "schema": "LeadershipSkills",
+  "schema": "leadershipSkills",
   "meta": [
     {
       "name": "description",
@@ -22,8 +22,8 @@
 
 The Leadership Skills data model describes a list of formats that a specific card is legal to be your Commander in play formats that utilize commanders.
 
-> Possible parent property: `leadershipSkills`  
-> Possible parent model: [Card](../card/)
+> Parent property: `leadershipSkills`  
+> Parent model: [Card](../card/)
 
 ### Model Properties
 

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Set (Manifest)",
-  "schema": "SetManifest",
+  "schema": "set",
   "meta": [
     {
       "name": "description",

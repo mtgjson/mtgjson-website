@@ -1,7 +1,7 @@
 ---
 {
   "title": "Deck (Manifest)",
-  "schema": "Deck",
+  "schema": "deck",
   "meta": [
     {
       "name": "description",

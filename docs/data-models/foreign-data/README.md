@@ -1,7 +1,7 @@
 ---
 {
   "title": "Foreign Data",
-  "schema": "ForeignData",
+  "schema": "foreignData",
   "meta": [
     {
       "name": "description",
@@ -22,8 +22,8 @@
 
 The Foreign Data data model describes a list of alternate language properties for a card.
 
-> Possible parent property: `foreignData`  
-> Possible parent model: [Card](../card/)
+> Parent property: `foreignData`  
+> Parent model: [Card](../card/)
 
 ### Model Properties
 

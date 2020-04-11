@@ -1,12 +1,15 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [models] = generateSidebarRoutes(['/data-models/']);
+const [dataModels] = generateSidebarRoutes(['/data-models/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
 module.exports = {
+  // Uncomment to not support <=IE11
+  // evergreen: true,
+  // Server
   host: '0.0.0.0',
   port: '3001',
   // SEO
@@ -138,7 +141,7 @@ module.exports = {
         title: 'Data Models',
         path: '/data-models/card',
         collapsable: false,
-        children: models,
+        children: dataModels,
       },
       {
         title: 'Changelog',

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Purchase Urls",
-  "schema": "PurchaseUrls",
+  "schema": "purchaseUrls",
   "meta": [
     {
       "name": "description",
@@ -22,8 +22,8 @@
 
 THe Purchase Urls data model describes URL paths to purchase a card or other product.
   
-> Possible parent property: `purchaseUrls`  
-> Possible parent model: [Card](../card/)
+> Parent property: `purchaseUrls`  
+> Parent model: [Card](../card/)
 
 ### Model Properties
 

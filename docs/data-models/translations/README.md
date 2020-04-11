@@ -1,7 +1,7 @@
 ---
 {
   "title": "Translations",
-  "schema": "Translations",
+  "schema": "translations",
   "meta": [
     {
       "name": "description",
@@ -22,8 +22,8 @@
 
 The Translations data model describes the translated data per language as a key.
 
-> Possible parent property: `translations`  
-> Possible parent model: [Set (Individual)](../set-individual/)
+> Parent property: `translations`  
+> Parent model: [Set (Individual)](../set-individual/)
 
 ### Model Properties
 

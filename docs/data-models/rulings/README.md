@@ -1,7 +1,7 @@
 ---
 {
   "title": "Rulings",
-  "schema": "Rulings",
+  "schema": "rulings",
   "meta": [
     {
       "name": "description",
@@ -22,8 +22,8 @@
 
 The Rulings data model describes a list of rulings that are for a specific card.
 
-> Possible parent property: `rulings`  
-> Possible parent model: [Card](../card/)
+> Parent property: `rulings`  
+> Parent model: [Card](../card/)
 
 ### Model Properties
 

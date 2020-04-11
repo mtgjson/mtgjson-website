@@ -1,7 +1,7 @@
 ---
 {
   "title": "Card (Token)",
-  "schema": "Card",
+  "schema": "card",
   "meta": [
     {
       "name": "description",
@@ -22,8 +22,8 @@
 
 The Card (Token) data model describes the properties and values of a single card token.
 
-> Possible parent property: `tokens`  
-> Possible parent model: [Set (Individual)](../set-individual/)
+> Parent property: `tokens`  
+> Parent model: [Set (Individual)](../set-individual/)
 
 ### Model Properties
 

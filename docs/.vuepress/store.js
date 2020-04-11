@@ -12,12 +12,14 @@ export default new Vuex.Store({
     metadata: {},
     decks: [],
     sets: [],
+    values: [],
   },
   getters: {
     throttleSpeed: state => state.throttleSpeed,
     metadata: state => state.metadata,
     decks: state => state.decks,
     sets: state => state.sets,
+    values: state => state.values
   },
   actions: {
     UPDATE_METADATA: async ({ commit }) => {
@@ -33,7 +35,7 @@ export default new Vuex.Store({
     },
     UPDATE_DECKS: async ({ commit }) => {
       try {
-        const awaited = await fetch(api + 'DeckLists.json');
+        const awaited = await fetch(api + 'DeckList.json');
         const promised = await awaited.json();
         const { data } = promised;
 
@@ -50,7 +52,18 @@ export default new Vuex.Store({
 
         commit('SET_SETS', data);
       } catch (err) {
-        commit('SET_DECKS', []);
+        commit('SET_SETS', []);
+      }
+    },
+    UPDATE_VALUES: async ({ commit }) => {
+      try {
+        const awaited = await fetch(api + 'KeyValues.json');
+        const promised = await awaited.json();
+        const { data } = promised;
+
+        commit('SET_VALUES', data);
+      } catch (err) {
+        commit('SET_VALUES', []);
       }
     }
   },
@@ -63,6 +76,9 @@ export default new Vuex.Store({
     },
     SET_SETS: (state, data) => {
       state.sets = data;
+    },
+    SET_VALUES: (state, data) => {
+      state.values = data;
     },
   },
 });

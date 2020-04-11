@@ -3,7 +3,8 @@
     "type": "integer",
     "example": "259",
     "description": "Number of cards in the set. Will default to {{code@totalSetSize}} if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.",
-    "introduced": "v4.1.0"
+    "introduced": "v4.1.0",
+    "isManifestProperty": true
   },
   "block": {
     "type": "string",
@@ -30,7 +31,8 @@
     "type": "string",
     "example": "\"RNA\"",
     "description": "Set code for the set.",
-    "introduced": "v4.0.0"
+    "introduced": "v4.0.0",
+    "isManifestProperty": true
   },
   "codeV3": {
     "type": "string",
@@ -57,6 +59,7 @@
     "attributes": [
       "optional"
     ],
+    "isManifestProperty": true,
     "introduced": "v4.0.0"
   },
   "isOnlineOnly": {
@@ -66,7 +69,18 @@
     "attributes": [
       "optional"
     ],
+    "isManifestProperty": true,
     "introduced": "v4.0.0"
+  },
+  "isPaperOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Set in only physically printed.",
+    "attributes": [
+      "optional"
+    ],
+    "isManifestProperty": true,
+    "introduced": "v4.6.2"
   },
   "isPartialPreview": {
     "type": "boolean",
@@ -114,6 +128,7 @@
     "type": "string",
     "example": "\"Ravnica Allegiance\"",
     "description": "Name of the set.",
+    "isManifestProperty": true,
     "introduced": "v4.0.0"
   },
   "parentCode": {
@@ -129,6 +144,7 @@
     "type": "string",
     "example": "\"2019-01-25\"",
     "description": "Release date in {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the set.",
+    "isManifestProperty": true,
     "introduced": "v4.0.0"
   },
   "tcgplayerGroupId": {
@@ -150,6 +166,7 @@
     "type": "integer",
     "example": "273",
     "description": "Total number of cards in the set, including promos and related supplemental products.",
+    "isManifestProperty": true,
     "introduced": "v4.1.0"
   },
   "translations": {
@@ -160,11 +177,9 @@
   },
   "type": {
     "type": "string",
-    "example": "\"expansion\"",
-    "description": "The possible values are {{code@archenemy}}, {{code@box}}, {{code@core}}, {{code@commander}}, {{code@draft_innovation}}, {{code@duel_deck}}, {{code@expansion}}, {{code@from_the_vault}}, {{code@funny}}, {{code@masters}}, {{code@masterpiece}}, {{code@memorabilia}}, {{code@spellbook}}, {{code@planechase}}, {{code@premium_deck}}, {{code@promo}}, {{code@starter}}, {{code@token}}, {{code@treasure_chest}}, {{code@vanguard}}, or some undocumented value.",
-    "attributes": [
-      "stale"
-    ],
+    "example": "\"archenemy\"",
+    "description": "Expansion type of the set.",
+    "isManifestProperty": true,
     "introduced": "v4.0.0"
   }
 }

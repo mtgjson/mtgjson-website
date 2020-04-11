@@ -3,6 +3,15 @@
     "type": "string",
     "example": "\"KTK\"",
     "description": "Set code for the deck.",
+    "isManifestProperty": true,
+    "introduced": "v4.3.0"
+  },
+  "fileName": {
+    "type": "string",
+    "example": "\"AbzanSiege_KTK\"",
+    "description": "File name for the deck. Combines the {{code@name}} and {{code@code}} fields to avoid namespace collisions.",
+    "isManifestProperty": true,
+    "isManifestOnlyProperty": true,
     "introduced": "v4.3.0"
   },
   "mainBoard": {
@@ -15,6 +24,7 @@
     "type": "string",
     "example": "\"Abzan Siege\"",
     "description": "Name of the deck.",
+    "isManifestProperty": true,
     "introduced": "v4.3.0"
   },
   "sideBoard": {
@@ -30,6 +40,7 @@
     "attributes": [
       "nullable"
     ],
+    "isManifestProperty": true,
     "introduced": "v4.3.0"
   },
   "type": {

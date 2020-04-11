@@ -1,7 +1,7 @@
 ---
 {
   "title": "Deck (Individual)",
-  "schema": "DeckIndividual",
+  "schema": "deck",
   "meta": [
     {
       "name": "description",
@@ -21,8 +21,6 @@
 # Deck (Individual)
 
 The Deck (Individual) data model describes a complete deck reference.
-
-> Possible parent file: `...`
 
 ### Model Properties
 

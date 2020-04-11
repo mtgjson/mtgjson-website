@@ -1,7 +1,7 @@
 ---
 {
   "title": "Prices",
-  "schema": "Prices",
+  "schema": "prices",
   "meta": [
     {
       "name": "description",

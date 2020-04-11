@@ -12,7 +12,7 @@
 
     //- Properties Index
     //- This fills out an anchored list of all the properties
-    .schema-item.schema-index(v-if="showMore")
+    .schema-item.schema-index
       h4 Property Index
       p A list of all available properties.
       ol(:class="{hide: willShowMore, wontHide: !showMore}")
@@ -25,7 +25,7 @@
     //- This fills out a fully descriptive list of all the properties
     .schema-item.schema-data
       h4 Property Information
-      blockquote.schema-data--table(v-for="(data, name) in filteredSchema" v-if="name !== '...'")
+      blockquote.schema-data--table(v-for="(data, name) in filteredSchema")
         .schema-data--table-anchor(:id="name" aria-hidden="true")
         //- Property Name
         .schema-data--table-item
@@ -59,6 +59,15 @@
             p
               pre(v-html="data.example")
 
+        //- Property Values
+        .schema-data--table-item(v-if="getValues(data.propName || name)")
+          .heading
+            p(title="Possibl values of the property") Values
+          .values
+            p
+              select
+                option(v-for="(value, key) in getValues(data.propName || name)") "{{ value }}"
+
         //- Property Description
         .schema-data--table-item
           .heading
@@ -84,10 +93,12 @@ export default {
   data() {
     return {
       schema: null,
+      values: null,
       showMore: true,
       willShowMore: true,
       isAtomicCard: false,
-      isTokenCard: false
+      isTokenCard: false,
+      isManifest: false
     };
   },
   computed: {
@@ -112,65 +123,77 @@ export default {
     },
     filteredSchema() {
       const schema = this.schema;
-      let newSchema = undefined;
+      let newSchema = {};
 
-      if (this.isAtomicCard) {
-        newSchema = {};
+      for (let name in schema) {
+        if (hasOwnProperty.call(schema, name)) {
+          const field = schema[name];
 
-        for (let name in schema) {
-          if (hasOwnProperty.call(schema, name)) {
-            const field = schema[name];
-
+          if( this.isAtomicCard ){
             if (field.isAtomicProperty) {
               newSchema[name] = field;
             }
-          }
-        }
-      } else if (this.isTokenCard) {
-        newSchema = {};
-
-        for (let name in schema) {
-          if (hasOwnProperty.call(schema, name)) {
-            const field = schema[name];
-
+          } else if (this.isTokenCard){
             if (field.isTokenProperty) {
               if(!field.attributes || (field.attributes && !field.attributes.includes('deck'))){
                 newSchema[name] = field;
               }
             }
-          }
-        }
-      } else {
-        newSchema = {};
-
-        for (let name in schema) {
-          if (hasOwnProperty.call(schema, name)) {
-            const field = schema[name];
-
-            if (!field.isTokenOnlyProperty) {
+          } else if (this.isManifest) {
+            if (field.isManifestProperty) {
               newSchema[name] = field;
             }
+          } else if (!field.isTokenOnlyProperty && !field.isManifestOnlyProperty) {
+            newSchema[name] = field;
           }
         }
-
       }
 
       return newSchema || schema;
     },
   },
-  created() {
+  async created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
     const landcycle = new this.$landcycle(schema);
     landcycle._init();
 
-    this.isAtomicCard = this.$page.frontmatter.title === 'Card (Atomic)';
-    this.isTokenCard = this.$page.frontmatter.title === 'Card (Token)';
+    if(this.$store.getters.values.length < 1){
+      await this.$store.dispatch('UPDATE_VALUES');
+    }
+
+    this.isAtomicCard = this.$page.frontmatter.title.includes("Atomic");
+    this.isTokenCard = this.$page.frontmatter.title.includes("Token");
+    this.isManifest = this.$page.frontmatter.title.includes("Manifest");
+
     this.showMore = Object.keys(schema).length > 4;
+    this.values = this.$store.getters.values;
     this.schema = landcycle.schema;
   },
   methods: {
     toggleIndex() {
       this.willShowMore = !this.willShowMore;
+    },
+    getValues(property) {
+      const schema = this.$page.frontmatter.schema; // schema file should match key name
+      const keys = Object.keys(this.values); // Keys of the KeyValues file
+      let pageProperty = '';
+      let values = null;
+      let page = null;
+
+      for( const key of keys ){
+        if( schema.toLowerCase().includes(key) ){
+          pageProperty = key;
+          break;
+        }
+      }
+
+      page = this.values[pageProperty]; // lookup if we have a matching key to the page
+
+      if( page ) {
+        values = page[property]
+      }
+
+      return values;
     },
     getTitle(attribute) {
       switch (attribute) {
@@ -182,8 +205,6 @@ export default {
           return 'Property only available on a card within a Deck (Individual) file.';
         case 'nullable':
           return 'Property may return a null value.';
-        case 'stale':
-          return 'Property may return an undocumented value.';
         default:
           break;
       }

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Keywords",
-  "schema": "Keywords",
+  "schema": "keywords",
   "meta": [
     {
       "name": "description",

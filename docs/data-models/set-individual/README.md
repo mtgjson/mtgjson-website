@@ -1,7 +1,7 @@
 ---
 {
   "title": "Set (Individual)",
-  "schema": "SetIndividual",
+  "schema": "set",
   "meta": [
     {
       "name": "description",
@@ -22,7 +22,7 @@
 
 The Set (Individual) data model describes the properties and values of an individual set.
 
-> Possible parent files: `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`  
+> Parent file: `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`  
 
 ### Model Properties
 

@@ -1,7 +1,7 @@
 ---
 {
   "title": "Card",
-  "schema": "Card",
+  "schema": "card",
   "meta": [
     {
       "name": "description",
@@ -22,9 +22,9 @@
 
 The Card data model describes the properties and values of a single card.
 
-> Possible parent files: `StandardCards`, `PauperCards`, `PioneerCards`, `ModernCards`, `LegacyCards`, `VintageCards` , `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`   
-> Possible parent property: `cards`, `mainBoard`, `sideBoard`  
-> Possible parent model: [Set (Individual)](../set-individual/), [Deck (Individual)](../deck-individual/)    
+> Parent file: `StandardCards`, `PauperCards`, `PioneerCards`, `ModernCards`, `LegacyCards`, `VintageCards` , `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`   
+> Parent property: `cards`, `mainBoard`, `sideBoard`  
+> Parent model: [Set (Individual)](../set-individual/), [Deck (Individual)](../deck-individual/)    
 
 ### Model Properties
 

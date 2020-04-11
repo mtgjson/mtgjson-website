@@ -1,7 +1,7 @@
 ---
 {
   "title": "File Structures",
-  "schema": "Files",
+  "schema": "files",
   "meta": [
     {
       "name": "description",

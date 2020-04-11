@@ -1,7 +1,7 @@
 ---
 {
   "title": "Card Types",
-  "schema": "CardTypes",
+  "schema": "cardTypes",
   "meta": [
     {
       "name": "description",
