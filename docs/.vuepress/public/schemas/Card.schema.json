@@ -300,7 +300,7 @@
     "introduced": "v4.0.0"
   },
   "leadershipSkills": {
-  	"type": "array(string: string)",
+  	"type": "array(string: boolean)",
   	"example": "{{link@leadershipSkills@/structures/leadership-skills}}",
   	"description": "See the {{link@leadershipSkills@/structures/leadership-skills}} structure. Will be included only if one value is true.",
   	"attributes": [
