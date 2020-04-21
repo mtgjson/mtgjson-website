@@ -43,14 +43,6 @@
             p(:title="`Property is of type: ${data.type}`")
               em {{ data.type }}
 
-        //- Property Introduction
-        .schema-data--table-item(v-if="data.introduced")
-          .heading
-            p(title="When the property was introduced") Introduced
-          .introduced
-            p
-              em {{ data.introduced }}
-
         //- Property Example
         .schema-data--table-item
           .heading
@@ -84,6 +76,14 @@
               v-for="(attribute, key) in data.attributes"
               :class="attribute.split('-')[0]"
               :title="getTitle(attribute.split('-')[0])") {{ attribute.replace('-', ' ') }}
+
+        //- Property Introduction
+        .schema-data--table-item(v-if="data.introduced")
+          .heading
+            p(title="When the property was introduced") Introduced
+          .introduced
+            p
+              em {{ data.introduced }}
 
 </template>
 

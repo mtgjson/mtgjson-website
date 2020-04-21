@@ -101,6 +101,7 @@ module.exports = {
   themeConfig: {
     // API Config
     api: 'api/v5',
+    // Algolia SEO
     algolia: {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',
@@ -109,15 +110,23 @@ module.exports = {
       },
     },
     searchMaxSuggestions: 10,
-    sidebarDepth: 1,
+    // Edit this page link in footer
+    docsRepo: 'mtgjson/mtgjson-website',
+    docsBranch: 'master',
+    docsDir: 'docs/',
+    editLinks: true,
+    editLinkText: 'Help us improve this page!',
+    // Last updated time stamp
     lastUpdated: 'Last Updated',
+    title: 'MTGJSON',
+    logo: '/images/logo-3.svg',
+    smoothScroll: true,
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
       { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' },
     ],
-    title: 'MTGJSON',
-    logo: '/images/logo-3.svg',
+    sidebarDepth: 1,
     sidebar: [
       {
         title: 'About Us',

@@ -57,7 +57,7 @@ export default new Vuex.Store({
     },
     UPDATE_VALUES: async ({ commit }) => {
       try {
-        const awaited = await fetch(api + 'KeyValues.json');
+        const awaited = await fetch(api + 'AttributeValues.json');
         const promised = await awaited.json();
         const { data } = promised;
 

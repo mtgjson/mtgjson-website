@@ -8,7 +8,7 @@
 
 :root {
   // Auxillery colors
-  --yellow-color: #e3bd34;
+  --yellow-color: #ffe774;
   --green-color: lightgreen;
   --red-color: salmon;
   --orange-color: #ef6c2f;
@@ -25,7 +25,7 @@
   --darker-color: #1a2530;
   --darkest-color: #141c24;
   --accent-color: #61c6ed;
-  --spoiler-color: #ffe774;
+  --spoiler-color: var(--yellow-color);
   // Color Themes
   --text-color: var(--light-color);
   --bg-color: var(--dark-color);
@@ -77,6 +77,7 @@ body {
     --search-bg-color: var(--medium-gray-color);
     --search-text-color: var(--text-color);
     --blockquote-bg-color: var(--medium-gray-color);
+    --spoiler-color: var(--yellow-color);
     // --supporter-bg-color: var(--bg-color);
     // Data Presentation
     --table-color: var(--text-color);
@@ -230,11 +231,6 @@ img {
       text-decoration: none !important;
     }
   }
-}
-
-// Page edit has no word spacing
-.page-edit .prefix {
-  margin-right: 5px;
 }
 
 .sidebar-group-items, .sidebar-sub-headers {

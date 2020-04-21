@@ -274,7 +274,7 @@
   "isReserved": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card on the Magic: The Gathering Reserved List?",
+    "description": "Is the card on the Magic: The Gathering {{link@Reserved List@https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10}}?",
     "attributes": [
       "optional"
     ],
@@ -509,7 +509,7 @@
   "rarity": {
     "type": "string",
     "example": "\"common\"",
-    "description": "Card rarity.",
+    "description": "Card printing rarity.",
     "introduced": "v4.0.0"
   },
   "reverseRelated": {
@@ -568,7 +568,7 @@
   },
   "subtypes": {
     "type": "array(string)",
-    "example": "[ \"Angel\", ... ]",
+    "example": "[ \"Myr\", \"Construct\", ... ]",
     "description": "List of card subtypes found after em-dash.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -576,7 +576,7 @@
   },
   "supertypes": {
     "type": "array(string)",
-    "example": "[ \"Legendary\", \"Creature\", ... ]",
+    "example": "[ \"Artifact\", \"Creature\", ... ]",
     "description": "List of card supertypes found before em-dash.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -615,7 +615,7 @@
   },
   "type": {
     "type": "string",
-    "example": "\"Legendary Creature — Angel\"",
+    "example": "\"Artifact Creature — Myr Construct\"",
     "description": "Type of the card. Includes any supertypes and subtypes.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
@@ -623,8 +623,8 @@
   },
   "types": {
     "type": "array(string)",
-    "example": "[ \"Lengendary\", \"Creature\", \"Angel\", ... ]",
-    "description": "List of all types of the card.",
+    "example": "[ \"Artifact\", \"Creature\", ... ]",
+    "description": "List of all types of the card. See {{link@@}} for official",
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
