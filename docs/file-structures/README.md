@@ -24,9 +24,9 @@
 
 While MTGJSON.com serves a variety of files, there are 3 major file types, and variations to those types, that utilize one or more data models...  
 
-- *AtomicCards: Serves variable data using the [Card (Atomic)](../data-models/card-atomic/) data model.
-- *Printings: Serves variable data using the [Set (Individual)](../data-models/set-individual/) data model.
-- Other files serve specific data using data models such as [Card Types](../data-models/card-types/) or [Deck (Individual)](../data-models/deck-individual/).
+- *AtomicCards: Serves variable data using multiple [Card (Atomic)](../data-models/card-atomic/) data models.
+- *Printings: Serves variable data using multiple [Set (Individual)](../data-models/set-individual/) data models.
+- Other files serve specific data using data models such as [Card Types](../data-models/card-types/), [Deck (Individual)](../data-models/deck-individual/), or [Prices](../data-models/prices/).
 
 For a full list of files, see [All Files](../downloads/all-files/) downloads page.
 

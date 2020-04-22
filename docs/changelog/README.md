@@ -39,22 +39,22 @@ The documentation of the website overall was changed in a drastic way with such 
 
 ### Files
 #### Changed
-- All files are now available via the `/api/v5/*` web-based url.
+- All file downloads are now available via the `/api/v5/*` web-based url.
 - The `*Cards` files are now renamed `*AtomicCards` to better clarify that these files only contain atomic card data. Subsequently, `AllCards` is now `AtomicCards`.
 - The `version` file is now renamed `Meta`.
 - All files now used a top-level `data` and `meta` key. Any data models inside of `data` will lose the nested `meta` object.
 
 ### Website
 #### Changed
-- "Data Structures" are now named "Data Models".
+- Data "Structures" are now named "Data Models".
 - Data models now reference their parent keys and parent files more accurately.
 - Data models now have the "optional" attribute marked on more properties for clarity.
 - Some text and spacing adjustments for the "Changelog" page.
 #### Added
-- More data models are clearly defined now that the files deliver all the same top-level keys.
-- Atomic cards are now documented outright as a data model for clarity.
+- More models are clearly defined now that the files deliver all the same top-level keys.
+- Atomic Cards are now documented outright as a Data Model for clarity.
 #### Removed
-- Files are longer documented individually, instead their contents are pure data models.
+- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models.
 - The "About Us" page no longer uses a table of contents.
 
 ## 4.6.2

@@ -2,19 +2,12 @@
 {
   "title": "Prices",
   "schema": "prices",
-  "meta": [
-    {
-      "name": "description",
-      "content": "Prices data model documentation.",
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, prices",
-    }
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  "meta":
+    [
+      { "name": "description", "content": "Prices data model documentation." },
+      { "name": "keywords", "content": "mtg, magic: the gathering, mtgjson, json, prices" },
+    ],
+  "feed": { "enable": "true" },
 }
 ---
 
@@ -26,8 +19,15 @@ The Prices data model describes a list of card prices based on date.
 > Parent property: `data`
 
 ::: warning
-This model is unique compared to all other data models because most of its keys are variable and the model is not flat. The following documentation takes that in to account by documenting a direct example of a card.
+This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat. The following documentation takes that in to account by documenting a direct example of a card.
 :::
+
+### Price Providers
+
+MTGJSON currently has affiliated with the following markets to keep a history of price data:
+
+- Paper: <a href="https://www.tcgplayer.com" target="_blank" rel="noopener noreferrer">TCGPlayer</a>, <a href="https://www.cardmarket.com" target="_blank" rel="noopener noreferrer">Cardmarket</a>, and <a href="https://www.cardkingdom.com" target="_blank" rel="noopener noreferrer">CardKingdom</a>
+- MTGO: <a href="https://www.cardhoarder.com" target="_blank" rel="noopener noreferrer">Cardhoarder</a>
 
 ### File Structure Overview
 
@@ -35,24 +35,32 @@ This model is unique compared to all other data models because most of its keys 
 {
   "meta": object,
   "data": {
+    // Unique card ID
     "<>Card UUID<>": {
-      "<>YYYY-MM-DD<>": { // today's date should always exist
-        "mtgo": { // optional
-          "<>Source<>": { // optional
-            "purchasePrice": { // optional
-              "normal": float, // optional
-              "foil": float // optional
+      // Price format
+      "paper": {
+        // Price provider
+        "<>Price Provider ID<>": {
+          // Provider sale values
+          "sell": {
+            // Sell values of a foil
+            "foil": {
+              // Date and price
+              ...,
+              "<>YYYY-MM-DD<>": float
+            },
+            // Sell values of a non-foil
+            "normal": {
+              ...,
+              // Date and price
+              "<>YYYY-MM-DD<>": float
             }
-          },
-          ...
+          }
         },
-        "paper": { // optional
-          ...
-        }
+        ...
       },
-      ...
-    },
-    ...
+      "mtgo": { ... }
+    }
   }
 }
 ```
@@ -61,27 +69,43 @@ This model is unique compared to all other data models because most of its keys 
 
 ```json
 {
-  "00ecdefd-0445-576e-a9a5-f5b21aa177e9": {
-    "2020-03-31": {
-      "mtgo": {
-        "Cardhoarder": {
-          "purchasePrice": {
-            "normal": 0.03,
-            "foil": 0.02
+  "0120a941-9cfb-50b5-b5e4-4e0c7bd32410": {
+    "mtgo": {
+      "cardhoarder": {
+        "sell": {
+          "foil": {
+            ..., // more rows
+            "2020-04-21": 0.02
+          },
+          "normal": {
+            ..., // more rows
+            "2020-04-21": 0.02
           }
-        },
+        }
       },
-      "paper": {
-        "CardKingdom": {
-          "purchasePrice": {
-            "normal": 0.06,
-            "foil": 0.22
+    },
+    "paper": {
+      "cardmarket": {
+        "sell": {
+          "foil": {
+            ..., // more rows
+            "2020-04-21": 0.12
+          },
+          "normal": {
+            ..., // more rows
+            "2020-04-21": 0.02
           }
-        },
-        "TCGPlayer": {
-          "purchasePrice": {
-            "normal": 0.06,
-            "foil": 0.22
+        }
+      },
+      "tcgplayer": {
+        "sell": {
+          "foil": {
+            ..., // more rows
+            "2020-04-21": 0.12
+          },
+          "normal": {
+            ..., // more rows
+            "2020-04-21": 0.02
           }
         }
       }
