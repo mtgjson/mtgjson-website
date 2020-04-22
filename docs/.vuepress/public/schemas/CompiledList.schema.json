@@ -7,8 +7,8 @@
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{link@version@/files/version}}",
-    "description": "See the {{link@version@/files/version}} file.",
+    "example": "{{link@version@/file/version}}",
+    "description": "See the {{link@version@/file/version}} file.",
     "introduced": "v4.3.0"
   }
 }

@@ -20,7 +20,7 @@ export default new Vuex.Store({
   actions: {
     UPDATE_METADATA: async ({ commit }) => {
       try {
-        const awaited = await fetch('https://mtgjson.com/files/version.json');
+        const awaited = await fetch('https://mtgjson.com/file/version.json');
         const promised = await awaited.json();
 
         commit('SET_METADATA', promised);
@@ -30,7 +30,7 @@ export default new Vuex.Store({
     },
     UPDATE_DECKS: async ({ commit }) => {
       try {
-        const awaited = await fetch('https://mtgjson.com/files/DeckLists.json');
+        const awaited = await fetch('https://mtgjson.com/file/DeckLists.json');
         const promised = await awaited.json();
 
         commit('SET_DECKS', promised);
@@ -40,7 +40,7 @@ export default new Vuex.Store({
     },
     UPDATE_SETS: async ({ commit }) => {
       try {
-        const awaited = await fetch('https://mtgjson.com/files/SetList.json');
+        const awaited = await fetch('https://mtgjson.com/file/SetList.json');
         const promised = await awaited.json();
 
         commit('SET_SETS', promised);

@@ -97,8 +97,8 @@
   },
   "meta": {
     "type": "object(string: string)",
-    "example": "{{link@version@/files/version}}",
-    "description": "See the {{link@version@/files/version}} structure.",
+    "example": "{{link@version@/file/version}}",
+    "description": "See the {{link@version@/file/version}} structure.",
     "introduced": "v4.0.0"
   },
   "mtgoCode": {

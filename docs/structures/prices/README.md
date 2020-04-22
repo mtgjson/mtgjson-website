@@ -22,7 +22,7 @@
 
 Prices is a structure defining an object of card prices based on date.
 
-> Parent structure: [card](../card), [AllPrintings](../../files/all-printings)  
+> Parent structure: [card](../card), [AllPrintings](../../file/all-printings)  
 > Parent property: `prices`  
 > Parent property type: `object(anonymous object)`  
 > Property type: `object`  
