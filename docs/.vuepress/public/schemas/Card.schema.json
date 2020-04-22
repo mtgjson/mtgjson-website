@@ -589,7 +589,7 @@
   },
   "types": {
     "type": "array(string)",
-    "example": "[\"Lengendary\", \"Creature\", \"Angel\"]",
+    "example": "[\"Creature\"]",
     "description": "List of all types of the card.",
     "attributes": [
       "atomic"
