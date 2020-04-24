@@ -18,6 +18,13 @@
 
 # Changelog
 
+## 4.6.3
+Release Date: 2020-04-24
+### Sets
+#### Added
+- Commander 2020 (`C20`)
+- Ikoria: Lair of Behemoths (`IKO`, `PIKO`)
+
 ## 4.6.2
 Release Date: 2020-02-01
 ### Cards
@@ -39,7 +46,6 @@ Release Date: 2020-02-01
 #### Added
 - `AllPrices` now has a new entry, `uuid` to better iterate the collection
 - `SetList` now has `isOnlineOnly` and `isPaperOnly`
-
 
 ## 4.6.1
 Release Date: 2019-12-04
@@ -255,7 +261,6 @@ Do you have a project that uses MTGJSON? Please reach out to us and we will get 
 ## 4.4.1
 Release Date: 2019-06-04
 
-
 ### Cards
 #### Fixed
 - `isAlternative` for WAR planeswalkers
@@ -275,7 +280,6 @@ Release Date: 2019-06-04
 ### Decks
 #### Added
 - Incorporate `count` and `isFoil` for pre-cons
-
 
 ### Other
 #### Fixed
