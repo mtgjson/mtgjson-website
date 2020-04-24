@@ -18,8 +18,38 @@
 
 # Changelog
 
+## 4.6.3
+Release Date: 2020-04-22
+
+### Cards
+#### Added
+- `asciiName` added for cards with non-ascii symbols
+	- Ex: `{"name": "Lim-Dûl's Vault", "asciiName": "Lim-Dul's Vault"}`
+
+#### Fixed
+- `leadershipSkills` fixed for flip and transform legends
+- Foil status on some planeswalkers
+- Loyalty abilitites that are "-X" are now appropriately handled
+	- Ex: `{"name": "Chandra Nallar", "text": "[+1]: Chandra Nalaar deals 1 damage to target player or planeswalker.\n[−X]: Chandra Nalaar deals X damage to target creature.\n[−8]: Chandra Nalaar deals 10 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls."}`
+- Address `isStarter` for flip cards
+- `flavorName` added for Ikoria Godzilla cards
+
+### Sets
+#### Added
+- Ikoria (`IKO`)
+- Commander 2020 (`C20`)
+- Historic Anthology 2 (`HA2`)
+- Signature Spellbook: Chandra (`SS3`)
+- Secret Lair: Ultimate Edition (`SLU`)
+- Booster field support for several missing sets
+	- Color support was added for Mystery Boosters
+
+#### Fixed
+- Spaces may have accidentally polluted the set `name`
+
 ## 4.6.2
 Release Date: 2020-02-01
+
 ### Cards
 #### Added
 - Added `isDateStamped` to identify promo printings
