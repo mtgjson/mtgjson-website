@@ -24,19 +24,20 @@ Release Date: 2020-04-22
 ### Cards
 #### Added
 - `asciiName` added for cards with non-ascii symbols
-	- Ex: `{"name": "Lim-Dûl's Vault", "asciiName": "Lim-Dul's Vault"}`
+	- Example: `{"name": "Lim-Dûl's Vault", "asciiName": "Lim-Dul's Vault"}`
+- `flavorName` added for Ikoria Godzilla cards
 
 #### Fixed
 - `leadershipSkills` fixed for flip and transform legends
 - Foil status on some planeswalkers
-- Loyalty abilitites that are "-X" are now appropriately handled
-	- Ex: `{"name": "Chandra Nallar", "text": "[+1]: Chandra Nalaar deals 1 damage to target player or planeswalker.\n[−X]: Chandra Nalaar deals X damage to target creature.\n[−8]: Chandra Nalaar deals 10 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls."}`
-- Address `isStarter` for flip cards
-- `flavorName` added for Ikoria Godzilla cards
+- Loyalty abilities that are "-X" are now appropriately handled
+	- Example: `{"name": "Chandra Nalaar", "text": "[+1]: Chandra Nalaar deals 1 damage to target player or planeswalker.\n[−X]: Chandra Nalaar deals X damage to target creature.\n[−8]: Chandra Nalaar deals 10 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls."}`
+- Addressed `isStarter` for flip cards
 
 ### Sets
 #### Added
-- Ikoria (`IKO`)
+- Ikoria: Lair of the Behemoths (`IKO`)
+  - Promo cards are not released yet (release outside of Asia scheduled for May 15, 2020) and therefore the Ikoria promo set will be added later.
 - Commander 2020 (`C20`)
 - Historic Anthology 2 (`HA2`)
 - Signature Spellbook: Chandra (`SS3`)
