@@ -35,6 +35,12 @@
     "description": "The file name containing every card as a unique \"atomic\" object.",
     "introduced": "v4.0.0"
   },
+  "AttributeValues": {
+    "type": "string",
+    "example": "\"AttributeValues\"",
+    "description": "The file name containing known property values for data models.",
+    "introduced": "v5.0.0"
+  },
   "CardTypes": {
     "type": "string",
     "example": "\"CardTypes\"",
@@ -47,9 +53,9 @@
     "description": "The file name containing all possible compiled outputs from MTGJSON, such as, AllPrintings, TypesCards, etc.",
     "introduced": "v4.3.0"
   },
-  "DeckLists": {
+  "DeckList": {
     "type": "string",
-    "example": "\"DeckLists\"",
+    "example": "\"DeckList\"",
     "description": "The file name containing all possible compiled pre-constructed deck outputs from MTGJSON.",
     "introduced": "v4.3.0"
   },

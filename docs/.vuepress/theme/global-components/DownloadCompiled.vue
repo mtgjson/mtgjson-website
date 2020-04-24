@@ -14,32 +14,32 @@
               li.text-wrap--download--btn-wrap
                 small Download Files:
                 span
-                  a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json`") JSON
+                  a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.json`") JSON
                 span(v-for="(compression, key) in fileBaseCompression")
-                  a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.json.${compression}`") {{ compression }}
+                  a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.json.${compression}`") {{ compression }}
 
             //- Directory Files
             ol(v-if="file.example.includes('Files')")
               li.text-wrap--download--btn-wrap
                 small Download Files:
                 span(v-for="(format, key) in fileBaseCompression" v-if="format !== 'zip'")
-                  a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
+                  a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
                 span(v-else)
-                  a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.zip`") {{ format }}
+                  a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.zip`") {{ format }}
 
             ol(v-if="file.example === 'AllPrintings'")
                 li.text-wrap--download--btn-wrap
                   small SQL Download Files:
                   span
-                    a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sql`") SQL
+                    a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sql`") SQL
                   span(v-for="(compression, key) in fileBaseCompression")
-                    a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sql.${compression}`") {{ compression }}
+                    a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
                   small SQLite Download Files:
                   span
-                    a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite`") SQLite
+                    a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sqlite`") SQLite
                   span(v-for="(compression, key) in fileBaseCompression")
-                    a.dl-btn(:href="`${$env}/${fileDirectory}/${file.example}.sqlite.${compression}`") {{ compression }}
+                    a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sqlite.${compression}`") {{ compression }}
                 li.sqlite
                   p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>.
 

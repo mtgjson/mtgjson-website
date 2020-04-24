@@ -33,6 +33,8 @@ The documentation of the website overall was changed in a drastic way with such 
 #### Added
 - Added `asciiName` for the name of the card with replaced unicode characters.
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
+- Added `isPlaneswalkerStamped` for cards with planeswalker identifiers.
+- Added `flavorName` for cards that have a secondary, promotional card name.
 #### Removed
 - Removed `names` in favor of `otherFaceIds`.
 - Removed `hasNoDeckLimit` in favor of `hasAlternativeDeckLimit`.

@@ -102,6 +102,15 @@
     "isAtomicProperty": true,
     "introduced": "v4.1.1"
   },
+  "flavorName": {
+    "type": "string",
+    "example": "\"Mothra, Supersonic Queen\"",
+    "description": "Promotional card name printed above the true card name on special cards.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
+  },
   "flavorText": {
     "type": "string",
     "example": "\"Whatever hatred destroys, a single act of trust can revive.\"",
@@ -116,6 +125,9 @@
     "example": "[ {{link@Foreign Data@/data-models/foreign-data}}, ... ]",
     "description": "See the {{link@Foreign Data@/data-models/foreign-data}} data model.",
     "isAtomicProperty": true,
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v4.0.0"
   },
   "frameEffects": {
@@ -252,6 +264,15 @@
       "optional"
     ],
     "introduced": "v4.4.2"
+  },
+  "isPlaneswalkerStamped": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card printed with a planeswalker identifier?",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
   },
   "isPromo": {
     "type": "boolean",

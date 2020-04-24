@@ -1,7 +1,6 @@
 <template lang="pug">
   div.version
-    router-link.version-number(
-      :to="`/changelog`") Build: {{ version }}
+    router-link.version-number(v-if="version" :to="`/changelog`") Build: {{ version }}
 </template>
 
 <script>
@@ -22,7 +21,9 @@ export default {
 
 <style lang="stylus" scoped>
 .version {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   color: var(--text-color);
   position: relative;
 

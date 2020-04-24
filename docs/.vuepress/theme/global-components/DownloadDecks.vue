@@ -44,9 +44,9 @@
               li
                 small Downloads:
                 span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                  a.dl-btn(:href="`${$env}/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
+                  a.dl-btn(download :href="`${$env}/${deckDirectory}/${deck.fileName}_${deck.code}.json.${format}`") {{ format }}
                 span(v-else)
-                  a.dl-btn(:href="`${$env}/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
+                  a.dl-btn(download :href="`${$env}/${deckDirectory}/${deck.fileName}_${deck.code}.json`") {{ format }}
 
 </template>
 
