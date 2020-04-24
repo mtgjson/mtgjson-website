@@ -2,7 +2,7 @@
   "artifact": {
     "type": "array(object)",
     "example": "[{\"subTypes\": array(string), \"superTypes\": array(string)}]",
-    "description": "Lists of supertypes and subtypes available for Artifacts. Artifact subtypes include {{code@\"Clue\", {{code@\"Equipment\"}} and {{code@\"Treasure\"}}.",
+    "description": "Lists of supertypes and subtypes available for Artifacts. Artifact subtypes include {{code@\"Clue\"}}, {{code@\"Equipment\"}} and {{code@\"Treasure\"}}.",
     "introduced": "v4.3.0"
   },
   "conspiracy": {
