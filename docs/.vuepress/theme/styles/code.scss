@@ -69,21 +69,21 @@ div[class*='language-'] {
         left: 0;
         top: 0;
         display: block;
-        width: $lineNumbersWrapperWidth;
+        width: var(--line-numbers-widt);
         height: 100%;
         background-color: rgba(0, 0, 0, 66%);
       }
     }
 
     pre {
-      padding-left: ($lineNumbersWrapperWidth + 1)rem;
+      padding-left: (var(--line-numbers-widt) + 1)rem;
       vertical-align: middle;
     }
 
     .line-numbers-wrapper {
       position: absolute;
       top: 0;
-      width: $lineNumbersWrapperWidth;
+      width: var(--line-numbers-widt);
       text-align: center;
       color: rgba(255, 255, 255, 0.3);
       padding: 1.25rem 0;
@@ -107,7 +107,7 @@ div[class*='language-'] {
       z-index: 2;
       top: 0;
       left: 0;
-      width: $lineNumbersWrapperWidth;
+      width: var(--line-numbers-widt);
       height: 100%;
       border-radius: 5px 0 0 5px;
       border-right: 1px solid rgba(0, 0, 0, 66%);
@@ -116,13 +116,13 @@ div[class*='language-'] {
   }
 }
 
-for lang in $codeLang {
-  div{'[class~="language-' + lang + '"]'} {
-    &:before {
-      content: '' + lang;
-    }
-  }
-}
+// for lang in $codeLang {
+//   div{'[class~="language-' + lang + '"]'} {
+//     &:before {
+//       content: '' + lang;
+//     }
+//   }
+// }
 
 div[class~='language-javascript'] {
   &:before {

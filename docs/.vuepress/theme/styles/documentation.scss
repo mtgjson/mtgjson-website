@@ -222,7 +222,7 @@ pre {
       // Allows us to anchor to a screen safe position
       &-anchor {
         position: absolute;
-        top: -($navbarHeight + 1rem);
+        top: -(var(--navbar-height) + 1rem);
       }
 
       &-item {

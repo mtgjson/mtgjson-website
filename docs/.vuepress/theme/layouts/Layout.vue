@@ -116,9 +116,9 @@ export default {
 </script>
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
-<style src="../styles/theme.styl" lang="stylus"></style>
-<style lang="stylus">
-@media (max-width: $MQMobile) {
+<style src="../styles/theme.scss" lang="scss"></style>
+<style lang="scss">
+@media (max-width: 719px) {
   .theme-container {
     &.sidebar-open {
       .sidebar {

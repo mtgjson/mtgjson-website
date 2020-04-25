@@ -4,7 +4,7 @@
   .sorting-options {
     position: sticky;
     background-color: var(--bg-dark-color);
-    top: $navbarHeight;
+    top: var(--navbar-height);
     z-index: 9;
     padding: 1rem 0 1.5rem;
 
@@ -182,7 +182,7 @@
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 571px) {
   .download-tables {
     .sorting-options {
       .sort-rows {

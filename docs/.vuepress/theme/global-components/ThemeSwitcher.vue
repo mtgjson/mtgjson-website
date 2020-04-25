@@ -81,7 +81,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .theme-switcher {
   display: inline-flex;
   align-items: center;

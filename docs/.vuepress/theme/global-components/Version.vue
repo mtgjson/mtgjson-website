@@ -19,7 +19,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .version {
   display: flex;
   flex-wrap: wrap;
@@ -34,7 +34,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .version {
     &-number {
       font-size: 16px;

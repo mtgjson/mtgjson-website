@@ -102,7 +102,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .nav-links {
   position: relative;
   display: flex;

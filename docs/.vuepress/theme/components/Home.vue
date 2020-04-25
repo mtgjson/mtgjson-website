@@ -19,7 +19,7 @@
       div.feature(
         v-for="(feature, index) in data.features"
         :key="index")
-        
+
         h2 {{ feature.title }}
         p {{ feature.details }}
 
@@ -47,9 +47,9 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .home {
-  padding: $navbarHeight 2rem 0;
+  padding: var(--navbar-height) 2rem 0;
   max-width: 960px;
   margin: 0px auto;
   display: block;
@@ -133,7 +133,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .home {
     .features {
       flex-direction: column;
@@ -146,7 +146,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobileNarrow) {
+@media (max-width: 719pxNarrow) {
   .home {
     padding-left: 1.5rem;
     padding-right: 1.5rem;

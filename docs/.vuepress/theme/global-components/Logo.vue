@@ -30,7 +30,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .logo {
   &-meta {
     display: flex;

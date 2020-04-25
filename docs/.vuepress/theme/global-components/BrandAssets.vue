@@ -76,7 +76,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .branding {
   &-container {
     display: grid;

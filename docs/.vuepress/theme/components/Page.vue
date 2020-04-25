@@ -178,30 +178,30 @@ function flattern(items, res) {
 }
 </script>
 
-<style lang="stylus">
-@require '../styles/wrapper.styl';
+<style lang="scss">
+@import '../styles/wrapper';
 
 .page {
   position: relative;
   z-index: 1;
-  padding-top: $navbarHeight + 4rem;
-  padding-left: $sidebarWidth;
+  padding-top: calc(var(--navbar-height) + 4rem);
+  padding-left: var(--sidebar-width);
   background-color: var(--bg-dark-color);
 
   .page-theme-switcher {
     position: absolute;
-    left: $sidebarWidth + 48rem;
+    left: calc(var(--sidebar-width) + 48rem);
     top: 1.25rem;
   }
 
   .options {
-    @extend $wrapper;
+    @extend %wrapper;
     margin-bottom: 1rem;
     width: 100%;
 
     &-wrap {
-      left: $sidebarWidth;
-      max-width: $contentWidth;
+      left: var(--sidebar-width);
+      max-width: var(--content-width);
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
@@ -211,7 +211,7 @@ function flattern(items, res) {
 }
 
 .page-edit {
-  @extend $wrapper;
+  @extend %wrapper;
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;
@@ -248,12 +248,12 @@ function flattern(items, res) {
 }
 
 .page-nav {
-  @extend $wrapper;
+  @extend %wrapper;
   padding-top: 1rem;
   padding-bottom: 5rem;
 
   .inner {
-    max-width: $contentWidth;
+    max-width: var(--content-width);
     margin-bottom: 0;
     overflow: auto; // clear float
   }
@@ -273,9 +273,9 @@ function flattern(items, res) {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .page {
-    padding-top: $navbarHeight + 3rem;
+    padding-top: var(--navbar-height) + 3rem;
     padding-left: 0;
   }
 

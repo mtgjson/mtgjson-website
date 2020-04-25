@@ -98,6 +98,6 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-@require '../styles/download';
+<style lang="scss" scoped>
+@import '../styles/download';
 </style>

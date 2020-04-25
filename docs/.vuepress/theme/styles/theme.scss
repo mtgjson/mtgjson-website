@@ -1,12 +1,17 @@
-@require './reset';
-@require './custom-blocks';
-@require './typography';
-@require './wrapper';
-@require './arrow';
-@require './code';
-@require './pages';
+@import './reset';
+@import './custom-blocks';
+@import './typography';
+@import './wrapper';
+@import './arrow';
+@import './code';
+@import './pages';
 
 :root {
+  // Sizes
+  --sidebar-width: 240px;
+  --navbar-height: 5rem;
+  --content-width: 960px;
+  --line-numbers-width: 20px;
   // Auxillery colors
   --yellow-color: #ffe774;
   --green-color: lightgreen;
@@ -19,6 +24,7 @@
   --dark-gray-color: #2d2d2d;
   --discord-color: #7289da;
   --patreon-color: #f96753;
+  --arrow-bg-color: gray;
   // Main theme colors
   --light-color: #ffffff;
   --dark-color: #212e3c;
@@ -195,10 +201,10 @@ img {
 }
 
 .content__default {
-  @extend $wrapper;
+  @extend %wrapper;
 
   & > * {
-    max-width: $contentWidth;
+    max-width: var(--content-width);
   }
 
   & > *:first-child {
@@ -251,7 +257,7 @@ img {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .desktop-hide {
     display: block !important;
   }

@@ -48,7 +48,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .dropdown-wrapper {
   cursor: pointer;
 
@@ -125,7 +125,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .dropdown-wrapper {
     &.open .dropdown-title {
       margin-bottom: 0.5rem;
@@ -156,7 +156,7 @@ export default {
   }
 }
 
-@media (min-width: $MQMobile) {
+@media (min-width: 719px) {
   .dropdown-wrapper {
     height: 1.8rem;
 
@@ -169,7 +169,7 @@ export default {
       // make the arrow always down at desktop
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
-      border-top: 6px solid $arrowBgColor;
+      border-top: 6px solid var(--arrow-bg-color);
       border-bottom: 0;
     }
 

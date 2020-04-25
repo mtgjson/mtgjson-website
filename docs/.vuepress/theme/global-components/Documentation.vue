@@ -216,6 +216,6 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
-@require '../styles/documentation';
+<style lang="scss" scoped>
+@import '../styles/documentation';
 </style>
