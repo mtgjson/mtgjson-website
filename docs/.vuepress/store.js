@@ -38,8 +38,10 @@ export default new Vuex.Store({
         const awaited = await fetch(api + 'DeckList.json');
         const promised = await awaited.json();
         const { data } = promised;
+        // BC
+        const decks = data.decks || data;
 
-        commit('SET_DECKS', data);
+        commit('SET_DECKS', decks);
       } catch (err) {
         commit('SET_DECKS', []);
       }

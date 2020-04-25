@@ -56,9 +56,9 @@
           .heading
             p(title="Possibl values of the property") Values
           .values
-            p
-              select
-                option(v-for="(value, key) in getValues(data.propName || name)") "{{ value }}"
+            p.values-code(@click="toggleValue")
+              ol.values-code--list
+                li(v-for="(value, key) in getValues(data.propName || name)") "{{ value }}"
 
         //- Property Description
         .schema-data--table-item
@@ -172,6 +172,9 @@ export default {
   methods: {
     toggleIndex() {
       this.willShowMore = !this.willShowMore;
+    },
+    toggleValue(e){
+      e.currentTarget.classList.toggle('selected');
     },
     getValues(property) {
       const schema = this.$page.frontmatter.schema; // schema file should match key name

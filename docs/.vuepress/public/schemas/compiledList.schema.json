@@ -2,145 +2,145 @@
   "AllPrintings": {
     "type": "string",
     "example": "\"AllPrintings\"",
-    "description": "The file name containing all cards, including all printings and variations, categorized by set.",
+    "description": "The file containing all cards, including all printings and variations, categorized by set.",
     "introduced": "v4.6.0"
   },
   "AllPrintingsCSVFiles": {
     "type": "string",
     "example": "\"AllPrintingsCSVFiles\"",
-    "description": "The file name containing a directory of .csv files containing all data from AllPrintings.json.",
+    "description": "The file containing a directory of .csv files containing all data from AllPrintings.json.",
     "introduced": "v4.6.0"
   },
   "AllDeckFiles": {
     "type": "string",
     "example": "\"AllDeckFiles\"",
-    "description": "The file name containing all pre-constructed decks, compressed.",
+    "description": "The file containing all pre-constructed decks, compressed.",
     "introduced": "v4.3.0"
   },
   "AllPrices": {
     "type": "string",
     "example": "\"AllPrices\"",
-    "description": "The file name containing all prices of cards in various formats.",
+    "description": "The file containing all prices of cards in various formats.",
     "introduced": "v4.6.0"
   },
   "AllSetFiles": {
     "type": "string",
     "example": "\"AllSetFiles\"",
-    "description": "The file name containing each individual set file in a directory, compressed.",
+    "description": "The file containing each individual set file in a directory, compressed.",
     "introduced": "v4.2.1"
   },
-  "AtomicCards": {
+  "Atomic": {
     "type": "string",
-    "example": "\"AtomicCards\"",
-    "description": "The file name containing every card as a unique \"atomic\" object.",
+    "example": "\"Atomic\"",
+    "description": "The file containing every card as a unique \"atomic\" object.",
     "introduced": "v4.0.0"
   },
   "AttributeValues": {
     "type": "string",
     "example": "\"AttributeValues\"",
-    "description": "The file name containing known property values for data models.",
+    "description": "The file containing known property values for data models.",
     "introduced": "v5.0.0"
   },
   "CardTypes": {
     "type": "string",
     "example": "\"CardTypes\"",
-    "description": "The file name containing every card type of any type of card.",
+    "description": "The file containing every card type of any type of card.",
     "introduced": "v4.3.0"
   },
   "CompiledList": {
     "type": "string",
     "example": "\"CompiledList\"",
-    "description": "The file name containing all possible compiled outputs from MTGJSON, such as, AllPrintings, TypesCards, etc.",
+    "description": "The file containing all possible compiled outputs from MTGJSON, such as, AllPrintings, TypesCards, etc.",
     "introduced": "v4.3.0"
   },
   "DeckList": {
     "type": "string",
     "example": "\"DeckList\"",
-    "description": "The file name containing all possible compiled pre-constructed deck outputs from MTGJSON.",
+    "description": "The file containing all possible compiled pre-constructed deck outputs from MTGJSON.",
     "introduced": "v4.3.0"
   },
   "Keywords": {
     "type": "string",
     "example": "\"Keywords\"",
-    "description": "The file name containing a list of all keywords used on Magic cards.",
+    "description": "The file containing a list of all keywords used on Magic cards.",
     "introduced": "v4.1.0"
   },
-  "LegacyAtomicCards": {
+  "Legacy": {
     "type": "string",
-    "example": "\"LegacyAtomicCards\"",
-    "description": "The file name containing all cards, restricted to cards legal in the Legacy format.",
+    "example": "\"Legacy\"",
+    "description": "The file containing all sets, restricted to sets legal in the Legacy format.",
     "introduced": "v4.6.0"
   },
-  "LegacyPrintings": {
+  "LegacyAtomic": {
     "type": "string",
-    "example": "\"LegacyPrintings\"",
-    "description": "The file name containing all sets, restricted to sets legal in the Legacy format.",
+    "example": "\"LegacyAtomic\"",
+    "description": "The file containing all cards, restricted to cards legal in the Legacy format.",
     "introduced": "v4.6.0"
   },
   "Meta": {
     "type": "string",
     "example": "\"Meta\"",
-    "description": "The file name containing the metadata object, has {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
+    "description": "The file containing the metadata object, has {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
     "introduced": "v4.0.0"
   },
-  "PauperAtomicCards": {
+  "PauperAtomic": {
     "type": "string",
-    "example": "\"PauperAtomicCards\"",
-    "description": "The file name containing all cards, restricted to cards legal in the Pauper format.",
+    "example": "\"PauperAtomic\"",
+    "description": "The file containing all cards, restricted to cards legal in the Pauper format.",
     "introduced": "v4.6.0"
   },
-  "PioneerAtomicCards": {
+  "Pioneer": {
     "type": "string",
-    "example": "\"PioneerAtomicCards\"",
-    "description": "The file name containing all cards, restricted to cards legal in the Pioneer format.",
-    "introduced": "v4.6.0"
-  },
-  "PioneerPrintings": {
-    "type": "string",
-    "example": "\"PioneerPrintings\"",
-    "description": "The file name containing all sets, restricted to sets legal in the Pioneer format.",
+    "example": "\"Pioneer\"",
+    "description": "The file containing all sets, restricted to sets legal in the Pioneer format.",
     "introduced": "v4.1.3"
   },
-  "ModernAtomicCards": {
+  "PioneerAtomic": {
     "type": "string",
-    "example": "\"ModernAtomicCards\"",
-    "description": "The file name containing all cards, restricted to cards legal in the Modern format.",
+    "example": "\"PioneerAtomic\"",
+    "description": "The file containing all cards, restricted to cards legal in the Pioneer format.",
     "introduced": "v4.6.0"
   },
-  "ModernPrintings": {
+  "Modern": {
     "type": "string",
-    "example": "\"ModernPrintings\"",
-    "description": "The file name containing all sets, restricted to sets legal in the Modern format.",
+    "example": "\"Modern\"",
+    "description": "The file containing all sets, restricted to sets legal in the Modern format.",
     "introduced": "v4.1.3"
+  },
+  "ModernAtomic": {
+    "type": "string",
+    "example": "\"ModernAtomic\"",
+    "description": "The file containing all cards, restricted to cards legal in the Modern format.",
+    "introduced": "v4.6.0"
   },
   "SetList": {
     "type": "string",
     "example": "\"SetList\"",
-    "description": "The file name containing a list of codes, names and release dates of all sets.",
+    "description": "The file containing a list of codes, names and release dates of all sets.",
     "introduced": "v4.1.0"
   },
-  "StandardAtomicCards": {
+  "Standard": {
     "type": "string",
-    "example": "\"StandardAtomicCards\"",
-    "description": "The file name containing all cards, restricted to cards legal in the Standard format.",
-    "introduced": "v4.6.0"
-  },
-  "StandardPrintings": {
-    "type": "string",
-    "example": "\"StandardPrintings\"",
-    "description": "The file name containing all sets, restricted to sets legal in the Standard format.",
+    "example": "\"Standard\"",
+    "description": "The file containing all sets, restricted to sets legal in the Standard format.",
     "introduced": "v4.1.3"
   },
-  "VintageAtomicCards": {
+  "StandardAtomic": {
     "type": "string",
-    "example": "\"VintageAtomicCards\"",
-    "description": "The file name containing all cards, restricted to cards legal in the Vintage format.",
+    "example": "\"StandardAtomic\"",
+    "description": "The file containing all cards, restricted to cards legal in the Standard format.",
     "introduced": "v4.6.0"
   },
-  "VintagePrintings": {
+  "Vintage": {
     "type": "string",
-    "example": "\"VintagePrintings\"",
-    "description": "The file name containing all sets, restricted to sets legal in the Vintage format.",
+    "example": "\"Vintage\"",
+    "description": "The file containing all sets, restricted to sets legal in the Vintage format.",
     "introduced": "v4.0.0"
+  },
+  "VintageAtomic": {
+    "type": "string",
+    "example": "\"VintageAtomic\"",
+    "description": "The file containing all cards, restricted to cards legal in the Vintage format.",
+    "introduced": "v4.6.0"
   }
 }

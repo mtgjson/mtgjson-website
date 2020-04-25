@@ -45,10 +45,53 @@ pre {
   line-height: 1.7em;
 }
 
-select {
-  option {
-    &:disabled {
-      color: #010101 !important;
+.values-code {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  height: 47px;
+
+  &--list {
+    position: absolute;
+    top: 8px;
+    z-index: 10;
+    padding: 7px 30px 7px 11px;
+    cursor: pointer;
+
+    li {
+      position: relative;
+      list-style: none;
+      margin-top: 5px;
+      display: none;
+
+      &:first-of-type {
+        margin-top: 0;
+        display: block;
+      }
+    }
+
+    &::after {
+      top: 14px;
+      right: 7px;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: transparent;
+      border-top-color: var(--code-text-color);
+      border-width: 5px;
+      margin-left: -5px;
+    }
+
+  }
+
+  &.selected {
+    z-index: 11;
+
+    li {
+      display: block;
     }
   }
 }
@@ -164,7 +207,7 @@ select {
     &--table, &--table-continued {
       position: relative;
       margin-top: 10px;
-      overflow: hidden;
+      // overflow: hidden;
       box-sizing: border-box;
       margin-bottom: 25px;
 

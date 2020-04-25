@@ -340,7 +340,7 @@
   },
   "layout": {
     "type": "string",
-    "example": "\"aftermath\"",
+    "example": "\"adventure\"",
     "description": "Type of card layout.",
     "isAtomicProperty": true,
     "isTokenProperty": true,

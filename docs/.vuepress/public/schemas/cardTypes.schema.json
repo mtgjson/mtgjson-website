@@ -2,55 +2,55 @@
   "artifact": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Artifacts.",
+    "description": "The supertypes and subtypes available for Artifacts. Some Artifact subtypes include {{code@\"Clue\"}}, {{code@\"Equipment\"}} and {{code@\"Treasure\"}}.",
     "introduced": "v4.3.0"
   },
   "conspiracy": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Conspiracies.",
+    "description": "The supertypes and subtypes available for Conspiracies.",
     "introduced": "v4.3.0"
   },
   "creature": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Creatures.",
+    "description": "The supertypes and subtypes available for Creatures. Some Creature subtypes include {{code@\"Elf\"}}, {{code@\"Goblin\"}} and {{code@\"Zombie\"}}.",
     "introduced": "v4.3.0"
   },
   "enchantment": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Enchantments.",
+    "description": "The supertypes and subtypes available for Enchantments. Some Enchantment subtypes include {{code@\"Aura\"}}, {{code@\"Curse\"}} and {{code@\"Saga\"}}.",
     "introduced": "v4.3.0"
   },
   "instant": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Instants.",
+    "description": "The supertypes and subtypes available for Instants. Some Instant subtypes include {{code@\"Adventure\"}}, {{code@\"Arcane\"}} and {{code@\"Trap\"}}.",
     "introduced": "v4.3.0"
   },
   "land": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Lands.",
+    "description": "The supertypes and subtypes available for Lands. Some Land subtypes include {{code@\"Forest\"}}, {{code@\"Island\"}} and {{code@\"Swamp\"}}.",
     "introduced": "v4.3.0"
   },
   "phenomenons": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Phenomenons.",
+    "description": "The supertypes and subtypes available for Phenomenons.",
     "introduced": "v4.3.0"
   },
   "plane": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Planes.",
+    "description": "The supertypes and subtypes available for Planes. Some Plane subtypes include {{code@\"Dominaria\"}}, {{code@\"Innistrad\"}} and {{code@\"Ravnica\"}}.",
     "introduced": "v4.3.0"
   },
   "planeswalker": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Planeswalkers.",
+    "description": "The supertypes and subtypes available for Planeswalkers. Some Planeswalker subtypes include {{code@\"Chandra\"}}, {{code@\"Jace\"}} and {{code@\"Liliana\"}}.",
     "introduced": "v4.3.0"
   },
   "saga": {
@@ -62,25 +62,25 @@
   "scheme": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Schemes.",
+    "description": "The supertypes and subtypes available for Schemes.",
     "introduced": "v4.3.0"
   },
   "sorcery": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Sorceries.",
+    "description": "The supertypes and subtypes available for Sorceries. Some Sorcery subtypes include {{code@\"Adventure\"}}, {{code@\"Arcane\"}} and {{code@\"Trap\"}}.",
     "introduced": "v4.3.0"
   },
   "tribal": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Tribals.",
+    "description": "The supertypes and subtypes available for Tribals.",
     "introduced": "v4.3.0"
   },
   "vanguard": {
     "type": "object",
     "example": "{ \"subTypes\": array(string), \"superTypes\": array(string) }",
-    "description": "All card types available for Vanguards.",
+    "description": "The supertypes and subtypes available for Vanguards.",
     "introduced": "v4.3.0"
   }
 }
