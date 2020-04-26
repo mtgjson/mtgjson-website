@@ -56,6 +56,8 @@ pre {
     top: 8px;
     z-index: 10;
     padding: 7px 30px 7px 11px;
+    max-height: 132px;
+    overflow: auto;
     cursor: pointer;
 
     li {
@@ -85,15 +87,21 @@ pre {
       margin-left: -5px;
     }
 
-  }
+    &.selected {
+      z-index: 11;
 
-  &.selected {
-    z-index: 11;
+      &::after {
+        border-top-color: transparent;
+        border-bottom-color: var(--code-text-color);
+        top: 9px;
+      }
 
-    li {
-      display: block;
+      li {
+        display: block;
+      }
     }
   }
+
 }
 
 .schema {
@@ -105,34 +113,34 @@ pre {
     }
   }
 
-  &-legend {
-    p {
-      margin-bottom: 10px;
-    }
+  // &-legend {
+  //   p {
+  //     margin-bottom: 10px;
+  //   }
 
-    ol {
-      padding-left: 0;
+  //   ol {
+  //     padding-left: 0;
 
-      li {
-        display: flex;
-        align-items: center;
-        margin-top: 5px;
+  //     li {
+  //       display: flex;
+  //       align-items: center;
+  //       margin-top: 5px;
 
-        .attribute {
-          cursor: initial;
-        }
+  //       .attribute {
+  //         cursor: initial;
+  //       }
 
-        * {
-          vertical-align: middle;
-        }
+  //       * {
+  //         vertical-align: middle;
+  //       }
 
-        span {
-          font-size: 12px;
-        }
-      }
+  //       span {
+  //         font-size: 12px;
+  //       }
+  //     }
 
-    }
-  }
+  //   }
+  // }
 
   &-index {
     ol {

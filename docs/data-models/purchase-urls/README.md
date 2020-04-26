@@ -5,7 +5,7 @@
   "meta": [
     {
       "name": "description",
-      "content": "Purchase urls data model for MTGJSON.",
+      "content": "Purchase URL data model for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -20,10 +20,10 @@
 
 # Purchase Urls
 
-THe Purchase Urls data model describes URL paths to purchase a card or other product.
+THe Purchase Urls data model describes raw URL paths to purchase a product from a marketplace.
   
-> Parent property: `purchaseUrls`  
-> Parent model: [Card](../card/)
+> Parent model: [Card](../card/)  
+> Parent property: `purchaseUrls`
 
 ### Model Properties
 

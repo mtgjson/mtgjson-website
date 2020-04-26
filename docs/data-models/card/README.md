@@ -22,9 +22,9 @@
 
 The Card data model describes the properties and values of a single card.
 
-> Parent file: `StandardCards`, `PauperCards`, `PioneerCards`, `ModernCards`, `LegacyCards`, `VintageCards` , `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`   
-> Parent property: `cards`, `mainBoard`, `sideBoard`  
-> Parent model: [Set (Individual)](../set-individual/), [Deck (Individual)](../deck-individual/)    
+> Parent file: `AllPrintings`, `Legacy`, `Modern`, `Pioneer`, `Standard`, `Vintage`  
+> Parent model: [Set (Individual)](../set-individual/)  
+> Parent property: `cards`
 
 ### Model Properties
 

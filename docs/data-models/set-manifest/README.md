@@ -22,7 +22,8 @@
 
 The Set (Manifest) data model describes a set manifest, a metadata-like structure that holds top-level information about a [Set (Individual)](../set-individual/).
 
-> Parent file: `SetList`
+> Parent file: `SetList`  
+> Parent property: `data`
 
 ### Model Properties
 

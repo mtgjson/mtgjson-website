@@ -68,9 +68,8 @@
     "type": "integer",
     "example": "3",
     "description": "How many of this card exists in a relevant deck.",
-    "attributes": [
-      "deck"
-    ],
+    "isDeckProperty": true,
+    "isDeckOnlyProperty": true,
     "introduced": "v4.4.1"
   },
   "duelDeck": {
@@ -519,8 +518,8 @@
   },
   "purchaseUrls": {
     "type": "object",
-    "example": "{{link@Purchase Urls@/data-models/purchase-urls}}",
-    "description": "See the {{link@Purchase Urls@/data-models/purchase-urls}} data model.",
+    "example": "{ {{link@Purchase URL@/data-models/purchase-url}}, ... }",
+    "description": "Redirect URL to purchase a product on an associated marketplace. See the {{link@Purchase URL@/data-models/purchase-url}} data model.",
     "attributes": [
       "optional"
     ],
@@ -576,6 +575,16 @@
     "isTokenProperty": true,
     "introduced": "v4.3.1"
   },
+  "setCode": {
+    "type": "string",
+    "example": "\"zen\"",
+    "description": "Set code for the printing of the card.",
+    "attributes": [
+      "optional"
+    ],
+    "isTokenProperty": true,
+    "introduced": "v4.0.0"
+  },
   "side": {
     "type": "string",
     "example": "\"a\"",
@@ -597,7 +606,7 @@
   },
   "supertypes": {
     "type": "array(string)",
-    "example": "[ \"Artifact\", \"Creature\", ... ]",
+    "example": "[ \"Legendary\", ... ]",
     "description": "List of card supertypes found before em-dash.",
     "isAtomicProperty": true,
     "isTokenProperty": true,

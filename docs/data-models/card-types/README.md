@@ -22,7 +22,8 @@
 
 The Card Types data models describes every card type of any type of Magic: The Gathering card.
 
-> Parent file: `CardTypes`
+> Parent file: `CardTypes`  
+> Parent property: `data`
 
 ### Model Properties
 

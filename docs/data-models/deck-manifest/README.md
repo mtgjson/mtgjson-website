@@ -22,7 +22,8 @@
 
 The Deck (Manifest) data model describes a deck manifest, a metadata-like structure that holds top-level information about a [Deck (Individual)](../deck-individual/).
 
-> Parent file: `DeckLists`
+> Parent file: `DeckLists`  
+> Parent property: `data`
 
 ### Model Properties
 

@@ -22,7 +22,8 @@
 
 The Set (Individual) data model describes the properties and values of an individual set.
 
-> Parent file: `AllPrintings`, `StandardPrintings`, `PioneerPrintings`, `ModernPrintings`, `LegacyPrintings`, `VintagePrintings`  
+> Parent file: `AllPrintings`, `Legacy`, `Modern`, `Pioneer`, `Standard`, `Vintage`  
+> Parent property: `data`
 
 ### Model Properties
 

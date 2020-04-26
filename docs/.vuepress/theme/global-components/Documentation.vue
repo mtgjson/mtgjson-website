@@ -1,14 +1,14 @@
 <template lang="pug">
-  .schema(v-if="schema")
+  .schema(v-if="schema" ref="content")
     //- Properties Legend
     //- This fills out a filtered list of tags that a property may have
-    .schema-item.schema-legend(v-if="filteredAttributes.size")
-      h4 Property Attributes
-      p The property attributes you see below earmark possible conditions for a field in this data model.
-      ol
-        li(v-for="(attribute, key) in filteredAttributes")
-          .attribute(:class="attribute.split('-')[0]") {{ attribute.split('-')[0] }}
-          span {{ getTitle(attribute.split('-')[0]) }}
+    //- .schema-item.schema-legend(v-if="filteredAttributes.size")
+    //-   h4 Property Attributes
+    //-   p The property attributes you see below earmark possible conditions for a field in this data model.
+    //-   ol
+    //-     li(v-for="(attribute, key) in filteredAttributes")
+    //-       .attribute(:class="attribute.split('-')[0]") {{ attribute.split('-')[0] }}
+    //-       span {{ getTitle(attribute.split('-')[0]) }}
 
     //- Properties Index
     //- This fills out an anchored list of all the properties
@@ -30,7 +30,7 @@
         //- Property Name
         .schema-data--table-item
           .heading
-            p(title="The name of the property") Key
+            p(title="The name of the property") Name
           .name
             a(:href="`#${data.propName || name}`")
               h6(v-html="data.propName || name")
@@ -54,10 +54,10 @@
         //- Property Values
         .schema-data--table-item(v-if="getValues(data.propName || name)")
           .heading
-            p(title="Possibl values of the property") Values
+            p(title="Possible values of the property") Values
           .values
-            p.values-code(@click="toggleValue")
-              ol.values-code--list
+            p.values-code
+              ol.values-code--list(@click="toggleValue" ref="valueList")
                 li(v-for="(value, key) in getValues(data.propName || name)") "{{ value }}"
 
         //- Property Description
@@ -98,6 +98,7 @@ export default {
       willShowMore: true,
       isAtomicCard: false,
       isTokenCard: false,
+      isDeckCard: false,
       isManifest: false
     };
   },
@@ -130,20 +131,29 @@ export default {
           const field = schema[name];
 
           if( this.isAtomicCard ){
+            // Only Atomic properties
             if (field.isAtomicProperty) {
               newSchema[name] = field;
             }
           } else if (this.isTokenCard){
+            // Only Token properties
             if (field.isTokenProperty) {
-              if(!field.attributes || (field.attributes && !field.attributes.includes('deck'))){
-                newSchema[name] = field;
-              }
+              newSchema[name] = field;
             }
+          } else if (this.isDeckCard){
+            // All properties
+            newSchema[name] = field;
           } else if (this.isManifest) {
+            // Only Manifest properties
             if (field.isManifestProperty) {
               newSchema[name] = field;
             }
-          } else if (!field.isTokenOnlyProperty && !field.isManifestOnlyProperty) {
+          } else if (
+            // All non-restrictive properties
+            !field.isTokenOnlyProperty &&
+            !field.isManifestOnlyProperty &&
+            !field.isDeckOnlyProperty
+          ) {
             newSchema[name] = field;
           }
         }
@@ -161,9 +171,10 @@ export default {
       await this.$store.dispatch('UPDATE_VALUES');
     }
 
-    this.isAtomicCard = this.$page.frontmatter.title.includes("Atomic");
-    this.isTokenCard = this.$page.frontmatter.title.includes("Token");
-    this.isManifest = this.$page.frontmatter.title.includes("Manifest");
+    this.isAtomicCard = this.$page.frontmatter.title.includes("(Atomic)");
+    this.isTokenCard = this.$page.frontmatter.title.includes("(Token)");
+    this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
+    this.isManifest = this.$page.frontmatter.title.includes("(Manifest)");
 
     this.showMore = Object.keys(schema).length > 4;
     this.values = this.$store.getters.values;

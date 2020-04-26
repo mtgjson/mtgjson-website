@@ -1,11 +1,16 @@
 ---
 {
   "title": "Prices",
-  "schema": "prices",
   "meta":
     [
-      { "name": "description", "content": "Prices data model documentation." },
-      { "name": "keywords", "content": "mtg, magic: the gathering, mtgjson, json, prices" },
+      {
+        "name": "description",
+        "content": "Prices data model documentation."
+      },
+      {
+        "name": "keywords",
+        "content": "mtg, magic: the gathering, mtgjson, json, prices"
+      }
     ],
   "feed": { "enable": "true" },
 }
@@ -19,7 +24,7 @@ The Prices data model describes a list of card prices based on date.
 > Parent property: `data`
 
 ::: warning
-This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat. The following documentation takes that in to account by documenting a direct example of a card.
+This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat.
 :::
 
 ### Price Providers
@@ -32,37 +37,30 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 ### File Structure Overview
 
 ```json
-{
-  "meta": object,
-  "data": {
-    // Unique card ID
-    "<>Card UUID<>": {
-      // Price format
-      "paper": {
-        // Price provider
-        "<>Price Provider ID<>": {
-          // Provider sale values
-          "sell": {
-            // Sell values of a foil
-            "foil": {
-              // Date and price
-              ...,
-              "<>YYYY-MM-DD<>": float
-            },
-            // Sell values of a non-foil
-            "normal": {
-              ...,
-              // Date and price
-              "<>YYYY-MM-DD<>": float
-            }
-          }
+"<Card UUID>": {
+  // Price format
+  "paper": {
+    // Price provider
+    "<Price Provider ID>": {
+      // Provider sale values
+      "sell": {
+        // Sell values of a foil
+        "foil": {
+          // Date and price
+          "<YYYY-MM-DD>": float
         },
-        ...
-      },
-      "mtgo": { ... }
-    }
-  }
-}
+        // Sell values of a non-foil
+        "normal": {
+          // Date and price
+          "<YYYY-MM-DD>": float
+        }
+      }
+    },
+    ...
+  },
+  "mtgo": { ... }
+},
+...
 ```
 
 ### Example Data Model

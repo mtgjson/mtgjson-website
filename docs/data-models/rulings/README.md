@@ -22,8 +22,8 @@
 
 The Rulings data model describes a list of rulings that are for a specific card.
 
-> Parent property: `rulings`  
-> Parent model: [Card](../card/)
+> Parent model: [Card](../card/)  
+> Parent property: `rulings`
 
 ### Model Properties
 

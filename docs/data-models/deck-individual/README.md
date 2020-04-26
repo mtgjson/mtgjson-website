@@ -22,6 +22,8 @@
 
 The Deck (Individual) data model describes a complete deck reference.
 
+> Parent property: `data`
+
 ### Model Properties
 
 <Documentation/>

@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [dataModels] = generateSidebarRoutes(['/data-models/']);
+const [ dataModels, abstractModels ] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
@@ -151,6 +151,12 @@ module.exports = {
         path: '/data-models/card',
         collapsable: false,
         children: dataModels,
+      },
+      {
+        title: 'Abstract Models',
+        path: '/abstract-models/attribute-values',
+        collapsable: false,
+        children: abstractModels,
       },
       {
         title: 'Changelog',

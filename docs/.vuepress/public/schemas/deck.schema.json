@@ -16,8 +16,8 @@
   },
   "mainBoard": {
     "type": "array(object)",
-    "example": "[ {{link@Card@/data-models/card}}, ... ]",
-    "description": "The cards in the main-board. See the {{link@Card@/data-models/card}} data model.",
+    "example": "[ {{link@Card (Deck)@/data-models/card-deck}}, ... ]",
+    "description": "The cards in the main-board. See the {{link@Card (Deck)@/data-models/card-deck}} data model.",
     "introduced": "v4.3.0"
   },
   "name": {
@@ -29,8 +29,8 @@
   },
   "sideBoard": {
     "type": "array(object)",
-    "example": "[ {{link@Card@/data-models/card}}, ... ]",
-    "description": "The cards in the side-board. See the {{link@Card@/data-models/card}} data model.",
+    "example": "[ {{link@Card (Deck)@/data-models/card-deck}}, ... ]",
+    "description": "The cards in the side-board. See the {{link@Card (Deck)@/data-models/card-deck}} data model.",
     "introduced": "v4.3.0"
   },
   "releaseDate": {

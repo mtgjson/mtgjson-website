@@ -22,8 +22,8 @@
 
 The Legalities data model describes a list of play formats that are legal for a specific card.
 
-> Parent property: `legalities`  
-> Parent model: [Card](../card/)
+> Parent model: [Card](../card/)  
+> Parent property: `legalities`
 
 ::: warning
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example in the data model.
