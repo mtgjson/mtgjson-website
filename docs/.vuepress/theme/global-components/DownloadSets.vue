@@ -98,14 +98,11 @@ export default {
     },
   },
   async created() {
-    this.downloadDirectory = this.$themeConfig.api;
-
-    if(this.$store.getters.sets.length < 1){
-      await this.$store.dispatch('UPDATE_SETS');
-    }
+    await this.$helpers.setStoreState.apply(this, ["sets", "UPDATE_SETS"]);
 
     this.dynamicSets = this.$helpers.sort('releaseDate:true', this.$store.getters.sets);
     this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
+    this.downloadDirectory = this.$themeConfig.api;
   },
   methods: {
     handleMessage(length = 0) {

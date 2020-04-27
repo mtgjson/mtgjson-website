@@ -8,8 +8,8 @@
         .sort-row
           strong Sort By:
           select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, decks)")
-            option(value="releaseDate:true" selected) Release Date (Newest)
-            option(value="releaseDate") Release Date (Oldest)
+            option(value="releaseDate:true" selected) Newest
+            option(value="releaseDate") Oldest
             option(value="code") Code (Ascending)
             option(value="code:true") Code (Descending)
             option(value="name") Name (Ascending)
@@ -70,13 +70,10 @@ export default {
     },
   },
   async created() {
-    this.deckDirectory = this.$themeConfig.api + '/decks';
-
-    if(this.$store.getters.decks.length < 1){
-      await this.$store.dispatch('UPDATE_DECKS');
-    }
+    await this.$helpers.setStoreState.apply(this, ["decks", "UPDATE_DECKS"]);
 
     this.filteredDecks = await this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
+    this.deckDirectory = this.$themeConfig.api + '/decks';
   },
   methods: {
     handleMessage(length = 0) {

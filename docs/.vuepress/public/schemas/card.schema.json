@@ -31,6 +31,9 @@
     "type": "array(string)",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors found in {{code@manaCost}}, {{code@colorIndicator}} and {{code@text}}.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -600,6 +603,9 @@
     "type": "array(string)",
     "example": "[ \"Myr\", \"Construct\", ... ]",
     "description": "List of card subtypes found after em-dash.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -608,6 +614,9 @@
     "type": "array(string)",
     "example": "[ \"Legendary\", ... ]",
     "description": "List of card supertypes found before em-dash.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -654,7 +663,7 @@
   "types": {
     "type": "array(string)",
     "example": "[ \"Artifact\", \"Creature\", ... ]",
-    "description": "List of all types of the card. See {{link@@}} for official",
+    "description": "List of all \"card types\" of the card, including Un-sets and gameplay variants.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"

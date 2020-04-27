@@ -21,6 +21,23 @@
     "bootstrap": "yarn global add imagemin-cli imagemin-webp",
     "heroku-prebuild": "yarn bootstrap"
   },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:full"
+    }
+  },
   "dependencies": {
     "js-essentials": "0.0.6",
     "vuepress": "^1.4.0",

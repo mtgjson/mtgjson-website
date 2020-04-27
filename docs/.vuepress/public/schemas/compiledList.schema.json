@@ -35,12 +35,6 @@
     "description": "The file containing every card as a unique \"atomic\" object.",
     "introduced": "v4.0.0"
   },
-  "AttributeValues": {
-    "type": "string",
-    "example": "\"AttributeValues\"",
-    "description": "The file containing known property values for data models.",
-    "introduced": "v5.0.0"
-  },
   "CardTypes": {
     "type": "string",
     "example": "\"CardTypes\"",
@@ -58,6 +52,12 @@
     "example": "\"DeckList\"",
     "description": "The file containing all possible compiled pre-constructed deck outputs from MTGJSON.",
     "introduced": "v4.3.0"
+  },
+  "EnumValues": {
+    "type": "string",
+    "example": "\"EnumValues\"",
+    "description": "The file containing known property values for data models.",
+    "introduced": "v5.0.0"
   },
   "Keywords": {
     "type": "string",

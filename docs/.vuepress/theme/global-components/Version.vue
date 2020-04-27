@@ -5,17 +5,15 @@
 
 <script>
 export default {
-  name: 'Version',
+  name: "Version",
   computed: {
     version() {
       return this.$store.getters.metadata.version;
-    },
-  },
-  async created() {
-    if(Object.keys(this.$store.getters.metadata).length < 1){
-      await this.$store.dispatch('UPDATE_METADATA');
     }
   },
+  async created() {
+    await this.$helpers.setStoreState.apply(this, ["metadata", "UPDATE_METADATA"]);
+  }
 };
 </script>
 

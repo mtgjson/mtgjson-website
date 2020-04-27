@@ -200,6 +200,7 @@ pre {
 
   &-data {
     blockquote {
+      position: relative;
       background-color: var(--table-bg-color);
       border-color: var(--table-border-color);
 
@@ -210,6 +211,23 @@ pre {
 
     &--table {
       padding: 0;
+
+      &.omitted {
+        &::after {
+          content: "Omitted";
+          position: absolute;
+          color: var(--text-color);
+          font-weight: bold;
+          font-size: 4rem;
+          top: 50%;
+          transform: translateY(-50%) rotate(-15deg);
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          opacity: 0.15;
+          pointer-events: none;
+        }
+      }
     }
 
     &--table, &--table-continued {

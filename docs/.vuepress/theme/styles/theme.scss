@@ -1,3 +1,4 @@
+@import './vars';
 @import './reset';
 @import './custom-blocks';
 @import './typography';
@@ -5,53 +6,6 @@
 @import './arrow';
 @import './code';
 @import './pages';
-
-:root {
-  // Sizes
-  --sidebar-width: 265px;
-  --navbar-height: 5rem;
-  --content-width: 960px;
-  --line-numbers-width: 20px;
-  // Auxillery colors
-  --yellow-color: #ffe774;
-  --green-color: lightgreen;
-  --red-color: salmon;
-  --orange-color: #ef6c2f;
-  --blue-color: #85d3ff;
-  --gray-color: #aaaaaa;
-  --light-gray-color: #f6f8fa;
-  --medium-gray-color: #eaecef;
-  --dark-gray-color: #2d2d2d;
-  --discord-color: #7289da;
-  --patreon-color: #f96753;
-  --arrow-bg-color: gray;
-  // Main theme colors
-  --light-color: #ffffff;
-  --dark-color: #212e3c;
-  --darker-color: #1a2530;
-  --darkest-color: #141c24;
-  --accent-color: #61c6ed;
-  --spoiler-color: var(--yellow-color);
-  // Color Themes
-  --text-color: var(--light-color);
-  --bg-color: var(--dark-color);
-  --bg-border-color: var(--darkest-color);
-  --bg-dark-color: var(--darkest-color);
-  --shadow-color: var(--darkest-color);
-  --blockquote-bg-color: var(--darker-color);
-  --search-bg-color: var(--darkest-color);
-  --search-text-color: var(--text-color);
-  --light-only-dark: var(--dark-color);
-  // --supporter-bg-color: var(--dark-color);
-  // Data Presentation
-  --table-color: var(--bg-color);
-  --table-bg-color: var(--dark-color);
-  --table-heading-color: var(--darker-color);
-  --table-border-color: var(--dark-color);
-  // Code colors
-  --code-bg-color: var(--dark-gray-color);
-  --code-text-color: var(--yellow-color);
-}
 
 html, body {
   min-width: 320px;
@@ -68,34 +22,6 @@ body {
   font-size: 16px;
   background-color: var(--bg-dark-color);
   color: var(--text-color);
-
-  &.light {
-    // Main Color
-    --accent-color: #1e90ff;
-    --orange-color: #dd430f;
-    --yellow-color: #cfa715;
-    // Color Themes
-    --text-color: var(--dark-color);
-    --bg-color: var(--light-color);
-    --bg-border-color: var(--medium-gray-color);
-    --bg-dark-color: var(--light-gray-color);
-    --shadow-color: var(--medium-gray-color);
-    --search-bg-color: var(--medium-gray-color);
-    --search-text-color: var(--text-color);
-    --blockquote-bg-color: var(--medium-gray-color);
-    --spoiler-color: var(--yellow-color);
-    // --supporter-bg-color: var(--bg-color);
-    // Data Presentation
-    --table-color: var(--text-color);
-    --table-bg-color: var(--light-color);
-    --table-heading-color: var(--light-gray-color);
-    --table-border-color: var(--medium-gray-color);
-    // Code colors
-    --code-bg-color: #ffeeec;
-    --code-text-color: #9b2e2e;
-    background-color: var(--bg-color);
-    color: var(--text-color);
-  }
 }
 
 ol, ul {
@@ -305,21 +231,9 @@ img {
     }
   }
 
-  &.deck {
-    &::before {
-      background-color: var(--green-color);
-    }
-  }
-
   &.nullable {
     &::before {
       background-color: var(--red-color);
-    }
-  }
-
-  &.stale {
-    &::before {
-      background-color: var(--medium-gray-color);
     }
   }
 }

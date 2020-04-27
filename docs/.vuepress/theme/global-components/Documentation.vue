@@ -1,15 +1,5 @@
 <template lang="pug">
   .schema(v-if="schema" ref="content")
-    //- Properties Legend
-    //- This fills out a filtered list of tags that a property may have
-    //- .schema-item.schema-legend(v-if="filteredAttributes.size")
-    //-   h4 Property Attributes
-    //-   p The property attributes you see below earmark possible conditions for a field in this data model.
-    //-   ol
-    //-     li(v-for="(attribute, key) in filteredAttributes")
-    //-       .attribute(:class="attribute.split('-')[0]") {{ attribute.split('-')[0] }}
-    //-       span {{ getTitle(attribute.split('-')[0]) }}
-
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
@@ -25,18 +15,22 @@
     //- This fills out a fully descriptive list of all the properties
     .schema-item.schema-data
       h4 Property Information
-      blockquote.schema-data--table(v-for="(data, name) in filteredSchema")
+      blockquote.schema-data--table(
+      v-for="(data, name) in filteredSchema"
+      :key="name"
+      :class="{omitted: (!data.example && showExample)}")
         .schema-data--table-anchor(:id="name" aria-hidden="true")
         //- Property Name
-        .schema-data--table-item
+        .schema-data--table-item(v-if="name")
           .heading
             p(title="The name of the property") Name
           .name
-            a(:href="`#${data.propName || name}`")
-              h6(v-html="data.propName || name")
+            a(:href="`#${name}`")
+              h6
+                strong(v-html="name")
 
         //- Property Type
-        .schema-data--table-item
+        .schema-data--table-item(v-if="data.type")
           .heading
             p(title="The type of the property") Type
           .type
@@ -52,16 +46,16 @@
               pre(v-html="data.example")
 
         //- Property Values
-        .schema-data--table-item(v-if="getValues(data.propName || name)")
+        .schema-data--table-item(v-if="getValues(name)")
           .heading
             p(title="Possible values of the property") Values
           .values
             p.values-code
               ol.values-code--list(@click="toggleValue" ref="valueList")
-                li(v-for="(value, key) in getValues(data.propName || name)") "{{ value }}"
+                li(v-for="(value, key) in getValues(name)") "{{ value }}"
 
         //- Property Description
-        .schema-data--table-item
+        .schema-data--table-item(v-if="data.description")
           .heading
             p(title="The description of the property and its value") Description
           .description
@@ -74,8 +68,8 @@
           .attributes
             .attribute(
               v-for="(attribute, key) in data.attributes"
-              :class="attribute.split('-')[0]"
-              :title="getTitle(attribute.split('-')[0])") {{ attribute.replace('-', ' ') }}
+              :class="getAttribute(attribute)"
+              :title="getTitle(getAttribute(attribute))") {{ attribute.replace('-', ' ') }}
 
         //- Property Introduction
         .schema-data--table-item(v-if="data.introduced")
@@ -95,6 +89,7 @@ export default {
       schema: null,
       values: null,
       showMore: true,
+      showExample: true,
       willShowMore: true,
       isAtomicCard: false,
       isTokenCard: false,
@@ -124,7 +119,7 @@ export default {
     },
     filteredSchema() {
       const schema = this.schema;
-      let newSchema = {};
+      let filteredSchema = {};
 
       for (let name in schema) {
         if (hasOwnProperty.call(schema, name)) {
@@ -133,43 +128,41 @@ export default {
           if( this.isAtomicCard ){
             // Only Atomic properties
             if (field.isAtomicProperty) {
-              newSchema[name] = field;
+              filteredSchema[name] = field;
             }
           } else if (this.isTokenCard){
             // Only Token properties
             if (field.isTokenProperty) {
-              newSchema[name] = field;
+              filteredSchema[name] = field;
             }
-          } else if (this.isDeckCard){
-            // All properties
-            newSchema[name] = field;
           } else if (this.isManifest) {
             // Only Manifest properties
             if (field.isManifestProperty) {
-              newSchema[name] = field;
+              filteredSchema[name] = field;
             }
+          } else if (this.isDeckCard){
+            // All properties
+            filteredSchema[name] = field;
           } else if (
             // All non-restrictive properties
             !field.isTokenOnlyProperty &&
             !field.isManifestOnlyProperty &&
             !field.isDeckOnlyProperty
           ) {
-            newSchema[name] = field;
+            filteredSchema[name] = field;
           }
         }
       }
 
-      return newSchema || schema;
+      return filteredSchema;
     },
   },
   async created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
     const landcycle = new this.$landcycle(schema);
-    landcycle._init();
+    await landcycle._init();
 
-    if(this.$store.getters.values.length < 1){
-      await this.$store.dispatch('UPDATE_VALUES');
-    }
+    await this.$helpers.setStoreState.apply(this, ["values", "UPDATE_VALUES"]);
 
     this.isAtomicCard = this.$page.frontmatter.title.includes("(Atomic)");
     this.isTokenCard = this.$page.frontmatter.title.includes("(Token)");
@@ -186,6 +179,9 @@ export default {
     },
     toggleValue(e){
       e.currentTarget.classList.toggle('selected');
+    },
+    getAttribute(attribute = ""){
+      return attribute.split('-')[0];
     },
     getValues(property) {
       const schema = this.$page.frontmatter.schema; // schema file should match key name
@@ -215,8 +211,6 @@ export default {
           return 'Property omitted when value returns a falsey or expected value.';
         case 'deprecated':
           return 'Property will be removed in a future major or minor version release.';
-        case 'deck':
-          return 'Property only available on a card within a Deck (Individual) file.';
         case 'nullable':
           return 'Property may return a null value.';
         default:
