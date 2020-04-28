@@ -26,12 +26,12 @@
 
 <script>
 export default {
-  name: 'ThemeSwitcher',
+  name: "ThemeSwitcher",
   data() {
     return {
-      activeTheme: 'dark',
-      darkTheme: 'dark',
-      lightTheme: 'light',
+      activeTheme: "dark",
+      darkTheme: "dark",
+      lightTheme: "light"
     };
   },
   mounted() {
@@ -39,14 +39,14 @@ export default {
 
     // Attempt to retrieve localStorage state
     if (window && window.localStorage) {
-      const savedTheme = window.localStorage.getItem('theme');
+      const savedTheme = window.localStorage.getItem("theme");
       if (savedTheme) {
         // Apply the state to the button
         const selectedTheme = document.querySelector(
           `.theme-switcher--button[data-theme='${savedTheme}']`
         );
 
-        if(selectedTheme){
+        if (selectedTheme) {
           // Apply the state overall
           selectedTheme.click();
         }
@@ -63,21 +63,21 @@ export default {
       document.body.classList.add(newTheme);
       // Change favicon to match
       const oldLink = document.querySelector("link[rel*='icon']");
-      let link = document.createElement('link');
-      link.type = 'image/x-icon';
-      link.rel = 'shortcut icon';
+      let link = document.createElement("link");
+      link.type = "image/x-icon";
+      link.rel = "shortcut icon";
       link.href = `/favicon-${newTheme}.ico`;
       // Don't clog up the <head> with cascade
       oldLink.remove();
       // Add new favicon
-      document.getElementsByTagName('head')[0].appendChild(link);
+      document.getElementsByTagName("head")[0].appendChild(link);
       // Store state in localStorage
       if (window && window.localStorage) {
-        window.localStorage.setItem('theme', newTheme);
+        window.localStorage.setItem("theme", newTheme);
       }
       this.activeTheme = newTheme;
-    },
-  },
+    }
+  }
 };
 </script>
 

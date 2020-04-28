@@ -1,6 +1,6 @@
 <template lang="pug">
   .download-tables
-    .sorting-options(v-if="decks.length !== 0")
+    .sorting-options(v-if="decks.length > 0")
       h6.show-options(
         @click="showOptions = !showOptions"
         :class="{'hide-options': !showOptions}") Toggle Options
@@ -23,9 +23,7 @@
             v-model="searchKey"
             @input="onHandleChange")
 
-    p.no-result(v-if="decks.length === 0")
-      em {{ message }}
-    blockquote.download-item(v-for="(deck, key) in decks")
+    blockquote.download-item(v-for="(deck, key) in decks" :key="key")
       .download-wrap
         .img-wrap
           div(:class="`ss ss-${deck.code.toLowerCase()}`")
@@ -52,28 +50,33 @@
 
 <script>
 export default {
-  name: 'DownloadDecks',
+  name: "DownloadDecks",
   data() {
     return {
+      defaultDecks: [],
       filteredDecks: [],
-      searchKey: '',
+      searchKey: "",
       showOptions: false,
-      sortKey: 'releaseDate:true',
-      downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
+      sortKey: "releaseDate:true",
+      downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
       deckDirectory: undefined,
-      message: 'Loading...',
+      message: "Loading..."
     };
   },
   computed: {
     decks() {
       return this.filteredDecks;
-    },
+    }
   },
   async created() {
-    await this.$helpers.setStoreState.apply(this, ["decks", "UPDATE_DECKS"]);
+    await this.$helpers.setStoreState.apply(this, ["DeckList", "UPDATE_DECKS"]);
 
-    this.filteredDecks = await this.$helpers.sort('releaseDate:true', this.$store.getters.decks);
-    this.deckDirectory = this.$themeConfig.api + '/decks';
+    this.defaultDecks = this.$store.getters.DeckList;
+    this.filteredDecks = await this.$helpers.sort(
+      "releaseDate:true",
+      this.defaultDecks
+    );
+    this.deckDirectory = this.$themeConfig.api + "/decks";
   },
   methods: {
     handleMessage(length = 0) {
@@ -84,17 +87,20 @@ export default {
       clearTimeout(this.timeout);
 
       this.timeout = window.setTimeout(() => {
-        const searched = this.$helpers.search(this.searchKey, this.$store.getters.decks);
+        const searched = this.$helpers.search(
+          this.searchKey,
+          this.defaultDecks
+        );
         const sorted = this.$helpers.sort(this.sortKey, searched);
 
         this.handleMessage(sorted.length);
         this.filteredDecks = sorted;
-      }, this.$store.getters.throttleSpeed);
+      }, this.$throttleSpeed);
     }
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/download';
+@import "../styles/download";
 </style>

@@ -1,7 +1,7 @@
 {
   "data": {
     "type": "object | array(object)",
-    "example": "{{link@Set (Individual)@/data-models/set-individual}}, {{link@Deck (Manifest)@/data-models/deck-manifest}}, {{link@Card Types@/data-models/card-types}}, {{link@Keywords@/data-models/keywords}}, ...",
+    "example": "{{link@Set@/data-models/set}}, {{link@Deck (DeckList)@/data-models/deck-decklist}}, {{link@Card Types@/data-models/card-types}}, {{link@Keywords@/data-models/keywords}}, ...",
     "description": "Top-level key that holds the \"Web API\" data. The returned data is based on the file.",
     "introduced": "v5.0.0"
   },

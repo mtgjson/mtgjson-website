@@ -1,24 +1,24 @@
 ---
 {
-  "title": "Values",
+  "title": "Enum Values",
   "meta":
     [
       {
         "name": "description",
-        "content": "Values data model documentation."
+        "content": "Enum Values data model documentation."
       },
       {
         "name": "keywords",
-        "content": "mtg, magic: the gathering, mtgjson, json, values"
+        "content": "mtg, magic: the gathering, mtgjson, json, enum values, values"
       },
     ],
   "feed": { "enable": "true" },
 }
 ---
 
-# Values
+# Enum Values
 
-The Values data model describes a list of key value pairs that are direct possible values of key properties in specific data models. Generally, this file is used for documenting data on this website but is also available to the public.
+The Enum Values data model describes a list of key value pairs that are direct possible values of key properties in specific data models. Generally, this file is used for documenting data on this website but is also available to the public.
 
 > Parent file: `EnumValues`  
 > Parent property: `data`

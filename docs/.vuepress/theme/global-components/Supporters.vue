@@ -33,12 +33,12 @@
 
 <script>
 export default {
-  name: 'Supporters',
+  name: "Supporters",
   data() {
     return {
-      supporters: require('../../public/resources/supporters.json'),
+      supporters: require("../../public/resources/supporters.json"),
       projectMsg:
-        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.',
+        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
     };
   },
   computed: {
@@ -47,18 +47,18 @@ export default {
     },
     services() {
       return this.supporters.services;
-    },
+    }
   },
   mounted() {
-    const lazyImages = Array.from(document.querySelectorAll('img.lazy'));
+    const lazyImages = Array.from(document.querySelectorAll("img.lazy"));
 
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       let lazyImageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             let lazyImage = entry.target;
             lazyImage.src = lazyImage.dataset.src;
-            lazyImage.classList.remove('lazy');
+            lazyImage.classList.remove("lazy");
             lazyImageObserver.unobserve(lazyImage);
           }
         });
@@ -71,8 +71,8 @@ export default {
       // Boo, no observer
       lazyImages.forEach(lazyImage => {
         lazyImage.src = lazyImage.dataset.src;
-        lazyImage.classList.remove('lazy');
-        lazyImage.classList.add('not-lazy');
+        lazyImage.classList.remove("lazy");
+        lazyImage.classList.add("not-lazy");
       });
     }
   },
@@ -82,7 +82,7 @@ export default {
       const year = newDate.getFullYear();
       const month = newDate.getMonth() + 1; // +1 because arrays are 0
 
-      const sinceDate = time.split('-');
+      const sinceDate = time.split("-");
       const sinceYear = Number(sinceDate[0]);
       const sinceMonth = Number(sinceDate[1]);
 
@@ -91,8 +91,8 @@ export default {
         return `(1 Month)`;
       }
       return `(${totalMonths} Months)`;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -182,7 +182,8 @@ export default {
         line-height: 1.2em;
       }
 
-      h6, p {
+      h6,
+      p {
         word-wrap: anywhere;
       }
 
@@ -195,13 +196,14 @@ export default {
         font-weight: bold;
         text-transform: capitalize;
 
-        &, &-time {
+        &,
+        &-time {
           color: var(--text-color);
         }
       }
     }
 
-    .supporter[data-tier='mythic'] {
+    .supporter[data-tier="mythic"] {
       .img-wrap {
         &--container {
           height: 125px;
@@ -215,7 +217,7 @@ export default {
       }
     }
 
-    .supporter[data-tier='rare'] {
+    .supporter[data-tier="rare"] {
       .tier {
         color: var(--yellow-color);
       }

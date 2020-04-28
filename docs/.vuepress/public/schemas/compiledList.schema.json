@@ -29,9 +29,9 @@
     "description": "The file containing each individual set file in a directory, compressed.",
     "introduced": "v4.2.1"
   },
-  "Atomic": {
+  "AtomicCards": {
     "type": "string",
-    "example": "\"Atomic\"",
+    "example": "\"AtomicCards\"",
     "description": "The file containing every card as a unique \"atomic\" object.",
     "introduced": "v4.0.0"
   },

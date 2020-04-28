@@ -1,11 +1,11 @@
 ---
 {
-  "title": "Set (Individual)",
+  "title": "Set",
   "schema": "set",
   "meta": [
     {
       "name": "description",
-      "content": "Set (Individual) data model for MTGJSON.",
+      "content": "Set data model for MTGJSON.",
     },
     {
       "name": "keywords",
@@ -18,9 +18,9 @@
 }
 ---
 
-# Set (Individual)
+# Set
 
-The Set (Individual) data model describes the properties and values of an individual set.
+The Set data model describes the properties and values of an individual set.
 
 > Parent file: `AllPrintings`, `Legacy`, `Modern`, `Pioneer`, `Standard`, `Vintage`  
 > Parent property: `data`

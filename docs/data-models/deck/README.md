@@ -1,11 +1,11 @@
 ---
 {
-  "title": "Deck (Individual)",
+  "title": "Deck",
   "schema": "deck",
   "meta": [
     {
       "name": "description",
-      "content": "Deck (Individual) data model documentation.",
+      "content": "Deck data model documentation.",
     },
     {
       "name": "keywords",
@@ -18,9 +18,9 @@
 }
 ---
 
-# Deck (Individual)
+# Deck
 
-The Deck (Individual) data model describes a complete deck reference.
+The Deck data model describes a complete deck reference.
 
 > Parent property: `data`
 

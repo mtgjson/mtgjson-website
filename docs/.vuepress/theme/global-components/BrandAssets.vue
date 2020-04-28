@@ -26,14 +26,14 @@
 </template>
 
 <script>
-import Logo from './Logo';
+import Logo from "./Logo";
 export default {
-  name: 'BrandingGuide',
+  name: "BrandingGuide",
   components: { Logo },
   data() {
     return {
       didCopy: false,
-      didCopyAnimationDelay: 400,
+      didCopyAnimationDelay: 400
     };
   },
   methods: {
@@ -41,7 +41,7 @@ export default {
       if (document && window) {
         const textRange = document.createRange();
         const which = e.currentTarget.dataset.which;
-        const embedCopies = document.querySelectorAll('.embed-copy');
+        const embedCopies = document.querySelectorAll(".embed-copy");
         const embedCode = embedCopies[which];
 
         textRange.setStartBefore(embedCode);
@@ -49,7 +49,7 @@ export default {
 
         window.getSelection().removeAllRanges(); // Chrome bug, requires ensuring no selections first
         window.getSelection().addRange(textRange);
-        document.execCommand('copy');
+        document.execCommand("copy");
         window.getSelection().removeAllRanges();
 
         this.showDidCopy(embedCode);
@@ -59,11 +59,11 @@ export default {
       if (!this.didCopy && embedCode) {
         this.didCopy = true;
 
-        embedCode.classList.add('copied');
+        embedCode.classList.add("copied");
 
         if (window) {
           window.setTimeout(() => {
-            embedCode.classList.remove('copied');
+            embedCode.classList.remove("copied");
             this.didCopy = false;
           }, this.didCopyAnimationDelay);
         }
@@ -71,8 +71,8 @@ export default {
     },
     renderAttributionEmbed() {
       return `<a href="http://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
-    },
-  },
+    }
+  }
 };
 </script>
 
@@ -105,7 +105,8 @@ export default {
         }
       }
 
-      .img-wrap, .dl-wrap {
+      .img-wrap,
+      .dl-wrap {
         margin-bottom: 1.5rem;
       }
 

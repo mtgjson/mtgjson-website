@@ -1,12 +1,12 @@
 <template lang="pug">
-  .schema(v-if="schema" ref="content")
+  .schema(v-if="schema")
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
       h4 Property Index
       p A list of all available properties.
       ol(:class="{hide: willShowMore, wontHide: !showMore}")
-        li(v-for="(data, name) in filteredSchema")
+        li(v-for="(data, name) in filteredSchema" :key="name")
           p
             router-link(:to="'#' + name") {{ name }}
       .show-more(v-if="showMore" @click="toggleIndex") {{ (willShowMore ? 'Show More' : 'Show Less') }}
@@ -46,12 +46,12 @@
               pre(v-html="data.example")
 
         //- Property Values
-        .schema-data--table-item(v-if="getValues(name)")
+        .schema-data--table-item(v-if="values && getValues(name)")
           .heading
             p(title="Possible values of the property") Values
           .values
             p.values-code
-              ol.values-code--list(@click="toggleValue" ref="valueList")
+              ol.values-code--list(@click="toggleValue")
                 li(v-for="(value, key) in getValues(name)") "{{ value }}"
 
         //- Property Description
@@ -83,7 +83,7 @@
 
 <script>
 export default {
-  name: 'Documentation',
+  name: "Documentation",
   data() {
     return {
       schema: null,
@@ -109,7 +109,7 @@ export default {
 
           if (field.attributes) {
             attributes = attributes.concat(
-              field.attributes.map(attr => attr.split('-')[0])
+              field.attributes.map(attr => attr.split("-")[0])
             );
           }
         }
@@ -125,12 +125,12 @@ export default {
         if (hasOwnProperty.call(schema, name)) {
           const field = schema[name];
 
-          if( this.isAtomicCard ){
+          if (this.isAtomicCard) {
             // Only Atomic properties
             if (field.isAtomicProperty) {
               filteredSchema[name] = field;
             }
-          } else if (this.isTokenCard){
+          } else if (this.isTokenCard) {
             // Only Token properties
             if (field.isTokenProperty) {
               filteredSchema[name] = field;
@@ -140,7 +140,7 @@ export default {
             if (field.isManifestProperty) {
               filteredSchema[name] = field;
             }
-          } else if (this.isDeckCard){
+          } else if (this.isDeckCard) {
             // All properties
             filteredSchema[name] = field;
           } else if (
@@ -155,43 +155,43 @@ export default {
       }
 
       return filteredSchema;
-    },
+    }
   },
   async created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
     const landcycle = new this.$landcycle(schema);
     await landcycle._init();
 
-    await this.$helpers.setStoreState.apply(this, ["values", "UPDATE_VALUES"]);
-
     this.isAtomicCard = this.$page.frontmatter.title.includes("(Atomic)");
     this.isTokenCard = this.$page.frontmatter.title.includes("(Token)");
     this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
-    this.isManifest = this.$page.frontmatter.title.includes("(Manifest)");
+    this.isManifest = this.$page.frontmatter.title.includes("List"); // SetList/DeckList
+
+    await this.$helpers.setStoreState.apply(this, ["EnumValues", "UPDATE_VALUES"]);
 
     this.showMore = Object.keys(schema).length > 4;
-    this.values = this.$store.getters.values;
+    this.values = this.$store.getters.EnumValues;
     this.schema = landcycle.schema;
   },
   methods: {
     toggleIndex() {
       this.willShowMore = !this.willShowMore;
     },
-    toggleValue(e){
-      e.currentTarget.classList.toggle('selected');
+    toggleValue(e) {
+      e.currentTarget.classList.toggle("selected");
     },
-    getAttribute(attribute = ""){
-      return attribute.split('-')[0];
+    getAttribute(attribute = "") {
+      return attribute.split("-")[0];
     },
     getValues(property) {
       const schema = this.$page.frontmatter.schema; // schema file should match key name
       const keys = Object.keys(this.values); // Keys of the KeyValues file
-      let pageProperty = '';
+      let pageProperty = "";
       let values = null;
       let page = null;
 
-      for( const key of keys ){
-        if( schema.toLowerCase().includes(key) ){
+      for (const key of keys) {
+        if (schema.includes(key)) {
           pageProperty = key;
           break;
         }
@@ -199,28 +199,28 @@ export default {
 
       page = this.values[pageProperty]; // lookup if we have a matching key to the page
 
-      if( page ) {
-        values = page[property]
+      if (page) {
+        values = page[property];
       }
 
       return values;
     },
     getTitle(attribute) {
       switch (attribute) {
-        case 'optional':
-          return 'Property omitted when value returns a falsey or expected value.';
-        case 'deprecated':
-          return 'Property will be removed in a future major or minor version release.';
-        case 'nullable':
-          return 'Property may return a null value.';
+        case "optional":
+          return "Property omitted when value returns a falsey or expected value.";
+        case "deprecated":
+          return "Property will be removed in a future major or minor version release.";
+        case "nullable":
+          return "Property may return a null value.";
         default:
           break;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/documentation';
+@import "../styles/documentation";
 </style>

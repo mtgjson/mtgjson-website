@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Set (Manifest)",
+  "title": "Set (SetList)",
   "schema": "set",
   "meta": [
     {
@@ -9,7 +9,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, set (manifest)",
+      "content": "mtg, magic: the gathering, mtgjson, json, set (setlist)",
     }
   ],
   "feed": {
@@ -18,9 +18,9 @@
 }
 ---
 
-# Set (Manifest)
+# Set (SetList)
 
-The Set (Manifest) data model describes a set manifest, a metadata-like structure that holds top-level information about a [Set (Individual)](../set-individual/).
+The Set (SetList) data model describes a metadata-like structure that holds top-level information about a [Set](../set/).
 
 > Parent file: `SetList`  
 > Parent property: `data`

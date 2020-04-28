@@ -23,7 +23,7 @@
 The Translations data model describes the translated data per language as a key.
 
 > Parent property: `translations`  
-> Parent model: [Set (Individual)](../set-individual/)
+> Parent model: [Set (Individual)](../set/)
 
 ### Model Properties
 

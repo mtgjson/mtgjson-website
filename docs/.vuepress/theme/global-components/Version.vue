@@ -8,11 +8,11 @@ export default {
   name: "Version",
   computed: {
     version() {
-      return this.$store.getters.metadata.version;
+      return this.$store.getters.Meta.version;
     }
   },
   async created() {
-    await this.$helpers.setStoreState.apply(this, ["metadata", "UPDATE_METADATA"]);
+    await this.$helpers.setStoreState.apply(this, ["Meta", "UPDATE_METADATA"]);
   }
 };
 </script>

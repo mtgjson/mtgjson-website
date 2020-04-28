@@ -1,10 +1,10 @@
 <template lang="pug">
   .download-tables
-    blockquote.download-item(v-if="files" v-for="(file, index) in files")
+    blockquote.download-item(v-if="files" v-for="(file, name) in files" :key="name")
       .download-wrap
         .text-wrap
           .text-wrap--details
-            h3 {{ index }}
+            h3 {{ name }}
             small
               span(v-html="file.description")
 
@@ -47,13 +47,13 @@
 
 <script>
 export default {
-  name: 'AllDownloads',
+  name: "AllDownloads",
   data() {
     return {
       files: require(`../../public/schemas/compiledList.schema.json`),
-      fileBaseCompression: ['bz2', 'gz', 'xz', 'zip'],
-      fileSQLCompression: ['sql', 'sqlite'],
-      fileDirectory: undefined,
+      fileBaseCompression: ["bz2", "gz", "xz", "zip"],
+      fileSQLCompression: ["sql", "sqlite"],
+      fileDirectory: ""
     };
   },
   async created() {
@@ -69,17 +69,17 @@ export default {
       if (hasOwnProperty.call(files, file)) {
         const { example } = files[file];
 
-        files[file].example = example.replace(/['"]+/g, '');
+        files[file].example = example.replace(/['"]+/g, "");
       }
     }
 
     this.files = await landcycle.schema;
-  },
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/download';
+@import "../styles/download";
 
 .download-tables {
   .download {

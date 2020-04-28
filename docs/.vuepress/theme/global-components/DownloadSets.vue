@@ -1,6 +1,6 @@
 <template lang="pug">
   .download-tables
-    .sorting-options(v-if="sets.length !== 0")
+    .sorting-options(v-if="sets.length > 0")
       h6.show-options(
         @click="showOptions = !showOptions"
         :class="{'hide-options': !showOptions}") Toggle Options
@@ -42,9 +42,8 @@
             v-model="spoilerKey"
             @input="onHandleChange")
 
-    p.no-result(v-if="sets.length === 0")
-      em {{ message }}
-    blockquote.download-item(v-else v-for="(set, key) in sets")
+
+    blockquote.download-item(v-else v-for="(set, key) in sets" :key="key")
       .download-wrap
         .img-wrap
           div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -76,31 +75,32 @@
 
 <script>
 export default {
-  name: 'DownloadSets',
+  name: "DownloadSets",
   data() {
     return {
+      defaultSets: [],
       dynamicSets: [],
       filters: [],
-      filterKey: '',
-      searchKey: '',
+      filterKey: "",
+      searchKey: "",
       spoilerKey: true,
       showOptions: false,
-      sortKey: 'releaseDate:true',
-      downloadFormats: ['json', 'bz2', 'gz', 'xz', 'zip'],
+      sortKey: "releaseDate:true",
+      downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
       downloadDirectory: undefined,
       timeout: null,
-      message: 'Loading...',
+      message: "Loading..."
     };
   },
   computed: {
     sets() {
       return this.dynamicSets;
-    },
+    }
   },
   async created() {
-    await this.$helpers.setStoreState.apply(this, ["sets", "UPDATE_SETS"]);
-
-    this.dynamicSets = this.$helpers.sort('releaseDate:true', this.$store.getters.sets);
+    await this.$helpers.setStoreState.apply(this, ["SetList", "UPDATE_SETS"]);
+    this.defaultSets = this.$store.getters.SetList;
+    this.dynamicSets = this.$helpers.sort("releaseDate:true", this.defaultSets);
     this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
     this.downloadDirectory = this.$themeConfig.api;
   },
@@ -113,20 +113,22 @@ export default {
       clearTimeout(this.timeout);
 
       this.timeout = window.setTimeout(() => {
-        const sets = this.$store.getters.sets;
-        const removed = !this.spoilerKey ? sets.filter(set => !this.$helpers.isFutureDate(set.releaseDate) ) : sets;
+        const sets = this.defaultSets;
+        const removed = !this.spoilerKey
+          ? sets.filter(set => !this.$helpers.isFutureDate(set.releaseDate))
+          : sets;
         const searched = this.$helpers.search(this.searchKey, removed);
         const sorted = this.$helpers.sort(this.sortKey, searched);
         const filtered = this.$helpers.filter(this.filterKey, sorted);
 
         this.handleMessage(filtered.length);
         this.dynamicSets = filtered;
-      }, this.$store.getters.throttleSpeed);
-    },
-  },
+      }, this.$throttleSpeed);
+    }
+  }
 };
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/download';
+@import "../styles/download";
 </style>

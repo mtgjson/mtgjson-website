@@ -22,7 +22,7 @@
 
 The Card (Token) data model describes the properties and values of a single card token.
 
-> Parent model: [Set (Individual)](../set-individual/)  
+> Parent model: [Set (Individual)](../set/)  
 > Parent property: `tokens`
 
 ### Model Properties
