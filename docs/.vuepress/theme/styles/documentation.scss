@@ -55,8 +55,8 @@ pre {
     position: absolute;
     top: 8px;
     z-index: 10;
-    padding: 7px 30px 7px 11px;
-    max-height: 132px;
+    padding: 0 37px 7px 11px;
+    max-height: 200px;
     overflow: auto;
     width: max-content;
     cursor: pointer;
@@ -64,18 +64,21 @@ pre {
     li {
       position: relative;
       list-style: none;
-      margin-top: 5px;
+      padding-top: 7px;
       display: none;
 
       &:first-of-type {
-        margin-top: 0;
         display: block;
+      }
+
+      &:last-of-type {
+        // padding-bottom: 7px;
       }
     }
 
     &::after {
       top: 14px;
-      right: 7px;
+      right: 11px;
       border: solid transparent;
       content: "";
       height: 0;
@@ -207,6 +210,21 @@ pre {
 
       &:hover {
         border-color: var(--accent-color);
+      }
+    }
+
+    &--options {
+      margin: 10px 0 25px;
+
+      input {
+        margin-left: 10px;
+      }
+
+      label {
+        font-size: 14px;
+        color: var(--gray-color);
+        font-weight: bold;
+        cursor: pointer;
       }
     }
 

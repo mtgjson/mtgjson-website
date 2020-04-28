@@ -1,6 +1,10 @@
 #mtgjson,
 #changelog,
 #frequently-asked-questions {
+  & + p {
+    padding-top: 0 !important;
+  }
+
   & ~ h2 {
     margin-top: 0;
     padding-top: 100px;
@@ -12,6 +16,26 @@
   & ~ h6 {
     margin-top: 0;
     padding-top: 30px;
+  }
+}
+
+#frequently-asked-questions {
+  & ~ h3 {
+    margin-top: 50px;
+    padding-top: 50px;
+    border-top: 1px solid var(--gray-color);
+  }
+
+  & ~ h3 span,
+  & ~ p span {
+    color: var(--accent-color);
+    font-weight: bold;
+  }
+
+  & + h3 {
+    padding-top: 30px;
+    margin-top: 0;
+    border-top-width: 0;
   }
 }
 

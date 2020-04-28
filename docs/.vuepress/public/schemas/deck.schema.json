@@ -45,7 +45,7 @@
   },
   "type": {
     "type": "string",
-    "example": "\"Intro Pack\"",
+    "example": "\"Advanced Deck\"",
     "description": "The type of deck.",
     "introduced": "v4.3.0"
   }

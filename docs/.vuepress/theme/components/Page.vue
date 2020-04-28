@@ -215,6 +215,7 @@ function flattern(items, res) {
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;
+  margin-top: 100px;
 
   .page-edit--links {
     display: flex;

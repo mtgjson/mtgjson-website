@@ -133,14 +133,14 @@ module.exports = {
         path: '/',
       },
       {
+        title: 'F.A.Q.',
+        path: '/faq/',
+      },
+      {
         title: 'Downloads',
         path: '/downloads/all-files',
         collapsable: false,
         children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/'],
-      },
-      {
-        title: 'F.A.Q.',
-        path: '/faq/',
       },
       {
         title: 'File Structures',

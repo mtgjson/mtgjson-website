@@ -2,7 +2,7 @@
   "brawl": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Brawl play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Brawl play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"
@@ -29,7 +29,7 @@
   "future": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Future play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Future play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"
@@ -38,7 +38,7 @@
   "frontier": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Frontier play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Frontier play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"
@@ -56,7 +56,7 @@
   "modern": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Modern play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Modern play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"
@@ -65,7 +65,7 @@
   "pauper": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Pauper play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Pauper play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"
@@ -74,7 +74,7 @@
   "penny": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Penny play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Penny play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"
@@ -83,7 +83,7 @@
   "pioneer": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Pioneer play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Pioneer play format. This property is omitted.",
     "introduced": "v4.6.0",
     "attributes": [
       "optional"
@@ -92,7 +92,7 @@
   "standard": {
     "type": "string",
     "example": "",
-    "description": "Sol Ring is not legal in the Standard play format. This field is ommitted.",
+    "description": "Sol Ring is not legal in the Standard play format. This property is omitted.",
     "introduced": "v4.0.0",
     "attributes": [
       "optional"

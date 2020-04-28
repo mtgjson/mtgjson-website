@@ -93,7 +93,7 @@
   },
   "keyruneCode": {
     "type": "string",
-    "example": "\"KTK\"",
+    "example": "\"RNA\"",
     "description": "The matching keyrune code for {{link@Keyrune@https://andrewgioia.github.io/Keyrune}} image icons.",
     "introduced": "v4.3.2"
   },

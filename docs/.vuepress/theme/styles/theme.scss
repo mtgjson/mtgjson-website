@@ -164,6 +164,12 @@ img {
   }
 }
 
+.loading-msg {
+  font-weight: bold;
+  color: var(--accent-color);
+  padding-top: 1rem;
+}
+
 .sidebar-group-items, .sidebar-sub-headers {
   .sidebar-link {
     font-size: 14px;
