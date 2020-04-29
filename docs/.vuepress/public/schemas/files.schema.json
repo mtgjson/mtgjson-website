@@ -1,0 +1,14 @@
+{
+  "data": {
+    "type": "object | array(object)",
+    "example": "{{link@Set@/data-models/set}}, {{link@Deck (DeckList)@/data-models/deck-decklist}}, {{link@Card Types@/data-models/card-types}}, {{link@Keywords@/data-models/keywords}}, ...",
+    "description": "Top-level key that holds the \"Web API\" data. The returned data is based on the file.",
+    "introduced": "v5.0.0"
+  },
+  "meta": {
+    "type": "object",
+    "example": "{{link@Meta@/data-models/meta}}",
+    "description": "Application metadata object. See the {{link@Meta@/data-models/meta}} data model.",
+    "introduced": "v5.0.0"
+  }
+}

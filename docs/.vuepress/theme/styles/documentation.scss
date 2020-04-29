@@ -1,0 +1,375 @@
+h3 {
+  margin-top: -100px;
+  padding-top: 100px;
+}
+
+h4 {
+  margin-bottom: 0;
+  padding-bottom: 10px;
+}
+
+h6, p {
+  color: var(--text-color);
+  margin: 0;
+  font-size: 14px;
+  line-height: 1.7em;
+}
+
+h6 {
+  transition: 0.25s ease-in-out;
+  position: relative;
+  padding: 0;
+  margin: 0;
+
+  a {
+    position: absolute;
+    left: 0;
+  }
+}
+
+em {
+  color: var(--gray-color);
+}
+
+pre, code {
+  display: inline-block;
+  white-space: pre-line;
+
+  &:empty {
+    display: none;
+  }
+}
+
+pre {
+  margin: 7px 0;
+  line-height: 1.7em;
+}
+
+.values-code {
+  position: relative;
+  display: flex;
+  // align-items: center;
+  height: 47px;
+
+  &--list {
+    position: absolute;
+    top: 8px;
+    z-index: 10;
+    padding: 0 37px 7px 11px;
+    max-height: 200px;
+    overflow: auto;
+    width: max-content;
+    cursor: pointer;
+
+    li {
+      position: relative;
+      list-style: none;
+      padding-top: 7px;
+      display: none;
+
+      &:first-of-type {
+        display: block;
+      }
+
+      &:last-of-type {
+        // padding-bottom: 7px;
+      }
+    }
+
+    &::after {
+      top: 14px;
+      right: 11px;
+      border: solid transparent;
+      content: "";
+      height: 0;
+      width: 0;
+      position: absolute;
+      pointer-events: none;
+      border-color: transparent;
+      border-top-color: var(--code-text-color);
+      border-width: 5px;
+      margin-left: -5px;
+    }
+
+    &.selected {
+      z-index: 11;
+
+      &::after {
+        border-top-color: transparent;
+        border-bottom-color: var(--code-text-color);
+        top: 9px;
+      }
+
+      li {
+        display: block;
+      }
+    }
+  }
+
+}
+
+.schema {
+  &-item {
+    margin-bottom: 30px;
+
+    ol, ul {
+      margin-left: 0;
+    }
+  }
+
+  // &-legend {
+  //   p {
+  //     margin-bottom: 10px;
+  //   }
+
+  //   ol {
+  //     padding-left: 0;
+
+  //     li {
+  //       display: flex;
+  //       align-items: center;
+  //       margin-top: 5px;
+
+  //       .attribute {
+  //         cursor: initial;
+  //       }
+
+  //       * {
+  //         vertical-align: middle;
+  //       }
+
+  //       span {
+  //         font-size: 12px;
+  //       }
+  //     }
+
+  //   }
+  // }
+
+  &-index {
+    ol {
+      margin: 0;
+      padding-left: 15px;
+      list-style: disc;
+      position: relative;
+      overflow: hidden;
+      padding-bottom: 30px;
+      border-bottom: 1px solid var(--bg-color);
+
+      li {
+        list-style: disc;
+      }
+
+      &::after {
+        transform: rotateX(180deg);
+        width: 100%;
+        height: 40px;
+        position: absolute;
+        bottom: -40px;
+        left: 0;
+        right: 0;
+        z-index: 1;
+        content: '';
+        box-shadow: 5px 5px 10px var(--shadow-color);
+      }
+
+      &.hide {
+        max-height: 90px;
+        padding-bottom: 0;
+      }
+
+      &.wontHide {
+        max-height: 100%;
+        border-width: 0;
+
+        &::after {
+          box-shadow: none;
+        }
+      }
+    }
+
+    small {
+      color: var(--gray-color);
+    }
+
+    .show-more {
+      color: var(--accent-color);
+      font-size: 14px;
+      font-weight: bold;
+      text-align: center;
+      margin: 10px auto 0;
+      cursor: pointer;
+    }
+  }
+
+  &-data {
+    blockquote {
+      position: relative;
+      background-color: var(--table-bg-color);
+      border-color: var(--table-border-color);
+
+      &:hover {
+        border-color: var(--accent-color);
+      }
+    }
+
+    &--options {
+      margin: 10px 0 25px;
+
+      input {
+        margin-left: 10px;
+      }
+
+      label {
+        font-size: 14px;
+        color: var(--gray-color);
+        font-weight: bold;
+        cursor: pointer;
+      }
+    }
+
+    &--table {
+      padding: 0;
+
+      &.omitted {
+        &::after {
+          content: "Omitted";
+          position: absolute;
+          color: var(--text-color);
+          font-weight: bold;
+          font-size: 4rem;
+          top: 50%;
+          transform: translateY(-50%) rotate(-15deg);
+          margin: 0 auto;
+          left: 0;
+          right: 0;
+          opacity: 0.15;
+          pointer-events: none;
+        }
+      }
+    }
+
+    &--table, &--table-continued {
+      position: relative;
+      margin-top: 10px;
+      // overflow: hidden;
+      box-sizing: border-box;
+      margin-bottom: 25px;
+
+      &-continued {
+        display: flex;
+        justify-content: center;
+        padding: 7px 13px 17px;
+        font-weight: bold;
+        cursor: help;
+      }
+
+      // Allows us to anchor to a screen safe position
+      &-anchor {
+        position: absolute;
+        top: -(var(--navbar-height) + 1rem);
+      }
+
+      &-item {
+        display: grid;
+        grid-template-columns: minmax(min-content, 150px) 1fr;
+        border-bottom: 1px solid var(--table-border-color);
+
+        &:last-of-type {
+          border-bottom-width: 0;
+        }
+
+        .heading {
+          grid-column: span 1;
+          text-align: left;
+          text-transform: capitalize;
+          font-weight: bold;
+          background-color: var(--table-heading-color);
+          border-right: 1px solid var(--table-border-color);
+          padding: 7px 13px;
+          display: flex;
+          align-items: center;
+
+          & > * {
+            cursor: help;
+          }
+
+          & + * {
+            padding: 7px 13px;
+            display: flex;
+            align-items: center;
+            grid-column: span 1;
+          }
+        }
+
+        .type {
+          & > *[title] {
+            cursor: help;
+          }
+        }
+
+        .name {
+          a {
+            text-decoration: none;
+
+            h6 {
+              font-weight: normal;
+            }
+          }
+        }
+
+        .attributes {
+          display: block;
+
+          .attribute {
+            margin-top: 5px;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 571px) {
+  .schema {
+    &-legend {
+      ol {
+        li {
+          display: block;
+          margin-bottom: 5px;
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &-data {
+      &--table {
+        &-item {
+          grid-template-columns: minmax(min-content, 120px) 1fr;
+        }
+      }
+    }
+  }
+}
+
+
+@media (max-width: 401px) { // 400px is used on a lot of modern device viewports
+  .schema {
+    &-data {
+      &--table {
+        border-left-width: 1px;
+
+        &-item {
+          grid-template-columns: 1fr;
+
+          &, .heading {
+            border-width: 0;
+          }
+        }
+      }
+    }
+  }
+}

@@ -31,8 +31,8 @@ export default {
 // }
 </script>
 
-<style lang="stylus">
-@require '../styles/wrapper.styl';
+<style lang="scss">
+@import '../styles/wrapper';
 
 .navbar {
   display: flex;
@@ -41,11 +41,11 @@ export default {
   top: 0;
   right: 0;
   left: 0;
-  height: $navbarHeight;
+  height: var(--navbar-height);
   align-items: center;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
-  @extend $wrapper;
+  @extend %wrapper;
 
   // Race condition with nesting Logo inside of router-link
   .router-link-exact-active.router-link-active:empty {
@@ -60,7 +60,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .navbar {
     left: 0;
 
@@ -75,10 +75,10 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .navbar {
     &-options {
-      max-width: $contentWidth;
+      max-width: var(--content-width);
     }
   }
 }

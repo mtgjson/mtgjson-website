@@ -1,0 +1,20 @@
+{
+  "abilityWords": {
+    "type": "array(string)",
+    "example": "[ \"adamant\", ... ]",
+    "description": "List of ability words found in rules text on cards.",
+    "introduced": "v4.3.0"
+  },
+  "keywordAbilities": {
+    "type": "array(string)",
+    "example": "[ \"absorb\", ... ]",
+    "description": "List of keyword abilities found in rules text on cards.",
+    "introduced": "v4.3.0"
+  },
+  "keywordActions": {
+    "type": "array(string)",
+    "example": "[ \"abandon\", ... ]",
+    "description": "List of keyword actions found in rules text on cards.",
+    "introduced": "v4.3.0"
+  }
+}

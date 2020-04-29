@@ -5,8 +5,6 @@
 [![Actions Status](https://github.com/mtgjson/mtgjson-website/workflows/Node%20CI/badge.svg)](https://github.com/mtgjson/mtgjson-website/actions)
 [![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
 
-[![Generic badge](https://img.shields.io/badge/Made_with_Node-12.8.0-green.svg)](https://shields.io/)
-[![Generic badge](https://img.shields.io/badge/Made_with_Vuepress-1.2.0-green.svg)](https://shields.io/)
 [![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://GitHub.com/mtgjson/mtgjson-website/graphs/commit-activity)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mtgjson/mtgjson-website/blob/master/LICENSE)
 
@@ -28,7 +26,7 @@ sudo n 12.8.0
 
 **Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
 
-Install global dependencies. (May need admin rights)
+Install global dependencies. (Optional. May need admin rights.)
 
 ```
 yarn boostrap
@@ -84,4 +82,4 @@ yarn purge
 
 ### **Landcycle, what is it?**
 
-Landcycle is a JS class that allows JSON to take mustache variables such as `{{link@anchor-link-test@/anchor-link-href}}` (use `/` to make an internal link and use the `HTTP Protocol` for an external link) and `{{code@variable}}` (creating an inline-code style) and then intercepts the JSON in Vue to hydrate the data in to HTML of your choosing. On the website we mainly use this to change data links in to anchor tags that route to other documentation links to maintain our Single Page Application.
+Landcycle is a JS class that allows JSON to take mustache variables such as `{{link@anchor-link-test@/anchor-link-href}}` (use `/` to make an internal link and use the `HTTP/S Protocol` for an external link) and `{{code@variable}}` (creating an inline-code style) and then intercepts the JSON in Vue to hydrate the data in to HTML of your choosing. On the website we mainly use this to change data links in to anchor tags that route to other documentation links to maintain our Single Page Application.

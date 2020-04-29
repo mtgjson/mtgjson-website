@@ -2,14 +2,19 @@
   main.page
     slot(name="top")
 
-    //- ThemeSwitcher.page-theme-switcher
-
     Content
 
     footer.page-edit
-      .last-updated(v-if="lastUpdated")
-        span.prefix {{ lastUpdatedText }}: 
-        span.time {{ lastUpdated }}
+      .page-edit--links
+        .edit-link(v-if="editLink")
+          a(:href="editLink"
+          target="_blank"
+          rel="noopener noreferrer") {{ editLinkText }}
+          OutboundLink
+
+        .last-updated(v-if="lastUpdated")
+          span.prefix {{ lastUpdatedText }}:&nbsp;
+          span.time {{ lastUpdated }}
 
     .page-nav(v-if="prev || next")
       p.inner
@@ -27,29 +32,29 @@
 </template>
 
 <script>
-import { resolvePage, normalize, outboundRE, endingSlashRE } from '../util';
-import ThemeSwitcher from '../global-components/ThemeSwitcher';
+import isNil from 'lodash/isNil'
+import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util";
+
 export default {
-  components: { ThemeSwitcher },
-  props: ['sidebarItems'],
+  props: ["sidebarItems"],
   computed: {
     lastUpdated() {
       const date = this.$page.lastUpdated;
-      let formattedDate = '';
+      let formattedDate = "";
 
       if (date) {
         // Format for standard computer date and drop exact time
-        const unformattedDate = date.split(',')[0].split('/');
+        const unformattedDate = date.split(",")[0].split("/");
         const unformattedMonth = unformattedDate[0];
         const unformattedDay = unformattedDate[1];
         const formattedYear = unformattedDate[2];
         // Add padding
         const formattedMonth =
           unformattedMonth.length < 2
-            ? '0' + unformattedMonth
+            ? "0" + unformattedMonth
             : unformattedMonth;
         const formattedDay =
-          unformattedDay.length < 2 ? '0' + unformattedDay : unformattedDay;
+          unformattedDay.length < 2 ? "0" + unformattedDay : unformattedDay;
 
         formattedDate = `${formattedYear}-${formattedMonth}-${formattedDay}`;
       }
@@ -57,13 +62,13 @@ export default {
       return formattedDate;
     },
     lastUpdatedText() {
-      if (typeof this.$themeLocaleConfig.lastUpdated === 'string') {
+      if (typeof this.$themeLocaleConfig.lastUpdated === "string") {
         return this.$themeLocaleConfig.lastUpdated;
       }
-      if (typeof this.$site.themeConfig.lastUpdated === 'string') {
+      if (typeof this.$site.themeConfig.lastUpdated === "string") {
         return this.$site.themeConfig.lastUpdated;
       }
-      return 'Last Updated';
+      return "Last Updated";
     },
     prev() {
       const prev = this.$page.frontmatter.prev;
@@ -85,6 +90,34 @@ export default {
         return resolveNext(this.$page, this.sidebarItems);
       }
     },
+    editLink() {
+      const showEditLink = isNil(this.$page.frontmatter.editLink)
+        ? this.$site.themeConfig.editLinks
+        : this.$page.frontmatter.editLink;
+      const {
+        repo,
+        docsDir = "",
+        docsBranch = "master",
+        docsRepo = repo
+      } = this.$site.themeConfig;
+      if (showEditLink && docsRepo && this.$page.relativePath) {
+        return this.createEditLink(
+          repo,
+          docsRepo,
+          docsDir,
+          docsBranch,
+          this.$page.relativePath
+        );
+      }
+      return null;
+    },
+    editLinkText() {
+      return (
+        this.$themeLocaleConfig.editLinkText ||
+        this.$site.themeConfig.editLinkText ||
+        `Edit this page`
+      );
+    }
   },
   methods: {
     createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
@@ -92,10 +125,10 @@ export default {
       if (bitbucket.test(repo)) {
         const base = outboundRE.test(docsRepo) ? docsRepo : repo;
         return (
-          base.replace(endingSlashRE, '') +
+          base.replace(endingSlashRE, "") +
           `/src` +
           `/${docsBranch}` +
-          (docsDir ? '/' + docsDir.replace(endingSlashRE, '') : '') +
+          (docsDir ? "/" + docsDir.replace(endingSlashRE, "") : "") +
           path +
           `?mode=edit&spa=0&at=${docsBranch}&fileviewer=file-view-default`
         );
@@ -106,13 +139,13 @@ export default {
         : `https://github.com/${docsRepo}`;
 
       return (
-        base.replace(endingSlashRE, '') +
+        base.replace(endingSlashRE, "") +
         `/edit/${docsBranch}` +
-        (docsDir ? '/' + docsDir.replace(endingSlashRE, '') : '') +
+        (docsDir ? "/" + docsDir.replace(endingSlashRE, "/") : "") +
         path
       );
-    },
-  },
+    }
+  }
 };
 
 function resolvePrev(page, items) {
@@ -128,7 +161,7 @@ function find(page, items, offset) {
   flattern(items, res);
   for (let i = 0; i < res.length; i++) {
     const cur = res[i];
-    if (cur.type === 'page' && cur.path === decodeURIComponent(page.path)) {
+    if (cur.type === "page" && cur.path === decodeURIComponent(page.path)) {
       return res[i + offset];
     }
   }
@@ -136,7 +169,7 @@ function find(page, items, offset) {
 
 function flattern(items, res) {
   for (let i = 0, l = items.length; i < l; i++) {
-    if (items[i].type === 'group') {
+    if (items[i].type === "group") {
       flattern(items[i].children || [], res);
     } else {
       res.push(items[i]);
@@ -145,30 +178,30 @@ function flattern(items, res) {
 }
 </script>
 
-<style lang="stylus">
-@require '../styles/wrapper.styl';
+<style lang="scss">
+@import '../styles/wrapper';
 
 .page {
   position: relative;
   z-index: 1;
-  padding-top: $navbarHeight + 4rem;
-  padding-left: $sidebarWidth;
+  padding-top: calc(var(--navbar-height) + 4rem);
+  padding-left: var(--sidebar-width);
   background-color: var(--bg-dark-color);
 
   .page-theme-switcher {
     position: absolute;
-    left: $sidebarWidth + 48rem;
+    left: calc(var(--sidebar-width) + 48rem);
     top: 1.25rem;
   }
 
   .options {
-    @extend $wrapper;
+    @extend %wrapper;
     margin-bottom: 1rem;
     width: 100%;
 
     &-wrap {
-      left: $sidebarWidth;
-      max-width: $contentWidth;
+      left: var(--sidebar-width);
+      max-width: var(--content-width);
       display: flex;
       flex-direction: row-reverse;
       align-items: center;
@@ -178,10 +211,17 @@ function flattern(items, res) {
 }
 
 .page-edit {
-  @extend $wrapper;
+  @extend %wrapper;
   padding-top: 1rem;
   padding-bottom: 1rem;
   overflow: auto;
+  margin-top: 100px;
+
+  .page-edit--links {
+    display: flex;
+    justify-content: space-between;
+    max-width: 960px;
+  }
 
   .edit-link {
     display: inline-block;
@@ -189,6 +229,7 @@ function flattern(items, res) {
     a {
       color: var(--light-gray-color);
       margin-right: 0.25rem;
+      font-weight: bold;
     }
   }
 
@@ -208,12 +249,12 @@ function flattern(items, res) {
 }
 
 .page-nav {
-  @extend $wrapper;
+  @extend %wrapper;
   padding-top: 1rem;
   padding-bottom: 5rem;
 
   .inner {
-    max-width: $contentWidth;
+    max-width: var(--content-width);
     margin-bottom: 0;
     overflow: auto; // clear float
   }
@@ -233,9 +274,9 @@ function flattern(items, res) {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .page {
-    padding-top: $navbarHeight + 3rem;
+    padding-top: var(--navbar-height) + 3rem;
     padding-left: 0;
   }
 
@@ -243,14 +284,16 @@ function flattern(items, res) {
     display: none !important;
   }
 
-  .page-edit {
+  .page-edit--links {
+    flex-wrap: wrap;
+
     .edit-link {
-      margin-bottom: 0.5rem;
+      flex: 0 0 100%;
+      margin-bottom: 1rem;
     }
 
     .last-updated {
-      font-size: 0.8em;
-      float: none;
+      flex: 0 0 100%;
       text-align: left;
     }
   }

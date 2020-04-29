@@ -1,52 +1,46 @@
 <template lang="pug">
   .schema(v-if="schema")
-    //- Properties Legend
-    .schema-item.schema-legend(v-if="filteredAttributes.size")
-      h4 Property Attributes
-      p The property attributes you see below earmark possible conditions for a field in this data structure.
-      ol
-        li(v-for="(attribute, key) in filteredAttributes")
-          .attribute(:class="attribute.split('-')[0]") {{ attribute.split('-')[0] }}
-          span {{ getTitle(attribute.split('-')[0]) }}
-
     //- Properties Index
-    .schema-item.schema-index(v-if="showIndex")
+    //- This fills out an anchored list of all the properties
+    .schema-item.schema-index
       h4 Property Index
       p A list of all available properties.
       ol(:class="{hide: willShowMore, wontHide: !showMore}")
-        li(v-for="(data, name) in filteredSchema")
+        li(v-for="(data, name) in filteredSchema" :key="name")
           p
             router-link(:to="'#' + name") {{ name }}
       .show-more(v-if="showMore" @click="toggleIndex") {{ (willShowMore ? 'Show More' : 'Show Less') }}
 
     //- Properties Table
+    //- This fills out a fully descriptive list of all the properties
     .schema-item.schema-data
       h4 Property Information
-      blockquote.schema-data--table(v-for="(data, name) in filteredSchema" v-if="name !== '...'")
+      .schema-data--options(v-show="hasOptionals")
+        label(for="show-optional") Show optional properties:
+        input(id="show-optional" type="checkbox" v-model="showOptional")
+
+      blockquote.schema-data--table(
+      v-for="(data, name) in filteredSchema"
+      v-if="shouldShowProperty(data)"
+      :key="name"
+      :class="{omitted: (!data.example && showExample)}")
         .schema-data--table-anchor(:id="name" aria-hidden="true")
         //- Property Name
-        .schema-data--table-item
+        .schema-data--table-item(v-if="name")
           .heading
-            p(title="The name of the property") Key
+            p(title="The name of the property") Name
           .name
-            a(:href="`#${data.propName || name}`")
-              h6(v-html="data.propName || name")
+            a(:href="`#${name}`")
+              h6
+                strong(v-html="name")
 
         //- Property Type
-        .schema-data--table-item
+        .schema-data--table-item(v-if="data.type")
           .heading
             p(title="The type of the property") Type
           .type
             p(:title="`Property is of type: ${data.type}`")
               em {{ data.type }}
-
-        //- Property Introduction
-        .schema-data--table-item(v-if="data.introduced")
-          .heading
-            p(title="When the property was introduced") Introduced
-          .introduced
-            p
-              em {{ data.introduced }}
 
         //- Property Example
         .schema-data--table-item
@@ -56,8 +50,17 @@
             p
               pre(v-html="data.example")
 
+        //- Property Values
+        .schema-data--table-item(v-if="values && getValues(name)")
+          .heading
+            p(title="Possible values of the property") Values
+          .values
+            p.values-code
+              ol.values-code--list.has-more(@click="toggleValue" @scroll="detectBottom")
+                li(v-for="(value, key) in getValues(name)") "{{ value }}"
+
         //- Property Description
-        .schema-data--table-item
+        .schema-data--table-item(v-if="data.description")
           .heading
             p(title="The description of the property and its value") Description
           .description
@@ -70,52 +73,49 @@
           .attributes
             .attribute(
               v-for="(attribute, key) in data.attributes"
-              :class="attribute.split('-')[0]"
-              :title="getTitle(attribute.split('-')[0])") {{ attribute.replace('-', ' ') }}
+              :class="getAttribute(attribute)"
+              :title="getTitle(getAttribute(attribute))") {{ attribute.replace('-', ' ') }}
 
-      blockquote.schema-data--table-continued(v-else v-for="(i, k) in 3" title="Denotes there are more sequential rows") ...
+        //- Property Introduction
+        .schema-data--table-item(v-if="data.introduced")
+          .heading
+            p(title="When the property was introduced") Introduced
+          .introduced
+            p
+              em {{ data.introduced }}
+
 </template>
 
 <script>
 export default {
-  name: 'Documentation',
+  name: "Documentation",
   data() {
     return {
-      schema: [],
+      schema: null,
+      values: null,
       showMore: true,
+      showExample: true,
       willShowMore: true,
-      tokenOnlyFields: [
-        'artist',
-        'borderColor',
-        'colorIdentity',
-        'colorIndicator',
-        'colors',
-        'isOnlineOnly',
-        'layout',
-        'loyalty',
-        'name',
-        'names',
-        'number',
-        'power',
-        'reverseRelated',
-        'scryfallId',
-        'scryfallOracleId',
-        'scryfallIllustrationId',
-        'subtypes',
-        'supertypes',
-        'side',
-        'text',
-        'toughness',
-        'type',
-        'types',
-        'uuid',
-        'watermark',
-      ],
+      isAtomicCard: false,
+      isTokenCard: false,
+      isDeckCard: false,
+      isManifest: false,
+      showOptional: true
     };
   },
   computed: {
-    showIndex() {
-      return !Object.keys(this.filteredSchema).includes('...');
+    hasOptionals(){
+      let hasOptional = false;
+
+      for(let prop in this.schema) {
+        let attr = this.schema[prop].attributes;
+
+        if(!hasOptional && attr){
+          hasOptional = attr.includes('optional');
+        }
+      }
+
+      return hasOptional;
     },
     filteredAttributes() {
       // Store the schema attributes for properties
@@ -127,7 +127,9 @@ export default {
           const field = schema[name];
 
           if (field.attributes) {
-            attributes = attributes.concat(field.attributes.map(attr => attr.split('-')[0]));
+            attributes = attributes.concat(
+              field.attributes.map(attr => attr.split("-")[0])
+            );
           }
         }
       }
@@ -136,76 +138,129 @@ export default {
     },
     filteredSchema() {
       const schema = this.schema;
-      let newSchema = undefined;
+      let filteredSchema = {};
 
-      // Logic to filter down the card schema for AllCards
-      if (this.$page.frontmatter.title === 'AllCards') {
-        newSchema = {};
+      for (let name in schema) {
+        if (hasOwnProperty.call(schema, name)) {
+          const field = schema[name];
 
-        for (let name in schema) {
-          if (hasOwnProperty.call(schema, name)) {
-            const field = schema[name];
-
-            if (field.attributes && field.attributes.includes('atomic')) {
-              newSchema[name] = field;
+          if (this.isAtomicCard) {
+            // Only Atomic properties
+            if (field.isAtomicProperty) {
+              filteredSchema[name] = field;
             }
+          } else if (this.isTokenCard) {
+            // Only Token properties
+            if (field.isTokenProperty) {
+              filteredSchema[name] = field;
+            }
+          } else if (this.isManifest) {
+            // Only Manifest properties
+            if (field.isManifestProperty) {
+              filteredSchema[name] = field;
+            }
+          } else if (this.isDeckCard) {
+            // All properties
+            filteredSchema[name] = field;
+          } else if (
+            // All non-restrictive properties
+            !field.isTokenOnlyProperty &&
+            !field.isManifestOnlyProperty &&
+            !field.isDeckOnlyProperty
+          ) {
+            filteredSchema[name] = field;
           }
         }
       }
 
-      if (this.$page.frontmatter.title === 'token') {
-        newSchema = {};
-
-        for (let name in schema) {
-          if (hasOwnProperty.call(schema, name)) {
-            const field = schema[name];
-
-            if (this.tokenOnlyFields.includes(name)) {
-              newSchema[name] = field;
-            }
-          }
-        }
-      }
-
-      return newSchema || schema;
-    },
+      return filteredSchema;
+    }
   },
-  created() {
+  async created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
     const landcycle = new this.$landcycle(schema);
-    landcycle._init();
+    await landcycle._init();
+
+    this.isAtomicCard = this.$page.frontmatter.title.includes("(Atomic)");
+    this.isTokenCard = this.$page.frontmatter.title.includes("(Token)");
+    this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
+    this.isManifest = this.$page.frontmatter.title.includes("List"); // SetList/DeckList
+
+    await this.$helpers.setStoreState.apply(this, [
+      "EnumValues",
+      "UPDATE_VALUES"
+    ]);
 
     this.showMore = Object.keys(schema).length > 4;
+    this.values = this.$store.getters.EnumValues;
     this.schema = landcycle.schema;
   },
   methods: {
     toggleIndex() {
       this.willShowMore = !this.willShowMore;
     },
+    toggleValue(e) {
+      e.currentTarget.classList.toggle("selected");
+    },
+    getAttribute(attribute = "") {
+      return attribute.split("-")[0];
+    },
+    shouldShowProperty(prop) {
+      return (
+        this.showOptional ||
+        (
+          !this.showOptional && !prop.attributes ||
+          prop.attributes && !prop.attributes.includes("optional")
+        )
+      );
+    },
+    detectBottom(e) {
+      const isBottom = e.target.scrollTop === e.target.scrollTopMax;
+
+      if (isBottom) {
+        e.target.classList.remove("has-more");
+      } else {
+        e.target.classList.add("has-more");
+      }
+    },
+    getValues(property) {
+      const schema = this.$page.frontmatter.schema; // schema file should match key name
+      const keys = Object.keys(this.values); // Keys of the KeyValues file
+      let pageProperty = "";
+      let values = null;
+      let page = null;
+
+      for (const key of keys) {
+        if (schema.includes(key)) {
+          pageProperty = key;
+          break;
+        }
+      }
+
+      page = this.values[pageProperty]; // lookup if we have a matching key to the page
+
+      if (page) {
+        values = page[property];
+      }
+
+      return values;
+    },
     getTitle(attribute) {
       switch (attribute) {
-        case 'atomic':
-          return 'Property available in AllCards JSON';
-        case 'optional':
-          return 'Property omitted when value returns a falsey or expected value';
-        case 'deprecated':
-          return 'Property will be removed in a future major or minor version release';
-        case 'deck':
-          return 'Property only available on a card within an Individual Deck JSON';
-        case 'nullable':
-          return 'Property may return a null value';
-        case 'stale':
-          return 'Property may return an undocumented value';
-        case 'token':
-          return 'Property only available on token cards';
+        case "optional":
+          return "Property omitted when value returns a falsey or expected value.";
+        case "deprecated":
+          return "Property will be removed in a future major or minor version release.";
+        case "nullable":
+          return "Property may return a null value.";
         default:
           break;
       }
-    },
-  },
+    }
+  }
 };
 </script>
 
-<style lang="stylus" scoped>
-@require '../styles/documentation';
+<style lang="scss" scoped>
+@import "../styles/documentation";
 </style>

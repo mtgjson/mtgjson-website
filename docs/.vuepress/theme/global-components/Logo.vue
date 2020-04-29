@@ -22,15 +22,15 @@
         Version.version-link
 </template>
 <script>
-import Version from './Version';
+import Version from "./Version";
 export default {
-  name: 'Logo',
+  name: "Logo",
   components: { Version },
-  props: [ 'hideText', 'hideLink', 'width', 'fill' ]
+  props: ["hideText", "hideLink", "width", "fill"]
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .logo {
   &-meta {
     display: flex;

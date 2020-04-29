@@ -13,23 +13,17 @@
 }
 ---
 
-# What Is MTGJSON?
+# MTGJSON
 
-## How It Works
+### What Is MTGJSON?
 
 MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.
 
-<em>The [version](/files/version.json) file, which describes the metadata of all available files contains 3 principle properties:</em>
+::: warning
+As of MTGJSON version 5, and going forward, web-served files will be available via a version specific "Web API" path: `/api/v5/*`. If your project depends on the web-served files please update your project to the new API as soon as possible.
+:::
 
-  - `date` When all files were last completely built. (All data is updated)
-  - `pricesDate` When card prices were updated on cards. (Prices data is updated)
-  - `version` What version all files are on. (Updates with `pricesDate`)
-
-<strong>Builds for JSON files run weekly at 4PM EST (typically on Sundays) while rebuilds for new prices are run daily around the same time.</strong>
-
-In the [version](/files/version.json) file and `meta` in associated files, when the files are rebuilt to update card prices, the `pricesDate` value will update and that date will be appended to the current `version`, for example, `v4.6.0+20191129`. Rebuilds that update card prices are fully backwards compatible with its primary release.
-
-## The Team
+### The Team
 
 ::: tip Zach - Lead Developer &amp; Maintainer
 <p>
@@ -60,10 +54,10 @@ In the [version](/files/version.json) file and `meta` in associated files, when 
 </p>
 :::
 
-## Contributing
+### Contributing
 
 Many others have devoted their time and effort in to this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via [Paypal](https://www.paypal.me/Zachhalpern) (one-time donation) or via [Patreon](https://www.patreon.com/MTGJSON) (reoccurring donations).
 
-## Supporters
+### Supporters
 
 <Supporters/>

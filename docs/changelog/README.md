@@ -17,28 +17,97 @@
 ---
 
 # Changelog
+The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
+
+## 5.0.0
+Release Date: ???????????
+
+### Announcements
+<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>Here is some placeholder for v5 announcement. If you are seeing this on production please update immediately.
+
+More placeholder about the announcement.
+
+The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please let us know!
+
+### Cards
+#### Added
+- Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
+- Added `isPlaneswalkerStamped` for cards with planeswalker identifiers.
+#### Removed
+- Removed `names` in favor of `otherFaceIds`.
+- Removed `hasNoDeckLimit` in favor of `hasAlternativeDeckLimit`.
+
+### Files
+#### Changed
+- All file downloads are now available via the `/api/v5/*` web-based url.
+- The `AllCards` file is now renamed `AtomicCards` to better clarify that these files only contain atomic card data.
+- The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc.
+- The `version` file is now renamed `Meta`.
+- All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object.
+
+### Website
+#### Changed
+- Data "Structures" are now named "Models".
+- Models now reference their parent keys and parent files more accurately.
+- Models now have the "optional" attribute marked on more properties for clarity.
+- Some text and spacing adjustments for the "Changelog" and "FAQ" page.
+#### Added
+- More models are clearly defined now that the files deliver all the same top-level keys.
+- Atomic Cards are now documented outright as a Data Model for clarity.
+#### Removed
+- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models.
+- The "About Us" page no longer uses a table of contents.
+
+## 4.6.3
+Release Date: 2020-04-22
+### Cards
+#### Added
+- `asciiName` added for cards with non-ascii symbols.
+	- Example: `{"name": "Lim-Dûl's Vault", "asciiName": "Lim-Dul's Vault"}`.
+- `flavorName` added for Ikoria: Lair of Behemoth Godzilla cards.
+
+#### Fixed
+- `leadershipSkills` fixed for flip and transform legends.
+- Foil status on some planeswalkers.
+- Loyalty abilities that are "-X" are now appropriately handled.
+	- Example: `{"name": "Chandra Nalaar", "text": "[+1]: Chandra Nalaar deals 1 damage to target player or planeswalker.\n[−X]: Chandra Nalaar deals X damage to target creature.\n[−8]: Chandra Nalaar deals 10 damage to target player or planeswalker and each creature that player or that planeswalker's controller controls."}`.
+- Addressed `isStarter` for flip cards.
+
+### Sets
+#### Added
+- Ikoria: Lair of the Behemoths (`IKO`).
+  - Promo cards are not released yet (release outside of Asia scheduled for May 15, 2020) and therefore the Ikoria promo set will be added later.
+- Commander 2020 (`C20`).
+- Historic Anthology 2 (`HA2`).
+- Signature Spellbook: Chandra (`SS3`).
+- Secret Lair: Ultimate Edition (`SLU`).
+- Booster field support for several missing sets.
+	- Color support was added for Mystery Boosters.
+
+#### Fixed
+- Spaces may have accidentally polluted the set `name`.
 
 ## 4.6.2
 Release Date: 2020-02-01
 ### Cards
 #### Added
-- Added `isDateStamped` to identify promo printings
-- Added `isBuyABox` to identify promo printings
-- `variations` added for Unstable cards (to better identify)
+- Added `isDateStamped` to identify promo printings.
+- Added `isBuyABox` to identify promo printings.
+- `variations` added for Unstable cards (to better identify).
 
 ### Sets
 #### Added
-- Theros Beyond Death (`THB`, `PTHB`)
-- Unsanctioned (`UND`)
+- Theros Beyond Death (`THB`, `PTHB`).
+- Unsanctioned (`UND`).
 
 ### Tokens
 #### Fixed
-- Handled `scryfallIllustrationId`s for split cards
+- Handled `scryfallIllustrationId`s for split cards.
 
 ### Other
 #### Added
-- `AllPrices` now has a new entry, `uuid` to better iterate the collection
-- `SetList` now has `isOnlineOnly` and `isPaperOnly`
+- `AllPrices` now has a new entry, `uuid` to better iterate the collection.
+- `SetList` now has `isOnlineOnly` and `isPaperOnly`.
 
 
 ## 4.6.1
@@ -77,7 +146,7 @@ Release Date: 2019-10-28
 
 First, this release is the first of many releases to be compiled on AWS infrastructure. Thanks to the kind folks who have and continue to pledge on our [Patreon page](https://patreon.com/mtgjson), we are able to offer **daily builds of MTGJSON**! For the time being, we only plan on building price data daily, but we plan on expanding that further to full data releases as well.
 
-Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `AllPrices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/structures/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
+Speaking of pricing, we now have MTGO pricing available thanks to our friends at [CardHoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)! This expands our lineup to supporting both paper and digital, with foil and non-foil variants. With the increase of price data available, we have made the decision to separate price data from card data. Price data can now be found within `AllPrices.json` (and compressed versions), indexable via [MTGJSON UUIDs](https://mtgjson.com/data-models/card/#uuid). We hope these daily price updates will help keep your projects on top of the world.
 
 Next, in order to alleviate a large percentage of confusion with our project, we have renamed `AllSets` to `AllPrintings`, with better descriptions and upgraded site layouts. Redirects will be in place to ensure current projects do not suffer due to this change.
 
@@ -402,8 +471,8 @@ Release Date: 2019-03-04
 
 ### Individual Sets
 #### Added
-- `scryfallOracleId` can be used as a UUID for unique cards and tokens - See [documentation](/structures/card) for more information
-- `scryfallIllustrationId` can be used as a UUID for unique artwork - See [documentation](/structures/card) for more information
+- `scryfallOracleId` can be used as a UUID for unique cards and tokens - See [documentation](/data-models/card) for more information
+- `scryfallIllustrationId` can be used as a UUID for unique artwork - See [documentation](/data-models/card) for more information
 
 #### Changed
 - `baseSetSize` defaults to `totalSetSize` if not manually adjusted - Found an error in the value? Provide a correction [on GitHub](https://github.com/mtgjson/mtgjson/blob/master/mtgjson4/resources/base_set_sizes.json)

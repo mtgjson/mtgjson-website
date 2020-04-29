@@ -88,7 +88,7 @@ function renderChildren(h, children, path, route, maxDepth, depth = 1) {
 }
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 a.sidebar-link {
   font-size: 16px;
   font-weight: bold;
@@ -99,6 +99,7 @@ a.sidebar-link {
   box-sizing: border-box;
 
   &.active {
+    color: var(--accent-color);
     font-weight: bold;
   }
 

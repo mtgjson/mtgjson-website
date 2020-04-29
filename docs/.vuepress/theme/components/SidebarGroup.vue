@@ -46,7 +46,7 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .sidebar-heading {
   color: var(--text-color);
   transition: color 0.15s ease;

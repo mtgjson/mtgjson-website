@@ -1,0 +1,244 @@
+@import './vars';
+@import './reset';
+@import './custom-blocks';
+@import './typography';
+@import './wrapper';
+@import './code';
+@import './pages';
+
+html, body {
+  min-width: 320px;
+}
+
+html, body, #app, .theme-container {
+  height: 100%;
+}
+
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  font-size: 16px;
+  background-color: var(--bg-dark-color);
+  color: var(--text-color);
+}
+
+ol, ul {
+  margin-left: 15px;
+}
+
+a {
+  &.header-anchor {
+    font-size: 0.85em;
+    margin-left: -0.75em;
+    margin-top: 0.1em;
+    text-decoration: none !important;
+    opacity: 0;
+    float: left;
+  }
+
+  &, &:link {
+    cursor: pointer;
+    transition: 0.25s color;
+
+    &:hover {
+      transition: 0.25s color;
+    }
+  }
+}
+
+.desktop-hide {
+  display: none !important;
+}
+
+.no-result {
+  color: var(--accent-color);
+}
+
+hr {
+  border: 0;
+  border-top: 1px solid var(--table-border-color);
+}
+
+em {
+  font-style: italic;
+}
+
+img {
+  user-select: none;
+
+  &.avatar {
+    max-width: 100px !important;
+    border-radius: 100%;
+    float: left;
+    margin-right: 30px;
+  }
+
+  &[alt='logo'] {
+    max-width: 275px !important;
+    margin-left: 0;
+  }
+
+  &.img-license {
+    max-width: 100px;
+    margin-bottom: 15px;
+  }
+}
+
+.dl-btn {
+  text-align: center;
+  padding: 3px 5px;
+  text-transform: uppercase;
+  background-color: var(--accent-color);
+  color: var(--bg-color);
+  line-height: 1rem;
+  text-decoration: none;
+  margin-right: 5px;
+  margin-bottom: 5px;
+  border-radius: 5px;
+  font-size: 12px;
+  text-decoration: none !important;
+  font-weight: bold;
+}
+
+.search-box {
+  margin-right: 0;
+  display: initial;
+
+  input {
+    background-color: var(--search-bg-color);
+    color: var(--search-text-color);
+    border-width: 0;
+    padding: 0;
+    padding-left: 32px;
+    border-radius: 5px;
+    left: 0;
+    width: 100%;
+    transition: all 0s;
+    // Prevent zoom on mobile with 16px. Bye bye for now.
+    font-size: 12px;
+    font-weight: bold;
+
+    &:focus {
+      width: 100%;
+    }
+  }
+}
+
+.content__default {
+  @extend %wrapper;
+
+  & > * {
+    max-width: var(--content-width);
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+
+  & > *:hover {
+    .header-anchor {
+      display: none;
+    }
+  }
+
+  // Deal with the scrolling issue with anchors being hidden
+  // by the fixed navigation
+  // & > h2,
+  // & > h3 {
+  //   padding-top: 100px;
+
+  //   &:first-of-type {
+  //     margin-top: -100px;
+  //   }
+  // }
+
+  a {
+    text-decoration: underline;
+    font-weight: bold !important;
+
+    &:hover {
+      text-decoration: none !important;
+    }
+  }
+}
+
+.loading-msg {
+  font-weight: bold;
+  color: var(--accent-color);
+  padding-top: 1rem;
+}
+
+.sidebar-group-items, .sidebar-sub-headers {
+  .sidebar-link {
+    font-size: 14px;
+    font-weight: normal;
+
+    &.active {
+      position: relative;
+      color: var(--accent-color);
+    }
+  }
+
+  .sidebar-sub-headers {
+    &:empty {
+      display: none;
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .desktop-hide {
+    display: block !important;
+  }
+
+  .mobile-hide {
+    display: none !important;
+  }
+}
+
+.attribute {
+  border-radius: 5px;
+  margin-right: 5px;
+  font-size: 10px;
+  padding: 3px 5px;
+  cursor: help;
+  position: relative;
+  display: inline-block;
+  text-transform: capitalize;
+  overflow: hidden;
+  z-index: 2;
+  color: var(--dark-color);
+  font-weight: bold;
+
+  &::before {
+    content: '';
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    z-index: -1;
+  }
+
+  &.optional {
+    &::before {
+      background-color: var(--spoiler-color);
+    }
+  }
+
+  &.deprecated {
+    &::before {
+      background-color: var(--red-color);
+    }
+  }
+
+  &.nullable {
+    &::before {
+      background-color: var(--red-color);
+    }
+  }
+}

@@ -22,4 +22,8 @@
 
 All individual set files to download provided by MTGJSON.
 
+::: warning
+As of MTGJSON version 5, and going forward, web-served files will be available via a version specific "Web API" path: `/api/v5/*`. If your project depends on the web-served files please update your project to the new API as soon as possible.
+:::
+
 <DownloadSets/>

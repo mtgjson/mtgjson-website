@@ -1,0 +1,20 @@
+{
+  "brawl": {
+    "type": "boolean",
+    "example": "false",
+    "description": "Is this card able to be your commander in the Brawl Format?",
+    "introduced": "v4.5.1"
+  },
+  "commander": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is this card able to be your commander in the Commander/EDH format?",
+    "introduced": "v4.5.1"
+  },
+  "oathbreaker": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is this card able to be your commander in the Oathbreaker format?",
+    "introduced": "v4.5.1"
+  }
+}

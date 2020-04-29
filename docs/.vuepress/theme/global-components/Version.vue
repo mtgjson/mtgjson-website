@@ -1,28 +1,27 @@
 <template lang="pug">
   div.version
-    router-link.version-number(
-      :to="`/changelog`") Build: {{ version }}
+    router-link.version-number(v-if="version" :to="`/changelog`") Build: {{ version }}
 </template>
 
 <script>
 export default {
-  name: 'Version',
+  name: "Version",
   computed: {
     version() {
-      return this.$store.getters.metadata.version;
-    },
-  },
-  async created() {
-    if(Object.keys(this.$store.getters.metadata).length < 1){
-      await this.$store.dispatch('UPDATE_METADATA');
+      return this.$store.getters.Meta.version;
     }
   },
+  async created() {
+    await this.$helpers.setStoreState.apply(this, ["Meta", "UPDATE_METADATA"]);
+  }
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .version {
-  display: inline-block;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
   color: var(--text-color);
   position: relative;
 
@@ -33,7 +32,7 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .version {
     &-number {
       font-size: 16px;

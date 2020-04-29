@@ -53,12 +53,12 @@ export default {
 };
 </script>
 
-<style lang="stylus">
+<style lang="scss">
 .sidebar {
   position: fixed;
-  width: $sidebarWidth;
+  width: var(--sidebar-width);
   z-index: 2;
-  top: $navbarHeight;
+  top: var(--navbar-height);
   left: 0;
   bottom: 0;
   overflow: visible;
@@ -147,11 +147,11 @@ export default {
   }
 }
 
-@media (max-width: $MQMobile) {
+@media (max-width: 719px) {
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
-    top: $navbarHeight;
+    top: var(--navbar-height);
   }
 }
 </style>

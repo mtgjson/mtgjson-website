@@ -1,6 +1,6 @@
 {
   "name": "mtgjson-website",
-  "version": "2.0.0",
+  "version": "2.1.0",
   "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
@@ -21,28 +21,46 @@
     "bootstrap": "yarn global add imagemin-cli imagemin-webp",
     "heroku-prebuild": "yarn bootstrap"
   },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "yarn test:full"
+    }
+  },
   "dependencies": {
     "js-essentials": "0.0.6",
-    "uuid": "^3.3.3",
-    "vuepress": "^1.2.0",
-    "vuepress-plugin-container": "^2.1.2",
+    "node-fetch": "^2.6.0",
+    "vuepress": "^1.4.1",
+    "vuepress-plugin-container": "^2.1.3",
     "vuepress-plugin-feed": "^0.1.8",
-    "vuex": "^3.1.2"
+    "vuex": "^3.3.0"
   },
   "devDependencies": {
-    "@babel/core": "^7.7.5",
-    "@babel/preset-env": "^7.7.6",
-    "ajv": "^6.10.2",
-    "babel-eslint": "^10.0.3",
-    "babel-jest": "^24.9.0",
+    "@babel/core": "^7.9.0",
+    "@babel/preset-env": "^7.9.5",
+    "babel-eslint": "^10.1.0",
+    "babel-jest": "^25.4.0",
     "codecov": "^3.6.5",
-    "eslint": "^6.7.2",
-    "eslint-plugin-vue": "^6.0.1",
-    "husky": "^3.1.0",
-    "jest": "^24.9.0",
-    "node-fetch": "^2.6.0",
+    "eslint": "^6.8.0",
+    "eslint-plugin-vue": "^6.2.2",
+    "husky": "^4.2.5",
+    "jest": "^25.4.0",
     "pug": "^2.0.4",
     "pug-plain-loader": "^1.0.0",
+    "sass": "^1.26.5",
+    "sass-loader": "^8.0.2",
+    "uuid": "^7.0.3",
     "vue-eslint-parser": "^7.0.0"
   }
 }
