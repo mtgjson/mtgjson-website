@@ -21,6 +21,7 @@
         h3 MTGJSON
         Version.version-link
 </template>
+
 <script>
 import Version from "./Version";
 export default {

@@ -22,7 +22,7 @@
 <span>A.</span> In most cases, [AllPrintings.json](/api/v5/AllPrintings.json) is the correct file. It contains all data for every printing of each card.
 
 ### <span>Q.</span>  What information is in AtomicCards.json?
-<span>A.</span> AtomicCards.json only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
+<span>A.</span> [AtomicCards.json](/api/v5/AtomicCards.json) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 
 For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation.
 

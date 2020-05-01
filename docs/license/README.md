@@ -18,7 +18,7 @@
 
 # MTGJSON License
 
-By use of this website and its content you agree to the following license:
+By using this website and its content you agree to the following license:
 
 <img class="img-license" src="../.vuepress/public/images/mit-license.jpg" alt="MIT License" title="MIT License" />
 

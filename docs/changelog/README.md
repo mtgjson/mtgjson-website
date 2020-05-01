@@ -51,9 +51,13 @@ The documentation of the website overall was changed in a drastic way with such 
 - Models now reference their parent keys and parent files more accurately.
 - Models now have the "optional" attribute marked on more properties for clarity.
 - Some text and spacing adjustments for the "Changelog" and "FAQ" page.
+- The `Legalities` model now more clearly shows which properties would be omitted.
 #### Added
 - More models are clearly defined now that the files deliver all the same top-level keys.
 - Atomic Cards are now documented outright as a Data Model for clarity.
+- Property value examples were added for properties with enum values.
+- You can now toggle optional properties on/off within documentation. If all properties are optional than the UI is disabled.
+- You can now try to edit/PR a specific documentation from the page footer.
 #### Removed
 - `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models.
 - The "About Us" page no longer uses a table of contents.

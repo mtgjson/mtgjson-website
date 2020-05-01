@@ -20,7 +20,7 @@
               v-model="filterKey"
               @change="onHandleChange")
               option(value="" selected) All Sets
-              option(v-for="(type, key) in filters" :value="type") {{ $helpers.prettifyType(type) }}
+              option(v-for="(type, key) in filters" :key="key" :value="type") {{ $helpers.prettifyType(type) }}
 
           .sort-row
             label Sort By:
@@ -77,6 +77,7 @@
 </template>
 
 <script>
+import axios from "axios";
 export default {
   name: "DownloadSets",
   data() {
@@ -101,11 +102,12 @@ export default {
     }
   },
   async created() {
-    await this.$helpers.setStoreState.apply(this, ["SetList", "UPDATE_SETS"]);
+    await this.$helpers.setStoreState.apply(this, ["SetList"]);
+
     this.defaultSets = this.$store.getters.SetList;
     this.dynamicSets = this.$helpers.sort("releaseDate:true", this.defaultSets);
     this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
-    this.downloadDirectory = this.$themeConfig.api;
+    this.downloadDirectory = this.$api;
   },
   methods: {
     handleMessage(length = 0) {

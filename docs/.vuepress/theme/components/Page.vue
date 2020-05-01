@@ -4,18 +4,6 @@
 
     Content
 
-    footer.page-edit
-      .page-edit--links
-        .edit-link(v-if="editLink")
-          a(:href="editLink"
-          target="_blank"
-          rel="noopener noreferrer") {{ editLinkText }}
-          OutboundLink
-
-        .last-updated(v-if="lastUpdated")
-          span.prefix {{ lastUpdatedText }}:&nbsp;
-          span.time {{ lastUpdated }}
-
     .page-nav(v-if="prev || next")
       p.inner
         span.prev(v-if="prev")
@@ -27,6 +15,18 @@
           router-link.prev(
             v-if="next"
             :to="next.path") {{ next.title || next.path }} →
+
+    footer.page-edit
+      .page-edit--links
+        .edit-link(v-if="editLink")
+          a(:href="editLink"
+          target="_blank"
+          rel="noopener noreferrer") {{ editLinkText }}
+          OutboundLink
+
+        .last-updated(v-if="lastUpdated")
+          span.prefix {{ lastUpdatedText }}:&nbsp;
+          span.time {{ lastUpdated }}
 
     slot(name="bottom")
 </template>
@@ -212,10 +212,8 @@ function flattern(items, res) {
 
 .page-edit {
   @extend %wrapper;
-  padding-top: 1rem;
-  padding-bottom: 1rem;
+  padding-bottom: 2rem;
   overflow: auto;
-  margin-top: 100px;
 
   .page-edit--links {
     display: flex;

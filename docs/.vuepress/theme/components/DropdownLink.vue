@@ -7,8 +7,8 @@
     DropdownTransition
       ul.nav-dropdown(v-show="open")
         li.dropdown-item(
-          :key="subItem.link || index"
-          v-for="(subItem, index) in item.items")
+          v-for="(subItem, index) in item.items"
+          :key="subItem.link || index")
 
           h4(v-if="subItem.type === 'links'") {{ subItem.text }}
 

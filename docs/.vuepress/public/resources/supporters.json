@@ -199,6 +199,11 @@
       "link": "https://github.com/magarena/magarena"
     },
     {
+      "name": "Mage Market",
+      "image": "avatar-mage-market.svg",
+      "link": "https://magemarket.com"
+    },
+    {
       "name": "Magic Cards Manager",
       "image": "avatar-mcm.png",
       "link": "https://www.magiccardsmanager.com"
@@ -287,11 +292,6 @@
       "name": "Scryfall",
       "image": "avatar-scryfall.png",
       "link": "https://scryfall.com"
-    },
-    {
-      "name": "Snapcardster",
-      "image": "avatar-snapcardster.png",
-      "link": "https://snapcardster.com"
     },
     {
       "name": "Stream Decker",

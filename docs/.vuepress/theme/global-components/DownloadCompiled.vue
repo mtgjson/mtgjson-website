@@ -15,14 +15,14 @@
                 small Download Files:
                 span
                   a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.json`") JSON
-                span(v-for="(compression, key) in fileBaseCompression")
+                span(v-for="(compression, key) in fileBaseCompression" :key="key")
                   a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.json.${compression}`") {{ compression }}
 
             //- Directory Files
             ol(v-if="file.example.includes('Files')")
               li.text-wrap--download--btn-wrap
                 small Download Files:
-                span(v-for="(format, key) in fileBaseCompression" v-if="format !== 'zip'")
+                span(v-for="(format, key) in fileBaseCompression" :key="key" v-if="format !== 'zip'")
                   a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.tar.${format}`") {{ format }}
                 span(v-else)
                   a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.zip`") {{ format }}
@@ -32,13 +32,13 @@
                   small SQL Download Files:
                   span
                     a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sql`") SQL
-                  span(v-for="(compression, key) in fileBaseCompression")
+                  span(v-for="(compression, key) in fileBaseCompression" :key="key")
                     a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
                   small SQLite Download Files:
                   span
                     a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sqlite`") SQLite
-                  span(v-for="(compression, key) in fileBaseCompression")
+                  span(v-for="(compression, key) in fileBaseCompression" :key="key")
                     a.dl-btn(download :href="`${$env}/${fileDirectory}/${file.example}.sqlite.${compression}`") {{ compression }}
                 li.sqlite
                   p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>.
@@ -46,11 +46,12 @@
 </template>
 
 <script>
+import files from "../../public/schemas/compiledList.schema.json";
 export default {
   name: "AllDownloads",
   data() {
     return {
-      files: require(`../../public/schemas/compiledList.schema.json`),
+      files,
       fileBaseCompression: ["bz2", "gz", "xz", "zip"],
       fileSQLCompression: ["sql", "sqlite"],
       fileDirectory: ""
@@ -62,7 +63,7 @@ export default {
     const landcycle = new this.$landcycle(files);
     landcycle._init();
 
-    this.fileDirectory = await this.$themeConfig.api;
+    this.fileDirectory = await this.$api;
 
     // Remove quotes
     for (let file in files) {
@@ -84,9 +85,9 @@ export default {
 .download-tables {
   .download {
     &-item {
-      &:first-of-type {
-        border-color: orange;
-      }
+      // &:first-of-type {
+      //   border-color: var(--orange-color);
+      // }
 
       .download-wrap {
         .text-wrap {

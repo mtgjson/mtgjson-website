@@ -1,6 +1,7 @@
 h3 {
   margin-top: -100px;
   padding-top: 100px;
+  padding-bottom: 5px;
 }
 
 h4 {
@@ -45,13 +46,17 @@ pre {
   line-height: 1.7em;
 }
 
-.values-code {
+.loading-msg {
+  padding-top: 0 !important;
+}
+
+.values-list {
   position: relative;
   display: flex;
   // align-items: center;
   height: 47px;
 
-  &--list {
+  ol {
     position: absolute;
     top: 8px;
     z-index: 10;
@@ -105,7 +110,6 @@ pre {
       }
     }
   }
-
 }
 
 .schema {
@@ -116,35 +120,6 @@ pre {
       margin-left: 0;
     }
   }
-
-  // &-legend {
-  //   p {
-  //     margin-bottom: 10px;
-  //   }
-
-  //   ol {
-  //     padding-left: 0;
-
-  //     li {
-  //       display: flex;
-  //       align-items: center;
-  //       margin-top: 5px;
-
-  //       .attribute {
-  //         cursor: initial;
-  //       }
-
-  //       * {
-  //         vertical-align: middle;
-  //       }
-
-  //       span {
-  //         font-size: 12px;
-  //       }
-  //     }
-
-  //   }
-  // }
 
   &-index {
     ol {
@@ -158,6 +133,10 @@ pre {
 
       li {
         list-style: disc;
+
+        a {
+          font-size: 14px;
+        }
       }
 
       &::after {
@@ -202,6 +181,24 @@ pre {
     }
   }
 
+  &-options {
+    padding-bottom: 15px;
+
+    input {
+      margin-left: 10px;
+    }
+
+    label {
+      font-size: 14px;
+      color: var(--gray-color);
+      font-weight: bold;
+    }
+
+    label, input {
+      cursor: pointer;
+    }
+  }
+
   &-data {
     blockquote {
       position: relative;
@@ -210,21 +207,6 @@ pre {
 
       &:hover {
         border-color: var(--accent-color);
-      }
-    }
-
-    &--options {
-      margin: 10px 0 25px;
-
-      input {
-        margin-left: 10px;
-      }
-
-      label {
-        font-size: 14px;
-        color: var(--gray-color);
-        font-weight: bold;
-        cursor: pointer;
       }
     }
 
@@ -249,20 +231,12 @@ pre {
       }
     }
 
-    &--table, &--table-continued {
+    &--table {
       position: relative;
       margin-top: 10px;
       // overflow: hidden;
       box-sizing: border-box;
       margin-bottom: 25px;
-
-      &-continued {
-        display: flex;
-        justify-content: center;
-        padding: 7px 13px 17px;
-        font-weight: bold;
-        cursor: help;
-      }
 
       // Allows us to anchor to a screen safe position
       &-anchor {

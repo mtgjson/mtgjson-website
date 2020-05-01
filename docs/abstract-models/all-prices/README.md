@@ -23,7 +23,7 @@ The All Prices data model describes a list of card prices based on date.
 > Parent file: `AllPrices`  
 > Parent property: `data`
 
-::: warning
+::: warning Developers Note
 This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat.
 :::
 

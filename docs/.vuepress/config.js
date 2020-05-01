@@ -99,8 +99,6 @@ module.exports = {
   ],
   // Vuepress Themeing
   themeConfig: {
-    // API Config
-    api: 'api/v5',
     // Algolia SEO
     algolia: {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
@@ -154,7 +152,7 @@ module.exports = {
       },
       {
         title: 'Abstract Models',
-        path: '/abstract-models/attribute-values',
+        path: '/abstract-models/all-prices',
         collapsable: false,
         children: abstractModels,
       },

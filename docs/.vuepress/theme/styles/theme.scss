@@ -165,8 +165,9 @@ img {
 }
 
 .loading-msg {
-  font-weight: bold;
-  color: var(--accent-color);
+  font-weight: bold !important;
+  font-size: 16px !important;
+  color: var(--gray-color) !important;
   padding-top: 1rem;
 }
 
@@ -202,7 +203,7 @@ img {
   border-radius: 5px;
   margin-right: 5px;
   font-size: 10px;
-  padding: 3px 5px;
+  padding: 5px 5px;
   cursor: help;
   position: relative;
   display: inline-block;

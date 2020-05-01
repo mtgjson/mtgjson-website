@@ -9,11 +9,11 @@ const uuidv4 = require('uuid').v4;
 const fs = require('fs');
 
 (async () => {
-  const host = 'https://mtgjson.com/';
+  const host = 'https://mtgjson.com/api/v5/';
   const generationDate = new Date().toISOString();
 
   try {
-    const promised = await fetch(`${host}files/version.json`);
+    const promised = await fetch(`${host}Meta.json`);
     const data = await promised.json();
     const atom =
 `<?xml version="1.0" encoding="utf-8"?>

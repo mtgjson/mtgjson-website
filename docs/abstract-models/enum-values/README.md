@@ -23,7 +23,7 @@ The Enum Values data model describes a list of key value pairs that are direct p
 > Parent file: `EnumValues`  
 > Parent property: `data`
 
-::: warning
+::: warning Developers Note
 This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat.
 :::
 

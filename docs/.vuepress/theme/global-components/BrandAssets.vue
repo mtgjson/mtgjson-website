@@ -28,7 +28,7 @@
 <script>
 import Logo from "./Logo";
 export default {
-  name: "BrandingGuide",
+  name: "BrandAssets",
   components: { Logo },
   data() {
     return {

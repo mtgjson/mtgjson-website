@@ -72,14 +72,14 @@ export default {
     }
   },
   async created() {
-    await this.$helpers.setStoreState.apply(this, ["DeckList", "UPDATE_DECKS"]);
+    await this.$helpers.setStoreState.apply(this, ["DeckList"]);
 
-    this.defaultDecks = this.$store.getters.DeckList;
+    this.defaultDecks = await this.$store.getters.DeckList;
     this.filteredDecks = await this.$helpers.sort(
       "releaseDate:true",
       this.defaultDecks
     );
-    this.deckDirectory = this.$themeConfig.api + "/decks";
+    this.deckDirectory = this.$api + "/decks";
   },
   methods: {
     handleMessage(length = 0) {

@@ -12,7 +12,7 @@ export default {
     }
   },
   async created() {
-    await this.$helpers.setStoreState.apply(this, ["Meta", "UPDATE_METADATA"]);
+    await this.$helpers.setStoreState.apply(this, ["Meta"]);
   }
 };
 </script>
