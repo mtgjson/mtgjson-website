@@ -114,7 +114,7 @@ export default {
         }
       }
 
-      return count !== keys;
+      return count !== keys && count !== 0;
     },
     filteredAttributes() {
       // Store the schema attributes for properties
