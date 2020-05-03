@@ -1,6 +1,8 @@
 <template lang="pug">
   .download-tables
-    .download-tables--loaded(v-if="decks.length > 0")
+    .download-tables(v-if="!decks")
+      p.loading-msg {{ message }}
+    .download-tables(v-else)
       .sorting-options
         h6.show-options(
           @click="showOptions = !showOptions"
@@ -24,7 +26,8 @@
               option(value="name") Name (Ascending)
               option(value="name:true") Name (Descending)
 
-      blockquote.download-item(v-for="(deck, key) in decks" :key="key")
+      p(v-if="decks.length < 1") {{ message }}
+      blockquote.download-item(v-for="(deck, key) in decks" :key="key" v-else)
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
@@ -46,9 +49,6 @@
                     a.dl-btn(download :href="`${$env}/${deckDirectory}/${deck.fileName}.json.${format}`") {{ format }}
                   span(v-else)
                     a.dl-btn(download :href="`${$env}/${deckDirectory}/${deck.fileName}.json`") {{ format }}
-
-    .download-tables--unloaded(v-else)
-      p.loading-msg Loading...
 </template>
 
 <script>
@@ -56,13 +56,13 @@ export default {
   name: "DownloadDecks",
   data() {
     return {
-      defaultDecks: [],
-      filteredDecks: [],
+      defaultDecks: null,
+      filteredDecks: null,
       searchKey: "",
+      deckDirectory: "",
       showOptions: false,
       sortKey: "releaseDate:true",
       downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
-      deckDirectory: undefined,
       message: "Loading..."
     };
   },

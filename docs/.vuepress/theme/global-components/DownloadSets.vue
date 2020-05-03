@@ -1,6 +1,8 @@
 <template lang="pug">
   .download-tables
-    .download-tables--loaded(v-if="sets.length > 0")
+    .download-tables(v-if="!sets")
+      p.loading-msg {{ message }}
+    .download-tables(v-else)
       .sorting-options
         h6.show-options(
           @click="showOptions = !showOptions"
@@ -43,8 +45,8 @@
               v-model="spoilerKey"
               @input="onHandleChange")
 
-
-      blockquote.download-item(v-for="(set, key) in sets" :key="key")
+      p(v-if="sets.length < 1") {{ message }}
+      blockquote.download-item(v-for="(set, key) in sets" :key="key" v-else)
         .download-wrap
           .img-wrap
             div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -71,9 +73,6 @@
                     a.dl-btn(download :href="`${$env}/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
                   span(v-else)
                     a.dl-btn(download :href="`${$env}/${downloadDirectory}/${set.code}.json`") {{ format }}
-
-    .download-tables--unloaded(v-else)
-      p.loading-msg Loading...
 </template>
 
 <script>
@@ -82,9 +81,9 @@ export default {
   name: "DownloadSets",
   data() {
     return {
-      defaultSets: [],
-      dynamicSets: [],
-      filters: [],
+      defaultSets: null,
+      dynamicSets: null,
+      filters: null,
       filterKey: "",
       searchKey: "",
       spoilerKey: true,
