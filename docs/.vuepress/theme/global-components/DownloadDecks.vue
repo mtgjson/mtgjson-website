@@ -1,8 +1,8 @@
 <template lang="pug">
   .download-tables
-    .download-tables(v-if="!decks")
+    .download-table(v-if="!decks")
       p.loading-msg {{ message }}
-    .download-tables(v-else)
+    .download-table(v-else)
       .sorting-options
         h6.show-options(
           @click="showOptions = !showOptions"
@@ -46,9 +46,9 @@
                 li
                   small Downloads:
                   span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                    a.dl-btn(download :href="`${$env}/${deckDirectory}/${deck.fileName}.json.${format}`") {{ format }}
+                    a.dl-btn(download :href="`${$api}decks/${deck.fileName}.json.${format}`") {{ format }}
                   span(v-else)
-                    a.dl-btn(download :href="`${$env}/${deckDirectory}/${deck.fileName}.json`") {{ format }}
+                    a.dl-btn(download :href="`${$api}decks/${deck.fileName}.json`") {{ format }}
 </template>
 
 <script>
@@ -59,7 +59,6 @@ export default {
       defaultDecks: null,
       filteredDecks: null,
       searchKey: "",
-      deckDirectory: "",
       showOptions: false,
       sortKey: "releaseDate:true",
       downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
@@ -79,7 +78,6 @@ export default {
       "releaseDate:true",
       this.defaultDecks
     );
-    this.deckDirectory = this.$api + "/decks";
   },
   methods: {
     handleMessage(length = 0) {

@@ -5,7 +5,7 @@
     //- Properties Options
     //- This fills out optional rendering
     .schema-options
-      label(for="show-optional" ) Show optional properties:
+      label(for="show-optional" :disabled="!canHideOptionals") Show optional properties:
       input(id="show-optional" type="checkbox" v-model="showOptional" :disabled="!canHideOptionals")
     //- Properties Index
     //- This fills out an anchored list of all the properties
@@ -176,7 +176,7 @@ export default {
   async created() {
     const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
 
-    const landcycle = new this.$landcycle(schema);
+    const landcycle = new this.$helpers.jsonMustaches(schema);
     await landcycle._init();
 
     await this.$helpers.setStoreState.apply(this, ["EnumValues"]);

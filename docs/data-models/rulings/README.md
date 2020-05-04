@@ -22,7 +22,7 @@
 
 The Rulings data model describes a list of rulings that are for a specific card.
 
-> Parent model: [Card](../card/)  
+> Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `rulings`
 
 ### Model Properties

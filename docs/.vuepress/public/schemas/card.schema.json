@@ -18,7 +18,7 @@
     ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
-    "introduced": "5.0.0"
+    "introduced": "v5.0.0"
   },
   "borderColor": {
     "type": "string",

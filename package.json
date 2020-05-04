@@ -5,8 +5,7 @@
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
   "engines": {
-    "node": "^12.8.0",
-    "yarn": "^1.21.1"
+    "node": "^12.8.0"
   },
   "scripts": {
     "dev": "vuepress dev docs",

@@ -5,13 +5,13 @@
       .branding-container--col
         h3 Current Logo
         .img-wrap
-          Logo(:hideText="true" :width="`70px`")
+          Logo(:hideText="true" width="70px")
         .dl-wrap
           h6 Download:
-          a.dl-btn(:href="`${$env}/images/assets/logo-mtgjson-light-blue.svg`" download) Light Blue SVG
-          a.dl-btn(:href="`${$env}/images/assets/logo-mtgjson-dark-blue.svg`" download) Dark Blue SVG
-          a.dl-btn(:href="`${$env}/images/assets/logo-mtgjson-black.svg`" download) Black SVG
-          a.dl-btn(:href="`${$env}/images/assets/logo-mtgjson-white.svg`" download) White SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-black.svg" download) Black SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-white.svg" download) White SVG
         .embed-wrap
           h6 Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
@@ -22,7 +22,7 @@
           img(src="/images/assets/logo-mtgjson-previous.svg" title="Previous MTGJSON logo")
         .dl-wrap
           h6 Download:
-          a.dl-btn(:href="`${$env}/images/assets/logo-mtgjson-previous.svg`" download) Standard SVG
+          a.dl-btn(href="/images/assets/logo-mtgjson-previous.svg" download) Standard SVG
 </template>
 
 <script>
@@ -113,7 +113,7 @@ export default {
       .embed-wrap {
         pre {
           border-width: 0;
-          max-width: 500px;
+          // max-width: 500px;
           display: block;
           line-height: 1.2rem;
           margin-bottom: 1rem;

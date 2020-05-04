@@ -22,7 +22,7 @@
 
 The Leadership Skills data model describes a list of formats that a specific card is legal to be your Commander in play formats that utilize commanders.
 
-> Parent model: [Card](../card/)  
+> Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `leadershipSkills`
 
 ### Model Properties

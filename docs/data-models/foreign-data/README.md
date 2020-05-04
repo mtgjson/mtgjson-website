@@ -22,7 +22,7 @@
 
 The Foreign Data data model describes a list of alternate language properties for a card.
 
-> Parent model: [Card](../card/)  
+> Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `foreignData`
 
 ### Model Properties

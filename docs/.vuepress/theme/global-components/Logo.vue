@@ -1,7 +1,7 @@
 <template lang="pug">
   .logo
     .logo-meta
-      .logo-meta--logo(title="MTGJSON.com")
+      .logo-meta--logo(title="MTGJSON Logo")
         svg(
           xmlns="http://www.w3.org/2000/svg"
           version="1.0"

@@ -44,7 +44,7 @@
   "CompiledList": {
     "type": "string",
     "example": "\"CompiledList\"",
-    "description": "The file containing all possible compiled outputs from MTGJSON, such as, AllPrintings, TypesCards, etc.",
+    "description": "The file containing all possible compiled outputs from MTGJSON, such as AllPrintings, CardTypes, etc.",
     "introduced": "v4.3.0"
   },
   "DeckList": {

@@ -9,7 +9,8 @@ h4 {
   padding-bottom: 10px;
 }
 
-h6, p {
+h6,
+p {
   color: var(--text-color);
   margin: 0;
   font-size: 14px;
@@ -32,7 +33,8 @@ em {
   color: var(--gray-color);
 }
 
-pre, code {
+pre,
+code {
   display: inline-block;
   white-space: pre-line;
 
@@ -85,7 +87,7 @@ pre {
       top: 14px;
       right: 11px;
       border: solid transparent;
-      content: "";
+      content: '';
       height: 0;
       width: 0;
       position: absolute;
@@ -116,7 +118,8 @@ pre {
   &-item {
     margin-bottom: 30px;
 
-    ol, ul {
+    ol,
+    ul {
       margin-left: 0;
     }
   }
@@ -194,8 +197,13 @@ pre {
       font-weight: bold;
     }
 
-    label, input {
+    label,
+    input {
       cursor: pointer;
+
+      &[disabled='disabled'] {
+        cursor: not-allowed;
+      }
     }
   }
 
@@ -211,11 +219,15 @@ pre {
     }
 
     &--table {
+      box-sizing: border-box;
+      position: relative;
+      margin-top: 10px;
+      margin-bottom: 25px;
       padding: 0;
 
       &.omitted {
         &::after {
-          content: "Omitted";
+          content: 'Omitted';
           position: absolute;
           color: var(--text-color);
           font-weight: bold;
@@ -229,14 +241,6 @@ pre {
           pointer-events: none;
         }
       }
-    }
-
-    &--table {
-      position: relative;
-      margin-top: 10px;
-      // overflow: hidden;
-      box-sizing: border-box;
-      margin-bottom: 25px;
 
       // Allows us to anchor to a screen safe position
       &-anchor {
@@ -260,19 +264,23 @@ pre {
           font-weight: bold;
           background-color: var(--table-heading-color);
           border-right: 1px solid var(--table-border-color);
-          padding: 7px 13px;
           display: flex;
           align-items: center;
-
-          & > * {
-            cursor: help;
-          }
+          cursor: help;
 
           & + * {
             padding: 7px 13px;
             display: flex;
             align-items: center;
             grid-column: span 1;
+          }
+
+          * {
+            padding: 7px 13px;
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
           }
         }
 
@@ -329,8 +337,8 @@ pre {
   }
 }
 
-
-@media (max-width: 401px) { // 400px is used on a lot of modern device viewports
+@media (max-width: 401px) {
+  // 400px is used on a lot of modern device viewports
   .schema {
     &-data {
       &--table {
@@ -339,7 +347,8 @@ pre {
         &-item {
           grid-template-columns: 1fr;
 
-          &, .heading {
+          &,
+          .heading {
             border-width: 0;
           }
         }

@@ -1,8 +1,8 @@
 <template lang="pug">
   .download-tables
-    .download-tables(v-if="!sets")
+    .download-table(v-if="!sets")
       p.loading-msg {{ message }}
-    .download-tables(v-else)
+    .download-table(v-else)
       .sorting-options
         h6.show-options(
           @click="showOptions = !showOptions"
@@ -70,9 +70,9 @@
                 li
                   small Downloads:
                   span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                    a.dl-btn(download :href="`${$env}/${downloadDirectory}/${set.code}.json.${format}`") {{ format }}
+                    a.dl-btn(download :href="`${$api}${set.code}.json.${format}`") {{ format }}
                   span(v-else)
-                    a.dl-btn(download :href="`${$env}/${downloadDirectory}/${set.code}.json`") {{ format }}
+                    a.dl-btn(download :href="`${$api}${set.code}.json`") {{ format }}
 </template>
 
 <script>
@@ -90,7 +90,6 @@ export default {
       showOptions: false,
       sortKey: "releaseDate:true",
       downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
-      downloadDirectory: undefined,
       timeout: null,
       message: "Loading..."
     };
@@ -106,7 +105,6 @@ export default {
     this.defaultSets = this.$store.getters.SetList;
     this.dynamicSets = this.$helpers.sort("releaseDate:true", this.defaultSets);
     this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
-    this.downloadDirectory = this.$api;
   },
   methods: {
     handleMessage(length = 0) {

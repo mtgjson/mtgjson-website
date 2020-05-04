@@ -1,30 +1,32 @@
 import Vuex from 'vuex';
-import store from './store';
+import { makeStore } from './store';
 
-import { jsonMustaches } from 'js-essentials';
-import isFutureDate from './scripts/isFutureDate';
+import jsonMustaches from './scripts/jsonMustaches';
 import setStoreState from './scripts/setStoreState';
+import isFutureDate from './scripts/isFutureDate';
 import prettifyType from './scripts/prettifyType';
 import filter from './scripts/filter';
 import search from './scripts/search';
 import sort from './scripts/sort';
 
-const helpers = {
-  prettifyType,
-  setStoreState,
-  isFutureDate,
-  search,
-  filter,
-  sort
-};
-
 export default async ({ Vue }) => {
-  Vue.prototype.$env = 'https://mtgjson.com';
-  Vue.prototype.$api = Vue.prototype.$env + '/api/v5/';
-  Vue.prototype.$helpers = helpers;
-  Vue.prototype.$landcycle = jsonMustaches;
+  Vue.prototype.$api = 'https://mtgjson.com/api/v5/';
   Vue.prototype.$throttleSpeed = 300;
+  Vue.prototype.$helpers = {
+    jsonMustaches,
+    setStoreState,
+    isFutureDate,
+    prettifyType,
+    search,
+    filter,
+    sort
+  };
 
-  Vue.use(Vuex);
+  const store = new Vuex.Store(
+    makeStore({
+      api: Vue.prototype.$api
+    })
+  );
+
   Vue.mixin({ store: store });
 };

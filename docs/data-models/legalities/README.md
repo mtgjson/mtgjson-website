@@ -22,7 +22,7 @@
 
 The Legalities data model describes a list of play formats that are legal for a specific card.
 
-> Parent model: [Card](../card/)  
+> Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `legalities`
 
 ::: warning
