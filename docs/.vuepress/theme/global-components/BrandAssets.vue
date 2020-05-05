@@ -7,10 +7,16 @@
           Logo(:hideText="true" width="70px")
         .dl-wrap
           h5 Download:
-          a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
-          a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
-          a.dl-btn(href="/images/assets/logo-mtgjson-black.svg" download) Black SVG
-          a.dl-btn(href="/images/assets/logo-mtgjson-white.svg" download) White SVG
+          .dl-wrap--row
+            a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
+            a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
+            a.dl-btn(href="/images/assets/logo-mtgjson-black.svg" download) Black SVG
+            a.dl-btn(href="/images/assets/logo-mtgjson-white.svg" download) White SVG
+          .dl-wrap--row
+            a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.png" download) Light Blue PNG
+            a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.png" download) Dark Blue PNG
+            a.dl-btn(href="/images/assets/logo-mtgjson-black.png" download) Black PNG
+            a.dl-btn(href="/images/assets/logo-mtgjson-white.png" download) White PNG
         .embed-wrap
           h5 Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
@@ -95,11 +101,25 @@ export default {
           width: auto;
           height: 100%;
         }
+
+        .logo {
+          float: left;
+          margin-left: 1rem;
+
+          &:first-of-type {
+            margin-left: 0;
+          }
+        }
       }
 
       .img-wrap,
       .dl-wrap {
         margin-bottom: 1.5rem;
+
+        &--row {
+          display: block;
+          margin-bottom: 1rem;
+        }
       }
 
       .embed-wrap {

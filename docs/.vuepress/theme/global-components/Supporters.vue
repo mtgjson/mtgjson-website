@@ -147,7 +147,7 @@ export default {
         margin-bottom: 15px;
 
         &--container {
-          background-color: var(--light-color);
+          background-color: var(--supporter-bg-color);
           border-radius: 50%;
           overflow: hidden;
           width: 90px;

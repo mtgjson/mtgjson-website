@@ -1,6 +1,6 @@
 :root {
   // Sizes
-  --sidebar-width: 320px;
+  --sidebar-width: 280px;
   --navbar-height: 5rem;
   --content-width: 960px;
   --line-numbers-width: 20px;
@@ -44,7 +44,7 @@
   --search-border-highlight-color: var(--accent-color);
   --search-text-color: var(--text-color);
   --light-only-dark: var(--dark-1-color);
-  // --supporter-bg-color: var(--dark-color);
+  --supporter-bg-color: var(--light-color);
   // Data Presentation
   --table-color: var(--bg-color);
   --table-heading-color: var(--dark-2-color);
@@ -70,6 +70,7 @@ body {
     --search-border-highlight-color: var(--accent-color);
     --search-text-color: var(--text-color);
     --blockquote-bg-color: transparent;
+    --supporter-bg-color: var(--medium-gray-color);
     // Data Presentation
     --table-color: var(--text-color);
     --table-bg-color: var(--medium-gray-color);
