@@ -1,28 +1,20 @@
 <template lang="pug">
   .branding
-    h2 Logos
     .branding-container
       .branding-container--col
         h3 Current Logo
         .img-wrap
           Logo(:hideText="true" width="70px")
         .dl-wrap
-          h6 Download:
+          h5 Download:
           a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
           a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
           a.dl-btn(href="/images/assets/logo-mtgjson-black.svg" download) Black SVG
           a.dl-btn(href="/images/assets/logo-mtgjson-white.svg" download) White SVG
         .embed-wrap
-          h6 Embedded Code:
+          h5 Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
           a.dl-btn(@click="copyEmbed" data-which="0") Copy Embed
-      .branding-container--col
-        h3 Legacy Logo
-        .img-wrap
-          img(src="/images/assets/logo-mtgjson-previous.svg" title="Previous MTGJSON logo")
-        .dl-wrap
-          h6 Download:
-          a.dl-btn(href="/images/assets/logo-mtgjson-previous.svg" download) Standard SVG
 </template>
 
 <script>
@@ -91,7 +83,7 @@ export default {
         margin-bottom: 0;
       }
 
-      h6 {
+      h5 {
         margin-bottom: 1rem;
       }
 

@@ -142,4 +142,12 @@ export default {
     }
   }
 }
+
+@media (max-width: 719px) {
+.nav-links {
+  .nav-item {
+    display: block;
+  }
+}
+}
 </style>

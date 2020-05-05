@@ -1,33 +1,3 @@
-h3 {
-  margin-top: -100px;
-  padding-top: 100px;
-  padding-bottom: 5px;
-}
-
-h4 {
-  margin-bottom: 0;
-  padding-bottom: 10px;
-}
-
-h6,
-p {
-  color: var(--text-color);
-  margin: 0;
-  font-size: 14px;
-  line-height: 1.7em;
-}
-
-h6 {
-  transition: 0.25s ease-in-out;
-  position: relative;
-  padding: 0;
-  margin: 0;
-
-  a {
-    position: absolute;
-    left: 0;
-  }
-}
 
 em {
   color: var(--gray-color);
@@ -116,8 +86,6 @@ pre {
 
 .schema {
   &-item {
-    margin-bottom: 30px;
-
     ol,
     ul {
       margin-left: 0;
@@ -125,6 +93,9 @@ pre {
   }
 
   &-index {
+    padding-top: 15px;
+    padding-bottom: 15px;
+
     ol {
       margin: 0;
       padding-left: 15px;
@@ -136,10 +107,6 @@ pre {
 
       li {
         list-style: disc;
-
-        a {
-          font-size: 14px;
-        }
       }
 
       &::after {
@@ -152,7 +119,7 @@ pre {
         right: 0;
         z-index: 1;
         content: '';
-        box-shadow: 5px 5px 10px var(--shadow-color);
+        box-shadow: 0 0 5rem var(--shadow-color);
       }
 
       &.hide {
@@ -208,6 +175,8 @@ pre {
   }
 
   &-data {
+    padding-top: 15px;
+
     blockquote {
       position: relative;
       background-color: var(--table-bg-color);

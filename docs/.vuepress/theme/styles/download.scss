@@ -142,8 +142,7 @@
       .text-wrap {
         flex: 1;
 
-        h3 {
-          font-size: 15px;
+        h4 {
           padding-bottom: 5px;
           padding-top: 0;
           line-height: 1.5rem;
@@ -157,11 +156,11 @@
               position: relative;
               content: 'Spoiler';
               background-color: var(--spoiler-color);
-              color: var(--dark-color);
+              color: var(--dark-3-color);
               border-radius: 5px;
               margin-left: 10px;
               margin-right: 5px;
-              font-size: 10px;
+              font-size: 12px;
               font-weight: bold;
               line-height: normal;
               padding: 3px 5px;
@@ -185,11 +184,17 @@
             list-style: none;
             display: inline-block;
             margin-right: 30px;
+
+            &:last-of-type:not(:only-of-type) {
+              &, & > * {
+                margin-bottom: 0;
+              }
+            }
           }
         }
 
         small {
-          color: var(--text-color);
+          color: var(--gray-color);
           display: inline-block;
           text-transform: capitalize;
 
@@ -209,22 +214,6 @@
     }
   }
 }
-
-// @media (max-width: 851px) {
-//   .download-tables {
-//     .download-table {
-//       grid-template-columns: 1fr !important;
-//     }
-
-//     .sorting-options {
-//       grid-column: span 1 !important;
-//     }
-
-//     .download-item {
-//       grid-column: span 1 !important;
-//     }
-//   }
-// }
 
 @media (max-width: 571px) {
   .download-tables {

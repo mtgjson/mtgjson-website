@@ -33,7 +33,7 @@
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
+              h4(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
               ol
                 li
                   small Deck Code:

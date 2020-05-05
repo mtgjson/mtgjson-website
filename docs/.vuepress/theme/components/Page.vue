@@ -248,8 +248,8 @@ function flattern(items, res) {
 
 .page-nav {
   @extend %wrapper;
-  padding-top: 1rem;
-  padding-bottom: 5rem;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
 
   .inner {
     max-width: var(--content-width);

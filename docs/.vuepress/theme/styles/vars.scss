@@ -1,6 +1,6 @@
 :root {
   // Sizes
-  --sidebar-width: 220px;
+  --sidebar-width: 320px;
   --navbar-height: 5rem;
   --content-width: 960px;
   --line-numbers-width: 20px;
@@ -10,36 +10,46 @@
   --red-color: salmon;
   --orange-color: #ef6c2f;
   --blue-color: #85d3ff;
+  --blue-2-color: #1e90ff;
+
   --gray-color: #aaaaaa;
   --light-gray-color: #f6f8fa;
   --medium-gray-color: #eaecef;
   --dark-gray-color: #2d2d2d;
+
   --discord-color: #7289da;
   --patreon-color: #f96753;
   --arrow-bg-color: gray;
   // Main theme colors
   --light-color: #ffffff;
-  --dark-color: #212e3c;
-  --darker-color: #1a2530;
-  --darkest-color: #141c24;
+
+  --dark-1-color: #172839;
+  --dark-2-color: #0e141f;
+  --dark-3-color: #000000;
+
+  // --dark-color: #0e141f;
+  // --darker-color: #1a2530;
+  // --darkest-color: #141c24;
   --accent-color: #61c6ed;
   --spoiler-color: var(--yellow-color);
   // Color Themes
   --text-color: var(--light-color);
-  --bg-color: var(--dark-color);
-  --bg-border-color: var(--darkest-color);
-  --bg-dark-color: var(--darkest-color);
-  --shadow-color: var(--darkest-color);
-  --blockquote-bg-color: var(--darker-color);
-  --search-bg-color: var(--darkest-color);
+  --bg-color: var(--dark-2-color);
+  --bg-border-color: var(--dark-1-color);
+  --bg-dark-color: var(--dark-2-color);
+  --shadow-color: var(--dark-3-color);
+  --blockquote-bg-color: transparent;
+  --search-bg-color: transparent;
+  --search-border-color: var(--dark-1-color);
+  --search-border-highlight-color: var(--accent-color);
   --search-text-color: var(--text-color);
-  --light-only-dark: var(--dark-color);
+  --light-only-dark: var(--dark-1-color);
   // --supporter-bg-color: var(--dark-color);
   // Data Presentation
   --table-color: var(--bg-color);
-  --table-bg-color: var(--dark-color);
-  --table-heading-color: var(--darker-color);
-  --table-border-color: var(--dark-color);
+  --table-heading-color: var(--dark-2-color);
+  --table-bg-color: var(--dark-1-color);
+  --table-border-color: var(--dark-1-color);
   // Code colors
   --code-bg-color: var(--dark-gray-color);
   --code-text-color: var(--yellow-color);
@@ -48,27 +58,28 @@
 body {
   &.light {
     // Main Color
-    --accent-color: #1e90ff;
+    --accent-color: var(--blue-2-color);
     --yellow-color: var(--orange-color);
     // Color Themes
-    --text-color: var(--dark-color);
+    --text-color: var(--dark-1-color);
     --bg-color: var(--light-color);
     --bg-border-color: var(--medium-gray-color);
-    --bg-dark-color: var(--light-gray-color);
+    --bg-dark-color: var(--light-color);
     --shadow-color: var(--medium-gray-color);
-    --search-bg-color: var(--medium-gray-color);
+    --search-border-color: var(--medium-gray-color);
+    --search-border-highlight-color: var(--accent-color);
     --search-text-color: var(--text-color);
-    --blockquote-bg-color: var(--medium-gray-color);
-    // --supporter-bg-color: var(--bg-color);
+    --blockquote-bg-color: transparent;
     // Data Presentation
     --table-color: var(--text-color);
-    --table-bg-color: var(--light-color);
-    --table-heading-color: var(--light-gray-color);
+    --table-bg-color: var(--medium-gray-color);
     --table-border-color: var(--medium-gray-color);
+    --table-heading-color: var(--light-gray-color);
     --gray-color: var(--dark-gray-color);
     // Code colors
     --code-bg-color: #ffeeec;
     --code-text-color: #9b2e2e;
+
     background-color: var(--bg-color);
     color: var(--text-color);
   }

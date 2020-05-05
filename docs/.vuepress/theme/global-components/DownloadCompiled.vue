@@ -5,7 +5,7 @@
         .download-wrap
           .text-wrap
             .text-wrap--details
-              h3 {{ name }}
+              h4 {{ name }}
               p(v-html="file.description")
 
             .text-wrap--download

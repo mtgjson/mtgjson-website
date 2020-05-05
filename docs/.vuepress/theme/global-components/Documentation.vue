@@ -37,7 +37,7 @@
         v-if="name"
         label="Name"
         title="The name of the property")
-          h6(v-html="name")
+          strong.accent(v-html="name")
 
         DocumentationField(
         v-if="name"
@@ -63,7 +63,7 @@
         v-if="name"
         label="Description"
         title="The description of the property and values")
-          p(v-html="data.description")
+          span(v-html="data.description")
 
         DocumentationField(
         v-if="data.attributes"

@@ -88,10 +88,10 @@ export default {
     height: 100%;
     grid-gap: 2rem;
     overflow-y: auto;
-    padding: 2rem 2rem 0;
+    padding: 2rem 4rem 0;
 
     &-fixed {
-      padding: 1rem 2rem;
+      padding: 1rem 4rem;
       border-bottom: 1px solid var(--bg-border-color);
 
       .sidebar-logo {
@@ -152,6 +152,15 @@ export default {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
     top: var(--navbar-height);
+
+    &-wrap {
+      padding: 2rem 2rem 0;
+
+      &-fixed {
+        padding: 1rem 2rem;
+      }
+    }
+
   }
 }
 </style>

@@ -6,13 +6,6 @@ blockquote, .custom-block {
   border-left-width: 10px;
   padding: 25px;
   margin-bottom: 25px;
-  // transition: border 0.25s ease-in-out;
-
-  &:hover {
-    transition: border 0.25s ease-in-out;
-    border-color: var(--accent-color);
-    // transform: scale(1.025);
-  }
 
   &, p {
     &::before, &::after {
@@ -33,29 +26,12 @@ blockquote, .custom-block {
     font-size: 16px;
   }
 
-  &.tip {
-    border-color: var(--accent-color);
-
-    .custom-block-title {
-      color: var(--accent-color);
-    }
-  }
-
   &.warning {
     border-color: var(--yellow-color);
 
     .custom-block-title {
       color: var(--yellow-color);
     }
-  }
-}
-
-blockquote {
-  color: var(--gray-color);
-  border-color: var(--accent-color);
-  
-  &:hover {
-    border-color: var(--accent-color);
   }
 }
 

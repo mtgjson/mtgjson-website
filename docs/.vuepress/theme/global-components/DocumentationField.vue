@@ -3,7 +3,8 @@
     .heading
       p(:title="title") {{ label }}
     .content
-      slot
+      p
+        slot
 </template>
 
 <script>

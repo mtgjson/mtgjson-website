@@ -132,8 +132,7 @@ export default {
       position: relative;
       padding-left: 1rem;
       padding-right: 1rem;
-      border-width: 1px;
-      border-color: var(--table-bg-color);
+      border-color: var(--table-border-color);
 
       a[href=""] {
         cursor: initial;
