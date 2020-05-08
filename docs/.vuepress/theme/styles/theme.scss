@@ -250,10 +250,4 @@ img {
       background-color: var(--red-color);
     }
   }
-
-  &.nullable {
-    &::before {
-      background-color: var(--red-color);
-    }
-  }
 }

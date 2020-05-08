@@ -28,34 +28,25 @@
     "introduced": "v4.0.0"
   },
   "colorIdentity": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors found in {{code@manaCost}}, {{code@colorIndicator}} and {{code@text}}.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "colorIndicator": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors in the color indicator (The symbol prefixed to a card's types).",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.2"
   },
   "colors": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors in {{code@manaCost}} and {{code@colorIndicator}}. Some cards may not have a value, such as cards with \"Devoid\" in its {{code@text}}.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -98,9 +89,6 @@
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the face of either half or part of the card.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "introduced": "v4.1.1"
   },
@@ -123,22 +111,16 @@
     "introduced": "v4.0.0"
   },
   "foreignData": {
-    "type": "array(object)",
+    "type": "array(object) | array()",
     "example": "[ {{link@Foreign Data@/data-models/foreign-data}}, ... ]",
     "description": "See the {{link@Foreign Data@/data-models/foreign-data}} data model.",
     "isAtomicProperty": true,
-    "attributes": [
-      "optional"
-    ],
     "introduced": "v4.0.0"
   },
   "frameEffects": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"colorshifted\", ... ]",
     "description": "The visual frame effect.",
-    "attributes": [
-      "optional"
-    ],
     "introduced": "v4.6.0"
   },
   "frameVersion": {
@@ -161,9 +143,6 @@
     "type": "boolean",
     "example": "true",
     "description": "Can the card be found in foil?",
-    "attributes": [
-      "optional"
-    ],
     "introduced": "v4.0.0"
   },
   "hasAlternativeDeckLimit": {
@@ -180,9 +159,6 @@
     "type": "boolean",
     "example": "true",
     "description": "Can the card be found in non-foil?",
-    "attributes": [
-      "optional"
-    ],
     "introduced": "v4.0.0"
   },
   "isAlternative": {
@@ -353,7 +329,7 @@
   	"example": "{{link@Leadership Skills@/data-models/leadership-skills}}",
   	"description": "See the {{link@Leadership Skills@/data-models/leadership-skills}} data model.",
   	"attributes": [
-  	  "optional"
+      "optional"
   	],
     "isAtomicProperty": true,
   	"introduced": "v4.5.1"
@@ -362,6 +338,9 @@
     "type": "object",
     "example": "{{link@Legalities@/data-models/legalities}}",
     "description": "See the {{link@Legalities@/data-models/legalities}} data model.",
+  	"attributes": [
+      "optional"
+  	],
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -493,12 +472,9 @@
     "introduced": "v4.0.0"
   },
   "otherFaceIds": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with counterparts, such as transformed or melded faces.",
-    "attributes": [
-      "optional"
-    ],
     "introduced": "v4.6.1"
   },
   "power": {
@@ -516,6 +492,9 @@
     "type": "array(string)",
     "example": "[ \"M19\", \"PM19\", ... ]",
     "description": "List of sets the card was printed in, in uppercase.",
+    "attributes": [
+  	  "optional"
+  	],
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -539,15 +518,12 @@
     "type": "array(string)",
     "example": "[ \"Ajani, Strength of the Pride\", ... ]",
     "description": "The names of the cards that produce this card.",
-    "attributes": [
-      "optional"
-    ],
     "isTokenProperty": true,
     "isTokenOnlyProperty": true,
     "introduced": "v4.0.0"
   },
   "rulings": {
-    "type": "array(object)",
+    "type": "array(object) | array()",
     "example": "[ {{link@Rulings@/data-models/rulings}}, ... ]",
     "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
     "isAtomicProperty": true,
@@ -600,23 +576,17 @@
     "introduced": "v4.1.0"
   },
   "subtypes": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"Myr\", \"Construct\", ... ]",
     "description": "List of card subtypes found after em-dash.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "supertypes": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"Legendary\", ... ]",
     "description": "List of card supertypes found before em-dash.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -677,12 +647,9 @@
     "introduced": "v4.0.0"
   },
   "variations": {
-    "type": "array(string)",
+    "type": "array(string) | array()",
     "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.",
-    "attributes": [
-      "optional"
-    ],
     "introduced": "v4.1.2"
   },
   "watermark": {

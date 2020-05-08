@@ -66,19 +66,14 @@
                   small Release Date:
                   small &nbsp;{{ set.releaseDate }}
             .text-wrap--downloads
-              ol
-                li
-                  small Downloads:
-                  span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                    a.dl-btn(download :href="`${$api}${set.code}.json.${format}`") {{ format }}
-                  span(v-else)
-                    a.dl-btn(download :href="`${$api}${set.code}.json`") {{ format }}
+              DownloadField(:fileName="set.code")
 </template>
 
 <script>
-import axios from "axios";
+import DownloadField from './DownloadField';
 export default {
   name: "DownloadSets",
+  components: { DownloadField },
   data() {
     return {
       defaultSets: null,
@@ -89,7 +84,6 @@ export default {
       spoilerKey: true,
       showOptions: false,
       sortKey: "releaseDate:true",
-      downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
       timeout: null,
       message: "Loading..."
     };

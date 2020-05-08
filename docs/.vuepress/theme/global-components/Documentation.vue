@@ -198,7 +198,7 @@ export default {
       e.currentTarget.classList.toggle("selected");
     },
     getAttribute(attribute = "") {
-      return attribute.split("-")[0];
+      return attribute.toLowerCase().split("-")[0];
     },
     shouldShowProperty(prop) {
       return (
@@ -231,13 +231,13 @@ export default {
       return values;
     },
     getTitle(attribute) {
-      switch (attribute) {
+      const attr = attribute.toLowerCase();
+
+      switch (attr) {
         case "optional":
-          return "Property omitted when value returns a falsey or expected value.";
+          return "Property may be omitted when data returns a falsey or expected value.";
         case "deprecated":
           return "Property will be removed in a future major or minor version release.";
-        case "nullable":
-          return "Property may return a null value.";
         default:
           break;
       }

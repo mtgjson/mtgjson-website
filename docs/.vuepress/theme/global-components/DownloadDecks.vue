@@ -42,18 +42,14 @@
                   small Release Date:
                   small &nbsp;{{ deck.releaseDate }}
             .text-wrap--downloads
-              ol
-                li
-                  small Downloads:
-                  span(v-for="(format, key) in downloadFormats" v-if="format !== 'json'" :key="key")
-                    a.dl-btn(download :href="`${$api}decks/${deck.fileName}.json.${format}`") {{ format }}
-                  span(v-else)
-                    a.dl-btn(download :href="`${$api}decks/${deck.fileName}.json`") {{ format }}
+              DownloadField(:fileName="`decks/${deck.fileName}`")
 </template>
 
 <script>
+import DownloadField from './DownloadField';
 export default {
   name: "DownloadDecks",
+  components: { DownloadField },
   data() {
     return {
       defaultDecks: null,
@@ -61,7 +57,7 @@ export default {
       searchKey: "",
       showOptions: false,
       sortKey: "releaseDate:true",
-      downloadFormats: ["json", "bz2", "gz", "xz", "zip"],
+      timeout: null,
       message: "Loading..."
     };
   },
