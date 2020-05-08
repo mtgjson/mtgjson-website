@@ -19,7 +19,24 @@ module.exports = {
   ga: 'UA-131358443-1',
   // Head Tags
   head: [
+    // Favicon and OS Tiles
     ['link', { rel: 'icon', href: '/favicon-dark.ico' }],
+    ['link', { rel: 'icon', href: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-icon-96x96.png', sizes: '96x96', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-icon-48x48.png', sizes: '48x48', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-icon-36x36.png', sizes: '36x36', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-57x57.png', sizes: '57x57' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-60x60.png', sizes: '60x60' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-72x72.png', sizes: '72x72' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-76x76.png', sizes: '76x76' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-114x114.png', sizes: '114x114' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-120x120.png', sizes: '120x120' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-144x144.png', sizes: '144x144' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-152x152.png', sizes: '152x152' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-180x180.png', sizes: '180x180' }],
+    ['link', { rel: 'msapplication-TileImage', href: '/ms-icon-144x144.png' }],
     // Google SEO
     [
       'meta',
