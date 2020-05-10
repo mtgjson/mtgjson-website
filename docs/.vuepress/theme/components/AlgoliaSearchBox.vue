@@ -75,15 +75,15 @@ export default {
 
     .ds-dropdown-menu {
       background-color: #fff;
-      border: 1px solid #999;
+      border: 1px solid var(--accent-color);
       border-radius: 5px;
       font-size: 16px;
       margin: 6px 0 0;
-      padding: 4px;
+      padding: 0;
       text-align: left;
 
       &:before {
-        border-color: #999;
+        border: 1px solid var(--accent-color);
       }
 
       [class*=ds-dataset-] {
@@ -96,12 +96,12 @@ export default {
       }
 
       .ds-suggestion {
-        border-bottom: 1px solid var(--gray-color);
+        border-bottom: 1px solid #dfdfdf;//var(--table-bg-color);
       }
     }
 
     .algolia-docsearch-suggestion--highlight {
-      color: #2c815b;
+      color: var(--accent-color);
     }
 
     .algolia-docsearch-suggestion {
@@ -114,6 +114,7 @@ export default {
         background: var(--accent-color);
         color: #fff;
         font-weight: 600;
+        border-width: 0;
 
         .algolia-docsearch-suggestion--highlight {
           background: rgba(255, 255, 255, 0.6);
@@ -148,11 +149,12 @@ export default {
 
     .algolia-docsearch-footer {
       border-color: var(--gray-color);
+      margin: 10px;
     }
 
     .ds-cursor .algolia-docsearch-suggestion--content {
       background-color: #e7edf3 !important;
-      color: var(--text-color);
+      color: var(--dark-3-color);
     }
   }
 }

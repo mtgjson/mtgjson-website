@@ -4,7 +4,7 @@
       .branding-container--col
         h3 Current Logo
         .img-wrap
-          Logo(:hideText="true" width="70px")
+          NavMeta(:hideText="true" width="70px")
         .dl-wrap
           h5 Download:
           .dl-wrap--row
@@ -24,10 +24,10 @@
 </template>
 
 <script>
-import Logo from "./Logo";
+import NavMeta from "./NavMeta";
 export default {
   name: "BrandAssets",
-  components: { Logo },
+  components: { NavMeta },
   data() {
     return {
       didCopy: false,
@@ -68,7 +68,7 @@ export default {
       }
     },
     renderAttributionEmbed() {
-      return `<a href="http://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
+      return `<a href="https://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
     }
   }
 };

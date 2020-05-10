@@ -1,7 +1,6 @@
 <template lang="pug">
   aside.sidebar
     .sidebar-wrap-fixed
-      //- Logo.sidebar-logo.desktop-hide
       AlgoliaSearchBox(
         v-if="isAlgoliaSearch"
         :options="algolia")

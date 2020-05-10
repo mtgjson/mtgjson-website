@@ -1,13 +1,13 @@
 import Vuex from 'vuex';
 import { makeStore } from './store';
 
-import jsonMustaches from './scripts/jsonMustaches';
-import setStoreState from './scripts/setStoreState';
-import isFutureDate from './scripts/isFutureDate';
-import prettifyType from './scripts/prettifyType';
-import filter from './scripts/filter';
-import search from './scripts/search';
-import sort from './scripts/sort';
+import jsonMustaches from './public/scripts/jsonMustaches';
+import setStoreState from './public/scripts/setStoreState';
+import isFutureDate from './public/scripts/isFutureDate';
+import prettifyType from './public/scripts/prettifyType';
+import filter from './public/scripts/filter';
+import search from './public/scripts/search';
+import sort from './public/scripts/sort';
 
 export default async ({ Vue }) => {
   Vue.prototype.$api = 'https://mtgjson.com/api/v5/';

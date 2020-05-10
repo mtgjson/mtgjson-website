@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [ dataModels, abstractModels ] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
+const [dataModels, abstractModels] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
@@ -21,8 +21,14 @@ module.exports = {
   head: [
     // Favicon and OS Tiles
     ['link', { rel: 'icon', href: '/favicon-dark.ico' }],
-    ['link', { rel: 'icon', href: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
+    [
+      'link',
+      { rel: 'icon', href: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }
+    ],
+    [
+      'link',
+      { rel: 'icon', href: '/android-icon-144x144.png', sizes: '144x144', type: 'image/png' }
+    ],
     ['link', { rel: 'icon', href: '/android-icon-96x96.png', sizes: '96x96', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/android-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/android-icon-48x48.png', sizes: '48x48', type: 'image/png' }],
@@ -42,29 +48,29 @@ module.exports = {
       'meta',
       {
         property: 'og:title',
-        content: title,
-      },
+        content: title
+      }
     ],
     [
       'meta',
       {
         property: 'og:description',
-        content: description,
-      },
+        content: description
+      }
     ],
     [
       'meta',
       {
         property: 'og:image',
-        content: '/images/assets/logo-mtgjson-thumbnail.png',
-      },
+        content: '/images/assets/logo-mtgjson-thumbnail.png'
+      }
     ],
     [
       'meta',
       {
         name: 'google-site-verification',
-        content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY',
-      },
+        content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
+      }
     ],
     // Keyrun for set images
     [
@@ -73,25 +79,24 @@ module.exports = {
         rel: 'stylesheet',
         type: 'text/css',
         media: 'screen',
-        href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css',
-      },
-    ],
+        href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css'
+      }
+    ]
   ],
-  enhanceAppFiles: './store.js',
   plugins: [
     [
       'container',
       {
         type: 'tip',
-        defaultTitle: '',
-      },
+        defaultTitle: ''
+      }
     ],
     [
       'container',
       {
         type: 'warning',
-        defaultTitle: '',
-      },
+        defaultTitle: ''
+      }
     ],
     [
       'feed',
@@ -102,18 +107,30 @@ module.exports = {
         count: 100,
         feeds: {
           atom1: {
-            file_name: 'atom.xml',
+            file_name: 'atom.xml'
           },
           rss2: {
-            file_name: 'site.rss',
+            file_name: 'site.rss'
           },
           json1: {
-            file_name: 'site.json',
-          },
-        },
-      },
-    ],
+            file_name: 'site.json'
+          }
+        }
+      }
+    ]
   ],
+  enhanceAppFiles: './store.js',
+  chainWebpack: config => {
+    // Start custom SVG importing via vue-svg-loader
+    config.module.rules.delete('svg');
+    config.module
+      .rule('svg')
+      .test(/\.svg$/)
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader')
+      .end();
+    // End custom SVG importing
+  },
   // Vuepress Themeing
   themeConfig: {
     // Algolia SEO
@@ -121,8 +138,8 @@ module.exports = {
       apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
       indexName: 'mtgjson',
       algoliaOptions: {
-        hitsPerPage: 10,
-      },
+        hitsPerPage: 10
+      }
     },
     searchMaxSuggestions: 10,
     // Edit this page link in footer
@@ -139,52 +156,52 @@ module.exports = {
     nav: [
       { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
       { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
-      { text: 'Contribute', link: 'https://github.com/mtgjson' },
+      { text: 'Contribute', link: 'https://github.com/mtgjson' }
     ],
     sidebarDepth: 1,
     sidebar: [
       {
         title: 'About Us',
-        path: '/',
+        path: '/'
       },
       {
         title: 'F.A.Q.',
-        path: '/faq/',
+        path: '/faq/'
       },
       {
         title: 'Downloads',
         path: '/downloads/all-files',
         collapsable: false,
-        children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/'],
+        children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/']
       },
       {
         title: 'File Structures',
-        path: '/file-structures/',
+        path: '/file-structures/'
       },
       {
         title: 'Data Models',
         path: '/data-models/card',
         collapsable: false,
-        children: dataModels,
+        children: dataModels
       },
       {
         title: 'Abstract Models',
         path: '/abstract-models/all-prices',
         collapsable: false,
-        children: abstractModels,
+        children: abstractModels
       },
       {
         title: 'Changelog',
-        path: '/changelog/',
+        path: '/changelog/'
       },
       {
         title: 'Brand Assets',
-        path: '/brand-assets/',
+        path: '/brand-assets/'
       },
       {
         title: 'License (MIT)',
-        path: '/license/',
-      },
-    ],
-  },
+        path: '/license/'
+      }
+    ]
+  }
 };

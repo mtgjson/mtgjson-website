@@ -3,7 +3,7 @@
     .navbar-options
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
       router-link(:to="$localePath")
-        Logo(:width="`60px`")
+        NavMeta(:width="`60px`")
       NavLinks.mobile-hide
       ThemeSwitcher.desktop-hide
 </template>
@@ -11,7 +11,7 @@
 <script>
 import NavLinks from './NavLinks';
 import SidebarButton from './SidebarButton';
-import Logo from '../global-components/Logo';
+import NavMeta from '../global-components/NavMeta';
 import ThemeSwitcher from '../global-components/ThemeSwitcher';
 
 export default {
@@ -19,7 +19,7 @@ export default {
     SidebarButton,
     ThemeSwitcher,
     NavLinks,
-    Logo,
+    NavMeta,
   },
 };
 

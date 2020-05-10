@@ -1,12 +1,12 @@
-import sort from '../docs/.vuepress/scripts/sort';
+import sort from '../docs/.vuepress/public/scripts/sort';
 
 describe('sort', () => {
   it('should return the same data if an empty filter is passed', async () => {
     const filter = '';
     const data = [
       {
-        type: 'creature',
-      },
+        type: 'creature'
+      }
     ];
     const sorted = await sort(filter, data);
 
@@ -17,8 +17,8 @@ describe('sort', () => {
     const filter = 'crater';
     const data = [
       {
-        type: 'creature',
-      },
+        type: 'creature'
+      }
     ];
     const sorted = await sort(filter, data);
 
@@ -29,25 +29,25 @@ describe('sort', () => {
     const filter = 'releaseDate:true';
     const data = [
       {
-        releaseDate: '1995-07-13',
+        releaseDate: '1995-07-13'
       },
       {
-        releaseDate: '2020-01-01',
+        releaseDate: '2020-01-01'
       },
       {
-        releaseDate: '2017-04-05',
-      },
+        releaseDate: '2017-04-05'
+      }
     ];
     const expected = [
       {
-        releaseDate: '2020-01-01',
+        releaseDate: '2020-01-01'
       },
       {
-        releaseDate: '2017-04-05',
+        releaseDate: '2017-04-05'
       },
       {
-        releaseDate: '1995-07-13',
-      },
+        releaseDate: '1995-07-13'
+      }
     ];
     const sorted = await sort(filter, data);
 
@@ -58,25 +58,25 @@ describe('sort', () => {
     const filter = 'releaseDate';
     const data = [
       {
-        releaseDate: '1995-07-13',
+        releaseDate: '1995-07-13'
       },
       {
-        releaseDate: '2020-01-01',
+        releaseDate: '2020-01-01'
       },
       {
-        releaseDate: '2017-04-05',
-      },
+        releaseDate: '2017-04-05'
+      }
     ];
     const expected = [
       {
-        releaseDate: '1995-07-13',
+        releaseDate: '1995-07-13'
       },
       {
-        releaseDate: '2017-04-05',
+        releaseDate: '2017-04-05'
       },
       {
-        releaseDate: '2020-01-01',
-      },
+        releaseDate: '2020-01-01'
+      }
     ];
     const sorted = await sort(filter, data);
 
