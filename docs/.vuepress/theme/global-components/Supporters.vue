@@ -7,11 +7,12 @@
       .supporters-grid
         blockquote.supporter(v-for="({ link, image, name, since, tier, blurb } = patron, key) in patrons" :data-tier="tier")
           .supporter-link
-            a(:href="link ? link : ''" rel="nofollow" target="_blank")
-              .img-wrap(v-if="image")
-                .img-wrap--container
-                  img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
-              h6 {{ name }}
+            .img-wrap(v-if="image")
+              .img-wrap--container
+                img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
+            a(v-if="link" :href="link" rel="nofollow" target="_blank")
+              h6(v-html="name")
+            h6(v-else v-html="name")
             p.tier {{ tier }} Supporter
             p.tier-time(v-if="since" v-html="formatTime(since)")
 
@@ -174,10 +175,8 @@ export default {
         line-height: 1.2rem;
       }
 
-      a {
-        h6 {
-          color: var(--accent-color);
-        }
+      h6 {
+        color: var(--accent-color);
       }
 
       p {

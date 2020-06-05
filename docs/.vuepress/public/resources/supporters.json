@@ -1,6 +1,27 @@
 {
   "patrons": [
     {
+      "name": "Cardhoarder",
+      "image": "avatar-cardhoarder.png",
+      "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
+      "tier": "mythic",
+      "since": "2018-11"
+    },
+    {
+      "name": "CardCastle",
+      "image": "avatar-cardcastle.png",
+      "link": "https://cardcastle.co",
+      "tier": "mythic",
+      "since": "2019-04"
+    },
+    {
+      "name": "MTG Labs",
+      "image": "avatar-mtglabs.png",
+      "link": "http://mtglabs.com",
+      "tier": "mythic",
+      "since": "2019-05"
+    },
+    {
       "name": "ABUGames",
       "image": "avatar-abugames.png",
       "link": "https://abugames.com/",
@@ -13,27 +34,6 @@
       "link": "https://cardboard.live",
       "tier": "mythic",
       "since": "2019-09"
-    },
-    {
-      "name": "CardCastle",
-      "image": "avatar-cardcastle.png",
-      "link": "https://cardcastle.co",
-      "tier": "mythic",
-      "since": "2019-04"
-    },
-    {
-      "name": "Cardhoarder",
-      "image": "avatar-cardhoarder.png",
-      "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
-      "tier": "mythic",
-      "since": "2018-11"
-    },
-    {
-      "name": "MTG Labs",
-      "image": "avatar-mtglabs.png",
-      "link": "http://mtglabs.com",
-      "tier": "mythic",
-      "since": "2019-05"
     },
     {
       "name": "My MTG Collection",
@@ -63,13 +63,6 @@
       "since": "2019-04"
     },
     {
-      "name": "MagicMerchant",
-      "image": "avatar-magicmerchant.png",
-      "link": "https://magicmerchant.it",
-      "tier": "uncommon",
-      "since": "2019-06"
-    },
-    {
       "name": "MTG Brewmaster",
       "image": "avatar-mtgbrewmaster.png",
       "link": "http://mtgbrewmaster.com",
@@ -84,17 +77,30 @@
       "since": "2019-04"
     },
     {
+      "name": "Seraph Six",
+      "image": "avatar-seraphsix.png",
+      "tier": "uncommon",
+      "since": "2019-04"
+    },
+    {
+      "name": "MagicMerchant",
+      "image": "avatar-magicmerchant.png",
+      "link": "https://magicmerchant.it",
+      "tier": "uncommon",
+      "since": "2019-06"
+    },
+    {
+      "name": "Fran&ccedil;ois Andrieux",
+      "image": "avatar-francois-andrieux.jpg",
+      "tier": "uncommon",
+      "since": "2019-12"
+    },
+    {
       "name": "MagicHunter",
       "image": "avatar-magic-hunter.png",
       "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
       "tier": "uncommon",
       "since": "2020-02"
-    },
-    {
-      "name": "Seraph Six",
-      "image": "avatar-seraphsix.png",
-      "tier": "uncommon",
-      "since": "2019-04"
     }
   ],
   "services": [
