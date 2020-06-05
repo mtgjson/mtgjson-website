@@ -10,8 +10,9 @@
             .img-wrap(v-if="image")
               .img-wrap--container
                 img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
-            a(:href="link" rel="nofollow" target="_blank")
-              h6 {{ name }}
+            a(v-if="link" :href="link" rel="nofollow" target="_blank")
+              h6(v-html="name")
+            h6(v-else v-html="name")
             p.tier {{ tier }} Supporter
             p.tier-time(v-if="since" v-html="formatTime(since)")
 
@@ -96,7 +97,7 @@ export default {
 };
 </script>
 
-<style lang="stylus" scoped>
+<style lang="scss" scoped>
 .supporters {
   &-wrap {
     justify-content: center;
@@ -169,10 +170,8 @@ export default {
         line-height: 1.2rem;
       }
 
-      a {
-        h6 {
-          color: var(--accent-color);
-        }
+      h6 {
+        color: var(--accent-color);
       }
 
       p {
