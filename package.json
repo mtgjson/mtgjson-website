@@ -22,7 +22,10 @@
     "heroku-prebuild": "yarn bootstrap"
   },
   "dependencies": {
+    "@babel/compat-data": "^7.10.1",
     "js-essentials": "0.0.6",
+    "node-sass": "^4.14.1",
+    "sass-loader": "^8.0.2",
     "uuid": "^3.3.3",
     "vuepress": "^1.2.0",
     "vuepress-plugin-container": "^2.1.2",
