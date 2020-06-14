@@ -139,6 +139,15 @@
     "isAtomicProperty": true,
     "introduced": "v4.2.1"
   },
+  "hasContentWarning": {
+    "type": "boolean",
+    "example": "true",
+    "description": "Is the card marked by Wizards of the Coast for having sensitive content? Cards with this property may have missing or degraded properties and values.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
+  },
   "hasFoil": {
     "type": "boolean",
     "example": "true",
