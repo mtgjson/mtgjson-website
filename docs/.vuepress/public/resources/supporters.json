@@ -265,6 +265,11 @@
       "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
     },
     {
+      "name": "mtgcard",
+      "image": "avatar-mtgcard.png",
+      "link": "https://github.com/yoshi1123/mtgcard/"
+    },
+    {
       "name": "MTGNexus",
       "image": "avatar-mtgnexus.png",
       "link": "https://www.mtgnexus.com/"
@@ -328,6 +333,11 @@
       "name": "Venser's Journal",
       "image": "avatar-vensersjournal.jpg",
       "link": "https://vensersjournal.com/"
+    },
+    {
+      "name": "viMTG",
+      "image": "avatar-vimtg.png",
+      "link": "https://github.com/yoshi1123/vim-mtg"
     },
     {
       "name": "XMage",

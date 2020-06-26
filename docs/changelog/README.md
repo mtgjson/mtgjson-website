@@ -20,14 +20,9 @@
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.0.0
-Release Date: ???????????
-
+Release Date: 2020-07-03
 ### Announcements
-<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>Here is some placeholder for v5 announcement. If you are seeing this on production please update immediately.
-
-More placeholder about the announcement.
-
-The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please let us know!
+<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please let us know!</br></br></br>
 
 ### Card
 #### Changed
@@ -37,15 +32,18 @@ The documentation of the website overall was changed in a drastic way with such 
 - Changed `name` to show full split card names (name1//name2).
 - Changed `name` to be as true as possible (see Very Cryptic Command).
 - Changed `uuid` for split cards.
+- Changed `names` in favor of `otherFaceIds`.
+- Changed `hasNoDeckLimit` in favor of `hasAlternativeDeckLimit`.
 #### Added
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
 - Added `promoTypes` for an enums for promo cards which replaces other promo properties.
 - Added `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content? Cards with this property may have missing or degraded properties and values.
 - Added `variations` to show all cards with the same name.
 - Added `keywords` for all keywords available on a card.
-#### Removed
-- Removed `names` in favor of `otherFaceIds`.
-- Removed `hasNoDeckLimit` in favor of `hasAlternativeDeckLimit`.
+
+### Set
+#### Changed
+- Changed `boosterV3` in favor of `booster`.
 
 ### Files
 #### Changed

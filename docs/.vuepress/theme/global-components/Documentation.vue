@@ -4,9 +4,9 @@
   .schema(v-else)
     //- Properties Options
     //- This fills out optional rendering
-    .schema-options
-      label(for="show-optional" :disabled="!canHideOptionals") Show optional properties:
-      input(id="show-optional" type="checkbox" v-model="showOptional" :disabled="!canHideOptionals")
+    .schema-options(v-if="canHideOptionals")
+      label(for="show-optional") Show optional properties:
+      input(id="show-optional" type="checkbox" v-model="showOptional")
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
@@ -45,6 +45,7 @@
         title="The type of the property")
           em(v-html="data.type")
 
+        //- Start logic for fields used to populate examples
         DocumentationField(
         v-if="!getValues(name)"
         label="Example"
@@ -64,6 +65,7 @@
         label="Examples"
         title="All possible values of the property")
           pre Enum property is empty. Please notify the development team.
+        //- End logic for fields used to popluate examples
 
         DocumentationField(
         v-if="name"
