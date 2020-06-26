@@ -29,21 +29,32 @@ This data model is unique compared to all other data models because all of its k
 
 ### Price Providers
 
-MTGJSON currently has affiliated with the following markets to keep a history of price data:
+MTGJSON currently has affiliated with the following markets to keep a history of price data and the following examples are formatted for the data model:
 
-- Paper: <a href="https://www.tcgplayer.com" target="_blank" rel="noopener noreferrer">TCGPlayer</a>, <a href="https://www.cardmarket.com" target="_blank" rel="noopener noreferrer">Cardmarket</a>, and <a href="https://www.cardkingdom.com" target="_blank" rel="noopener noreferrer">CardKingdom</a>
-- MTGO: <a href="https://www.cardhoarder.com" target="_blank" rel="noopener noreferrer">Cardhoarder</a>
-
-Need more data? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.
+- paper: <a href="https://www.tcgplayer.com" target="_blank" rel="noopener noreferrer">tcgplayer</a>, <a href="https://www.cardmarket.com" target="_blank" rel="noopener noreferrer">cardmarket</a>, and <a href="https://www.cardkingdom.com" target="_blank" rel="noopener noreferrer">cardkingdom</a>
+- mtgo: <a href="https://www.cardhoarder.com" target="_blank" rel="noopener noreferrer">cardhoarder</a>
 
 ### File Structure Overview
 
 ```json
 "<Card UUID>": {
-  // Price format
-  "paper": {
+  // Game format
+  "<Card Format>": {
     // Price provider
     "<Price Provider ID>": {
+      // Provider buy values
+      "buy": {
+        // Sell values of a foil
+        "foil": {
+          // Date and price
+          "<YYYY-MM-DD>": float
+        },
+        // Sell values of a non-foil
+        "normal": {
+          // Date and price
+          "<YYYY-MM-DD>": float
+        }
+      },
       // Provider sale values
       "sell": {
         // Sell values of a foil
@@ -59,8 +70,7 @@ Need more data? Join the <a href="https://discord.gg/74GUQDE" rel="noopener nore
       }
     },
     ...
-  },
-  "mtgo": { ... }
+  }
 },
 ...
 ```
@@ -85,6 +95,28 @@ Need more data? Join the <a href="https://discord.gg/74GUQDE" rel="noopener nore
       },
     },
     "paper": {
+      "cardkingdom" : {
+        "sell": {
+          "foil": {
+            ..., // more rows
+            "2020-04-21": 0.12
+          },
+          "normal": {
+            ..., // more rows
+            "2020-04-21": 0.02
+          }
+        },
+        "buy": {
+          "foil": {
+            ..., // more rows
+            "2020-04-21": 0.6
+          },
+          "normal": {
+            ..., // more rows
+            "2020-04-21": 0.01
+          }
+        }
+      },
       "cardmarket": {
         "sell": {
           "foil": {
@@ -108,8 +140,10 @@ Need more data? Join the <a href="https://discord.gg/74GUQDE" rel="noopener nore
             "2020-04-21": 0.02
           }
         }
-      }
+      },
     }
   }
 }
 ```
+
+Need more data? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.

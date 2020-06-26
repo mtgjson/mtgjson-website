@@ -52,12 +52,18 @@
           pre(v-html="data.example")
 
         DocumentationField(
-        v-if="getValues(name)"
+        v-if="getValues(name) && getValues(name).length > 0"
         label="Examples"
         title="All possible values of the property")
           .values-list
             ol.values-list--code(@click="toggleValue")
               li(v-for="(value, key) in getValues(name)" :key="key") "{{ value }}"
+
+        DocumentationField(
+        v-if="getValues(name) && getValues(name).length === 0"
+        label="Examples"
+        title="All possible values of the property")
+          pre Enum property is empty. Please notify the development team.
 
         DocumentationField(
         v-if="name"

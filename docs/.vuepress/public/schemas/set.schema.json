@@ -15,11 +15,11 @@
     ],
     "introduced": "v4.0.0"
   },
-  "boosterV3": {
+  "booster": {
     "type": "array(array, string)",
     "example": "[ [ \"mythic\", \"rare\" ], \"uncommon\", ... ]",
     "description": "The card rarity contents of a typical booster pack. This field is backwards compatible with MTGJSON v3.",
-    "introduced": "v4.1.0"
+    "introduced": "v5.0.0"
   },
   "cards": {
     "type": "array(object)",

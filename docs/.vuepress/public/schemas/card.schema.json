@@ -20,6 +20,12 @@
     "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
+  "availability": {
+    "type": "array",
+    "example": "[ \"isPaper\", ... ]",
+    "description": "List of the card's available printing types.",
+    "introduced": "v5.0.0"
+  },
   "borderColor": {
     "type": "string",
     "example": "\"black\"",
@@ -170,6 +176,12 @@
     "description": "Can the card be found in non-foil?",
     "introduced": "v4.0.0"
   },
+  "identifiers": {
+    "type": "object",
+    "example": "{{link@Identifiers@/data-models/identifiers}}",
+    "description": "See the {{link@Identifiers@/data-models/identifiers}} data model.",
+    "introduced": "v5.0.0"
+  },
   "isAlternative": {
     "type": "boolean",
     "example": "true",
@@ -179,46 +191,10 @@
     ],
     "introduced": "v4.2.0"
   },
-  "isArena": {
-    "type": "boolean",
-    "example": "true",
-    "description": "Is the card available in Magic: The Gathering Arena?",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.2"
-  },
-  "isBuyABox": {
-    "type": "boolean",
-    "example": "true",
-    "description": "Is the card a Buy-a-Box promotional printing?",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.6.2"
-  },
-  "isDateStamped": {
-    "type": "boolean",
-    "example": "true",
-    "description": "Is the card printed with a date stamp? This is often used in pre-release cards.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.6.2"
-  },
   "isFullArt": {
     "type": "boolean",
     "example": "true",
     "description": "Is the card full artwork?",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.2"
-  },
-  "isMtgo": {
-    "type": "boolean",
-    "example": "true",
-    "description": "Is the card available in Magic: The Gathering Online?",
     "attributes": [
       "optional"
     ],
@@ -242,24 +218,6 @@
       "optional"
     ],
     "introduced": "v4.0.0"
-  },
-  "isPaper": {
-    "type": "boolean",
-    "example": "true",
-    "description": "Is the card available in print?",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.2"
-  },
-  "isPlaneswalkerStamped": {
-    "type": "boolean",
-    "example": "true",
-    "description": "Is the card printed with a planeswalker identifier?",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v5.0.0"
   },
   "isPromo": {
     "type": "boolean",
@@ -325,6 +283,15 @@
     ],
     "introduced": "v4.4.1"
   },
+  "keywords": {
+    "type": "array",
+    "example": "[ \"Deathtouch\", ... ]",
+    "description": "All keywords found on a card",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
+  },
   "layout": {
     "type": "string",
     "example": "\"adventure\"",
@@ -379,69 +346,6 @@
     "example": "\"{3}{W}{W}\"",
     "description": "Mana cost of the card.",
     "isAtomicProperty": true,
-    "introduced": "v4.0.0"
-  },
-  "mcmId": {
-    "type": "integer",
-    "example": "371878",
-    "description": "The {{link@Card Market@https://www.cardmarket.com/en/Magic}} card ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.0"
-  },
-  "mcmMetaId": {
-    "type": "integer",
-    "example": "269313",
-    "description": "The {{link@Card Market@https://www.cardmarket.com/en/Magic}} card meta ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.0"
-  },
-  "mtgArenaId": {
-    "type": "integer",
-    "example": "67330",
-    "description": "The Magic: The Gathering Arena card ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.5.0"
-  },
-  "mtgoFoilId": {
-    "type": "integer",
-    "example": "34645",
-    "description": "The Magic: The Gathering Online card foil ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.5.0"
-  },
-  "mtgoId": {
-    "type": "integer",
-    "example": "34644",
-    "description": "The Magic: The Gathering Online card ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.5.0"
-  },
-  "mtgstocksId": {
-    "type": "integer",
-    "example": "40272",
-    "description": "{{link@mtgstocks@https://mtgstocks.com}} card ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.0"
-  },
-  "multiverseId": {
-    "type": "integer",
-    "example": "457145",
-    "description": "An integer cards have which Wizards of the Coast uses as a card identifier.",
-    "attributes": [
-  	  "optional"
-  	],
     "introduced": "v4.0.0"
   },
   "name": {
@@ -507,6 +411,15 @@
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
+  "promoTypes": {
+    "type": "array(string)",
+    "example": "[ \"bundle\", ... ]",
+    "description": "List of promotional types for a card.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
+  },
   "purchaseUrls": {
     "type": "object",
     "example": "{ {{link@Purchase URL@/data-models/purchase-url}}, ... }",
@@ -537,31 +450,6 @@
     "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
-  },
-  "scryfallId": {
-    "type": "string",
-    "example": "\"80164e61-3e94-4e10-9bd1-518b8dc7fc4c\"",
-    "description": "A universal unique ID (v4) generated by Scryfall. Note that cards with multiple faces are not unique.",
-    "isTokenProperty": true,
-    "introduced": "v4.0.0"
-  },
-  "scryfallOracleId": {
-    "type": "string",
-    "example": "\"9b7870df-6bca-499f-bc6e-e57f2ddfe640\"",
-    "description": "A unique ID for this card's oracle identity. This value is consistent across reprinted card editions, and unique among different cards with the same name (tokens, Unstable variants, etc).",
-    "isAtomicProperty": true,
-    "isTokenProperty": true,
-    "introduced": "v4.3.1"
-  },
-  "scryfallIllustrationId": {
-    "type": "string",
-    "example": "\"4ab49865-ff4c-4dae-94e8-a5ce273138da\"",
-    "description": "A unique identifier for the card artwork that remains consistent across reprints. Newly spoiled cards may not have this field yet.",
-    "attributes": [
-      "optional"
-    ],
-    "isTokenProperty": true,
-    "introduced": "v4.3.1"
   },
   "setCode": {
     "type": "string",
@@ -599,15 +487,6 @@
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
-  },
-  "tcgplayerProductId": {
-    "type": "integer",
-    "example": "183201",
-    "description": "The {{link@TCG Player@https://www.tcgplayer.com/}} card ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.2.1"
   },
   "text": {
     "type": "string",
