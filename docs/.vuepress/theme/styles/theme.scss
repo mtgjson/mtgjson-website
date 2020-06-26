@@ -197,8 +197,11 @@ img {
 }
 
 @media (max-width: 719px) {
-  .content__default {
-    padding: 0 2rem;
+  .content__default,
+  .page-nav,
+  .page-edit {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
   .desktop-hide {
     display: block !important;

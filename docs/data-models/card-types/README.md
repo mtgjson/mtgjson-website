@@ -20,7 +20,7 @@
 
 # Card Types
 
-The Card Types data models describes every card type of any type of Magic: The Gathering card.
+The Card Types data model describes every card type of any type of Magic: The Gathering card in a DTCI-legal game format.
 
 > Parent file: `CardTypes`  
 > Parent property: `data`
