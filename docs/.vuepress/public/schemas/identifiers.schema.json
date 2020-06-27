@@ -1,4 +1,22 @@
 {
+  "cardKingdomFoilId": {
+    "type": "integer",
+    "example": "27631",
+    "description": "The {{link@Card Kingdom@https://www.cardkingdom.com}} card foil ID.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
+  },
+  "cardKingdomId": {
+    "type": "integer",
+    "example": "27630",
+    "description": "The {{link@Card Kingdom@https://www.cardkingdom.com}} card ID.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
+  },
   "mcmId": {
     "type": "integer",
     "example": "371878",
@@ -43,15 +61,6 @@
       "optional"
     ],
     "introduced": "v4.5.0"
-  },
-  "mtgstocksId": {
-    "type": "integer",
-    "example": "40272",
-    "description": "{{link@mtgstocks@https://mtgstocks.com}} card ID.",
-    "attributes": [
-      "optional"
-    ],
-    "introduced": "v4.4.0"
   },
   "multiverseId": {
     "type": "integer",

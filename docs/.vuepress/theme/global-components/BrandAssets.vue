@@ -137,7 +137,6 @@ export default {
 
           &:focus {
             outline: 0;
-            border: 1px solid var(--code-text-color);
           }
 
           &.copied {

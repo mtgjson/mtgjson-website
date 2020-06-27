@@ -1,7 +1,8 @@
 <template lang="pug">
   .schema-data--table-item
     .heading
-      p(:title="title") {{ label }}
+      p
+        strong(:title="title") {{ label }}
     .content
       p
         slot

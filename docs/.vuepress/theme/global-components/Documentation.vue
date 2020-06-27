@@ -37,7 +37,7 @@
         v-if="name"
         label="Name"
         title="The name of the property")
-          strong.accent(v-html="name")
+          strong(v-html="name")
 
         DocumentationField(
         v-if="name"
@@ -182,17 +182,19 @@ export default {
     }
   },
   async created() {
-    const schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
-
-    const landcycle = new this.$helpers.jsonMustaches(schema);
-    await landcycle._init();
-
-    await this.$helpers.setStoreState.apply(this, ["EnumValues"]);
+    let schema;
+    let landcycle;
 
     this.isAtomicCard = this.$page.frontmatter.title.includes("(Atomic)");
     this.isTokenCard = this.$page.frontmatter.title.includes("(Token)");
     this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
     this.isManifest = this.$page.frontmatter.title.includes("List"); // SetList/DeckList
+
+    await this.$helpers.setStoreState.apply(this, ["EnumValues"]);
+
+    schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
+    landcycle = new this.$helpers.jsonMustaches(schema);
+    await landcycle._init();
 
     this.showMore = Object.keys(schema).length > 4;
     this.values = this.$store.getters.EnumValues;

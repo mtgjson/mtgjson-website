@@ -21,7 +21,7 @@
     "introduced": "v5.0.0"
   },
   "availability": {
-    "type": "array",
+    "type": "array(string)",
     "example": "[ \"isPaper\", ... ]",
     "description": "List of the card's available printing types.",
     "introduced": "v5.0.0"
@@ -284,7 +284,7 @@
     "introduced": "v4.4.1"
   },
   "keywords": {
-    "type": "array",
+    "type": "array(string)",
     "example": "[ \"Deathtouch\", ... ]",
     "description": "All keywords found on a card",
     "attributes": [

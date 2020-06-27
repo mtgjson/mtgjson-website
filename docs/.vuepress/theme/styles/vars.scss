@@ -23,6 +23,7 @@
   // Main theme colors
   --light-color: #ffffff;
 
+  --dark-color: #263646;
   --dark-1-color: #172839;
   --dark-2-color: #0e141f;
   --dark-3-color: #000000;
@@ -38,7 +39,8 @@
   --bg-border-color: var(--dark-2-color);
   --bg-dark-color: var(--dark-2-color);
   --shadow-color: var(--dark-3-color);
-  --blockquote-bg-color: transparent;
+  --blockquote-heading-color: var(--dark-color);
+  --blockquote-bg-color: var(--dark-1-color);
   --search-bg-color: var(--dark-2-color);
   --search-border-color: var(--dark-1-color);
   --search-border-highlight-color: var(--accent-color);
@@ -47,9 +49,9 @@
   --supporter-bg-color: var(--light-color);
   // Data Presentation
   --table-color: var(--bg-color);
-  --table-heading-color: var(--dark-2-color);
-  --table-bg-color: var(--dark-1-color);
-  --table-border-color: var(--dark-1-color);
+  --table-heading-color: var(--dark-1-color);
+  --table-bg-color: var(--dark-color);
+  --table-border-color: var(--dark-color);
   // Code colors
   --code-bg-color: var(--dark-gray-color);
   --code-text-color: var(--yellow-color);
@@ -70,13 +72,14 @@ body {
     --search-border-color: var(--medium-gray-color);
     --search-border-highlight-color: var(--accent-color);
     --search-text-color: var(--text-color);
-    --blockquote-bg-color: transparent;
+    --blockquote-heading-color: var(--medium-gray-color);
+    --blockquote-bg-color: var(--light-gray-color);
     --supporter-bg-color: var(--medium-gray-color);
     // Data Presentation
     --table-color: var(--text-color);
-    --table-bg-color: var(--medium-gray-color);
-    --table-border-color: var(--medium-gray-color);
-    --table-heading-color: var(--light-gray-color);
+    --table-bg-color: var(--light-gray-color);
+    --table-border-color: var(--light-gray-color);
+    --table-heading-color: var(--medium-gray-color);
     --gray-color: var(--dark-gray-color);
     // Code colors
     --code-bg-color: #ffeeec;
