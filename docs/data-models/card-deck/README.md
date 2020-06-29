@@ -22,7 +22,7 @@
 
 The Card (Deck) data model describes the properties and values of a single card token.
 
-> Parent model: <span class="code-wrap">[Deck (Individual)](../deck/)</span>  
+> Parent model: <span class="code-wrap">[Deck](../deck/)</span>  
 > Parent property: `mainBoard`, `sideBoard`
 
 ### Model Properties

@@ -32,8 +32,8 @@ Release Date: 2020-07-03
 - Changed `name` to show full split card names (name1//name2).
 - Changed `name` to be as true as possible (see Very Cryptic Command).
 - Changed `uuid` for split cards.
-- Changed `names` in favor of `otherFaceIds`.
-- Changed `hasNoDeckLimit` in favor of `hasAlternativeDeckLimit`.
+- Changed `names` to `otherFaceIds`.
+- Changed `hasNoDeckLimit` to `hasAlternativeDeckLimit`.
 #### Added
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
 - Added `promoTypes` for an enums for promo cards which replaces other promo properties.
@@ -43,7 +43,7 @@ Release Date: 2020-07-03
 
 ### Set
 #### Changed
-- Changed `boosterV3` in favor of `booster`.
+- Changed `boosterV3` to `booster`.
 
 ### Files
 #### Changed
