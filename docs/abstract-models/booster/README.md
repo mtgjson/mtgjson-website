@@ -27,46 +27,29 @@ The Booster data model describes a object-based breakdown of how a [Set](/data-m
 
 ```json
 {
-  // A list of possible configuration in a traditional booster pack.
-  "default": {
-    // Booster pack configurations.
-    "boosters": [
-      // Which types of cards to add to a booster pack.
+  "default": { // A list of possible configuration in a traditional booster pack.
+    "boosters": [ // Booster pack configurations.
       {
-        // Card contents of a booster pack.
-        "contents": {
-          "<SetCode>Basic": <Int>, // Amount of basic cards in configuration.
-          "<SetCode>Common": <Int>, // Amount of common cards in configuration.
-          "<SetCode>Rare": <Int>, // Amount of rare cards in configuration.
-          "<SetCode>Uncommon": <Int> // Amount of uncommon cards in configuration.
+        "contents": { // Card contents of a booster pack.
+          "foil": <Int>, // Foil card count.
+          "<Sheet Name>": <Int>, // Amount of this cards from this sheet name in configuration.
+          ... // More sheet names.
         },
-        // Odds of getting this configuration against other configurations.
-        "weight": <Int>
+        "weight": <Int> // Odds of getting this configuration against other configurations.
       }
       ... // More configurations.
     ],
-    // All possible sheets of cards to use within booster packs.
-    "sheets": {
-      // A sheet of card types to use in a sheet.
-      "<SetCode>Basic": {
-        "balanceColors": <Boolean>,
-        // Object of cards used in a sheet.
-        "cards": {
-          // Unique MTGJSON card.
-          "<Unique Card UUID>": {
-            // Card is a foil.
-            "foil": <Boolean>,
-            // Odds of getting this card all other cards on this sheet.
-            "weight": <Int>
-          },
+    "boostersTotalWeight": <Int>, // Sum of all booster configurations weights
+    "sheets": { // All possible sheets of cards to use within booster packs.
+      "<Sheet Name>": { // A sheet of cards for use in a booster.
+        "balanceColors": <Boolean>, // Colors of the sheet need to be balanced.
+        "cards": { // Cards used on a sheet.
+          "<Unique Card UUID>": <Int> // Unique MTGJSON card UUID with a weight as its value.
           ... // More cards.
         },
-        // Sum of all weights within cards.
-        "totalWeight": <Int>
+        "foil": <Boolean>, // Is the sheet foiled?
+        "totalWeight": <Int> // Sum of all card weights.
       },
-      "<SetCode>Common": { ... },
-      "<SetCode>Rare": { ... },
-      "<SetCode>Uncommon": { ... }
     }
   },
   "premium": { ... }

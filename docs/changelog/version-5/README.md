@@ -1,5 +1,6 @@
 ---
 {
+  'title': 'Version 5',
   'meta': [
     {
       'name': 'description',
@@ -16,7 +17,7 @@
 }
 ---
 
-# Changelog
+# Changelog (v5)
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.0.0
@@ -53,6 +54,8 @@ Release Date: 2020-07-03
 - The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc.
 - The `version` file is now renamed `Meta`.
 - All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object.
+#### Added
+- SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format.
 
 ### Website
 #### Changed

@@ -17,14 +17,14 @@
       rel="noopener noreferrer") {{ repoLabel }}
       OutboundLink
 
-    ThemeSwitcher.mobile-hide
+    ThemeSwitcher.nav-item-switcher.mobile-hide
 </template>
 
 <script>
-import ThemeSwitcher from '../global-components/ThemeSwitcher';
-import DropdownLink from './DropdownLink.vue';
-import { resolveNavLinkItem } from '../util';
-import NavLink from './NavLink.vue';
+import ThemeSwitcher from "../global-components/ThemeSwitcher";
+import DropdownLink from "./DropdownLink.vue";
+import { resolveNavLinkItem } from "../util";
+import NavLink from "./NavLink.vue";
 
 export default {
   components: { NavLink, DropdownLink, ThemeSwitcher },
@@ -39,7 +39,7 @@ export default {
         const routes = this.$router.options.routes;
         const themeLocales = this.$site.themeConfig.locales || {};
         const languageDropdown = {
-          text: this.$themeLocaleConfig.selectText || 'Languages',
+          text: this.$themeLocaleConfig.selectText || "Languages",
           items: Object.keys(locales).map(path => {
             const locale = locales[path];
             const text =
@@ -57,7 +57,7 @@ export default {
               }
             }
             return { text, link };
-          }),
+          })
         };
         return [...this.userNav, languageDropdown];
       }
@@ -66,7 +66,7 @@ export default {
     userLinks() {
       return (this.nav || []).map(link => {
         return Object.assign(resolveNavLinkItem(link), {
-          items: (link.items || []).map(resolveNavLinkItem),
+          items: (link.items || []).map(resolveNavLinkItem)
         });
       });
     },
@@ -75,7 +75,7 @@ export default {
       if (repo) {
         return /^https?:/.test(repo) ? repo : `https://github.com/${repo}`;
       } else {
-        return '';
+        return "";
       }
     },
     repoLabel() {
@@ -87,18 +87,18 @@ export default {
       }
 
       const repoHost = this.repoLink.match(/^https?:\/\/[^/]+/)[0];
-      const platforms = ['GitHub', 'GitLab', 'Bitbucket'];
+      const platforms = ["GitHub", "GitLab", "Bitbucket"];
 
       for (let i = 0; i < platforms.length; i++) {
         const platform = platforms[i];
-        if (new RegExp(platform, 'i').test(repoHost)) {
+        if (new RegExp(platform, "i").test(repoHost)) {
           return platform;
         }
       }
 
-      return 'Source';
-    },
-  },
+      return "Source";
+    }
+  }
 };
 </script>
 
@@ -110,19 +110,36 @@ export default {
 
   .nav-item {
     position: relative;
-    display: inline-block;
     line-height: 1.7rem;
     margin-right: 1rem;
+    display: inline-flex;
+    align-items: center;
+
+    &-switcher {
+      margin-left: 25px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      display: block;
+      height: 25px;
+      width: 25px;
+      left: 0;
+      background-size: contain;
+      background-repeat: no-repeat;
+      background-position: center;
+      pointer-events: none;
+    }
 
     a {
-      font-size: 16px;
+      font-size: 0;
       display: block;
-      font-weight: bold;
-      color: var(--text-color);
+      color: transparent;
+      margin: 0 auto;
+      height: 25px;
+      width: 25px;
 
-      // margin: 0 auto;
-      // height: 25px;
-      // width: 25px;
       svg {
         display: none;
         margin-left: 3px;
@@ -130,24 +147,36 @@ export default {
     }
 
     &:nth-of-type(1) {
-      a {
-        color: var(--discord-color) !important;
+      &::before {
+        background-image: url('/images/icon-discord.svg');
       }
     }
 
     &:nth-of-type(2) {
-      a {
-        color: var(--patreon-color);
+      &::before {
+        background-image: url('/images/icon-twitter.svg');
+      }
+    }
+
+    &:nth-of-type(3) {
+      &::before {
+        background-image: url('/images/icon-patreon.svg');
+      }
+    }
+
+    &:nth-of-type(4) {
+      &::before {
+        background-image: url('/images/icon-github.svg');
       }
     }
   }
 }
 
 @media (max-width: 719px) {
-.nav-links {
-  .nav-item {
-    display: block;
+  .nav-links {
+    .nav-item {
+      // display: block;
+    }
   }
-}
 }
 </style>

@@ -1,5 +1,7 @@
 #mtgjson,
 #changelog,
+#changelog-v4,
+#changelog-v5,
 #frequently-asked-questions {
   & + p {
     padding-top: 0 !important;
@@ -39,7 +41,9 @@
   }
 }
 
-#changelog {
+#changelog,
+#changelog-v4,
+#changelog-v5 {
   & ~ h4 {
     padding-top: 0;
   }

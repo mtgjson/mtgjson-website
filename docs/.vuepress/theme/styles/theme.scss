@@ -127,6 +127,24 @@ img {
   }
 }
 
+.link {
+  &-inline-image {
+    padding-left: 20px;
+    margin-left: 5px;
+    background-size: 17px 17px;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    &.paypal {
+      background-image: url('/images/icon-paypal.svg');
+    }
+
+    &.patreon {
+      background-image: url('/images/icon-patreon.svg');
+    }
+  }
+}
+
 .content__default {
   @extend %wrapper;
   padding: 0 4rem;

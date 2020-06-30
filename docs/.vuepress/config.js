@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [downloads, dataModels, abstractModels] = generateSidebarRoutes(['/downloads/', '/data-models/', '/abstract-models/']);
+const [dataModels, abstractModels] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
@@ -154,8 +154,9 @@ module.exports = {
     logo: '/images/logo-3.svg',
     smoothScroll: true,
     nav: [
-      { text: 'Talk to Us', link: 'https://mtgjson.com/discord' },
-      { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
+      { text: 'Discord', link: 'https://mtgjson.com/discord' },
+      { text: 'Twitter', link: 'https://twitter.com/mtgjson' },
+      { text: 'Patreon', link: 'https://www.patreon.com/MTGJSON' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' }
     ],
     sidebarDepth: 1,
@@ -192,7 +193,9 @@ module.exports = {
       },
       {
         title: 'Changelog',
-        path: '/changelog/'
+        path: '/changelog/version-5',
+        collapsable: false,
+        children: ['/changelog/version-5/', '/changelog/version-4/']
       },
       {
         title: 'Brand Assets',

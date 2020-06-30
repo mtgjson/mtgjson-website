@@ -52,7 +52,7 @@ export default class jsonMustaches {
 
     const mustacheMap = {
       html: text,
-      link: `<a href='${link}/' ${isTargetBlank}/>${this.unwrap(text)}</a>`,
+      link: `<a href='${link}' ${isTargetBlank}/>${this.unwrap(text)}</a>`,
       code: `<code>${text}</code>`,
     };
 
