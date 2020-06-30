@@ -121,7 +121,7 @@ export default {
       margin-bottom: 0 !important;
       display: grid;
       grid-template-columns: 1fr;
-      grid-gap: 1.5rem;
+      grid-gap: 0.75rem;
 
       & .sidebar-group-items {
         margin-bottom: 0;

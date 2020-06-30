@@ -2,7 +2,7 @@
   .supporters(v-if="supporters")
     .supporters-wrap(v-if="patrons")
       h4 Our Patreon Supporters
-      p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project.
+      p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
       small(v-html="projectMsg")
       .supporters-grid
         blockquote.supporter(v-for="({ link, image, name, since, tier, blurb } = patron, key) in patrons" :data-tier="tier")
@@ -19,7 +19,7 @@
     //- Not Patrons but services that use MTGJSON
     .supporters-wrap(v-if="services")
       h4 Others Powered by MTGJSON
-      p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here.
+      p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services" :key="key")
@@ -40,7 +40,7 @@ export default {
     return {
       supporters,
       projectMsg:
-        'Don\'t see your project? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
+        'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
     };
   },
   computed: {

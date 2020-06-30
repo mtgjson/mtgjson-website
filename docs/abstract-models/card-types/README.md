@@ -18,7 +18,7 @@
 
 # Card Types
 
-The Card Types data model describes a list of properties and values for card types found on cards.
+The Card Types data model describes a list of properties and values for card types found on black and white bordered cards.
 
 > Parent file: `CardTypes`  
 > Parent property: `data`
@@ -30,41 +30,45 @@ This data model is unique compared to all other data models because all of its k
 ### File Structure Overview
 
 ```json
-// Unique card type
-"<Card Type Name>": {
-  "subTypes": [
-    // Property Values
-    <Property Value>,
-    ...
-  ],
-  "superTypes": [
-    // Property Values
-    <Property Value>,
-    ...
-  ]
-},
-...
+{
+  // Unique card type
+  "<Card Type Name>": {
+    "subTypes": [
+      // Property Values
+      <Property Value>,
+      ...
+    ],
+    "superTypes": [
+      // Property Values
+      <Property Value>,
+      ...
+    ]
+  },
+  ...
+}
 ```
 
 ### Example Data Model
 
 ```json
-"artifact": {
-  "subTypes": [
-    "Clue",
-    ...
-  ],
-  "superTypes": [
-    "Basic",
-    ...
-  ]
-},
-"conspiracy": {
-  "subTypes": [],
-  "superTypes": [
-    "Basic",
-    ...
-  ]
+{
+  "artifact": {
+    "subTypes": [
+      "Clue",
+      ...
+    ],
+    "superTypes": [
+      "Basic",
+      ...
+    ]
+  },
+  "conspiracy": {
+    "subTypes": [],
+    "superTypes": [
+      "Basic",
+      ...
+    ]
+  },
+  ...
 }
-...
 ```

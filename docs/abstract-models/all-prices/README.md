@@ -37,42 +37,44 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 ### File Structure Overview
 
 ```json
-"<Card UUID>": {
-  // Game format
-  "<Card Format>": {
-    // Price provider
-    "<Price Provider ID>": {
-      // Provider buy values
-      "buy": {
-        // Sell values of a foil
-        "foil": {
-          // Date and price
-          "<YYYY-MM-DD>": float
+{
+  "<Card UUID>": {
+    // Game format
+    "<Card Format>": {
+      // Price provider
+      "<Price Provider ID>": {
+        // Provider buy values
+        "buylist": {
+          // Sell values of a foil
+          "foil": {
+            // Date and price
+            "<YYYY-MM-DD>": float
+          },
+          // Sell values of a non-foil
+          "normal": {
+            // Date and price
+            "<YYYY-MM-DD>": float
+          }
         },
-        // Sell values of a non-foil
-        "normal": {
-          // Date and price
-          "<YYYY-MM-DD>": float
+        // Provider sale values
+        "retail": {
+          // Sell values of a foil
+          "foil": {
+            // Date and price
+            "<YYYY-MM-DD>": float
+          },
+          // Sell values of a non-foil
+          "normal": {
+            // Date and price
+            "<YYYY-MM-DD>": float
+          }
         }
       },
-      // Provider sale values
-      "sell": {
-        // Sell values of a foil
-        "foil": {
-          // Date and price
-          "<YYYY-MM-DD>": float
-        },
-        // Sell values of a non-foil
-        "normal": {
-          // Date and price
-          "<YYYY-MM-DD>": float
-        }
-      }
-    },
-    ...
-  }
-},
-...
+      ...
+    }
+  },
+  ...
+}
 ```
 
 ### Example Data Model
@@ -82,7 +84,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
   "0120a941-9cfb-50b5-b5e4-4e0c7bd32410": {
     "mtgo": {
       "cardhoarder": {
-        "sell": {
+        "retail": {
           "foil": {
             ..., // more rows
             "2020-04-21": 0.02
@@ -96,17 +98,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
     },
     "paper": {
       "cardkingdom" : {
-        "sell": {
-          "foil": {
-            ..., // more rows
-            "2020-04-21": 0.12
-          },
-          "normal": {
-            ..., // more rows
-            "2020-04-21": 0.02
-          }
-        },
-        "buy": {
+        "buylist": {
           "foil": {
             ..., // more rows
             "2020-04-21": 0.6
@@ -115,10 +107,20 @@ MTGJSON currently has affiliated with the following markets to keep a history of
             ..., // more rows
             "2020-04-21": 0.01
           }
+        },
+        "retail": {
+          "foil": {
+            ..., // more rows
+            "2020-04-21": 0.12
+          },
+          "normal": {
+            ..., // more rows
+            "2020-04-21": 0.02
+          }
         }
       },
       "cardmarket": {
-        "sell": {
+        "retail": {
           "foil": {
             ..., // more rows
             "2020-04-21": 0.12
@@ -130,7 +132,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
         }
       },
       "tcgplayer": {
-        "sell": {
+        "retail": {
           "foil": {
             ..., // more rows
             "2020-04-21": 0.12
@@ -140,10 +142,10 @@ MTGJSON currently has affiliated with the following markets to keep a history of
             "2020-04-21": 0.02
           }
         }
-      },
+      }
     }
   }
 }
 ```
 
-Need more data? Join the <a href="https://discord.gg/74GUQDE" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.
+Need more data? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.

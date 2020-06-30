@@ -34,6 +34,8 @@ div[class*='language-'] {
   }
 
   code, pre, pre[class*='language-'] {
+    background-color: var(--code-bg-color);
+    color: var(--code-text-color);
     position: relative;
     z-index: 1;
 

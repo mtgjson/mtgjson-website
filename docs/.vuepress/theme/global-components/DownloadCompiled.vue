@@ -1,7 +1,7 @@
 <template lang="pug">
   .download-tables
     .download-table
-      blockquote.download-item(v-if="files" v-for="(file, name) in files" :key="name")
+      blockquote.download-item(v-for="(file, name) in files" :key="name" v-if="files && file.example !== 'AllPrintingsCSVFiles'")
         .download-wrap
           .text-wrap
             .text-wrap--details
@@ -28,20 +28,27 @@
                     a.dl-btn(download :href="`${$api}${file.example}.zip`") {{ format }}
 
               ol(v-if="file.example === 'AllPrintings'")
-                  li.text-wrap--download--btn-wrap
-                    small SQL Download Files:
-                    span
-                      a.dl-btn(download :href="`${$api}${file.example}.sql`") SQL
-                    span(v-for="(compression, key) in fileBaseCompression" :key="key")
-                      a.dl-btn(download :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
-                  li.text-wrap--download--btn-wrap
-                    small SQLite Download Files:
-                    span
-                      a.dl-btn(download :href="`${$api}${file.example}.sqlite`") SQLite
-                    span(v-for="(compression, key) in fileBaseCompression" :key="key")
-                      a.dl-btn(download :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}
-                  li.sqlite
-                    p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>.
+                li.text-wrap--download--btn-wrap
+                  small CSV Download Files:
+                  span
+                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.tar.bz2`") BZ2
+                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.tar.gz`") GZ
+                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.tar.xz`") XZ
+                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.zip`") ZIP
+                li.text-wrap--download--btn-wrap
+                  small SQL Download Files:
+                  span
+                    a.dl-btn(download :href="`${$api}${file.example}.sql`") SQL
+                  span(v-for="(compression, key) in fileBaseCompression" :key="key")
+                    a.dl-btn(download :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
+                li.text-wrap--download--btn-wrap
+                  small SQLite Download Files:
+                  span
+                    a.dl-btn(download :href="`${$api}${file.example}.sqlite`") SQLite
+                  span(v-for="(compression, key) in fileBaseCompression" :key="key")
+                    a.dl-btn(download :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}
+                li.sqlite
+                  p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>.
 </template>
 
 <script>

@@ -30,38 +30,42 @@ This data model is unique compared to all other data models because all of its k
 ### File Structure Overview
 
 ```json
-// Unique data model name
-"<Data Model>": {
-  // Named Property
-  "<Property Key>": [
-    // Property Values
-    <Property Value>,
+{
+  // Unique data model name
+  "<Data Model>": {
+    // Named Property
+    "<Property Key>": [
+      // Property Values
+      <Property Value>,
+      ...
+    ],
     ...
-  ],
+  },
   ...
-},
-...
+}
 ```
 
 ### Example Data Model
 
 ```json
-"card": {
-  "borderColor": [
-    "black",
-    "borderless",
-    "gold",
-    "silver",
-    "white"
-  ],
-  "colorIdentity": [
-    "B",
-    "G",
-    "R",
-    "U",
-    "W"
-  ],
+{
+  "card": {
+    "borderColor": [
+      "black",
+      "borderless",
+      "gold",
+      "silver",
+      "white"
+    ],
+    "colorIdentity": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ],
+    ...
+  },
   ...
-},
-...
+}
 ```

@@ -154,7 +154,7 @@ module.exports = {
     logo: '/images/logo-3.svg',
     smoothScroll: true,
     nav: [
-      { text: 'Talk to Us', link: 'https://discord.gg/74GUQDE' },
+      { text: 'Talk to Us', link: 'https://mtgjson.com/discord' },
       { text: 'Become a Patron', link: 'https://www.patreon.com/MTGJSON' },
       { text: 'Contribute', link: 'https://github.com/mtgjson' }
     ],
