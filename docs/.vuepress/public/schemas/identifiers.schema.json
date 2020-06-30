@@ -2,7 +2,7 @@
   "cardKingdomFoilId": {
     "type": "integer",
     "example": "27631",
-    "description": "The {{link@Card Kingdom@https://www.cardkingdom.com}} card foil ID.",
+    "description": "The {{link@Card Kingdom@https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson}} card foil ID.",
     "attributes": [
       "optional"
     ],
@@ -11,7 +11,7 @@
   "cardKingdomId": {
     "type": "integer",
     "example": "27630",
-    "description": "The {{link@Card Kingdom@https://www.cardkingdom.com}} card ID.",
+    "description": "The {{link@Card Kingdom@https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson}} card ID.",
     "attributes": [
       "optional"
     ],
@@ -20,7 +20,7 @@
   "mcmId": {
     "type": "integer",
     "example": "371878",
-    "description": "The {{link@Card Market@https://www.cardmarket.com/en/Magic}} card ID.",
+    "description": "The {{link@Card Market@https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson}} card ID.",
     "attributes": [
       "optional"
     ],
@@ -29,7 +29,7 @@
   "mcmMetaId": {
     "type": "integer",
     "example": "269313",
-    "description": "The {{link@Card Market@https://www.cardmarket.com/en/Magic}} card meta ID.",
+    "description": "The {{link@Card Market@https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson}} card meta ID.",
     "attributes": [
       "optional"
     ],
@@ -99,7 +99,7 @@
   "tcgplayerProductId": {
     "type": "integer",
     "example": "183201",
-    "description": "The {{link@TCG Player@https://www.tcgplayer.com/}} card ID.",
+    "description": "The {{link@TCG Player@https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}} card ID.",
     "attributes": [
       "optional"
     ],

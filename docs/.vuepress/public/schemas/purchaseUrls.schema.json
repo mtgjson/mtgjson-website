@@ -2,7 +2,7 @@
   "cardKingdom": {
     "type": "string",
     "example": "\"https://mtgjson.com/api/v5/links/12345\"",
-    "description": "URL to purchase a product on {{link@Card Kingdom@https://www.cardkingdom.com}}.",
+    "description": "URL to purchase a product on {{link@Card Kingdom@https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson}}.",
     "attributes": [
       "optional"
     ],
@@ -11,7 +11,7 @@
   "cardKingdomFoil": {
     "type": "string",
     "example": "\"https://mtgjson.com/api/v5/links/12345\"",
-    "description": "URL to purchase a foil product on {{link@Card Kingdom@https://www.cardkingdom.com}}.",
+    "description": "URL to purchase a foil product on {{link@Card Kingdom@https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson}}.",
     "attributes": [
       "optional"
     ],
