@@ -55,6 +55,10 @@ export default {
   cursor: pointer;
   margin: 0;
 
+  &.router-link-exact-active {
+    color: var(--accent-color);
+  }
+
   .arrow {
     position: relative;
     top: -0.12em;

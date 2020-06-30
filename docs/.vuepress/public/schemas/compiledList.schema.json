@@ -56,7 +56,7 @@
   "EnumValues": {
     "type": "string",
     "example": "\"EnumValues\"",
-    "description": "The file containing known property values for data models.",
+    "description": "The file containing known property values for data models. Used primarily for internal documentation but still available to the public.",
     "introduced": "v5.0.0"
   },
   "Keywords": {

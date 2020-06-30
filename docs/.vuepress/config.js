@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [dataModels, abstractModels] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
+const [downloads, dataModels, abstractModels] = generateSidebarRoutes(['/downloads/', '/data-models/', '/abstract-models/']);
 // SEO data
 const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
 const description =
@@ -170,7 +170,7 @@ module.exports = {
       },
       {
         title: 'Downloads',
-        path: '/downloads/all-files',
+        path: '/downloads/',
         collapsable: false,
         children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/']
       },
@@ -180,13 +180,13 @@ module.exports = {
       },
       {
         title: 'Data Models',
-        path: '/data-models/card',
+        path: '/data-models/',
         collapsable: false,
         children: dataModels
       },
       {
         title: 'Abstract Models',
-        path: '/abstract-models/all-prices',
+        path: '/abstract-models/',
         collapsable: false,
         children: abstractModels
       },

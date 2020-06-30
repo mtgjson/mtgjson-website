@@ -18,14 +18,10 @@
 
 # Enum Values
 
-The Enum Values data model describes a list of key value pairs that are direct possible values of key properties in specific data models. Generally, this file is used for documenting data on this website but is also available to the public.
+The Enum Values data model describes a list of key value pairs that are direct possible values of key properties in specific data models. Generally, this data is used in a file for documenting other data on this website, but is also available to the public.
 
 > Parent file: `EnumValues`  
 > Parent property: `data`
-
-::: warning Developer Note
-This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat.
-:::
 
 ### File Structure Overview
 

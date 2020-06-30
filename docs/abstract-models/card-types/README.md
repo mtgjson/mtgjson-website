@@ -23,10 +23,6 @@ The Card Types data model describes a list of properties and values for card typ
 > Parent file: `CardTypes`  
 > Parent property: `data`
 
-::: warning Developer Note
-This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat.
-:::
-
 ### File Structure Overview
 
 ```json

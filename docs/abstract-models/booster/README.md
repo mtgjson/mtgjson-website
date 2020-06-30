@@ -35,10 +35,10 @@ The Booster data model describes a object-based breakdown of how a [Set](/data-m
       {
         // Card contents of a booster pack.
         "contents": {
-          "basic": <Int>, // Amount of basic cards in configuration.
-          "common": <Int>, // Amount of common cards in configuration.
-          "rare": <Int>, // Amount of rare cards in configuration.
-          "uncommon": <Int> // Amount of uncommon cards in configuration.
+          "<SetCode>Basic": <Int>, // Amount of basic cards in configuration.
+          "<SetCode>Common": <Int>, // Amount of common cards in configuration.
+          "<SetCode>Rare": <Int>, // Amount of rare cards in configuration.
+          "<SetCode>Uncommon": <Int> // Amount of uncommon cards in configuration.
         },
         // Odds of getting this configuration against other configurations.
         "weight": <Int>

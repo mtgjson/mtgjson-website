@@ -23,10 +23,6 @@ The All Prices data model describes a list of card prices based on date.
 > Parent file: `AllPrices`  
 > Parent property: `data`
 
-::: warning Developer Note
-This data model is unique compared to all other data models because all of its keys are variable/optional and the model is not flat.
-:::
-
 ### Price Providers
 
 MTGJSON currently has affiliated with the following markets to keep a history of price data and the following examples are formatted for the data model:

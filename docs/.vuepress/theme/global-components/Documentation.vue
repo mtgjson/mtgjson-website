@@ -181,7 +181,7 @@ export default {
       return filteredSchema;
     }
   },
-  async created() {
+  async mounted() {
     let schema;
     let landcycle;
 
@@ -196,6 +196,7 @@ export default {
     landcycle = new this.$helpers.jsonMustaches(schema);
     await landcycle._init();
 
+    // @todo: harden this since its not working but doesnt need to work right now
     this.showMore = Object.keys(schema).length > 4;
     this.values = this.$store.getters.EnumValues;
     this.schema = landcycle.schema;

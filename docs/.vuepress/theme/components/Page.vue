@@ -212,6 +212,7 @@ function flattern(items, res) {
 
 .page-edit {
   @extend %wrapper;
+  padding-top: 3rem;
   padding-bottom: 2rem;
   overflow: auto;
 
@@ -249,7 +250,6 @@ function flattern(items, res) {
 .page-nav {
   @extend %wrapper;
   padding-top: 3rem;
-  padding-bottom: 3rem;
 
   .inner {
     max-width: var(--content-width);
