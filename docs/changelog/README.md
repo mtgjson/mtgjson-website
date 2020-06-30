@@ -42,8 +42,9 @@ Release Date: 2020-07-03
 - Added `keywords` for all keywords available on a card.
 
 ### Set
-#### Changed
-- Changed `boosterV3` to `booster`.
+#### Removed
+- Removed `boosterV3`.
+- Added `booster`. See the [Booster](/abstract-models/booster/) data model.
 
 ### Files
 #### Changed

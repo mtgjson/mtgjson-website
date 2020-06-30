@@ -286,7 +286,7 @@
   "keywords": {
     "type": "array(string)",
     "example": "[ \"Deathtouch\", ... ]",
-    "description": "All keywords found on a card",
+    "description": "All keywords found on a card.",
     "attributes": [
       "optional"
     ],
@@ -424,9 +424,6 @@
     "type": "object",
     "example": "{ {{link@Purchase URL@/data-models/purchase-url}}, ... }",
     "description": "Redirect URL to purchase a product on an associated marketplace. See the {{link@Purchase URL@/data-models/purchase-url}} data model.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
