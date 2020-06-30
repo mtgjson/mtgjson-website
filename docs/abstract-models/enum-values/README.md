@@ -27,18 +27,18 @@ The Enum Values data model describes a list of key value pairs that are direct p
 
 ```json
 {
-  "<Data Model>": { // Unique data model name.
-    "<Property Key>": [ // Property of a data model.
-      <Property Value>, // Possible property value.
-      ...
+  "<Data Model>": { // Unique data model name
+    "<Property Key>": [ // Property of a data model
+      <Property Value>, // Possible property value
+      ... // More values
     ],
-    ...
+    ... // More keys
   },
-  ...
+  ... // More models
 }
 ```
 
-### Example Data Model
+### Example Model
 
 ```json
 {
@@ -57,8 +57,8 @@ The Enum Values data model describes a list of key value pairs that are direct p
       "U",
       "W"
     ],
-    ...
+    ... // More keys
   },
-  ...
+  ... // More models
 }
 ```

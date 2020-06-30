@@ -154,10 +154,10 @@ module.exports = {
     logo: '/images/logo-3.svg',
     smoothScroll: true,
     nav: [
-      { text: 'Discord', link: 'https://mtgjson.com/discord' },
-      { text: 'Twitter', link: 'https://twitter.com/mtgjson' },
-      { text: 'Patreon', link: 'https://www.patreon.com/MTGJSON' },
-      { text: 'Contribute', link: 'https://github.com/mtgjson' }
+      { text: 'Join us on Discord', link: 'https://mtgjson.com/discord' },
+      { text: 'Follow us on Twitter', link: 'https://twitter.com/mtgjson' },
+      { text: 'Support us on Patreon', link: 'https://www.patreon.com/MTGJSON' },
+      { text: 'Contribute on GitHub', link: 'https://github.com/mtgjson' }
     ],
     sidebarDepth: 1,
     sidebar: [

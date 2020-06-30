@@ -27,41 +27,41 @@ The Card Types data model describes a list of properties and values for card typ
 
 ```json
 {
-  "<Card Type Name>": { // Unique card type.
-    "subTypes": [ // Subtypes of a card type.
-      <Property Value>, // Card types.
+  "<Card Type Name>": { // Unique card type
+    "subTypes": [ // Subtypes of a card type
+      <Property Value>, // Card types
       ...
     ],
-    "superTypes": [ // Supertypes of a card type.
-      <Property Value>, // Card types.
-      ...
+    "superTypes": [ // Supertypes of a card type
+      <Property Value>, // Card types
+      ... // More values
     ]
   },
-  ...
+  ... // More card types
 }
 ```
 
-### Example Data Model
+### Example Model
 
 ```json
 {
   "artifact": {
     "subTypes": [
       "Clue",
-      ...
+      ... // More card types
     ],
     "superTypes": [
       "Basic",
-      ...
+      ... // More card types
     ]
   },
   "conspiracy": {
     "subTypes": [],
     "superTypes": [
       "Basic",
-      ...
+      ... // More card types
     ]
   },
-  ...
+  ... // More card types
 }
 ```

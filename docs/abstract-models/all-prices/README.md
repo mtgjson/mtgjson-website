@@ -35,33 +35,33 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 ```json
 {
   "<Card UUID>": {
-    "<Card Format>": { // Game format.
-      "<Price Provider ID>": { // Price provider.
-        "buylist": { // Provider buylist values.
-          "foil": { // Foil prices.
-            "<YYYY-MM-DD>": float // Date and price as value.
+    "<Card Format>": { // Game format
+      "<Price Provider ID>": { // Price provider
+        "buylist": { // Provider buylist values
+          "foil": { // Foil prices
+            "<YYYY-MM-DD>": <Float> // Date and price as value
           },
-          "normal": { // Normal prices.
-            "<YYYY-MM-DD>": float // Date and price as value.
+          "normal": { // Normal prices
+            "<YYYY-MM-DD>": <Float> // Date and price as value
           }
         },
-        "retail": { // Provider retail values.
-          "foil": { // Foil prices.
-            "<YYYY-MM-DD>": float // Date and price as value.
+        "retail": { // Provider retail values
+          "foil": { // Foil prices
+            "<YYYY-MM-DD>": <Float> // Date and price as value
           },
-          "normal": { // Normal prices.
-            "<YYYY-MM-DD>": float // Date and price as value.
+          "normal": { // Normal prices
+            "<YYYY-MM-DD>": <Float> // Date and price as value
           }
         }
       },
-      ...
+      ... // More providers
     }
   },
-  ...
+  ... // More formats
 }
 ```
 
-### Example Data Model
+### Example Model
 
 ```json
 {
