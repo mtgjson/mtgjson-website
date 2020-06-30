@@ -26,46 +26,49 @@ The Booster data model describes a object-based breakdown of how a [Set](/data-m
 ### File Structure Overview
 
 ```json
-"default": {
-  // ?
-  "boosters": [
-    // ?
-    {
-      // ?
-      "sheets": {
-        // ?
-        "basic": <Int>,
-        "common": <Int>,
-        "rare": <Int>,
-        "uncommon": <Int>
-      },
-      // ?
-      "weight": <Int>
-    }
-    ...
-  ],
-  // ?
-  "sheets": {
-    // ?
-    "basic": {
-      // ?
-      "balanceColors": <Boolean>,
-      // ?
-      "cards": {
-        "<Unique Card UUID>": {
-          // Card is foil
-          "foil": <Boolean>,
-          // ?
-          "weight": <Int>
+{
+  // A list of possible configuration in a traditional booster pack.
+  "default": {
+    // Booster pack configurations.
+    "boosters": [
+      // Which types of cards to add to a booster pack.
+      {
+        // Card contents of a booster pack.
+        "contents": {
+          "basic": <Int>, // Amount of basic cards in configuration.
+          "common": <Int>, // Amount of common cards in configuration.
+          "rare": <Int>, // Amount of rare cards in configuration.
+          "uncommon": <Int> // Amount of uncommon cards in configuration.
         },
-        ...
+        // Odds of getting this configuration against other configurations.
+        "weight": <Int>
+      }
+      ... // More configurations.
+    ],
+    // All possible sheets of cards to use within booster packs.
+    "sheets": {
+      // A sheet of card types to use in a sheet.
+      "<SetCode>Basic": {
+        "balanceColors": <Boolean>,
+        // Object of cards used in a sheet.
+        "cards": {
+          // Unique MTGJSON card.
+          "<Unique Card UUID>": {
+            // Card is a foil.
+            "foil": <Boolean>,
+            // Odds of getting this card all other cards on this sheet.
+            "weight": <Int>
+          },
+          ... // More cards.
+        },
+        // Sum of all weights within cards.
+        "totalWeight": <Int>
       },
-      // ?
-      "totalWeight": <Int>
-    },
-    "common": {},
-    "rare": {},
-    "uncommon": {}
-  }
+      "<SetCode>Common": { ... },
+      "<SetCode>Rare": { ... },
+      "<SetCode>Uncommon": { ... }
+    }
+  },
+  "premium": { ... }
 }
 ```
