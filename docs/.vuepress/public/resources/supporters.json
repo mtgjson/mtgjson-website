@@ -101,6 +101,13 @@
       "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
       "tier": "uncommon",
       "since": "2020-02"
+    },
+    {
+      "name": "MTGBAN",
+      "image": "avatar-mtgban.png",
+      "link": "https://www.mtgban.com/",
+      "tier": "uncommon",
+      "since": "2020-03"
     }
   ],
   "services": [
@@ -233,11 +240,6 @@
       "name": "mtg.onl",
       "image": "avatar-mtgonl.png",
       "link": "https://mtg.onl"
-    },
-    {
-      "name": "MTGBAN",
-      "image": "avatar-mtgban.png",
-      "link": "https://www.mtgban.com/"
     },
     {
       "name": "MTG Addict",
