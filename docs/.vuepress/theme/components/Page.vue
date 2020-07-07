@@ -18,7 +18,7 @@
 
     footer.page-edit
       .page-edit--links
-        .edit-link(v-if="editLink")
+        .edit-link.link-inline-image.github(v-if="editLink")
           a(:href="editLink"
           target="_blank"
           rel="noopener noreferrer") {{ editLinkText }}
@@ -226,7 +226,7 @@ function flattern(items, res) {
     display: inline-block;
 
     a {
-      color: var(--light-gray-color);
+      color: var(--text-color);
       margin-right: 0.25rem;
       font-weight: bold;
     }

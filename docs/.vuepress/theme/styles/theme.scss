@@ -126,7 +126,6 @@ img {
     }
   }
 }
-
 .link {
   &-inline-image {
     padding-left: 20px;
@@ -141,6 +140,10 @@ img {
 
     &.patreon {
       background-image: url('/images/icon-patreon.svg');
+    }
+
+    &.github {
+      background-image: url('/images/icon-github.svg');
     }
   }
 }
