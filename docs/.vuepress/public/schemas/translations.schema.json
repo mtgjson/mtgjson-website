@@ -1,4 +1,16 @@
 {
+  "Ancient Greek": {
+    "type": "string",
+    "example": "\"Aether Revolt\"",
+    "description": "Translation in Ancient Greek.",
+    "introduced": "v4.6.0"
+  },
+  "Arabic": {
+    "type": "string",
+    "example": "\"ثورة إيثر\"",
+    "description": "Translation in Arabic.",
+    "introduced": "v4.6.0"
+  },
   "Chinese Simplified": {
     "type": "string",
     "example": "\"乙太之乱\"",
@@ -23,6 +35,12 @@
     "description": "Translation in German.",
     "introduced": "v4.0.0"
   },
+  "Hebrew": {
+    "type": "string",
+    "example": "\"מרד אתר\"",
+    "description": "Translation in Hebrew.",
+    "introduced": "v4.6.0"
+  },
   "Italian": {
     "type": "string",
     "example": "\"Rivolta dell'Etere\"",
@@ -41,6 +59,18 @@
     "description": "Translation in Korean.",
     "introduced": "v4.0.0"
   },
+  "Latin": {
+    "type": "string",
+    "example": "\"aetheris aeris alieni rebellionem coeptavere\"",
+    "description": "Translation in Latin.",
+    "introduced": "v4.6.0"
+  },
+  "Phyrexian": {
+    "type": "string",
+    "example": "\"Elesh Norn, Grand Cenobite\"",
+    "description": "Translation in Phyrexian.",
+    "introduced": "v4.7.0"
+  },
   "Portuguese (Brazil)": {
     "type": "string",
     "example": "\"Revolta do Éter\"",
@@ -52,6 +82,12 @@
     "example": "\"«Эфирный Бунт»\"",
     "description": "Translation in Russian.",
     "introduced": "v4.0.0"
+  },
+  "Sanskrit": {
+    "type": "string",
+    "example": "\"आएथेर् रेवोल्त\"",
+    "description": "Translation in Sanskrit.",
+    "introduced": "v4.6.0"
   },
   "Spanish": {
     "type": "string",

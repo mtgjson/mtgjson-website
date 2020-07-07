@@ -33,65 +33,65 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 ### Card
 #### Changed
-- Changed "Meld" card `name` and `side` to be more clear. Example: `Gisela, the Broken Blade // Brisela, Voice of Nightmares` (side a), `Bruna, the Fading Light // Brisela, Voice of Nightmares` (side a), and `Brisela, Voice of Nightmares` (side b).
-- Changed `mcmId`, `mcmMetaId`, `mtgoFoilId`, `mtgoId`, `multiverseId`, `scryfallId`, `scryallIllustrationId`, `scryfallOracleId`, and `tcgplayerProductId` properties to be nested in to a new `identifiers` property.
-- Changed `isArena`, `isMtgo`, and `isPaper` to be nested inside a new `availability` property. Values return a string of the available property. See the available examples for all the values.
-- Changed `isBuyABox`, `isBundle`, `isPlaneswalkerStamped`, and `isDateStamped` to be nested in to a new `promoTypes` property.
-- Changed `name` to show full split card names (name1 // name2).
-- Changed `name` to be verbatim as printed on the card (see Unglued variants for example).
-- Changed `names` to `otherFaceIds`.
-- Changed `uuid` for all tokens and split cards.
-- Changed `hasNoDeckLimit` to `hasAlternativeDeckLimit`.
+- Changed "Meld" card `name` and `side` to be more clear. Example: `Gisela, the Broken Blade // Brisela, Voice of Nightmares` (side a), `Bruna, the Fading Light // Brisela, Voice of Nightmares` (side a), and `Brisela, Voice of Nightmares` (side b)
+- Changed `mcmId`, `mcmMetaId`, `mtgoFoilId`, `mtgoId`, `multiverseId`, `scryfallId`, `scryallIllustrationId`, `scryfallOracleId`, and `tcgplayerProductId` properties to be nested in to a new `identifiers` property
+- Changed `isArena`, `isMtgo`, and `isPaper` to be nested inside a new `availability` property. Values return a string of the available property. See the available examples for all the values
+- Changed `isBuyABox`, `isBundle`, `isPlaneswalkerStamped`, and `isDateStamped` to be nested in to a new `promoTypes` property
+- Changed `name` to show full split card names (name1 // name2)
+- Changed `name` to be verbatim as printed on the card (see Unglued variants for example)
+- Changed `names` to `otherFaceIds`
+- Changed `uuid` for all tokens and split cards
+- Changed `hasNoDeckLimit` to `hasAlternativeDeckLimit`
 #### Added
-- Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
-- Added `promoTypes` for an enums for promo cards which replaces other promo properties.
-- Added `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content.
-- Added `variations` to show all cards with the same name.
-- Added `keywords` for all keywords available on a card.
+- Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4
+- Added `promoTypes` for an enums for promo cards which replaces other promo properties
+- Added `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content
+- Added `variations` to show all cards with the same name
+- Added `keywords` for all keywords available on a card
 
 ### Sets
 #### Added
-- Added `booster`. See the [Booster](/abstract-models/booster/) data model.
-- Added `isPartialPreview`.
-- Added and back-ported `hasContentWarning`.
-- Added `Phyrexian` language.
-- Added Love Your LGS (`PLGS`).
-- Added Historic Anthology 3 (`HA3`).
-- Added Secret Lair: Ultimate Edition (`SLU`).
-- Added Signature Spellbook: Chandra `SS3`).
-- Added Core Set 2021 (`M21`).
-- Added Jumpstart (`JMP`).
-- Added Double Masters (`2XM`).
+- Added `booster`. See the [Booster](/abstract-models/booster/) data model
+- Added `isPartialPreview`
+- Added and back-ported `hasContentWarning`
+- Added `Phyrexian` language
+- Added Love Your LGS (`PLGS`)
+- Added Historic Anthology 3 (`HA3`)
+- Added Secret Lair: Ultimate Edition (`SLU`)
+- Added Signature Spellbook: Chandra `SS3`)
+- Added Core Set 2021 (`M21`)
+- Added Jumpstart (`JMP`)
+- Added Double Masters (`2XM`)
 #### Removed
-- Removed `boosterV3`.
+- Removed `boosterV3`
 
 ### Files
 #### Changed
-- All file downloads are now available via the `/api/v5/*` web-based url.
-- The `AllCards` file is now renamed `AtomicCards` to better clarify that these files only contain atomic card data.
-- The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc.
-- The `version` file is now renamed `Meta`.
-- All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object.
+- All file downloads are now available via the `/api/v5/*` web-based url
+- The `AllCards` file is now renamed `AtomicCards` to better clarify that these files only contain atomic card data
+- The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc
+- The `version` file is now renamed `Meta`
+- All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object
 #### Added
-- SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format.
-- `AllPrices.json` now contains prices from [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).
+- SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format
+- `AllPrices.json` now contains prices from [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
 
 ### Website
 #### Updated
-- The documentation application server was switched over to Nginx.
+- The documentation application server was switched over to Nginx
 #### Changed
-- Data "Structures" are now named "Models".
-- Models now reference their parent keys and parent files more accurately.
-- Models now have the "optional" attribute marked on more properties for clarity.
-- Some text and spacing adjustments for the "Changelog" and "FAQ" page.
-- The `Legalities` model now more clearly shows which properties would be omitted.
+- Data "Structures" are now named "Models"
+- Models now reference their parent keys and parent files more accurately
+- Models now have the "optional" attribute marked on more properties for clarity
+- Some text and spacing adjustments for the "Changelog" and "FAQ" page
+- The `Legalities` model now more clearly shows which properties would be omitted
 #### Added
-- More models are clearly defined now that the files deliver all the same top-level keys.
-- Atomic Cards are now documented outright as a Data Model for clarity.
-- Property value examples were added for properties with enum values.
-- You can now toggle optional properties on/off within documentation. If all properties are optional than the UI is disabled.
-- You can now try to edit/PR a specific documentation from the page footer.
+- More models are clearly defined now that the files deliver all the same top-level keys
+- Atomic Cards are now documented outright as a Data Model for clarity
+- Property value examples were added for properties with enum values
+- You can now toggle optional properties on/off within documentation. If all properties are optional than the UI is disabled
+- You can now try to edit/PR a specific documentation from the page footer
 #### Removed
-- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models.
-- The "About Us" page no longer uses a table of contents.
-- `setCode` was mistakenly added and is now removed to the `Card` data model.
+- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models
+- The "About Us" page no longer uses a table of contents
+- `setCode` was mistakenly added and is now removed to the `Card` data model
