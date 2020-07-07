@@ -45,7 +45,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 #### Added
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4
 - Added `promoTypes` for an enums for promo cards which replaces other promo properties
-- Added `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content
+- Added and back-ported `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content
 - Added `variations` to show all cards with the same name
 - Added `keywords` for all keywords available on a card
 
@@ -53,7 +53,6 @@ The MTGJSON team we would like to thank the community for its continued support 
 #### Added
 - Added `booster`. See the [Booster](/abstract-models/booster/) data model
 - Added `isPartialPreview`
-- Added and back-ported `hasContentWarning`
 - Added `Phyrexian` language
 - Added Love Your LGS (`PLGS`)
 - Added Historic Anthology 3 (`HA3`)

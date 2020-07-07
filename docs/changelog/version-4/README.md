@@ -33,6 +33,8 @@ Release Date: 2020-07-06
 - Fixed `otherFaceIds` having rogue values.
 - Fixed certain cards missing `scryfallIllustrationId`.
 - Fixed Tokens `uuid`.
+#### Added
+- Added and back-ported `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content
 
 ### Tokens
 #### Fixed
@@ -41,7 +43,6 @@ Release Date: 2020-07-06
 ### Sets
 #### Added
 - Added `isPartialPreview`.
-- Added and back-ported `hasContentWarning`.
 - Added `Phyrexian` language.
 - Added Love Your LGS (`PLGS`).
 - Added Historic Anthology 3 (`HA3`).
