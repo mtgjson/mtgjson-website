@@ -19,7 +19,7 @@
 # Frequently Asked Questions
 
 ### <span>Q.</span> Which file should I use for my project?
-<span>A.</span> In most cases, [AllPrintings.json](/api/v5/AllPrintings.json) is the correct file. It contains all data for every printing of each card. Alternatively you can browse the per-set json files or download database images.
+<span>A.</span> In most cases, [AllPrintings.json](/api/v5/AllPrintings.json.zip) is the correct file. It contains all data for every printing of each card. Alternatively you can browse the per-set json files or download database images.
 
 Note that the json files are minified, and not really human-readable: use a software like JQ to parse and process them.
 
@@ -44,6 +44,6 @@ For example: `https://mtgjson.com/api/v5/AllPrintings.json.sha256`.
 <span>A.</span> You have probably received a cached version of the file. Try hard refreshing the website (<code>CTRL&nbsp;+&nbsp;F5</code> on Windows, <code>Shift&nbsp;+&nbsp;Command&nbsp;+&nbsp;R</code> on Mac) and re-downloading to get the newest version.
 
 ### <span>Q.</span>  What information is in AtomicCards.json?
-<span>A.</span> [AtomicCards.json](/api/v5/AtomicCards.json) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
+<span>A.</span> [AtomicCards.json](/api/v5/AtomicCards.json.zip) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 
 For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation. Note that depending on your use case you probably do not need this file, as it can be easily derived from `AllPrintings.json` - handle with care.
