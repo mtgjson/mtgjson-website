@@ -17,8 +17,44 @@
 }
 ---
 
-# Changelog (v4)
+# Changelog (v4, Deprecated)
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
+
+MTGJSON v4 is now in maintenance mode and will only receive bug and data fixes as well as new sets. Please consider moving your project over to v5.
+
+## 4.7.0
+Release Date: 2020-07-06
+
+### Cards
+#### Fixed
+- Fixed HTML showing up in `originalText`.
+- Fixed `otherFaceIds` having rogue values.
+- Fixed certain cards missing `scryfallIllustrationId`.
+- Fixed Tokens `uuid`.
+
+### Tokens
+#### Fixed
+- Fixed `uuid`.
+
+### Sets
+#### Added
+- Added `isPartialPreview`.
+- Added and back-ported `hasContentWarning`.
+- Added `Phyrexian` language.
+- Added Love Your LGS (`PLGS`).
+- Added Historic Anthology 3 (`HA3`).
+- Added Secret Lair: Ultimate Edition (`SLU`).
+- Added Signature Spellbook: Chandra `SS3`).
+- Added Core Set 2021 (`M21`).
+- Added Jumpstart (`JMP`).
+- Added Double Masters (`2XM`).
+
+### Files
+- Fixed `Keywords.json` from breaking.
+
+### Misc
+- Updated documentation on how to run MTGJSON.
+- Locked package versioning for MTGJSON for consistency.
 
 ## 4.6.3
 Release Date: 2020-04-22
@@ -49,6 +85,7 @@ Release Date: 2020-04-22
 
 #### Fixed
 - Spaces may have accidentally polluted the set `name`
+
 
 ## 4.6.2
 Release Date: 2020-02-01

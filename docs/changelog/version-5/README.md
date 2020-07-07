@@ -23,7 +23,13 @@ The following is the Application and Website Changelog. Some parts may be update
 ## 5.0.0
 Release Date: 2020-07-03
 ### Announcements
-<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>The documentation of the website overall was changed in a drastic way with such a large major version bump. If you find we can improve the documentation please let us know!</br></br></br>
+<img src="/images/assets/logo-mtgjson-thumbnail.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>We are proud to announce the 5th major release of MTGJSON! The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
+
+We are also pleased to announce the addition of `Booster` information on the `Set` data model. For more information, see the documentation for [Booster](/abstract-models/booster) data model.
+
+If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferer noopener">PayPal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (recurring donations).
+
+The MTGJSON team we would like to thank the community for its continued support and we look forward to serving you well.</br></br></br>
 
 ### Card
 #### Changed
@@ -34,7 +40,7 @@ Release Date: 2020-07-03
 - Changed `name` to show full split card names (name1 // name2).
 - Changed `name` to be verbatim as printed on the card (see Unglued variants for example).
 - Changed `names` to `otherFaceIds`.
-- Changed `uuid` for split cards.
+- Changed `uuid` for all tokens and split cards.
 - Changed `hasNoDeckLimit` to `hasAlternativeDeckLimit`.
 #### Added
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
@@ -43,10 +49,21 @@ Release Date: 2020-07-03
 - Added `variations` to show all cards with the same name.
 - Added `keywords` for all keywords available on a card.
 
-### Set
+### Sets
+#### Added
+- Added `booster`. See the [Booster](/abstract-models/booster/) data model.
+- Added `isPartialPreview`.
+- Added and back-ported `hasContentWarning`.
+- Added `Phyrexian` language.
+- Added Love Your LGS (`PLGS`).
+- Added Historic Anthology 3 (`HA3`).
+- Added Secret Lair: Ultimate Edition (`SLU`).
+- Added Signature Spellbook: Chandra `SS3`).
+- Added Core Set 2021 (`M21`).
+- Added Jumpstart (`JMP`).
+- Added Double Masters (`2XM`).
 #### Removed
 - Removed `boosterV3`.
-- Added `booster`. See the [Booster](/abstract-models/booster/) data model.
 
 ### Files
 #### Changed
@@ -57,6 +74,7 @@ Release Date: 2020-07-03
 - All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object.
 #### Added
 - SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format.
+- `AllPrices.json` now contains prices from [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).
 
 ### Website
 #### Updated
