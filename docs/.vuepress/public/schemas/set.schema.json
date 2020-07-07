@@ -46,7 +46,7 @@
   "isForeignOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "Is this set available only outside the United States?",
+    "description": "If this set is available only outside the United States.",
     "attributes": [
       "optional"
     ],
@@ -55,7 +55,7 @@
   "isFoilOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the set available only in foil?",
+    "description": "If this set is available only in foil.",
     "attributes": [
       "optional"
     ],
@@ -65,7 +65,7 @@
   "isOnlineOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the set available online only?",
+    "description": "If this set is available only online.",
     "attributes": [
       "optional"
     ],
@@ -75,7 +75,7 @@
   "isPaperOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "Set in only physically printed.",
+    "description": "If this set is available only in paper.",
     "attributes": [
       "optional"
     ],
@@ -85,7 +85,7 @@
   "isPartialPreview": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the set still in preview? Preview sets do not have complete data.",
+    "description": "If thia set is still in preview (spoiled). Preview sets do not have complete data.",
     "attributes": [
       "optional"
     ],

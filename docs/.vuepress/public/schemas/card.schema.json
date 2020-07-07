@@ -22,7 +22,7 @@
   },
   "availability": {
     "type": "array(string)",
-    "example": "[ \"isPaper\", ... ]",
+    "example": "[ \"mtgo\", \"online\", \"paper\" ]",
     "description": "List of the card's available printing types.",
     "introduced": "v5.0.0"
   },
@@ -75,7 +75,7 @@
   "duelDeck": {
     "type": "string",
     "example": "\"a\"",
-    "description": "Is this card in a duel deck product?",
+    "description": "If this card is a duel deck product.",
     "attributes": [
       "optional"
     ],
@@ -148,7 +148,7 @@
   "hasContentWarning": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card marked by Wizards of the Coast for having sensitive content? Cards with this property may have missing or degraded properties and values.",
+    "description": "If the card marked by Wizards of the Coast for having sensitive content. Cards with this property may have missing or degraded properties and values.",
     "attributes": [
       "optional"
     ],
@@ -157,13 +157,13 @@
   "hasFoil": {
     "type": "boolean",
     "example": "true",
-    "description": "Can the card be found in foil?",
+    "description": "If the card be found in foil.",
     "introduced": "v4.0.0"
   },
   "hasAlternativeDeckLimit": {
     "type": "boolean",
     "example": "true",
-    "description": "Does this card allow a value other than 4 copies in a deck?",
+    "description": "If the card allows a value other than 4 copies in a deck",
     "attributes": [
       "optional"
     ],
@@ -173,12 +173,12 @@
   "hasNonFoil": {
     "type": "boolean",
     "example": "true",
-    "description": "Can the card be found in non-foil?",
+    "description": "If the card can be found in non-foil",
     "introduced": "v4.0.0"
   },
   "identifiers": {
     "type": "object",
-    "example": "{{link@Identifiers@/data-models/identifiers}}",
+    "example": "{ {{link@Identifiers@/data-models/identifiers}} }",
     "description": "See the {{link@Identifiers@/data-models/identifiers}} data model.",
     "introduced": "v5.0.0"
   },
@@ -194,7 +194,7 @@
   "isFullArt": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card full artwork?",
+    "description": "If the card has full artwork.",
     "attributes": [
       "optional"
     ],
@@ -203,7 +203,7 @@
   "isOnlineOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card only available in Magic: The Gathering Online?",
+    "description": "If the card is only available in Magic: The Gathering Online.",
     "attributes": [
       "optional"
     ],
@@ -213,7 +213,7 @@
   "isOversized": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card oversized?",
+    "description": "If the card is oversized.",
     "attributes": [
       "optional"
     ],
@@ -222,7 +222,7 @@
   "isPromo": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card a promotional print?",
+    "description": "If the card is promotional.",
     "attributes": [
       "optional"
     ],
@@ -231,7 +231,7 @@
   "isReprint": {
     "type": "boolean",
     "example": "true",
-    "description": "Has the card been reprinted?",
+    "description": "If the card has been reprinted.",
     "attributes": [
       "optional"
     ],
@@ -240,7 +240,7 @@
   "isReserved": {
     "type": "boolean",
     "example": "true",
-    "description": "Is the card on the Magic: The Gathering {{link@Reserved List@https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10}}?",
+    "description": "If the card is on the Magic: The Gathering {{link@Reserved List@https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10}}.",
     "attributes": [
       "optional"
     ],
@@ -250,7 +250,7 @@
   "isStarter": {
     "type": "boolean",
     "example": "true",
-    "description": "Is this card found in a booster pack?",
+    "description": "If this card is found in a booster pack.",
     "attributes": [
       "optional"
     ],
@@ -259,7 +259,7 @@
   "isStorySpotlight": {
     "type": "boolean",
     "example": "true",
-    "description": "Does the card have a story spotlight?",
+    "description": "If the card has a story spotlight.",
     "attributes": [
       "optional"
     ],
@@ -268,7 +268,7 @@
   "isTextless": {
     "type": "boolean",
     "example": "true",
-    "description": "Does the card not have a text box?",
+    "description": "If the card does not have a text box.",
     "attributes": [
       "optional"
     ],
@@ -277,7 +277,7 @@
   "isTimeshifted": {
     "type": "boolean",
     "example": "true",
-    "description": "Is this card \"timeshifted\"? (A feature from Time Spiral block)",
+    "description": "If this card is \"timeshifted\", a feature from Time Spiral block.",
     "attributes": [
       "optional"
     ],
@@ -422,8 +422,8 @@
   },
   "purchaseUrls": {
     "type": "object",
-    "example": "{ {{link@Purchase URL@/data-models/purchase-url}}, ... }",
-    "description": "Redirect URL to purchase a product on an associated marketplace. See the {{link@Purchase URL@/data-models/purchase-url}} data model.",
+    "example": "{ {{link@Purchase URL@/data-models/purchase-urls}}, ... }",
+    "description": "Redirect URL to purchase a product on an associated marketplace. See the {{link@Purchase URL@/data-models/purchase-urls}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
@@ -446,16 +446,6 @@
     "example": "[ {{link@Rulings@/data-models/rulings}}, ... ]",
     "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
     "isAtomicProperty": true,
-    "introduced": "v4.0.0"
-  },
-  "setCode": {
-    "type": "string",
-    "example": "\"zen\"",
-    "description": "Set code for the printing of the card.",
-    "attributes": [
-      "optional"
-    ],
-    "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "side": {

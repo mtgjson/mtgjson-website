@@ -27,18 +27,19 @@ Release Date: 2020-07-03
 
 ### Card
 #### Changed
+- Changed "Meld" card `name` and `side` to be more clear. Example: `Gisela, the Broken Blade // Brisela, Voice of Nightmares` (side a), `Bruna, the Fading Light // Brisela, Voice of Nightmares` (side a), and `Brisela, Voice of Nightmares` (side b).
 - Changed `mcmId`, `mcmMetaId`, `mtgoFoilId`, `mtgoId`, `multiverseId`, `scryfallId`, `scryallIllustrationId`, `scryfallOracleId`, and `tcgplayerProductId` properties to be nested in to a new `identifiers` property.
 - Changed `isArena`, `isMtgo`, and `isPaper` to be nested inside a new `availability` property. Values return a string of the available property. See the available examples for all the values.
 - Changed `isBuyABox`, `isBundle`, `isPlaneswalkerStamped`, and `isDateStamped` to be nested in to a new `promoTypes` property.
-- Changed `name` to show full split card names (name1//name2).
-- Changed `name` to be as true as possible (see Very Cryptic Command).
-- Changed `uuid` for split cards.
+- Changed `name` to show full split card names (name1 // name2).
+- Changed `name` to be verbatim as printed on the card (see Unglued variants for example).
 - Changed `names` to `otherFaceIds`.
+- Changed `uuid` for split cards.
 - Changed `hasNoDeckLimit` to `hasAlternativeDeckLimit`.
 #### Added
 - Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4.
 - Added `promoTypes` for an enums for promo cards which replaces other promo properties.
-- Added `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content? Cards with this property may have missing or degraded properties and values.
+- Added `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content.
 - Added `variations` to show all cards with the same name.
 - Added `keywords` for all keywords available on a card.
 
@@ -73,3 +74,4 @@ Release Date: 2020-07-03
 #### Removed
 - `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models.
 - The "About Us" page no longer uses a table of contents.
+- `setCode` was mistakenly added and is now removed to the `Card` data model.

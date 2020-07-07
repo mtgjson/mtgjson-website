@@ -235,6 +235,11 @@
       "link": "https://mtg.onl"
     },
     {
+      "name": "MTGBAN",
+      "image": "avatar-mtgban.png",
+      "link": "https://www.mtgban.com/"
+    },
+    {
       "name": "MTG Addict",
       "image": "avatar-mtgaddict.png",
       "link": "https://mtgaddict.net"
