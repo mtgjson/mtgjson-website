@@ -59,6 +59,8 @@ Release Date: 2020-07-03
 - SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format.
 
 ### Website
+#### Updated
+- The documentation application server was switched over to Nginx.
 #### Changed
 - Data "Structures" are now named "Models".
 - Models now reference their parent keys and parent files more accurately.

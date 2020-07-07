@@ -118,7 +118,7 @@
   },
   "foreignData": {
     "type": "array(object) | array()",
-    "example": "[ {{link@Foreign Data@/data-models/foreign-data}}, ... ]",
+    "example": "[ { {{link@Foreign Data@/data-models/foreign-data}} }, ... ]",
     "description": "See the {{link@Foreign Data@/data-models/foreign-data}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
@@ -302,7 +302,7 @@
   },
   "leadershipSkills": {
   	"type": "object",
-  	"example": "{{link@Leadership Skills@/data-models/leadership-skills}}",
+  	"example": "{ {{link@Leadership Skills@/data-models/leadership-skills}} }",
   	"description": "See the {{link@Leadership Skills@/data-models/leadership-skills}} data model.",
   	"attributes": [
       "optional"
@@ -312,7 +312,7 @@
   },
   "legalities": {
     "type": "object",
-    "example": "{{link@Legalities@/data-models/legalities}}",
+    "example": "{ {{link@Legalities@/data-models/legalities}} }",
     "description": "See the {{link@Legalities@/data-models/legalities}} data model.",
   	"attributes": [
       "optional"
@@ -422,8 +422,8 @@
   },
   "purchaseUrls": {
     "type": "object",
-    "example": "{ {{link@Purchase URL@/data-models/purchase-urls}}, ... }",
-    "description": "Redirect URL to purchase a product on an associated marketplace. See the {{link@Purchase URL@/data-models/purchase-urls}} data model.",
+    "example": "{ {{link@Purchase Urls@/data-models/purchase-urls}} }",
+    "description": "See the {{link@Purchase Urls@/data-models/purchase-urls}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
@@ -443,7 +443,7 @@
   },
   "rulings": {
     "type": "array(object) | array()",
-    "example": "[ {{link@Rulings@/data-models/rulings}}, ... ]",
+    "example": "[ { {{link@Rulings@/data-models/rulings}} }, ... ]",
     "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
