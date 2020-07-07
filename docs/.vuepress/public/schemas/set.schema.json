@@ -17,7 +17,7 @@
   },
   "booster": {
     "type": "object",
-    "example": "{ {{link@Booster@/abstract-models/booster/}} }",
+    "example": "{{link@Booster@/abstract-models/booster/}}",
     "description": "A breakdown of possibilities and weights of cards in a booster pack. See the {{link@Booster@/abstract-models/booster/}} data model.",
     "introduced": "v5.0.0"
   },
