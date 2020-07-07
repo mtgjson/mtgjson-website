@@ -43,7 +43,6 @@ Release Date: 2020-07-06
 ### Sets
 #### Added
 - Added `isPartialPreview`.
-- Added `Phyrexian` language.
 - Added Love Your LGS (`PLGS`).
 - Added Historic Anthology 3 (`HA3`).
 - Added Secret Lair: Ultimate Edition (`SLU`).
@@ -56,6 +55,7 @@ Release Date: 2020-07-06
 - Fixed `Keywords.json` from breaking.
 
 ### Misc
+- Added `Phyrexian` language where language data is available.
 - Updated documentation on how to run MTGJSON.
 - Locked package versioning for MTGJSON for consistency.
 

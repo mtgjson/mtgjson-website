@@ -53,7 +53,6 @@ The MTGJSON team we would like to thank the community for its continued support 
 #### Added
 - Added `booster`. See the [Booster](/abstract-models/booster/) data model
 - Added `isPartialPreview`
-- Added `Phyrexian` language
 - Added Love Your LGS (`PLGS`)
 - Added Historic Anthology 3 (`HA3`)
 - Added Secret Lair: Ultimate Edition (`SLU`)
@@ -74,6 +73,10 @@ The MTGJSON team we would like to thank the community for its continued support 
 #### Added
 - SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format
 - `AllPrices.json` now contains prices from [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
+
+### Misc
+#### Added
+- Added `Phyrexian` language where language data is available
 
 ### Website
 #### Updated
