@@ -68,8 +68,9 @@
     "type": "integer",
     "example": "3",
     "description": "How many of this card exists in a relevant deck.",
-    "isDeckProperty": true,
-    "isDeckOnlyProperty": true,
+    "attributes": [
+      "decks-only"
+    ],
     "introduced": "v4.4.1"
   },
   "duelDeck": {
@@ -118,8 +119,8 @@
   },
   "foreignData": {
     "type": "array(object) | array()",
-    "example": "[ {{link@Foreign Data@/data-models/foreign-data}}, ... ]",
-    "description": "See the {{link@Foreign Data@/data-models/foreign-data}} data model.",
+    "example": "[ {{link@Foreign Data@/data-models/foreign-data/}}, ... ]",
+    "description": "See the {{link@Foreign Data@/data-models/foreign-data/}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
@@ -178,8 +179,8 @@
   },
   "identifiers": {
     "type": "object",
-    "example": "{{link@Identifiers@/data-models/identifiers}}",
-    "description": "See the {{link@Identifiers@/data-models/identifiers}} data model.",
+    "example": "{{link@Identifiers@/data-models/identifiers/}}",
+    "description": "See the {{link@Identifiers@/data-models/identifiers/}} data model.",
     "introduced": "v5.0.0"
   },
   "isAlternative": {
@@ -302,8 +303,8 @@
   },
   "leadershipSkills": {
   	"type": "object",
-  	"example": "{{link@Leadership Skills@/data-models/leadership-skills}}",
-  	"description": "See the {{link@Leadership Skills@/data-models/leadership-skills}} data model.",
+  	"example": "{{link@Leadership Skills@/data-models/leadership-skills/}}",
+  	"description": "See the {{link@Leadership Skills@/data-models/leadership-skills/}} data model.",
   	"attributes": [
       "optional"
   	],
@@ -312,8 +313,8 @@
   },
   "legalities": {
     "type": "object",
-    "example": "{{link@Legalities@/data-models/legalities}}",
-    "description": "See the {{link@Legalities@/data-models/legalities}} data model.",
+    "example": "{{link@Legalities@/data-models/legalities/}}",
+    "description": "See the {{link@Legalities@/data-models/legalities/}} data model.",
   	"attributes": [
       "optional"
   	],
@@ -351,7 +352,7 @@
   "name": {
     "type": "string",
     "example": "\"Angel of Grace\"",
-    "description": "Names of each face on the card. Meld cards are listed in the order of {{code@CardA}}, {{code@Meld}}, {{code@CardB}}.",
+    "description": "Names of each face on the card. Cards with multiple faces, like \"Split\" and \"Meld\" cards are given a delimiter. Example: {{code@Face 1 Name // Face 2 Name}}.",
     "attributes": [
       "optional"
     ],
@@ -422,8 +423,8 @@
   },
   "purchaseUrls": {
     "type": "object",
-    "example": "{{link@Purchase Urls@/data-models/purchase-urls}}",
-    "description": "See the {{link@Purchase Urls@/data-models/purchase-urls}} data model.",
+    "example": "{{link@Purchase Urls@/data-models/purchase-urls/}}",
+    "description": "See the {{link@Purchase Urls@/data-models/purchase-urls/}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.4.0"
   },
@@ -443,8 +444,8 @@
   },
   "rulings": {
     "type": "array(object) | array()",
-    "example": "[ {{link@Rulings@/data-models/rulings}}, ... ]",
-    "description": "See the {{link@Rulings@/data-models/rulings}} data model.",
+    "example": "[ {{link@Rulings@/data-models/rulings/}}, ... ]",
+    "description": "See the {{link@Rulings@/data-models/rulings/}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },

@@ -23,8 +23,8 @@
   },
   "cards": {
     "type": "array(object)",
-    "example": "[ {{link@Card@/data-models/card}}, ... ]",
-    "description": "List of cards in this set. See the {{link@Card@/data-models/card}} data model.",
+    "example": "[ {{link@Card@/data-models/card/}}, ... ]",
+    "description": "List of cards in this set. See the {{link@Card@/data-models/card/}} data model.",
     "introduced": "v4.0.0"
   },
   "code": {
@@ -158,8 +158,8 @@
   },
   "tokens": {
     "type": "array(object)",
-    "example": "[ {{link@Card (Token)@/data-models/card-token}}, ... ]",
-    "description": "Tokens available to the set. See the {{link@Card (Token)@/data-models/card-token}} data model.",
+    "example": "[ {{link@Card (Token)@/data-models/card-token/}}, ... ]",
+    "description": "Tokens available to the set. See the {{link@Card (Token)@/data-models/card-token/}} data model.",
     "introduced": "v4.0.0"
   },
   "totalSetSize": {
@@ -171,8 +171,8 @@
   },
   "translations": {
     "type": "object",
-    "example": "{{link@Translations@/data-models/translations}}",
-    "description": "Translated set name by language. See the {{link@Translations@/data-models/translations}} data model.",
+    "example": "{{link@Translations@/data-models/translations/}}",
+    "description": "Translated set name by language. See the {{link@Translations@/data-models/translations/}} data model.",
     "introduced": "v4.3.2"
   },
   "type": {

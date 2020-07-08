@@ -263,7 +263,8 @@ img {
     z-index: -1;
   }
 
-  &.optional {
+  &.optional,
+  &.decks {
     &::before {
       background-color: var(--spoiler-color);
     }

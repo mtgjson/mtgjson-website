@@ -104,7 +104,7 @@ export default {
       willShowMore: true,
       isAtomicCard: false,
       isTokenCard: false,
-      isDeckCard: false,
+      // isDeckCard: false,
       isManifest: false,
       showOptional: false
     };
@@ -168,10 +168,11 @@ export default {
             }
           } else if (
             // All non-restrictive
-            this.isDeckCard ||
+            // this.isDeckCard ||
             (!field.isTokenOnlyProperty &&
-              !field.isManifestOnlyProperty &&
-              !field.isDeckOnlyProperty)
+              !field.isManifestOnlyProperty /*&&
+              !field.isDeckOnlyProperty)*/
+            )
           ) {
             filteredSchema[name] = field;
           }
@@ -187,7 +188,7 @@ export default {
 
     this.isAtomicCard = this.$page.frontmatter.title.includes("(Atomic)");
     this.isTokenCard = this.$page.frontmatter.title.includes("(Token)");
-    this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
+    // this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
     this.isManifest = this.$page.frontmatter.title.includes("List"); // SetList/DeckList
 
     await this.$helpers.setStoreState.apply(this, ["EnumValues"]);
@@ -245,6 +246,8 @@ export default {
       const attr = attribute.toLowerCase();
 
       switch (attr) {
+        case "decks":
+          return "Property is only used on cards inside the Deck data model.";
         case "optional":
           return "Property may be omitted when data returns a falsey or expected value.";
         case "deprecated":
