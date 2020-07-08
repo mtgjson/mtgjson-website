@@ -48,6 +48,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 - Added and back-ported `hasContentWarning` for cards that are marked by Wizards of the Coast for having sensitive content
 - Added `variations` to show all cards with the same name
 - Added `keywords` for all keywords available on a card
+- Added `mtgjsonV4Id` to identifiers to help transition developer's code
 
 ### Sets
 #### Added
