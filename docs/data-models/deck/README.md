@@ -22,6 +22,7 @@
 
 The Deck data model describes a complete deck reference.
 
+> Parent file: <span class="code-wrap">[All Decks](../../downloads/all-decks/)</span>  
 > Parent property: `data`
 
 ### Model Properties

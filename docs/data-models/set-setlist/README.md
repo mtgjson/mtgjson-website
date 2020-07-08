@@ -22,7 +22,7 @@
 
 The Set (SetList) data model describes a metadata-like structure that holds top-level information about a [Set](../set/).
 
-> Parent file: `SetList`  
+> Parent file: <span class="code-wrap">[SetList](../../api/v5/SetList.json)</span>  
 > Parent property: `data`
 
 ### Model Properties

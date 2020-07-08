@@ -72,9 +72,15 @@ pre {
       z-index: 11;
 
       &::after {
-        border-top-color: transparent;
-        border-bottom-color: var(--code-text-color);
-        top: 9px;
+        height: 15px;
+        border: 0;
+        width: 15px;
+        line-height: 1rem;
+        text-align: right;
+        font-weight: bold;
+        content: '\00D7';
+        top: 7px;
+        font-size: 16px;
       }
 
       li {

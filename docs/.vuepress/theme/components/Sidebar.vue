@@ -1,6 +1,8 @@
 <template lang="pug">
   aside.sidebar
     .sidebar-wrap-fixed
+      router-link(:to="$localePath")
+        NavMeta.sidebar-logo(:width="`60px`")
       AlgoliaSearchBox(
         v-if="isAlgoliaSearch"
         :options="algolia")
@@ -27,6 +29,7 @@ import SidebarLinks from './SidebarLinks';
 import AlgoliaSearchBox from '@AlgoliaSearchBox';
 import SearchBox from '@SearchBox';
 import Version from '../global-components/Version';
+import NavMeta from '../global-components/NavMeta';
 
 export default {
   name: 'Sidebar',
@@ -57,7 +60,7 @@ export default {
   position: fixed;
   width: var(--sidebar-width);
   z-index: 2;
-  top: var(--navbar-height);
+  top: 0;
   left: 0;
   bottom: 0;
   overflow: visible;
@@ -90,11 +93,12 @@ export default {
     padding: 2rem 4rem 0;
 
     &-fixed {
-      padding: 1rem 4rem;
+      padding: 0 4rem 1rem;
       border-bottom: 1px solid var(--bg-border-color);
 
       .sidebar-logo {
-        margin-bottom: 1rem;
+        height: var(--navbar-height);
+        // margin-bottom: 1rem;
 
         .logo-meta {
           &--logo {

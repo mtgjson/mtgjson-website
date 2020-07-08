@@ -22,7 +22,7 @@
 
 The Keywords data models describes a list of all keywords used on Magic: The Gathering cards.
 
-> Parent file: `Keywords`  
+> Parent file: <span class="code-wrap">[Keywords](../../api/v5/Keywords.json)</span>  
 > Parent property: `data`
 
 ### Model Properties

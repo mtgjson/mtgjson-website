@@ -1,4 +1,4 @@
-.codeblock, code, pre, .md-code, .values-list--code, .code-wrap {
+.codeblock, code, pre, .md-code, .values-list--code, .code-wrap a {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
   font-size: 12px;
   background-color: var(--code-bg-color);
@@ -7,7 +7,15 @@
   line-height: 2.7em;
   padding: 7px 10px;
   margin: 0;
-  word-break: break-all;
+  word-break: word;
+
+  a {
+    color: var(--accent-color);
+  }
+}
+
+.code-wrap a {
+  color: var(--accent-color);
 }
 
 .codeblock, pre, code, kbd, .line-number {

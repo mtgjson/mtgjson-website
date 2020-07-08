@@ -36,15 +36,16 @@ export default {
 
 .navbar {
   display: flex;
-  position: fixed;
+  position: relative;
   z-index: 9;
-  top: 0;
-  right: 0;
-  left: 0;
+  // position: fixed;
+  // top: 0;
+  // right: 0;
+  // left: 0;
   height: var(--navbar-height);
   align-items: center;
   background-color: var(--bg-color);
-  border-bottom: 1px solid var(--bg-border-color);
+  // border-bottom: 1px solid var(--bg-border-color);
   @extend %wrapper;
 
   padding: 0 4rem;

@@ -22,7 +22,7 @@
 
 The Deck (DeckList) data model describes a metadata-like structure that holds top-level information about a [Deck](../deck/).
 
-> Parent file: `DeckList`  
+> Parent file: <span class="code-wrap">[DeckList](../../api/v5/DeckList.json)</span>  
 > Parent property: `data`
 
 ### Model Properties

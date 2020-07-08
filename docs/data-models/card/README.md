@@ -22,7 +22,6 @@
 
 The Card data model describes the properties and values of a single card.
  
-> Parent file: `AllPrintings`, `Legacy`, `Modern`, `Pioneer`, `Standard`, `Vintage`  
 > Parent model: <span class="code-wrap">[Set](../set/)</span>  
 > Parent property: `cards`
 

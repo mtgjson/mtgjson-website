@@ -184,7 +184,7 @@ function flattern(items, res) {
 .page {
   position: relative;
   z-index: 1;
-  padding-top: calc(var(--navbar-height) + 4rem);
+  padding-top: calc(var(--navbar-height) - 1rem);
   padding-left: var(--sidebar-width);
   background-color: var(--bg-dark-color);
 
@@ -274,7 +274,7 @@ function flattern(items, res) {
 
 @media (max-width: 719px) {
   .page {
-    padding-top: var(--navbar-height) + 3rem;
+    padding-top: 3rem;
     padding-left: 0;
   }
 

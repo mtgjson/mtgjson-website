@@ -1,11 +1,12 @@
 :root {
   // Sizes
-  --sidebar-width: 280px;
+  --sidebar-width: 325px;
   --navbar-height: 5rem;
   --content-width: 960px;
   --line-numbers-width: 20px;
   // Auxillery colors
   --yellow-color: #ffe774;
+  --yellow-dark-color: #c8ac29;
   --green-color: lightgreen;
   --red-color: salmon;
   --orange-color: #ef6c2f;
@@ -33,6 +34,7 @@
   // --darkest-color: #141c24;
   --accent-color: #61c6ed;
   --spoiler-color: var(--yellow-color);
+  --spoiler-text-color: var(--dark-3-color);
   // Color Themes
   --text-color: var(--light-color);
   --bg-color: var(--dark-1-color);
@@ -61,25 +63,27 @@ body {
   &.light {
     // Main Color
     --accent-color: var(--blue-2-color);
-    --yellow-color: var(--orange-color);
+    --yellow-color: var(--yellow-dark-color);
+    --spoiler-color: var(--yellow-color);
+    --spoiler-text-color: var(--light-color);
     // Color Themes
     --text-color: var(--dark-1-color);
     --bg-color: var(--light-color);
-    --bg-border-color: var(--medium-gray-color);
-    --bg-dark-color: var(--light-color);
+    --bg-border-color: var(--light-gray-color);
+    --bg-dark-color: var(--light-gray-color);
     --shadow-color: var(--medium-gray-color);
     --search-bg-color: var(--light-color);
     --search-border-color: var(--medium-gray-color);
     --search-border-highlight-color: var(--accent-color);
     --search-text-color: var(--text-color);
     --blockquote-heading-color: var(--medium-gray-color);
-    --blockquote-bg-color: var(--light-gray-color);
+    --blockquote-bg-color: var(--light-color);
     --supporter-bg-color: var(--medium-gray-color);
     // Data Presentation
     --table-color: var(--text-color);
-    --table-bg-color: var(--light-gray-color);
-    --table-border-color: var(--light-gray-color);
-    --table-heading-color: var(--medium-gray-color);
+    --table-bg-color: var(--light-color);
+    --table-border-color: var(--medium-gray-color);
+    --table-heading-color: var(--light-color);
     --gray-color: var(--dark-gray-color);
     // Code colors
     // --code-bg-color: #ffeeec;

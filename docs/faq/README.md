@@ -43,7 +43,12 @@ For example: `https://mtgjson.com/api/v5/AllPrintings.json.sha256`.
 ### <span>Q.</span> Why is the file I just downloaded out of date?
 <span>A.</span> You have probably received a cached version of the file. Try hard refreshing the website (<code>CTRL&nbsp;+&nbsp;F5</code> on Windows, <code>Shift&nbsp;+&nbsp;Command&nbsp;+&nbsp;R</code> on Mac) and re-downloading to get the newest version.
 
-### <span>Q.</span>  What information is in AtomicCards.json?
+### <span>Q. </span> How do I find the other card faces of "Meld" cards?
+<span>A.</span> The most effective way to get the other cards for "Meld" cards is to access the `otherFaceIds` property of any of the "Meld" cards. This property will return two `uuid` values for the other associated cards.
+
+Depending on your use case, this can be enough data to get the information you need, otherwise you can use those cards to access their `otherFaceIds` to get the card you need by comparing the data that you have already.
+
+### <span>Q.</span> What information is in AtomicCards.json?
 <span>A.</span> [AtomicCards.json](/api/v5/AtomicCards.json.zip) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 
 For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation. Note that depending on your use case you probably do not need this file, as it can be easily derived from `AllPrintings.json` - handle with care.
