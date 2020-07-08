@@ -36,15 +36,16 @@
       "since": "2019-09"
     },
     {
+      "name": "MTGBAN",
+      "image": "avatar-mtgban.png",
+      "link": "https://www.mtgban.com/",
+      "tier": "mythic",
+      "since": "2020-03"
+    },
+    {
       "name": "My MTG Collection",
       "image": "avatar-my-mtg-collection-logo.png",
       "link": "https://www.reddit.com/r/Mymtgapp",
-      "tier": "rare",
-      "since": "2019-04"
-    },
-    {
-      "name": "TheChucklingAtom",
-      "image": "avatar-thechucklingatom.jpg",
       "tier": "rare",
       "since": "2019-04"
     },
@@ -101,13 +102,6 @@
       "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
       "tier": "uncommon",
       "since": "2020-02"
-    },
-    {
-      "name": "MTGBAN",
-      "image": "avatar-mtgban.png",
-      "link": "https://www.mtgban.com/",
-      "tier": "uncommon",
-      "since": "2020-03"
     }
   ],
   "services": [

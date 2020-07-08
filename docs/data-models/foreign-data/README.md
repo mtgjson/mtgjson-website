@@ -20,7 +20,7 @@
 
 # Foreign Data
 
-The Foreign Data data model describes a list of alternate language properties for a card.
+The Foreign Data data model describes a list of properties for a [Card](../card/) data model in alternate languages.
 
 > Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `foreignData`

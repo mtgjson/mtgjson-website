@@ -4,9 +4,9 @@
   .schema(v-else)
     //- Properties Options
     //- This fills out optional rendering
-    .schema-options(v-if="canHideOptionals")
-      label(for="show-optional") Show optional properties:
-      input(id="show-optional" type="checkbox" v-model="showOptional")
+    .schema-options
+      label(for="show-optional") Hide optional properties:
+      input(id="show-optional" :disabled="canShowOptionals" type="checkbox" v-model="showOptional")
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
@@ -106,11 +106,11 @@ export default {
       isTokenCard: false,
       isDeckCard: false,
       isManifest: false,
-      showOptional: true
+      showOptional: false
     };
   },
   computed: {
-    canHideOptionals() {
+    canShowOptionals() {
       const keys = Object.keys(this.schema).length;
       let count = 0;
 
@@ -122,7 +122,7 @@ export default {
         }
       }
 
-      return count !== keys && count !== 0;
+      return count === 0 || count === keys;
     },
     filteredAttributes() {
       // Store the schema attributes for properties
@@ -213,8 +213,8 @@ export default {
     },
     shouldShowProperty(prop) {
       return (
-        this.showOptional ||
-        (!this.showOptional && !prop.attributes) ||
+        !this.showOptional ||
+        !prop.attributes ||
         (prop.attributes && !prop.attributes.includes("optional"))
       );
     },

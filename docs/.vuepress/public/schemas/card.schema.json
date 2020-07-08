@@ -75,7 +75,7 @@
   "duelDeck": {
     "type": "string",
     "example": "\"a\"",
-    "description": "If this card is a duel deck product.",
+    "description": "An indicator for which duel deck the card is in.",
     "attributes": [
       "optional"
     ],
