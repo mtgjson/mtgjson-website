@@ -20,7 +20,7 @@
 
 # Meta
 
-The Meta data model describes build dates of the application and prices data (following [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html/)), and versioning data of the current MTGJSON release.
+The Meta data model describes build date of the application and prices data (following [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html/)), and versioning data of the current MTGJSON release.
 
 > Parent file: `Meta`  
 > Parent property: `data`, `meta`  
