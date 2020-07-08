@@ -84,20 +84,6 @@
             "since": "2019-12"
         },
         {
-            "name": "MTG Brewmaster",
-            "image": "avatar-mtgbrewmaster.png",
-            "link": "http://mtgbrewmaster.com",
-            "tier": "uncommon",
-            "since": "2019-04"
-        },
-        {
-            "name": "MTG Decks",
-            "image": "avatar-mtgdecks.png",
-            "link": "https://www.mtgdecks.net",
-            "tier": "uncommon",
-            "since": "2019-04"
-        },
-        {
             "name": "MagicHunter",
             "image": "avatar-magic-hunter.png",
             "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
@@ -110,6 +96,20 @@
             "link": "https://magicmerchant.it",
             "tier": "uncommon",
             "since": "2019-06"
+        },
+        {
+            "name": "MTG Brewmaster",
+            "image": "avatar-mtgbrewmaster.png",
+            "link": "http://mtgbrewmaster.com",
+            "tier": "uncommon",
+            "since": "2019-04"
+        },
+        {
+            "name": "MTG Decks",
+            "image": "avatar-mtgdecks.png",
+            "link": "https://www.mtgdecks.net",
+            "tier": "uncommon",
+            "since": "2019-04"
         },
         {
             "name": "Seraph Six",
@@ -160,6 +160,11 @@
             "link": "http://discord.gg/DdhxPQQ"
         },
         {
+            "name": "dr4ft",
+            "image": "avatar-dr4ft.png",
+            "link": "https://dr4ft.info"
+        },
+        {
             "name": "Draftalot",
             "image": "avatar-draftalot.png",
             "link": "http://draftalot.com/"
@@ -193,56 +198,6 @@
             "name": "LoadingReadyRun",
             "image": "avatar-lrr.png",
             "link": "https://www.youtube.com/channel/UCwjN2uVdL9A0i3gaIHKFzuA"
-        },
-        {
-            "name": "MTG Addict",
-            "image": "avatar-mtgaddict.png",
-            "link": "https://mtgaddict.net"
-        },
-        {
-            "name": "MTG Developers",
-            "image": "avatar-mtgio.png",
-            "link": "https://magicthegathering.io"
-        },
-        {
-            "name": "MTG Korean",
-            "image": "avatar-mtg-korean.jpg",
-            "link": "http://mtg-kr.com"
-        },
-        {
-            "name": "MTG Search",
-            "image": "avatar-mtg-search.jpg",
-            "link": "https://mtg-search.com"
-        },
-        {
-            "name": "MTG Set Builder",
-            "image": "avatar-mtgsetbuilder.png",
-            "link": "http://mtgsetbuilder.com"
-        },
-        {
-            "name": "MTG Tracker",
-            "image": "avatar-mtgtracker.jpg",
-            "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
-        },
-        {
-            "name": "MTGNexus",
-            "image": "avatar-mtgnexus.png",
-            "link": "https://www.mtgnexus.com/"
-        },
-        {
-            "name": "MTGO Wiki Price",
-            "image": "avatar-mtgowikiprice.png",
-            "link": "http://mtgowikiprice.com"
-        },
-        {
-            "name": "MTGStocks",
-            "image": "avatar-mtgstocks.jpg",
-            "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
-        },
-        {
-            "name": "MYPCards",
-            "image": "avatar-mypcards.png",
-            "link": "https://mypcards.com/"
         },
         {
             "name": "Magarena",
@@ -280,6 +235,71 @@
             "link": "http://metadeck.me/"
         },
         {
+            "name": "MTG Addict",
+            "image": "avatar-mtgaddict.png",
+            "link": "https://mtgaddict.net"
+        },
+        {
+            "name": "MTG Developers",
+            "image": "avatar-mtgio.png",
+            "link": "https://magicthegathering.io"
+        },
+        {
+            "name": "MTG Korean",
+            "image": "avatar-mtg-korean.jpg",
+            "link": "http://mtg-kr.com"
+        },
+        {
+            "name": "MTG Search",
+            "image": "avatar-mtg-search.jpg",
+            "link": "https://mtg-search.com"
+        },
+        {
+            "name": "MTG Set Builder",
+            "image": "avatar-mtgsetbuilder.png",
+            "link": "http://mtgsetbuilder.com"
+        },
+        {
+            "name": "MTG Tracker",
+            "image": "avatar-mtgtracker.jpg",
+            "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
+        },
+        {
+            "name": "mtg.onl",
+            "image": "avatar-mtgonl.png",
+            "link": "https://mtg.onl"
+        },
+        {
+            "name": "mtg.wtf",
+            "image": "avatar-mtg-wtf.png",
+            "link": "https://mtg.wtf"
+        },
+        {
+            "name": "mtgcard",
+            "image": "avatar-mtgcard.png",
+            "link": "https://github.com/yoshi1123/mtgcard/"
+        },
+        {
+            "name": "MTGNexus",
+            "image": "avatar-mtgnexus.png",
+            "link": "https://www.mtgnexus.com/"
+        },
+        {
+            "name": "MTGO Wiki Price",
+            "image": "avatar-mtgowikiprice.png",
+            "link": "http://mtgowikiprice.com"
+        },
+        {
+            "name": "MTGStocks",
+            "image": "avatar-mtgstocks.jpg",
+            "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
+        },
+        {
+            "name": "MYPCards",
+            "image": "avatar-mypcards.png",
+            "link": "https://mypcards.com/"
+        },
+        {
             "name": "Planestrader",
             "image": "avatar-planestrader.png",
             "link": "https://planestrader.com/"
@@ -300,14 +320,14 @@
             "link": "https://www.streamdecker.com"
         },
         {
-            "name": "TCGPlayer",
-            "image": "avatar-tcgplayer.png",
-            "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
-        },
-        {
             "name": "Tamiyo Discord Bot",
             "image": "avatar-tamiyodiscordbot.png",
             "link": "https://mtg.design/tamiyo"
+        },
+        {
+            "name": "TCGPlayer",
+            "image": "avatar-tcgplayer.png",
+            "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
         },
         {
             "name": "Troll and Toad",
@@ -325,34 +345,14 @@
             "link": "https://vensersjournal.com/"
         },
         {
-            "name": "XMage",
-            "image": "avatar-xmage.png",
-            "link": "http://xmage.de"
-        },
-        {
-            "name": "dr4ft",
-            "image": "avatar-dr4ft.png",
-            "link": "https://dr4ft.info"
-        },
-        {
-            "name": "mtg.onl",
-            "image": "avatar-mtgonl.png",
-            "link": "https://mtg.onl"
-        },
-        {
-            "name": "mtg.wtf",
-            "image": "avatar-mtg-wtf.png",
-            "link": "https://mtg.wtf"
-        },
-        {
-            "name": "mtgcard",
-            "image": "avatar-mtgcard.png",
-            "link": "https://github.com/yoshi1123/mtgcard/"
-        },
-        {
             "name": "viMTG",
             "image": "avatar-vimtg.png",
             "link": "https://github.com/yoshi1123/vim-mtg"
+        },
+        {
+            "name": "XMage",
+            "image": "avatar-xmage.png",
+            "link": "http://xmage.de"
         },
         {
             "name": "Card Codex",
@@ -371,6 +371,10 @@
             "link": "http://labmaniac.com"
         },
         {
+            "name": "MagicFetchBot",
+            "link": "https://redd.it/55l38e"
+        },
+        {
             "name": "MTG Lands",
             "link": "http://mtglands.com"
         },
@@ -383,16 +387,12 @@
             "link": "https://reddit.com/r/MTGCardFetcher"
         },
         {
-            "name": "MagicFetchBot",
-            "link": "https://redd.it/55l38e"
+            "name": "mtgen.net",
+            "link": "http://mtgen.net/thb/"
         },
         {
             "name": "RulesGuru",
             "link": "http://rulesguru.net"
-        },
-        {
-            "name": "mtgen.net",
-            "link": "http://mtgen.net/thb/"
         }
     ]
 }
