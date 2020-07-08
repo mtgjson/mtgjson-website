@@ -85,7 +85,7 @@
   "isPartialPreview": {
     "type": "boolean",
     "example": "true",
-    "description": "If thia set is still in preview (spoiled). Preview sets do not have complete data.",
+    "description": "If this set is still in preview (spoiled). Preview sets do not have complete data.",
     "attributes": [
       "optional"
     ],
