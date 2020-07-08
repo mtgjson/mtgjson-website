@@ -45,7 +45,7 @@ export default {
   height: var(--navbar-height);
   align-items: center;
   background-color: var(--bg-color);
-  // border-bottom: 1px solid var(--bg-border-color);
+  border-bottom: 1px solid var(--bg-border-color);
   @extend %wrapper;
 
   padding: 0 4rem;

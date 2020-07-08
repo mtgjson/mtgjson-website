@@ -1,8 +1,8 @@
 <template lang="pug">
   aside.sidebar
+    router-link.sidebar-logo.mobile-hide(:to="$localePath")
+      NavMeta(:width="`60px`")
     .sidebar-wrap-fixed
-      router-link(:to="$localePath")
-        NavMeta.sidebar-logo(:width="`60px`")
       AlgoliaSearchBox(
         v-if="isAlgoliaSearch"
         :options="algolia")
@@ -84,6 +84,28 @@ export default {
     padding-left: 25px;
   }
 
+  &-logo {
+    padding: 0 4rem;
+    height: var(--navbar-height);
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--bg-border-color);
+    display: flex !important;
+
+    .logo-meta {
+      &--logo {
+        display: none;
+      }
+
+      &--link {
+        margin-left: 0;
+      }
+    }
+
+    .mobile-hide {
+      display: block !important;
+    }
+  }
+
   &-wrap {
     display: grid;
     grid-template-columns: 1fr;
@@ -95,25 +117,6 @@ export default {
     &-fixed {
       padding: 0 4rem 1rem;
       border-bottom: 1px solid var(--bg-border-color);
-
-      .sidebar-logo {
-        height: var(--navbar-height);
-        // margin-bottom: 1rem;
-
-        .logo-meta {
-          &--logo {
-            display: none;
-          }
-
-          &--link {
-            margin-left: 0;
-          }
-        }
-
-        .mobile-hide {
-          display: block !important;
-        }
-      }
     }
 
     & > *:last-child {
