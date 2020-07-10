@@ -22,7 +22,7 @@
 
 The Card Types data model describes top-level card types and the associated card types they may have.
 
-> Parent file: <span class="code-wrap">[Card Types](/api/v5/CardTypes.json)</span>  
+> Parent file: <span class="code-wrap">[Card Types](/api/v5/CardTypes.json.zip)</span>  
 > Parent property: `data`
 
 ### Model Properties

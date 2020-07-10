@@ -6,6 +6,10 @@
 @import './code';
 @import './pages';
 
+html {
+  scroll-behavior: smooth;
+}
+
 html, body {
   min-width: 320px;
 }
@@ -19,8 +23,6 @@ body {
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
-  background-color: var(--bg-dark-color);
-  color: var(--text-color);
 }
 
 ol, ul {
@@ -126,6 +128,7 @@ img {
     }
   }
 }
+
 .link {
   &-inline-image {
     padding-left: 20px;
@@ -166,18 +169,6 @@ img {
       display: none;
     }
   }
-
-  // Deal with the scrolling issue with anchors being hidden
-  // by the fixed navigation
-  // & > h2,
-  // & > h3 {
-  //   padding-top: 100px;
-
-  //   &:first-of-type {
-  //     margin-top: -100px;
-  //   }
-  // }
-
   a {
     text-decoration: underline;
     font-weight: bold !important;
@@ -195,10 +186,6 @@ img {
   padding-top: 1rem;
 }
 
-// .sidebar {
-//   box-shadow: inset -9rem 0 9rem -9rem var(--shadow-color);
-// }
-
 .sidebar-group-items, .sidebar-sub-headers {
   .sidebar-link {
     font-size: 14px;
@@ -214,22 +201,6 @@ img {
     &:empty {
       display: none;
     }
-  }
-}
-
-@media (max-width: 719px) {
-  .content__default,
-  .page-nav,
-  .page-edit {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-  .desktop-hide {
-    display: block !important;
-  }
-
-  .mobile-hide {
-    display: none !important;
   }
 }
 
@@ -274,5 +245,26 @@ img {
     &::before {
       background-color: var(--red-color);
     }
+  }
+}
+
+.go-to-top {
+  color: var(--accent-color) !important;
+  right: 1rem !important;
+}
+
+@media (max-width: 719px) {
+  .content__default,
+  .page-nav,
+  .page-edit {
+    padding-left: 2rem;
+    padding-right: 2rem;
+  }
+  .desktop-hide {
+    display: block !important;
+  }
+
+  .mobile-hide {
+    display: none !important;
   }
 }

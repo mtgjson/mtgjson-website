@@ -1,12 +1,12 @@
 {
   "subTypes": {
     "type": "array(string)",
-    "example": "[ this should be an enum ]",
+    "example": "[ \"elf\", ... ]",
     "description": "All available subtypes of a card."
   },
   "superTypes": {
     "type": "array(string)",
-    "example": "[ this should be an enum ]",
+    "example": "[ \"legendary\", ... ]",
     "description": "All available supertypes of a card."
   }
 }

@@ -1,4 +1,15 @@
+#mtgjson {
+  & ~ h3 {
+    padding-top: 30px;
+    margin-top: 0;
+  }
+}
+
 #frequently-asked-questions {
+  & ~ h3 {
+    padding-top: 30px;
+    margin-top: 0;
+  }
   & ~ .custom-block {
     .custom-block-title {
       font-size: 1.4rem;
