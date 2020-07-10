@@ -27,7 +27,7 @@ The "Web API" or more commonly known as "files" that MTGJSON.com provides varies
 > - **AtomicCards**: Serves all card data using [Card (Atomic)](../data-models/card-atomic) data models.
 > - **[Format]**: Serves variable set data using [Set](../data-models/set/) data models.
 > - **[Format]Atomic**: Serves variable card data using [Card (Atomic)](../data-models/card-atomic/) data models.
-> - Other files serve specific data using data models such as [Card Types](../data-models/card-types/), [Deck](../data-models/deck/), [All Prices](../abstract-models/all-prices/) or more abstract data model information.<br><br>
+> - Other files serve specific data using data models such as [Deck](../data-models/deck/), [All Prices](../abstract-models/all-prices/) or more abstract data model information.<br><br>
 > For a full list of files, see [All Files](../downloads/all-files/) downloads page.
 
 ### File Model Properties

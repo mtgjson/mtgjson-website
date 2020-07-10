@@ -1,0 +1,67 @@
+{
+  "artifact": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "conspiracy": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "creature": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "enchantment": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "instant": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "land": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "phenomenon": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "plane": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "planeswalker": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "scheme": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "sorcery": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "tribal": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  },
+  "vanguard": {
+    "type": "object",
+    "example": "{{link@Types@/data-models/types}}",
+    "description": "All possible subtypes and supertypes. See the {{link@Types@/data-models/types}} data model."
+  }
+}
