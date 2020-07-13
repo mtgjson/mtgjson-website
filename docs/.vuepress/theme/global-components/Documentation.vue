@@ -4,9 +4,9 @@
   .schema(v-else)
     //- Properties Options
     //- This fills out optional rendering
-    .schema-options
+    .schema-options(v-if="!canShowOptionals")
       label(for="show-optional") Hide optional properties:
-      input(id="show-optional" :disabled="canShowOptionals" type="checkbox" v-model="showOptional")
+      input(id="show-optional" type="checkbox" v-model="showOptional")
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
