@@ -68,7 +68,7 @@ export default {
       }
     },
     renderAttributionEmbed() {
-      return `<a href="https://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" alt="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
+      return `<a href="https://mtgjson.com" style="display: inline-flex; align-items: center;"><img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" title="MTGJSON logo"><p style="margin-left: 10px">Powered by MTGJSON</p></a>`;
     }
   }
 };

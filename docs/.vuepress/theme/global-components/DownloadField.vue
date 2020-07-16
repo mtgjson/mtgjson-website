@@ -2,10 +2,8 @@
   ol.download-field
     li
       small Downloads:
-      span(v-for="(format, key) in formats" v-if="format !== 'json'" :key="key")
-        a.dl-btn(download :href="`${$api}${fileName}.json.${format}`") {{ format }}
-      span(v-else)
-        a.dl-btn(download :href="`${$api}${fileName}.json`") {{ format }}
+      a.dl-btn(v-for="(format, key) in formats" v-if="format !== 'json'" :key="key" download :href="`${$api}${fileName}.json.${format}`") {{ format }}
+      a.dl-btn(v-else download :href="`${$api}${fileName}.json`") {{ format }}
 </template>
 
 <script>

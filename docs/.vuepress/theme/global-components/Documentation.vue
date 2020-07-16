@@ -4,9 +4,9 @@
   .schema(v-else)
     //- Properties Options
     //- This fills out optional rendering
-    .schema-options
+    .schema-options(v-if="!canShowOptionals")
       label(for="show-optional") Hide optional properties:
-      input(id="show-optional" :disabled="canShowOptionals" type="checkbox" v-model="showOptional")
+      input(id="show-optional" type="checkbox" v-model="showOptional")
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
@@ -84,7 +84,7 @@
             :title="getTitle(getAttribute(attribute))") {{ attribute.replace('-', ' ') }}
 
         DocumentationField(
-        v-if="name"
+        v-if="data.introduced"
         label="Introduced"
         title="When the property was introduced")
           em(v-html="data.introduced")
@@ -104,7 +104,6 @@ export default {
       willShowMore: true,
       isAtomicCard: false,
       isTokenCard: false,
-      // isDeckCard: false,
       isManifest: false,
       showOptional: false
     };
@@ -220,7 +219,7 @@ export default {
       );
     },
     getValues(property) {
-      const schema = this.$page.frontmatter.schema; // schema file should match key name
+      const enums = this.$page.frontmatter.enum || this.$page.frontmatter.schema; // enum key should match key name
       const keys = Object.keys(this.values); // Keys of the EnumValues file
 
       let pageProperty = "";
@@ -228,13 +227,17 @@ export default {
       let page = null;
 
       for (const key of keys) {
-        if (schema.includes(key)) {
+        if (enums.includes(key)) {
           pageProperty = key;
           break;
         }
       }
 
       page = this.values[pageProperty]; // lookup if we have a matching key to the page
+
+      // Hack to allow CardTypes to use Card.<types>
+      if(property === 'subTypes') property = 'subtypes';
+      if(property === 'superTypes') property = 'supertypes';
 
       if (page) {
         values = page[property];

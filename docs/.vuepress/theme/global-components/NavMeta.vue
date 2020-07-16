@@ -2,6 +2,7 @@
   .nav-meta
     .nav-meta--logo(title="MTGJSON Logo")
       svg(
+        alt="MTGJSON Logo"
         xmlns="http://www.w3.org/2000/svg"
         version="1.0"
         :width="width"
@@ -74,7 +75,7 @@ export default {
   position: relative;
 
   &-number {
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
     color: var(--gray-color);
   }

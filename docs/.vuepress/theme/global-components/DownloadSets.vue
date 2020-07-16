@@ -4,29 +4,34 @@
       p.loading-msg {{ message }}
     .download-table(v-else)
       .sorting-options
-        h6.show-options(
+        p.show-options(
           @click="showOptions = !showOptions"
           :class="{'hide-options': !showOptions}") Toggle Options
-        .sort-rows(v-if="showOptions")
+        fieldset.sort-rows(v-if="showOptions")
           .sort-row.search
-            label Search By:
+            label(for="search-input") Search By:
             input.table-sort-select(
+              name="search-input"
               placeholder="name, code, etc..."
               type="text"
               v-model="searchKey"
               @input="onHandleChange")
 
           .sort-row
-            label Filter By:
+            label(for="filter-input") Filter By:
             select.table-sort-select(
+              id="filter-input"
               v-model="filterKey"
               @change="onHandleChange")
               option(value="" selected) All Sets
               option(v-for="(type, key) in filters" :key="key" :value="type") {{ $helpers.prettifyType(type) }}
 
           .sort-row
-            label Sort By:
-            select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, sets)")
+            label(for="sort-input") Sort By:
+            select.table-sort-select(
+              id="sort-input"
+              v-model="sortKey"
+              @change="$helpers.sort(sortKey, sets)")
               option(value="releaseDate:true") Release Date (Newest)
               option(value="releaseDate") Release Date (Oldest)
               option(value="code") Code (Ascending)
@@ -37,9 +42,9 @@
               option(value="type:true") Type (Descending)
 
           .sort-row.checkbox
-            label(for="include-spoilers") Include Spoilers:
+            label(for="spoiler-input") Include Spoilers:
             input(
-              id="include-spoilers"
+              id="spoiler-input"
               type="checkbox"
               :checked="spoilerKey"
               v-model="spoilerKey"
@@ -70,7 +75,7 @@
 </template>
 
 <script>
-import DownloadField from './DownloadField';
+import DownloadField from "./DownloadField";
 export default {
   name: "DownloadSets",
   components: { DownloadField },

@@ -19,6 +19,20 @@ module.exports = {
   ga: 'UA-131358443-1',
   // Head Tags
   head: [
+    [
+      'meta',
+      {
+        property: 'charset',
+        content: 'utf-8'
+      }
+    ],
+    [
+      'meta',
+      {
+        name: 'viewport',
+        content: 'width=device-width, initial-scale=1, maximum-scale=1,user-scalable=no'
+      }
+    ],
     // Favicon and OS Tiles
     ['link', { rel: 'icon', href: '/favicon-dark.ico' }],
     [
@@ -72,18 +86,20 @@ module.exports = {
         content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
       }
     ],
-    // Keyrun for set images
-    [
-      'link',
-      {
-        rel: 'stylesheet',
-        type: 'text/css',
-        media: 'screen',
-        href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css'
-      }
-    ]
+    // Keyrune for set images
+    // [
+    //   'link',
+    //   {
+    //     rel: 'stylesheet',
+    //     type: 'text/css',
+    //     media: 'screen',
+    //     href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css'
+    //   }
+    // ]
   ],
   plugins: [
+    ['@vuepress/back-to-top'],
+    ['vuepress-plugin-smooth-scroll'],
     [
       'container',
       {

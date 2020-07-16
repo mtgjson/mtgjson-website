@@ -80,11 +80,6 @@ export default {
   align-items: center;
   cursor: pointer;
 
-  h6 {
-    display: inline;
-    margin-left: 10px;
-  }
-
   &--button {
     width: 25px;
     height: 25px;

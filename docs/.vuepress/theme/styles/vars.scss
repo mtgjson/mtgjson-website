@@ -60,6 +60,9 @@
 }
 
 body {
+  background-color: var(--dark-1-color);
+  color: var(--text-color);
+
   &.light {
     // Main Color
     --accent-color: var(--blue-2-color);
