@@ -22,13 +22,6 @@ export default {
     NavMeta,
   },
 };
-
-// function css(el, property) {
-//   // NOTE: Known bug, will return 'auto' if style value is 'auto'
-//   const win = el.ownerDocument.defaultView;
-//   // null means not to return pseudo styles
-//   return win.getComputedStyle(el, null)[property];
-// }
 </script>
 
 <style lang="scss">
@@ -38,10 +31,6 @@ export default {
   display: flex;
   position: relative;
   z-index: 9;
-  // position: fixed;
-  // top: 0;
-  // right: 0;
-  // left: 0;
   height: var(--navbar-height);
   align-items: center;
   background-color: var(--bg-color);

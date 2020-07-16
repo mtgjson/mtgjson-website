@@ -10,23 +10,20 @@
       slot(name="sidebar-top" slot="top")
       slot(name="sidebar-bottom" slot="bottom")
 
-    Home(v-if="$page.frontmatter.home")
-
-    Page(v-else :sidebar-items="sidebarItems")
+    Page(:sidebar-items="sidebarItems")
       slot(name="page-top" slot="top")
       slot(name="page-bottom" slot="bottom")
 
 </template>
 
 <script>
-import Home from '../components/Home';
 import Navbar from '../components/Navbar';
 import Page from '../components/Page';
 import Sidebar from '../components/Sidebar';
 import { resolveSidebarItems } from '../util';
 
 export default {
-  components: { Home, Page, Sidebar, Navbar },
+  components: { Page, Sidebar, Navbar },
 
   data() {
     return {

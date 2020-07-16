@@ -9,8 +9,8 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
-            a(v-if="link" :href="link" rel="nofollow" target="_blank")
+                img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
+            a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h6(v-html="name")
             h6(v-else v-html="name")
             p.tier {{ tier }} Supporter
@@ -24,10 +24,10 @@
       .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services" :key="key")
           .supporter-link
-            a(:href="link ? link : ''" rel="nofollow" target="_blank")
+            a(:href="link ? link : ''" rel="noopener noreferrer" target="_blank")
               .img-wrap(v-if="image")
                 .img-wrap--container
-                  img(class="lazy" src="" :data-src="'/images/' + image" :alt="link" :title="name")
+                  img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
               h6 {{ name }}
 
 </template>
@@ -135,11 +135,6 @@ export default {
       padding-right: 1rem;
       border-color: var(--table-border-color);
 
-      a[href=""] {
-        cursor: initial;
-        text-decoration: none;
-      }
-
       .img-wrap {
         display: inline-flex;
         justify-content: center;
@@ -236,12 +231,6 @@ export default {
     &.services {
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
-  }
-}
-
-@media (max-width: 400px) {
-  .supporters-grid {
-    grid-template-columns: minmax(0, 1fr);
   }
 }
 </style>

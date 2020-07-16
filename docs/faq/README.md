@@ -7,7 +7,7 @@
     },
     {
       'name': 'keywords',
-      'content': 'mtg, magic: the gathering, mtgjson, json, faq, frequently asked questions',
+      'content': 'mtg, magic: the gathering, mtgjson, json, FAQ, frequently asked questions',
     },
   ],
   "feed": {
@@ -29,6 +29,11 @@ In most cases, [AllPrintings.json](/api/v5/AllPrintings.json.zip) is the correct
 Note that the json files are minified, and not really human-readable: use a software like JQ to parse and process them.
 :::
 
+### Which file formats should I use for my project?
+::: tip Which file formats should I use for my project?
+We recommend downloaded the compressed copies of files and unpack locally, as it will almost certainly be faster than downloading the full sized .json files.
+:::
+
 ### Where does the data come from?
 ::: tip Where does the data come from?
 Data is collected from a variety of sources, including Gatherer, Scryfall, TCGPlayer, and many more. If you want to know more, or you would like to help, jump on our [Discord](https://mtgjson.com/discord)!
@@ -41,7 +46,7 @@ We recommend downloading the compressed files and unpacking them on your local/r
 
 ### How much does MTGJSON cost?
 ::: tip How much does MTGJSON cost?
-MTGJSON is free and open source under the MIT License. If you find it useful, please consider helping us to keep the lights on and develop new features for you with a donation to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferer noopener">PayPal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (recurring donations).
+MTGJSON is free and open source under the MIT License. If you find it useful, please consider helping us to keep the lights on and develop new features for you with a donation to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (recurring donations).
 :::
 
 ### How can I help? Where can I report a bug suggestion etc?
@@ -58,7 +63,7 @@ Full builds are available weekly at <strong style="color: var(--accent-color);">
 ::: tip Can I verify the downloaded files?
 Yes. Every file has a SHA-256 file available at the same API location with an appended `.sha256` format.
 
-For example: `https://mtgjson.com/api/v5/AllPrintings.json.sha256`.
+For example: `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 :::
 
 ### How do I access a card's imagery?

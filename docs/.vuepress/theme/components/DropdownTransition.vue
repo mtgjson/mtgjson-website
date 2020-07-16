@@ -23,7 +23,7 @@ export default {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 .dropdown-enter, .dropdown-leave-to {
   height: 0 !important;
 }

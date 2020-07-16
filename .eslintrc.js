@@ -14,7 +14,11 @@ module.exports = {
   extends: [
     // add more generic rulesets here, such as:
     "eslint:recommended",
-    "plugin:vue/recommended"
+    "plugin:vue/recommended",
+    "plugin:vue-a11y/recommended"
+  ],
+  plugins: [
+    "vue"
   ],
   ignorePatterns: ["dist/", "node_modules/", "*.json"],
   rules: {

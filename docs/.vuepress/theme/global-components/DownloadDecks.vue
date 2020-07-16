@@ -4,21 +4,25 @@
       p.loading-msg {{ message }}
     .download-table(v-else)
       .sorting-options
-        h6.show-options(
+        p.show-options(
           @click="showOptions = !showOptions"
           :class="{'hide-options': !showOptions}") Toggle Options
-        .sort-rows(v-if="showOptions")
+        fieldset.sort-rows(v-if="showOptions")
           .sort-row.search
-            label Search By:
+            label(for="search-input") Search By:
             input.table-sort-select(
+              id="search-input"
               placeholder="name, code, etc..."
               type="text"
               v-model="searchKey"
               @input="onHandleChange")
 
           .sort-row
-            label Sort By:
-            select.table-sort-select(v-model="sortKey" @change="$helpers.sort(sortKey, decks)")
+            label(for="sort-input") Sort By:
+            select.table-sort-select(
+              id="sort-input"
+              v-model="sortKey"
+              @change="$helpers.sort(sortKey, decks)")
               option(value="releaseDate:true" selected) Newest
               option(value="releaseDate") Oldest
               option(value="code") Code (Ascending)
@@ -44,7 +48,6 @@
             .text-wrap--downloads
               DownloadField(:fileName="`decks/${deck.fileName}`")
 </template>
-
 <script>
 import DownloadField from './DownloadField';
 export default {

@@ -2,6 +2,7 @@
 {
   "title": "Types",
   "schema": "types",
+  "enum": "card",
   "meta": [
     {
       "name": "description",

@@ -88,19 +88,14 @@ img {
 }
 
 .dl-btn {
-  text-align: center;
-  padding: 3px 5px;
+  text-decoration: underline;
   text-transform: uppercase;
-  background-color: var(--accent-color);
-  color: var(--bg-color);
-  line-height: 1rem;
-  text-decoration: none;
-  margin-right: 5px;
-  margin-bottom: 5px;
-  border-radius: 5px;
-  font-size: 12px;
-  text-decoration: none !important;
-  font-weight: bold;
+  font-weight: 16px;
+  margin-left: 8px;
+
+  &:first-of-type {
+    margin-left: 0;
+  }
 }
 
 .search-box {
@@ -118,8 +113,7 @@ img {
     left: 0;
     width: 100%;
     transition: all 0s;
-    // Prevent zoom on mobile with 16px. Bye bye for now.
-    font-size: 12px;
+    font-size: 16px;
     font-weight: bold;
 
     &:focus {

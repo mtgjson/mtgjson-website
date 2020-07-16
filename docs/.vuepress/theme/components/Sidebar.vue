@@ -65,7 +65,7 @@ export default {
   bottom: 0;
   overflow: visible;
   background-color: var(--bg-color);
-  border-right: 1px solid var(--bg-border-color);
+  padding-bottom: 2rem;
 
   ol, ul {
     margin-left: 0;
@@ -140,14 +140,6 @@ export default {
         font-size: 1em;
         line-height: 2;
         font-weight: bold;
-      }
-
-      .is-sub-group {
-        .sidebar-heading {
-          font-weight: bold;
-          font-size: 14px;
-          margin-top: 0;
-        }
       }
     }
   }

@@ -25,14 +25,13 @@
 </template>
 
 <script>
-import Home from '../components/Home'
 import Page from '../components/Page'
 import Navbar from '../components/Navbar'
 import Sidebar from '../components/Sidebar'
 import { resolveSidebarItems } from '../util'
 
 export default {
-  components: { Home, Page, Navbar, Sidebar },
+  components: { Page, Navbar, Sidebar },
 
   data () {
     return {
@@ -125,3 +124,8 @@ export default {
 
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="../styles/theme.scss" lang="scss"></style>
+<style lang="scss" scoped>
+.content__default {
+  padding-bottom: 2rem;
+}
+</style>

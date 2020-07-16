@@ -1,11 +1,7 @@
+@import 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css';
+
 .download-tables {
   position: relative;
-
-  .download-table {
-    // display: grid;
-    // grid-template-columns: repeat(4, 1fr);
-    // grid-gap: 25px;
-  }
 
   .sorting-options {
     position: sticky;

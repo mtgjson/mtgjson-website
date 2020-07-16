@@ -40,6 +40,7 @@
   "dependencies": {
     "@sentry/browser": "^5.18.1",
     "@sentry/integrations": "^5.18.1",
+    "@vuepress/core": "^1.5.2",
     "@vuepress/plugin-back-to-top": "^1.5.2",
     "axios": "^0.19.2",
     "js-essentials": "0.0.6",
@@ -57,6 +58,7 @@
     "codecov": "^3.6.5",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
+    "eslint-plugin-vue-a11y": "^0.0.31",
     "husky": "^4.2.5",
     "jest": "^25.4.0",
     "node-fetch": "^2.6.0",
