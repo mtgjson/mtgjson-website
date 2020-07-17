@@ -84,6 +84,8 @@ export default {
 
       &:before {
         border: 1px solid var(--accent-color);
+        border-left-width: 0;
+        border-bottom-width: 0;
       }
 
       [class*=ds-dataset-] {

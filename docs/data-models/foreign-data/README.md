@@ -25,6 +25,6 @@ The Foreign Data data model describes a list of properties for a [Card](../card/
 > Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `foreignData`
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

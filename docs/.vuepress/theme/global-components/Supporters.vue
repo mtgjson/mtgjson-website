@@ -1,7 +1,7 @@
 <template lang="pug">
   .supporters(v-if="supporters")
     .supporters-wrap(v-if="patrons")
-      h4 Our Patreon Supporters
+      h3 Our Patreon Supporters
       p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
       small(v-html="projectMsg")
       .supporters-grid
@@ -11,14 +11,14 @@
               .img-wrap--container
                 img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
             a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
-              h6(v-html="name")
-            h6(v-else v-html="name")
+              h4(v-html="name")
+            h4(v-else v-html="name")
             p.tier {{ tier }} Supporter
             p.tier-time(v-if="since" v-html="formatTime(since)")
 
     //- Not Patrons but services that use MTGJSON
     .supporters-wrap(v-if="services")
-      h4 Others Powered by MTGJSON
+      h3 Others Powered by MTGJSON
       p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")
@@ -28,7 +28,7 @@
               .img-wrap(v-if="image")
                 .img-wrap--container
                   img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
-              h6 {{ name }}
+              h4 {{ name }}
 
 </template>
 
@@ -160,18 +160,14 @@ export default {
         }
       }
 
-      h6 {
+      h4 {
         flex: 0 0 100%;
-        font-size: 14px;
-        color: var(--text-color);
+        font-size: 16px;
+        color: var(--accent-color);
         display: block;
         margin: 0 auto;
         padding-bottom: 10px;
         line-height: 1.2rem;
-      }
-
-      h6 {
-        color: var(--accent-color);
       }
 
       p {
@@ -181,7 +177,7 @@ export default {
         line-height: 1.2em;
       }
 
-      h6,
+      h4,
       p {
         word-wrap: anywhere;
       }
@@ -190,7 +186,7 @@ export default {
         text-align: center;
         flex: 0 0 100%;
         margin: 0 auto;
-        font-size: 14px;
+        font-size: 16px;
         line-height: 1.2em;
         font-weight: bold;
         text-transform: capitalize;

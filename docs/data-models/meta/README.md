@@ -25,6 +25,6 @@ The Meta data model describes application build and prices build date [ISO 8601]
 > Parent file: <span class="code-wrap">[Meta](../../api/v5/Meta.json.zip)</span>  
 > Parent property: `data`, `meta`  
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

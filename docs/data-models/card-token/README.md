@@ -26,6 +26,6 @@ The Card (Token) data model describes the properties and values of a single card
 > Parent model: <span class="code-wrap">[Set](../set/)</span>  
 > Parent property: `tokens`
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

@@ -25,6 +25,6 @@ THe Purchase Urls data model describes raw URL paths to purchase a product from 
 > Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `purchaseUrls`
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

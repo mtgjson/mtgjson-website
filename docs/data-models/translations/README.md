@@ -25,6 +25,6 @@ The Translations data model describes the translated data per language as a key.
 > Parent model: <span class="code-wrap">[Set](../set/)</span>  
 > Parent property: `translations`  
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

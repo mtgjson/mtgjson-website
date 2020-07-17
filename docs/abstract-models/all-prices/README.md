@@ -23,14 +23,14 @@ The All Prices data model describes a list of card prices based on date.
 > Parent file: <span class="code-wrap">[AllPrices](../../api/v5/AllPrices.json)</span>  
 > Parent property: `data`
 
-### Price Providers
+## Price Providers
 
 MTGJSON currently has affiliated with the following markets to keep a history of price data and the following examples are formatted for the data model:
 
 - paper: <a href="https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson" target="_blank" rel="noopener noreferrer">tcgplayer</a>, <a href="https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson" target="_blank" rel="noopener noreferrer">cardmarket</a>, and <a href="https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson" target="_blank" rel="noopener noreferrer">cardkingdom</a>
 - mtgo: <a href="https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card" target="_blank" rel="noopener noreferrer">cardhoarder</a>
 
-### File Structure Overview
+## File Structure Overview
 
 ```json
 {

@@ -25,6 +25,6 @@ The Types data model describes card types available to MTGJSON.
  
 > Parent model: <span class="code-wrap">[Card Types](/data-models/card-types/)</span>  
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

@@ -25,6 +25,6 @@ The Identifiers data model describes a list of ID's associated to a card.
 > Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `identifiers`
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

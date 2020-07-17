@@ -29,6 +29,6 @@ The Legalities data model describes a list of play formats that are legal for a 
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example in the data model.
 :::
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

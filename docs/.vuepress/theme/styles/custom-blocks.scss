@@ -1,5 +1,5 @@
-blockquote, .custom-block {
-  font-size: 14px;
+.schema-data--table, .custom-block, blockquote {
+  font-size: 16px;
   border-radius: 5px;
   border: 1px solid var(--table-border-color);
   border-left-color: var(--blockquote-heading-color);
@@ -32,32 +32,6 @@ blockquote, .custom-block {
 
     .custom-block-title {
       color: var(--yellow-color);
-    }
-  }
-}
-
-pre.vue-container {
-  border-left-width: 0.5rem;
-  border-left-style: solid;
-  border-color: #42b983;
-  border-radius: 0px;
-
-  & > code {
-    font-size: 14px !important;
-
-    & > p {
-      margin: -5px 0 -20px 0;
-    }
-
-    code {
-      background-color: #42b983 !important;
-      padding: 3px 5px;
-      color: #000;
-    }
-
-    em {
-      color: #808080;
-      font-weight: light;
     }
   }
 }

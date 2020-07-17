@@ -2,7 +2,7 @@
 const generateSidebarRoutes = require('./config.sidebar');
 const [dataModels, abstractModels] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
 // SEO data
-const title = 'MTGJSON, Portable formats for Magic: The Gathering card data';
+const title = 'MTGJSON';
 const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
@@ -86,16 +86,6 @@ module.exports = {
         content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
       }
     ],
-    // Keyrune for set images
-    // [
-    //   'link',
-    //   {
-    //     rel: 'stylesheet',
-    //     type: 'text/css',
-    //     media: 'screen',
-    //     href: 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css'
-    //   }
-    // ]
   ],
   plugins: [
     ['@vuepress/back-to-top'],
@@ -166,7 +156,7 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     // Last updated time stamp
     lastUpdated: 'Last Updated',
-    title: 'MTGJSON',
+    title: title,
     logo: '/images/logo-3.svg',
     smoothScroll: true,
     nav: [
@@ -175,7 +165,7 @@ module.exports = {
       { text: 'Support us on Patreon', link: 'https://www.patreon.com/MTGJSON' },
       { text: 'Contribute on GitHub', link: 'https://github.com/mtgjson' }
     ],
-    sidebarDepth: 1,
+    sidebarDepth: 0,
     sidebar: [
       {
         title: 'About Us',

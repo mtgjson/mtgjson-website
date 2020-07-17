@@ -11,18 +11,19 @@
     padding: 1rem 0 1.5rem;
     // grid-column: span 4;
 
-    h6.show-options {
+    .show-options {
       display: inline-block;
       padding: 0 0 1.5rem;
       margin-bottom: 0;
       position: relative;
       color: var(--accent-color);
       text-decoration: underline;
+      font-weight: bold;
       cursor: pointer;
 
       &::after {
         right: -15px;
-        top: 6px;
+        top: 10px;
         border: solid transparent;
         content: ' ';
         height: 0;
@@ -40,7 +41,7 @@
         &::after {
           border-top-color: transparent;
           border-bottom-color: var(--accent-color);
-          top: 0px;
+          top: 5px;
         }
       }
     }
@@ -54,13 +55,13 @@
 
         label {
           font-weight: bold;
-          font-size: 14px;
+          font-size: 16px;
           color: var(--gray-color);
         }
 
         select, input {
           display: inline;
-          font-size: 14px;
+          font-size: 16px;
           margin-left: 10px;
           padding: 3px 5px 5px 0;
         }

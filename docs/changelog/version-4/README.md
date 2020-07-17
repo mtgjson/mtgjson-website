@@ -279,7 +279,7 @@ Release Date: 2019-08-11
 Release Date: 2019-06-26
 
 ### Announcements
-<img src="/images/mit-license.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MIT License"/>With the 4.4.2 release of MTGJSON, we have officially changed licenses for our project. From this point onward, all code and content are available under the MIT license. We felt that GPLv3 was a bit too restrictive for what we aim to achieve: free, open data for all who have an interest in Magic: the Gathering and development. We look forward to serving our users and cannot wait to see what you can create!<br/><br/>
+<img src="/images/mit-license.jpg" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="MIT License"/>With the 4.4.2 release of MTGJSON, we have officially changed licenses for our project. From this point onward, all code and content are available under the MIT license. We felt that GPLv3 was a bit too restrictive for what we aim to achieve: free, open data for all who have an interest in Magic: The Gathering and development. We look forward to serving our users and cannot wait to see what you can create!<br/><br/>
 
 Do you have a project that uses MTGJSON? Please reach out to us and we will get your project added to our homepage! Want to move up on the list? Consider supporting MTGJSON via [Patreon](https://patreon.com/mtgjson).
 

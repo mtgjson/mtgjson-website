@@ -25,6 +25,6 @@ The Leadership Skills data model describes a list of formats that a specific car
 > Parent model: <span class="code-wrap">[Card](../card/)</span>  
 > Parent property: `leadershipSkills`
 
-### Model Properties
+## Model Properties
 
 <Documentation/>

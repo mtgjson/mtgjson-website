@@ -10,7 +10,7 @@
     //- Properties Index
     //- This fills out an anchored list of all the properties
     .schema-item.schema-index
-      h4 Property Index
+      h3 Property Index
       p A list of all available properties.
 
       ol(:class="{hide: willShowMore, wontHide: !showMore}")
@@ -24,9 +24,9 @@
     //- Properties Table
     //- This fills out a fully descriptive list of all the properties
     .schema-item.schema-data
-      h4 Property Information
+      h3 Property Information
 
-      blockquote.schema-data--table(
+      .schema-data--table(
       v-for="(data, name) in filteredSchema"
       v-show="shouldShowProperty(data)"
       :key="name"
