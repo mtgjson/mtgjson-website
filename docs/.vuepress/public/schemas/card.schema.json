@@ -99,6 +99,14 @@
     "isAtomicProperty": true,
     "introduced": "v4.1.1"
   },
+  "faceName": {
+    "type": "string",
+    "example": "\"Daybreak Ranger\"",
+    "description": "Name on the face of the card.",
+    "isAtomicProperty": true,
+    "isTokenProperty": true,
+    "introduced": "v5.0.0"
+  },
   "flavorName": {
     "type": "string",
     "example": "\"Mothra, Supersonic Queen\"",
