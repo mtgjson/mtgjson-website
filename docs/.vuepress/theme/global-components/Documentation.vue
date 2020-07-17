@@ -236,8 +236,8 @@ export default {
       page = this.values[pageProperty]; // lookup if we have a matching key to the page
 
       // Hack to allow CardTypes to use Card.<types>
-      if(property === 'subTypes') property = 'subtypes';
-      if(property === 'superTypes') property = 'supertypes';
+      if(property === 'subTypes') {property = 'subtypes';}
+      if(property === 'superTypes') {property = 'supertypes';}
 
       if (page) {
         values = page[property];
