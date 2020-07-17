@@ -49,6 +49,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 - Added `variations` to show all cards with the same name
 - Added `keywords` for all keywords available on a card
 - Added `mtgjsonV4Id` to identifiers to help transition developer's code
+- Added `faceName` to identify only the card face card's name
 
 ### Sets
 #### Added
