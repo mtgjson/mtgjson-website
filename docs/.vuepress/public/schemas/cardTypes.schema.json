@@ -12,7 +12,7 @@
   "creature": {
     "type": "object",
     "example": "{{link@Types@/data-models/types}}",
-    "description": "All possible subtypes and supertypes card Creature cards. See the {{link@Types@/data-models/types}} data model."
+    "description": "All possible subtypes and supertypes for Creature cards. See the {{link@Types@/data-models/types}} data model."
   },
   "enchantment": {
     "type": "object",

@@ -21,7 +21,7 @@
     "introduced": "v5.0.0"
   },
   "availability": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"mtgo\", \"online\", \"paper\" ]",
     "description": "List of the card's available printing types.",
     "introduced": "v5.0.0"
@@ -34,7 +34,7 @@
     "introduced": "v4.0.0"
   },
   "colorIdentity": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors found in {{code@manaCost}}, {{code@colorIndicator}} and {{code@text}}.",
     "isAtomicProperty": true,
@@ -42,7 +42,7 @@
     "introduced": "v4.0.0"
   },
   "colorIndicator": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors in the color indicator (The symbol prefixed to a card's types).",
     "isAtomicProperty": true,
@@ -50,7 +50,7 @@
     "introduced": "v4.0.2"
   },
   "colors": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors in {{code@manaCost}} and {{code@colorIndicator}}. Some cards may not have a value, such as cards with \"Devoid\" in its {{code@text}}.",
     "isAtomicProperty": true,
@@ -133,7 +133,7 @@
     "introduced": "v4.0.0"
   },
   "frameEffects": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"colorshifted\", ... ]",
     "description": "The visual frame effect.",
     "introduced": "v4.6.0"
@@ -293,7 +293,7 @@
     "introduced": "v4.4.1"
   },
   "keywords": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"Deathtouch\", ... ]",
     "description": "All keywords found on a card.",
     "attributes": [
@@ -394,7 +394,7 @@
     "introduced": "v4.0.0"
   },
   "otherFaceIds": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with counterparts, such as transformed or melded faces.",
     "introduced": "v4.6.1"
@@ -411,7 +411,7 @@
     "introduced": "v4.0.0"
   },
   "printings": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"M19\", \"PM19\", ... ]",
     "description": "List of sets the card was printed in, in uppercase.",
     "attributes": [
@@ -421,7 +421,7 @@
     "introduced": "v4.0.0"
   },
   "promoTypes": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"bundle\", ... ]",
     "description": "List of promotional types for a card.",
     "attributes": [
@@ -443,7 +443,7 @@
     "introduced": "v4.0.0"
   },
   "reverseRelated": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"Ajani, Strength of the Pride\", ... ]",
     "description": "The names of the cards that produce this card.",
     "isTokenProperty": true,
@@ -469,7 +469,7 @@
     "introduced": "v4.1.0"
   },
   "subtypes": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"Myr\", \"Construct\", ... ]",
     "description": "List of card subtypes found after em-dash.",
     "isAtomicProperty": true,
@@ -477,7 +477,7 @@
     "introduced": "v4.0.0"
   },
   "supertypes": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"Legendary\", ... ]",
     "description": "List of card supertypes found before em-dash.",
     "isAtomicProperty": true,
@@ -515,7 +515,7 @@
     "introduced": "v4.0.0"
   },
   "types": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"Artifact\", \"Creature\", ... ]",
     "description": "List of all \"card types\" of the card, including Un-sets and gameplay variants.",
     "isAtomicProperty": true,
@@ -531,7 +531,7 @@
     "introduced": "v4.0.0"
   },
   "variations": {
-    "type": "array(string) | array()",
+    "type": "array | array()",
     "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.",
     "introduced": "v4.1.2"

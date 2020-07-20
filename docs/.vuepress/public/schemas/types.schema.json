@@ -1,12 +1,12 @@
 {
   "subTypes": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"elf\", ... ]",
     "description": "All available subtypes of a card.",
     "introduced": "v4.0.0"
   },
   "superTypes": {
-    "type": "array(string)",
+    "type": "array",
     "example": "[ \"legendary\", ... ]",
     "description": "All available supertypes of a card.",
     "introduced": "v4.0.0"
