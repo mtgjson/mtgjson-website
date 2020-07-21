@@ -22,8 +22,7 @@ module.exports = {
     [
       'meta',
       {
-        property: 'charset',
-        content: 'utf-8'
+        charset: 'utf-8'
       }
     ],
     [
