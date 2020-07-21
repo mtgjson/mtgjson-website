@@ -31,7 +31,7 @@ Note that the json files are minified, and not really human-readable: use a soft
 
 ### Which file formats should I use for my project?
 ::: tip Which file formats should I use for my project?
-We recommend downloaded the compressed copies of files and unpack locally, as it will almost certainly be faster than downloading the full sized .json files.
+We recommend downloading the compressed copies of files and unpack locally, as it will almost certainly be faster than downloading the full sized .json files.
 :::
 
 ### Where does the data come from?
