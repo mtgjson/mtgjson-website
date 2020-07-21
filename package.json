@@ -55,7 +55,7 @@
     "@babel/preset-env": "^7.9.5",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^25.4.0",
-    "codecov": "^3.6.5",
+    "codecov": "^3.7.1",
     "eslint": "^6.8.0",
     "eslint-plugin-vue": "^6.2.2",
     "eslint-plugin-vue-a11y": "^0.0.31",
