@@ -24,6 +24,7 @@
     "type": "array",
     "example": "[ \"mtgo\", \"online\", \"paper\" ]",
     "description": "List of the card's available printing types.",
+    "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
   "borderColor": {
@@ -142,6 +143,7 @@
     "type": "string",
     "example": "\"1993\"",
     "description": "Version of the card frame style.",
+    "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "hand": {
@@ -167,6 +169,7 @@
     "type": "boolean",
     "example": "true",
     "description": "If the card be found in foil.",
+    "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "hasAlternativeDeckLimit": {
@@ -183,12 +186,14 @@
     "type": "boolean",
     "example": "true",
     "description": "If the card can be found in non-foil",
+    "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "identifiers": {
     "type": "object",
     "example": "{{link@Identifiers@/data-models/identifiers/}}",
     "description": "See the {{link@Identifiers@/data-models/identifiers/}} data model.",
+    "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
   "isAlternative": {
@@ -244,6 +249,7 @@
     "attributes": [
       "optional"
     ],
+    "isTokenProperty": true,
     "introduced": "v4.4.2"
   },
   "isReserved": {
@@ -427,6 +433,7 @@
     "attributes": [
       "optional"
     ],
+    "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
   "purchaseUrls": {
