@@ -1,6 +1,6 @@
 ---
 {
-  "title": "",
+  # "title": "What is MTGJSON",
   "meta": [
     {
       "name": "keywords",

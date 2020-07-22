@@ -91,12 +91,16 @@
       "optional"
     ],
     "isAtomicProperty": true,
+    "isTokenProperty": true,
     "introduced": "v4.5.0"
   },
   "faceConvertedManaCost": {
     "type": "float",
     "example": "5.0",
     "description": "The converted mana cost of the face of either half or part of the card.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "introduced": "v4.1.1"
   },
@@ -124,6 +128,7 @@
     "attributes": [
       "optional"
     ],
+    "isTokenProperty": true,
     "introduced": "v4.0.0"
   },
   "foreignData": {
@@ -137,6 +142,7 @@
     "type": "array | array()",
     "example": "[ \"colorshifted\", ... ]",
     "description": "The visual frame effect.",
+    "isTokenProperty": true,
     "introduced": "v4.6.0"
   },
   "frameVersion": {
@@ -205,6 +211,15 @@
     ],
     "introduced": "v4.2.0"
   },
+  "isFoil": {
+    "type": "boolean",
+    "example": "true",
+    "description": "If the card is in foil.",
+    "attributes": [
+      "decks-only"
+    ],
+    "introduced": "v5.0.0"
+  },
   "isFullArt": {
     "type": "boolean",
     "example": "true",
@@ -212,6 +227,7 @@
     "attributes": [
       "optional"
     ],
+    "isTokenProperty": true,
     "introduced": "v4.4.2"
   },
   "isOnlineOnly": {
@@ -240,6 +256,7 @@
     "attributes": [
       "optional"
     ],
+    "isTokenProperty": true,
     "introduced": "v4.4.2"
   },
   "isReprint": {
@@ -305,6 +322,7 @@
     "attributes": [
       "optional"
     ],
+    "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
   "layout": {
@@ -360,6 +378,9 @@
     "type": "string",
     "example": "\"{3}{W}{W}\"",
     "description": "Mana cost of the card.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },

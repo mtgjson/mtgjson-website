@@ -23,4 +23,4 @@ All outputted files to download provided by MTGJSON.
 
 <GlobalAlert/>
 
-<DownloadCompiled/>
+<DownloadFiles/>

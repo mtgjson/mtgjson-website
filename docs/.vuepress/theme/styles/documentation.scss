@@ -1,97 +1,16 @@
-
-em {
-  color: var(--gray-color);
-}
-
-pre,
-code {
-  display: inline-block;
-  white-space: pre-line;
-
-  &:empty {
-    display: none;
-  }
-}
-
-pre {
-  margin: 7px 0;
-  line-height: 1.7em;
-}
-
-.loading-msg {
-  padding-top: 0 !important;
-}
-
-.values-list {
-  position: relative;
-  display: flex;
-  // align-items: center;
-  height: 47px;
-
-  ol {
-    position: absolute;
-    top: 8px;
-    z-index: 10;
-    padding: 0 37px 7px 11px;
-    max-height: 200px;
-    overflow: auto;
-    width: max-content;
-    cursor: pointer;
-
-    li {
-      position: relative;
-      list-style: none;
-      padding-top: 7px;
-      display: none;
-
-      &:first-of-type {
-        display: block;
-      }
-    }
-
-    &::after {
-      top: 14px;
-      right: 11px;
-      border: solid transparent;
-      content: '';
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border-color: transparent;
-      border-top-color: var(--code-text-color);
-      border-width: 5px;
-      margin-left: -5px;
-    }
-
-    &.selected {
-      z-index: 11;
-
-      &::after {
-        height: 15px;
-        border: 0;
-        width: 15px;
-        line-height: 1rem;
-        text-align: right;
-        font-weight: bold;
-        content: '\00D7';
-        top: 7px;
-        font-size: 16px;
-      }
-
-      li {
-        display: block;
-      }
-    }
-  }
-}
-
 .schema {
-  &-item {
-    ol,
-    ul {
-      margin-left: 0;
-    }
+  em {
+    color: var(--gray-color);
+  }
+
+  pre, code {
+    margin: 7px 0;
+    line-height: 1.7em;
+    white-space: pre-line;
+  }
+
+  .loading-msg {
+    padding-top: 0 !important;
   }
 
   &-index {
@@ -106,10 +25,6 @@ pre {
       overflow: hidden;
       padding-bottom: 30px;
       border-bottom: 1px solid var(--bg-color);
-
-      li {
-        list-style: disc;
-      }
 
       &::after {
         transform: rotateX(180deg);
@@ -137,10 +52,6 @@ pre {
           box-shadow: none;
         }
       }
-    }
-
-    small {
-      color: var(--gray-color);
     }
 
     .show-more {
@@ -176,100 +87,154 @@ pre {
     }
   }
 
-  &-data {
-    padding-top: 15px;
+  &-table {
+    position: relative;
+    background-color: var(--table-bg-color);
+    border-color: var(--table-border-color);
+    box-sizing: border-box;
+    position: relative;
+    margin-top: 1rem;
+    margin-bottom: 2rem;
+    padding: 0;
 
-    &--table {
-      position: relative;
-      background-color: var(--table-bg-color);
-      border-color: var(--table-border-color);
-      box-sizing: border-box;
-      position: relative;
-      margin-top: 10px;
-      margin-bottom: 25px;
-      padding: 0;
-
-      &.omitted {
-        &::after {
-          content: 'Omitted';
-          position: absolute;
-          color: var(--text-color);
-          font-weight: bold;
-          font-size: 4rem;
-          top: 50%;
-          transform: translateY(-50%) rotate(-15deg);
-          margin: 0 auto;
-          left: 0;
-          right: 0;
-          opacity: 0.15;
-          pointer-events: none;
-        }
-      }
-
-      // Allows us to anchor to a screen safe position
-      &-anchor {
+    &.omitted {
+      &::after {
+        content: 'Omitted';
         position: absolute;
-        top: -(var(--navbar-height) + 1rem);
+        color: var(--text-color);
+        font-weight: bold;
+        font-size: 4rem;
+        top: 50%;
+        transform: translateY(-50%) rotate(-15deg);
+        margin: 0 auto;
+        left: 0;
+        right: 0;
+        opacity: 0.15;
+        pointer-events: none;
       }
+    }
 
-      &-item {
-        display: grid;
-        grid-template-columns: minmax(min-content, 150px) 1fr;
-        border-bottom: 1px solid var(--table-border-color);
+    .values-list {
+      position: relative;
+      display: flex;
+      // align-items: center;
+      height: 47px;
 
-        &:last-of-type {
-          border-bottom-width: 0;
+      ol {
+        position: absolute;
+        top: 8px;
+        z-index: 10;
+        padding: 0 37px 7px 11px;
+        max-height: 200px;
+        overflow: auto;
+        width: max-content;
+        cursor: pointer;
+
+        li {
+          position: relative;
+          list-style: none;
+          padding-top: 7px;
+          display: none;
+
+          &:first-of-type {
+            display: block;
+          }
         }
 
-        .heading {
-          grid-column: span 1;
-          text-align: left;
-          text-transform: capitalize;
-          background-color: var(--table-heading-color);
-          border-right: 1px solid var(--table-border-color);
+        &::after {
+          top: 14px;
+          right: 11px;
+          border: solid transparent;
+          content: '';
+          height: 0;
+          width: 0;
+          position: absolute;
+          pointer-events: none;
+          border-color: transparent;
+          border-top-color: var(--code-text-color);
+          border-width: 5px;
+          margin-left: -5px;
+        }
+
+        &.selected {
+          z-index: 11;
+
+          &::after {
+            height: 15px;
+            border: 0;
+            width: 15px;
+            line-height: 1rem;
+            text-align: right;
+            font-weight: bold;
+            content: '\00D7';
+            top: 7px;
+            font-size: 16px;
+          }
+
+          li {
+            display: block;
+          }
+        }
+      }
+    }
+
+    &--item {
+      display: grid;
+      grid-template-columns: minmax(min-content, 150px) 1fr;
+      border-bottom: 1px solid var(--table-border-color);
+
+      &:last-of-type {
+        border-bottom-width: 0;
+      }
+
+      .heading {
+        grid-column: span 1;
+        text-align: left;
+        text-transform: capitalize;
+        background-color: var(--table-heading-color);
+        border-right: 1px solid var(--table-border-color);
+        display: flex;
+        align-items: center;
+        padding: 7px 13px;
+        font-size: 1rem;
+        cursor: help;
+
+        & + * {
+          padding: 7px 13px;
           display: flex;
           align-items: center;
-          padding: 7px 13px;
-          font-size: 1rem;
+          grid-column: span 1;
+        }
+
+        * {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          align-items: center;
+        }
+      }
+
+      .type {
+        & > *[title] {
           cursor: help;
+        }
+      }
 
-          & + * {
-            padding: 7px 13px;
-            display: flex;
-            align-items: center;
-            grid-column: span 1;
-          }
+      .name {
+        a {
+          text-decoration: none;
 
-          * {
-            width: 100%;
-            height: 100%;
-            display: flex;
-            align-items: center;
+          h6 {
+            font-weight: normal;
           }
         }
+      }
 
-        .type {
-          & > *[title] {
-            cursor: help;
-          }
-        }
+      .attributes {
+        display: block;
 
-        .name {
-          a {
-            text-decoration: none;
-
-            h6 {
-              font-weight: normal;
-            }
-          }
-        }
-
-        .attributes {
-          display: block;
-
-          .attribute {
-            margin-top: 5px;
-          }
+        .attribute {
+          margin-top: 5px;
         }
       }
     }
@@ -278,24 +243,9 @@ pre {
 
 @media (max-width: 571px) {
   .schema {
-    &-legend {
-      ol {
-        li {
-          display: block;
-          margin-bottom: 5px;
-
-          span {
-            display: block;
-          }
-        }
-      }
-    }
-
-    &-data {
-      &--table {
-        &-item {
-          grid-template-columns: minmax(min-content, 120px) 1fr;
-        }
+    &-table {
+      &--item {
+        grid-template-columns: minmax(min-content, 120px) 1fr;
       }
     }
   }
@@ -304,17 +254,15 @@ pre {
 @media (max-width: 401px) {
   // 400px is used on a lot of modern device viewports
   .schema {
-    &-data {
-      &--table {
-        border-left-width: 1px;
+    &-table {
+      border-left-width: 1px;
 
-        &-item {
-          grid-template-columns: 1fr;
+      &--item {
+        grid-template-columns: 1fr;
 
-          &,
-          .heading {
-            border-width: 0;
-          }
+        &,
+        .heading {
+          border-width: 0;
         }
       }
     }

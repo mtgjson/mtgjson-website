@@ -1,5 +1,5 @@
 <template lang="pug">
-  .schema-data--table-item
+  .schema-table--item
     h4.heading(:title="title") {{ label }}
     .content
       p

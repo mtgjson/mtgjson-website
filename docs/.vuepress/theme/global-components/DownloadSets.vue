@@ -51,7 +51,7 @@
               @input="onHandleChange")
 
       p(v-if="sets.length < 1") {{ message }}
-      blockquote.download-item(v-for="(set, key) in sets" :key="key" v-else)
+      .schema-table(v-for="(set, key) in sets" :key="key" v-else)
         .download-wrap
           .img-wrap
             div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -59,7 +59,7 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h4(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFutureDate(set.releaseDate)}") {{ set.name }}
+              h2(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFutureDate(set.releaseDate)}") {{ set.name }}
               ol
                 li
                   small Set Code:

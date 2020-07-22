@@ -1,50 +1,43 @@
 <template lang="pug">
   .download-tables
     .download-table
-      blockquote.download-item(v-for="(file, name) in files" :key="name" v-if="files && file.example !== 'AllPrintingsCSVFiles'")
+      .schema-table(v-for="(file, name) in files" :key="name" v-if="files")
         .download-wrap
           .text-wrap
             .text-wrap--details
-              h4(:id="name") {{ name }}
+              h2(:id="name") {{ name }}
               p(v-html="file.description")
 
             .text-wrap--download
               //- Individual Files
               ol(v-if="!file.example.includes('Files')")
                 li.text-wrap--download--btn-wrap
-                  small Download Files:
+                  h5 Download Files:
                   a.dl-btn(download :href="`${$api}${file.example}.json`") JSON
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.json.${compression}`") {{ compression }}
 
               //- Directory Files
               ol(v-if="file.example.includes('Files')")
                 li.text-wrap--download--btn-wrap
-                  small Download Files:
+                  h5 Download Files:
                   a.dl-btn(v-for="(format, key) in fileBaseCompression" :key="key" v-if="format !== 'zip'" download :href="`${$api}${file.example}.tar.${format}`") {{ format }}
                   a.dl-btn(v-else download :href="`${$api}${file.example}.zip`") {{ format }}
 
               ol(v-if="file.example === 'AllPrintings'")
                 li.text-wrap--download--btn-wrap
-                  small CSV Download Files:
-                  span
-                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.tar.bz2`") BZ2
-                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.tar.gz`") GZ
-                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.tar.xz`") XZ
-                    a.dl-btn(download :href="`${$api}AllPrintingsCSVFiles.zip`") ZIP
-                li.text-wrap--download--btn-wrap
-                  small SQL Download Files:
+                  h5 SQL Download Files:
+                    span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
                   a.dl-btn(download :href="`${$api}${file.example}.sql`") SQL
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
-                  small SQLite Download Files:
+                  h5 SQLite Download Files
+                    span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
                   a.dl-btn(download :href="`${$api}${file.example}.sqlite`") SQLite
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}
-                li.sqlite
-                  p SQL/SQLite database courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>.
 </template>
 
 <script>
-import files from "../../public/schemas/compiledList.schema.json";
+import files from "../../src/schemas/compiledList.schema.json";
 export default {
   name: "AllDownloads",
   data() {

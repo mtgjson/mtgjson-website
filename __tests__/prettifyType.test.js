@@ -1,4 +1,4 @@
-import prettifyType from '../docs/.vuepress/public/scripts/prettifyType';
+import prettifyType from '../docs/.vuepress/src/scripts/prettifyType';
 
 describe('helpers', () => {
   it('prettifyType should return a string removed of underscores, spaces and capitalized words', async () => {
