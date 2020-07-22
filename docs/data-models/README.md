@@ -25,7 +25,7 @@ For example, any <strong>Data Model</strong> would look similar to this:
 
 ```json
 "<Some Property Key>": {
-  "<A Nested Property Key": "<String, Boolean, Array, Enum Array, Model Reference>",
+  "<A Nested Property Key>": "<String, Boolean, Array, Enum Array, Model Reference>",
   "<Some Other Nested Property Key>": "<String, Boolean, Array, Enum Array, Model Reference>",
   ...
 }
