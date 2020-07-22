@@ -20,7 +20,7 @@
         .embed-wrap
           h5 Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
-          a.dl-btn(@click="copyEmbed" data-which="0") Copy Embed
+          button.cta-btn(@click="copyEmbed" data-which="0") Copy Embed
 </template>
 
 <script>
