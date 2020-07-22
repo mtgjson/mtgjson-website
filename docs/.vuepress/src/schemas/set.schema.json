@@ -58,9 +58,18 @@
   "isFoilOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "If this set is available only in foil.",
+    "description": "If this set is only available in foil.",
     "isManifestProperty": true,
     "introduced": "v4.0.0"
+  },
+  "isNonFoilOnly": {
+    "type": "boolean",
+    "example": "true",
+    "description": "If this set is only available in non-foil.",
+    "attributes": [
+      "optional"
+    ],
+    "introduced": "v5.0.0"
   },
   "isOnlineOnly": {
     "type": "boolean",
