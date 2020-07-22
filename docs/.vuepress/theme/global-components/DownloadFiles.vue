@@ -12,25 +12,25 @@
               //- Individual Files
               ol(v-if="!file.example.includes('Files')")
                 li.text-wrap--download--btn-wrap
-                  h5 Download Files:
+                  p.small-header Downloads:
                   a.dl-btn(download :href="`${$api}${file.example}.json`") JSON
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.json.${compression}`") {{ compression }}
 
               //- Directory Files
               ol(v-if="file.example.includes('Files')")
                 li.text-wrap--download--btn-wrap
-                  h5 Download Files:
+                  p.small-header Downloads:
                   a.dl-btn(v-for="(format, key) in fileBaseCompression" :key="key" v-if="format !== 'zip'" download :href="`${$api}${file.example}.tar.${format}`") {{ format }}
                   a.dl-btn(v-else download :href="`${$api}${file.example}.zip`") {{ format }}
 
               ol(v-if="file.example === 'AllPrintings'")
                 li.text-wrap--download--btn-wrap
-                  h5 SQL Download Files:
+                  p.small-header SQL Downloads
                     span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
                   a.dl-btn(download :href="`${$api}${file.example}.sql`") SQL
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
-                  h5 SQLite Download Files
+                  p.small-header SQLite Download
                     span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
                   a.dl-btn(download :href="`${$api}${file.example}.sqlite`") SQLite
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}
@@ -39,7 +39,7 @@
 <script>
 import files from "../../src/schemas/compiledList.schema.json";
 export default {
-  name: "AllDownloads",
+  name: "DownloadFiles",
   data() {
     return {
       files,

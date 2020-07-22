@@ -2,11 +2,11 @@
   .branding
     .branding-container
       .branding-container--col
-        h3 Current Logo
+        h2 Current Logo
         .img-wrap
           NavMeta(:hideText="true" width="70px")
         .dl-wrap
-          h5 Download:
+          p.small-header Downloads:
           .dl-wrap--row
             a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
             a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
@@ -18,7 +18,7 @@
             a.dl-btn(href="/images/assets/logo-mtgjson-black.png" download) Black PNG
             a.dl-btn(href="/images/assets/logo-mtgjson-white.png" download) White PNG
         .embed-wrap
-          h5 Embedded Code:
+          p.small-header Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
           button.cta-btn(@click="copyEmbed" data-which="0") Copy Embed
 </template>

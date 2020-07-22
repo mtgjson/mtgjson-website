@@ -90,13 +90,20 @@ img {
 .dl-btn {
   display: inline-block;
 
-  margin-right: 1rem;
-  padding-right: 1rem;
+  margin-right: .5rem;
+  padding-right:.51rem;
   border-right: 1px solid var(--gray-color);
 
   &:last-of-type {
     border-right: none;
   }
+}
+
+.small-header {
+  display: block;
+  font-weight: .5rem;
+  padding: 1rem 0 .5rem;
+  font-weight: bold;
 }
 
 .cta-btn {
