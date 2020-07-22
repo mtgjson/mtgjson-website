@@ -44,7 +44,7 @@ export default {
         text: this.data.actionText,
       };
     },
-  },
+  }
 };
 </script>
 

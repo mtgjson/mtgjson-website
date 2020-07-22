@@ -32,9 +32,6 @@ export default {
     version() {
       return this.$store.getters.Meta.version;
     }
-  },
-  async created() {
-    await this.$helpers.setStoreState.apply(this, ["Meta"]);
   }
 };
 </script>

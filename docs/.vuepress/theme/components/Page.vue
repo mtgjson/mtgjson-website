@@ -37,6 +37,9 @@ import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util";
 
 export default {
   props: ["sidebarItems"],
+  async created() {
+    await this.$helpers.setStoreState.apply(this, ["Meta"]);
+  },
   computed: {
     lastUpdated() {
       const date = this.$page.lastUpdated;

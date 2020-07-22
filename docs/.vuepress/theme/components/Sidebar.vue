@@ -38,7 +38,8 @@ export default {
     SidebarLinks,
     SearchBox,
     AlgoliaSearchBox,
-    Version
+    Version,
+    NavMeta
   },
   props: ['items'],
 
