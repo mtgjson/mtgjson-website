@@ -48,7 +48,7 @@ export default class jsonMustaches {
     // Destructure whats inside the mustaches via the delimiter
     const [type, text, link = ''] = values.split(this.delimiter);
     // If we have a link, check if its an external link or not
-    const isTargetBlank = link.indexOf('/') === 0 ? '' : `target='_blank'`;
+    const isTargetBlank = link.indexOf('/') === 0 ? '' : `target='_blank' rel='noopener noreferrer'`;
 
     const mustacheMap = {
       html: text,

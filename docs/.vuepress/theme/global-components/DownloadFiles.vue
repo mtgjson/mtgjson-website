@@ -30,7 +30,7 @@
                   a.dl-btn(download :href="`${$api}${file.example}.sql`") SQL
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
-                  p.small-header SQLite Download
+                  p.small-header SQLite Downloads
                     span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
                   a.dl-btn(download :href="`${$api}${file.example}.sqlite`") SQLite
                   a.dl-btn(v-for="(compression, key) in fileBaseCompression" :key="key" download :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}

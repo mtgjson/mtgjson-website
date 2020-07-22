@@ -25,7 +25,7 @@ describe('sort', () => {
     expect(sorted).toEqual(data);
   });
 
-  it('should return sorted data if a filter by recent releaseData by descending order is passed', async () => {
+  it('should return sorted data if a filter by recent releaseDate by descending order is passed', async () => {
     const filter = 'releaseDate:true';
     const data = [
       {
@@ -44,6 +44,35 @@ describe('sort', () => {
       },
       {
         releaseDate: '2017-04-05'
+      },
+      {
+        releaseDate: '1995-07-13'
+      }
+    ];
+    const sorted = await sort(filter, data);
+
+    expect(sorted).toEqual(expected);
+  });
+
+  it('should return sorted data if a filter by recent releaseDate is missing', async () => {
+    const filter = 'releaseDate:true';
+    const data = [
+      {
+        releaseDate: '1995-07-13'
+      },
+      {
+        releaseDate: null
+      },
+      {
+        releaseDate: '2017-04-05'
+      }
+    ];
+    const expected = [
+      {
+        releaseDate: '2017-04-05'
+      },
+      {
+        releaseDate: null
       },
       {
         releaseDate: '1995-07-13'

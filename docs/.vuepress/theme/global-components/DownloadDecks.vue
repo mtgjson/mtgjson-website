@@ -42,14 +42,14 @@
                 li
                   small Deck Code:
                   small &nbsp;{{ deck.code }}
-                li
+                li(v-if="deck.releaseDate")
                   small Release Date:
                   small &nbsp;{{ deck.releaseDate }}
             .text-wrap--downloads
               DownloadField(:fileName="`decks/${deck.fileName}`")
 </template>
 <script>
-import DownloadField from './DownloadField';
+import DownloadField from "./DownloadField";
 export default {
   name: "DownloadDecks",
   components: { DownloadField },

@@ -17,6 +17,11 @@ export default (value = '', dataToSort) => {
     const first = a[prop];
     const second = b[prop];
 
+    // Coalesce the order if we have no data to compare against
+    if(!first || !second){
+      return order;
+    }
+
     // + operator before a bool will create a bool's
     // integer equivilent: true => 1; false => 0
     return order * (first < second ? -1 : +(first > second));

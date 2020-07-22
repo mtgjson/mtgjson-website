@@ -101,8 +101,8 @@ export default {
   async created() {
     await this.$helpers.setStoreState.apply(this, ["SetList"]);
 
-    this.defaultSets = this.$store.getters.SetList;
-    this.dynamicSets = this.$helpers.sort("releaseDate:true", this.defaultSets);
+    this.defaultSets = await this.$store.getters.SetList;
+    this.dynamicSets = await this.$helpers.sort("releaseDate:true", this.defaultSets);
     this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
   },
   methods: {
