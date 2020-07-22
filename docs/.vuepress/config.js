@@ -2,13 +2,13 @@
 const generateSidebarRoutes = require('./config.sidebar');
 const [dataModels, abstractModels] = generateSidebarRoutes(['/data-models/', '/abstract-models/']);
 // SEO data
-const title = 'MTGJSON';
 const description =
-  'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
+'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
+const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
 
 module.exports = {
   // Uncomment to not support <=IE11
-  // evergreen: true,
+  evergreen: true,
   // Server
   host: '0.0.0.0',
   port: '3001',
@@ -84,7 +84,7 @@ module.exports = {
         name: 'google-site-verification',
         content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
       }
-    ],
+    ]
   ],
   plugins: [
     ['@vuepress/back-to-top'],

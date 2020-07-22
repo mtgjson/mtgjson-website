@@ -19,6 +19,9 @@
     "type": "object",
     "example": "{{link@Booster@/abstract-models/booster/}}",
     "description": "A breakdown of possibilities and weights of cards in a booster pack. See the {{link@Booster@/abstract-models/booster/}} data model.",
+    "attributes": [
+      "optional"
+    ],
     "introduced": "v5.0.0"
   },
   "cards": {
@@ -56,9 +59,6 @@
     "type": "boolean",
     "example": "true",
     "description": "If this set is available only in foil.",
-    "attributes": [
-      "optional"
-    ],
     "isManifestProperty": true,
     "introduced": "v4.0.0"
   },
@@ -66,9 +66,6 @@
     "type": "boolean",
     "example": "true",
     "description": "If this set is available only online.",
-    "attributes": [
-      "optional"
-    ],
     "isManifestProperty": true,
     "introduced": "v4.0.0"
   },

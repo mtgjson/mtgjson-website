@@ -1,4 +1,4 @@
-import sort from '../docs/.vuepress/public/scripts/sort';
+import sort from '../docs/.vuepress/src/scripts/sort';
 
 describe('sort', () => {
   it('should return the same data if an empty filter is passed', async () => {

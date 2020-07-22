@@ -9,7 +9,7 @@
       input(id="show-optional" type="checkbox" v-model="showOptional")
     //- Properties Index
     //- This fills out an anchored list of all the properties
-    .schema-item.schema-index
+    .schema-index
       h3 Property Index
       p A list of all available properties.
 
@@ -23,15 +23,15 @@
 
     //- Properties Table
     //- This fills out a fully descriptive list of all the properties
-    .schema-item.schema-data
+    .schema-data
       h3 Property Information
 
-      .schema-data--table(
+      .schema-table(
       v-for="(data, name) in filteredSchema"
       v-show="shouldShowProperty(data)"
       :key="name"
       :class="{omitted: (!data.example && showExample)}")
-        .schema-data--table-anchor(:id="name" aria-hidden="true")
+        .schema-table--anchor(:id="name" aria-hidden="true")
 
         DocumentationField(
         v-if="name"
@@ -192,7 +192,7 @@ export default {
 
     await this.$helpers.setStoreState.apply(this, ["EnumValues"]);
 
-    schema = require(`../../public/schemas/${this.$page.frontmatter.schema}.schema.json`);
+    schema = require(`../../src/schemas/${this.$page.frontmatter.schema}.schema.json`);
     landcycle = new this.$helpers.jsonMustaches(schema);
     await landcycle._init();
 

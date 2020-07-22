@@ -33,7 +33,7 @@
 </template>
 
 <script>
-import supporters from "../../public/resources/supporters.json";
+import supporters from "../../src/resources/supporters.json";
 export default {
   name: "Supporters",
   data() {

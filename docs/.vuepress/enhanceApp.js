@@ -1,13 +1,13 @@
 import Vuex from 'vuex';
 import { makeStore } from './store';
 
-import jsonMustaches from './public/scripts/jsonMustaches';
-import setStoreState from './public/scripts/setStoreState';
-import isFutureDate from './public/scripts/isFutureDate';
-import prettifyType from './public/scripts/prettifyType';
-import filter from './public/scripts/filter';
-import search from './public/scripts/search';
-import sort from './public/scripts/sort';
+import jsonMustaches from './src/scripts/jsonMustaches';
+import setStoreState from './src/scripts/setStoreState';
+import isFutureDate from './src/scripts/isFutureDate';
+import prettifyType from './src/scripts/prettifyType';
+import filter from './src/scripts/filter';
+import search from './src/scripts/search';
+import sort from './src/scripts/sort';
 
 import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';

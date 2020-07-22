@@ -37,9 +37,6 @@ import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util";
 
 export default {
   props: ["sidebarItems"],
-  async created() {
-    await this.$helpers.setStoreState.apply(this, ["Meta"]);
-  },
   computed: {
     lastUpdated() {
       const date = this.$page.lastUpdated;
@@ -121,6 +118,9 @@ export default {
         `Edit this page`
       );
     }
+  },
+  async created() {
+    await this.$helpers.setStoreState.apply(this, ["Meta"]);
   },
   methods: {
     createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
