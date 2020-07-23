@@ -133,5 +133,8 @@ We use Vuex to fetch data from MTGJSON API's in order to fill our application da
 ## enhanceApp.js
 Because Vue backs this entire application we can interject some helpers in to Vue to be accessed in our components.
 
+## jsonMustache.js/Landcycle
+This is a function we use to convert mustache templating inside JSON schemas to properly route between, fill in code data and make eternal links within our application schemas. It also keeps HTML out of the JSON.
+
 ## Testing
 We use Jest and we do our best.
