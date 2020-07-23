@@ -134,7 +134,7 @@ We use Vuex to fetch data from MTGJSON API's in order to fill our application da
 Because Vue backs this entire application we can interject some helpers in to Vue to be accessed in our components.
 
 ## jsonMustache.js/Landcycle
-This is a function we use to convert mustache templating inside JSON schemas to properly route between, fill in code data and make eternal links within our application schemas. It also keeps HTML out of the JSON.
+This is a JS class that allows JSON to take mustache variables such as `{{link@anchor-link-test@/anchor-link-href}}` (use `/` to make an internal link and use the `HTTP/S Protocol` for an external link) and `{{code@variable}}` (creating an inline-code style) and then intercepts the JSON in Vue to hydrate the data in to HTML of your choosing. On the website we mainly use this to change data links in to anchor tags that route to other documentation links to maintain our Single Page Application.
 
 ## Testing
 We use Jest and we do our best.
