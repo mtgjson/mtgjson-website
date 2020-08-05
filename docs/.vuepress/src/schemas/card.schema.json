@@ -22,7 +22,7 @@
   },
   "availability": {
     "type": "array",
-    "example": "[ \"mtgo\", \"online\", \"paper\" ]",
+    "example": "[ \"arena\", \"dreamcast\", \"mtgo\", \"paper\", \"shandalar\" ]",
     "description": "List of the card's available printing types.",
     "isTokenProperty": true,
     "introduced": "v5.0.0"
