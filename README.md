@@ -3,7 +3,7 @@
 # MTGJSON Documentation Application
 
 <img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" height="100px">
-
+<br />
 
 [![Actions Status](https://github.com/mtgjson/mtgjson-website/workflows/Node%20CI/badge.svg)](https://github.com/mtgjson/mtgjson-website/actions)
 [![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
