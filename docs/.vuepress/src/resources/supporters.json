@@ -1,398 +1,405 @@
 {
-    "patrons": [
-        {
-            "name": "ABUGames",
-            "image": "avatar-abugames.png",
-            "link": "https://abugames.com/",
-            "tier": "mythic",
-            "since": "2019-06"
-        },
-        {
-            "name": "CardBoard Live",
-            "image": "avatar-cardboardlive.jpg",
-            "link": "https://cardboard.live",
-            "tier": "mythic",
-            "since": "2019-09"
-        },
-        {
-            "name": "CardCastle",
-            "image": "avatar-cardcastle.png",
-            "link": "https://cardcastle.co",
-            "tier": "mythic",
-            "since": "2019-04"
-        },
-        {
-            "name": "Cardhoarder",
-            "image": "avatar-cardhoarder.png",
-            "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
-            "tier": "mythic",
-            "since": "2018-11"
-        },
-        {
-            "name": "MTG Labs",
-            "image": "avatar-mtglabs.png",
-            "link": "http://mtglabs.com",
-            "tier": "mythic",
-            "since": "2019-05"
-        },
-        {
-            "name": "MTGBAN",
-            "image": "avatar-mtgban.png",
-            "link": "https://www.mtgban.com/",
-            "tier": "mythic",
-            "since": "2020-03"
-        },
-        {
-            "name": "Out of Cards",
-            "image": "avatar-outofcards.png",
-            "link": "https://outof.cards",
-            "tier": "mythic",
-            "since": "2019-11"
-        },
-        {
-            "name": "My MTG Collection",
-            "image": "avatar-my-mtg-collection-logo.png",
-            "link": "https://www.reddit.com/r/Mymtgapp",
-            "tier": "rare",
-            "since": "2019-04"
-        },
-        {
-            "name": "Cockatrice",
-            "image": "avatar-cockatrice.png",
-            "link": "https://cockatrice.github.io",
-            "tier": "uncommon",
-            "since": "2019-04"
-        },
-        {
-            "name": "ComboDeck",
-            "image": "avatar-combodeck.png",
-            "link": "http://combodeck.net",
-            "tier": "uncommon",
-            "since": "2019-04"
-        },
-        {
-            "name": "Fran&ccedil;ois Andrieux",
-            "image": "avatar-francois-andrieux.png",
-            "tier": "uncommon",
-            "since": "2019-12"
-        },
-        {
-            "name": "LoadingReadyRun Bot",
-            "image": "avatar-lrrbot.png",
-            "link": "https://lrrbot.com/",
-            "tier": "uncommon",
-            "since": "2019-12"
-        },
-        {
-            "name": "MagicHunter",
-            "image": "avatar-magic-hunter.png",
-            "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
-            "tier": "uncommon",
-            "since": "2020-02"
-        },
-        {
-            "name": "MagicMerchant",
-            "image": "avatar-magicmerchant.png",
-            "link": "https://magicmerchant.it",
-            "tier": "uncommon",
-            "since": "2019-06"
-        },
-        {
-            "name": "MTG Brewmaster",
-            "image": "avatar-mtgbrewmaster.png",
-            "link": "http://mtgbrewmaster.com",
-            "tier": "uncommon",
-            "since": "2019-04"
-        },
-        {
-            "name": "MTG Decks",
-            "image": "avatar-mtgdecks.png",
-            "link": "https://www.mtgdecks.net",
-            "tier": "uncommon",
-            "since": "2019-04"
-        },
-        {
-            "name": "Seraph Six",
-            "image": "avatar-seraphsix.png",
-            "tier": "uncommon",
-            "since": "2019-04"
-        }
-    ],
-    "services": [
-        {
-            "name": "Aetherhub",
-            "image": "avatar-aetherhub.png",
-            "link": "https://aetherhub.com"
-        },
-        {
-            "name": "Boutique Awesome",
-            "image": "avatar-boutique-awesome.png",
-            "link": "https://www.boutiqueawesome.com/"
-        },
-        {
-            "name": "CardConduit",
-            "image": "avatar-card-conduit.svg",
-            "link": "https://cardconduit.com/mtgjson"
-        },
-        {
-            "name": "Cardmarket",
-            "image": "avatar-cardmarket.png",
-            "link": "https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson"
-        },
-        {
-            "name": "Cards Info",
-            "image": "avatar-cardsinfo.png",
-            "link": "https://play.google.com/store/apps/details?id=com.dbottillo.mtgsearchfree"
-        },
-        {
-            "name": "Cardsphere",
-            "image": "avatar-cardsphere.png",
-            "link": "https://www.cardsphere.com"
-        },
-        {
-            "name": "Cube Tutor",
-            "image": "avatar-cubetutor.png",
-            "link": "http://cubetutor.com"
-        },
-        {
-            "name": "Custom Standard",
-            "image": "avatar-custom-standard.png",
-            "link": "http://discord.gg/DdhxPQQ"
-        },
-        {
-            "name": "dr4ft",
-            "image": "avatar-dr4ft.png",
-            "link": "https://dr4ft.info"
-        },
-        {
-            "name": "Draftalot",
-            "image": "avatar-draftalot.png",
-            "link": "http://draftalot.com/"
-        },
-        {
-            "name": "Draftsim",
-            "image": "avatar-draftsim.png",
-            "link": "https://draftsim.com/"
-        },
-        {
-            "name": "EDHrec",
-            "image": "avatar-edhrec.png",
-            "link": "https://edhrec.com"
-        },
-        {
-            "name": "FlavorTexts",
-            "image": "avatar-flavortexts.gif",
-            "link": "https://flavortexts.com"
-        },
-        {
-            "name": "IPGTree",
-            "image": "avatar-ipgtree.jpg",
-            "link": "http://alfchaval.epizy.com/ipgtree/"
-        },
-        {
-            "name": "Liminal Thoughts",
-            "image": "avatar-liminal-thoughts.png",
-            "link": "https://brennands.wordpress.com"
-        },
-        {
-            "name": "LoadingReadyRun",
-            "image": "avatar-lrr.png",
-            "link": "https://www.youtube.com/channel/UCwjN2uVdL9A0i3gaIHKFzuA"
-        },
-        {
-            "name": "Magarena",
-            "image": "avatar-magarena.png",
-            "link": "https://github.com/magarena/magarena"
-        },
-        {
-            "name": "Mage Market",
-            "image": "avatar-mage-market.svg",
-            "link": "https://magemarket.com"
-        },
-        {
-            "name": "Magic Cards Manager",
-            "image": "avatar-mcm.png",
-            "link": "https://www.magiccardsmanager.com"
-        },
-        {
-            "name": "Magic The Gathering Companion",
-            "image": "avatar-mtg-desktop-companion.png",
-            "link": "https://nicho92.github.io/MtgDesktopCompanion/"
-        },
-        {
-            "name": "Magic Trade Binder",
-            "image": "avatar-magic-trade-binder.png",
-            "link": "https://www.magictradebinder.com"
-        },
-        {
-            "name": "Magidex",
-            "image": "avatar-magidex.jpg",
-            "link": "https://magidex.com"
-        },
-        {
-            "name": "Metadeck",
-            "image": "avatar-metadeck.png",
-            "link": "http://metadeck.me/"
-        },
-        {
-            "name": "MTG Addict",
-            "image": "avatar-mtgaddict.png",
-            "link": "https://mtgaddict.net"
-        },
-        {
-            "name": "MTG Developers",
-            "image": "avatar-mtgio.png",
-            "link": "https://magicthegathering.io"
-        },
-        {
-            "name": "MTG Korean",
-            "image": "avatar-mtg-korean.jpg",
-            "link": "http://mtg-kr.com"
-        },
-        {
-            "name": "MTG Search",
-            "image": "avatar-mtg-search.jpg",
-            "link": "https://mtg-search.com"
-        },
-        {
-            "name": "MTG Set Builder",
-            "image": "avatar-mtgsetbuilder.png",
-            "link": "http://mtgsetbuilder.com"
-        },
-        {
-            "name": "MTG Tracker",
-            "image": "avatar-mtgtracker.jpg",
-            "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
-        },
-        {
-            "name": "mtg.onl",
-            "image": "avatar-mtgonl.png",
-            "link": "https://mtg.onl"
-        },
-        {
-            "name": "mtg.wtf",
-            "image": "avatar-mtg-wtf.png",
-            "link": "https://mtg.wtf"
-        },
-        {
-            "name": "mtgcard",
-            "image": "avatar-mtgcard.png",
-            "link": "https://github.com/yoshi1123/mtgcard/"
-        },
-        {
-            "name": "MTGNexus",
-            "image": "avatar-mtgnexus.png",
-            "link": "https://www.mtgnexus.com/"
-        },
-        {
-            "name": "MTGO Wiki Price",
-            "image": "avatar-mtgowikiprice.png",
-            "link": "http://mtgowikiprice.com"
-        },
-        {
-            "name": "MTGStocks",
-            "image": "avatar-mtgstocks.jpg",
-            "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
-        },
-        {
-            "name": "MYPCards",
-            "image": "avatar-mypcards.png",
-            "link": "https://mypcards.com/"
-        },
-        {
-            "name": "Planestrader",
-            "image": "avatar-planestrader.png",
-            "link": "https://planestrader.com/"
-        },
-        {
-            "name": "RDWonline Magicollection",
-            "image": "avatar-rdwonline.png",
-            "link": "https://magicollection.rdwonline.com"
-        },
-        {
-            "name": "Scryfall",
-            "image": "avatar-scryfall.png",
-            "link": "https://scryfall.com"
-        },
-        {
-            "name": "Stream Decker",
-            "image": "avatar-streamdecker.jpg",
-            "link": "https://www.streamdecker.com"
-        },
-        {
-            "name": "Tamiyo Discord Bot",
-            "image": "avatar-tamiyodiscordbot.png",
-            "link": "https://mtg.design/tamiyo"
-        },
-        {
-            "name": "TCGPlayer",
-            "image": "avatar-tcgplayer.png",
-            "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
-        },
-        {
-            "name": "Troll and Toad",
-            "image": "avatar-trollandtoad.jpg",
-            "link": "https://www.trollandtoad.com"
-        },
-        {
-            "name": "TutorCards",
-            "image": "avatar-tutorcards.png",
-            "link": "https://tutor.cards"
-        },
-        {
-            "name": "Venser's Journal",
-            "image": "avatar-vensersjournal.jpg",
-            "link": "https://vensersjournal.com/"
-        },
-        {
-            "name": "viMTG",
-            "image": "avatar-vimtg.png",
-            "link": "https://github.com/yoshi1123/vim-mtg"
-        },
-        {
-            "name": "XMage",
-            "image": "avatar-xmage.png",
-            "link": "http://xmage.de"
-        },
-        {
-            "name": "Card Codex",
-            "link": "https://cardcodex.com"
-        },
-        {
-            "name": "DeckList",
-            "link": "https://decklist.org/"
-        },
-        {
-            "name": "DideRobot",
-            "link": "https://github.com/Didero/DideRobot"
-        },
-        {
-            "name": "Lab Maniac",
-            "link": "http://labmaniac.com"
-        },
-        {
-            "name": "MagicFetchBot",
-            "link": "https://redd.it/55l38e"
-        },
-        {
-            "name": "MTG Lands",
-            "link": "http://mtglands.com"
-        },
-        {
-            "name": "MTG On Curve",
-            "link": "https://mtgoncurve.com/"
-        },
-        {
-            "name": "MTGCardFetcher",
-            "link": "https://reddit.com/r/MTGCardFetcher"
-        },
-        {
-            "name": "mtgen.net",
-            "link": "http://mtgen.net/thb/"
-        },
-        {
-            "name": "RulesGuru",
-            "link": "http://rulesguru.net"
-        }
-    ]
+  "patrons": [
+    {
+      "name": "ABUGames",
+      "image": "avatar-abugames.png",
+      "link": "https://abugames.com/",
+      "tier": "mythic",
+      "since": "2019-06"
+    },
+    {
+      "name": "CardBoard Live",
+      "image": "avatar-cardboardlive.jpg",
+      "link": "https://cardboard.live",
+      "tier": "mythic",
+      "since": "2019-09"
+    },
+    {
+      "name": "CardCastle",
+      "image": "avatar-cardcastle.png",
+      "link": "https://cardcastle.co",
+      "tier": "mythic",
+      "since": "2019-04"
+    },
+    {
+      "name": "Cardhoarder",
+      "image": "avatar-cardhoarder.png",
+      "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
+      "tier": "mythic",
+      "since": "2018-11"
+    },
+    {
+      "name": "MTG Labs",
+      "image": "avatar-mtglabs.png",
+      "link": "http://mtglabs.com",
+      "tier": "mythic",
+      "since": "2019-05"
+    },
+    {
+      "name": "MTGBAN",
+      "image": "avatar-mtgban.png",
+      "link": "https://www.mtgban.com/",
+      "tier": "mythic",
+      "since": "2020-03"
+    },
+    {
+      "name": "Out of Cards",
+      "image": "avatar-outofcards.png",
+      "link": "https://outof.cards",
+      "tier": "mythic",
+      "since": "2019-11"
+    },
+    {
+      "name": "My MTG Collection",
+      "image": "avatar-my-mtg-collection-logo.png",
+      "link": "https://www.reddit.com/r/Mymtgapp",
+      "tier": "rare",
+      "since": "2019-04"
+    },
+    {
+      "name": "DeckTech.io",
+      "image": "avatar-decktech.png",
+      "link": "https://decktech.io",
+      "tier": "rare",
+      "since": "2020-08"
+    },
+    {
+      "name": "Cockatrice",
+      "image": "avatar-cockatrice.png",
+      "link": "https://cockatrice.github.io",
+      "tier": "uncommon",
+      "since": "2019-04"
+    },
+    {
+      "name": "ComboDeck",
+      "image": "avatar-combodeck.png",
+      "link": "http://combodeck.net",
+      "tier": "uncommon",
+      "since": "2019-04"
+    },
+    {
+      "name": "Fran&ccedil;ois Andrieux",
+      "image": "avatar-francois-andrieux.png",
+      "tier": "uncommon",
+      "since": "2019-12"
+    },
+    {
+      "name": "LoadingReadyRun Bot",
+      "image": "avatar-lrrbot.png",
+      "link": "https://lrrbot.com/",
+      "tier": "uncommon",
+      "since": "2019-12"
+    },
+    {
+      "name": "MagicHunter",
+      "image": "avatar-magic-hunter.png",
+      "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
+      "tier": "uncommon",
+      "since": "2020-02"
+    },
+    {
+      "name": "MagicMerchant",
+      "image": "avatar-magicmerchant.png",
+      "link": "https://magicmerchant.it",
+      "tier": "uncommon",
+      "since": "2019-06"
+    },
+    {
+      "name": "MTG Brewmaster",
+      "image": "avatar-mtgbrewmaster.png",
+      "link": "http://mtgbrewmaster.com",
+      "tier": "uncommon",
+      "since": "2019-04"
+    },
+    {
+      "name": "MTG Decks",
+      "image": "avatar-mtgdecks.png",
+      "link": "https://www.mtgdecks.net",
+      "tier": "uncommon",
+      "since": "2019-04"
+    },
+    {
+      "name": "Seraph Six",
+      "image": "avatar-seraphsix.png",
+      "tier": "uncommon",
+      "since": "2019-04"
+    }
+  ],
+  "services": [
+    {
+      "name": "Aetherhub",
+      "image": "avatar-aetherhub.png",
+      "link": "https://aetherhub.com"
+    },
+    {
+      "name": "Boutique Awesome",
+      "image": "avatar-boutique-awesome.png",
+      "link": "https://www.boutiqueawesome.com/"
+    },
+    {
+      "name": "CardConduit",
+      "image": "avatar-card-conduit.svg",
+      "link": "https://cardconduit.com/mtgjson"
+    },
+    {
+      "name": "Cardmarket",
+      "image": "avatar-cardmarket.png",
+      "link": "https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson"
+    },
+    {
+      "name": "Cards Info",
+      "image": "avatar-cardsinfo.png",
+      "link": "https://play.google.com/store/apps/details?id=com.dbottillo.mtgsearchfree"
+    },
+    {
+      "name": "Cardsphere",
+      "image": "avatar-cardsphere.png",
+      "link": "https://www.cardsphere.com"
+    },
+    {
+      "name": "Cube Tutor",
+      "image": "avatar-cubetutor.png",
+      "link": "http://cubetutor.com"
+    },
+    {
+      "name": "Custom Standard",
+      "image": "avatar-custom-standard.png",
+      "link": "http://discord.gg/DdhxPQQ"
+    },
+    {
+      "name": "dr4ft",
+      "image": "avatar-dr4ft.png",
+      "link": "https://dr4ft.info"
+    },
+    {
+      "name": "Draftalot",
+      "image": "avatar-draftalot.png",
+      "link": "http://draftalot.com/"
+    },
+    {
+      "name": "Draftsim",
+      "image": "avatar-draftsim.png",
+      "link": "https://draftsim.com/"
+    },
+    {
+      "name": "EDHrec",
+      "image": "avatar-edhrec.png",
+      "link": "https://edhrec.com"
+    },
+    {
+      "name": "FlavorTexts",
+      "image": "avatar-flavortexts.gif",
+      "link": "https://flavortexts.com"
+    },
+    {
+      "name": "IPGTree",
+      "image": "avatar-ipgtree.jpg",
+      "link": "http://alfchaval.epizy.com/ipgtree/"
+    },
+    {
+      "name": "Liminal Thoughts",
+      "image": "avatar-liminal-thoughts.png",
+      "link": "https://brennands.wordpress.com"
+    },
+    {
+      "name": "LoadingReadyRun",
+      "image": "avatar-lrr.png",
+      "link": "https://www.youtube.com/channel/UCwjN2uVdL9A0i3gaIHKFzuA"
+    },
+    {
+      "name": "Magarena",
+      "image": "avatar-magarena.png",
+      "link": "https://github.com/magarena/magarena"
+    },
+    {
+      "name": "Mage Market",
+      "image": "avatar-mage-market.svg",
+      "link": "https://magemarket.com"
+    },
+    {
+      "name": "Magic Cards Manager",
+      "image": "avatar-mcm.png",
+      "link": "https://www.magiccardsmanager.com"
+    },
+    {
+      "name": "Magic The Gathering Companion",
+      "image": "avatar-mtg-desktop-companion.png",
+      "link": "https://nicho92.github.io/MtgDesktopCompanion/"
+    },
+    {
+      "name": "Magic Trade Binder",
+      "image": "avatar-magic-trade-binder.png",
+      "link": "https://www.magictradebinder.com"
+    },
+    {
+      "name": "Magidex",
+      "image": "avatar-magidex.jpg",
+      "link": "https://magidex.com"
+    },
+    {
+      "name": "Metadeck",
+      "image": "avatar-metadeck.png",
+      "link": "http://metadeck.me/"
+    },
+    {
+      "name": "MTG Addict",
+      "image": "avatar-mtgaddict.png",
+      "link": "https://mtgaddict.net"
+    },
+    {
+      "name": "MTG Developers",
+      "image": "avatar-mtgio.png",
+      "link": "https://magicthegathering.io"
+    },
+    {
+      "name": "MTG Korean",
+      "image": "avatar-mtg-korean.jpg",
+      "link": "http://mtg-kr.com"
+    },
+    {
+      "name": "MTG Search",
+      "image": "avatar-mtg-search.jpg",
+      "link": "https://mtg-search.com"
+    },
+    {
+      "name": "MTG Set Builder",
+      "image": "avatar-mtgsetbuilder.png",
+      "link": "http://mtgsetbuilder.com"
+    },
+    {
+      "name": "MTG Tracker",
+      "image": "avatar-mtgtracker.jpg",
+      "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
+    },
+    {
+      "name": "mtg.onl",
+      "image": "avatar-mtgonl.png",
+      "link": "https://mtg.onl"
+    },
+    {
+      "name": "mtg.wtf",
+      "image": "avatar-mtg-wtf.png",
+      "link": "https://mtg.wtf"
+    },
+    {
+      "name": "mtgcard",
+      "image": "avatar-mtgcard.png",
+      "link": "https://github.com/yoshi1123/mtgcard/"
+    },
+    {
+      "name": "MTGNexus",
+      "image": "avatar-mtgnexus.png",
+      "link": "https://www.mtgnexus.com/"
+    },
+    {
+      "name": "MTGO Wiki Price",
+      "image": "avatar-mtgowikiprice.png",
+      "link": "http://mtgowikiprice.com"
+    },
+    {
+      "name": "MTGStocks",
+      "image": "avatar-mtgstocks.jpg",
+      "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
+    },
+    {
+      "name": "MYPCards",
+      "image": "avatar-mypcards.png",
+      "link": "https://mypcards.com/"
+    },
+    {
+      "name": "Planestrader",
+      "image": "avatar-planestrader.png",
+      "link": "https://planestrader.com/"
+    },
+    {
+      "name": "RDWonline Magicollection",
+      "image": "avatar-rdwonline.png",
+      "link": "https://magicollection.rdwonline.com"
+    },
+    {
+      "name": "Scryfall",
+      "image": "avatar-scryfall.png",
+      "link": "https://scryfall.com"
+    },
+    {
+      "name": "Stream Decker",
+      "image": "avatar-streamdecker.jpg",
+      "link": "https://www.streamdecker.com"
+    },
+    {
+      "name": "Tamiyo Discord Bot",
+      "image": "avatar-tamiyodiscordbot.png",
+      "link": "https://mtg.design/tamiyo"
+    },
+    {
+      "name": "TCGPlayer",
+      "image": "avatar-tcgplayer.png",
+      "link": "https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson"
+    },
+    {
+      "name": "Troll and Toad",
+      "image": "avatar-trollandtoad.jpg",
+      "link": "https://www.trollandtoad.com"
+    },
+    {
+      "name": "TutorCards",
+      "image": "avatar-tutorcards.png",
+      "link": "https://tutor.cards"
+    },
+    {
+      "name": "Venser's Journal",
+      "image": "avatar-vensersjournal.jpg",
+      "link": "https://vensersjournal.com/"
+    },
+    {
+      "name": "viMTG",
+      "image": "avatar-vimtg.png",
+      "link": "https://github.com/yoshi1123/vim-mtg"
+    },
+    {
+      "name": "XMage",
+      "image": "avatar-xmage.png",
+      "link": "http://xmage.de"
+    },
+    {
+      "name": "Card Codex",
+      "link": "https://cardcodex.com"
+    },
+    {
+      "name": "DeckList",
+      "link": "https://decklist.org/"
+    },
+    {
+      "name": "DideRobot",
+      "link": "https://github.com/Didero/DideRobot"
+    },
+    {
+      "name": "Lab Maniac",
+      "link": "http://labmaniac.com"
+    },
+    {
+      "name": "MagicFetchBot",
+      "link": "https://redd.it/55l38e"
+    },
+    {
+      "name": "MTG Lands",
+      "link": "http://mtglands.com"
+    },
+    {
+      "name": "MTG On Curve",
+      "link": "https://mtgoncurve.com/"
+    },
+    {
+      "name": "MTGCardFetcher",
+      "link": "https://reddit.com/r/MTGCardFetcher"
+    },
+    {
+      "name": "mtgen.net",
+      "link": "http://mtgen.net/thb/"
+    },
+    {
+      "name": "RulesGuru",
+      "link": "http://rulesguru.net"
+    }
+  ]
 }
