@@ -1,4 +1,4 @@
-<center>
+<div style="text-align: center;">
 
 # MTGJSON Documentation Application
 
@@ -11,7 +11,8 @@
 
 [![PayPal](https://img.shields.io/static/v1.svg?label=PayPal&message=Support%20MTGJSON&color=Blue&logo=paypal)](https://paypal.me/zachhalpern)
 [![Patreon](https://img.shields.io/static/v1.svg?label=Patreon&message=Support%20MTGJSON&color=Orange&logo=patreon)](https://patreon.com/mtgjson)
-</center>
+
+</div>
 
 ## Getting Started
 
