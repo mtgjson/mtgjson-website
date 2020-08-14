@@ -115,7 +115,7 @@
   "flavorName": {
     "type": "string",
     "example": "\"Mothra, Supersonic Queen\"",
-    "description": "Promotional card name printed above the true card name on special cards.",
+    "description": "Promotional card name printed above the true card name on special cards that has no game function.",
     "attributes": [
       "optional"
     ],
@@ -537,7 +537,7 @@
   "type": {
     "type": "string",
     "example": "\"Artifact Creature — Myr Construct\"",
-    "description": "Type of the card. Includes any supertypes and subtypes.",
+    "description": "Type of the card as visible, including any supertypes and subtypes.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"

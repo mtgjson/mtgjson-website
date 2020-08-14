@@ -40,14 +40,14 @@
           strong(v-html="name")
 
         DocumentationField(
-        v-if="name"
+        v-if="data.type"
         label="Type"
         title="The type of the property")
           em(v-html="data.type")
 
         //- Start logic for fields used to populate examples
         DocumentationField(
-        v-if="!getValues(name)"
+        v-if="!getValues(name) && data.example.length > 0"
         label="Example"
         title="Example of the property value")
           pre(v-html="data.example")
@@ -68,7 +68,7 @@
         //- End logic for fields used to popluate examples
 
         DocumentationField(
-        v-if="name"
+        v-if="data.description"
         label="Description"
         title="The description of the property and values")
           span(v-html="data.description")
