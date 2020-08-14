@@ -1,15 +1,17 @@
-<img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" width="100px">
+<center>
 
 # MTGJSON Documentation Application
 
+<img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" height="100px">
+
+
 [![Actions Status](https://github.com/mtgjson/mtgjson-website/workflows/Node%20CI/badge.svg)](https://github.com/mtgjson/mtgjson-website/actions)
 [![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
-
-[![Maintenance](https://img.shields.io/badge/Maintained-Yes-green.svg)](https://GitHub.com/mtgjson/mtgjson-website/graphs/commit-activity)
 [![MIT license](https://img.shields.io/badge/License-MIT-blue.svg)](https://github.com/mtgjson/mtgjson-website/blob/master/LICENSE)
 
 [![PayPal](https://img.shields.io/static/v1.svg?label=PayPal&message=Support%20MTGJSON&color=Blue&logo=paypal)](https://paypal.me/zachhalpern)
 [![Patreon](https://img.shields.io/static/v1.svg?label=Patreon&message=Support%20MTGJSON&color=Orange&logo=patreon)](https://patreon.com/mtgjson)
+</center>
 
 ## Getting Started
 

@@ -50,18 +50,18 @@
       "since": "2019-11"
     },
     {
-      "name": "My MTG Collection",
-      "image": "avatar-my-mtg-collection-logo.png",
-      "link": "https://www.reddit.com/r/Mymtgapp",
-      "tier": "rare",
-      "since": "2019-04"
-    },
-    {
       "name": "DeckTech.io",
       "image": "avatar-decktech.png",
       "link": "https://decktech.io",
       "tier": "rare",
       "since": "2020-08"
+    },
+    {
+      "name": "My MTG Collection",
+      "image": "avatar-my-mtg-collection-logo.png",
+      "link": "https://www.reddit.com/r/Mymtgapp",
+      "tier": "rare",
+      "since": "2019-04"
     },
     {
       "name": "Cockatrice",
