@@ -24,11 +24,12 @@
       .supporters-grid.services(:data-tier="0")
         blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services" :key="key")
           .supporter-link
-            a(:href="link ? link : ''" rel="noopener noreferrer" target="_blank")
-              .img-wrap(v-if="image")
-                .img-wrap--container
-                  img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
-              h4 {{ name }}
+            .img-wrap(v-if="image")
+              .img-wrap--container
+                img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
+            a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+              h4(v-html="name")
+            h4(v-else v-html="name")
 
 </template>
 
