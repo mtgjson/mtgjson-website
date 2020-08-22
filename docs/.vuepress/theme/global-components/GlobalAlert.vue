@@ -6,6 +6,8 @@
       li We now offer file verification with SHA-256. Every file has a SHA-256 file available at the same API location with an appended <code>.sha256</code> format. For example: <code>https://mtgjson.com/api/v5/AllPrintings.json.sha256</code>.
     small
       em Vanishing 3 (This message enters the website with 3 time counters on it. At the beginning of the next minor release, remove a time counter from it. When the last is removed, delete it.)
+    small
+      em Currently 2 time counters
 </template>
 
 <style lang="scss" scoped>

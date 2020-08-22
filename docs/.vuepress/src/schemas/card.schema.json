@@ -485,6 +485,13 @@
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
+  "setCode": {
+    "type": "string",
+    "example": "\"M21\"",
+    "description": "The set code that the card is from.",
+    "isTokenProperty": true,
+    "introduced": "v5.0.1"
+  },
   "side": {
     "type": "string",
     "example": "\"a\"",

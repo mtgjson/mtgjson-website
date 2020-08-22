@@ -167,7 +167,7 @@ export default {
         color: var(--accent-color);
         display: block;
         margin: 0 auto;
-        padding-bottom: 10px;
+        padding: 0;
         line-height: 1.2rem;
       }
 
@@ -176,6 +176,10 @@ export default {
         flex: 0 0 100%;
         font-size: 14px;
         line-height: 1.2em;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
       }
 
       h4,

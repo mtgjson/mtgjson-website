@@ -81,7 +81,7 @@
             v-for="(attribute, key) in data.attributes"
             :key="key"
             :class="getAttribute(attribute)"
-            :title="getTitle(getAttribute(attribute))") {{ attribute.replace('-', ' ') }}
+            :title="getTitle(getAttribute(attribute))") {{ attribute.split('-').join(' ') }}
 
         DocumentationField(
         v-if="data.introduced"

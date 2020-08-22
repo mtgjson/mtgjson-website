@@ -20,6 +20,18 @@
 # Changelog (v5)
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.0.1
+Release Date: 2020-08-24
+
+### Files
+#### Added
+- Added `AllIdentifiers.*` file for download which contains all cards organized by UUID.
+
+### Card
+#### Added
+- Added `setCode` to the non-atomic and token card model
+
+
 ## 5.0.0
 Release Date: 2020-07-03
 ### Announcements
