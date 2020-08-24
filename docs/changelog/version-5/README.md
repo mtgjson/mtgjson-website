@@ -25,11 +25,17 @@ Release Date: 2020-08-24
 
 ### Files
 #### Added
-- Added `AllIdentifiers.*` file for download which contains all cards organized by UUID.
+- Added `AllIdentifiers.*` file for download which contains all cards organized by UUID
 
 ### Card
 #### Added
 - Added `setCode` to the non-atomic and token card model
+- Added `faceName` to Foreign Data model
+
+### Set
+#### Fixed
+- Fixed some `translation` inaccuracies
+- Fixed some `keyruneCode` inaccuracies
 
 
 ## 5.0.0
