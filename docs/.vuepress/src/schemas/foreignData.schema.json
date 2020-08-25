@@ -1,4 +1,12 @@
 {
+  "faceName": {
+    "type": "string",
+    "example": "\"Palladia-Mors, die Verwüsterin\"",
+    "description": "Name on the face of the card.",
+    "isAtomicProperty": true,
+    "isTokenProperty": true,
+    "introduced": "v5.0.1"
+  },
   "flavorText": {
     "type": "string",
     "example": "\"Schwester von Nicol Bolas. Überlebende des Krieges der Drachenältesten. Die bösartigste ihrer Art.\"",

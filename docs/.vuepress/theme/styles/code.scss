@@ -1,5 +1,5 @@
 .codeblock, code, pre, .md-code, .values-list--code, .code-wrap a {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: var(--font-monospace);
   font-size: 12px;
   background-color: var(--code-bg-color);
   color: var(--code-text-color);
@@ -15,10 +15,16 @@
   }
 }
 
+pre {
+  &, code {
+    padding: 0;
+  }
+}
+
 .code-wrap a {
   color: var(--accent-color);
 }
 
 .codeblock, pre, code, kbd, .line-number {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  font-family: var(--font-monospace);
 }
