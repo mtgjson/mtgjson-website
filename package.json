@@ -61,7 +61,7 @@
     "eslint-plugin-vue-a11y": "^0.0.31",
     "husky": "^4.2.5",
     "jest": "^26.4.0",
-    "node-fetch": "^2.6.0",
+    "node-fetch": "^2.6.1",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.0.0",
     "sass": "^1.26.10",
