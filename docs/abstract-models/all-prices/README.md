@@ -45,6 +45,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
             "<YYYY-MM-DD>": <Float> // Date and price as value
           }
         },
+        "currency": "USD",
         "retail": { // Provider retail values
           "foil": { // Foil prices
             "<YYYY-MM-DD>": <Float> // Date and price as value
@@ -68,6 +69,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
   "0120a941-9cfb-50b5-b5e4-4e0c7bd32410": {
     "mtgo": {
       "cardhoarder": {
+        "currency": "USD",
         "retail": {
           "foil": {
             ..., // more rows
@@ -92,6 +94,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
             "2020-04-21": 0.01
           }
         },
+        "currency": "USD",
         "retail": {
           "foil": {
             ..., // more rows
@@ -104,6 +107,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
         }
       },
       "cardmarket": {
+        "currency": "USD",
         "retail": {
           "foil": {
             ..., // more rows
@@ -116,6 +120,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
         }
       },
       "tcgplayer": {
+        "currency": "USD",
         "retail": {
           "foil": {
             ..., // more rows
