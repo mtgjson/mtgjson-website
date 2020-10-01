@@ -1,6 +1,6 @@
 <div align="center">
 
-# MTGJSON Documentation Application
+# MTGJSON Documentation Applications
 
 <img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" height="100px">
 <br />
