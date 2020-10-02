@@ -1,7 +1,7 @@
 <div align="center">
 
 # MTGJSON Documentation Application
-
+## AN AMAZING PROJECT
 <img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" height="100px">
 <br />
 <br />
