@@ -1,7 +1,7 @@
-# Contributing
+### CONTRIBUTING
 The MTGJSON documentation website uses the [Vuepress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
 
-## Knowledge Requirements
+## KNOWLEDGE REQUIREMENTS
 - Vue
 - Vuepress
 - Markdown
@@ -11,15 +11,15 @@ The MTGJSON documentation website uses the [Vuepress](https://v1.vuepress.vuejs.
 - Accessibility
 - MTGJSON Files
 
-## Technical Requirements
+## TECHNICAL REQUIREMENTS
 - Node/NVM
 - Yarn (Package Manager)
 
-### Optional Requirements
+### OPTIONAL REQUIREMENTS
 - imagemin
 - imagemin-webp
 
-## Directory Structure
+## DIRECTORY STRUCTURE
 Files/Directories were omitted that do not help understand this current project structure.
 
 ```sh
@@ -71,32 +71,32 @@ Files/Directories were omitted that do not help understand this current project 
             └── styles/ # SCSS styling
 ```
 
-## VuePress Configuration
+## VUEPRESS CONFIGURATION
 
 Explaining the configuration as a whole would be best served by directly to their own documentation [here](https://v1.vuepress.vuejs.org/config/).
 
-## Markdown Files
+## MARKDOWN FILES
 
-### Use and Purpose
+### USE AND PURPOSE
 > **Use**: To serve has as static routing of the application.
 
 > **Purpose**: All markdown files should be named `README.md`. That file will act as the single `index.html` for a directory.
 
-### Markdown Structure
+### MARKDOWN STRUCTURE
 The structure of a file is simple. Frontmatter on top, everything else below it.
   - Frontmatter is written in JSON (with strings).
   - Markdown is written to specification.
   - Vue component are pseudo-imported by placing them in a Vue component in template syntax.
   - Plugins are provided by the Vuepress community and can add syntactical sugar to rendering elements.
 
-### Using Frontmatter
+### USING FRONTMATTER 
 Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 
 You can also change configuration of Vuepress by overwriting variables within the front matter.
 
 > Remember: Frontmatter goes at the top of any Markdown file.
 
-#### Example
+#### EXAMPLE
 ```json
 ---
 {
@@ -119,15 +119,15 @@ You can also change configuration of Vuepress by overwriting variables within th
 ---
 ```
 
-### When not using Frontmatter
+### WHEN NOT USING FRONTMATTER 
 The markdown file will perform and parse just the way you would expect by writing any kind of Markdown or HTML.
 
 You can also use a Vue component by placing `<MyComponentName />` anywhere on the markdown file. Props can also be passed to the component by using Frontmatter.
 
-## Documentation "Schemas"
+## DOCUMENTATION "SCHEMAS"
 We use these are the single source of truth for the documentation rendering. These files are supposed to match the files from the API. They are formatted in a way to render to the `<Documentation />` component using a Frontmatter variable (though it us possible to pass down as a prop)
 
-## The Vuex Store
+## "THE VUEX STORE"
 We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and api remains as performant as possible.
 
 ## enhanceApp.js
@@ -136,5 +136,5 @@ Because Vue backs this entire application we can interject some helpers in to Vu
 ## jsonMustache.js/Landcycle
 This is a JS class that allows JSON to take mustache variables such as `{{link@anchor-link-test@/anchor-link-href}}` (use `/` to make an internal link and use the `HTTP/S Protocol` for an external link) and `{{code@variable}}` (creating an inline-code style) and then intercepts the JSON in Vue to hydrate the data in to HTML of your choosing. On the website we mainly use this to change data links in to anchor tags that route to other documentation links to maintain our Single Page Application.
 
-## Testing
+## TESTING
 We use Jest and we do our best.
