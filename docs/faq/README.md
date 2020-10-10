@@ -73,7 +73,9 @@ While we do not offer card images directly through MTGJSON, we recommend getting
 <strong>Scryfall:</strong> `https://api.scryfall.com/cards/${card.identifiers.scryfallId}?format=image`  
 <Strong>Gatherer:</strong> `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${card.identifiers.multiverseId}`  
 
-Note: Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
+Notes:
+- Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
+- For Scryfall, to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
 :::
 
 ### How do I find the other card faces of "Meld" cards?
