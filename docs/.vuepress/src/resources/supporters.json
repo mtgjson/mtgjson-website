@@ -1,6 +1,27 @@
 {
   "patrons": [
     {
+      "name": "Cardhoarder",
+      "image": "avatar-cardhoarder.png",
+      "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
+      "tier": "mythic",
+      "since": "2018-11"
+    },
+    {
+      "name": "CardCastle",
+      "image": "avatar-cardcastle.png",
+      "link": "https://cardcastle.co",
+      "tier": "mythic",
+      "since": "2019-04"
+    },
+    {
+      "name": "MTG Labs",
+      "image": "avatar-mtglabs.png",
+      "link": "http://mtglabs.com",
+      "tier": "mythic",
+      "since": "2019-05"
+    },
+    {
       "name": "ABUGames",
       "image": "avatar-abugames.png",
       "link": "https://abugames.com/",
@@ -15,25 +36,11 @@
       "since": "2019-09"
     },
     {
-      "name": "CardCastle",
-      "image": "avatar-cardcastle.png",
-      "link": "https://cardcastle.co",
+      "name": "Out of Cards",
+      "image": "avatar-outofcards.png",
+      "link": "https://outof.cards",
       "tier": "mythic",
-      "since": "2019-04"
-    },
-    {
-      "name": "Cardhoarder",
-      "image": "avatar-cardhoarder.png",
-      "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
-      "tier": "mythic",
-      "since": "2018-11"
-    },
-    {
-      "name": "MTG Labs",
-      "image": "avatar-mtglabs.png",
-      "link": "http://mtglabs.com",
-      "tier": "mythic",
-      "since": "2019-05"
+      "since": "2019-11"
     },
     {
       "name": "MTGBAN",
@@ -43,11 +50,11 @@
       "since": "2020-03"
     },
     {
-      "name": "Out of Cards",
-      "image": "avatar-outofcards.png",
-      "link": "https://outof.cards",
-      "tier": "mythic",
-      "since": "2019-11"
+      "name": "My MTG Collection",
+      "image": "avatar-my-mtg-collection-logo.png",
+      "link": "https://www.reddit.com/r/Mymtgapp",
+      "tier": "rare",
+      "since": "2019-04"
     },
     {
       "name": "DeckTech.io",
@@ -57,16 +64,16 @@
       "since": "2020-08"
     },
     {
-      "name": "My MTG Collection",
-      "image": "avatar-my-mtg-collection-logo.png",
-      "link": "https://www.reddit.com/r/Mymtgapp",
-      "tier": "rare",
+      "name": "MTG Decks",
+      "image": "avatar-mtgdecks.png",
+      "link": "https://www.mtgdecks.net",
+      "tier": "uncommon",
       "since": "2019-04"
     },
     {
-      "name": "Cockatrice",
-      "image": "avatar-cockatrice.png",
-      "link": "https://cockatrice.github.io",
+      "name": "MTG Brewmaster",
+      "image": "avatar-mtgbrewmaster.png",
+      "link": "http://mtgbrewmaster.com",
       "tier": "uncommon",
       "since": "2019-04"
     },
@@ -78,24 +85,11 @@
       "since": "2019-04"
     },
     {
-      "name": "Fran&ccedil;ois Andrieux",
-      "image": "avatar-francois-andrieux.png",
+      "name": "Cockatrice",
+      "image": "avatar-cockatrice.png",
+      "link": "https://cockatrice.github.io",
       "tier": "uncommon",
-      "since": "2019-12"
-    },
-    {
-      "name": "LoadingReadyRun Bot",
-      "image": "avatar-lrrbot.png",
-      "link": "https://lrrbot.com/",
-      "tier": "uncommon",
-      "since": "2019-12"
-    },
-    {
-      "name": "MagicHunter",
-      "image": "avatar-magic-hunter.png",
-      "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
-      "tier": "uncommon",
-      "since": "2020-02"
+      "since": "2019-04"
     },
     {
       "name": "MagicMerchant",
@@ -105,18 +99,31 @@
       "since": "2019-06"
     },
     {
-      "name": "MTG Brewmaster",
-      "image": "avatar-mtgbrewmaster.png",
-      "link": "http://mtgbrewmaster.com",
+      "name": "MTG.Design",
+      "image": "avatar-mtg-design.svg",
+      "link": "https://mtg.design",
       "tier": "uncommon",
-      "since": "2019-04"
+      "since": "2019-11"
     },
     {
-      "name": "MTG Decks",
-      "image": "avatar-mtgdecks.png",
-      "link": "https://www.mtgdecks.net",
+      "name": "LoadingReadyRun Bot",
+      "image": "avatar-lrrbot.png",
+      "link": "https://lrrbot.com/",
       "tier": "uncommon",
-      "since": "2019-04"
+      "since": "2019-12"
+    },
+    {
+      "name": "Fran&ccedil;ois Andrieux",
+      "image": "avatar-francois-andrieux.png",
+      "tier": "uncommon",
+      "since": "2019-12"
+    },
+    {
+      "name": "MagicHunter",
+      "image": "avatar-magic-hunter.png",
+      "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
+      "tier": "uncommon",
+      "since": "2020-02"
     }
   ],
   "services": [
@@ -324,11 +331,6 @@
       "name": "Stream Decker",
       "image": "avatar-streamdecker.jpg",
       "link": "https://www.streamdecker.com"
-    },
-    {
-      "name": "Tamiyo Discord Bot",
-      "image": "avatar-tamiyodiscordbot.png",
-      "link": "https://mtg.design/tamiyo"
     },
     {
       "name": "TCGPlayer",
