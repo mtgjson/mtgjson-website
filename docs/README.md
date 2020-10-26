@@ -34,7 +34,7 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
 ::: tip Eric - Documentation Developer
 <p>
   <img class="avatar lazy" src="" data-src="/images/avatar-eric.gif" title="Eric" alt="Eric">
-  Eric is a conceptualizer that loves cervidae, nature, cheesy sci-fi movies and delving in to any code he can find. He has worked on the MTGJSON documentation since 2018 and is an avid supporter of open-source software and the MTG community.
+  Eric is a conceptualizer that loves deer, cheesy sci-fi movies and delving in to any code he can find. He has worked on the MTGJSON documentation since 2018 and is an avid supporter of open-source software and the MTG developer community.
 </p>
 :::
 

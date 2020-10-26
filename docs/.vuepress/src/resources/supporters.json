@@ -263,6 +263,16 @@
       "link": "http://mtg-kr.com"
     },
     {
+      "name": "MTG On Curve",
+      "image": "avatar-mtg-on-curve.png",
+      "link": "https://mtgoncurve.com/"
+    },
+    {
+      "name": "MTG Random",
+      "image": "avatar-mtg-random.png",
+      "link": "https://apps.apple.com/us/app/mtg-random/id1534340485"
+    },
+    {
       "name": "MTG Search",
       "image": "avatar-mtg-search.jpg",
       "link": "https://mtg-search.com"
@@ -291,6 +301,11 @@
       "name": "mtgcard",
       "image": "avatar-mtgcard.png",
       "link": "https://github.com/yoshi1123/mtgcard/"
+    },
+    {
+      "name": "mtgen.net",
+      "image": "avatar-mtgen.png",
+      "link": "http://mtgen.net/"
     },
     {
       "name": "MTGNexus",
@@ -387,16 +402,8 @@
       "link": "http://mtglands.com"
     },
     {
-      "name": "MTG On Curve",
-      "link": "https://mtgoncurve.com/"
-    },
-    {
       "name": "MTGCardFetcher",
       "link": "https://reddit.com/r/MTGCardFetcher"
-    },
-    {
-      "name": "mtgen.net",
-      "link": "http://mtgen.net/thb/"
     },
     {
       "name": "RulesGuru",
