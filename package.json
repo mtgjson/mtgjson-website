@@ -10,14 +10,14 @@
   "scripts": {
     "dev": "vuepress dev docs",
     "build": "vuepress build docs && npm run generate-version-atom",
-    "purge": "rm -rf node_modules && npm run cache clean",
+    "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
     "optimize-images": "imagemin --plugin.webp.quality=80 docs/.vuepress/public/images --out-dir=docs/.vuepress/public/images",
-    "bootstrap": "npm run global add imagemin-cli imagemin-webp"
+    "bootstrap": "npm install -g imagemin-cli imagemin-webp"
   },
   "babel": {
     "presets": [
