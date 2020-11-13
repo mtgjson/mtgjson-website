@@ -108,6 +108,9 @@
     "type": "string",
     "example": "\"Daybreak Ranger\"",
     "description": "Name on the face of the card.",
+    "attributes": [
+      "optional"
+    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v5.0.0"
@@ -388,9 +391,6 @@
     "type": "string",
     "example": "\"Angel of Grace\"",
     "description": "Names of each face on the card. Cards with multiple faces, like \"Split\" and \"Meld\" cards are given a delimiter. Example: {{code@Face 1 Name // Face 2 Name}}.",
-    "attributes": [
-      "optional"
-    ],
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
