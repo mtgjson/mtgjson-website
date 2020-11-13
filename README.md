@@ -19,12 +19,12 @@
 
 ### **Installation**
 
-Install `node`, `n`, and `yarn`.
+Install `node`, `n`, and `npm`.
 
 **Option #1 (Preferred)**: Install Node with [brew](https://brew.sh).
 
-```
-brew install n yarn
+```terminal
+brew install n
 sudo n 12.8.0
 ```
 
@@ -32,52 +32,52 @@ sudo n 12.8.0
 
 Install global dependencies. (Optional. May need admin rights.)
 
-```
-yarn boostrap
+```terminal
+npm run boostrap
 ```
 
 Install project dependencies.
 
-```
-yarn install
+```terminal
+npm run install
 ```
 
 ### **Developing**
 
 Runs the local build server with hot module reloading.
 
-```
-yarn dev
+```terminal
+npm run dev
 ```
 
 ### **Linting**
 
 Lint's the files for any breaking changes.
 
-```
-yarn lint
+```terminal
+npm run lint
 ```
 
 ### **Testing**
 
 Tests project using Jest tests and attempts to run a build. This command will also automatically run during Husky's pre-commit checks.
 
-```
-yarn test
+```terminal
+npm run test
 ```
 
 ### **Building**
 
 Build out the entire site as a static project.
 
-```
-yarn build
+```terminal
+npm run build
 ```
 
 ### **Purging**
 
 Clean out all Node packages.
 
-```
-yarn purge
+```terminal
+npm run purge
 ```
