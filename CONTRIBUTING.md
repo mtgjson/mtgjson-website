@@ -1,7 +1,7 @@
 # Contributing
 The MTGJSON documentation website uses the [Vuepress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
 
-## Commiting
+## Committing
 The repo using Commitizen. There is no need to write a full commit message when committing, only `git commit` will do.
 
 ## Knowledge Requirements
