@@ -24,8 +24,8 @@ Install `node`, `n`, and `npm run`.
 **Option #1 (Preferred)**: Install Node with [brew](https://brew.sh).
 
 ```
-brew install n npm run
-sudo n 12.8.0
+brew install n
+sudo n 12
 ```
 
 **Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
