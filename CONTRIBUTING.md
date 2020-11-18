@@ -1,5 +1,5 @@
 # Contributing
-The MTGJSON documentation website uses the [Vuepress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
+The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
 
 ## Committing
 The repo uses Commitizen. There is no need to write a full commit message when committing, only `git commit` will do and you will be prompted with a CLI to handle the commit process.
@@ -24,7 +24,7 @@ You will have to use `vi` at the end of the process to apply the commit message 
 
 ## Technical Requirements
 - Node
-- npm
+- NPM
 - n
 
 ### Optional Requirements
@@ -99,12 +99,12 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
   - Frontmatter is written in JSON (with strings).
   - Markdown is written to specification.
   - Vue component are pseudo-imported by placing them in a Vue component in template syntax.
-  - Plugins are provided by the Vuepress community and can add syntactical sugar to rendering elements.
+  - Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements.
 
 ### Using Frontmatter
 Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 
-You can also change configuration of Vuepress by overwriting variables within the front matter.
+You can also change configuration of VuePress by overwriting variables within the front matter.
 
 > Remember: Frontmatter goes at the top of any Markdown file.
 
