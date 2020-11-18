@@ -19,8 +19,6 @@
 
 ### **Installation**
 
-Install `node`, `n`, and `npm run`.
-
 **Option #1 (Preferred)**: Install Node with [brew](https://brew.sh).
 
 ```
