@@ -12,8 +12,9 @@ The MTGJSON documentation website uses the [Vuepress](https://v1.vuepress.vuejs.
 - MTGJSON Files
 
 ## Technical Requirements
-- Node/NVM
-- Yarn (Package Manager)
+- Node
+- npm
+- n
 
 ### Optional Requirements
 - imagemin
