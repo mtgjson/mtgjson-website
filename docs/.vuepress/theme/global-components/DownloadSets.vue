@@ -66,7 +66,7 @@
                   small &nbsp;{{ set.code }}
                 li
                   small Type:
-                  small &nbsp;{{ set.type.replace('_', ' ') }}
+                  small &nbsp;{{ set.type.replace(/_/g, ' ') }}
                 li
                   small Release Date:
                   small &nbsp;{{ set.releaseDate }}

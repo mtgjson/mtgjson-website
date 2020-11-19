@@ -1,6 +1,6 @@
 <template lang="pug">
   div.version
-    router-link.version-number(v-if="version" :to="`/changelog/version-5/`") Ver: {{ version }}
+    router-link.version-number(v-if="version" :to="`/changelog/version-5/`") v{{ version }}
 </template>
 
 <script>

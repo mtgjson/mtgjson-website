@@ -134,6 +134,7 @@ export default {
           word-wrap: break-word;
           transition: all 0.25s ease-in-out;
           border: 1px solid var(--code-bg-color);
+          padding: 1em;
 
           &:focus {
             outline: 0;

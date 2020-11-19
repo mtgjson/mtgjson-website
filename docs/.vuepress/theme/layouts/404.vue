@@ -17,10 +17,26 @@
         name="sidebar-bottom"
         slot="bottom")
 
-    .page
+    .page#error
       .content__default
-        h1 Sorry, we can't find this page...
-        p Go back to your previous page, check the URL or check out one of the helpful links in the page navigation.
+        h1 This page is lost...
+        p Sorry, there seems to be a problem. Go back to your previous page, check the URL or use one of these popular links below.
+        ul
+          li
+            router-link(to="/") Home
+          li
+            router-link(to="/faq") F.A.Q.
+          li
+            router-link(to="/downloads") Downloads
+          li
+            router-link(to="/abstract-models/all-prices") All Prices
+          li
+            router-link(to="/data-models/card") Card Model
+          li
+            router-link(to="/data-models/set") Set Model
+        .error-image-wrapper
+          img.error-image(v-if="themeColor === 'dark'" src="../../public/images/assets/error-image-dark.png")
+          img.error-image(v-else src="../../public/images/assets/error-image-light.png")
 
 </template>
 
@@ -35,11 +51,14 @@ export default {
 
   data () {
     return {
-      isSidebarOpen: false
+      isSidebarOpen: false,
     }
   },
 
   computed: {
+    themeColor () {
+      return this.$store.getters.ThemeColor;
+    },
     shouldShowNavbar () {
       const { themeConfig } = this.$site
       const { frontmatter } = this.$page
@@ -92,6 +111,13 @@ export default {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
     })
+
+    if (window && window.localStorage) {
+      const savedTheme = window.localStorage.getItem("theme");
+      if (savedTheme) {
+        this.themeColor = savedTheme
+      }
+    }
   },
 
   methods: {
@@ -125,7 +151,46 @@ export default {
 <style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="../styles/theme.scss" lang="scss"></style>
 <style lang="scss" scoped>
-.content__default {
-  padding-bottom: 2rem;
+.page {
+  height: calc(100% - var(--navbar-height));
+
+  .content__default {
+    position: relative;
+
+    h1, p, ul {
+      z-index: 2;
+      position: relative;
+    }
+
+    .error-image {
+      position: absolute;
+      z-index: 1;
+      bottom: 0;
+      right: 4rem;
+      max-width: 100%;
+      opacity: 0.35;
+
+      &-wrapper {
+        display: flex;
+        justify-content: center;
+      }
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .page {
+    height: 100%;
+
+    .content__default {
+      .error-image {
+        position: relative;
+        right: 0;
+        left: 0;
+        margin: 0 auto;
+        opacity: 1;
+      }
+    }
+  }
 }
 </style>
