@@ -18,6 +18,12 @@ html, body, #app, .theme-container {
   height: 100%;
 }
 
+@media (max-width: 719px) {
+  html, body, #app, .theme-container {
+    height: auto;
+  }
+}
+
 body {
   font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
@@ -174,6 +180,7 @@ img {
 .content__default {
   @extend %wrapper;
   padding: 0 4rem;
+  height: 100%;
 
   & > * {
     max-width: var(--content-width);

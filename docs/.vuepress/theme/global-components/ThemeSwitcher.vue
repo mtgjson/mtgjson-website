@@ -68,6 +68,7 @@ export default {
       if (window && window.localStorage) {
         window.localStorage.setItem("theme", newTheme);
       }
+      this.$store.dispatch('SET_THEME_COLOR', newTheme);
       this.activeTheme = newTheme;
     }
   }

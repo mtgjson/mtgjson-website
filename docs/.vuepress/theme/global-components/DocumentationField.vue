@@ -1,6 +1,6 @@
 <template lang="pug">
   .schema-table--item
-    h4.heading(:title="title") {{ label }}
+    h2.heading(:title="title") {{ label }}
     .content
       p
         slot
