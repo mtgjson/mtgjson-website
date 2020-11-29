@@ -44,6 +44,15 @@
       "optional"
     ]
   },
+  "historic": {
+    "type": "string",
+    "example": "",
+    "description": "Sol Ring is not legal in the Historic play format. This property is omitted.",
+    "introduced": "v5.0.2",
+    "attributes": [
+      "optional"
+    ]
+  },
   "legacy": {
     "type": "string",
     "example": "\"Banned\"",

@@ -20,6 +20,47 @@
 # Changelog (v5)
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.0.2
+Release Date: 2020-12-02
+
+### Files
+#### Added
+- Added `TcgplayerSkus.*` file for download which contains [TCGplayer](https://tcgplayer.com) SKU information organized by card UUID
+- Added more data to the `SetList` file
+- Added `asciiName` property to `Atomic*` files
+- Added `Identifiers` model to the `Atomic*` files
+- Added `EUR` currency to `AllPrices` file
+- Added `type` property to `DeckList` file
+
+#### Removed
+- Removed `setCode` from `AllIdentifiers`
+
+### Card Model
+#### Added
+- Added `originalReleaseDate` property
+- Added `layout` to be `"token"` if a set is only tokens
+
+#### Updated
+- Updated `isAlternative` to be `true` for identical cards
+### Set Model
+#### Added
+- Added `mcmIdExtras` property
+
+### Deck Model
+#### Added
+- Added `commander` property
+
+### Legalities Model
+#### Added
+- Added missing `Historic` property
+
+#### Updated
+- Updated broken link to [Keyrune](https://keyrune.andrewgioia.com/)
+
+### Misc
+#### Added
+- Added new error page
+
 ## 5.0.1
 Release Date: 2020-08-24
 

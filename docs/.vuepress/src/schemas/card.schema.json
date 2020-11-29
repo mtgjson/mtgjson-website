@@ -202,6 +202,7 @@
     "type": "object",
     "example": "{{link@Identifiers@/data-models/identifiers/}}",
     "description": "See the {{link@Identifiers@/data-models/identifiers/}} data model.",
+    "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
@@ -331,7 +332,7 @@
   "layout": {
     "type": "string",
     "example": "\"adventure\"",
-    "description": "Type of card layout.",
+    "description": "Type of card layout. For a token card, this will be {{code@\"token\"}}.",
     "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v4.0.0"
@@ -401,6 +402,16 @@
     "description": "Number of the card. Can be prefixed or suffixed with a {{code@*}} or other character for promo sets.",
     "isTokenProperty": true,
     "introduced": "v4.0.0"
+  },
+  "originalReleaseDate": {
+    "type": "string",
+    "example": "\"2020-11-29\"",
+    "description": "Release date in {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} format for the card.",
+    "isManifestProperty": true,
+    "attributes": [
+  	  "optional"
+  	],
+    "introduced": "v5.0.2"
   },
   "originalText": {
     "type": "string",

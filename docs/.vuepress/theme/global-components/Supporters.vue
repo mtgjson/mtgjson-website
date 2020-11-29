@@ -9,7 +9,7 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
+                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
             a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")
@@ -26,7 +26,7 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(class="lazy" :data-src="'/images/' + image" :alt="link" :title="name")
+                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
             a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")

@@ -45,7 +45,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
             "<YYYY-MM-DD>": <Float> // Date and price as value
           }
         },
-        "currency": "USD",
+        "currency": <String>, // Currency of the provider
         "retail": { // Provider retail values
           "foil": { // Foil prices
             "<YYYY-MM-DD>": <Float> // Date and price as value
@@ -107,7 +107,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
         }
       },
       "cardmarket": {
-        "currency": "USD",
+        "currency": "EUR",
         "retail": {
           "foil": {
             ..., // more rows

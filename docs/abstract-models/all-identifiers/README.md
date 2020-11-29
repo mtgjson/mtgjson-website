@@ -83,7 +83,6 @@ The All Identifiers data model describes a list of all cards organized by UUID.
         "text": "A spell that can’t be countered can still be targeted by spells or abilities that would counter it. The part of their effect that would counter the spell won’t do anything, but any other effects those spells or abilities may have will still happen, if applicable."
       }
     ],
-    "setCode": "POGW",
     "subtypes": ["Sphinx"],
     "supertypes": [],
     "text": "This spell can't be countered.\nFlying, hexproof\nInstant and sorcery spells you control can't be countered.",

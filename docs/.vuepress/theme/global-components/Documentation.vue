@@ -37,7 +37,7 @@
         v-if="name"
         label="Name"
         title="The name of the property")
-          strong(v-html="name")
+          h2(:id="name" v-html="name")
 
         DocumentationField(
         v-if="data.type"

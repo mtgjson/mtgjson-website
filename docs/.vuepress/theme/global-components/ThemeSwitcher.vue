@@ -59,7 +59,7 @@ export default {
       let link = document.createElement("link");
       link.type = "image/x-icon";
       link.rel = "shortcut icon";
-      link.href = `/favicon-${newTheme}.ico`;
+      link.href = `/favicons/favicon-${newTheme}.ico`;
       // Don't clog up the <head> with cascade
       oldLink.remove();
       // Add new favicon

@@ -89,6 +89,18 @@
     "description": "Files containing the metadata object, has {{link@ISO 8601@https://www.iso.org/iso-8601-date-and-time-format.html}} dates for latest build and prices, and version properties of this MTGJSON release.",
     "introduced": "v4.0.0"
   },
+  "Modern": {
+    "type": "string",
+    "example": "\"Modern\"",
+    "description": "Files containing all sets, restricted to sets legal in the Modern format.",
+    "introduced": "v4.1.3"
+  },
+  "ModernAtomic": {
+    "type": "string",
+    "example": "\"ModernAtomic\"",
+    "description": "Files containing all cards, restricted to cards legal in the Modern format.",
+    "introduced": "v4.6.0"
+  },
   "PauperAtomic": {
     "type": "string",
     "example": "\"PauperAtomic\"",
@@ -105,18 +117,6 @@
     "type": "string",
     "example": "\"PioneerAtomic\"",
     "description": "Files containing all cards, restricted to cards legal in the Pioneer format.",
-    "introduced": "v4.6.0"
-  },
-  "Modern": {
-    "type": "string",
-    "example": "\"Modern\"",
-    "description": "Files containing all sets, restricted to sets legal in the Modern format.",
-    "introduced": "v4.1.3"
-  },
-  "ModernAtomic": {
-    "type": "string",
-    "example": "\"ModernAtomic\"",
-    "description": "Files containing all cards, restricted to cards legal in the Modern format.",
     "introduced": "v4.6.0"
   },
   "SetList": {
@@ -136,6 +136,12 @@
     "example": "\"StandardAtomic\"",
     "description": "Files containing all cards, restricted to cards legal in the Standard format.",
     "introduced": "v4.6.0"
+  },
+  "TcgplayerSkus": {
+    "type": "string",
+    "example" : "\"TcgplayerSkus\"",
+    "description": "Files containing {{link@TCGPlayer@https://tcgplayer.com}} SKU information based on card UUIDs.",
+    "introduced": "v5.0.2"
   },
   "Vintage": {
     "type": "string",
