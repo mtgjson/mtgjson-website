@@ -33,7 +33,7 @@ module.exports = {
       }
     ],
     // Favicon and OS Tiles
-    ['link', { rel: 'icon', href: '/favicon-dark.ico' }],
+    ['link', { rel: 'shortcut icon', type: "image/x-icon", href: '/favicon-dark.ico' }],
     [
       'link',
       { rel: 'icon', href: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }
