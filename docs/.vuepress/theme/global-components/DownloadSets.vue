@@ -59,7 +59,14 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h2(:id="set.name.replace(/ /g, '_')" :class="{spoiler: $helpers.isFutureDate(set.releaseDate)}") {{ set.name }}
+              h2(:id="set.name.replace(/ /g, '_')") {{ set.name }}
+              ol
+                li(v-if="$helpers.isFutureDate(set.releaseDate)")
+                  div.attribute.optional Spoiler
+                li(v-if="set.isOnlineOnly")
+                  div.attribute.optional Online Only
+                li(v-if="set.isPaperOnly")
+                  div.attribute.optional Paper Only
               ol
                 li
                   small Set Code:

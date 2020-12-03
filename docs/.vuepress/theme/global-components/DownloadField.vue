@@ -20,4 +20,8 @@ export default {
 
 <style lang="scss" scoped>
 @import "../styles/download";
+
+.small-header {
+  padding-top: 0;
+}
 </style>

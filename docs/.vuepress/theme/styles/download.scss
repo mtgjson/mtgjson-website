@@ -172,13 +172,19 @@
 
       ol {
         padding: 0;
-        margin: 0;
+        margin: 0 0 .5rem;
 
         li {
           margin: 0;
           list-style: none;
           display: inline-block;
           margin-right: 1rem;
+        }
+
+        &:not(:only-of-type):first-of-type {
+          li {
+            margin-right: 0;
+          }
         }
       }
 
