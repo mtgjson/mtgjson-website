@@ -1,10 +1,10 @@
 ---
 {
-  'title': 'Version 5 Changelog',
+  'title': 'v5 Changelog',
   'meta': [
     {
       'name': 'description',
-      'content': 'MTGJSON Changelog.'
+      'content': 'MTGJSON v5 Changelog.'
     },
     {
       'name': 'keywords',
