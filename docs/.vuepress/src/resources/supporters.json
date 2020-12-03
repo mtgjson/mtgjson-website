@@ -338,6 +338,11 @@
       "link": "https://magicollection.rdwonline.com"
     },
     {
+      "name": "RulesGuru",
+      "image": "avatar-rules-guru.png",
+      "link": "http://rulesguru.net"
+    },
+    {
       "name": "Scryfall",
       "image": "avatar-scryfall.png",
       "link": "https://scryfall.com"
@@ -404,10 +409,6 @@
     {
       "name": "MTGCardFetcher",
       "link": "https://reddit.com/r/MTGCardFetcher"
-    },
-    {
-      "name": "RulesGuru",
-      "link": "http://rulesguru.net"
     }
   ]
 }
