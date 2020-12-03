@@ -140,7 +140,7 @@
   "TcgplayerSkus": {
     "type": "string",
     "example" : "\"TcgplayerSkus\"",
-    "description": "Files containing {{link@TCGPlayer@https://tcgplayer.com}} SKU information based on card UUIDs.",
+    "description": "Files containing {{link@TCGplayer@https://tcgplayer.com}} SKU information based on card UUIDs.",
     "introduced": "v5.0.2"
   },
   "Vintage": {

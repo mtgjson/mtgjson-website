@@ -176,7 +176,7 @@
   "tcgplayerGroupId": {
     "type": "integer",
     "example": "2366",
-    "description": "Group ID of the set on TCGPlayer.",
+    "description": "Group ID of the set on {{link@TCGplayer@https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
     "isManifestProperty": true,
     "attributes": [
       "optional"

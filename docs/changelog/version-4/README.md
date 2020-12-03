@@ -136,7 +136,7 @@ Release Date: 2019-12-04
 
 ### Other
 #### Added
-- Daily prices for paper cards added to `AllPrices` from TCGPlayer.
+- Daily prices for paper cards added to `AllPrices` from TCGplayer.
 
 #### Changed
 - Daily prices can operate in a more self-sustaining way.
@@ -272,7 +272,7 @@ Release Date: 2019-08-11
 - A brand new site and logo!
 - Better caching of MTGJSON resources
 - Build command improvements
-- Update TCGPlayer API to 1.32.0
+- Update TCGplayer API to 1.32.0
 - Added `baseSetSize` and `totalSetSize` to `SetList.json` entries
 
 ## 4.4.2
@@ -298,7 +298,7 @@ Do you have a project that uses MTGJSON? Please reach out to us and we will get 
 - `variations` for Tamiyo's Journal printings added
 
 #### Changed
-- TCGPlayer API updated to 1.27.0
+- TCGplayer API updated to 1.27.0
 
 ### Decks
 #### Changed
@@ -574,7 +574,7 @@ Release Date: 2019-01-12
 #### Added
 - `life` for Vanguard cards
 - `hand` for Vanguard cards
-- `tcgplayerProductId` used to identify the card on TCGPlayer’s website
+- `tcgplayerProductId` used to identify the card on TCGplayer’s website
 - `tcgplayerPurchaseUrl` which contains URLs to purchase cards ( referrals are nice :) )
 
 ### Other
@@ -623,7 +623,7 @@ Release Date: 2018-12-07
 
 ### Individual Cards
 #### Added
-- TCGPlayer API information
+- TCGplayer API information
 
 #### Changed
 - Fixed more tokens that were appearing in `names` and `cards` arrays

@@ -36,7 +36,7 @@ We recommend downloading the compressed copies of files and unpack locally, as i
 
 ### Where does the data come from?
 ::: tip Where does the data come from?
-Data is collected from a variety of sources, including Gatherer, Scryfall, TCGPlayer, and many more. If you want to know more, or you would like to help, jump on our [Discord](https://mtgjson.com/discord)!
+Data is collected from a variety of sources, including Gatherer, Scryfall, TCGplayer, and many more. If you want to know more, or you would like to help, jump on our [Discord](https://mtgjson.com/discord)!
 :::
 
 ### What is the best way to download the data?

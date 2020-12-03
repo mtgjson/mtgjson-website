@@ -29,7 +29,7 @@
   "tcgplayer": {
     "type": "string",
     "example": "\"https://mtgjson.com/api/v5/links/12345\"",
-    "description": "URL to purchase a product on {{link@TCG Player@https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
+    "description": "URL to purchase a product on {{link@TCGplayer@https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}}.",
     "attributes": [
       "optional"
     ],

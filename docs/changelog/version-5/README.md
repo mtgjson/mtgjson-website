@@ -25,7 +25,7 @@ Release Date: 2020-12-08
 
 ### Files
 #### Added
-- Added `TcgplayerSkus.*` file for download which contains [TCGplayer](https://tcgplayer.com) SKU information organized by card UUID
+- Added `TcgplayerSkus.*` file for download which contains TCGplayer SKU information organized by card UUID
 - Added more data to the `SetList` file
 - Added `asciiName` property to `Atomic*` files
 - Added `Identifiers` model to the `Atomic*` files

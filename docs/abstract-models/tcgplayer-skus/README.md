@@ -1,11 +1,11 @@
 ---
 {
-  "title": "TCGPlayer SKUs",
+  "title": "TCGplayer SKUs",
   "meta":
     [
       {
         "name": "description",
-        "content": "TCGPlayer SKUs data model documentation."
+        "content": "TCGplayer SKUs data model documentation."
       },
       {
         "name": "keywords",
@@ -16,11 +16,11 @@
 }
 ---
 
-# TCGPlayer SKUs
+# TCGplayer SKUs
 
-The TCGPlayer SKUs data model describes [TCGPlayer](https://tcgplayer.com) SKU information based on card UUIDs.
+The TCGplayer SKUs data model describes [TCGplayer](https://tcgplayer.com) SKU information based on card UUIDs.
 
-> Parent file: <span class="code-wrap">[TCGPlayer SKUs](../../api/v5/TcgplayerSkus.json)</span>  
+> Parent file: <span class="code-wrap">[TCGplayer SKUs](../../api/v5/TcgplayerSkus.json)</span>  
 > Parent property: `data`
 
 ## File Structure Overview
