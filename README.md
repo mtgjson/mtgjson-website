@@ -83,11 +83,3 @@ Clean out all Node packages.
 ```
 npm run purge
 ```
-
-### **Committing**
-
-Commitzen is used in this repo so the only command needed to construct a commit is:
-
-```
-git commit
-```
