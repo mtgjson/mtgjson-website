@@ -1,6 +1,6 @@
 ---
 {
-  'title': 'Version 4',
+  'title': 'Version 4 Changelog',
   'meta': [
     {
       'name': 'description',

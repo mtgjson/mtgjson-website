@@ -1,6 +1,6 @@
 ---
 {
-  'title': 'Version 5',
+  'title': 'Version 5 Changelog',
   'meta': [
     {
       'name': 'description',
@@ -21,7 +21,7 @@
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.0.2
-Release Date: 2020-12-02
+Release Date: 2020-12-08
 
 ### Files
 #### Added

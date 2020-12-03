@@ -27,6 +27,9 @@
             .img-wrap(v-if="image")
               .img-wrap--container
                 img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
+            .img-wrap.no-image(v-else)
+              .img-wrap--container
+                p {{name.substring(0, 1)}}
             a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")
@@ -142,6 +145,19 @@ export default {
         align-items: center;
         flex: 0 0 100%;
         margin-bottom: 15px;
+
+        &.no-image {
+          text-align: center;
+
+          p {
+            font-size: 3rem;
+            font-weight: bold;
+            color: var(--dark-color);
+            margin-top: 0;
+            padding-top: 0;
+
+          }
+        }
 
         &--container {
           background-color: var(--supporter-bg-color);
