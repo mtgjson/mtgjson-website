@@ -33,7 +33,7 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 ### Rate Limits
 
-The current rate limits are capped at `1000` requests per IP Address per hour and `500` requests per key per hour.
+The current rate limits are capped at `1,000` requests per IP Address per hour and `500` requests per key per hour.
 
 ### Example Authorization
 
