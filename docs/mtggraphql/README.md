@@ -31,6 +31,10 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 ## Service Overview
 
+### Data Source
+
+The GraphQL endpoint is based on the latest MTGJSONv5 release. The dataset is normally refreshed once a week, coinciding with the MTGJSON weekly rebuild.
+
 ### Rate Limits
 
 The current rate limits are capped at `1,000` requests per IP Address per hour and `500` requests per key per hour.

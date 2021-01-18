@@ -39,11 +39,8 @@ Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 
 - Added more data to the `SetList` file
 - Added `asciiName` property to `Atomic*` files
 - Added `Identifiers` model to the `Atomic*` files
-- Added `EUR` currency to `AllPrices` file
+- Added `currency` to `AllPrices` file (Thanks, tpblaster!)
 - Added `type` property to `DeckList` file
-
-#### Removed
-- Removed `setCode` from `AllIdentifiers`
 
 #### Updated
 - Updated the order of keys so that the `meta` key appears at the top.
@@ -52,11 +49,9 @@ Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 
 - Added `originalReleaseDate` property
 - Added `layout` to be `"token"` if a set is only tokens
 
-#### Updated
-- Updated `isAlternative` to be `true` for identical cards
-
 #### Fixed
 - Fixed cards with `art_series` type
+- Fixed `isAlternative` for cards within a single set (Thanks, kodabb!)
 
 ### Card (Atomic) Model
 
@@ -64,7 +59,7 @@ Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 
 - Added `keywords`
 ### Set Model
 #### Added
-- Added `mcmIdExtras` property
+- Added `mcmIdExtras` property (Thanks, mjainta!)
 
 ### Deck Model
 #### Added
@@ -77,13 +72,28 @@ Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 
 #### Updated
 - Updated broken link to [Keyrune](https://keyrune.andrewgioia.com/)
 
+### Sets
+#### Added
+- Added Arena Beginner Set (`ANB`)
+- Added Amonkhet Remastered (`AKR`)
+- Added Zendikar Rising (`ZNR`)
+- Added The List (`PLIST`)
+- Added Kalaesh Remastered (`KLR`)
+- Added Commander Legends (`CMR`)
+- Added Commander Collection: Green (`CC1`)
+- Added Kaldheim, spoilers (`KHM`)
+- Added Time Spiral Remastered, spoilers (`TSR`)
+
+#### Fixed
+- Salvat 2005 is correctly marked as foreign (Thanks, silasary!)
+
 ### Misc
 #### Added
 - Added new error page
 - Fixed an issue where models without optional properties were able to be filtered
 
 #### Updated
-- MTGJSON has dropped TravisCI support in favor of GitHub Actions
+- MTGJSON has dropped TravisCI support in favor of GitHub Actions (Thanks, ebbit1q!)
 
 ## 5.0.1
 Release Date: 2020-08-24
