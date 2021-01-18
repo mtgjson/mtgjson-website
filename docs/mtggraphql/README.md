@@ -102,7 +102,7 @@ query{
 You can use an HTTP request on the mtgjson.com GraphQL endpoint with the following format:
 
 ```
-https://mtgjson.com/graphql?query={getCard(input:{name:"Phelddagrif"}){name,text,type}}
+https://mtgjson.com/graphql?query=query{cards(input:{name: "Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
 ```
 
 ## Client-based Querying
