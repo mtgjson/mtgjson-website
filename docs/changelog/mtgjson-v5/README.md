@@ -1,10 +1,10 @@
 ---
 {
-  'title': 'Version 5',
+  'title': 'MTGJSON Changelog',
   'meta': [
     {
       'name': 'description',
-      'content': 'MTGJSON Changelog.'
+      'content': 'MTGJSON v5 Changelog.'
     },
     {
       'name': 'keywords',
@@ -17,8 +17,71 @@
 }
 ---
 
-# Changelog (v5)
+# MTGJSON Changelog
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
+
+## 5.1.0
+Release Date: 2021-01-18
+
+### Announcements
+Welcome to the next release of MTGJSON - With this release we are no longer supporting Version 4, so if you have not already, please update all your sources to the Version 5 endpoints to ensure your applications function correctly going forward.
+
+**On February 28, 2021 all v4 endpoints will be decommissioned and slated for removal.**
+
+<img style="max-height: 100px; float: left; margin: 0 15px 15px 0;" alt="MTGGraphQL logo" src="/images/assets/logo-mtggraphql-bg.jpg" />We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](/mtggraphql) documentation. Access during our beta rollout is limited to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> supporters.
+</br></br></br>
+
+### Files
+#### Added
+- Added `TcgplayerSkus.*` file for download which contains TCGplayer SKU information organized by card UUID
+- Added more data to the `SetList` file
+- Added `asciiName` property to `Atomic*` files
+- Added `Identifiers` model to the `Atomic*` files
+- Added `EUR` currency to `AllPrices` file
+- Added `type` property to `DeckList` file
+
+#### Removed
+- Removed `setCode` from `AllIdentifiers`
+
+#### Updated
+- Updated the order of keys so that the `meta` key appears at the top.
+### Card Model
+#### Added
+- Added `originalReleaseDate` property
+- Added `layout` to be `"token"` if a set is only tokens
+
+#### Updated
+- Updated `isAlternative` to be `true` for identical cards
+
+#### Fixed
+- Fixed cards with `art_series` type
+
+### Card (Atomic) Model
+
+#### Added
+- Added `keywords`
+### Set Model
+#### Added
+- Added `mcmIdExtras` property
+
+### Deck Model
+#### Added
+- Added `commander` property
+
+### Legalities Model
+#### Added
+- Added missing `Historic` property
+
+#### Updated
+- Updated broken link to [Keyrune](https://keyrune.andrewgioia.com/)
+
+### Misc
+#### Added
+- Added new error page
+- Fixed an issue where models without optional properties were able to be filtered
+
+#### Updated
+- MTGJSON has dropped TravisCI support in favor of GitHub Actions
 
 ## 5.0.1
 Release Date: 2020-08-24
@@ -52,7 +115,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 ### Card
 #### Changed
 - Changed "Meld" card `name` and `side` to be more clear. Example: `"Gisela, the Broken Blade // Brisela, Voice of Nightmares"` (side a), `"Bruna, the Fading Light // Brisela, Voice of Nightmares"` (side a), and `"Brisela, Voice of Nightmares"` (side b)
-- Changed `mcmId`, `mcmMetaId`, `mtgoFoilId`, `mtgoId`, `multiverseId`, `scryfallId`, `scryallIllustrationId`, `scryfallOracleId`, and `tcgplayerProductId` properties to be nested in to a new `identifiers` property
+- Changed `mcmId`, `mcmMetaId`, `mtgoFoilId`, `mtgoId`, `multiverseId`, `scryfallId`, `scryallIllustrationId`, `scryfallOracleId`, and `tcgplayerProductId` properties to be nested in to a new `identifiers` property. `mtgstocksId` was removed for redundancy
 - Changed `isArena`, `isMtgo`, and `isPaper` to be nested inside a new `availability` property. Values return a string of the available property. See the available examples for all the values
 - Changed `isBuyABox`, `isBundle`, `isPlaneswalkerStamped`, and `isDateStamped` to be nested in to a new `promoTypes` property
 - Changed `name` to show full split card names (name1 // name2)

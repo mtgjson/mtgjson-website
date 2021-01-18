@@ -6,6 +6,13 @@
     "isManifestProperty": true,
     "introduced": "v4.3.0"
   },
+  "commander": {
+    "type": "object",
+    "example": "{{link@Card@/data-models/card/}}",
+    "description": "The card that is the Commander in this deck. See the {{link@Card@/data-models/card/}} data model.",
+    "attributes": [ "optional" ],
+    "introduced": "v5.1.0"
+  },
   "fileName": {
     "type": "string",
     "example": "\"AbzanSiege_KTK\"",
@@ -44,6 +51,7 @@
     "type": "string",
     "example": "\"Advanced Deck\"",
     "description": "The type of deck.",
+    "isManifestProperty": true,
     "introduced": "v4.3.0"
   }
 }

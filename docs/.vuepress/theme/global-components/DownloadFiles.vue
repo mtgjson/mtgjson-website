@@ -1,6 +1,11 @@
 <template lang="pug">
   .download-tables
     .download-table
+      .downtable--toc
+        h2 File List
+        ul
+          li(v-for="(file, name) in files" :key="name" v-if="files")
+            a(:href="`#${name}`") {{name}}
       .schema-table(v-for="(file, name) in files" :key="name" v-if="files")
         .download-wrap
           .text-wrap

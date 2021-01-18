@@ -4,4 +4,3 @@ User-agent: *
 Disallow: /404.html
 # but allow access to assets for better debugging/rendering
 # Disallow: /images
-# Disallow: /assets

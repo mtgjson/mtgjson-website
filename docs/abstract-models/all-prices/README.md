@@ -45,7 +45,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
             "<YYYY-MM-DD>": <Float> // Date and price as value
           }
         },
-        "currency": "USD",
+        "currency": <String>, // Currency of the provider
         "retail": { // Provider retail values
           "foil": { // Foil prices
             "<YYYY-MM-DD>": <Float> // Date and price as value
@@ -107,7 +107,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
         }
       },
       "cardmarket": {
-        "currency": "USD",
+        "currency": "EUR",
         "retail": {
           "foil": {
             ..., // more rows
@@ -137,4 +137,4 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 }
 ```
 
-Need more data? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.
+Need more data? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.

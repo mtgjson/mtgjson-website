@@ -1,17 +1,6 @@
 # Contributing
 The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
 
-## Committing
-The repo uses Commitizen. There is no need to write a full commit message when committing, only `git commit` will do and you will be prompted with a CLI to handle the commit process.
-
-You will have to use `vi` at the end of the process to apply the commit message or quit out of a commit. This can be done in a few ways:
-
-- If you need to quit a commit process, use your appropriate terminal command to end the process. For example, on MacOS, use `ctrl+c`. You will still be prompted with a file to edit for your commit. You can type `:q` and hit `enter` to finally exit and cancel the commit.
-
-- If you need to edit your message, type `i` to enter interactive mode. Lines prepended with `#` will be ignored. After your edits, hit `esc` to leave interactive mode.
-
-- When finished with editing or don't need to edit, type `:wq` and hit `enter` to exit `vi` and finish your commit.
-
 ## Knowledge Requirements
 - Vue
 - VuePress

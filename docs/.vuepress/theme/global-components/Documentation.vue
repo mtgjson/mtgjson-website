@@ -37,7 +37,7 @@
         v-if="name"
         label="Name"
         title="The name of the property")
-          strong(v-html="name")
+          h2(:id="name" v-html="name")
 
         DocumentationField(
         v-if="data.type"
@@ -110,11 +110,11 @@ export default {
   },
   computed: {
     canShowOptionals() {
-      const keys = Object.keys(this.schema).length;
+      const keys = Object.keys(this.filteredSchema).length;
       let count = 0;
 
-      for (let prop in this.schema) {
-        let attr = this.schema[prop].attributes;
+      for (let prop in this.filteredSchema) {
+        let attr = this.filteredSchema[prop].attributes;
 
         if (attr) {
           count = count + 1;

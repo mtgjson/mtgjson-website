@@ -105,7 +105,7 @@
   "tcgplayerProductId": {
     "type": "string",
     "example": "\"183201\"",
-    "description": "The {{link@TCG Player@https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}} card ID.",
+    "description": "The {{link@TCGplayer@https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson}} card ID.",
     "attributes": [
       "optional"
     ],

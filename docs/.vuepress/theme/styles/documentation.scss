@@ -13,6 +13,13 @@
     padding-top: 0 !important;
   }
 
+  h2 {
+    margin: 1rem 0;
+    padding: 0;
+    font-size: 1em;
+    font-weight: bold;
+  }
+
   &-index {
     padding-top: 15px;
     padding-bottom: 15px;
@@ -205,6 +212,10 @@
           display: flex;
           align-items: center;
           grid-column: span 1;
+
+          h2 {
+            margin: 0;
+          }
         }
 
         * {

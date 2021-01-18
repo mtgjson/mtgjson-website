@@ -53,6 +53,10 @@ a {
       transition: 0.25s color;
     }
   }
+
+  & > span {
+    display: inline-block;
+  }
 }
 
 .desktop-hide {

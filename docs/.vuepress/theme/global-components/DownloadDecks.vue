@@ -29,6 +29,8 @@
               option(value="code:true") Code (Descending)
               option(value="name") Name (Ascending)
               option(value="name:true") Name (Descending)
+              option(value="type") Type (Ascending)
+              option(value="type:true") Type (Descending)
 
       p(v-if="decks.length < 1") {{ message }}
       .schema-table(v-for="(deck, key) in decks" :key="key" v-else)
@@ -42,7 +44,10 @@
                 li
                   small Deck Code:
                   small &nbsp;{{ deck.code }}
-                li(v-if="deck.releaseDate")
+                li
+                  small Type:
+                  small &nbsp;{{ deck.type}}
+                li
                   small Release Date:
                   small &nbsp;{{ deck.releaseDate }}
             .text-wrap--downloads
