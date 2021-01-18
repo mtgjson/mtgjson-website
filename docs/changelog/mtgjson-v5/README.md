@@ -42,6 +42,8 @@ We're rolling out MTGJSON GraphQL! For more information see the [MTGGraphQL](/mt
 #### Removed
 - Removed `setCode` from `AllIdentifiers`
 
+#### Updated
+- Updated the order of keys so that the `meta` key appears at the top.
 ### Card Model
 #### Added
 - Added `originalReleaseDate` property
@@ -49,6 +51,14 @@ We're rolling out MTGJSON GraphQL! For more information see the [MTGGraphQL](/mt
 
 #### Updated
 - Updated `isAlternative` to be `true` for identical cards
+
+#### Fixed
+- Fixed cards with `art_series` type
+
+### Card (Atomic) Model
+
+#### Added
+- Added `keywords`
 ### Set Model
 #### Added
 - Added `mcmIdExtras` property
@@ -68,6 +78,7 @@ We're rolling out MTGJSON GraphQL! For more information see the [MTGGraphQL](/mt
 #### Added
 - Added new error page
 - Fixed an issue where models without optional properties were able to be filtered
+- MTGJSON has dropped TravisCI support in favor of GitHub Actions
 
 ## 5.0.1
 Release Date: 2020-08-24
