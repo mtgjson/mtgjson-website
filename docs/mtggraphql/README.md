@@ -53,10 +53,23 @@ To go along with MTGGraphQL, we have released a Typescript package for your conv
 
 ```
 query{
-  getCard( input: { name: "Phelddagrif" } ){
-    name,
-    text,
+  cards(
+    input:{
+        name: "Phelddagrif"
+      },
+      page:{
+        take: 100,
+        skip: 0
+      },
+      order:{
+        order:ASC
+      }
+  )
+  {
+    name
+    setCode
     type
+    text
   }
 }
 ```
@@ -66,11 +79,20 @@ query{
 ```
 {
   "data": {
-    "getCard": {
-      "name": "Phelddagrif",
-      "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card.",
-      "type": "Legendary Creature — Phelddagrif"
-    }
+    "cards": [
+      {
+        "name": "Phelddagrif",
+        "setCode": "ALL",
+        "type": "Legendary Creature — Phelddagrif",
+        "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card."
+      },
+      {
+        "name": "Phelddagrif",
+        "setCode": "ME1",
+        "type": "Legendary Creature — Phelddagrif",
+        "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card."
+      }
+    ]
   }
 }
 ```
