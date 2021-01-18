@@ -121,8 +121,6 @@ export default {
         }
       }
 
-      console.log(count)
-
       return count === 0 || count === keys;
     },
     filteredAttributes() {

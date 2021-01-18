@@ -78,6 +78,8 @@ We're rolling out MTGJSON GraphQL! For more information see the [MTGGraphQL](/mt
 #### Added
 - Added new error page
 - Fixed an issue where models without optional properties were able to be filtered
+
+#### Updated
 - MTGJSON has dropped TravisCI support in favor of GitHub Actions
 
 ## 5.0.1

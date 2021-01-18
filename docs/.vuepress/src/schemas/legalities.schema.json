@@ -48,7 +48,7 @@
     "type": "string",
     "example": "",
     "description": "Sol Ring is not legal in the Historic play format. This property is omitted.",
-    "introduced": "v5.0.2",
+    "introduced": "v5.1.0",
     "attributes": [
       "optional"
     ]

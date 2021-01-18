@@ -112,7 +112,7 @@
   "mcmId": {
     "type": "integer",
     "example": "2411",
-    "description": "The {{link@Magic Card Market@https://www.cardmarket.com/en/Magic}} set ID.",
+    "description": "The {{link@Magic Card Market@https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson}} set ID.",
     "isManifestProperty": true,
     "attributes": [
       "optional"
@@ -122,17 +122,17 @@
   "mcmIdExtras": {
     "type": "integer",
     "example": "1142",
-    "description": "The split {{link@Magic Card Market@https://www.cardmarket.com/en/Magic}} set ID if a set is printed in two sets. This ID represents the second set's ID.",
+    "description": "The split {{link@Magic Card Market@https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson}} set ID if a set is printed in two sets. This ID represents the second set's ID.",
     "isManifestProperty": true,
     "attributes": [
       "optional"
     ],
-    "introduced": "v5.0.2"
+    "introduced": "v5.1.0"
   },
   "mcmName": {
     "type": "string",
     "example": "\"Ravnica Allegiance\"",
-    "description": "The {{link@Magic Card Market@https://www.cardmarket.com/en/Magic}} set name.",
+    "description": "The {{link@Magic Card Market@https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson}} set name.",
     "isManifestProperty": true,
     "attributes": [
       "optional"

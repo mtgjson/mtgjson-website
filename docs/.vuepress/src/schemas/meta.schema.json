@@ -7,7 +7,7 @@
   },
   "version": {
     "type": "string",
-    "example": "\"5.0.2+20201202\"",
+    "example": "\"5.1.0+20200118\"",
     "description": "{{link@SemVer@https://semver.org}} specification of the MTGJSON build.",
     "introduced": "v4.0.0"
   }

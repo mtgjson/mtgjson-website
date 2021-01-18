@@ -326,6 +326,7 @@
     "attributes": [
       "optional"
     ],
+    "isAtomicProperty": true,
     "isTokenProperty": true,
     "introduced": "v5.0.0"
   },
@@ -411,7 +412,7 @@
     "attributes": [
   	  "optional"
   	],
-    "introduced": "v5.0.2"
+    "introduced": "v5.1.0"
   },
   "originalText": {
     "type": "string",
