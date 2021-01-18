@@ -85,7 +85,7 @@
   },
   "edhrecRank": {
     "type": "integer",
-    "example": "1000",
+    "example": "10",
     "description": "Card rank on {{link@EDHRec@https://www.edhrec.com}}.",
     "attributes": [
       "optional"

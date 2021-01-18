@@ -20,8 +20,11 @@
 # Changelog (v5)
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
-## 5.0.2
-Release Date: 2020-12-08
+## 5.1.0
+Release Date: 2021-01-18
+
+### Announcements
+Welcome to the next release of MTGJSON! With this release we are no longer supporting Version 4, so if you have not already, please update all your sources to the Version 5 endpoints to ensure your applications function correctly going forward.
 
 ### Files
 #### Added
@@ -60,6 +63,7 @@ Release Date: 2020-12-08
 ### Misc
 #### Added
 - Added new error page
+- Fixed an issue where models without optional properties were able to be filtered
 
 ## 5.0.1
 Release Date: 2020-08-24
