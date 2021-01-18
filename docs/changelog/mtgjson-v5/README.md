@@ -1,6 +1,6 @@
 ---
 {
-  'title': 'v5 Changelog',
+  'title': 'MTGJSON Changelog',
   'meta': [
     {
       'name': 'description',
@@ -17,14 +17,18 @@
 }
 ---
 
-# Changelog (v5)
+# MTGJSON Changelog
 The following is the Application and Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.1.0
 Release Date: 2021-01-18
 
 ### Announcements
-Welcome to the next release of MTGJSON! With this release we are no longer supporting Version 4, so if you have not already, please update all your sources to the Version 5 endpoints to ensure your applications function correctly going forward.
+Welcome to the next release of MTGJSON - With this release we are no longer supporting Version 4, so if you have not already, please update all your sources to the Version 5 endpoints to ensure your applications function correctly going forward.
+
+**On February 28, 2021 all v4 endpoints will be decommissioned and slated for removal.**
+
+We're rolling out MTGJSON GraphQL! For more information see the [MTGGraphQL](/mtggraphql) documentation.
 
 ### Files
 #### Added

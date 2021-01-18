@@ -181,6 +181,10 @@ module.exports = {
         children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/']
       },
       {
+        title: 'MTGGraphQL',
+        path: '/mtggraphql/'
+      },
+      {
         title: 'File Structures',
         path: '/file-structures/'
       },
@@ -198,9 +202,18 @@ module.exports = {
       },
       {
         title: 'Changelog',
-        path: '/changelog/version-5',
+        path: '/changelog/mtgjson-v5',
         collapsable: false,
-        children: ['/changelog/version-5/', '/changelog/version-4/']
+        children: [
+          {
+            title: 'MTGJSON',
+            path: '/changelog/mtgjson-v5/'
+          },
+          {
+            title: 'GraphQL',
+            path: '/changelog/mtgjson-graphql/'
+          }
+        ]
       },
       {
         title: 'Brand Assets',
