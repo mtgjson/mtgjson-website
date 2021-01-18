@@ -19,7 +19,7 @@
 
 # MTGGraphQL
 
-MTGGraphQL is sub-service of MTGJSON and a GraphQL API and Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering clients with the power to ask for exactly what they need from the MTGJSON service and nothing more. This service will also allow us to connect future projects & changes under a single API that can evolve over time. The current service focuses on JSON payloads for:
+MTGGraphQL, a sub-service of MTGJSON, is a GraphQL API and Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering clients with the power to ask for exactly what they need from the MTGJSON service and nothing more. This service will also allow us to connect future projects & changes under a single API that can evolve over time. The current service focuses on JSON payloads for:
 - Card(s)
 - Deck(s)
 - Set(s)
@@ -33,7 +33,7 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 ### Rate Limits
 
-The current rate limits are capped at `1000` requests per IP Address per hour and `500` requests per key.
+The current rate limits are capped at `1000` requests per IP Address per hour and `500` requests per key per hour.
 
 ### Example Authorization
 

@@ -26,7 +26,7 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
 ::: tip Zach - Lead Developer &amp; Maintainer
 <p>
   <img class="avatar lazy" src="" data-src="/images/avatars/avatar-zach.jpg" title="Zach's avatar" alt="Zach's avatar">
-  Zach is a 23-year old hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.<br/><br/>
+  Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.<br/><br/>
   <em>All inquires about MTGJSON can be sent to <a href="mailto:zach@mtgjson.com">zach@mtgjson.com</a></em>
 </p>
 :::

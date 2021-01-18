@@ -210,8 +210,8 @@ module.exports = {
             path: '/changelog/mtgjson-v5/'
           },
           {
-            title: 'GraphQL',
-            path: '/changelog/mtgjson-graphql/'
+            title: 'MTGGraphQL',
+            path: '/changelog/mtggraphql/'
           }
         ]
       },
