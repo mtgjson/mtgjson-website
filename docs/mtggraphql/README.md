@@ -72,7 +72,7 @@ query{
 You can use an HTTP request on the mtgjson.com GraphQL endpoint with the following format:
 
 ```
-https://mtgjson.com/gql/v1?query={getCard(input:{name:"Phelddagrif"}){name,text,type}}
+https://mtgjson.com/graphql?query={getCard(input:{name:"Phelddagrif"}){name,text,type}}
 ```
 
 ## Client-based Querying
