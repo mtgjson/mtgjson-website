@@ -124,6 +124,20 @@
       "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
       "tier": "uncommon",
       "since": "2020-02"
+    },
+    {
+      "name": "MagicML",
+      "image": "avatar-magicml.jpg",
+      "link": "https://www.magicml.com/",
+      "tier": "uncommon",
+      "since": "2021-01"
+    },
+    {
+      "name": "MTGStocks",
+      "image": "avatar-mtgstocks.jpg",
+      "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
+      "tier": "uncommon",
+      "since": "2021-01"
     }
   ],
   "services": [
@@ -316,11 +330,6 @@
       "name": "MTGO Wiki Price",
       "image": "avatar-mtgowikiprice.png",
       "link": "http://mtgowikiprice.com"
-    },
-    {
-      "name": "MTGStocks",
-      "image": "avatar-mtgstocks.jpg",
-      "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson"
     },
     {
       "name": "MYPCards",

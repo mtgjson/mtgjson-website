@@ -2,21 +2,9 @@
   .branding
     .branding-container
       .branding-container--col
-        h2 Current Logo
-        .img-wrap
-          NavMeta(:hideText="true" width="70px")
-        .dl-wrap
-          p.small-header Downloads:
-          .dl-wrap--row
-            a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.svg" download) Light Blue SVG
-            a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.svg" download) Dark Blue SVG
-            a.dl-btn(href="/images/assets/logo-mtgjson-black.svg" download) Black SVG
-            a.dl-btn(href="/images/assets/logo-mtgjson-white.svg" download) White SVG
-          .dl-wrap--row
-            a.dl-btn(href="/images/assets/logo-mtgjson-light-blue.png" download) Light Blue PNG
-            a.dl-btn(href="/images/assets/logo-mtgjson-dark-blue.png" download) Dark Blue PNG
-            a.dl-btn(href="/images/assets/logo-mtgjson-black.png" download) Black PNG
-            a.dl-btn(href="/images/assets/logo-mtgjson-white.png" download) White PNG
+        p.small-header Downloads:
+        a(href="/images/assets/MTGJSON-Brand-Assets.zip" download)
+          button.cta-btn Download Brand Assets
         .embed-wrap
           p.small-header Embedded Code:
           pre.embed-copy(contenteditable spellcheck="false") {{ renderAttributionEmbed() }}
@@ -89,37 +77,8 @@ export default {
         margin-bottom: 0;
       }
 
-      h5 {
-        margin-bottom: 1rem;
-      }
-
-      .img-wrap {
-        height: 50px;
-        overflow: hidden;
-
-        img {
-          width: auto;
-          height: 100%;
-        }
-
-        .logo {
-          float: left;
-          margin-left: 1rem;
-
-          &:first-of-type {
-            margin-left: 0;
-          }
-        }
-      }
-
-      .img-wrap,
-      .dl-wrap {
-        margin-bottom: 1.5rem;
-
-        &--row {
-          display: block;
-          margin-bottom: 1rem;
-        }
+      .cta-btn {
+        margin-right: 0;
       }
 
       .embed-wrap {
@@ -148,14 +107,6 @@ export default {
           }
         }
       }
-    }
-  }
-}
-
-@media (max-width: 940px) {
-  .branding {
-    &-container {
-      grid-template-columns: 1fr;
     }
   }
 }

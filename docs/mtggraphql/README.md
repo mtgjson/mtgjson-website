@@ -39,9 +39,9 @@ The GraphQL endpoint is based on the latest MTGJSONv5 release. The dataset is no
 
 The current rate limits are capped at `1,000` requests per IP Address per hour and `500` requests per key per hour.
 
-### Typescript Package
+### NPM Typescript Package
 
-To go along with MTGGraphQL, we have released a Typescript package for your convenience: [`mtggraphql`](https://www.npmjs.com/package/mtggraphql)
+To go along with MTGGraphQL, we have released a Typescript package for your convenience: [mtggraphql](https://www.npmjs.com/package/mtggraphql)
 
 ### Example Authorization
 
