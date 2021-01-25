@@ -242,6 +242,11 @@
       "link": "https://www.magiccardsmanager.com"
     },
     {
+      "name": "Magic Manager",
+      "image": "avatar-magic-manager.png",
+      "link": "https://magicmanager.cards"
+    },
+    {
       "name": "Magic The Gathering Companion",
       "image": "avatar-mtg-desktop-companion.png",
       "link": "https://nicho92.github.io/MtgDesktopCompanion/"
