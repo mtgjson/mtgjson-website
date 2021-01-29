@@ -8,7 +8,7 @@ export default {
   name: "Version",
   computed: {
     version() {
-      return this.$meta.version;
+      return this.$store.getters.Meta.version;
     }
   },
 };

@@ -190,12 +190,14 @@ export default {
     // this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
     this.isManifest = this.$page.frontmatter.title.includes("List"); // SetList/DeckList
 
+    await this.$helpers.setStoreState.apply(this, ["EnumValues"]);
+
     schema = require(`../../src/schemas/${this.$page.frontmatter.schema}.schema.json`);
     landcycle = new this.$helpers.jsonMustaches(schema);
     await landcycle._init();
 
     this.showMore = Object.keys(schema).length > 4;
-    this.values = await this.$enums;
+    this.values = await this.$store.getters.EnumValues;
     this.schema = landcycle.schema;
   },
   methods: {

@@ -14,9 +14,9 @@ import { Vue as VueIntegration } from '@sentry/integrations';
 
 import axios from 'axios';
 
-export default async ({ Vue }) => {
-  Vue.prototype.$meta = {};
-  Vue.prototype.$enums = {};
+export default ({ Vue }) => {
+  // Vue.prototype.$meta = {};
+  // Vue.prototype.$enums = {};
   Vue.prototype.$api = 'https://mtgjson.com/api/v5/';
   Vue.prototype.$throttleSpeed = 300;
   Vue.prototype.$helpers = {
@@ -39,23 +39,23 @@ export default async ({ Vue }) => {
     });
   }
 
+  // try {
+  //   const metaPromise = await axios.get(`${Vue.prototype.$api}Meta.json`);
+  //   const metaData = await metaPromise.data.data;
+  //   Vue.prototype.$meta = metaData;
+
+  //   const enumsPromise = await axios.get(`${Vue.prototype.$api}EnumValues.json`);
+  //   const enumsData = await enumsPromise.data.data;
+  //   Vue.prototype.$enums = enumsData;
+  // } catch ( err ) {
+  //   console.log(err);
+  // }
+
   const store = new Vuex.Store(
     makeStore({
       api: Vue.prototype.$api
     })
   );
-
-  try {
-    const metaPromise = await axios.get(`${Vue.prototype.$api}Meta.json`);
-    const metaData = await metaPromise.data.data;
-    Vue.prototype.$meta = metaData;
-
-    const enumsPromise = await axios.get(`${Vue.prototype.$api}EnumValues.json`);
-    const enumsData = await enumsPromise.data.data;
-    Vue.prototype.$enums = enumsData;
-  } catch ( err ) {
-    console.log(err);
-  }
 
   Vue.mixin({ store: store });
 };
