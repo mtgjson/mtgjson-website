@@ -1,7 +1,7 @@
 <template lang="pug">
   .download-tables
     .download-table(v-if="!decks")
-      p.loading-msg {{ message }}
+      .loader
     .download-table(v-else)
       .sorting-options
         p.show-options(
@@ -78,10 +78,7 @@ export default {
     await this.$helpers.setStoreState.apply(this, ["DeckList"]);
 
     this.defaultDecks = await this.$store.getters.DeckList;
-    this.filteredDecks = await this.$helpers.sort(
-      "releaseDate:true",
-      this.defaultDecks
-    );
+    this.filteredDecks = await this.$helpers.sort("releaseDate:true", this.defaultDecks);
   },
   methods: {
     handleMessage(length = 0) {

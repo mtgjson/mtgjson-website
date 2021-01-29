@@ -27,12 +27,7 @@ import Version from './Version';
 export default {
   name: "NavMeta",
   components: { Version },
-  props: ["hideText", "hideLink", "width", "fill"],
-  computed: {
-    version() {
-      return this.$store.getters.Meta.version;
-    }
-  }
+  props: ["hideText", "hideLink", "width", "fill"]
 };
 </script>
 

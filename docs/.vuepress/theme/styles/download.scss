@@ -13,7 +13,7 @@
 
     .show-options {
       display: inline-block;
-      padding: 0 0 1.5rem;
+      padding: 0 0 1.5rem 1.25rem;
       margin-bottom: 0;
       position: relative;
       color: var(--accent-color);
@@ -21,8 +21,8 @@
       font-weight: bold;
       cursor: pointer;
 
-      &::after {
-        right: -15px;
+      &::before {
+        left: 0;
         top: 10px;
         border: solid transparent;
         content: ' ';
@@ -36,9 +36,9 @@
       }
 
       &.hide-options {
-        padding: 0;
+        padding-bottom: 0;
 
-        &::after {
+        &::before {
           border-top-color: transparent;
           border-bottom-color: var(--accent-color);
           top: 5px;
@@ -142,6 +142,7 @@
         padding-top: 0;
         line-height: 1.5rem;
         color: var(--text-color);
+        font-size: 1.5rem;
 
         &.spoiler {
           display: flex;

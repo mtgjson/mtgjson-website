@@ -6,16 +6,9 @@
 
     Navbar(v-if="shouldShowNavbar" @toggle-sidebar="toggleSidebar")
 
-    Sidebar(
-      :items="sidebarItems"
-      @toggle-sidebar="toggleSidebar")
-
-      slot(
-        name="sidebar-top"
-        slot="top")
-      slot(
-        name="sidebar-bottom"
-        slot="bottom")
+    Sidebar(:items="sidebarItems" @toggle-sidebar="toggleSidebar")
+      slot(name="sidebar-top" slot="top")
+      slot(name="sidebar-bottom" slot="bottom")
 
     .page#error
       .content__default
@@ -52,13 +45,11 @@ export default {
   data () {
     return {
       isSidebarOpen: false,
+      themeColor: this.$store.getters.ThemeColor
     }
   },
 
   computed: {
-    themeColor () {
-      return this.$store.getters.ThemeColor;
-    },
     shouldShowNavbar () {
       const { themeConfig } = this.$site
       const { frontmatter } = this.$page
