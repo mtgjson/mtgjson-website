@@ -82,6 +82,27 @@ export default {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false;
     });
+
+    console.log(`
+            ███╗  ███╗
+      ███╗ ██╔═╝    ██╗  ███╗
+   █╗ █╔═╝ █╔╝       █║    █║ █╗
+  ██║ █║   ██╗      ██║    █║ ██╗
+ ███║ █║  ██╔╝       ██╗   █║ ███╗
+  ██║ █║   ██╗      ██╔╝   █║ ██╔╝
+   █║ █║   █╔╝       █║    █║ █╔╝
+   ╚╝ ███╗ ██╗      ██║  ███║ ╚╝
+      ╚══╝  ███╗  ███╔╝  ╚══╝
+            ╚══╝  ╚══╝
+
+     Thanks for using MTGJSON!
+
+   We're always looking for and
+      are willing to help :)
+
+Discord: https://mtgjson.com/discord
+ Github: https://github.com/mtgjson
+    `)
   },
 
   methods: {
