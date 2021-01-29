@@ -1,6 +1,6 @@
 <template lang="pug">
   div.version
-    router-link.version-number(v-if="version" :to="`/changelog/version-5/`") v{{ version }}
+    router-link.version-number(v-if="version" :to="`/changelog/mtgjson-v5/`") v{{ version }}
 </template>
 
 <script>
@@ -8,7 +8,7 @@ export default {
   name: "Version",
   computed: {
     version() {
-      return this.$store.getters.Meta.version;
+      return this.$meta.version;
     }
   },
 };

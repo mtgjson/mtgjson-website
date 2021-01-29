@@ -26,7 +26,7 @@
 
     ol {
       margin: 0;
-      padding-left: 15px;
+      padding-left: 20px;
       list-style: disc;
       position: relative;
       overflow: hidden;
@@ -124,18 +124,14 @@
     .values-list {
       position: relative;
       display: flex;
-      // align-items: center;
-      height: 47px;
+      align-items: center;
+      height: 32px;
 
       ol {
-        position: absolute;
-        top: 8px;
+        position: relative;
         z-index: 10;
-        padding: 0 37px 7px 11px;
-        max-height: 200px;
+        padding: 0 11px 7px 30px;
         overflow: auto;
-        // width: max-content;
-        cursor: pointer;
 
         li {
           position: relative;
@@ -143,44 +139,52 @@
           padding-top: 7px;
           width: max-content;
           display: none;
+          user-select: none;
 
           &:first-of-type {
             display: block;
           }
         }
+      }
 
+      &::after {
+        top: 14px;
+        right: 11px;
+        border: solid transparent;
+        content: '';
+        height: 0;
+        width: 0;
+        position: absolute;
+        pointer-events: none;
+        border-color: transparent;
+        border-bottom-color: var(--code-text-color);
+        border-top-color: transparent;
+        top: 8px;
+        border-width: 5px;
+        margin-left: -5px;
+        left: 15px;
+        z-index: 99;
+      }
+
+      &.selected {
         &::after {
-          top: 14px;
-          right: 11px;
-          border: solid transparent;
-          content: '';
-          height: 0;
-          width: 0;
-          position: absolute;
-          pointer-events: none;
-          border-color: transparent;
+          border-bottom-color: transparent;
           border-top-color: var(--code-text-color);
-          border-width: 5px;
-          margin-left: -5px;
+          top: 13px;
         }
 
-        &.selected {
-          z-index: 11;
-
-          &::after {
-            height: 15px;
-            border: 0;
-            width: 15px;
-            line-height: 1rem;
-            text-align: right;
-            font-weight: bold;
-            content: '\00D7';
-            top: 7px;
-            font-size: 16px;
-          }
+        ol {
+          max-height: 142px;
+          position: absolute;
+          padding-bottom: 0;
+          top: 0;
 
           li {
             display: block;
+
+            &:last-of-type {
+              padding-bottom: 7px;
+            }
           }
         }
       }

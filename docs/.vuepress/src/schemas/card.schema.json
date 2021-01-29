@@ -168,7 +168,7 @@
   "hasContentWarning": {
     "type": "boolean",
     "example": "true",
-    "description": "If the card marked by Wizards of the Coast for having sensitive content. Cards with this property may have missing or degraded properties and values.",
+    "description": "If the card marked by Wizards of the Coast for having sensitive content. Cards with this property may have missing or degraded properties and values. See this {{link@official article@https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10}} for more information.",
     "attributes": [
       "optional"
     ],
@@ -237,7 +237,7 @@
   "isOnlineOnly": {
     "type": "boolean",
     "example": "true",
-    "description": "If the card is only available in Magic: The Gathering Online.",
+    "description": "If the card is only available in {{link@Magic: The Gathering Online@https://magic.wizards.com/en/mtgo}}.",
     "attributes": [
       "optional"
     ],
@@ -452,7 +452,7 @@
   "printings": {
     "type": "array",
     "example": "[ \"M19\", \"PM19\", ... ]",
-    "description": "List of sets the card was printed in, in uppercase.",
+    "description": "List of sets the card was printed in, formatted in uppercase.",
     "attributes": [
   	  "optional"
   	],

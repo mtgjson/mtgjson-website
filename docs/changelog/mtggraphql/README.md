@@ -18,7 +18,7 @@
 ---
 
 # MTGGraphQL Changelog
-The following is the MTGGraphQL Service Changelog. Some parts may be updated for clarity or corrections at any point.
+The following is the MTGGraphQL Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 1.0.2
 Release Date: 2021-01-18

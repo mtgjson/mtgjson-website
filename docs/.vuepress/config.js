@@ -139,13 +139,14 @@ module.exports = {
   // Vuepress Themeing
   themeConfig: {
     // Algolia SEO
-    algolia: {
-      apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
-      indexName: 'mtgjson',
-      algoliaOptions: {
-        hitsPerPage: 10
-      }
-    },
+    // algolia: {
+    //   apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
+    //   indexName: 'mtgjson',
+    //   algoliaOptions: {
+    //     hitsPerPage: 10
+    //   }
+    // },
+    searchPlaceholder: 'Search...',
     searchMaxSuggestions: 10,
     // Edit this page link in footer
     docsRepo: 'mtgjson/mtgjson-website',
@@ -212,6 +213,10 @@ module.exports = {
           {
             title: 'MTGGraphQL',
             path: '/changelog/mtggraphql/'
+          },
+          {
+            title: 'MTGJSON Docs',
+            path: '/changelog/documentation/'
           }
         ]
       },

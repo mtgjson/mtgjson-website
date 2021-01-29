@@ -56,8 +56,8 @@
         v-if="getValues(name) && getValues(name).length > 0"
         label="Examples"
         title="All possible values of the property")
-          .values-list
-            ol.values-list--code(@click="toggleValue")
+          .values-list(@click="toggleValue")
+            ol.values-list--code
               li(v-for="(value, key) in getValues(name)" :key="key") "{{ value }}"
 
         DocumentationField(
@@ -181,7 +181,7 @@ export default {
       return filteredSchema;
     }
   },
-  async mounted() {
+  async beforeMount() {
     let schema;
     let landcycle;
 
@@ -190,15 +190,12 @@ export default {
     // this.isDeckCard = this.$page.frontmatter.title.includes("(Deck)");
     this.isManifest = this.$page.frontmatter.title.includes("List"); // SetList/DeckList
 
-    await this.$helpers.setStoreState.apply(this, ["EnumValues"]);
-
     schema = require(`../../src/schemas/${this.$page.frontmatter.schema}.schema.json`);
     landcycle = new this.$helpers.jsonMustaches(schema);
     await landcycle._init();
 
-    // @todo: harden this since its not working but doesnt need to work right now
     this.showMore = Object.keys(schema).length > 4;
-    this.values = this.$store.getters.EnumValues;
+    this.values = await this.$enums;
     this.schema = landcycle.schema;
   },
   methods: {

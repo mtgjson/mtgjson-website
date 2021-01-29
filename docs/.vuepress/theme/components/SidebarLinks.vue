@@ -69,3 +69,11 @@ function resolveOpenGroupIndex(route, items) {
   return -1;
 }
 </script>
+
+<style lang="scss" scoped>
+.sidebar-group-items {
+  li {
+    list-style-type: circle;
+  }
+}
+</style>

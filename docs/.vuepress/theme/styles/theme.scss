@@ -100,8 +100,8 @@ img {
 .dl-btn {
   display: inline-block;
 
-  margin-right: .5rem;
-  padding-right:.51rem;
+  margin-right: 1rem;
+  padding-right: 1rem;
   border-right: 1px solid var(--gray-color);
 
   &:last-of-type {
@@ -250,7 +250,8 @@ img {
   text-transform: capitalize;
   overflow: hidden;
   z-index: 2;
-  color: var(--dark-3-color);
+  color: var(--attribute-standard-color);
+  background-color: var(--bg-dark-color);
   font-weight: bold;
 
   &::before {
@@ -267,6 +268,8 @@ img {
 
   &.optional,
   &.decks {
+    color: var(--dark-color);
+
     &::before {
       background-color: var(--spoiler-color);
     }
@@ -284,6 +287,40 @@ img {
   right: 1rem !important;
 }
 
+.sidebar {
+  box-shadow: 0 0 5rem var(--shadow-color);
+}
+
+.suggestions {
+  z-index: 999;
+}
+
+.loader {
+  display: inline-block;
+  width: 80px;
+  height: 80px;
+}
+.loader::after {
+  content: " ";
+  display: block;
+  width:40px;
+  height: 40px;
+  margin: 8px;
+  border-radius: 50%;
+  border: 6px solid #fff;
+  border-color: var(--text-color) transparent var(--text-color) transparent;
+  animation: loader-animation 1.2s linear infinite;
+}
+@keyframes loader-animation {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+
+
 @media (max-width: 719px) {
   .content__default,
   .page-nav,
@@ -297,5 +334,13 @@ img {
 
   .mobile-hide {
     display: none !important;
+  }
+  .sidebar {
+    box-shadow: none;
+  }
+  .sidebar-open {
+    .sidebar {
+      box-shadow: 0 0 5rem var(--shadow-color);
+    }
   }
 }

@@ -5,8 +5,7 @@
   --content-width: 960px;
   --line-numbers-width: 20px;
   // Auxillery colors
-  --yellow-color: #ffe774;
-  --yellow-dark-color: #c8ac29;
+  --yellow-color: #f1d866;
   --green-color: lightgreen;
   --red-color: salmon;
   --orange-color: #ef6c2f;
@@ -14,7 +13,7 @@
   --blue-2-color: #1e90ff;
 
   --gray-color: #aaaaaa;
-  --light-gray-color: #f6f8fa;
+  --light-gray-color: #eeeeee;
   --medium-gray-color: #eaecef;
   --dark-gray-color: #2d2d2d;
 
@@ -39,6 +38,7 @@
   --accent-color: #61c6ed;
   --spoiler-color: var(--yellow-color);
   --spoiler-text-color: var(--dark-3-color);
+  --attribute-standard-color: var(--text-color);
   // Color Themes
   --text-color: var(--light-color);
   --bg-color: var(--dark-1-color);
@@ -70,8 +70,6 @@ body {
   &.light {
     // Main Color
     --accent-color: var(--blue-2-color);
-    --yellow-color: var(--yellow-dark-color);
-    --spoiler-color: var(--yellow-color);
     --spoiler-text-color: var(--light-color);
     // Color Themes
     --text-color: var(--dark-1-color);
@@ -86,6 +84,7 @@ body {
     --blockquote-heading-color: var(--medium-gray-color);
     --blockquote-bg-color: var(--light-color);
     --supporter-bg-color: var(--medium-gray-color);
+    --attribute-standard-color: var(--dark-color);
     // Data Presentation
     --table-color: var(--text-color);
     --table-bg-color: var(--light-color);

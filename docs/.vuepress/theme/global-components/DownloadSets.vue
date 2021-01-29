@@ -1,7 +1,7 @@
 <template lang="pug">
   .download-tables
     .download-table(v-if="!sets")
-      p.loading-msg {{ message }}
+      .loader
     .download-table(v-else)
       .sorting-options
         p.show-options(
@@ -61,12 +61,16 @@
             .text-wrap--details
               h2(:id="set.name.replace(/ /g, '_')") {{ set.name }}
               ol
-                li(v-if="$helpers.isFutureDate(set.releaseDate)")
+                li(v-if="set.isPartialPreview")
                   div.attribute.optional Spoiler
                 li(v-if="set.isOnlineOnly")
                   div.attribute.optional Online Only
                 li(v-if="set.isPaperOnly")
                   div.attribute.optional Paper Only
+                li(v-if="set.isPaper")
+                  div.attribute Paper
+                li(v-if="set.isOnline")
+                  div.attribute Online
               ol
                 li
                   small Set Code:
@@ -123,7 +127,7 @@ export default {
       this.timeout = window.setTimeout(() => {
         const sets = this.defaultSets;
         const removed = !this.spoilerKey
-          ? sets.filter(set => !this.$helpers.isFutureDate(set.releaseDate))
+          ? sets.filter(set => !set.isPartialPreview)
           : sets;
         const searched = this.$helpers.search(this.searchKey, removed);
         const sorted = this.$helpers.sort(this.sortKey, searched);

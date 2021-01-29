@@ -3,7 +3,7 @@ import { makeStore } from './store';
 
 import jsonMustaches from './src/scripts/jsonMustaches';
 import setStoreState from './src/scripts/setStoreState';
-import isFutureDate from './src/scripts/isFutureDate';
+// import isFutureDate from './src/scripts/isFutureDate';
 import prettifyType from './src/scripts/prettifyType';
 import filter from './src/scripts/filter';
 import search from './src/scripts/search';
@@ -12,13 +12,17 @@ import sort from './src/scripts/sort';
 import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';
 
+import axios from 'axios';
+
 export default async ({ Vue }) => {
+  Vue.prototype.$meta = {};
+  Vue.prototype.$enums = {};
   Vue.prototype.$api = 'https://mtgjson.com/api/v5/';
   Vue.prototype.$throttleSpeed = 300;
   Vue.prototype.$helpers = {
     jsonMustaches,
     setStoreState,
-    isFutureDate,
+    // isFutureDate,
     prettifyType,
     search,
     filter,
@@ -40,6 +44,18 @@ export default async ({ Vue }) => {
       api: Vue.prototype.$api
     })
   );
+
+  try {
+    const metaPromise = await axios.get(`${Vue.prototype.$api}Meta.json`);
+    const metaData = await metaPromise.data.data;
+    Vue.prototype.$meta = metaData;
+
+    const enumsPromise = await axios.get(`${Vue.prototype.$api}EnumValues.json`);
+    const enumsData = await enumsPromise.data.data;
+    Vue.prototype.$enums = enumsData;
+  } catch ( err ) {
+    console.log(err);
+  }
 
   Vue.mixin({ store: store });
 };
