@@ -18,8 +18,9 @@ yarn-error.log*
 # Node modules
 node_modules/
 
-# Build folder
+# Builds
 dist/
+.temp/
 
 # Utility testing output
 utils/output/**/*.*

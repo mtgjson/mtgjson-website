@@ -1,23 +1,8 @@
-.schema-table, .custom-block, blockquote {
-  font-size: 16px;
-  border-radius: 5px;
-  border: 1px solid var(--table-border-color);
-  border-left-color: var(--blockquote-heading-color);
-  background-color: var(--blockquote-bg-color);
-  border-left-width: 10px;
-  padding: 25px;
-  margin-bottom: 25px;
-
-  &, p {
-    &::before, &::after {
-      content: '';
-      display: table;
-      clear: both;
-    }
-  }
+.custom-block {
+  @extend %blockquote;
 
   * {
-    &:last-of-type {
+    &:last-child {
       margin-bottom: 0;
     }
   }
@@ -27,11 +12,16 @@
     font-size: 16px;
   }
 
-  &.warning {
-    border-color: var(--yellow-color);
-
-    .custom-block-title {
-      color: var(--yellow-color);
+  p {
+    &::before,
+    &:after {
+      content: "";
+      display: table;
+      clear: both;
     }
+  }
+
+  &.warning {
+    border: 1px solid var(--yellow-color);
   }
 }

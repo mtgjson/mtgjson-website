@@ -1,4 +1,4 @@
-.codeblock, code, pre, .md-code, .values-list--code, .code-wrap a {
+.codeblock, code, pre, .md-code {
   font-family: var(--font-monospace);
   font-size: 12px;
   background-color: var(--code-bg-color);
@@ -21,10 +21,6 @@ pre {
   }
 }
 
-.code-wrap a {
-  color: var(--accent-color);
-}
-
-.codeblock, pre, code, kbd, .line-number {
+pre, code, kbd, .line-number {
   font-family: var(--font-monospace);
 }

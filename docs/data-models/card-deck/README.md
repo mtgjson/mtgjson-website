@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Card",
+  "title": "Card (Deck)",
   "schema": "card",
   "meta": [
     {
       "name": "description",
-      "content": "Card data model documentation.",
+      "content": "Card (Deck) data model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, card",
+      "content": "mtg, magic: the gathering, mtgjson, json, card (deck)",
     }
   ],
   "feed": {
@@ -18,12 +18,12 @@
 }
 ---
 
-# Card
+# Card (Deck)
 
-The Card data model describes the properties of a single card.
+The Card data model describes the properties and values of a single card.
 
-**Parent model:** [Set](../set/), [Deck](../deck/)  
-**Parent property:** `cards`, `commander`, `mainBoard`, `sideBoard`
+**Parent model:** [Deck](../deck/)  
+**Parent property:** `mainBoard`, `sideBoard`
 
 #### Model Index
 
@@ -31,9 +31,7 @@ The Card data model describes the properties of a single card.
 
 #### Model Properties
 
-<PropertyToggler/>
-
-> ### artist
+> ### artist  
 > Name of the artist that illustrated the card art.  
 >
 > **Type:** `string`  

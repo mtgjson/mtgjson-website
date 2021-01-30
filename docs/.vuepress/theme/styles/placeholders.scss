@@ -1,0 +1,14 @@
+%wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+%blockquote {
+  position: relative;
+  margin: 2rem 0 2rem;
+  padding: 2rem;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+}

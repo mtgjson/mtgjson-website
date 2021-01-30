@@ -20,10 +20,10 @@
 
 The Booster data model describes a object-based breakdown of how a [Set](/data-models/set/)'s booster pack may be constructed.
 
-> Parent model: <span class="code-wrap">[Set](/data-models/set/)</span>  
-> Parent property: `booster`
+**Parent model:** [Set](/data-models/set/)  
+**Parent property:** `booster`
 
-## File Structure Overview
+#### File Structure Overview
 
 ```json
 {
@@ -59,7 +59,7 @@ The Booster data model describes a object-based breakdown of how a [Set](/data-m
 }
 ```
 
-## Example Model
+#### Example Model
 
 ```json
 {

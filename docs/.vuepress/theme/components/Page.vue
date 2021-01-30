@@ -182,7 +182,7 @@ function flattern(items, res) {
 </script>
 
 <style lang="scss">
-@import '../styles/wrapper';
+@import '../styles/placeholders';
 
 .page {
   position: relative;

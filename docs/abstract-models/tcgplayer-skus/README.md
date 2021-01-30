@@ -20,10 +20,10 @@
 
 The TCGplayer SKUs data model describes [TCGplayer](https://tcgplayer.com) SKU information based on card UUIDs.
 
-> Parent file: <span class="code-wrap">[TCGplayer SKUs](../../api/v5/TcgplayerSkus.json)</span>  
-> Parent property: `data`
+**Parent file:** [TCGplayer SKUs](../../api/v5/TcgplayerSkus.json)  
+**Parent property:** `data`
 
-## File Structure Overview
+#### File Structure Overview
 
 ```json
 {
@@ -41,7 +41,7 @@ The TCGplayer SKUs data model describes [TCGplayer](https://tcgplayer.com) SKU i
 }
 ```
 
-### Example Model
+#### Example Model
 
 ```json
 {

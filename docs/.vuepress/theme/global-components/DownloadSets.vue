@@ -51,7 +51,7 @@
               @input="onHandleChange")
 
       p(v-if="sets.length < 1") {{ message }}
-      .schema-table(v-for="(set, key) in sets" :key="key" v-else)
+      blockquote(v-else v-for="(set, key) in sets" :key="key")
         .download-wrap
           .img-wrap
             div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -59,7 +59,7 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h2(:id="set.name.replace(/ /g, '_')") {{ set.name }}
+              h3(:id="set.name.replace(/ /g, '_')") {{ set.name }}
               ol
                 li(v-if="set.isPartialPreview")
                   div.attribute.optional Spoiler

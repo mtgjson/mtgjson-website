@@ -22,9 +22,23 @@
 
 The Rulings data model describes a list of rulings that are for a specific card.
 
-> Parent model: <span class="code-wrap">[Card](../card/)</span>  
-> Parent property: `rulings`
+**Parent model:** [Card](../card/)  
+**Parent property:** `rulings`
 
-## Model Properties
+#### Model Index
 
-<Documentation/>
+[[toc]]
+
+#### Model Properties
+
+> ### date  
+> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.  
+>
+> **Type:** `string`  
+> **Introduced:** `v4.0.0`
+
+> ### text  
+> Text ruling of the card.  
+>
+> **Type:** `string`  
+> **Introduced:** `v4.0.0`

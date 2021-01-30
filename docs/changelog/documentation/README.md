@@ -17,7 +17,7 @@
 }
 ---
 
-# MTGJSON Changelog
+# MTGJSON Documentation Changelog
 The following is the MTGJSON Documentation/Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 2.1.0
@@ -42,4 +42,5 @@ Welcome to the documentation changelog, which has been split from the MTGJSON Ap
 - The examples list and options for downloads dropdown toggles
 - Changed Algolia search to basic search as Algolia provided little upside and more obfuscation to manage
 - Various styling adjustments
+- Got rid of schemas in favor of pure Markdown and now properties are now searchable!
 - Build packages

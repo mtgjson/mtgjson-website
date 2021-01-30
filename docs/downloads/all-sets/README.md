@@ -22,6 +22,6 @@
 
 All individual set files to download provided by MTGJSON.
 
-<GlobalAlert/>
+#### All Sets Downloads
 
 <DownloadSets/>

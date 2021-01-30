@@ -17,10 +17,10 @@
 
 The All Identifiers data model describes a list of all cards organized by UUID.
 
-> Parent file: <span class="code-wrap">[AllIdentifiers](../../api/v5/AllIdentifiers.json)</span>  
-> Parent property: `data`
+**Parent file:** [AllIdentifiers](../../api/v5/AllIdentifiers.json)  
+**Parent property:** `data`
 
-## File Structure Overview
+#### File Structure Overview
 
 ```json
 {
@@ -28,7 +28,7 @@ The All Identifiers data model describes a list of all cards organized by UUID.
 }
 ```
 
-### Example Model
+#### Example Model
 
 ```json
 {

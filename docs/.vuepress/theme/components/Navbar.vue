@@ -4,8 +4,8 @@
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
       router-link(:to="$localePath")
         NavMeta(:width="`60px`")
-      NavLinks.mobile-hide
-      ThemeSwitcher.desktop-hide
+      //- NavLinks.mobile-hide
+      ThemeSwitcher
 </template>
 
 <script>
@@ -25,8 +25,6 @@ export default {
 </script>
 
 <style lang="scss">
-@import '../styles/wrapper';
-
 .navbar {
   display: flex;
   position: relative;
@@ -35,7 +33,6 @@ export default {
   align-items: center;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
-  @extend %wrapper;
 
   padding: 0 4rem;
 

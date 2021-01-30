@@ -35,6 +35,20 @@ The "Web API" or more commonly known as "files" that MTGJSON.com provides varies
 For a full list of files, see [All Files](../downloads/all-files/) downloads page.
 :::
 
-## File Model Properties
+#### File Model Index
 
-<Documentation/>
+[[toc]]
+
+#### File Model Properties
+
+> ### meta
+> Application metadata object. See the [Meta](/data-models/meta/) data model.  
+>
+> **Type:** `object`  
+> **Introduced:** `v5.0.0`  
+
+> ### data
+> Top-level key that holds the "Web API" data. The returned data is based on the file.
+>
+> **Type:** `object | array(object)`  
+> **Introduced:** `v5.0.0`  

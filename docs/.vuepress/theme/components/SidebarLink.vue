@@ -98,9 +98,24 @@ a.sidebar-link {
   width: 100%;
   box-sizing: border-box;
 
-  &.active {
+  &::before {
+    position: absolute;
+    content: none;
+    font-size: 2rem;
     color: var(--accent-color);
     font-weight: bold;
+    top: -16px;
+    left: -16px;
+  }
+
+  &.active {
+    position: relative;
+    color: var(--accent-color);
+    font-weight: bold;
+
+    &::before {
+      content: "\2022";
+    }
   }
 
   &:hover {

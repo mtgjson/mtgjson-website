@@ -122,6 +122,10 @@ export default {
     grid-gap: 1rem;
     margin-bottom: 2rem;
 
+    blockquote {
+      margin-top: 0;
+    }
+
     &.services {
       grid-template-columns: repeat(4, minmax(0, 1fr));
     }

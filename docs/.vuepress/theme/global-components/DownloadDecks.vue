@@ -33,13 +33,13 @@
               option(value="type:true") Type (Descending)
 
       p(v-if="decks.length < 1") {{ message }}
-      .schema-table(v-for="(deck, key) in decks" :key="key" v-else)
+      blockquote(v-for="(deck, key) in decks" :key="key" v-else)
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h2(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
+              h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
               ol
                 li
                   small Deck Code:
