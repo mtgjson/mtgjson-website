@@ -20,7 +20,7 @@ module.exports = {
   plugins: [
     "vue"
   ],
-  ignorePatterns: ["dist/", "node_modules/", "*.json"],
+  ignorePatterns: ["dist/", "node_modules/", "*.json", ".temp/"],
   rules: {
     // Rules to ignore
     "vue/require-prop-types": "off",
