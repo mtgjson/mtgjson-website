@@ -31,6 +31,8 @@ The Card Types data model describes top-level card types and the associated card
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### artifact  
 > All possible subtypes and supertypes for Artifact cards. See the [Types](/data-models/types/) data model.  
 >

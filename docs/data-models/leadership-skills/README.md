@@ -31,6 +31,8 @@ The Leadership Skills data model describes a list of formats that a specific car
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### brawl  
 > If this card can be your commander in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) format.  
 >

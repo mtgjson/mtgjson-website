@@ -36,11 +36,9 @@ Welcome to the documentation changelog, which has been split from the MTGJSON Ap
 - Fixed(?) an issue where localStorage was failing on browsers with it disabled
 - Fixed 404 when navigating to the changelog from the header
 #### Updated
-- The version text in the header now appears quicker
-- Files list table of contents is now split in to two lists for easier use
+- Table of contents are now split in to two lists for easier use
 - Added bullets to navigation for better visual hierarchy
-- The examples list and options for downloads dropdown toggles
 - Changed Algolia search to basic search as Algolia provided little upside and more obfuscation to manage
 - Various styling adjustments
-- Got rid of schemas in favor of pure Markdown and now properties are now searchable!
+- Got rid of schemas in favor of pure Markdown and now properties are searchable!
 - Build packages

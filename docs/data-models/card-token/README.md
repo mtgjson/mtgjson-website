@@ -32,6 +32,8 @@ The Card (Token) data model describes the properties and values of a single card
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### artist  
 > Name of the artist that illustrated the card art.  
 >
@@ -253,7 +255,7 @@ The Card (Token) data model describes the properties and values of a single card
 > **Introduced:** `v4.0.0`
 
 > ### types  
-> List of all "card types" of the card, including Un-sets and gameplay variants.  
+> List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
 >
 > **Type:** `array`  
 > **Introduced:** `v4.0.0`

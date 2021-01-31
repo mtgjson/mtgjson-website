@@ -29,6 +29,8 @@ THe Purchase Urls data model describes raw URL paths to purchase a product from 
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### cardKingdom  
 > URL to purchase a product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
 >

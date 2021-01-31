@@ -49,6 +49,8 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### asciiName  
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.  
 >
@@ -138,7 +140,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > All keywords found on a card.  
 >
 > **Type:** `array`  
-> **Introduced:** `v5.0.0`  
+> **Introduced:** `v5.1.0`  
 > **Attributes:** <i>optional</i>  
 
 > ### layout  
@@ -203,13 +205,13 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > **Attributes:** <i>optional</i>  
 
 > ### purchaseUrls  
-> See the [Purchase Urls](/data-models/purchase-urls/) data model.  
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
 >
 > **Type:** `object`  
 > **Introduced:** `v4.4.0`
 
 > ### rulings  
-> See the [Rulings](/data-models/rulings/) data model.  
+> Official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
 >
 > **Type:** `array(object) | array()`  
 > **Introduced:** `v4.0.0`
@@ -254,7 +256,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > **Introduced:** `v4.0.0`
 
 > ### types  
-> List of all "card types" of the card, including Un-sets and gameplay variants.  
+> List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
 >
 > **Type:** `array`  
 > **Introduced:** `v4.0.0`

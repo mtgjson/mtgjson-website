@@ -380,7 +380,7 @@ The Card data model describes the properties of a single card.
 > **Attributes:** <i>optional</i>  
 
 > ### purchaseUrls  
-> See the [Purchase Urls](/data-models/purchase-urls/) data model.  
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
 >
 > **Type:** `object`  
 > **Introduced:** `v4.4.0`
@@ -392,7 +392,7 @@ The Card data model describes the properties of a single card.
 > **Introduced:** `v4.0.0`
 
 > ### rulings  
-> See the [Rulings](/data-models/rulings/) data model.  
+> Official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
 >
 > **Type:** `array(object) | array()`  
 > **Introduced:** `v4.0.0`
@@ -443,7 +443,7 @@ The Card data model describes the properties of a single card.
 > **Introduced:** `v4.0.0`
 
 > ### types  
-> List of all "card types" of the card, including Un-sets and gameplay variants.  
+> List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
 >
 > **Type:** `array`  
 > **Introduced:** `v4.0.0`

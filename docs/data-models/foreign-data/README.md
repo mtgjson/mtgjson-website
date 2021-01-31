@@ -31,6 +31,8 @@ The Foreign Data data model describes a list of properties for a [Card](../card/
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### faceName  
 > Name on the face of the card.  
 >

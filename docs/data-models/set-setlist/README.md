@@ -30,6 +30,9 @@ The Set (SetList) data model describes a metadata-like structure that holds top-
 [[toc]]
 
 #### Model Properties
+
+<PropertyToggler/>
+
 > ### baseSetSize  
 > Number of cards in the set. Will default to {{code](totalSetSize) if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
 >
@@ -124,7 +127,7 @@ The Set (SetList) data model describes a metadata-like structure that holds top-
 > **Attributes:** <i>optional</i> 
 
 > ### mtgoCode  
-> Set code for the set as it appears on Magic: The Gathering Online.  
+> Set code for the set as it appears on [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
 >
 > **Type:** `string`  
 > **Introduced:** `v4.0.0`  

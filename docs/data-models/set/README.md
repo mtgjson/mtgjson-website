@@ -30,6 +30,9 @@ The Set data model describes the properties and values of an individual set.
 [[toc]]
 
 #### Model Properties
+
+<PropertyToggler/>
+
 > ### baseSetSize  
 > Number of cards in the set. Will default to {{code](totalSetSize) if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
 >
@@ -137,7 +140,7 @@ The Set data model describes the properties and values of an individual set.
 > **Attributes:** <i>optional</i> 
 
 > ### mtgoCode  
-> Set code for the set as it appears on Magic: The Gathering Online.  
+> Set code for the set as it appears on [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
 >
 > **Type:** `string`  
 > **Introduced:** `v4.0.0`  

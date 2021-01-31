@@ -31,6 +31,8 @@ The Identifiers data model describes a list of ID's associated to a card.
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### cardKingdomFoilId  
 > The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) card foil identifier.  
 >

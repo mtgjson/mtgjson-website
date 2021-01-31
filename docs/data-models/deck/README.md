@@ -31,6 +31,8 @@ The Deck data model describes a complete deck reference.
 
 #### Model Properties
 
+<PropertyToggler/>
+
 > ### code
 > Set code for the deck.
 >

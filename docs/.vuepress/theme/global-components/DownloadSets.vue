@@ -62,15 +62,15 @@
               h3(:id="set.name.replace(/ /g, '_')") {{ set.name }}
               ol
                 li(v-if="set.isPartialPreview")
-                  div.attribute.optional Spoiler
+                  div.spoiler spoiler
                 li(v-if="set.isOnlineOnly")
-                  div.attribute.optional Online Only
+                  div.spoiler online only
                 li(v-if="set.isPaperOnly")
-                  div.attribute.optional Paper Only
+                  div.spoiler paper only
                 li(v-if="set.isPaper")
-                  div.attribute Paper
+                  div.spoiler paper
                 li(v-if="set.isOnline")
-                  div.attribute Online
+                  div.spoiler online
               ol
                 li
                   small Set Code:

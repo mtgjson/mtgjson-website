@@ -31,6 +31,7 @@ The Deck (DeckList) data model describes a metadata-like structure that holds to
 
 #### Model Properties
 
+<PropertyToggler/>
 
 > ### code
 > Set code for the deck.
