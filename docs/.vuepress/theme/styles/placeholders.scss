@@ -8,7 +8,11 @@
 %blockquote {
   position: relative;
   margin: 2rem 0 2rem;
-  padding: 2rem;
+  padding: 0 2rem 2rem;
   background-color: var(--bg-color);
   border-radius: 5px;
+
+  & > *:first-child {
+    padding-top: 2rem;
+  }
 }

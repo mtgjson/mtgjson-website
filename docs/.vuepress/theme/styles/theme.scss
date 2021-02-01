@@ -5,10 +5,6 @@
 @import './placeholders';
 @import './code';
 
-html {
-  scroll-behavior: smooth;
-}
-
 html, body {
   min-width: 320px;
 }
@@ -40,21 +36,9 @@ a {
     margin-left: -0.75em;
     margin-top: 0.1em;
     text-decoration: none !important;
+    display: none;
     opacity: 0;
     float: left;
-  }
-
-  &, &:link {
-    cursor: pointer;
-    transition: 0.25s color;
-
-    &:hover {
-      transition: 0.25s color;
-    }
-  }
-
-  & > span {
-    display: inline-block;
   }
 }
 
@@ -98,10 +82,6 @@ img {
 
 blockquote {
   @extend %blockquote;
-
-  h3 {
-    padding: 0 0 1rem;
-  }
 
   p {
     margin-bottom: 1rem;
@@ -244,20 +224,6 @@ blockquote {
   & > *:first-child {
     margin-top: 0;
     padding-top: 0;
-  }
-
-  & > *:hover {
-    .header-anchor {
-      display: none;
-    }
-  }
-  a {
-    text-decoration: underline;
-    font-weight: bold !important;
-
-    &:hover {
-      text-decoration: none !important;
-    }
   }
 }
 
