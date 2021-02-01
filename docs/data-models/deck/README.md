@@ -81,5 +81,4 @@ The Deck data model describes a complete deck reference.
 > The type of deck.
 >
 > - **Type:** `string`
-> - **Examples:** <ExampleField :type='"type"'/>
 > - **Introduced:** `v4.3.0`
