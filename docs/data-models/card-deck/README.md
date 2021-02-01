@@ -183,7 +183,7 @@ The Card data model describes the properties and values of a single card.
 > **Introduced:** `v4.0.0`
 
 > ### identifiers  
-> See the [Identifiers](/data-models/identifiers/) data model.  
+> List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
 > **Type:** `object`  
 > **Introduced:** `v5.0.0`
@@ -285,14 +285,14 @@ The Card data model describes the properties and values of a single card.
 > **Introduced:** `v4.0.0`
 
 > ### leadershipSkills  
-> See the [Leadership Skills](/data-models/leadership-skills/) data model.  
+> List of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.  
 >
 > **Type:** `object`  
 > **Introduced:** `v4.5.1`  
 > **Attributes:** <i>optional</i>  
 
 > ### legalities  
-> See the [Legalities](/data-models/legalities/) data model.  
+> List of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
 >
 > **Type:** `object`  
 > **Introduced:** `v4.0.0`  

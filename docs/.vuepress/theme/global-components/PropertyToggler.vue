@@ -6,6 +6,8 @@
 </template>
 
 <script>
+// Why jQuery?
+// We use it to backfill certain selecting logic that is just not available in CSS3
 import $ from "jquery";
 export default {
   name: "PropertyToggler",
@@ -24,9 +26,15 @@ export default {
     },
   },
   mounted() {
-    this.blocks = $("#property-toggler ~ blockquote:has(i)");
-    this.toHideTitles = Array.from(this.blocks.find("h3"));
+    const blocks = $("#property-toggler ~ blockquote:has(i)");
+
     this.tocLinks = Array.from(document.querySelectorAll(".table-of-contents li a"));
+    this.blocks = Array.from(blocks);
+    this.toHideTitles = [];
+
+    Array.from(blocks).forEach(block => {
+      this.toHideTitles.push(block.children[0].id);
+    })
 
     if (this.blocks.length === 0) {
       this.optionals = false;
@@ -40,24 +48,18 @@ export default {
       this.toggleTOCOptionals(this.checked);
     },
     toggleBlockOptionals(doHide){
-      if (doHide) {
-        this.blocks.hide();
-      } else {
-        this.blocks.show();
-      }
+      this.blocks.forEach(el => {
+        el.hidden = doHide;
+      });
     },
     toggleTOCOptionals(doHide) {
-      this.toHideTitles.forEach((block) => {
+      this.toHideTitles.forEach((title) => {
         this.tocLinks.forEach((a, index) => {
           const href = a.href.split("#")[1];
-          const tocLink = $(this.tocLinks[index]);
+          const tocLink = this.tocLinks[index].parentElement;
 
-          if (href === block.id) {
-            if (doHide) {
-              tocLink.parent().hide();
-            } else {
-              tocLink.parent().show();
-            }
+          if (href === title) {
+            tocLink.hidden = doHide;
           }
         });
       });

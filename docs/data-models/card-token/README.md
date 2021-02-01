@@ -124,7 +124,7 @@ The Card (Token) data model describes the properties and values of a single card
 > **Introduced:** `v4.0.0`
 
 > ### identifiers  
-> See the [Identifiers](/data-models/identifiers/) data model.  
+> List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
 > **Type:** `object`  
 > **Introduced:** `v5.0.0` 

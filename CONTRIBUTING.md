@@ -87,6 +87,15 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
   - Vue components are pseudo-imported by placing them in a Vue component in template syntax.
   - Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements.
 
+### Markdown Syntax for Documentation Fields
+The structure of a documentation field is as follows:
+> ### artist
+> Name of the artist that illustrated the card art.  
+>
+> **Type:** `string`  
+> **Introduced:** `v4.0.0`  
+> **Attributes:** <i>optional</i>  
+
 ### Using Frontmatter
 Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 
