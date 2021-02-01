@@ -96,6 +96,8 @@ The structure of a documentation field is as follows:
 > **Introduced:** `v4.0.0`  
 > **Attributes:** <i>optional</i>  
 
+One import distinction that is not clear is that every line must end in two spaces to allow for best new line formatting
+
 ### Using Frontmatter
 Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 

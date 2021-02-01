@@ -43,8 +43,8 @@ The Deck data model describes a complete deck reference.
 > The card that is the Commander in this deck. See the [Card](../../data-models/card) data model.
 >
 > - **Type:** `object`
-> - **Introduced:** `v5.1.0`
-> - **Attributes** <i>optional</i>
+> - **Introduced:** `v5.1.0`  
+> - **Attributes:** <i>optional</i>
 
 > ### fileName
 > File name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
