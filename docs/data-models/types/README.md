@@ -27,10 +27,10 @@ The Types data model describes card types available to MTGJSON.
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### subTypes  
 > All available subtypes of a card.  

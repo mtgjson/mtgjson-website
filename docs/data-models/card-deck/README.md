@@ -27,11 +27,11 @@ The Card data model describes the properties and values of a single card.
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### artist  
 > Name of the artist that illustrated the card art.  
@@ -132,7 +132,7 @@ The Card data model describes the properties and values of a single card.
 > **Attributes:** <i>optional</i>  
 
 > ### foreignData  
-> See the [Foreign Data](/data-models/foreign-data/) data model.  
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
 >
 > **Type:** `array(object) | array()`  
 > **Introduced:** `v4.0.0`

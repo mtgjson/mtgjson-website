@@ -1,39 +1,67 @@
 <template lang="pug">
-  div#property-toggler(v-if="noOptionals")
-    label Hide optional properties
-    input(type="checkbox" @click="toggleOptionals")
-  </div>
+#property-toggler(v-if="noOptionals")
+  label Hide optional properties
+  input(type="checkbox", @click="toggleOptionals")
+</div>
 </template>
 
 <script>
-import $ from 'jquery';
+import $ from "jquery";
 export default {
-  name: 'PropertyToggler',
-  data(){
+  name: "PropertyToggler",
+  data() {
     return {
-      optionals: [],
-    }
+      blocks: null,
+      toHideTitles: [],
+      tockLinks: [],
+      checked: false,
+      optionals: true,
+    };
   },
   computed: {
-    noOptionals(){
+    noOptionals() {
       return this.optionals;
-    }
+    },
   },
-  mounted(){
-    if($('#property-toggler ~ blockquote:has(i)').length === 0){
+  mounted() {
+    this.blocks = $("#property-toggler ~ blockquote:has(i)");
+    this.toHideTitles = Array.from(this.blocks.find("h3"));
+    this.tocLinks = Array.from(document.querySelectorAll(".table-of-contents li a"));
+
+    if (this.blocks.length === 0) {
       this.optionals = false;
     }
   },
   methods: {
-    toggleOptionals(){
+    toggleOptionals() {
       this.checked = !this.checked;
 
-      if(this.checked){
-        $('#property-toggler ~ blockquote:has(i)').hide();
+      this.toggleBlockOptionals(this.checked);
+      this.toggleTOCOptionals(this.checked);
+    },
+    toggleBlockOptionals(doHide){
+      if (doHide) {
+        this.blocks.hide();
       } else {
-        $('#property-toggler ~ blockquote:has(i)').show();
+        this.blocks.show();
       }
-    }
-  }
-}
+    },
+    toggleTOCOptionals(doHide) {
+      this.toHideTitles.forEach((block) => {
+        this.tocLinks.forEach((a, index) => {
+          const href = a.href.split("#")[1];
+          const tocLink = $(this.tocLinks[index]);
+
+          if (href === block.id) {
+            if (doHide) {
+              tocLink.parent().hide();
+            } else {
+              tocLink.parent().show();
+            }
+          }
+        });
+      });
+    },
+  },
+};
 </script>

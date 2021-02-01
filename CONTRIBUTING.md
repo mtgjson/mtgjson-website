@@ -59,7 +59,7 @@ Files/Directories were omitted that do not help understand this current project 
             │   ├── DownloadField.vue # Download
             │   ├── DownloadSets.vue # Download Sets
             │   ├── NavMeta.vue # Header logo
-            │   ├── PropertyToggler.vue # Toggler for optional properties
+            │   ├── PropertyToggler.vue # Toggler for optional documentation properties
             │   ├── Supporters.vue # Patron/Supporters
             │   ├── ThemeSwitcher.vue # Logic light/dark theme
             │   └── Version.vue # Render the current Meta.json
@@ -123,7 +123,7 @@ The markdown file will perform and parse just the way you would expect by writin
 You can also use a Vue component by placing `<MyComponentName />` anywhere on the markdown file. Props can also be passed to the component by using Frontmatter within the component but do not beed to be explicitly passed. However, strings may be explicitly passed as props.
 
 ## Documentation "Schemas"
-In some cases, and most are deprecated, we use these are the single source of truth for the documentation rendering. These files are supposed to match the files from the API. They are formatted in a way assist rendering Vue components. Most of these files are available for posterity.
+In some cases, and most are deprecated, we use these are the single source of truth for the documentation rendering. These files are supposed to match the files from the API. They are formatted in a way assist rendering Vue components. Most of these files are only available for posterity.
 
 ## The Vuex Store
 We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and api remains as performant as possible.

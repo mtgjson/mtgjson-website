@@ -27,11 +27,11 @@ The Meta data model describes application build date and version number.
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### date  
 > [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date of the current MTGJSON build.  

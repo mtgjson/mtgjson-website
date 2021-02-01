@@ -27,11 +27,11 @@ The Deck data model describes a complete deck reference.
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### code
 > Set code for the deck.

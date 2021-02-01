@@ -27,6 +27,8 @@ The Legalities data model describes a list of play formats that are legal for a 
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
@@ -34,8 +36,6 @@ The Legalities data model describes a list of play formats that are legal for a 
 ::: warning
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example of a returned data model.
 :::
-
-<PropertyToggler/>
 
 > ### brawl  
 > Sol Ring is not legal in the Brawl play format. This property is omitted.  

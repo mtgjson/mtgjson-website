@@ -27,11 +27,11 @@ The Keywords data models describes a list of all keywords used on Magic: The Gat
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### abilityWords
 > List of ability words found in rules text on cards.

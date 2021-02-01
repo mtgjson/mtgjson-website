@@ -29,9 +29,9 @@ The Rulings data model describes a list of rulings that are for a specific card.
 
 [[toc]]
 
-#### Model Properties
-
 <PropertyToggler/>
+
+#### Model Properties
 
 > ### date  
 > Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.  

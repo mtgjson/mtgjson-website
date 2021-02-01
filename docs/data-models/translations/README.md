@@ -27,11 +27,11 @@ The Translations data model describes the translated data per language as a key.
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### Ancient Greek  
 > Translation in Ancient Greek.  

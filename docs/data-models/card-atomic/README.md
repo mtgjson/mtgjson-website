@@ -45,11 +45,11 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 
 #### Model Index
 
+<PropertyToggler/>
+
 [[toc]]
 
 #### Model Properties
-
-<PropertyToggler/>
 
 > ### asciiName  
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.  
@@ -104,7 +104,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > **Attributes:** <i>optional</i>  
 
 > ### foreignData  
-> See the [Foreign Data](/data-models/foreign-data/) data model.  
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
 >
 > **Type:** `array(object) | array()`  
 > **Introduced:** `v4.0.0`
