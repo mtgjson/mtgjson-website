@@ -20,8 +20,8 @@
 # MTGJSON Documentation Changelog
 The following is the MTGJSON Documentation/Website Changelog. Some parts may be updated for clarity or corrections at any point.
 
-## 2.1.0
-Release Date: 2021-02-30
+## 2.2.0
+Release Date: 2021-02-03
 
 ### Announcements
 Welcome to the documentation changelog, which has been split from the MTGJSON Application changelog.
