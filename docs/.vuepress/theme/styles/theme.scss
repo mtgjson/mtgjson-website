@@ -32,13 +32,8 @@ ol, ul {
 
 a {
   &.header-anchor {
-    font-size: 0.85em;
-    margin-left: -0.75em;
-    margin-top: 0.1em;
-    text-decoration: none !important;
-    display: none;
     opacity: 0;
-    float: left;
+    margin-left: -1rem;
   }
 }
 
@@ -82,6 +77,10 @@ img {
 
 blockquote {
   @extend %blockquote;
+
+  h3 {
+    padding-top: 0;
+  }
 
   p {
     margin-bottom: 1rem;
