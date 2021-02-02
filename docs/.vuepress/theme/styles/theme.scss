@@ -108,15 +108,10 @@ blockquote {
   }
 
   i {
-    font-family: var(--font-monospace);
-    font-size: 12px;
     background-color: var(--yellow-color);
     color: var(--dark-color);
-    border-radius: 5px;
-    padding: 7px 10px;
-    margin: 0;
-    word-break: break-word;
-    font-weight: bold;
+
+    @extend %code-block;
   }
 
   ul {

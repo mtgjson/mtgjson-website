@@ -1,10 +1,10 @@
 <template lang="pug">
   .example-field(v-if="enums.length > 0" :class="{'showing': showAll}")
     strong Examples:{{' '}}
-    span(v-if="!showAll") {{ enums.slice(0, 5).toString().split(',').join(', ') }}
+    code(v-if="!showAll") {{ enums.slice(0, 5).toString().split(',').join(', ') }}
       div.show-btn(v-if="enums.length > 5") ,{{' '}}
         span(@click="toggleShowAll") Show&nbsp;More
-    span(v-if="showAll && enums.length > 5") {{ enums.toString().split(',').join(', ') }},{{' '}}
+    code(v-if="showAll && enums.length > 5") {{ enums.toString().split(',').join(', ') }},{{' '}}
       div.show-btn
         span(@click="toggleShowAll") Show&nbsp;Less
 </template>
@@ -53,19 +53,13 @@ export default {
 <style lang="scss" scoped>
 .example-field {
   position: relative;
-  display: inline;
+  display: flex;
+  align-items: center;
 
-  & > span {
-    font-family: var(--font-monospace);
-    font-size: 12px;
-    background-color: var(--code-bg-color);
-    color: var(--code-text-color);
-    border-radius: 5px;
-    line-height: 2.7em;
-    padding: 7px 10px;
-    margin: 0;
-    word-break: break-word;
-    font-weight: bold;
+  code {
+    padding-top: 0;
+    padding-bottom: 0;
+    line-height: 1.7rem;
   }
 
   .show-btn {
@@ -74,12 +68,6 @@ export default {
     span {
       text-decoration: underline;
       cursor: pointer;
-    }
-  }
-
-  &.showing {
-    & > span {
-      line-height: 1em;
     }
   }
 }

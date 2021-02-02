@@ -5,7 +5,7 @@
       ul.contributors-list
         li(v-for="(contributor, key) in contributors" :key="key")
           div
-            a(:href="contributor.url")
+            a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
               img(:src="contributor.avatar")
     h2 Supporters
     .supporters-wrap(v-if="patrons")
@@ -135,18 +135,22 @@ export default {
   .contributors-list {
     display: flex;
     flex-wrap: wrap;
+    grid-gap: 20px;
     margin-left: 0;
 
     li {
       flex: none;
       list-style: none;
-      margin: 0 5px 5px 0;
 
       a {
+        display: block;
+        border-radius: 50%;
+        background-color: var(--light-color);
+        overflow: hidden;
+
         img {
           float: left;
           max-width: 50px;
-          border-radius: 50%;
         }
 
         &::before,

@@ -23,8 +23,8 @@
               id="sort-input"
               v-model="sortKey"
               @change="$helpers.sort(sortKey, decks)")
-              option(value="releaseDate:true" selected) Newest
-              option(value="releaseDate") Oldest
+              option(value="releaseDate:true") Release Date (Newest)
+              option(value="releaseDate") Release Date (Oldest)
               option(value="code") Code (Ascending)
               option(value="code:true") Code (Descending)
               option(value="name") Name (Ascending)
