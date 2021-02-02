@@ -37,15 +37,15 @@ export default {
       return [];
     }
   },
-  methods: {
-    toggleShowAll(){
-      this.show = !this.show;
-    }
-  },
   async beforeCreate() {
     await this.$helpers.setStoreState.apply(this, ['EnumValues']);
 
     this.allEnums = this.$store.getters.EnumValues[this.$page.frontmatter.schema];
+  },
+  methods: {
+    toggleShowAll(){
+      this.show = !this.show;
+    }
   }
 };
 </script>
