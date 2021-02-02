@@ -9,13 +9,14 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs && npm run generate-version-atom",
+    "build": "vuepress build docs && npm run generate-version-atom && npm run generate-contributors",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
+    "generate-contributors": "node ./utils/generate-contributors.js",
     "optimize-images": "imagemin --plugin.webp.quality=80 docs/.vuepress/public/images/avatars --out-dir=docs/.vuepress/public/images/avatars",
     "bootstrap": "npm install -g imagemin-cli imagemin-webp",
     "commit": "cz"

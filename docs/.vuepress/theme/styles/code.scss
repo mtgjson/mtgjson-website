@@ -1,11 +1,12 @@
 .codeblock, code, pre, .md-code {
   font-family: var(--font-monospace);
+  font-family: var(--font-monospace);
   font-size: 12px;
   background-color: var(--code-bg-color);
   color: var(--code-text-color);
   border-radius: 5px;
-  line-height: 2.7em;
-  padding: 7px 10px;
+  line-height: 2rem;
+  padding: 0 10px;
   margin: 0;
   word-break: break-word;
   font-weight: bold;
@@ -13,14 +14,4 @@
   a {
     color: var(--accent-color);
   }
-}
-
-pre {
-  &, code {
-    padding: 0;
-  }
-}
-
-pre, code, kbd, .line-number {
-  font-family: var(--font-monospace);
 }

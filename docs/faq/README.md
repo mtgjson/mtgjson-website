@@ -51,10 +51,10 @@ Here is a list of frequently asked questions from our users since some data can 
 > - **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 
 > ### How do I access a card's imagery?
-> While we do not offer card images directly through MTGJSON, we recommend getting card images through Scryfall or Gatherer API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers) data model within the [Card](../data-models/card) data model.
+> While we do not offer card images directly through MTGJSON, we recommend getting card images through Scryfall or Gatherer API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers) data model within the [Card](../data-models/card) data model.  
 >
-> - **Scryfall:** `https://api.scryfall.com/cards/${card.identifiers.scryfallId}?format=image`  
-> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${card.identifiers.multiverseId}`  
+> - **Scryfall:** `https://api.scryfall.com/cards/${card.identifiers.scryfallId}?format=image`
+> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${card.identifiers.multiverseId}`
 >
 > - **Notes:**  
 > Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.  

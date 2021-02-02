@@ -37,6 +37,11 @@ a {
   }
 }
 
+small {
+  font-size: 14px;
+  line-height: 1rem;
+}
+
 .desktop-hide {
   display: none !important;
 }
@@ -95,6 +100,11 @@ blockquote {
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    code, pre {
+      padding-top: 7px;
+      padding-bottom: 7px;
+    }
   }
 
   i {
@@ -125,11 +135,6 @@ blockquote {
     li {
       display: flex;
       align-items: center;
-
-      pre, code {
-        padding-top: 0;
-        padding-bottom: 0;
-      }
 
       strong {
         margin-right: 5px;
