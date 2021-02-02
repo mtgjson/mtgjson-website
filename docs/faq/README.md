@@ -48,15 +48,15 @@ Here is a list of frequently asked questions from our users since some data can 
 > ### Can I verify the downloaded files?
 > Yes. Every file has a SHA-256 file available at the same API location with an appended `.sha256` format.
 > 
-> **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
+> - **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 
 > ### How do I access a card's imagery?
 > While we do not offer card images directly through MTGJSON, we recommend getting card images through Scryfall or Gatherer API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers) data model within the [Card](../data-models/card) data model.
 >
-> **Scryfall:** `https://api.scryfall.com/cards/${card.identifiers.scryfallId}?format=image`  
-> **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${card.identifiers.multiverseId}`  
+> - **Scryfall:** `https://api.scryfall.com/cards/${card.identifiers.scryfallId}?format=image`  
+> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${card.identifiers.multiverseId}`  
 >
-> **Notes:**  
+> - **Notes:**  
 > Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.  
 > For Scryfall, to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
 

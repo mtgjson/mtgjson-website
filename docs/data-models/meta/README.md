@@ -36,11 +36,11 @@ The Meta data model describes application build date and version number.
 > ### date  
 > [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date of the current MTGJSON build.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`
 
 > ### version  
 > [SemVer](https://semver.org) specification of the current MTGJSON build.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`

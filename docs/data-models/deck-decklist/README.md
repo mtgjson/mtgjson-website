@@ -61,5 +61,6 @@ The Deck (DeckList) data model describes a metadata-like structure that holds to
 > The type of deck.
 >
 > - **Type:** `string`
+> - <ExampleField type='type'/>
 > - **Introduced:** `v4.3.0`
 

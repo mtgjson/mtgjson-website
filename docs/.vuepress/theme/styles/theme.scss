@@ -78,6 +78,13 @@ img {
 blockquote {
   @extend %blockquote;
 
+  &::before,
+  &::after {
+    content: '';
+    display: table;
+    clear: both;
+  }
+
   h3 {
     padding-top: 0;
   }
@@ -93,7 +100,6 @@ blockquote {
   i {
     font-family: var(--font-monospace);
     font-size: 12px;
-    line-height: 1rem;
     background-color: var(--yellow-color);
     color: var(--dark-color);
     border-radius: 5px;
@@ -106,9 +112,14 @@ blockquote {
   ul {
     margin-left: 0;
     margin-bottom: 0;
+    margin-top: 1rem;
 
     & > li {
-      margin: 5px 0;
+      margin: 0 0 .5rem;
+
+      &:empty {
+        margin: 0;
+      }
     }
 
     li {

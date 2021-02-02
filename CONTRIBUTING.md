@@ -58,6 +58,7 @@ Files/Directories were omitted that do not help understand this current project 
             │   ├── DownloadDecks.vue # Download Decks
             │   ├── DownloadField.vue # Download
             │   ├── DownloadSets.vue # Download Sets
+            │   ├── ExampleField.vue # Render examples from EnumValues.json
             │   ├── NavMeta.vue # Header logo
             │   ├── PropertyToggler.vue # Toggler for optional documentation properties
             │   ├── Supporters.vue # Patron/Supporters
@@ -92,11 +93,12 @@ The structure of a documentation field is as follows:
 > ### artist
 > Name of the artist that illustrated the card art.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i>  
+> **Type:** `string`
+> **Introduced:** `v4.0.0`
+> **Attributes:** <i>optional</i>
 
-One import distinction that is not clear is that every line must end in two spaces to allow for best new line formatting
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file.
+
 
 ### Using Frontmatter
 Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.

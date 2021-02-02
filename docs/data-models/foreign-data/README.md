@@ -36,45 +36,46 @@ The Foreign Data data model describes a list of properties for a [Card](../card/
 > ### faceName  
 > Name on the face of the card.  
 >
-> **Type:** `string`  
-> **Introduced:** `v5.0.1`
+> - **Type:** `string`  
+> - **Introduced:** `v5.0.1`
 
 > ### flavorText  
 > Flavor text in foreign language.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i> 
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i> 
 
 > ### language  
 > Foreign language of card.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`
+> - **Type:** `string`
+> - <ExampleField type='language'/>
+> - **Introduced:** `v4.0.0`
 
 > ### multiverseId  
 > Multiverse ID of the card.  
 >
-> **Type:** `integer`  
-> **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i> 
+> - **Type:** `integer`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i> 
 
 > ### name  
 > Name of the card in foreign language.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`
 
 > ### text  
 > Text ruling of the card in foreign language.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i> 
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i> 
 
 > ### type  
 > Type of the card. Includes any supertypes and subtypes.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i> 
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i> 

@@ -35,11 +35,11 @@ The Types data model describes card types available to MTGJSON.
 > ### subTypes  
 > All available subtypes of a card.  
 >
-> **Type:** `array`  
-> **Introduced:** `v4.0.0`
+> - **Type:** `array`  
+> - **Introduced:** `v4.0.0`
 
 > ### superTypes  
 > All available supertypes of a card.  
 >
-> **Type:** `array`  
-> **Introduced:** `v4.0.0`
+> - **Type:** `array`  
+> - **Introduced:** `v4.0.0`
