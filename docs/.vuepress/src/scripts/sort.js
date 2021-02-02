@@ -19,7 +19,7 @@ export default (value = '', dataToSort) => {
 
     // Coalesce the order if we have no data to compare against
     if(!first || !second){
-      return order;
+      return 1;
     }
 
     // + operator before a bool will create a bool's
