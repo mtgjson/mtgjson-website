@@ -6,7 +6,7 @@
     :data-theme='darkTheme')
       IconDark
     .theme-switcher--button(
-    v-if="activeTheme === darkTheme"
+    v-if="!activeTheme"
     title="Enable Light Theme"
     :data-theme='lightTheme')
       IconLight
@@ -22,38 +22,14 @@ export default {
   components: { IconDark, IconLight },
   data() {
     return {
-      activeTheme: "dark",
+      activeTheme: document.body.classList[0],
       darkTheme: "dark",
       lightTheme: "light"
     };
   },
-  mounted() {
-    let savedTheme = undefined;
-
-    // Attempt to retrieve localStorage state
-    if(this.testStorage() === true){
-      const savedTheme = window.localStorage.getItem("theme");
-      if (savedTheme) {
-        // Apply the state to the button
-        const selectedTheme = document.querySelector(
-          `.theme-switcher--button[data-theme='${savedTheme}']`
-        );
-
-        if (selectedTheme) {
-          // Apply the state overall
-          selectedTheme.click();
-        }
-      }
-    }
-
-    this.activeTheme = savedTheme || this.activeTheme;
-  },
   methods: {
     switchTheme(e) {
-      const newTheme = e.currentTarget.firstElementChild.dataset.theme;
-      // Set state on body
-      document.body.classList.remove(this.activeTheme);
-      document.body.classList.add(newTheme);
+      let newTheme = e.currentTarget.firstElementChild.dataset.theme;
       // Change favicon to match
       const oldLink = document.querySelector("link[rel*='icon']");
       let link = document.createElement("link");
@@ -64,23 +40,19 @@ export default {
       oldLink.remove();
       // Add new favicon
       document.getElementsByTagName("head")[0].appendChild(link);
+      // Set state on body
+      if(newTheme === 'light') {
+        document.body.classList.add('light');
+      } else {
+        newTheme = "";
+        document.body.classList.remove('light');
+      }
       // Store state in localStorage
-      if(this.testStorage() === true){
+      if(this.$helpers.testStorage() === true){
         window.localStorage.setItem("theme", newTheme);
       }
       this.$store.dispatch('SET_THEME_COLOR', newTheme);
       this.activeTheme = newTheme;
-    },
-    testStorage(){
-      var test = 'test';
-
-      try {
-        localStorage.setItem(test, test);
-        localStorage.removeItem(test);
-        return true;
-      } catch(e) {
-        return false;
-      }
     }
   }
 };

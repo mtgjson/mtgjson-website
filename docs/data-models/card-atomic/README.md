@@ -113,7 +113,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Introduced:** `v4.0.0`
 
 > ### hand  
-> Starting maximum hand size total modifier. A plus or minus character precedes an integer.  
+> Starting maximum hand size total modifier. A `+` or `-` character precedes an integer.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
@@ -189,9 +189,10 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i>optional</i>  
 
 > ### name  
-> Names of each face on the card. Cards with multiple faces, like "Split" and "Meld" cards are given a delimiter. Example: `"Face 1 Name // Face 2 Name"`.  
+> Names of each face on the card. Cards with multiple faces, like "Split" and "Meld" cards are given a delimiter. 
 >
-> - **Type:** `string`  
+> - **Type:** `string`
+> - **Example:** `Wear // Tear`
 > - **Introduced:** `v4.0.0`
 
 > ### power  

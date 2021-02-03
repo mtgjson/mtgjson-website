@@ -67,12 +67,14 @@ export default {
     }
   },
   async mounted() {
-    this.contributors = Array.from(new Set(contributors.map(c => c.login))).map(login => {
-      return {
-        url: contributors.find(c => c.login === login).html_url,
-        avatar: contributors.find(c => c.login === login).avatar_url
-      };
-    });
+    this.contributors = Array.from(new Set(contributors.map(c => c.login)))
+      .filter(login => !login.includes('[bot]'))
+      .map(login => {
+        return {
+          url: contributors.find(c => c.login === login).html_url,
+          avatar: contributors.find(c => c.login === login).avatar_url
+        };
+      });
 
     const lazyImages = Array.from(document.querySelectorAll('img.lazy'));
 

@@ -18,7 +18,7 @@
 ---
 
 # MTGJSON Documentation Changelog
-The following is the MTGJSON Documentation/Website Changelog. Some parts may be updated for clarity or corrections at any point.
+The following is the MTGJSON Documentation/Website Changelog that provides updates to the website that are in part or separated from the MTGJSON Application. Some parts may be updated for clarity or corrections at any point.
 
 ## 2.2.0
 Release Date: 2021-02-03
@@ -28,9 +28,9 @@ Welcome to the documentation changelog, which has been split from the MTGJSON Ap
 
 ### Misc
 #### Added
-- Added Scryfall, MTGO and MTG Arena links to various data models
-- Added format links to the Leadership Skills data model
+- Added Scryfall, MTGO and MTG Arena links and Format to various data models
 - Added loading spinner for data loading
+- Added contributors on the homepage
 #### Fixed
 - Fixed grammatical errors
 - Fixed(?) an issue where localStorage was failing on browsers with it disabled

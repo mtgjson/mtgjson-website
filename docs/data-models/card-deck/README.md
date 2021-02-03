@@ -158,7 +158,7 @@ The Card data model describes the properties and values of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### hand  
-> Starting maximum hand size total modifier. A plus or minus character preceeds an integer.  
+> Starting maximum hand size total modifier. A `+` or `-` character precedes an integer.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
@@ -329,13 +329,14 @@ The Card data model describes the properties and values of a single card.
 > - **Attributes:** <i>optional</i>  
 
 > ### name  
-> Names of each face on the card. Cards with multiple faces, like "Split" and "Meld" cards are given a delimiter. Example: `"Face 1 Name // Face 2 Name"`.  
+> Names of each face on the card. Cards with multiple faces, like "Split" and "Meld" cards are given a delimiter.
 >
-> - **Type:** `string`  
+> - **Type:** `string`
+> - **Example:** `Wear // Tear`
 > - **Introduced:** `v4.0.0`
 
 > ### number  
-> Number of the card. Can be prefixed or suffixed with a `*` or other character for promo sets.  
+> Number of the card. Can be prefixed or suffixed with a `*` or other characters for promo sets.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
