@@ -78,20 +78,6 @@ export default {
     },
   },
 
-  beforeCreate(){
-    if(this.$helpers.testStorage() === true){
-      const savedTheme = window.localStorage.getItem("theme");
-
-      if (savedTheme) {
-        if(savedTheme === 'light') {
-          document.body.classList.add('light');
-        } else {
-          document.body.classList.remove('light');
-        }
-      }
-    }
-  },
-
   mounted() {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false;

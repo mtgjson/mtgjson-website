@@ -113,20 +113,20 @@ The Set data model describes the properties and values of an individual set.
 > - **Attributes:** <i>optional</i> 
 
 > ### keyruneCode  
-> The matching keyrune code for [Keyrune](https://keyrune.andrewgioia.com) image icons.  
+> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) image icons.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.2`
 
 > ### mcmId  
-> The [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set ID.  
+> The [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.4.0`  
 > - **Attributes:** <i>optional</i> 
 
 > ### mcmIdExtras  
-> The split [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set ID if a set is printed in two sets. This ID represents the second set's ID.  
+> The split [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v5.1.0`  
@@ -166,7 +166,7 @@ The Set data model describes the properties and values of an individual set.
 > - **Introduced:** `v4.0.0`
 
 > ### tcgplayerGroupId  
-> Group ID of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
+> Group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.2.1`  

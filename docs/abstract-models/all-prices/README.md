@@ -36,7 +36,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 {
   "<Card UUID>": {
     "<Card Format>": { // Game format
-      "<Price Provider ID>": { // Price provider
+      "<Price Provider Identifier>": { // Price provider
         "buylist": { // Provider buylist values
           "foil": { // Foil prices
             "<YYYY-MM-DD>": <Float> // Date and price as value

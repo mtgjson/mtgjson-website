@@ -11,23 +11,9 @@ import * as Sentry from '@sentry/browser';
 import { Vue as VueIntegration } from '@sentry/integrations';
 
 export default ({ Vue }) => {
-
-  const testStorage = () => {
-    var test = 'test';
-
-    try {
-      localStorage.setItem(test, test);
-      localStorage.removeItem(test);
-      return true;
-    } catch(err) {
-      return false;
-    }
-  };
-
   Vue.prototype.$api = 'https://mtgjson.com/api/v5/';
   Vue.prototype.$throttleSpeed = 300;
   Vue.prototype.$helpers = {
-    testStorage,
     setStoreState,
     prettifyType,
     search,

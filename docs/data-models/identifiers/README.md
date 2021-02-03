@@ -20,7 +20,7 @@
 
 # Identifiers
 
-The Identifiers data model describes a list of ID's associated to a card.
+The Identifiers data model describes a list of identifiers associated to a card.
 
 **Parent model:** [Card](../card/)  
 **Parent property:** `identifiers`

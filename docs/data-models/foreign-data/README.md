@@ -54,7 +54,7 @@ The Foreign Data data model describes a list of properties for a [Card](../card/
 > - **Introduced:** `v4.0.0`
 
 > ### multiverseId  
-> Multiverse ID of the card.  
+> Multiverse identifier of the card.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.0.0`  
