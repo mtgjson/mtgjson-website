@@ -167,7 +167,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### keywords  
 > All keywords found on a card.  
 >
-> - **Type:** `array`  
+> - **Type:** `array(string)`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i>optional</i>  
 
@@ -208,7 +208,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### promoTypes  
 > List of promotional types for a card.  
 >
-> - **Type:** `array`
+> - **Type:** `array(string)`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i>optional</i>  
@@ -216,7 +216,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### reverseRelated
 > The names of the cards that produce this card.  
 >
-> - **Type:** `array`  
+> - **Type:** `array(string)`  
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
@@ -270,7 +270,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### types  
 > List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
 >
-> - **Type:** `array`
+> - **Type:** `array(string)`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 

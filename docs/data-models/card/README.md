@@ -282,7 +282,7 @@ The Card data model describes the properties of a single card.
 > ### keywords  
 > All keywords found on a card.  
 >
-> - **Type:** `array`  
+> - **Type:** `array(string)`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i>optional</i>  
 
@@ -378,14 +378,14 @@ The Card data model describes the properties of a single card.
 > ### printings  
 > List of sets the card was printed in, formatted in uppercase.  
 >
-> - **Type:** `array`  
+> - **Type:** `array(string)`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>  
 
 > ### promoTypes  
 > List of promotional types for a card.  
 >
-> - **Type:** `array`
+> - **Type:** `array(string)`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i>optional</i>  
@@ -460,7 +460,7 @@ The Card data model describes the properties of a single card.
 > ### types  
 > List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
 >
-> - **Type:** `array`
+> - **Type:** `array(string)`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 

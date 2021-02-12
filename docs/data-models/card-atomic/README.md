@@ -142,7 +142,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### keywords  
 > All keywords found on a card.  
 >
-> - **Type:** `array`  
+> - **Type:** `array(string)`  
 > - **Introduced:** `v5.1.0`  
 > - **Attributes:** <i>optional</i>  
 
@@ -205,7 +205,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### printings  
 > List of sets the card was printed in, formatted in uppercase.  
 >
-> - **Type:** `array`  
+> - **Type:** `array(string)`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>  
 
@@ -266,7 +266,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### types  
 > List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
 >
-> - **Type:** `array`
+> - **Type:** `array(string)`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 
