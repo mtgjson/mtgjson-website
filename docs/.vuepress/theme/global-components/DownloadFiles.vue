@@ -23,27 +23,27 @@
               ol(v-if="!file.example.includes('Files')")
                 li.text-wrap--download--btn-wrap
                   p.small-header Downloads:
-                  a.dl-btn(download="true" target="_blank" :href="`${$api}${file.example}.json`") JSON
-                  a.dl-btn(download="true" target="_blank" v-for="(compression, key) in fileBaseCompression" :key="key" :href="`${$api}${file.example}.json.${compression}`") {{ compression }}
+                  a.dl-btn(download target="_blank" :href="`${$api}${file.example}.json`") JSON
+                  a.dl-btn(download target="_blank" v-for="(compression, key) in fileBaseCompression" :key="key" :href="`${$api}${file.example}.json.${compression}`") {{ compression }}
 
               //- Directory Files
               ol(v-if="file.example.includes('Files')")
                 li.text-wrap--download--btn-wrap
                   p.small-header Downloads:
-                  a.dl-btn(download="true" target="_blank" v-for="(format, key) in fileBaseCompression" :key="key" v-if="format !== 'zip'" :href="`${$api}${file.example}.tar.${format}`") {{ format }}
-                  a.dl-btn(download="true" target="_blank" v-else :href="`${$api}${file.example}.zip`") {{ format }}
+                  a.dl-btn(download target="_blank" v-for="(format, key) in fileBaseCompression" :key="key" v-if="format !== 'zip'" :href="`${$api}${file.example}.tar.${format}`") {{ format }}
+                  a.dl-btn(download target="_blank" v-else :href="`${$api}${file.example}.zip`") {{ format }}
 
               ol(v-if="file.example === 'AllPrintings'")
                 li.text-wrap--download--btn-wrap
                   p.small-header SQL Downloads
                     span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
-                  a.dl-btn(download="true" target="_blank" :href="`${$api}${file.example}.sql`") SQL
-                  a.dl-btn(download="true" target="_blank" v-for="(compression, key) in fileBaseCompression" :key="key" :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
+                  a.dl-btn(download target="_blank" :href="`${$api}${file.example}.sql`") SQL
+                  a.dl-btn(download target="_blank" v-for="(compression, key) in fileBaseCompression" :key="key" :href="`${$api}${file.example}.sql.${compression}`") {{ compression }}
                 li.text-wrap--download--btn-wrap
                   p.small-header SQLite Downloads
                     span  (courtesy of <a href="https://github.com/mtgjson/mtgsqlive" rel="noopener noreferrer" target="_blank">mtgsqlive</a>):
-                  a.dl-btn(download="true" target="_blank" :href="`${$api}${file.example}.sqlite`") SQLite
-                  a.dl-btn(download="true" target="_blank" v-for="(compression, key) in fileBaseCompression" :key="key" :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}
+                  a.dl-btn(download target="_blank" :href="`${$api}${file.example}.sqlite`") SQLite
+                  a.dl-btn(download target="_blank" v-for="(compression, key) in fileBaseCompression" :key="key" :href="`${$api}${file.example}.sqlite.${compression}`") {{ compression }}
 </template>
 
 <script>

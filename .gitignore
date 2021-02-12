@@ -20,6 +20,7 @@ node_modules/
 
 # Build folder
 dist/
+.temp/
 
 # Utility testing output
 utils/output/**/*.*
