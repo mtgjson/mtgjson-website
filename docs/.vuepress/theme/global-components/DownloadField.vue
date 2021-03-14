@@ -7,11 +7,11 @@
         a.download-links--link(v-else download :href="`${$api}${file}.json`") {{ format }}
       div
         p.small-header SQL Downloads:
-        a.download-links--link(v-for="(format, key) in sqlFormats" v-if="format !== 'sql'" :key="`sql-${key + format}`" download :href="`${$api}${file}.json.${format}`") {{ format }}
+        a.download-links--link(v-for="(format, key) in sqlFormats" v-if="format !== 'sql'" :key="`sql-${key + format}`" download :href="`${$api}${file}.sql.${format}`") {{ format }}
         a.download-links--link(v-else download :href="`${$api}${file}.sql`") {{ format }}
       div
         p.small-header SQLite Downloads:
-        a.download-links--link(v-for="(format, key) in sqliteFormats" v-if="format !== 'sqlite'" :key="`sqlite-${key + format}`" download :href="`${$api}${file}.json.${format}`") {{ format }}
+        a.download-links--link(v-for="(format, key) in sqliteFormats" v-if="format !== 'sqlite'" :key="`sqlite-${key + format}`" download :href="`${$api}${file}.sqlite.${format}`") {{ format }}
         a.download-links--link(v-else download :href="`${$api}${file}.sqlite`") {{ format }}
     div(v-else-if="file.includes('Files')")
       div
