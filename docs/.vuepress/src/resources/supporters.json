@@ -145,6 +145,9 @@
       "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
       "tier": "uncommon",
       "since": "2021-01"
+    },
+    {
+      "name": "Fetchbot Sorter"
     }
   ],
   "services": [

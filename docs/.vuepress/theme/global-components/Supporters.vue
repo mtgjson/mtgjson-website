@@ -18,7 +18,10 @@
             .img-wrap(v-if="image")
               .img-wrap--container
                 img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
-            a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+            .img-wrap.no-image(v-else)
+              .img-wrap--container
+                p {{name.substring(0, 1)}}
+            a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")
             p.tier {{ tier }} Supporter
@@ -38,7 +41,7 @@
             .img-wrap.no-image(v-else)
               .img-wrap--container
                 p {{name.substring(0, 1)}}
-            a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+            a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")
 
@@ -255,6 +258,10 @@ export default {
       h4,
       p {
         word-wrap: anywhere;
+      }
+
+      .linked-name {
+        text-decoration: underline;
       }
 
       .tier {
