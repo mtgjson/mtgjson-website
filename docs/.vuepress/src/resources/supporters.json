@@ -64,6 +64,13 @@
       "since": "2020-08"
     },
     {
+      "name": "MTG Familiar",
+      "image": "avatar-mtg-familiar.svg",
+      "link": "https://github.com/AEFeinstein/mtg-familiar",
+      "tier": "rare",
+      "since": "2021-02"
+    },
+    {
       "name": "MTG Decks",
       "image": "avatar-mtgdecks.png",
       "link": "https://www.mtgdecks.net",
