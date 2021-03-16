@@ -34,7 +34,7 @@ The Set (SetList) data model describes a metadata-like structure that holds top-
 #### Model Properties
 
 > ### baseSetSize  
-> Number of cards in the set. Will default to {{code](totalSetSize) if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
+> Number of cards in the set. Will default to `totalSetSize` if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`

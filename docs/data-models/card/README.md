@@ -88,12 +88,6 @@ The Card data model describes the properties of a single card.
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
 
-> ### count  
-> How many of this card exists in a relevant deck.  
->
-> - **Type:** `integer`  
-> - **Introduced:** `v4.4.1`  
-
 > ### duelDeck  
 > An indicator for which duel deck the card is in.  
 >
