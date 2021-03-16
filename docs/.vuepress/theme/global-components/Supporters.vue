@@ -55,7 +55,7 @@ export default {
   name: 'Supporters',
   data() {
     return {
-      contributors: [],
+      contributors,
       supporters,
       projectMsg:
         'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
@@ -70,15 +70,6 @@ export default {
     }
   },
   async mounted() {
-    this.contributors = Array.from(new Set(contributors.map(c => c.login)))
-      .filter(login => !login.includes('[bot]'))
-      .map(login => {
-        return {
-          url: contributors.find(c => c.login === login).html_url,
-          avatar: contributors.find(c => c.login === login).avatar_url
-        };
-      });
-
     const lazyImages = Array.from(document.querySelectorAll('img.lazy'));
 
     if ('IntersectionObserver' in window) {

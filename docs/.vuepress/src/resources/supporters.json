@@ -50,6 +50,11 @@
       "since": "2020-03"
     },
     {
+      "name": "Fetchbot Sorter",
+      "tier": "mythic",
+      "since": "2020-03"
+    },
+    {
       "name": "My MTG Collection",
       "image": "avatar-my-mtg-collection-logo.png",
       "link": "https://www.reddit.com/r/Mymtgapp",
@@ -145,9 +150,6 @@
       "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
       "tier": "uncommon",
       "since": "2021-01"
-    },
-    {
-      "name": "Fetchbot Sorter"
     }
   ],
   "services": [

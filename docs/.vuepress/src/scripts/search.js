@@ -5,14 +5,17 @@ export default (terms, searchableData) => {
     return searchableData
   }
 
-  // Delay it a bit so we dont go nuts
   return searchableData.filter(data => {
-    if (
-      (data.name && data.name.toLowerCase().includes(searchTerms)) ||
-      (data.type && data.type.toLowerCase().includes(searchTerms)) ||
-      (data.code && data.code.toLowerCase().includes(searchTerms)) ||
-      (data.releaseDate && data.releaseDate.toLowerCase().includes(searchTerms))
-    ) {
+    const conditions = (
+      (
+        (data.name && data.name.toLowerCase().includes(searchTerms)) ||
+        (data.type && data.type.toLowerCase().includes(searchTerms)) ||
+        (data.code && data.code.toLowerCase().includes(searchTerms)) ||
+        (data.releaseDate && data.releaseDate.toLowerCase().includes(searchTerms))
+      )
+    );
+
+    if (conditions) {
       return data;
     }
   });

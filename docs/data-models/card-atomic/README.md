@@ -61,21 +61,21 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### colorIdentity  
 > List of all the colors found in `manaCost`, `colorIndicator` and `text`.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -109,7 +109,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
 >
-> - **Type:** `array(object) | array()`  
+> - **Type:** `array | array(object)`  
 > - **Introduced:** `v4.0.0`
 
 > ### hand  
@@ -218,7 +218,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### rulings  
 > Official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
 >
-> - **Type:** `array(object) | array()`  
+> - **Type:** `array | array(object)`  
 > - **Introduced:** `v4.0.0`
 
 > ### side  
@@ -232,14 +232,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### subtypes  
 > List of card subtypes found after em-dash.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > List of card supertypes found before em-dash.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 

@@ -21,9 +21,21 @@ Promise.all(promises)
     );
   })
   .then((data) => {
+    return Array
+      .from(new Set(contributors.map(c => c.login)))
+      .filter(login => !login.includes('[bot]'))
+      .map(login => {
+        return {
+          username: contributors.find(c => c.login === login).login,
+          url: contributors.find(c => c.login === login).html_url,
+          avatar: contributors.find(c => c.login === login).avatar_url
+        };
+      });
+  })
+  .then((data) => {
     fs.writeFileSync(
       `./docs/.vuepress/src/resources/contributors.json`,
-      JSON.stringify(contributors, null, 2),
+      JSON.stringify(data, null, 2),
       'utf-8',
       res => {
         console.warn(res);

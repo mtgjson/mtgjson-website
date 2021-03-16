@@ -65,21 +65,21 @@ The Card (Token) data model describes the properties and values of a single card
 > ### colorIdentity  
 > List of all the colors found in `manaCost`, `colorIndicator` and `text`.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -107,7 +107,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### frameEffects  
 > The visual frame effect.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 
@@ -236,14 +236,14 @@ The Card (Token) data model describes the properties and values of a single card
 > ### subtypes  
 > List of card subtypes found after em-dash.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > List of card supertypes found before em-dash.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 

@@ -64,21 +64,21 @@ The Card data model describes the properties of a single card.
 > ### colorIdentity  
 > List of all the colors found in `manaCost`, `colorIndicator` and `text`.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -140,13 +140,13 @@ The Card data model describes the properties of a single card.
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
 >
-> - **Type:** `array(object) | array()`  
+> - **Type:** `array | array(object)`  
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects  
 > The visual frame effect.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 
@@ -365,7 +365,7 @@ The Card data model describes the properties of a single card.
 > ### otherFaceIds  
 > List of UUID's of this card with counterparts, such as transformed or melded faces.  
 >
-> - **Type:** `array | array()`  
+> - **Type:** `array | array(string)`  
 > - **Introduced:** `v4.6.1`
 
 > ### power  
@@ -406,7 +406,7 @@ The Card data model describes the properties of a single card.
 > ### rulings  
 > Official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
 >
-> - **Type:** `array(object) | array()`  
+> - **Type:** `array | array(object)`  
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
@@ -426,14 +426,14 @@ The Card data model describes the properties of a single card.
 > ### subtypes  
 > List of card subtypes found after em-dash.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > List of card supertypes found before em-dash.  
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -473,7 +473,7 @@ The Card data model describes the properties of a single card.
 > ### variations
 > List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.
 >
-> - **Type:** `array | array()`
+> - **Type:** `array | array(string)`
 > - **Introduced:** `v4.1.2`
 
 > ### watermark
