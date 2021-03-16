@@ -14,9 +14,9 @@ The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.
 ## Technical Requirements
 - Node
 - NPM
-- n
 
 ### Optional Requirements
+- n
 - imagemin
 - imagemin-webp
 
