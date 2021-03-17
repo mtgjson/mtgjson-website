@@ -33,6 +33,7 @@ export default {
   align-items: center;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
+
   padding: 0 4rem;
 
   // Race condition with nesting Logo inside of router-link

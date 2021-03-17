@@ -9,11 +9,9 @@ em {
 p {
   line-height: 1.5;
   margin-bottom: 15px;
-  font-size: 16px;
 }
 
-ul,
-ol {
+ul, ol {
   margin-bottom: 25px;
 
   li {
@@ -21,12 +19,7 @@ ol {
   }
 }
 
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
+h1, h2, h3, h4, h5, h6 {
   font-weight: bold;
   line-height: 1;
 }
@@ -44,7 +37,7 @@ h2 {
 }
 
 h3 {
-  font-size: 1.25rem;
+  font-size: 1.2rem;
   padding-top: 15px;
   padding-bottom: 15px;
 
@@ -79,6 +72,10 @@ h6 {
   color: var(--yellow-color);
 }
 
+p {
+  font-size: 16px;
+}
+
 a {
   color: var(--accent-color);
   font-weight: bold;
@@ -86,5 +83,5 @@ a {
 }
 
 sup {
-  font-size: 0.7em;
+  font-size: .7em;
 }

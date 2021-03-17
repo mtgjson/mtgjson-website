@@ -13,7 +13,7 @@
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
-    "lint": "eslint --fix --ext .js,.vue docs/.vuepress && stylelint --fix \"docs/.vuepress/theme/**/*.vue\" \"docs/.vuepress/theme/**/*.scss\"",
+    "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
     "generate-contributors": "node ./utils/generate-contributors.js",
@@ -45,9 +45,11 @@
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.1",
     "jquery": "^3.5.1",
-    "vuepress": "^1.8.2",
+    "js-essentials": "0.0.6",
+    "vuepress": "^1.8.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-feed": "^0.1.9",
+    "vuepress-plugin-smooth-scroll": "^0.0.10",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
@@ -68,9 +70,6 @@
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
-    "stylelint": "^13.12.0",
-    "stylelint-config-standard": "^21.0.0",
-    "stylelint-scss": "^3.19.0",
     "uuid": "^8.3.2",
     "vue-eslint-parser": "^7.4.1",
     "vue-svg-loader": "^0.16.0"

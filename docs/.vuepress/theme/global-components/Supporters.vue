@@ -131,7 +131,7 @@ export default {
   .contributors-list {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 1rem;
+    grid-gap: 20px;
     margin-left: 0;
 
     li {
@@ -146,7 +146,7 @@ export default {
 
         img {
           float: left;
-          max-width: 40px;
+          max-width: 50px;
         }
 
         &::before,
@@ -188,32 +188,6 @@ export default {
       padding-right: 1rem;
       border-color: var(--table-border-color);
 
-      h4 {
-        flex: 0 0 100%;
-        font-size: 16px;
-        color: var(--accent-color);
-        display: block;
-        margin: 0 auto;
-        padding: 0;
-        line-height: 1.2rem;
-      }
-
-      h4,
-      p {
-        word-wrap: anywhere;
-      }
-
-      p {
-        display: block;
-        flex: 0 0 100%;
-        font-size: 14px;
-        line-height: 1.2em;
-
-        &:first-of-type {
-          margin-top: 10px;
-        }
-      }
-
       .img-wrap {
         display: inline-flex;
         justify-content: center;
@@ -245,11 +219,37 @@ export default {
           justify-content: center;
 
           img {
+            max-width: 90%;
             height: auto;
             max-height: 90%;
-            max-width: 90%;
           }
         }
+      }
+
+      h4 {
+        flex: 0 0 100%;
+        font-size: 16px;
+        color: var(--accent-color);
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1.2rem;
+      }
+
+      p {
+        display: block;
+        flex: 0 0 100%;
+        font-size: 14px;
+        line-height: 1.2em;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
+      }
+
+      h4,
+      p {
+        word-wrap: anywhere;
       }
 
       .linked-name {

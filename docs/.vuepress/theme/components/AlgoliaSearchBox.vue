@@ -82,7 +82,7 @@ export default {
       padding: 0;
       text-align: left;
 
-      &::before {
+      &:before {
         border: 1px solid var(--accent-color);
         border-left-width: 0;
         border-bottom-width: 0;
@@ -139,7 +139,7 @@ export default {
         border-color: var(--gray-color);
         background: #f1f3f5;
 
-        &::after {
+        &:after {
           display: none;
         }
       }
@@ -203,7 +203,7 @@ export default {
       background: white !important;
     }
 
-    .algolia-docsearch-suggestion--subcategory-column-text::after {
+    .algolia-docsearch-suggestion--subcategory-column-text:after {
       content: ' > ';
       font-size: 10px;
       line-height: 14.4px;

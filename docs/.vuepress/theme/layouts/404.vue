@@ -148,9 +148,7 @@ export default {
   .content__default {
     position: relative;
 
-    h1,
-    p,
-    ul {
+    h1, p, ul {
       z-index: 2;
       position: relative;
     }

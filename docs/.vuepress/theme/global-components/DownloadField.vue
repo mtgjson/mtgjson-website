@@ -60,7 +60,7 @@ export default {
 .download-links--link {
   margin-right: 1rem;
   padding-right: 1rem;
-  border-right: 1px solid var(--light-gray-color);
+  border-right: 1px solid var(--gray-color);
   text-transform: uppercase;
 
   &:last-of-type {

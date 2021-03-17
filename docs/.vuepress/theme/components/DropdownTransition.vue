@@ -24,8 +24,7 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.dropdown-enter,
-.dropdown-leave-to {
+.dropdown-enter, .dropdown-leave-to {
   height: 0 !important;
 }
 </style>

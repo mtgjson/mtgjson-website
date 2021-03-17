@@ -25,7 +25,7 @@ export default {
   &-number {
     font-size: 12px;
     font-weight: bold;
-    color: var(--text-color);
+    color: var(--gray-color);
   }
 }
 

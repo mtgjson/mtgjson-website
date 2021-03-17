@@ -1,6 +1,6 @@
 {
   "name": "mtgjson-website",
-  "description": "Heroku configuration for review applications",
+  "description": "Heroku configuration for review apps",
   "formation": {
     "web": {
       "quantity": 1
