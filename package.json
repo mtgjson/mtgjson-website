@@ -45,11 +45,9 @@
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.1",
     "jquery": "^3.5.1",
-    "js-essentials": "0.0.6",
     "vuepress": "^1.8.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-feed": "^0.1.9",
-    "vuepress-plugin-smooth-scroll": "^0.0.10",
     "vuex": "^3.6.2"
   },
   "devDependencies": {
