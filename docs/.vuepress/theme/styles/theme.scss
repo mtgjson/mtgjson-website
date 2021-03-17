@@ -4,17 +4,25 @@
 @import './typography';
 @import './placeholders';
 @import './code';
+@import './pages';
 
-html, body {
+html,
+body {
   min-width: 320px;
 }
 
-html, body, #app, .theme-container {
+html,
+body,
+#app,
+.theme-container {
   height: 100%;
 }
 
 @media (max-width: 719px) {
-  html, body, #app, .theme-container {
+  html,
+  body,
+  #app,
+  .theme-container {
     height: auto;
   }
 }
@@ -26,7 +34,8 @@ body {
   font-size: 16px;
 }
 
-ol, ul {
+ol,
+ul {
   margin-left: 15px;
 }
 
@@ -101,7 +110,8 @@ blockquote {
       margin-bottom: 0;
     }
 
-    code, pre {
+    code,
+    pre {
       padding-top: 7px;
       padding-bottom: 7px;
     }
@@ -119,14 +129,6 @@ blockquote {
     margin-bottom: 0;
     margin-top: 1rem;
 
-    & > li {
-      margin: 0 0 .5rem;
-
-      &:empty {
-        margin: 0;
-      }
-    }
-
     li {
       display: flex;
       align-items: center;
@@ -135,9 +137,18 @@ blockquote {
         margin-right: 5px;
       }
     }
+
+    & > li {
+      margin: 0 0 0.5rem;
+
+      &:empty {
+        margin: 0;
+      }
+    }
   }
 }
 
+/* stylelint-disable no-descending-specificity */
 .table-of-contents {
   ul {
     display: grid;
@@ -149,11 +160,11 @@ blockquote {
     }
   }
 }
+/* stylelint-enable no-descending-specificity */
 
 .small-header {
   display: block;
-  font-weight: .5rem;
-  padding: 1rem 0 .5rem;
+  padding: 1rem 0 0.5rem;
   font-weight: bold;
 }
 
@@ -163,11 +174,10 @@ blockquote {
   padding: 0.75rem 1rem;
   border-radius: 5px;
   border: 1px solid var(--accent-color);
-  text-decoration: none;
+  text-decoration: none !important;
   transition: all 0.25s;
   margin-right: 1rem;
   margin-bottom: 1rem;
-  text-decoration: none !important;
   background-color: transparent;
   color: var(--accent-color);
   font-size: 1rem;
@@ -224,6 +234,7 @@ blockquote {
 
 .content__default {
   @extend %wrapper;
+
   padding: 0 4rem;
   height: 100%;
 
@@ -237,7 +248,8 @@ blockquote {
   }
 }
 
-.sidebar-group-items, .sidebar-sub-headers {
+.sidebar-group-items,
+.sidebar-sub-headers {
   .sidebar-link {
     font-size: 16px;
     font-weight: normal;
@@ -272,49 +284,6 @@ blockquote {
   margin-right: 5px;
 }
 
-// .attribute {
-//   border-radius: 5px;
-//   margin-right: 5px;
-//   font-size: 12px;
-//   padding: 3px 5px;
-//   cursor: help;
-//   position: relative;
-//   display: inline-block;
-//   text-transform: capitalize;
-//   overflow: hidden;
-//   z-index: 2;
-//   color: var(--attribute-standard-color);
-//   background-color: var(--bg-dark-color);
-//   font-weight: bold;
-
-//   &::before {
-//     content: '';
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     bottom: 0;
-//     z-index: -1;
-//   }
-
-//   &.optional,
-//   &.decks {
-//     color: var(--dark-color);
-
-//     &::before {
-//       background-color: var(--spoiler-color);
-//     }
-//   }
-
-//   &.deprecated {
-//     &::before {
-//       background-color: var(--red-color);
-//     }
-//   }
-// }
-
 .go-to-top {
   color: var(--accent-color) !important;
   right: 1rem !important;
@@ -329,10 +298,11 @@ blockquote {
   width: 80px;
   height: 80px;
 }
+
 .loader::after {
   content: " ";
   display: block;
-  width:40px;
+  width: 40px;
   height: 40px;
   margin: 8px;
   border-radius: 50%;
@@ -340,15 +310,16 @@ blockquote {
   border-color: var(--text-color) transparent var(--text-color) transparent;
   animation: loader-animation 1.2s linear infinite;
 }
+
 @keyframes loader-animation {
   0% {
     transform: rotate(0deg);
   }
+
   100% {
     transform: rotate(360deg);
   }
 }
-
 
 @media (max-width: 719px) {
   .content__default,
@@ -357,6 +328,7 @@ blockquote {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
   .desktop-hide {
     display: block !important;
   }

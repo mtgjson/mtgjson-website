@@ -22,31 +22,28 @@ export default {
   components: { IconDark, IconLight },
   data() {
     return {
-      activeTheme: "dark",
+      activeTheme: "",
       darkTheme: "dark",
       lightTheme: "light"
     };
   },
-  mounted() {
-    let savedTheme = undefined;
-
+  beforeMount() {
     // Attempt to retrieve localStorage state
     if(this.testStorage() === true){
       const savedTheme = window.localStorage.getItem("theme");
-      if (savedTheme) {
-        // Apply the state to the button
-        const selectedTheme = document.querySelector(
-          `.theme-switcher--button[data-theme='${savedTheme}']`
-        );
 
-        if (selectedTheme) {
-          // Apply the state overall
-          selectedTheme.click();
-        }
+      if(savedTheme === 'dark' || window.matchMedia('(prefers-color-scheme: dark)').matches){
+        document.body.classList.add('dark');
+        document.body.classList.remove('light');
+
+        this.activeTheme = 'dark';
+      } else if(savedTheme === 'light' || window.matchMedia('(prefers-color-scheme: light)').matches){
+        document.body.classList.add('light');
+        document.body.classList.remove('dark');
+
+        this.activeTheme = 'light';
       }
     }
-
-    this.activeTheme = savedTheme || this.activeTheme;
   },
   methods: {
     switchTheme(e) {

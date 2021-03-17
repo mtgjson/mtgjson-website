@@ -56,7 +56,7 @@ export default {
 
   &-content {
     max-width: 960px;
-    margin: 0px auto;
+    margin: 0 auto;
   }
 
   .hero {
@@ -73,7 +73,9 @@ export default {
       font-size: 3rem;
     }
 
-    h1, .description, .action {
+    h1,
+    .description,
+    .action {
       margin: 1.8rem auto;
     }
 
@@ -151,7 +153,7 @@ export default {
   }
 }
 
-@media (max-width: 719pxNarrow) {
+@media (max-width: 719px) {
   .home {
     padding-left: 1.5rem;
     padding-right: 1.5rem;
@@ -166,7 +168,9 @@ export default {
         font-size: 2rem;
       }
 
-      h1, .description, .action {
+      h1,
+      .description,
+      .action {
         margin: 1.2rem auto;
       }
 

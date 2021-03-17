@@ -131,7 +131,7 @@ export default {
   .contributors-list {
     display: flex;
     flex-wrap: wrap;
-    grid-gap: 20px;
+    grid-gap: 1rem;
     margin-left: 0;
 
     li {
@@ -146,7 +146,7 @@ export default {
 
         img {
           float: left;
-          max-width: 50px;
+          max-width: 40px;
         }
 
         &::before,
@@ -188,6 +188,32 @@ export default {
       padding-right: 1rem;
       border-color: var(--table-border-color);
 
+      h4 {
+        flex: 0 0 100%;
+        font-size: 16px;
+        color: var(--accent-color);
+        display: block;
+        margin: 0 auto;
+        padding: 0;
+        line-height: 1.2rem;
+      }
+
+      h4,
+      p {
+        word-wrap: anywhere;
+      }
+
+      p {
+        display: block;
+        flex: 0 0 100%;
+        font-size: 14px;
+        line-height: 1.2em;
+
+        &:first-of-type {
+          margin-top: 10px;
+        }
+      }
+
       .img-wrap {
         display: inline-flex;
         justify-content: center;
@@ -216,39 +242,14 @@ export default {
           padding: 15px;
           display: flex;
           align-items: center;
+          justify-content: center;
 
           img {
-            width: 100%;
             height: auto;
-            max-height: 100%;
+            max-height: 90%;
+            max-width: 90%;
           }
         }
-      }
-
-      h4 {
-        flex: 0 0 100%;
-        font-size: 16px;
-        color: var(--accent-color);
-        display: block;
-        margin: 0 auto;
-        padding: 0;
-        line-height: 1.2rem;
-      }
-
-      p {
-        display: block;
-        flex: 0 0 100%;
-        font-size: 14px;
-        line-height: 1.2em;
-
-        &:first-of-type {
-          margin-top: 10px;
-        }
-      }
-
-      h4,
-      p {
-        word-wrap: anywhere;
       }
 
       .linked-name {

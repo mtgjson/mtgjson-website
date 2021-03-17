@@ -68,9 +68,11 @@ export default {
   background-color: var(--bg-color);
   padding-bottom: 2rem;
 
-  ol, ul {
+  ol,
+  ul {
     margin-left: 0;
     margin-bottom: 0;
+    padding-left: 25px;
   }
 
   li {
@@ -79,10 +81,6 @@ export default {
 
   a {
     display: inline-block;
-  }
-
-  ul, ol {
-    padding-left: 25px;
   }
 
   &-logo {
@@ -159,7 +157,6 @@ export default {
         padding: 1rem 2rem;
       }
     }
-
   }
 }
 </style>

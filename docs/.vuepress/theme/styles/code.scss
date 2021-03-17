@@ -1,4 +1,7 @@
-.codeblock, code, pre, .md-code {
+code,
+pre,
+.codeblock,
+.md-code {
   @extend %code-block;
 
   a {

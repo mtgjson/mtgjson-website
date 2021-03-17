@@ -11,30 +11,30 @@
   --orange-color: #ef6c2f;
   --blue-color: #85d3ff;
   --blue-2-color: #1e90ff;
-
-  --gray-color: #aaaaaa;
-  --light-gray-color: #eeeeee;
+  --gray-color: #aaa;
+  --light-gray-color: #eee;
   --medium-gray-color: #eaecef;
   --dark-gray-color: #2d2d2d;
-
   --discord-color: #7289da;
   --patreon-color: #f96753;
   --arrow-bg-color: gray;
   // Main theme colors
-  --light-color: #ffffff;
-
+  --light-color: #fff;
   --dark-color: #263646;
   --dark-1-color: #172839;
   --dark-2-color: #0e141f;
-  --dark-3-color: #000000;
+  --dark-3-color: #000;
 
   // Fonts
-  --font-base: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
-  --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
+  --font-base: 'Helvetica Neue', -apple-system, blinkmacsystemfont, 'Segoe UI', roboto, oxygen, ubuntu, cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-monospace: source-code-pro, menlo, monaco, consolas, 'Courier New', monospace;
 
   // --dark-color: #0e141f;
   // --darker-color: #1a2530;
   // --darkest-color: #141c24;
+}
+
+@mixin dark-theme {
   --accent-color: #61c6ed;
   --spoiler-color: var(--yellow-color);
   --spoiler-text-color: var(--dark-3-color);
@@ -61,41 +61,61 @@
   // Code colors
   --code-bg-color: var(--dark-gray-color);
   --code-text-color: var(--yellow-color);
+
+  background-color: var(--dark-1-color);
+  color: var(--text-color);
+}
+
+@mixin light-theme {
+  // Main Color
+  --accent-color: var(--blue-2-color);
+  --spoiler-text-color: var(--light-color);
+  // Color Themes
+  --text-color: var(--dark-1-color);
+  --bg-color: var(--light-color);
+  --bg-border-color: var(--light-gray-color);
+  --bg-dark-color: var(--light-gray-color);
+  --shadow-color: var(--medium-gray-color);
+  --search-bg-color: var(--medium-gray-color);
+  --search-border-color: var(--medium-gray-color);
+  --search-border-highlight-color: var(--accent-color);
+  --search-text-color: var(--text-color);
+  --blockquote-heading-color: var(--medium-gray-color);
+  --blockquote-bg-color: var(--light-color);
+  --supporter-bg-color: var(--medium-gray-color);
+  --attribute-standard-color: var(--dark-color);
+  // Data Presentation
+  --table-color: var(--text-color);
+  --table-bg-color: var(--light-color);
+  --table-border-color: var(--medium-gray-color);
+  --table-heading-color: var(--light-color);
+  --gray-color: var(--dark-gray-color);
+  // Code colors
+  --code-bg-color: var(--dark-gray-color);
+  --code-text-color: var(--yellow-color);
+
+  background-color: var(--bg-color);
+  color: var(--text-color);
 }
 
 body {
-  background-color: var(--dark-1-color);
-  color: var(--text-color);
+  &.dark {
+    @include dark-theme;
+  }
 
   &.light {
-    // Main Color
-    --accent-color: var(--blue-2-color);
-    --spoiler-text-color: var(--light-color);
-    // Color Themes
-    --text-color: var(--dark-1-color);
-    --bg-color: var(--light-color);
-    --bg-border-color: var(--light-gray-color);
-    --bg-dark-color: var(--light-gray-color);
-    --shadow-color: var(--medium-gray-color);
-    --search-bg-color: var(--medium-gray-color);
-    --search-border-color: var(--medium-gray-color);
-    --search-border-highlight-color: var(--accent-color);
-    --search-text-color: var(--text-color);
-    --blockquote-heading-color: var(--medium-gray-color);
-    --blockquote-bg-color: var(--light-color);
-    --supporter-bg-color: var(--medium-gray-color);
-    --attribute-standard-color: var(--dark-color);
-    // Data Presentation
-    --table-color: var(--text-color);
-    --table-bg-color: var(--light-color);
-    --table-border-color: var(--medium-gray-color);
-    --table-heading-color: var(--light-color);
-    --gray-color: var(--dark-gray-color);
-    // Code colors
-    --code-bg-color: var(--dark-gray-color);
-    --code-text-color: var(--yellow-color);
+    @include light-theme;
+  }
+}
 
-    background-color: var(--bg-color);
-    color: var(--text-color);
+@media (prefers-color-scheme: dark) {
+  body {
+    @include dark-theme;
+  }
+}
+
+@media (prefers-color-scheme: light) {
+  body {
+    @include light-theme;
   }
 }

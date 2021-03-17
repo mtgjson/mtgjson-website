@@ -1,0 +1,7 @@
+#mtgjson-changelog,
+#mtggraphql-changelog,
+#mtgjson-documentation-changelog {
+  & ~ h4 {
+    font-size: 1rem;
+  }
+}

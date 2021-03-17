@@ -142,7 +142,8 @@ export default {
           padding-top: 0;
         }
 
-        h4, & > a {
+        h4,
+        & > a {
           font-size: 15px;
           line-height: 2rem;
         }
@@ -159,11 +160,6 @@ export default {
 @media (min-width: 719px) {
   .dropdown-wrapper {
     height: 1.8rem;
-
-    &:hover .nav-dropdown {
-      // override the inline style.
-      display: block !important;
-    }
 
     .dropdown-title .arrow {
       // make the arrow always down at desktop
@@ -191,6 +187,11 @@ export default {
       border-radius: 0.25rem;
       white-space: nowrap;
       margin: 0;
+    }
+
+    &:hover .nav-dropdown {
+      // override the inline style.
+      display: block !important;
     }
   }
 }

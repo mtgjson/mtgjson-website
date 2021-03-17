@@ -14,7 +14,7 @@
 
   p {
     &::before,
-    &:after {
+    &::after {
       content: "";
       display: table;
       clear: both;

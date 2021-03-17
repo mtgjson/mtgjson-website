@@ -199,6 +199,7 @@ function flattern(items, res) {
 
   .options {
     @extend %wrapper;
+
     margin-bottom: 1rem;
     width: 100%;
 
@@ -215,6 +216,7 @@ function flattern(items, res) {
 
 .page-edit {
   @extend %wrapper;
+
   padding-top: 3rem;
   padding-bottom: 2rem;
   overflow: auto;
@@ -252,6 +254,7 @@ function flattern(items, res) {
 
 .page-nav {
   @extend %wrapper;
+
   padding-top: 3rem;
 
   .inner {
@@ -264,7 +267,8 @@ function flattern(items, res) {
     float: right;
   }
 
-  .next, .prev {
+  .next,
+  .prev {
     a {
       font-weight: bold;
 
