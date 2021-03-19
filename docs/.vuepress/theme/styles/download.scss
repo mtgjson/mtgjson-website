@@ -106,12 +106,6 @@
     flex-wrap: wrap;
     align-items: center;
 
-    h5 {
-      padding-bottom: 1rem;
-      padding-top: 1rem;
-      margin: 0;
-    }
-
     .img-wrap {
       flex: none;
 
@@ -136,35 +130,6 @@
 
     .text-wrap {
       flex: 1;
-
-      h2 {
-        padding-bottom: 1rem;
-        padding-top: 0;
-        line-height: 1.5rem;
-        color: var(--text-color);
-        font-size: 1.5rem;
-
-        &.spoiler {
-          display: flex;
-          align-items: center;
-
-          &::after {
-            position: relative;
-            content: 'Spoiler';
-            background-color: var(--spoiler-color);
-            color: var(--spoiler-text-color);
-            border-radius: 5px;
-            margin-left: 10px;
-            margin-right: 5px;
-            font-size: 12px;
-            font-weight: bold;
-            line-height: normal;
-            padding: 3px 5px;
-            display: inline-table;
-            text-transform: capitalize;
-          }
-        }
-      }
 
       p {
         display: block;

@@ -1,7 +1,7 @@
 import filter from '../docs/.vuepress/src/scripts/filter';
 
 describe('filter', () => {
-  it('filter should return the same data if no filter is passed', async () => {
+  it('should return the same data if no filter is passed', async () => {
     const dataFilter = '';
     const data = [
       {
@@ -13,7 +13,7 @@ describe('filter', () => {
     expect(filtered).toEqual(data);
   });
 
-  it('filter should return filtered data if a filter is passed', async () => {
+  it('should return filtered data if a filter is passed', async () => {
     const dataFilter = 'creature';
     const data = [
       {

@@ -14,9 +14,9 @@ The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.
 ## Technical Requirements
 - Node
 - NPM
-- n
 
 ### Optional Requirements
+- n
 - imagemin
 - imagemin-webp
 
@@ -47,7 +47,7 @@ Files/Directories were omitted that do not help understand this current project 
         ├── src # helper data and function
         │   ├── resources # any internal json
         │   │   └── supporters.json # powers the Supporters Vue component
-        │   ├── schemas # powers Vue Documentation components
+        │   ├── schemas # powers certain Vue Documentation components, most of this is deprecated but saved for posterity
         │   │   └── *.schema.json # specific schema that match API data
         │   └── scripts # helper JS functions
         │       └── * # any javascript function
@@ -55,21 +55,19 @@ Files/Directories were omitted that do not help understand this current project 
             ├── components/ # Vuepress theme components (Beware!)
             ├── global-components
             │   ├── BrandAssets.vue # Marketing
-            │   ├── Documentation.vue # Documentation
-            │   ├── DocumentationField.vue # Doumentation
             │   ├── DownloadDecks.vue # Download Decks
-            │   ├── DownloadFiles.vue # Download All
-            │   ├── DownloadSets.vue # Download Sets
             │   ├── DownloadField.vue # Download
-            │   ├── GlobalAlert.vue # A sitewide message
+            │   ├── DownloadSets.vue # Download Sets
+            │   ├── ExampleField.vue # Render examples from EnumValues.json
             │   ├── NavMeta.vue # Header logo
+            │   ├── PropertyToggler.vue # Toggler for optional documentation properties
             │   ├── Supporters.vue # Patron/Supporters
             │   ├── ThemeSwitcher.vue # Logic light/dark theme
             │   └── Version.vue # Render the current Meta.json
             ├── layouts # What the application will render at a top level
             │   ├── 404.vue # 404 page
             │   └── Layout.vue # Available route
-            └── styles/ # SCSS styling
+            └── styles/ # SCSS/Stylus
 ```
 
 ## VuePress Configuration
@@ -86,9 +84,21 @@ Explaining the configuration as a whole would be best served by directly to thei
 ### Markdown Structure
 The structure of a file is simple. Frontmatter on top, everything else below it.
   - Frontmatter is written in JSON (with strings).
-  - Markdown is written to specification.
-  - Vue component are pseudo-imported by placing them in a Vue component in template syntax.
+  - Markdown is written to a high-level of specification not can be manipulated.
+  - Vue components are pseudo-imported by placing them in a Vue component in template syntax.
   - Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements.
+
+### Markdown Syntax for Documentation Fields
+The structure of a documentation field is as follows:
+> ### artist
+> Name of the artist that illustrated the card art.  
+>
+> **Type:** `string`
+> **Introduced:** `v4.0.0`
+> **Attributes:** <i>optional</i>
+
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file.
+
 
 ### Using Frontmatter
 Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
@@ -123,19 +133,16 @@ You can also change configuration of VuePress by overwriting variables within th
 ### When not using Frontmatter
 The markdown file will perform and parse just the way you would expect by writing any kind of Markdown or HTML.
 
-You can also use a Vue component by placing `<MyComponentName />` anywhere on the markdown file. Props can also be passed to the component by using Frontmatter.
+You can also use a Vue component by placing `<MyComponentName />` anywhere on the markdown file. Props can also be passed to the component by using Frontmatter within the component but do not beed to be explicitly passed. However, strings may be explicitly passed as props.
 
 ## Documentation "Schemas"
-We use these are the single source of truth for the documentation rendering. These files are supposed to match the files from the API. They are formatted in a way to render to the `<Documentation />` component using a Frontmatter variable (though it us possible to pass down as a prop)
+In some cases, and most are deprecated, we use these are the single source of truth for the documentation rendering. These files are supposed to match the files from the API. They are formatted in a way assist rendering Vue components. Most of these files are only available for posterity.
 
 ## The Vuex Store
 We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and api remains as performant as possible.
 
 ## enhanceApp.js
 Because Vue backs this entire application we can interject some helpers in to Vue to be accessed in our components.
-
-## jsonMustache.js/Landcycle
-This is a JS class that allows JSON to take mustache variables such as `{{link@anchor-link-test@/anchor-link-href}}` (use `/` to make an internal link and use the `HTTP/S Protocol` for an external link) and `{{code@variable}}` (creating an inline-code style) and then intercepts the JSON in Vue to hydrate the data in to HTML of your choosing. On the website we mainly use this to change data links in to anchor tags that route to other documentation links to maintain our Single Page Application.
 
 ## Testing
 We use Jest and we do our best.

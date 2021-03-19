@@ -23,8 +23,23 @@
 
 The Types data model describes card types available to MTGJSON.
  
-> Parent model: <span class="code-wrap">[Card Types](/data-models/card-types/)</span>  
+**Parent model:** [Card Types](/data-models/card-types/)
 
-## Model Properties
+#### Model Index
 
-<Documentation/>
+<PropertyToggler/>
+
+[[toc]]
+#### Model Properties
+
+> ### subTypes  
+> All available subtypes of a card.  
+>
+> - **Type:** `array(string)`  
+> - **Introduced:** `v4.0.0`
+
+> ### superTypes  
+> All available supertypes of a card.  
+>
+> - **Type:** `array(string)`  
+> - **Introduced:** `v4.0.0`

@@ -20,11 +20,27 @@
 
 # Meta
 
-The Meta data model describes application build and prices build date [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html/), and versioning data of the current MTGJSON release.
+The Meta data model describes application build date and version number.
 
-> Parent file: <span class="code-wrap">[Meta](../../api/v5/Meta.json.zip)</span>  
-> Parent property: `data`, `meta`  
+**Parent file:** [Meta](../../api/v5/Meta.json.zip)  
+**Parent property:** `data`, `meta`  
 
-## Model Properties
+#### Model Index
 
-<Documentation/>
+<PropertyToggler/>
+
+[[toc]]
+
+#### Model Properties
+
+> ### date  
+> [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date of the current MTGJSON build.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`
+
+> ### version  
+> [SemVer](https://semver.org) specification of the current MTGJSON build.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`

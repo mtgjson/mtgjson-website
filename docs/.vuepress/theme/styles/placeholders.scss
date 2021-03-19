@@ -1,0 +1,31 @@
+%wrapper {
+  max-width: var(--content-width);
+  margin: 0 auto;
+  padding-left: 4rem;
+  padding-right: 4rem;
+}
+
+%blockquote {
+  position: relative;
+  margin: 2rem 0 2rem;
+  padding: 0 2rem 2rem;
+  background-color: var(--bg-color);
+  border-radius: 5px;
+
+  & > *:first-child {
+    padding-top: 2rem;
+  }
+}
+
+%code-block {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  background-color: var(--code-bg-color);
+  color: var(--code-text-color);
+  border-radius: 5px;
+  line-height: 1em;
+  padding: 7px 10px;
+  margin: 0;
+  word-break: break-word;
+  font-weight: bold;
+}

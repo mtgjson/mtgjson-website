@@ -21,6 +21,6 @@
 
 All pre-constructed deck files to download provided by MTGJSON.
 
-<GlobalAlert/>
+#### All Decks Downloads
 
 <DownloadDecks/>

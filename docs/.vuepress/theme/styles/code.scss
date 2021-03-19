@@ -1,14 +1,5 @@
-.codeblock, code, pre, .md-code, .values-list--code, .code-wrap a {
-  font-family: var(--font-monospace);
-  font-size: 12px;
-  background-color: var(--code-bg-color);
-  color: var(--code-text-color);
-  border-radius: 5px;
-  line-height: 2.7em;
-  padding: 7px 10px;
-  margin: 0;
-  word-break: break-word;
-  font-weight: bold;
+.codeblock, code, pre, .md-code {
+  @extend %code-block;
 
   a {
     color: var(--accent-color);
@@ -16,15 +7,8 @@
 }
 
 pre {
-  &, code {
-    padding: 0;
+  code {
+    padding-left: 0;
+    padding-right: 0;
   }
-}
-
-.code-wrap a {
-  color: var(--accent-color);
-}
-
-.codeblock, pre, code, kbd, .line-number {
-  font-family: var(--font-monospace);
 }

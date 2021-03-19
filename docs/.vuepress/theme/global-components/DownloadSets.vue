@@ -51,7 +51,7 @@
               @input="onHandleChange")
 
       p(v-if="sets.length < 1") {{ message }}
-      .schema-table(v-for="(set, key) in sets" :key="key" v-else)
+      blockquote(v-else v-for="(set, key) in sets" :key="key")
         .download-wrap
           .img-wrap
             div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")
@@ -59,18 +59,18 @@
             div(v-else :class="`ss ss-${set.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h2(:id="set.name.replace(/ /g, '_')") {{ set.name }}
+              h3(:id="set.name.replace(/ /g, '_')") {{ set.name }}
               ol
                 li(v-if="set.isPartialPreview")
-                  div.attribute.optional Spoiler
+                  div.spoiler spoiler
                 li(v-if="set.isOnlineOnly")
-                  div.attribute.optional Online Only
+                  div.spoiler online only
                 li(v-if="set.isPaperOnly")
-                  div.attribute.optional Paper Only
+                  div.spoiler paper only
                 li(v-if="set.isPaper")
-                  div.attribute Paper
+                  div.spoiler paper
                 li(v-if="set.isOnline")
-                  div.attribute Online
+                  div.spoiler online
               ol
                 li
                   small Set Code:

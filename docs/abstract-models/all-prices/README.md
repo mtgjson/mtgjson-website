@@ -20,23 +20,23 @@
 
 The All Prices data model describes a list of card prices based on date.
 
-> Parent file: <span class="code-wrap">[AllPrices](../../api/v5/AllPrices.json)</span>  
-> Parent property: `data`
+**Parent file:** [AllPrices](../../api/v5/AllPrices.json)  
+**Parent property:** `data`
 
-## Price Providers
+#### Price Providers
 
 MTGJSON currently has affiliated with the following markets to keep a history of price data and the following examples are formatted for the data model:
 
-- paper: <a href="https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson" target="_blank" rel="noopener noreferrer">tcgplayer</a>, <a href="https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson" target="_blank" rel="noopener noreferrer">cardmarket</a>, and <a href="https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson" target="_blank" rel="noopener noreferrer">cardkingdom</a>
-- mtgo: <a href="https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card" target="_blank" rel="noopener noreferrer">cardhoarder</a>
+- paper: [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
+- mtgo: [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
-## File Structure Overview
+#### File Structure Overview
 
 ```json
 {
   "<Card UUID>": {
     "<Card Format>": { // Game format
-      "<Price Provider ID>": { // Price provider
+      "<Price Provider Identifier>": { // Price provider
         "buylist": { // Provider buylist values
           "foil": { // Foil prices
             "<YYYY-MM-DD>": <Float> // Date and price as value
@@ -62,7 +62,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 }
 ```
 
-### Example Model
+#### Example Model
 
 ```json
 {
@@ -137,4 +137,4 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 }
 ```
 
-Need more data? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We'll be happy to discuss your needs.
+Need more data? Join the [Discord](https://mtgjson.com/discord) and let us know or open an issue on [GitHub](https://github.com/mtgjson/mtgjson/issues). We'll be happy to discuss your needs.

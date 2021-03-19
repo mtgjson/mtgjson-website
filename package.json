@@ -1,6 +1,6 @@
 {
   "name": "mtgjson-website",
-  "version": "2.1.0",
+  "version": "2.2.0",
   "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
@@ -9,13 +9,14 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs && npm run generate-version-atom",
+    "build": "vuepress build docs && npm run generate-version-atom && npm run generate-contributors",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "lint": "eslint --fix --ext .js,.vue docs/.vuepress",
     "regenerate-schema": "node ./utils/regenerate-schema.js",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
+    "generate-contributors": "node ./utils/generate-contributors.js",
     "optimize-images": "imagemin --plugin.webp.quality=80 docs/.vuepress/public/images/avatars --out-dir=docs/.vuepress/public/images/avatars",
     "bootstrap": "npm install -g imagemin-cli imagemin-webp",
     "commit": "cz"
@@ -43,11 +44,10 @@
     "@vuepress/core": "^1.8.0",
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.1",
-    "js-essentials": "0.0.6",
+    "jquery": "^3.5.1",
     "vuepress": "^1.8.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-feed": "^0.1.9",
-    "vuepress-plugin-smooth-scroll": "^0.0.10",
     "vuex": "^3.6.2"
   },
   "devDependencies": {

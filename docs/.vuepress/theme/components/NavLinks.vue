@@ -17,7 +17,7 @@
       rel="noopener noreferrer") {{ repoLabel }}
       OutboundLink
 
-    ThemeSwitcher.nav-item-switcher.mobile-hide
+    //- ThemeSwitcher.nav-item-switcher.mobile-hide
 </template>
 
 <script>

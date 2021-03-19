@@ -12,7 +12,7 @@
     .sidebar-wrap
       Version.desktop-hide
 
-      NavLinks.desktop-hide
+      NavLinks
 
       slot(name="top")
 

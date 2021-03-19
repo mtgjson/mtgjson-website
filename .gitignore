@@ -18,7 +18,7 @@ yarn-error.log*
 # Node modules
 node_modules/
 
-# Build folder
+# Builds
 dist/
 .temp/
 

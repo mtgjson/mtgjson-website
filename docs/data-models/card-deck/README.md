@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Card (Token)",
+  "title": "Card (Deck)",
   "schema": "card",
   "meta": [
     {
       "name": "description",
-      "content": "Card (Token) data model documentation.",
+      "content": "Card (Deck) data model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, tokens, token, card (token)",
+      "content": "mtg, magic: the gathering, mtgjson, json, card (deck)",
     }
   ],
   "feed": {
@@ -18,13 +18,12 @@
 }
 ---
 
-# Card (Token)
+# Card (Deck)
 
-The Card (Token) data model describes the properties and values of a single card token.
+The Card data model describes the properties and values of a single card.
 
-**Parent file:** [All Decks](../../downloads/all-decks/)  
-**Parent model:** [Set](../set/)  
-**Parent property:** `tokens`
+**Parent model:** [Deck](../deck/)  
+**Parent property:** `mainBoard`, `sideBoard`
 
 #### Model Index
 
@@ -83,6 +82,26 @@ The Card (Token) data model describes the properties and values of a single card
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
+> ### convertedManaCost  
+> The converted mana cost of the card.  
+>
+> - **Type:** `float`  
+> - **Introduced:** `v4.0.0`
+
+> ### count  
+> How many of this card exists in a relevant deck.  
+>
+> - **Type:** `integer`  
+> - **Introduced:** `v4.4.1`  
+
+> ### duelDeck  
+> An indicator for which duel deck the card is in.  
+>
+> - **Type:** `string`
+> - <ExampleField type='duelDeck'/>
+> - **Introduced:** `v4.2.0`  
+> - **Attributes:** <i>optional</i>  
+
 > ### edhrecRank  
 > Card rank on [EDHRec](https://www.edhrec.com).  
 >
@@ -90,8 +109,22 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v4.5.0`  
 > - **Attributes:** <i>optional</i>  
 
+> ### faceConvertedManaCost  
+> The converted mana cost of the face of either half or part of the card.  
+>
+> - **Type:** `float`  
+> - **Introduced:** `v4.1.1`  
+> - **Attributes:** <i>optional</i>  
+
 > ### faceName  
 > Name on the face of the card.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### flavorName  
+> Promotional card name printed above the true card name on special cards that has no game function.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
@@ -103,6 +136,12 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>  
+
+> ### foreignData  
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
+>
+> - **Type:** `array | array(object)`  
+> - **Introduced:** `v4.0.0`
 
 > ### frameEffects  
 > The visual frame effect.  
@@ -118,11 +157,32 @@ The Card (Token) data model describes the properties and values of a single card
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
 
+> ### hand  
+> Starting maximum hand size total modifier. A `+` or `-` character precedes an integer.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.2.1`  
+> - **Attributes:** <i>optional</i>  
+
+> ### hasContentWarning  
+> If the card marked by Wizards of the Coast for having sensitive content. Cards with this property may have missing or degraded properties and values. See this [official article](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10) for more information.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i>optional</i>  
+
 > ### hasFoil  
 > If the card be found in foil.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
+
+> ### hasAlternativeDeckLimit  
+> If the card allows a value other than 4 copies in a deck  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i>optional</i>  
 
 > ### hasNonFoil  
 > If the card can be found in non-foil  
@@ -134,7 +194,20 @@ The Card (Token) data model describes the properties and values of a single card
 > List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
 > - **Type:** `object`  
-> - **Introduced:** `v5.0.0` 
+> - **Introduced:** `v5.0.0`
+
+> ### isAlternative  
+> The card has some kind of alternative variation to its printed counterpart.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.2.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### isFoil  
+> If the card is in foil.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.0.0`  
 
 > ### isFullArt  
 > If the card has full artwork.  
@@ -148,6 +221,13 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.1`  
+> - **Attributes:** <i>optional</i>  
+
+> ### isOversized  
+> If the card is oversized.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>  
 
 > ### isPromo  
@@ -164,6 +244,41 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i>optional</i>  
 
+> ### isReserved  
+> If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.0.1`  
+> - **Attributes:** <i>optional</i>  
+
+> ### isStarter  
+> If this card is found in a booster pack.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### isStorySpotlight  
+> If the card has a story spotlight.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.4.2`  
+> - **Attributes:** <i>optional</i>  
+
+> ### isTextless  
+> If the card does not have a text box.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.4.2`  
+> - **Attributes:** <i>optional</i>  
+
+> ### isTimeshifted  
+> If this card is "timeshifted", a feature from Time Spiral block.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v4.4.1`  
+> - **Attributes:** <i>optional</i>  
+
 > ### keywords  
 > All keywords found on a card.  
 >
@@ -178,8 +293,36 @@ The Card (Token) data model describes the properties and values of a single card
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
+> ### leadershipSkills  
+> List of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.  
+>
+> - **Type:** `object`  
+> - **Introduced:** `v4.5.1`  
+> - **Attributes:** <i>optional</i>  
+
+> ### legalities  
+> List of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
+>
+> - **Type:** `object`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### life  
+> Starting life total modifier. A plus or minus character precedes an integer. Used only on Vanguard cards.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.2.1`  
+> - **Attributes:** <i>optional</i>  
+
 > ### loyalty  
 > Planeswalker loyalty value.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### manaCost  
+> Mana cost of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -198,10 +341,44 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
+> ### originalReleaseDate  
+> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the card.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.1.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### originalText  
+> Text on the card as originally printed.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### originalType  
+> Type as originally printed. Includes any supertypes and subtypes.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### otherFaceIds  
+> List of UUID's of this card with counterparts, such as transformed or melded faces.  
+>
+> - **Type:** `array | array(string)`  
+> - **Introduced:** `v4.6.1`
+
 > ### power  
 > Power of the card.  
 >
 > - **Type:** `string`  
+> - **Introduced:** `v4.0.0`  
+> - **Attributes:** <i>optional</i>  
+
+> ### printings  
+> List of sets the card was printed in, formatted in uppercase.  
+>
+> - **Type:** `array(string)`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>  
 
@@ -213,10 +390,23 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i>optional</i>  
 
-> ### reverseRelated
-> The names of the cards that produce this card.  
+> ### purchaseUrls  
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
 >
-> - **Type:** `array(string)`  
+> - **Type:** `object`  
+> - **Introduced:** `v4.4.0`
+
+> ### rarity  
+> Card printing rarity.  
+>
+> - **Type:** `string`
+> - <ExampleField type='rarity'/>
+> - **Introduced:** `v4.0.0`
+
+> ### rulings  
+> Official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
+>
+> - **Type:** `array | array(object)`  
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
@@ -280,6 +470,12 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
+> ### variations  
+> List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.  
+>
+> - **Type:** `array | array(string)`  
+> - **Introduced:** `v4.1.2`  
+
 > ### watermark  
 > Name of the watermark on the card.  
 >
@@ -287,4 +483,3 @@ The Card (Token) data model describes the properties and values of a single card
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>
-

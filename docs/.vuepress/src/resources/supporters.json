@@ -50,6 +50,11 @@
       "since": "2020-03"
     },
     {
+      "name": "Fetchbot Sorter",
+      "tier": "mythic",
+      "since": "2020-03"
+    },
+    {
       "name": "My MTG Collection",
       "image": "avatar-my-mtg-collection-logo.png",
       "link": "https://www.reddit.com/r/Mymtgapp",
@@ -62,6 +67,13 @@
       "link": "https://decktech.io",
       "tier": "rare",
       "since": "2020-08"
+    },
+    {
+      "name": "MTG Familiar",
+      "image": "avatar-mtg-familiar.svg",
+      "link": "https://github.com/AEFeinstein/mtg-familiar",
+      "tier": "rare",
+      "since": "2021-02"
     },
     {
       "name": "MTG Decks",
@@ -287,8 +299,8 @@
       "link": "https://mtgoncurve.com/"
     },
     {
-      "name": "MTG Random",
-      "image": "avatar-mtg-random.png",
+      "name": "MTG Discover",
+      "image": "avatar-mtgdiscover.png",
       "link": "https://apps.apple.com/us/app/mtg-random/id1534340485"
     },
     {

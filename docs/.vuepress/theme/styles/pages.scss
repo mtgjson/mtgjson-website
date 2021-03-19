@@ -1,20 +1,7 @@
-#mtgjson {
-  & ~ h3 {
-    padding-top: 30px;
-    margin-top: 0;
-  }
-}
-
-#frequently-asked-questions {
-  & ~ h3 {
-    padding-top: 20px;
-    margin-top: 0;
-    height: 0;
-    font-size: 0;
-  }
-  & ~ .custom-block {
-    .custom-block-title {
-      font-size: 1.4rem;
-    }
+#mtgjson-changelog,
+#mtggraphql-changelog,
+#mtgjson-documentation-changelog {
+  & ~ h4 {
+    font-size: 1rem;
   }
 }

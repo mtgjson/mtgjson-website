@@ -23,8 +23,8 @@
               id="sort-input"
               v-model="sortKey"
               @change="$helpers.sort(sortKey, decks)")
-              option(value="releaseDate:true" selected) Newest
-              option(value="releaseDate") Oldest
+              option(value="releaseDate:true") Release Date (Newest)
+              option(value="releaseDate") Release Date (Oldest)
               option(value="code") Code (Ascending)
               option(value="code:true") Code (Descending)
               option(value="name") Name (Ascending)
@@ -33,13 +33,13 @@
               option(value="type:true") Type (Descending)
 
       p(v-if="decks.length < 1") {{ message }}
-      .schema-table(v-for="(deck, key) in decks" :key="key" v-else)
+      blockquote(v-for="(deck, key) in decks" :key="key" v-else)
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")
           .text-wrap
             .text-wrap--details
-              h2(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
+              h3(:id="deck.name.replace(/ /g, '_')") {{ deck.name }}
               ol
                 li
                   small Deck Code:

@@ -1,5 +1,13 @@
 <template lang="pug">
-  .supporters(v-if="supporters")
+  .supporters
+    .supporters-wrap(v-if="contributors.length > 0")
+      h3 Our Contributors
+      ul.contributors-list
+        li(v-for="(contributor, key) in contributors" :key="key")
+          div
+            a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
+              img(:src="contributor.avatar")
+    h2 Supporters
     .supporters-wrap(v-if="patrons")
       h3 Our Patreon Supporters
       p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
@@ -10,7 +18,10 @@
             .img-wrap(v-if="image")
               .img-wrap--container
                 img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
-            a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+            .img-wrap.no-image(v-else)
+              .img-wrap--container
+                p {{name.substring(0, 1)}}
+            a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")
             p.tier {{ tier }} Supporter
@@ -30,18 +41,21 @@
             .img-wrap.no-image(v-else)
               .img-wrap--container
                 p {{name.substring(0, 1)}}
-            a(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+            a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
               h4(v-html="name")
             h4(v-else v-html="name")
 
 </template>
 
 <script>
-import supporters from "../../src/resources/supporters.json";
+import supporters from '../../src/resources/supporters.json';
+import contributors from '../../src/resources/contributors.json';
+
 export default {
-  name: "Supporters",
+  name: 'Supporters',
   data() {
     return {
+      contributors,
       supporters,
       projectMsg:
         'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
@@ -55,16 +69,16 @@ export default {
       return this.supporters.services;
     }
   },
-  mounted() {
-    const lazyImages = Array.from(document.querySelectorAll("img.lazy"));
+  async mounted() {
+    const lazyImages = Array.from(document.querySelectorAll('img.lazy'));
 
-    if ("IntersectionObserver" in window) {
+    if ('IntersectionObserver' in window) {
       let lazyImageObserver = new IntersectionObserver((entries, observer) => {
         entries.forEach(entry => {
           if (entry.isIntersecting) {
             let lazyImage = entry.target;
             lazyImage.src = lazyImage.dataset.src;
-            lazyImage.classList.remove("lazy");
+            lazyImage.classList.remove('lazy');
             lazyImageObserver.unobserve(lazyImage);
           }
         });
@@ -77,8 +91,8 @@ export default {
       // Boo, no observer
       lazyImages.forEach(lazyImage => {
         lazyImage.src = lazyImage.dataset.src;
-        lazyImage.classList.remove("lazy");
-        lazyImage.classList.add("not-lazy");
+        lazyImage.classList.remove('lazy');
+        lazyImage.classList.add('not-lazy');
       });
     }
   },
@@ -88,7 +102,7 @@ export default {
       const year = newDate.getFullYear();
       const month = newDate.getMonth() + 1; // +1 because arrays are 0
 
-      const sinceDate = time.split("-");
+      const sinceDate = time.split('-');
       const sinceYear = Number(sinceDate[0]);
       const sinceMonth = Number(sinceDate[1]);
 
@@ -114,6 +128,37 @@ export default {
     }
   }
 
+  .contributors-list {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 20px;
+    margin-left: 0;
+
+    li {
+      flex: none;
+      list-style: none;
+
+      a {
+        display: block;
+        border-radius: 50%;
+        background-color: var(--light-color);
+        overflow: hidden;
+
+        img {
+          float: left;
+          max-width: 50px;
+        }
+
+        &::before,
+        &::after {
+          content: '';
+          display: table;
+          clear: both;
+        }
+      }
+    }
+  }
+
   &-grid {
     display: grid;
     grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -121,6 +166,10 @@ export default {
     justify-items: center;
     grid-gap: 1rem;
     margin-bottom: 2rem;
+
+    blockquote {
+      margin-top: 0;
+    }
 
     &.services {
       grid-template-columns: repeat(4, minmax(0, 1fr));
@@ -155,7 +204,6 @@ export default {
             color: var(--dark-color);
             margin-top: 0;
             padding-top: 0;
-
           }
         }
 
@@ -168,11 +216,12 @@ export default {
           padding: 15px;
           display: flex;
           align-items: center;
+          justify-content: center;
 
           img {
-            width: 100%;
+            max-width: 90%;
             height: auto;
-            max-height: 100%;
+            max-height: 90%;
           }
         }
       }
@@ -203,6 +252,10 @@ export default {
         word-wrap: anywhere;
       }
 
+      .linked-name {
+        text-decoration: underline;
+      }
+
       .tier {
         text-align: center;
         flex: 0 0 100%;
@@ -219,7 +272,7 @@ export default {
       }
     }
 
-    .supporter[data-tier="mythic"] {
+    .supporter[data-tier='mythic'] {
       .img-wrap {
         &--container {
           height: 125px;
@@ -233,7 +286,7 @@ export default {
       }
     }
 
-    .supporter[data-tier="rare"] {
+    .supporter[data-tier='rare'] {
       .tier {
         color: var(--yellow-color);
       }

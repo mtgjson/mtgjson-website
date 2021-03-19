@@ -77,7 +77,7 @@ body {
     --bg-border-color: var(--light-gray-color);
     --bg-dark-color: var(--light-gray-color);
     --shadow-color: var(--medium-gray-color);
-    --search-bg-color: var(--light-color);
+    --search-bg-color: var(--medium-gray-color);
     --search-border-color: var(--medium-gray-color);
     --search-border-highlight-color: var(--accent-color);
     --search-text-color: var(--text-color);
@@ -92,8 +92,8 @@ body {
     --table-heading-color: var(--light-color);
     --gray-color: var(--dark-gray-color);
     // Code colors
-    // --code-bg-color: #ffeeec;
-    // --code-text-color: #9b2e2e;
+    --code-bg-color: var(--dark-gray-color);
+    --code-text-color: var(--yellow-color);
 
     background-color: var(--bg-color);
     color: var(--text-color);
