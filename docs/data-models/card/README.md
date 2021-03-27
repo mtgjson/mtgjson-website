@@ -22,8 +22,8 @@
 
 The Card data model describes the properties of a single card.
 
-**Parent model:** [Set](../set/), [Deck](../deck/)  
-**Parent property:** `cards`, `commander`, `mainBoard`, `sideBoard`
+**Parent model:** [Set](../set/)  
+**Parent property:** `cards`
 
 #### Model Index
 
@@ -196,12 +196,6 @@ The Card data model describes the properties of a single card.
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.2.0`  
 > - **Attributes:** <i>optional</i>  
-
-> ### isFoil  
-> If the card is in foil.  
->
-> - **Type:** `boolean`  
-> - **Introduced:** `v5.0.0`  
 
 > ### isFullArt  
 > If the card has full artwork.  
