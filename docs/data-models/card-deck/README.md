@@ -342,7 +342,7 @@ The Card data model describes the properties and values of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### originalReleaseDate  
-> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the card.  
+> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for a promotional card printed outside of a cycle window, such as Friday Night Magic and Secret Lair Drop promotions.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.1.0`  
