@@ -40,7 +40,7 @@ All outputted files to download provided by MTGJSON.
 > ### AllDeckFiles
 > File containing all pre-constructed decks, compressed.
 >
-> <DownloadField fileName='AllDecksFiles'/>
+> <DownloadField fileName='AllDeckFiles'/>
 
 > ### AllIdentifiers
 > File containing all cards organized by UUID.
