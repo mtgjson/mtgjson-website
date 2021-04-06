@@ -7,6 +7,10 @@
 }
 
 pre {
+  &[class*="language-"] {
+    padding-top: .75em
+  }
+
   code {
     padding-left: 0;
     padding-right: 0;

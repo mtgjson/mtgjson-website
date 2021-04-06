@@ -185,16 +185,16 @@ module.exports = {
         path: '/mtggraphql/'
       },
       {
-        title: 'File Models',
-        path: '/file-models/',
-        collapsable: false,
-        children: fileModels
-      },
-      {
         title: 'Data Models',
         path: '/data-models/',
         collapsable: false,
         children: dataModels
+      },
+      {
+        title: 'File Models',
+        path: '/file-models/',
+        collapsable: false,
+        children: fileModels
       },
       {
         title: 'Abstract Models',

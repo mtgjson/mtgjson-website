@@ -213,6 +213,23 @@ blockquote {
   }
 }
 
+.sidebar-link[href="/mtggraphql/"] {
+  position: relative;
+
+  &::after {
+    content: "new";
+    position: absolute;
+    left: 115px;
+    top: 3px;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: var(--yellow-color);
+    font-family: var(--font-monospace);
+    color: var(--dark-color);
+  }
+}
+
 .link {
   &-inline-image {
     padding-left: 20px;
