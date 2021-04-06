@@ -20,6 +20,14 @@
 # MTGJSON Documentation Changelog
 The following is the MTGJSON Documentation/Website Changelog that provides updates to the website that are in part or separated from the MTGJSON Application. Some parts may be updated for clarity or corrections at any point.
 
+## 2.2.1
+Release Date 2021-03-07
+
+### Misc
+
+#### Added
+- Added more parent models to data model's pages for easy access to the parent model
+
 ## 2.2.0
 Release Date: 2021-02-10
 

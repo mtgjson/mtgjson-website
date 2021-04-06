@@ -40,7 +40,7 @@ The Deck data model describes a complete deck reference.
 > - **Introduced:** `v4.3.0`
 
 > ### commander
-> The card that is the Commander in this deck. See the [Card](../../data-models/card) data model.
+> The card that is the Commander in this deck. See the [Card (Deck)](../../data-models/card-deck) data model.
 >
 > - **Type:** `object`
 > - **Introduced:** `v5.1.0`  
@@ -54,7 +54,7 @@ The Deck data model describes a complete deck reference.
 
 
 > ### mainBoard
-> The cards in the main-board. See the [Card](../../data-models/card) data model.
+> The cards in the main-board. See the [Card (Deck)](../../data-models/card-deck) data model.
 >
 > - **Type:** `array(object)`
 > - **Introduced:** `v4.3.0`
@@ -66,7 +66,7 @@ The Deck data model describes a complete deck reference.
 > - **Introduced:** `v4.3.0`
 
 > ### sideBoard
-> The cards in the side-board. See the [Card](../../data-models/card) data model.
+> The cards in the side-board. See the [Card (Deck)](../../data-models/card-deck) data model.
 >
 > - **Type:** `array(object)`
 > - **Introduced:** `v4.3.0`

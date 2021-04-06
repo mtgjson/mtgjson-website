@@ -22,7 +22,7 @@
 
 The Identifiers data model describes a list of identifiers associated to a card.
 
-**Parent model:** [Card](../card/)  
+**Parent model:** [Card](../card/), [Card (Deck)](../card-deck/), [Card (Token)](../card-token/)      
 **Parent property:** `identifiers`
 
 #### Model Index

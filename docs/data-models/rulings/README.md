@@ -22,7 +22,7 @@
 
 The Rulings data model describes a list of rulings that are for a specific card.
 
-**Parent model:** [Card](../card/)  
+**Parent model:** [Card](../card/), [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/)  
 **Parent property:** `rulings`
 
 #### Model Index
