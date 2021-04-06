@@ -2,7 +2,7 @@
   header.navbar
     .navbar-options
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-      router-link(:to="$localePath")
+      router-link.nav-logo-link(:to="$localePath")
         NavMeta(:width="`60px`")
       //- NavLinks.mobile-hide
       ThemeSwitcher
@@ -33,8 +33,11 @@ export default {
   align-items: center;
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
-
   padding: 0 4rem;
+
+  .nav-logo-link {
+    text-decoration: none;
+  }
 
   // Race condition with nesting Logo inside of router-link
   .router-link-exact-active.router-link-active:empty {

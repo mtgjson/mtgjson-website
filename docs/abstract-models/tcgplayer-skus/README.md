@@ -18,9 +18,9 @@
 
 # TCGplayer SKUs
 
-The TCGplayer SKUs data model describes [TCGplayer](https://tcgplayer.com) SKU information based on card UUIDs.
+The TCGplayer SKUs data model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU information based on card UUIDs.
 
-**Parent file:** [TCGplayer SKUs](../../api/v5/TcgplayerSkus.json)  
+**Parent file:** [TCGplayer SKUs](/downloads/all-files/#tcgplayerskus)  
 **Parent property:** `data`
 
 #### File Structure Overview

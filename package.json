@@ -39,8 +39,9 @@
     }
   },
   "dependencies": {
-    "@sentry/browser": "^6.0.3",
-    "@sentry/integrations": "^6.0.3",
+    "@sentry/browser": "^6.2.5",
+    "@sentry/integrations": "^6.2.5",
+    "@sentry/tracing": "^6.2.5",
     "@vuepress/core": "^1.8.0",
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.1",

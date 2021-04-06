@@ -20,9 +20,9 @@
 
 # Card Types
 
-The Card Types data model describes top-level card types and the associated card types they may have.
+The Card Types file model describes top-level card types and the associated card types they may have.
 
-**Parent file:** [Card Types](/api/v5/CardTypes.json.zip)   
+**Parent file:** [Card Types](/downloads/all-files/#cardtypes)   
 **Parent property:** `data`
 
 #### Model Index

@@ -26,6 +26,7 @@ export default {
     font-size: 12px;
     font-weight: bold;
     color: var(--gray-color);
+    text-decoration: none;
   }
 }
 

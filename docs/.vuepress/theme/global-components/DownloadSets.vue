@@ -50,8 +50,9 @@
               v-model="spoilerKey"
               @input="onHandleChange")
 
-      p(v-if="sets.length < 1") {{ message }}
-      blockquote(v-else v-for="(set, key) in sets" :key="key")
+      strong(v-if="sets.length < 1") {{ message }}
+      strong(v-else) {{ sets.length }} results found...
+      blockquote(v-for="(set, key) in sets" :key="key")
         .download-wrap
           .img-wrap
             div(v-if="set.keyruneCode" :class="`ss ss-${set.keyruneCode.toLowerCase()}`")

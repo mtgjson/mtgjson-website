@@ -22,7 +22,7 @@
 
 The Translations data model describes the translated data per language as a key.
 
-**Parent model:** [Set](../set/)  
+**Parent model:** [Set](/file-models/set/)  
 **Parent property:** `translations`  
 
 #### Model Index

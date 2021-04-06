@@ -22,8 +22,8 @@
 
 The Card (Token) data model describes the properties and values of a single card token.
 
-**Parent file:** [All Decks](../../downloads/all-decks/)  
-**Parent model:** [Set](../set/)  
+**Parent file:** [All Decks](/downloads/all-decks/)  
+**Parent model:** [Set](/file-models/set/)  
 **Parent property:** `tokens`
 
 #### Model Index

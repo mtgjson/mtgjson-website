@@ -18,9 +18,9 @@
 
 # Booster
 
-The Booster data model describes a object-based breakdown of how a [Set](/data-models/set/)'s booster pack may be constructed.
+The Booster data model describes a object-based breakdown of how a [Set](/file-models/set/)'s booster pack may be constructed.
 
-**Parent model:** [Set](/data-models/set/)  
+**Parent model:** [Set](/file-models/set/)  
 **Parent property:** `booster`
 
 #### File Structure Overview

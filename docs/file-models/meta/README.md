@@ -20,9 +20,9 @@
 
 # Meta
 
-The Meta data model describes application build date and version number.
+The Meta file model describes application build date and version number.
 
-**Parent file:** [Meta](../../api/v5/Meta.json.zip)  
+**Parent file:** [Meta](/downloads/all-files/#meta)  
 **Parent property:** `data`, `meta`  
 
 #### Model Index

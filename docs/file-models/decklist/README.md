@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Deck (DeckList)",
+  "title": "DeckList",
   "schema": "deck",
   "meta": [
     {
       "name": "description",
-      "content": "Deck (DeckList) data model documentation.",
+      "content": "DeckList data model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, deck, deck (decklist)",
+      "content": "mtg, magic: the gathering, mtgjson, json, decklist",
     }
   ],
   "feed": {
@@ -18,11 +18,11 @@
 }
 ---
 
-# Deck (DeckList)
+# DeckList
 
-The Deck (DeckList) data model describes a metadata-like structure that holds top-level information about a [Deck](../deck/).
+The DeckList file model describes a metadata-like structure that holds top-level information about a [Deck](/file-models/deck/).
 
-**Parent file:** [DeckList](../../api/v5/DeckList.json.zip)  
+**Parent file:** [DeckList](/downloads/all-files/#decklist)  
 **Parent property:** `data`
 
 #### Model Index

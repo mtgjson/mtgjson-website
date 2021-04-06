@@ -27,6 +27,10 @@ Release Date 2021-03-07
 
 #### Added
 - Added more parent models to data model's pages for easy access to the parent model
+- Added more Sentry reporting for error logging
+
+#### Updated
+- Updated some supporters logos to png format with more transparency
 
 ## 2.2.0
 Release Date: 2021-02-10

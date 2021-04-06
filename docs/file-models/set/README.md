@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Set (SetList)",
+  "title": "Set",
   "schema": "set",
   "meta": [
     {
       "name": "description",
-      "content": "setList data model for MTGJSON.",
+      "content": "Set data model for MTGJSON.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, set (setlist)",
+      "content": "mtg, magic: the gathering, mtgjson, json, set, individual",
     }
   ],
   "feed": {
@@ -18,11 +18,11 @@
 }
 ---
 
-# Set (SetList)
+# Set
 
-The Set (SetList) data model describes a metadata-like structure that holds top-level information about a [Set](../set/).
+The Set file model describes the properties and values of an individual set.
 
-**Parent file:** [SetList](../../api/v5/SetList.json.zip)  
+**Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)  
 **Parent property:** `data`
 
 #### Model Index
@@ -45,6 +45,19 @@ The Set (SetList) data model describes a metadata-like structure that holds top-
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i> 
+
+> ### booster  
+> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) data model.  
+>
+> - **Type:** `object`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i>optional</i> 
+
+> ### cards  
+> List of cards in this set. See the [Card](/data-models/card/) data model.  
+>
+> - **Type:** `array(object)`  
+> - **Introduced:** `v4.0.0`
 
 > ### code  
 > Set code for the set.  
@@ -159,6 +172,12 @@ The Set (SetList) data model describes a metadata-like structure that holds top-
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i>optional</i> 
 
+> ### tokens  
+> Tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.  
+>
+> - **Type:** `array(object)`  
+> - **Introduced:** `v4.0.0`
+
 > ### totalSetSize  
 > Total number of cards in the set, including promos and related supplemental products.  
 >
@@ -177,4 +196,3 @@ The Set (SetList) data model describes a metadata-like structure that holds top-
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.0.0`
-

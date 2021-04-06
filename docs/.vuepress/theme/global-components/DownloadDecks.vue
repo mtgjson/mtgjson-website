@@ -32,8 +32,9 @@
               option(value="type") Type (Ascending)
               option(value="type:true") Type (Descending)
 
-      p(v-if="decks.length < 1") {{ message }}
-      blockquote(v-for="(deck, key) in decks" :key="key" v-else)
+      strong(v-if="decks.length < 1") {{ message }}
+      strong(v-else) {{ decks.length }} results found...
+      blockquote(v-for="(deck, key) in decks" :key="key")
         .download-wrap
           .img-wrap
             div(:class="`ss ss-${deck.code.toLowerCase()}`")

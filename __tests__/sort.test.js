@@ -143,13 +143,13 @@ describe('sort', () => {
     expect(sorted).toEqual(expected);
   });
 
-  it('should throw a TypeError if not data was passed in but no filter was passed', () => {
+  it('should throw a TypeError if no data was passed in and no filter was passed', () => {
     expect(() => {
       sort();
     }).toThrow(TypeError);
   });
 
-  it('should throw a TypeError if not data was passed in but a filter was', () => {
+  it('should throw a TypeError if no data was passed in but a filter was', () => {
     expect(() => {
       sort('test-filter');
     }).toThrow(TypeError);

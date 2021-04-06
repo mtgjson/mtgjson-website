@@ -22,7 +22,7 @@
 
 The Card data model describes the properties and values of a single card.
 
-**Parent model:** [Deck](../deck/)  
+**Parent model:** [Deck](/file-models/deck/)  
 **Parent property:** `commander`, `mainBoard`, `sideBoard`  
 
 #### Model Index

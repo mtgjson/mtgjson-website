@@ -17,7 +17,7 @@
 
 The All Identifiers data model describes a list of all cards organized by UUID.
 
-**Parent file:** [AllIdentifiers](../../api/v5/AllIdentifiers.json)  
+**Parent file:** [AllIdentifiers](/downloads/all-files/#allidentifiers)  
 **Parent property:** `data`
 
 #### File Structure Overview

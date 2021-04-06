@@ -32,9 +32,21 @@ ol, ul {
 }
 
 a {
+  text-decoration: underline;
+
+  &:hover,
+  &.sidebar-link,
+  &.sidebar-heading {
+    text-decoration: none;
+  }
+
   &.header-anchor {
     opacity: 0;
     margin-left: -0.9em;
+  }
+
+  span {
+    display: inline-block;
   }
 }
 

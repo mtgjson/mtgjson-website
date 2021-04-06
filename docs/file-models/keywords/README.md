@@ -20,9 +20,9 @@
 
 # Keywords
 
-The Keywords data models describes a list of all keywords used on Magic: The Gathering cards.
+The Keywords file model describes a list of all keywords used on Magic: The Gathering cards.
 
-**Parent file:** [Keywords](../../api/v5/Keywords.json.zip)   
+**Parent file:** [Keywords](/downloads/all-files/#keywords)   
 **Parent property:** `data`
 
 #### Model Index

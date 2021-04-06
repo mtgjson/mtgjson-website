@@ -20,7 +20,7 @@
 
 # Deck
 
-The Deck data model describes a complete deck reference.
+The Deck file model describes a complete deck reference.
 
 **Parent file:** [All Decks](../../downloads/all-decks/)  
 **Parent property:** `data`

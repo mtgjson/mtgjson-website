@@ -1,15 +1,15 @@
 ---
 {
-  "title": "Set",
+  "title": "SetList",
   "schema": "set",
   "meta": [
     {
       "name": "description",
-      "content": "Set data model for MTGJSON.",
+      "content": "setList data model for MTGJSON.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, set, individual",
+      "content": "mtg, magic: the gathering, mtgjson, json, setlist",
     }
   ],
   "feed": {
@@ -18,11 +18,11 @@
 }
 ---
 
-# Set
+# SetList
 
-The Set data model describes the properties and values of an individual set.
+The SetList file model describes a metadata-like structure that holds top-level information about a [Set](../set/).
 
-**Parent file:** [AllPrintings](../../api/v5/AllPrintings.json.zip), [Legacy](../../api/v5/Legacy.json.zip), [Modern](../../api/v5/Modern.json.zip), [Pioneer](../../api/v5/Pioneer.json.zip), [Standard](../../api/v5/Standard.json.zip), [Vintage](../../api/v5/Vintage.json.zip)  
+**Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`
 
 #### Model Index
@@ -45,19 +45,6 @@ The Set data model describes the properties and values of an individual set.
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i> 
-
-> ### booster  
-> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) data model.  
->
-> - **Type:** `object`  
-> - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i> 
-
-> ### cards  
-> List of cards in this set. See the [Card](/data-models/card/) data model.  
->
-> - **Type:** `array(object)`  
-> - **Introduced:** `v4.0.0`
 
 > ### code  
 > Set code for the set.  
@@ -172,12 +159,6 @@ The Set data model describes the properties and values of an individual set.
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i>optional</i> 
 
-> ### tokens  
-> Tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.  
->
-> - **Type:** `array(object)`  
-> - **Introduced:** `v4.0.0`
-
 > ### totalSetSize  
 > Total number of cards in the set, including promos and related supplemental products.  
 >
@@ -196,3 +177,4 @@ The Set data model describes the properties and values of an individual set.
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.0.0`
+

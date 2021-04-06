@@ -22,7 +22,7 @@
 
 The Card (Atomic) data model describes the a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
 
-**Parent file:** [AtomicCards](../../api/v5/AtomicCards.json.zip), [LegacyAtomic](../../api/v5/LegacyAtomic.json.zip), [ModernAtomic](../../api/v5/ModernAtomic.json.zip), [PauperAtomic](../../api/v5/PauperAtomic.json.zip), [PioneerAtomic](../../api/v5/PioneerAtomic.json.zip), [StandardAtomic](../../api/v5/StandardAtomic.json.zip), [VintageAtomic](../../api/v5/VintageAtomic.json.zip)  
+**Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
 
 ::: warning

@@ -30,7 +30,7 @@
     },
     {
       "name": "CardBoard Live",
-      "image": "avatar-cardboardlive.jpg",
+      "image": "avatar-cardboard-live.png",
       "link": "https://cardboard.live",
       "tier": "mythic",
       "since": "2019-09"
@@ -44,7 +44,7 @@
     },
     {
       "name": "MTGBAN",
-      "image": "avatar-mtgban.png",
+      "image": "avatar-mtg-ban.png",
       "link": "https://www.mtgban.com/",
       "tier": "mythic",
       "since": "2020-03"
@@ -139,7 +139,7 @@
     },
     {
       "name": "MagicML",
-      "image": "avatar-magicml.jpg",
+      "image": "avatar-magicml.png",
       "link": "https://www.magicml.com/",
       "tier": "uncommon",
       "since": "2021-01"
@@ -305,7 +305,7 @@
     },
     {
       "name": "MTG Search",
-      "image": "avatar-mtg-search.jpg",
+      "image": "avatar-mtg-search.png",
       "link": "https://mtg-search.com"
     },
     {
@@ -375,7 +375,7 @@
     },
     {
       "name": "Stream Decker",
-      "image": "avatar-streamdecker.jpg",
+      "image": "avatar-streamdecker.png",
       "link": "https://www.streamdecker.com"
     },
     {

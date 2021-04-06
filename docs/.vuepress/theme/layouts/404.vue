@@ -26,7 +26,7 @@
           li
             router-link(to="/data-models/card") Card Model
           li
-            router-link(to="/data-models/set") Set Model
+            router-link(to="/file-models/set") Set Model
         .error-image-wrapper
           img.error-image(v-if="themeColor === 'dark'" src="../../public/images/assets/error-image-dark.png")
           img.error-image(v-else src="../../public/images/assets/error-image-light.png")

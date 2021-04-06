@@ -1,8 +1,10 @@
-// A little different than the source but works
-// https://jsbin.com/wowezadolo/edit?js,console
-export default (value = '', dataToSort) => {
-  if (!dataToSort) {
-    throw TypeError('You must pass in a data to sort');
+/**
+ * A little different than the source but works
+ * https://jsbin.com/wowezadolo/edit?js,console
+ */
+export default (value, dataToSort) => {
+  if (!dataToSort || !Array.isArray(dataToSort)) {
+    throw TypeError('You must pass in an array of data to sort');
   }
 
   if (!value || value.length < 1 || typeof value !== 'string') {

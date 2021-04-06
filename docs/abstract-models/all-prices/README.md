@@ -20,7 +20,7 @@
 
 The All Prices data model describes a list of card prices based on date.
 
-**Parent file:** [AllPrices](../../api/v5/AllPrices.json)  
+**Parent file:** [AllPrices](/downloads/all-files/#allprices)  
 **Parent property:** `data`
 
 #### Price Providers

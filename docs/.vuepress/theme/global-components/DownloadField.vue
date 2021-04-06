@@ -1,28 +1,38 @@
 <template lang="pug">
   .download-links
     div(v-if="fileName === 'AllPrintings'")
-      div
+      div.download-links--wrap
         p.small-header Downloads:
-        a.download-links--link(v-for="(format, key) in jsonFormats" v-if="format !== 'json'" :key="`json-${key + format}`" download :href="`${$api}${fileName}.json.${format}`") {{ format }}
-        a.download-links--link(v-else download :href="`${$api}${fileName}.json`") {{ format }}
-      div
+        a.download-links--link(v-for="(format, key) in jsonFormats" v-if="format !== 'json'" :key="`json-${key + format}`" download :href="`${$api}${fileName}.json.${format}`")
+          button.cta-btn {{ format }}
+        a.download-links--link(v-else download :href="`${$api}${fileName}.json`")
+          button.cta-btn {{ format }}
+      div.download-links--wrap
         p.small-header SQL Downloads:
-        a.download-links--link(v-for="(format, key) in sqlFormats" v-if="format !== 'sql'" :key="`sql-${key + format}`" download :href="`${$api}${fileName}.sql.${format}`") {{ format }}
-        a.download-links--link(v-else download :href="`${$api}${fileName}.sql`") {{ format }}
-      div
+        a.download-links--link(v-for="(format, key) in sqlFormats" v-if="format !== 'sql'" :key="`sql-${key + format}`" download :href="`${$api}${fileName}.sql.${format}`")
+          button.cta-btn {{ format }}
+        a.download-links--link(v-else download :href="`${$api}${fileName}.sql`")
+          button.cta-btn {{ format }}
+      div.download-links--wrap
         p.small-header SQLite Downloads:
-        a.download-links--link(v-for="(format, key) in sqliteFormats" v-if="format !== 'sqlite'" :key="`sqlite-${key + format}`" download :href="`${$api}${fileName}.sqlite.${format}`") {{ format }}
-        a.download-links--link(v-else download :href="`${$api}${fileName}.sqlite`") {{ format }}
+        a.download-links--link(v-for="(format, key) in sqliteFormats" v-if="format !== 'sqlite'" :key="`sqlite-${key + format}`" download :href="`${$api}${fileName}.sqlite.${format}`")
+          button.cta-btn {{ format }}
+        a.download-links--link(v-else download :href="`${$api}${fileName}.sqlite`")
+          button.cta-btn {{ format }}
     div(v-else-if="fileName.includes('Files')")
-      div
+      div.download-links--wrap
         p.small-header File Downloads:
-        a.download-links--link(v-for="(format, key) in fileFormats" v-if="format !== 'zip'" :key="key" download :href="`${$api}${fileName}.tar.${format}`") {{ format }}
-        a.download-links--link(v-else download :href="`${$api}${fileName}.zip`") {{ format }}
+        a.download-links--link(v-for="(format, key) in fileFormats" v-if="format !== 'zip'" :key="key" download :href="`${$api}${fileName}.tar.${format}`")
+          button.cta-btn {{ format }}
+        a.download-links--link(v-else download :href="`${$api}${fileName}.zip`")
+          button.cta-btn {{ format }}
     div(v-else)
-      div
+      div.download-links--wrap
         p.small-header Downloads:
-        a.download-links--link(v-for="(format, key) in jsonFormats" v-if="format !== 'json'" :key="key" download :href="`${$api}${fileName}.json.${format}`") {{ format }}
-        a.download-links--link(v-else download :href="`${$api}${fileName}.json`") {{ format }}
+        a.download-links--link(v-for="(format, key) in jsonFormats" v-if="format !== 'json'" :key="key" download :href="`${$api}${fileName}.json.${format}`")
+          button.cta-btn {{ format }}
+        a.download-links--link(v-else download :href="`${$api}${fileName}.json`")
+          button.cta-btn {{ format }}
 
 </template>
 
@@ -46,16 +56,29 @@ export default {
   margin-bottom: 0 !important;
 }
 
-.download-links--link {
-  margin-right: 1rem;
-  padding-right: 1rem;
-  border-right: 1px solid var(--gray-color);
-  text-transform: uppercase;
+.download-links {
+  &--wrap {
+    display: flex;
+    flex-wrap: wrap;
+    grid-gap: 10px;
 
-  &:last-of-type {
-    margin-right: 0;
-    padding-right: 0;
-    border: 0;
+    .small-header {
+      flex: 100%;
+    }
+  }
+  &--link {
+    display: inline-block;
+
+    .cta-btn {
+      text-transform: uppercase;
+      margin: 0;
+    }
+
+    &:last-of-type {
+      margin-right: 0;
+      padding-right: 0;
+      border: 0;
+    }
   }
 }
 </style>
