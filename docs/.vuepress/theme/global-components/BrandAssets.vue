@@ -100,8 +100,8 @@ export default {
           }
 
           &.copied {
-            background-color: seagreen;
-            color: var(--light-color);
+            background-color: var(--green-color);
+            color: var(--dark-color);
             font-weight: bold;
             transition: all 0.25s ease-in-out;
           }

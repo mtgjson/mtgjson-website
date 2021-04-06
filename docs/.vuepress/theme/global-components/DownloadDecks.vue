@@ -64,7 +64,7 @@ export default {
       defaultDecks: null,
       filteredDecks: null,
       searchKey: "",
-      showOptions: false,
+      showOptions: true,
       sortKey: "releaseDate:true",
       timeout: null,
       message: "Loading..."

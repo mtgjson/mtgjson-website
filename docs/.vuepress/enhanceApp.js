@@ -38,6 +38,7 @@ export default ({ Vue }) => {
     beforeSend(event, hint) {
       // Check if it is an exception, and if so, show the report dialog
       if (event.exception) {
+        // https://docs.sentry.io/platforms/javascript/enriching-events/user-feedback/
         Sentry.showReportDialog({ eventId: event.event_id });
       }
       return event;

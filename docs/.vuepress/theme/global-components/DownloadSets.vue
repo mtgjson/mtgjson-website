@@ -99,7 +99,7 @@ export default {
       filterKey: "",
       searchKey: "",
       spoilerKey: true,
-      showOptions: false,
+      showOptions: true,
       sortKey: "releaseDate:true",
       timeout: null,
       message: "Loading..."

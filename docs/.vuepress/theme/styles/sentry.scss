@@ -1,0 +1,75 @@
+.sentry-error-embed-wrapper {
+  .sentry-error-embed {
+    border-radius: 5px;
+
+    header {
+      h2 {
+        color: var(--dark-color);
+        font-family: var(--font-base);
+        text-transform: uppercase;
+        font-weight: bold;
+      }
+
+      p {
+        font-weight: bold;
+        color: var(--true-gray-color);
+      }
+    }
+
+    .form-content {
+      .message-success {
+        background-color: var(--green-color);
+        border: none;
+        font-weight: bold;
+        color: var(--dark-color);
+      }
+    }
+
+    .form-field {
+      label {
+        font-weight: bold;
+        font-size: 14px;
+      }
+
+      input {
+        border-radius: 5px;
+      }
+    }
+
+    .form-submit {
+      .btn,
+      .close {
+        display: inline-block;
+        vertical-align: center;
+        padding: 0.75rem 1rem;
+        border-radius: 5px;
+        background-color: var(--accent-color);
+        border: 1px solid var(--accent-color);
+        text-decoration: none;
+        transition: all 0.25s;
+        margin-right: 1rem;
+        margin-bottom: 1rem;
+        text-decoration: none !important;
+        color: var(--light-color);
+        font-size: 1rem;
+        font-weight: bold;
+        cursor: pointer;
+
+        &:hover {
+          background-color: var(--accent-color);
+        }
+      }
+
+      .close {
+        border: 1px solid var(--accent-color);
+        background-color: transparent;
+        color: var(--accent-color);
+
+        &:hover {
+          background-color: transparent;
+        }
+      }
+    }
+  }
+
+}

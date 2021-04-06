@@ -5,6 +5,7 @@
 @import './placeholders';
 @import './code';
 @import './pages';
+@import './sentry';
 
 html, body {
   min-width: 320px;
@@ -38,6 +39,11 @@ a {
   &.sidebar-link,
   &.sidebar-heading {
     text-decoration: none;
+  }
+
+  &.sidebar-link,
+  &.sidebar-heading {
+    display: inline;
   }
 
   &.header-anchor {
@@ -220,7 +226,7 @@ blockquote {
     content: "new";
     position: absolute;
     left: 115px;
-    top: 3px;
+    top: 0;
     padding: 0 5px;
     border-radius: 5px;
     font-size: 12px;
