@@ -172,7 +172,7 @@ export default {
     }
 
     &.services {
-      grid-template-columns: repeat(4, minmax(0, 1fr));
+      grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
     .supporter {

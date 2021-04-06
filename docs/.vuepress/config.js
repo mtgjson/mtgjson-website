@@ -216,7 +216,7 @@ module.exports = {
             path: '/changelog/mtggraphql/'
           },
           {
-            title: 'MTGJSON Docs',
+            title: 'Documentation',
             path: '/changelog/documentation/'
           }
         ]

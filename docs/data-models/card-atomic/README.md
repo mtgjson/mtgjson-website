@@ -59,7 +59,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i>optional</i>  
 
 > ### colorIdentity  
-> List of all the colors found in `manaCost`, `colorIndicator` and `text`.  
+> List of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
 > - **Type:** `array | array(string)`
 > - <ExampleField type='colorIdentity'/>

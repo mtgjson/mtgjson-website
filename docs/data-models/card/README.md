@@ -62,7 +62,7 @@ The Card data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### colorIdentity  
-> List of all the colors found in `manaCost`, `colorIndicator` and `text`.  
+> List of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
 > - **Type:** `array | array(string)`
 > - <ExampleField type='colorIdentity'/>

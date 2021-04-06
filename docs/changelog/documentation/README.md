@@ -31,6 +31,7 @@ Release Date 2021-03-07
 
 #### Updated
 - Updated some supporters logos to png format with more transparency
+- File models were moved to their category in the sidebar
 
 ## 2.2.0
 Release Date: 2021-02-10

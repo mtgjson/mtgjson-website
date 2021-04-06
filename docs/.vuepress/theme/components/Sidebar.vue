@@ -91,6 +91,7 @@ export default {
     margin-bottom: 1rem;
     border-bottom: 1px solid var(--bg-border-color);
     display: flex !important;
+    text-decoration: none;
 
     .logo-meta {
       &--logo {
