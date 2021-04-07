@@ -31,7 +31,7 @@ export default {
     let savedTheme = undefined;
 
     // Attempt to retrieve localStorage state
-    if(this.testStorage() === true){
+    if(this.$helpers.testStorage() === true){
       const savedTheme = window.localStorage.getItem("theme");
       if (savedTheme) {
         // Apply the state to the button
@@ -65,22 +65,11 @@ export default {
       // Add new favicon
       document.getElementsByTagName("head")[0].appendChild(link);
       // Store state in localStorage
-      if(this.testStorage() === true){
+      if(this.$helpers.testStorage() === true){
         window.localStorage.setItem("theme", newTheme);
       }
       this.$store.dispatch('SET_THEME_COLOR', newTheme);
       this.activeTheme = newTheme;
-    },
-    testStorage(){
-      var test = 'test';
-
-      try {
-        localStorage.setItem(test, test);
-        localStorage.removeItem(test);
-        return true;
-      } catch(e) {
-        return false;
-      }
     }
   }
 };

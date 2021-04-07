@@ -1,6 +1,6 @@
 {
   "name": "mtgjson-website",
-  "version": "2.2.0",
+  "version": "2.2.2",
   "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
@@ -19,6 +19,8 @@
     "generate-contributors": "node ./utils/generate-contributors.js",
     "optimize-images": "imagemin --plugin.webp.quality=80 docs/.vuepress/public/images/avatars --out-dir=docs/.vuepress/public/images/avatars",
     "bootstrap": "npm install -g imagemin-cli imagemin-webp",
+    "requirements-check": "babel-node check-version.js",
+    "postinstall": "npm run requirements-check",
     "commit": "cz"
   },
   "babel": {
@@ -39,6 +41,7 @@
     }
   },
   "dependencies": {
+    "@babel/node": "^7.13.13",
     "@sentry/browser": "^6.2.5",
     "@sentry/integrations": "^6.2.5",
     "@sentry/tracing": "^6.2.5",
@@ -46,6 +49,7 @@
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.1",
     "jquery": "^3.5.1",
+    "semver": "^6.3.0",
     "vuepress": "^1.8.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-feed": "^0.1.9",

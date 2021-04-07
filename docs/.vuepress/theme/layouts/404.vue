@@ -101,14 +101,7 @@ export default {
   mounted () {
     this.$router.afterEach(() => {
       this.isSidebarOpen = false
-    })
-
-    if (window && window.localStorage) {
-      const savedTheme = window.localStorage.getItem("theme");
-      if (savedTheme) {
-        this.themeColor = savedTheme
-      }
-    }
+    });
   },
 
   methods: {

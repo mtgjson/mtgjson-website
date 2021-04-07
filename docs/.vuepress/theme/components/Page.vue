@@ -33,7 +33,7 @@
 
 <script>
 import isNil from 'lodash/isNil'
-import { resolvePage, normalize, outboundRE, endingSlashRE } from "../util";
+import { resolvePage, outboundRE, endingSlashRE } from "../util";
 
 export default {
   props: ["sidebarItems"],

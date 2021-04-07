@@ -11,7 +11,7 @@ export const makeStore = ({ api }) => {
       DeckList: [],
       SetList: [],
       EnumValues: [],
-      ThemeColor: 'dark'
+      ThemeColor: 'light'
     },
     getters: {
       Meta: state => state.Meta,

@@ -1,26 +1,26 @@
 import sort from '../docs/.vuepress/src/scripts/sort';
 
 describe('sort', () => {
-  it('should return the same data if an empty filter is passed', async () => {
+  it('should return the same data if an empty filter is passed', () => {
     const filter = '';
     const data = [
       {
         type: 'creature'
       }
     ];
-    const sorted = await sort(filter, data);
+    const sorted = sort(filter, data);
 
     expect(sorted).toEqual(data);
   });
 
-  it('should return no data if the filter is not found', async () => {
+  it('should return no data if the filter is not found', () => {
     const filter = 'crater';
     const data = [
       {
         type: 'creature'
       }
     ];
-    const sorted = await sort(filter, data);
+    const sorted = sort(filter, data);
 
     expect(sorted).toEqual(data);
   });
@@ -54,7 +54,7 @@ describe('sort', () => {
     expect(sorted).toEqual(expected);
   });
 
-  it('should return sorted data if a filter by recent releaseDate is missing', async () => {
+  it('should return sorted data if a filter by recent releaseDate is missing', () => {
     const filter = 'releaseDate:true';
     const data = [
       {
@@ -78,14 +78,14 @@ describe('sort', () => {
         releaseDate: '1995-07-13'
       }
     ];
-    const sorted = await sort(filter, data);
+    const sorted = sort(filter, data);
 
     expect(sorted).toEqual(expected);
   });
 
 
 
-  it('should return sorted data if a filter by oldest releaseDate is missing', async () => {
+  it('should return sorted data if a filter by oldest releaseDate is missing', () => {
     const filter = 'releaseDate';
     const data = [
       {
@@ -109,12 +109,12 @@ describe('sort', () => {
         releaseDate: '2017-04-05'
       }
     ];
-    const sorted = await sort(filter, data);
+    const sorted = sort(filter, data);
 
     expect(sorted).toEqual(expected);
   });
 
-  it('should return sorted data if a filter by recent releaseData by ascending order is passed', async () => {
+  it('should return sorted data if a filter by recent releaseData by ascending order is passed', () => {
     const filter = 'releaseDate';
     const data = [
       {
@@ -138,7 +138,7 @@ describe('sort', () => {
         releaseDate: '2020-01-01'
       }
     ];
-    const sorted = await sort(filter, data);
+    const sorted = sort(filter, data);
 
     expect(sorted).toEqual(expected);
   });

@@ -20,8 +20,16 @@
 # MTGJSON Documentation Changelog
 The following is the MTGJSON Documentation/Website Changelog that provides updates to the website that are in part or separated from the MTGJSON Application. Some parts may be updated for clarity or corrections at any point.
 
+## 2.2.2
+Release Date: 2021-04-08
+
+## Misc
+
+### Updated
+- Updated PayPal icon
+
 ## 2.2.1
-Release Date 2021-03-07
+Release Date: 2021-04-07
 
 ### Misc
 

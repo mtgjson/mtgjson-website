@@ -68,4 +68,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation. Note that depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 
 > ### Why is the file I just downloaded out of date?
-> You have probably received a cached version of the file. Try hard refreshing the website (`CTRL + F5` on Windows, `Shift + Command + R` on Mac) and re-downloading to get the newest version.
+> You have probably received a cached version of the file. Try hard-refreshing the website (`CTRL + F5` on Windows, `Shift + Command + R` on Mac) and re-downloading to get the newest version.
+
+> ### Why is the website out of date or giving me errors?
+> You have probably received a cached version of the website or your browser is not supported. Updated to the latest version of your internet browser or try hard-refreshing the website (`CTRL + F5` on Windows, `Shift + Command + R` on Mac).

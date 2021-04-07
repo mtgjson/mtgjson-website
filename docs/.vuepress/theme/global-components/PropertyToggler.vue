@@ -2,6 +2,8 @@
 #property-toggler(v-if="noOptionals")
   label Hide optional properties
   input(type="checkbox", @click="toggleOptionals")
+  div.property-count
+    p {{ count }} properties found...
 </div>
 </template>
 
@@ -15,7 +17,7 @@ export default {
     return {
       blocks: null,
       toHideTitles: [],
-      tockLinks: [],
+      tocLinks: [],
       checked: false,
       optionals: true,
     };
@@ -24,6 +26,9 @@ export default {
     noOptionals() {
       return this.optionals;
     },
+    count() {
+      return this.tocLinks.length;
+    }
   },
   mounted() {
     const blocks = $("#property-toggler ~ blockquote:has(i)");
@@ -32,7 +37,7 @@ export default {
     this.blocks = Array.from(blocks);
     this.toHideTitles = [];
 
-    Array.from(blocks).forEach(block => {
+    this.blocks.forEach(block => {
       this.toHideTitles.push(block.children[0].id);
     })
 
@@ -67,3 +72,13 @@ export default {
   },
 };
 </script>
+
+<style lang="scss" scoped>
+.property-count {
+  margin-top: 1rem;
+
+  p {
+    font-weight: bold;
+  }
+}
+</style>
