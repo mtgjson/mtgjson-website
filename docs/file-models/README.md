@@ -45,7 +45,7 @@ For a full list of files, see [All Files](../downloads/all-files/) downloads pag
 > ### meta
 > Application metadata object. See the [Meta](/file-models/meta/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v5.0.0`  
 
 > ### data

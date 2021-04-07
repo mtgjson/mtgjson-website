@@ -1,67 +1,75 @@
 <template lang="pug">
 #property-toggler(v-if="noOptionals")
-  label Hide optional properties
-  input(type="checkbox", @click="toggleOptionals")
-  div.property-count
-    p {{ count }} properties found...
+  label(for="property-toggler-input") Include optional properties
+    span {{" "}}(Showing {{ count }}):
+  input(id="property-toggler-input", type="checkbox", @click="toggleOptionals", v-model="checked")
 </div>
 </template>
 
 <script>
 // Why jQuery?
-// We use it to backfill certain selecting logic that is just not available in CSS3
+// We use it to backfill certain selecting logic that is just not available in CSS
 import $ from "jquery";
 export default {
   name: "PropertyToggler",
   data() {
     return {
-      blocks: null,
-      toHideTitles: [],
-      tocLinks: [],
-      checked: false,
-      optionals: true,
+      hiddenAnchors: [],
+      allAnchors: [],
+      propertyBlocks: [],
+      hasOptionals: true,
+      checked: true,
     };
   },
   computed: {
     noOptionals() {
-      return this.optionals;
+      return this.hasOptionals;
     },
-    count() {
-      return this.tocLinks.length;
+    fullCount() {
+      return this.allAnchors.length;
+    },
+    hiddenCount() {
+      return this.hiddenAnchors.length === this.allAnchors.length
+        ? 0
+        : this.allAnchors.length - this.hiddenAnchors.length;
+    },
+    count(){
+      return this.checked ? this.fullCount : this.hiddenCount
     }
   },
   mounted() {
-    const blocks = $("#property-toggler ~ blockquote:has(i)");
+    const propertyBlocks = $("#property-toggler ~ blockquote:has(i)");
 
-    this.tocLinks = Array.from(document.querySelectorAll(".table-of-contents li a"));
-    this.blocks = Array.from(blocks);
-    this.toHideTitles = [];
+    this.allAnchors = Array.from(
+      document.querySelectorAll(".table-of-contents li a")
+    );
+    this.propertyBlocks = Array.from(propertyBlocks);
+    this.hiddenAnchors = [];
 
-    this.blocks.forEach(block => {
-      this.toHideTitles.push(block.children[0].id);
-    })
+    this.propertyBlocks.forEach((block) => {
+      this.hiddenAnchors.push(block.children[0].id);
+    });
 
-    if (this.blocks.length === 0) {
-      this.optionals = false;
+    if (this.propertyBlocks.length === 0) {
+      this.hasOptionals = false;
     }
   },
   methods: {
     toggleOptionals() {
-      this.checked = !this.checked;
-
       this.toggleBlockOptionals(this.checked);
       this.toggleTOCOptionals(this.checked);
     },
-    toggleBlockOptionals(doHide){
-      this.blocks.forEach(el => {
+    toggleBlockOptionals(doHide) {
+      this.isHidden = doHide;
+      this.propertyBlocks.forEach((el) => {
         el.hidden = doHide;
       });
     },
     toggleTOCOptionals(doHide) {
-      this.toHideTitles.forEach((title) => {
-        this.tocLinks.forEach((a, index) => {
+      this.hiddenAnchors.forEach((title) => {
+        this.allAnchors.forEach((a, index) => {
           const href = a.href.split("#")[1];
-          const tocLink = this.tocLinks[index].parentElement;
+          const tocLink = this.allAnchors[index].parentElement;
 
           if (href === title) {
             tocLink.hidden = doHide;
@@ -74,11 +82,12 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.property-count {
-  margin-top: 1rem;
+label {
+  font-weight: bold;
+  cursor: pointer;
 
-  p {
-    font-weight: bold;
+  span {
+    font-weight: normal;
   }
 }
 </style>

@@ -42,7 +42,7 @@ The Deck file model describes a complete deck reference.
 > ### commander
 > The card that is the Commander in this deck. See the [Card (Deck)](../../data-models/card-deck) data model.
 >
-> - **Type:** `object`
+> - **Type:** `object(props)`
 > - **Introduced:** `v5.1.0`  
 > - **Attributes:** <i>optional</i>
 

@@ -129,7 +129,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### identifiers  
 > List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v5.0.0`
 
 > ### isReserved  
@@ -156,14 +156,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### leadershipSkills  
 > List of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v4.5.1`  
 > - **Attributes:** <i>optional</i>  
 
 > ### legalities  
 > List of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i>optional</i>  
 
@@ -212,7 +212,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### purchaseUrls  
 > Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v4.4.0`
 
 > ### rulings  

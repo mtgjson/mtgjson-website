@@ -36,16 +36,19 @@ Files/Directories were omitted that do not help understand this current project 
     └── .vuepress # main source files for the application
         ├── config.js # main VuePress configuration
         ├── config.sidebar.js # function to render the sidebar
-        ├── enhanceApp.js # Attach configuration to Vue before build time
+        ├── enhanceApp.js # attach configuration to Vue before build time
         ├── store.js # Vuex store for Vue to pseudo-prefetch API data
         ├── public/ # available to the app home directory
         │   ├── **/* # all public files like the favicon and manifests
+        │   ├── favicons/ # all favicon images
         │   ├── images/ # all application images
         │   │   ├── assets/ # MTGJSON specific images
+        │   │   ├── avatars/ # user/supporters avatar images
         │   │   └── **/* # Any other image
         │   └── robots.txt # for the server
         ├── src # helper data and function
         │   ├── resources # any internal json
+        │   │   ├── contributors.json # contributors data from github
         │   │   └── supporters.json # powers the Supporters Vue component
         │   ├── schemas # powers certain Vue Documentation components, most of this is deprecated but saved for posterity
         │   │   └── *.schema.json # specific schema that match API data
@@ -66,7 +69,7 @@ Files/Directories were omitted that do not help understand this current project 
             │   └── Version.vue # Render the current Meta.json
             ├── layouts # What the application will render at a top level
             │   ├── 404.vue # 404 page
-            │   └── Layout.vue # Available route
+            │   └── Layout.vue # Main page
             └── styles/ # SCSS/Stylus
 ```
 

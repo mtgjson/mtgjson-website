@@ -49,7 +49,7 @@ The Set file model describes the properties and values of an individual set.
 > ### booster  
 > A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i>optional</i> 
 
@@ -187,7 +187,7 @@ The Set file model describes the properties and values of an individual set.
 > ### translations  
 > Translated set name by language. See the [Translations](/data-models/translations/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  

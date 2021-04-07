@@ -133,7 +133,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### identifiers  
 > List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
-> - **Type:** `object`  
+> - **Type:** `object(props)`  
 > - **Introduced:** `v5.0.0` 
 
 > ### isFullArt  

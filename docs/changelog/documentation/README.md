@@ -28,6 +28,9 @@ Release Date: 2021-04-08
 ### Updated
 - Updated PayPal icon
 
+### Changed
+- Changed jQuery dependency in favor of Sizzle for file size
+
 ## 2.2.1
 Release Date: 2021-04-07
 
