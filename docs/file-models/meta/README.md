@@ -23,7 +23,7 @@
 The Meta file model describes application build date and version number.
 
 **Parent file:** [Meta](/downloads/all-files/#meta)  
-**Parent property:** `data`, `meta`  
+**Parent property:** `meta`  
 
 #### Model Index
 
