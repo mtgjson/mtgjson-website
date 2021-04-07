@@ -37,7 +37,8 @@
   },
   "husky": {
     "hooks": {
-      "prepare-commit-msg": "npm run test:full && exec < /dev/tty && git cz --hook || true"
+      "pre-commit": "npm run test:full",
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
     }
   },
   "dependencies": {
