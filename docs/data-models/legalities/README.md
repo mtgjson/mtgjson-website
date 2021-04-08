@@ -20,7 +20,7 @@
 
 # Legalities
 
-The Legalities data model describes a list of play formats that are legal for a specific card.
+The Legalities data model describes a list of legalities in  play formats for a specific card.
 
 **Parent model:** [Card](../card/), [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/)  
 **Parent property:** `legalities`

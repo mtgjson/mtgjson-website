@@ -19,7 +19,6 @@ export const makeStore = ({ api }) => {
       SetList: state => state.SetList,
       EnumValues: state => state.EnumValues,
       ThemeColor: state => state.ThemeColor
-
     },
     actions: {
       FETCH_DATA: async ({ commit }, fileName) => {
