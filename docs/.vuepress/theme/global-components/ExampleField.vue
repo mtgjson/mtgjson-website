@@ -1,10 +1,10 @@
 <template lang="pug">
   .example-field(v-if="enums.length > 0" :class="{'showing': showAll}")
     strong Examples:{{' '}}
-    code(v-if="!showAll") {{ shortenEnums(enums) }}
+    code(v-if="!showAll") {{ enums.slice(0, 5).toString().split(',').join(', ') }}
       div.show-btn(v-if="enums.length > 5") ,{{' '}}
         span(@click="toggleShowAll") Show&nbsp;More
-    code(v-if="showAll && enums.length > 5") {{ elongateEnums(enums) }},{{' '}}
+    code(v-if="showAll && enums.length > 5") {{ enums.toString().split(',').join(', ') }},{{' '}}
       div.show-btn
         span(@click="toggleShowAll") Show&nbsp;Less
 </template>
@@ -45,12 +45,6 @@ export default {
   methods: {
     toggleShowAll(){
       this.show = !this.show;
-    },
-    shortenEnums(enums){
-      return enums.sort().slice(0, 5).toString().split(',').join(', ')
-    },
-    elongateEnums(enums){
-      return enums.sort().toString().split(',').join(', ');
     }
   }
 };
