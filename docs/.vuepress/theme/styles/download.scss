@@ -3,6 +3,14 @@
 .download-tables {
   position: relative;
 
+  .results-message {
+    line-height: 1.2rem;
+
+    &.error {
+      color: var(--red-color);
+    }
+  }
+
   .sorting-options {
     position: sticky;
     background-color: var(--bg-dark-color);

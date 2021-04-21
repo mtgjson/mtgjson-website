@@ -32,8 +32,7 @@
               option(value="type") Type (Ascending)
               option(value="type:true") Type (Descending)
 
-      strong(v-if="decks.length < 1") {{ message }}
-      strong(v-else) {{ decks.length }} results found...
+      strong.results-message(v-bind:class="{error: hasError}" v-html="message")
       blockquote(v-for="(deck, key) in decks" :key="key")
         .download-wrap
           .img-wrap
@@ -61,8 +60,9 @@ export default {
   components: { DownloadField },
   data() {
     return {
-      defaultDecks: null,
-      filteredDecks: null,
+      defaultDecks: [],
+      filteredDecks: [],
+      hasError: false,
       searchKey: "",
       showOptions: true,
       sortKey: "releaseDate:true",
@@ -79,7 +79,14 @@ export default {
     await this.$helpers.setStoreState.apply(this, ["DeckList"]);
 
     this.defaultDecks = await this.$store.getters.DeckList;
-    this.filteredDecks = await this.$helpers.sort("releaseDate:true", this.defaultDecks);
+
+    if(this.defaultDecks.length === 0){
+      this.hasError = true;
+      this.message = `There was a problem loading this data from our API. Please let a MTGJSON developer know by contacting us through our Discord <a href="https://mtgjson.com/discord">here</a>.`
+    } else {
+      this.filteredDecks = await this.$helpers.sort("releaseDate:true", this.defaultDecks);
+      this.handleMessage(this.defaultDecks.length);
+    }
   },
   methods: {
     handleMessage(length = 0) {

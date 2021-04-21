@@ -20,7 +20,7 @@
 
 # Foreign Data
 
-The Foreign Data data model describes a list of properties for a [Card](../card/) data model in alternate languages.
+The Foreign Data data model describes a list of properties for various card data models in alternate languages.
 
 **Parent model:** [Card](../card/), [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/)  
 **Parent property:** `foreignData`

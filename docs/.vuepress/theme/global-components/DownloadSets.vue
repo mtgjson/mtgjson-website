@@ -50,8 +50,7 @@
               v-model="spoilerKey"
               @input="onHandleChange")
 
-      strong(v-if="sets.length < 1") {{ message }}
-      strong(v-else) {{ sets.length }} results found...
+      strong.results-message(v-bind:class="{error: hasError}" v-html="message")
       blockquote(v-for="(set, key) in sets" :key="key")
         .download-wrap
           .img-wrap
@@ -93,8 +92,9 @@ export default {
   components: { DownloadField },
   data() {
     return {
-      defaultSets: null,
-      dynamicSets: null,
+      defaultSets: [],
+      dynamicSets: [],
+      hasError: false,
       filters: null,
       filterKey: "",
       searchKey: "",
@@ -114,8 +114,16 @@ export default {
     await this.$helpers.setStoreState.apply(this, ["SetList"]);
 
     this.defaultSets = await this.$store.getters.SetList;
-    this.dynamicSets = await this.$helpers.sort("releaseDate:true", this.defaultSets);
-    this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
+
+    if(this.defaultSets.length === 0){
+      this.hasError = true;
+      this.message = `There was a problem loading this data from our API. Please let a MTGJSON developer know by contacting us through our Discord <a href="https://mtgjson.com/discord">here</a>.`
+    } else {
+      this.dynamicSets = await this.$helpers.sort("releaseDate:true", this.defaultSets);
+      this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
+      this.handleMessage(this.defaultSets.length);
+    }
+
   },
   methods: {
     handleMessage(length = 0) {

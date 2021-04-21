@@ -11,6 +11,7 @@ export const makeStore = ({ api }) => {
       DeckList: [],
       SetList: [],
       EnumValues: [],
+      Noop: [],
       ThemeColor: 'light'
     },
     getters: {
@@ -18,6 +19,7 @@ export const makeStore = ({ api }) => {
       DeckList: state => state.DeckList,
       SetList: state => state.SetList,
       EnumValues: state => state.EnumValues,
+      Noop: state => state.Noop,
       ThemeColor: state => state.ThemeColor
     },
     actions: {
@@ -28,7 +30,7 @@ export const makeStore = ({ api }) => {
 
           commit('SET_DATA', [fileName, data]);
         } catch (err) {
-          commit('SET_DATA', [fileName, {}]);
+          console.error(`store.js // Failed to fetch data for ${fileName}.`);
         }
       },
       SET_THEME_COLOR: ({commit}, themeColor) => {

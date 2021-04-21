@@ -290,7 +290,7 @@
     },
     {
       "name": "MTG Korean",
-      "image": "avatar-mtg-korean.jpg",
+      "image": "avatar-mtg-korean.png",
       "link": "http://mtg-kr.com"
     },
     {
@@ -301,7 +301,7 @@
     {
       "name": "MTG Discover",
       "image": "avatar-mtgdiscover.png",
-      "link": "https://apps.apple.com/us/app/mtg-random/id1534340485"
+      "link": "https://apps.apple.com/us/app/mtg-discover/id1534340485"
     },
     {
       "name": "MTG Search",
@@ -370,7 +370,7 @@
     },
     {
       "name": "Scryfall",
-      "image": "avatar-scryfall.png",
+      "image": "avatar-scryfall.svg",
       "link": "https://scryfall.com"
     },
     {
