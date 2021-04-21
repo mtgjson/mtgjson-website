@@ -44,7 +44,7 @@ The Deck file model describes a complete deck reference.
 >
 > - **Type:** `object(props)`
 > - **Introduced:** `v5.1.0`  
-> - **Attributes:** <i>optional</i>
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### fileName
 > File name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  

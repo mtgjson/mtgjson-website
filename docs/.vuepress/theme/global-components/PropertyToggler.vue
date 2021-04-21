@@ -38,7 +38,7 @@ export default {
     }
   },
   mounted() {
-    const propertyBlocks = $("#property-toggler ~ blockquote:has(i)");
+    const propertyBlocks = $("#property-toggler ~ blockquote:has(i.optional)");
 
     this.allAnchors = Array.from(
       document.querySelectorAll(".table-of-contents li a")

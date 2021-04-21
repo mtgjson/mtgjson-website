@@ -39,14 +39,14 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### asciiName  
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### availability  
 > List of the card's available printing types.  
@@ -88,21 +88,21 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.5.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceName  
 > Name on the face of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### flavorText  
 > Italicized text found below the rules text that has no game function.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### frameEffects  
 > The visual frame effect.  
@@ -141,35 +141,35 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### isOnlineOnly  
 > If the card is only available in [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.1`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### isPromo  
 > If the card is promotional.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### isReprint  
 > If the card has been reprinted.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### keywords  
 > All keywords found on a card.  
 >
 > - **Type:** `array(string)`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### layout  
 > Type of card layout. For a token card, this will be `"token"`.  
@@ -183,13 +183,13 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### name  
 > Names of each face on the card. Cards with multiple faces, like "Split" and "Meld" cards are given a delimiter.
 >
 > - **Type:** `string`
-> - **Example:** `Wear // Tear`
+> - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
 > ### number  
@@ -203,7 +203,7 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### promoTypes  
 > List of promotional types for a card.  
@@ -211,7 +211,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `array(string)`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### reverseRelated
 > The names of the cards that produce this card.  
@@ -231,7 +231,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### subtypes  
 > List of card subtypes found after em-dash.  
@@ -252,14 +252,14 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### toughness  
 > Toughness of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### type  
 > Type of the card as visible, including any supertypes and subtypes.  
@@ -286,5 +286,5 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>
+> - **Attributes:** <i class="optional">optional</i>
 

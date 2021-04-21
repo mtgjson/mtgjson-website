@@ -56,7 +56,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### colorIdentity  
 > List of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
@@ -90,21 +90,21 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.5.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceConvertedManaCost  
 > The converted mana cost of the face of either half or part of the card.  
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceName  
 > Name on the face of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
@@ -117,14 +117,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### hasAlternativeDeckLimit
 > If the card allows a value other than 4 copies in a deck.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### identifiers  
 > List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
@@ -137,14 +137,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.1`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### keywords  
 > All keywords found on a card.  
 >
 > - **Type:** `array(string)`  
 > - **Introduced:** `v5.1.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### layout  
 > Type of card layout. For a token card, this will be `"token"`.  
@@ -158,41 +158,41 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `object(props)`  
 > - **Introduced:** `v4.5.1`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### legalities  
 > List of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
 >
 > - **Type:** `object(props)`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### life  
 > Starting life total modifier. A plus or minus character precedes an integer. Used only on Vanguard cards.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### loyalty  
 > Planeswalker loyalty value.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### manaCost  
 > Mana cost of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### name  
 > Names of each face on the card. Cards with multiple faces, like "Split" and "Meld" cards are given a delimiter. 
 >
 > - **Type:** `string`
-> - **Example:** `Wear // Tear`
+> - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
 > ### power  
@@ -200,14 +200,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### printings  
 > List of sets the card was printed in, formatted in uppercase.  
 >
 > - **Type:** `array(string)`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### purchaseUrls  
 > Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
@@ -227,7 +227,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### subtypes  
 > List of card subtypes found after em-dash.  
@@ -248,14 +248,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### toughness  
 > Toughness of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i>optional</i>  
+> - **Attributes:** <i class="optional">optional</i>  
 
 > ### type  
 > Type of the card as visible, including any supertypes and subtypes.  
