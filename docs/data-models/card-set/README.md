@@ -1,6 +1,6 @@
 ---
 {
-  "title": "Card",
+  "title": "Card (Set)",
   "schema": "card",
   "meta": [
     {
@@ -18,9 +18,9 @@
 }
 ---
 
-# Card
+# Card (Set)
 
-The Card data model describes the properties of a single card.
+The Card (Set) data model describes the properties of a single card.
 
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `cards`
@@ -164,14 +164,14 @@ The Card data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### hasAlternativeDeckLimit  
-> If the card allows a value other than 4 copies in a deck  
+> If the card allows a value other than 4 copies in a deck.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### hasNonFoil  
-> If the card can be found in non-foil  
+> If the card can be found in non-foil.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
@@ -288,7 +288,7 @@ The Card data model describes the properties of a single card.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### life  
-> Starting life total modifier. A plus or minus character precedes an integer. Used only on Vanguard cards.  
+> Starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types). 
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
@@ -438,7 +438,7 @@ The Card data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### types  
-> List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
+> List of all card types of the card, including Un-sets and gameplay variants.  
 >
 > - **Type:** `array(string)`
 > - <ExampleField type='types'/>

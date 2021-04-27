@@ -24,7 +24,9 @@
         li
           router-link(to="/abstract-models/all-prices") All Prices
         li
-          router-link(to="/data-models/card") Card Model
+          router-link(to="/data-models/card-set") Card (Set) Model
+        li
+          router-link(to="/file-models/card-atomic") Card (Atomic) Model
         li
           router-link(to="/file-models/set") Set Model
       .error-image-wrapper

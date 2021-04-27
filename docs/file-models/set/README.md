@@ -54,7 +54,7 @@ The Set file model describes the properties and values of an individual set.
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### cards  
-> List of cards in this set. See the [Card](/data-models/card/) data model.  
+> List of cards in this set. See the [Card (Set)](../card-set/) data model.  
 >
 > - **Type:** `array(object)`  
 > - **Introduced:** `v4.0.0`

@@ -157,6 +157,7 @@ blockquote {
   }
 }
 
+// Table of contents
 .table-of-contents {
   ul {
     display: grid;
@@ -169,6 +170,7 @@ blockquote {
   }
 }
 
+// Custom small header
 .small-header {
   display: block;
   font-weight: .5rem;
@@ -176,6 +178,7 @@ blockquote {
   font-weight: bold;
 }
 
+// Call to action buttons
 .cta-btn {
   display: inline-block;
   vertical-align: center;
@@ -194,6 +197,106 @@ blockquote {
   cursor: pointer;
 }
 
+// Images for links
+.link {
+  &-inline-image {
+    padding-left: 20px;
+    margin-left: 5px;
+    background-size: 17px 17px;
+    background-position: left center;
+    background-repeat: no-repeat;
+
+    &.paypal {
+      background-image: url('/images/icon-paypal.svg');
+    }
+
+    &.patreon {
+      background-image: url('/images/icon-patreon.svg');
+    }
+
+    &.github {
+      background-image: url('/images/icon-github.svg');
+    }
+  }
+}
+
+// Content wrapper
+.content__default {
+  @extend %wrapper;
+  padding: 0 4rem;
+  height: 100%;
+
+  & > * {
+    max-width: var(--content-width);
+  }
+
+  & > *:first-child {
+    margin-top: 0;
+    padding-top: 0;
+  }
+}
+
+// Sidebar overrides
+.sidebar-group-items, .sidebar-sub-headers {
+  .sidebar-link {
+    font-size: 16px;
+    font-weight: normal;
+
+    &.active {
+      position: relative;
+      color: var(--accent-color);
+    }
+  }
+
+  .sidebar-sub-headers {
+    &:empty {
+      display: none;
+    }
+  }
+}
+.sidebar-link[href="/mtggraphql/"] {
+  position: relative;
+
+  &::after {
+    content: "new";
+    position: absolute;
+    left: 115px;
+    top: 0;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    background-color: var(--yellow-color);
+    font-family: var(--font-monospace);
+    color: var(--dark-color);
+  }
+}
+
+// Accent color class
+.accent {
+  color: var(--accent-color);
+}
+
+// Spoiler attribute tag
+.spoiler {
+  font-family: var(--font-monospace);
+  font-size: 12px;
+  background-color: var(--yellow-color);
+  color: var(--dark-color);
+  border-radius: 5px;
+  padding: 5px 10px;
+  margin: 0;
+  word-break: break-word;
+  font-weight: bold;
+  margin-right: 5px;
+}
+
+// Back to top button
+.go-to-top {
+  color: var(--accent-color) !important;
+  right: 1rem !important;
+}
+
+// Search
 .search-box {
   margin-right: 0;
   display: initial;
@@ -217,149 +320,19 @@ blockquote {
       border-color: var(--search-border-highlight-color);
     }
   }
-}
 
-.sidebar-link[href="/mtggraphql/"] {
-  position: relative;
+  .suggestions {
+    z-index: 999;
 
-  &::after {
-    content: "new";
-    position: absolute;
-    left: 115px;
-    top: 0;
-    padding: 0 5px;
-    border-radius: 5px;
-    font-size: 12px;
-    background-color: var(--yellow-color);
-    font-family: var(--font-monospace);
-    color: var(--dark-color);
-  }
-}
-
-.link {
-  &-inline-image {
-    padding-left: 20px;
-    margin-left: 5px;
-    background-size: 17px 17px;
-    background-position: left center;
-    background-repeat: no-repeat;
-
-    &.paypal {
-      background-image: url('/images/icon-paypal.svg');
-    }
-
-    &.patreon {
-      background-image: url('/images/icon-patreon.svg');
-    }
-
-    &.github {
-      background-image: url('/images/icon-github.svg');
+    li {
+      a {
+        text-decoration: none !important;
+      }
     }
   }
 }
 
-.content__default {
-  @extend %wrapper;
-  padding: 0 4rem;
-  height: 100%;
-
-  & > * {
-    max-width: var(--content-width);
-  }
-
-  & > *:first-child {
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
-
-.sidebar-group-items, .sidebar-sub-headers {
-  .sidebar-link {
-    font-size: 16px;
-    font-weight: normal;
-
-    &.active {
-      position: relative;
-      color: var(--accent-color);
-    }
-  }
-
-  .sidebar-sub-headers {
-    &:empty {
-      display: none;
-    }
-  }
-}
-
-.accent {
-  color: var(--accent-color);
-}
-
-.spoiler {
-  font-family: var(--font-monospace);
-  font-size: 12px;
-  background-color: var(--yellow-color);
-  color: var(--dark-color);
-  border-radius: 5px;
-  padding: 5px 10px;
-  margin: 0;
-  word-break: break-word;
-  font-weight: bold;
-  margin-right: 5px;
-}
-
-// .attribute {
-//   border-radius: 5px;
-//   margin-right: 5px;
-//   font-size: 12px;
-//   padding: 3px 5px;
-//   cursor: help;
-//   position: relative;
-//   display: inline-block;
-//   text-transform: capitalize;
-//   overflow: hidden;
-//   z-index: 2;
-//   color: var(--attribute-standard-color);
-//   background-color: var(--bg-dark-color);
-//   font-weight: bold;
-
-//   &::before {
-//     content: '';
-//     width: 100%;
-//     height: 100%;
-//     position: absolute;
-//     left: 0;
-//     right: 0;
-//     top: 0;
-//     bottom: 0;
-//     z-index: -1;
-//   }
-
-//   &.optional,
-//   &.decks {
-//     color: var(--dark-color);
-
-//     &::before {
-//       background-color: var(--spoiler-color);
-//     }
-//   }
-
-//   &.deprecated {
-//     &::before {
-//       background-color: var(--red-color);
-//     }
-//   }
-// }
-
-.go-to-top {
-  color: var(--accent-color) !important;
-  right: 1rem !important;
-}
-
-.suggestions {
-  z-index: 999;
-}
-
+// Loading spinner
 .loader {
   display: inline-block;
   width: 80px;
@@ -385,7 +358,7 @@ blockquote {
   }
 }
 
-
+// Media query for mobile
 @media (max-width: 719px) {
   .content__default,
   .page-nav,
@@ -393,6 +366,7 @@ blockquote {
     padding-left: 2rem;
     padding-right: 2rem;
   }
+
   .desktop-hide {
     display: block !important;
   }

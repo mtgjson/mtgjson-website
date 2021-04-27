@@ -22,7 +22,6 @@
 
 The Card (Token) data model describes the properties and values of a single card token.
 
-**Parent file:** [All Decks](/downloads/all-decks/)  
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `tokens`
 
@@ -268,7 +267,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v4.0.0`
 
 > ### types  
-> List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
+> List of all card types of the card, including Un-sets and gameplay variants.
 >
 > - **Type:** `array(string)`
 > - <ExampleField type='types'/>

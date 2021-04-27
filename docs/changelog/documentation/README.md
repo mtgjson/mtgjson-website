@@ -20,12 +20,21 @@
 # MTGJSON Documentation Changelog
 The following is the MTGJSON Documentation/Website Changelog that provides updates to the website that are in part or separated from the MTGJSON Application. Some parts may be updated for clarity or corrections at any point.
 
+## 2.2.3
+Release Date: 2021-04-27
+
+### Misc
+
+#### Updated
+- Updated `Card` to be `Card (Set)` for clearer documentation purposes
+- Documentation linking between data/file models is now more clear
+
 ## 2.2.2
 Release Date: 2021-04-09
 
-## Misc
+### Misc
 
-### Updated
+#### Updated
 - Updated PayPal icon
 - Updated misc grammar in documentation
 

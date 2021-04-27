@@ -20,7 +20,7 @@
 
 # Card (Atomic)
 
-The Card (Atomic) data model describes the a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
+The Card (Atomic) file model describes the a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
 
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
@@ -34,7 +34,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 {
   "data": {
     "Dark Ritual": [
-      <Card Model>
+      <Card (Atomic) Model>
     ],
     ... // More cards
   },
@@ -168,7 +168,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### life  
-> Starting life total modifier. A plus or minus character precedes an integer. Used only on Vanguard cards.  
+> Starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types). 
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
@@ -264,7 +264,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Introduced:** `v4.0.0`
 
 > ### types  
-> List of all card types of the card, including Un-sets and gameplay variants. See [Card Types](/data-models/card-types/) for reference.  
+> List of all card types of the card, including Un-sets and gameplay variants.
 >
 > - **Type:** `array(string)`
 > - <ExampleField type='types'/>

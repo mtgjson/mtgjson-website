@@ -22,7 +22,7 @@
 
 The Purchase Urls data model describes mtgjson.com URL paths to purchase a product from a marketplace.
   
-**Parent model:** [Card](../card/), [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/)  
+**Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
 **Parent property:** `purchaseUrls`
 
 #### Model Index
