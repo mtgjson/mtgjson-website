@@ -20,7 +20,7 @@ The All Identifiers data model describes a list of all cards organized by UUID u
 **Parent file:** [AllIdentifiers](/downloads/all-files/#allidentifiers)  
 **Parent property:** `data`
 
-#### File Structure Overview
+## File Structure Overview
 
 ```json
 {
@@ -28,7 +28,7 @@ The All Identifiers data model describes a list of all cards organized by UUID u
 }
 ```
 
-#### Example Model
+## Example Model
 
 ```json
 {

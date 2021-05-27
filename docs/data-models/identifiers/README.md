@@ -25,13 +25,13 @@ The Identifiers data model describes a list of identifiers associated to a card.
 **Parent model:** [Card (Deck)](../card-deck/), [Card (Set)](../card-set/), [Card (Token)](../card-token/)  
 **Parent property:** `identifiers`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### cardKingdomFoilId  
 > The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) card foil identifier.  

@@ -25,13 +25,13 @@ The DeckList file model describes a metadata-like structure that holds top-level
 **Parent file:** [DeckList](/downloads/all-files/#decklist)  
 **Parent property:** `data`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### code
 > Set code for the deck.

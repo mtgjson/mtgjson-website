@@ -25,13 +25,13 @@ The Foreign Data data model describes a list of properties for various card data
 **Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
 **Parent property:** `foreignData`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### faceName  
 > Name on the face of the card.  

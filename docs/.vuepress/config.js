@@ -135,6 +135,11 @@ module.exports = {
       .end();
     // End custom SVG importing
   },
+  markdown: {
+    toc: {
+      includeLevel: [ 3 ] // Table only H3
+    },
+  },
   // Vuepress Themeing
   themeConfig: {
     // Algolia SEO

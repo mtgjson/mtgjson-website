@@ -25,13 +25,13 @@ The Card (Token) data model describes the properties and values of a single card
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `tokens`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### artist  
 > Name of the artist that illustrated the card art.  

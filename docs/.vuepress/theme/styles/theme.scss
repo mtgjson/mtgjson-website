@@ -102,6 +102,10 @@ img {
 blockquote {
   @extend %blockquote;
 
+  &:first-of-type {
+    margin-top: 0;
+  }
+
   &::before,
   &::after {
     content: '';

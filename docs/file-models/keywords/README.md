@@ -25,13 +25,13 @@ The Keywords file model describes a list of all keywords used on Magic: The Gath
 **Parent file:** [Keywords](/downloads/all-files/#keywords)   
 **Parent property:** `data`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### abilityWords
 > List of ability words found in rules text on cards.

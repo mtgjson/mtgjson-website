@@ -23,7 +23,7 @@ The TCGplayer SKUs data model describes [TCGplayer](https://www.tcgplayer.com/?p
 **Parent file:** [TCGplayer SKUs](/downloads/all-files/#tcgplayerskus)  
 **Parent property:** `data`
 
-#### File Structure Overview
+## File Structure Overview
 
 ```json
 {
@@ -41,7 +41,7 @@ The TCGplayer SKUs data model describes [TCGplayer](https://www.tcgplayer.com/?p
 }
 ```
 
-#### Example Model
+## Example Model
 
 ```json
 {

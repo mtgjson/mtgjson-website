@@ -25,13 +25,13 @@ The Card Types file model describes top-level card types and the associated card
 **Parent file:** [Card Types](/downloads/all-files/#cardtypes)   
 **Parent property:** `data`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### artifact  
 > All possible subtypes and supertypes for Artifact cards. See the [Types](/data-models/types/) data model.  

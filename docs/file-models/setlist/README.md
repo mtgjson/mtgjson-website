@@ -25,13 +25,13 @@ The SetList file model describes a metadata-like structure that holds top-level 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### baseSetSize  
 > Number of cards in the set. Will default to `totalSetSize` if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
