@@ -23,14 +23,14 @@ The All Prices data model describes a list of card prices based on card UUID.
 **Parent file:** [AllPrices](/downloads/all-files/#allprices)  
 **Parent property:** `data`
 
-#### Price Providers
+## Price Providers
 
 MTGJSON currently has affiliated with the following markets to keep a history of price data. The following examples are formatted for the data model:
 
 - paper: [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
 - mtgo: [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
-#### File Structure Overview
+## File Structure Overview
 
 ```json
 {
@@ -62,7 +62,7 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 }
 ```
 
-#### Example Model
+## Example Model
 
 ```json
 {

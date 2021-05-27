@@ -25,13 +25,13 @@ The Legalities data model describes a list of legalities in  play formats for a 
 **Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
 **Parent property:** `legalities`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 ::: warning
 Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example of a returned data model.

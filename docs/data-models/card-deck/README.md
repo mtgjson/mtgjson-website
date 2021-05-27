@@ -25,13 +25,13 @@ The Card (Deck) data model describes the properties and values of a single card.
 **Parent model:** [Deck](/file-models/deck/)  
 **Parent property:** `commander`, `mainBoard`, `sideBoard`  
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### artist  
 > Name of the artist that illustrated the card art.  

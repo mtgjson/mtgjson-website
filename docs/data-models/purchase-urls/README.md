@@ -25,13 +25,13 @@ The Purchase Urls data model describes mtgjson.com URL paths to purchase a produ
 **Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
 **Parent property:** `purchaseUrls`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### cardKingdom  
 > URL to purchase a product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  

@@ -23,7 +23,7 @@ The Booster data model describes a object-based breakdown of how a [Set](/file-m
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `booster`
 
-#### File Structure Overview
+## File Structure Overview
 
 ```json
 {
@@ -59,7 +59,7 @@ The Booster data model describes a object-based breakdown of how a [Set](/file-m
 }
 ```
 
-#### Example Model
+## Example Model
 
 ```json
 {

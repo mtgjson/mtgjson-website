@@ -43,13 +43,13 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 ```
 :::
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### asciiName  
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.  

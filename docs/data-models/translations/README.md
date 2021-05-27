@@ -25,13 +25,13 @@ The Translations data model describes the translated data per language as a key.
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `translations`  
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### Ancient Greek  
 > Translation in Ancient Greek.  

@@ -25,13 +25,13 @@ The Card (Set) data model describes the properties of a single card.
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `cards`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### artist
 > Name of the artist that illustrated the card art.  

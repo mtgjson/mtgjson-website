@@ -25,13 +25,13 @@ The Deck file model describes a complete deck reference.
 **Parent file:** [All Decks](../../downloads/all-decks/)  
 **Parent property:** `data`
 
-#### Model Index
+## Model Index
 
 <PropertyToggler/>
 
 [[toc]]
 
-#### Model Properties
+## Model Properties
 
 > ### code
 > Set code for the deck.

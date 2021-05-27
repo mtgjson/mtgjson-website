@@ -23,7 +23,7 @@ The Enum Values data model describes a list of key value pairs that are direct p
 **Parent file:** [EnumValues](/downloads/all-files/#enumvalues)  
 **Parent property:** `data`
 
-#### File Structure Overview
+## File Structure Overview
 
 ```json
 {
@@ -38,7 +38,7 @@ The Enum Values data model describes a list of key value pairs that are direct p
 }
 ```
 
-#### Example Model
+## Example Model
 
 ```json
 {

@@ -21,11 +21,11 @@
 
 All outputted files to download provided by MTGJSON.
 
-#### Downloads Index
+## Downloads Index
 
 [[toc]]
 
-#### All Downloads
+## All Downloads
 
 > ### AllPrintings
 > File containing all cards, including all printings and variations, categorized by set.  SQL/SQLite downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).  

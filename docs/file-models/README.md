@@ -36,11 +36,11 @@ The "Web API" or more commonly known as "files" that MTGJSON.com provides varies
 For a full list of files, see [All Files](../downloads/all-files/) downloads page.
 :::
 
-#### File Model Index
+## File Model Index
 
 [[toc]]
 
-#### File Model Properties
+## File Model Properties
 
 > ### meta
 > Application metadata object. See the [Meta](/file-models/meta/) data model.  
