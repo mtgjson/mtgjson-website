@@ -6,7 +6,7 @@
         li(v-for="(contributor, key) in contributors" :key="key")
           div
             a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
-              img(:src="contributor.avatar")
+              img(class="lazy" :data-src="contributor.avatar" :alt="`Avatar for ${contributor.username}`" :title="`Avatar for ${contributor.username}`")
     h2 Supporters
     .supporters-wrap(v-if="patrons")
       h3 Our Patreon Supporters
@@ -17,7 +17,7 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
+                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`")
             .img-wrap.no-image(v-else)
               .img-wrap--container
                 p {{name.substring(0, 1)}}
@@ -37,7 +37,7 @@
           .supporter-link
             .img-wrap(v-if="image")
               .img-wrap--container
-                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="link" :title="name")
+                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`")
             .img-wrap.no-image(v-else)
               .img-wrap--container
                 p {{name.substring(0, 1)}}
