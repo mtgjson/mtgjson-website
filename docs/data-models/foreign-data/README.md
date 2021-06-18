@@ -38,6 +38,7 @@ The Foreign Data data model describes a list of properties for various card data
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### flavorText  
 > Flavor text in foreign language.  

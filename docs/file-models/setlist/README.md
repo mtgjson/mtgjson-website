@@ -152,6 +152,13 @@ The SetList file model describes a metadata-like structure that holds top-level 
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
+> ### sealedProduct
+> Sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
+>
+> - **Type:** `object(props)`
+> - **Introduced:** `v5.1.0`
+> - **Attributes:** <i class="optional">optional</i>
+
 > ### tcgplayerGroupId  
 > Group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
 >

@@ -68,9 +68,10 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array(string)`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
@@ -163,9 +164,8 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > ### legalities  
 > List of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
 >
-> - **Type:** `object(props)`  
-> - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Type:** `object | object(props)`  
+> - **Introduced:** `v4.0.0` 
 
 > ### life  
 > Starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types). 
