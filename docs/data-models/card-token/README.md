@@ -71,9 +71,10 @@ The Card (Token) data model describes the properties and values of a single card
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array(string)`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
