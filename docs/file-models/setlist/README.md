@@ -155,7 +155,7 @@ The SetList file model describes a metadata-like structure that holds top-level 
 > ### sealedProduct
 > Sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
 >
-> - **Type:** `object(props)`
+> - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
 > - **Attributes:** <i class="optional">optional</i>
 
@@ -175,7 +175,7 @@ The SetList file model describes a metadata-like structure that holds top-level 
 > ### translations  
 > Translated set name by language. See the [Translations](/data-models/translations/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  

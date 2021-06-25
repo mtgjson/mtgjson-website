@@ -45,11 +45,11 @@ For a full list of files, see [All Files](../downloads/all-files/) downloads pag
 > ### meta
 > Application metadata object. See the [Meta](/file-models/meta/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`  
 
 > ### data
 > Top-level key that holds the "Web API" data. The returned data is based on the file.
 >
-> - **Type:** `object | array(object)`  
+> - **Type:** `object{props} | array[object]`  
 > - **Introduced:** `v5.0.0`  

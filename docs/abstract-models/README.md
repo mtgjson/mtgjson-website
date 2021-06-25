@@ -26,14 +26,14 @@ For example, any <strong>Abstract Model</strong> would look similar to this:
 ```json
 "<Some Property Key>": {
   "<A Nested Property Key": {
-    "<A Second Nested Key>": "<String, Boolean, Array, Enum Array>"
+    "<A Second Nested Key>": "<Value>"
   },
   "<Some Other Nested Property Key>": {
     "<A Second Nested Key>": {
-      "<A Third Nested Key>": "<String, Boolean, Array, Enum Array>"
+      "<A Third Nested Key>": "<Value>"
     }
   },
-  "<A Third Property Key": "<String, Boolean, Array, Enum Array>"
+  "<A Third Property Key": "<Value>"
   ...
 }
 ```

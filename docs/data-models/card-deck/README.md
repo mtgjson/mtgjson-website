@@ -50,7 +50,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### availability  
 > List of the card's available printing types.  
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
@@ -64,14 +64,14 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### colorIdentity  
 > List of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 > - **Attributes:** <i class="optional">optional</i>
@@ -79,7 +79,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -141,13 +141,13 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
 >
-> - **Type:** `array | array(object)`  
+> - **Type:** `array[] | array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects  
 > The visual frame effect.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 
@@ -194,7 +194,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### identifiers  
 > List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`
 
 > ### isAlternative  
@@ -283,7 +283,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### keywords  
 > All keywords found on a card.  
 >
-> - **Type:** `array(string)`  
+> - **Type:** `array[string]`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
@@ -297,14 +297,14 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### leadershipSkills  
 > List of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v4.5.1`  
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### legalities  
 > List of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
 >
-> - **Type:** `object | object(props)`  
+> - **Type:** `object{} | object{props}`  
 > - **Introduced:** `v4.0.0`
 
 > ### life  
@@ -365,7 +365,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### otherFaceIds  
 > List of UUID's of this card with counterparts, such as transformed or melded faces.  
 >
-> - **Type:** `array | array(string)`  
+> - **Type:** `array[] | array[string]`  
 > - **Introduced:** `v4.6.1`
 
 > ### power  
@@ -378,14 +378,14 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### printings  
 > List of sets the card was printed in, formatted in uppercase.  
 >
-> - **Type:** `array(string)`  
+> - **Type:** `array[string]`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### promoTypes  
 > List of promotional types for a card.  
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
@@ -393,7 +393,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### purchaseUrls  
 > Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v4.4.0`
 
 > ### rarity  
@@ -406,7 +406,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### rulings  
 > Official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
 >
-> - **Type:** `array | array(object)`  
+> - **Type:** `array[] | array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
@@ -426,14 +426,14 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### subtypes  
 > List of card subtypes found after em-dash.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > List of card supertypes found before em-dash.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -460,7 +460,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### types  
 > List of all card types of the card, including Un-sets and gameplay variants.
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 
@@ -473,7 +473,7 @@ The Card (Deck) data model describes the properties and values of a single card.
 > ### variations  
 > List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.  
 >
-> - **Type:** `array | array(string)`  
+> - **Type:** `array[] | array[string]`  
 > - **Introduced:** `v4.1.2`  
 
 > ### watermark  

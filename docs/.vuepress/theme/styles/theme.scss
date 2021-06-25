@@ -14,7 +14,6 @@ html, body {
 html, body, #app, .theme-container {
   height: 100%;
 }
-
 @media (max-width: 719px) {
   html, body, #app, .theme-container {
     height: auto;
@@ -123,11 +122,6 @@ blockquote {
     &:last-of-type {
       margin-bottom: 0;
     }
-
-    code, pre {
-      padding-top: 7px;
-      padding-bottom: 7px;
-    }
   }
 
   i {
@@ -154,8 +148,20 @@ blockquote {
       display: flex;
       align-items: center;
 
+      p {
+        width: 100%;
+      }
+
       strong {
         margin-right: 5px;
+      }
+
+      code {
+        // display: inline-block;
+      }
+
+      pre {
+        margin-bottom: 0;
       }
     }
   }
@@ -258,19 +264,21 @@ blockquote {
     }
   }
 }
-.sidebar-link[href="/mtggraphql/"] {
+.sidebar-link[href="/mtggraphql/"],
+.sidebar-link[href="/data-models/sealed-product/"] {
   position: relative;
 
   &::after {
     content: "new";
     position: absolute;
-    left: 115px;
+    right: -40px;
     top: 0;
     padding: 0 5px;
     border-radius: 5px;
     font-size: 12px;
     background-color: var(--yellow-color);
     font-family: var(--font-monospace);
+    font-weight: bold;
     color: var(--dark-color);
   }
 }

@@ -49,14 +49,14 @@ The Set file model describes the properties and values of an individual set.
 > ### booster  
 > A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### cards  
 > List of cards in this set. See the [Card (Set)](../card-set/) data model.  
 >
-> - **Type:** `array(object)`  
+> - **Type:** `array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### code  
@@ -168,7 +168,7 @@ The Set file model describes the properties and values of an individual set.
 > ### sealedProduct
 > Sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
 >
-> - **Type:** `object(props)`
+> - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
 > - **Attributes:** <i class="optional">optional</i>
 
@@ -182,7 +182,7 @@ The Set file model describes the properties and values of an individual set.
 > ### tokens  
 > Tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.  
 >
-> - **Type:** `array(object)`  
+> - **Type:** `array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### totalSetSize  
@@ -194,7 +194,7 @@ The Set file model describes the properties and values of an individual set.
 > ### translations  
 > Translated set name by language. See the [Translations](/data-models/translations/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  

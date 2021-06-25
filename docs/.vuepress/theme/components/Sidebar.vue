@@ -1,6 +1,6 @@
 <template lang="pug">
   aside.sidebar
-    router-link.sidebar-logo.mobile-hide(:to="$localePath")
+    .sidebar-logo.mobile-hide
       NavMeta(:width="`60px`")
     .sidebar-wrap-fixed
       AlgoliaSearchBox(

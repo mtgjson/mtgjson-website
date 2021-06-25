@@ -25,6 +25,8 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
 
 ## The Team
 
+<div class="team-wrapper">
+
 ::: tip Zach - Lead Developer &amp; Maintainer
 <p>
   <img class="avatar lazy" src="" data-src="/images/avatars/avatar-zach.jpg" title="Zach's avatar" alt="Zach's avatar">
@@ -53,6 +55,8 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
   Milo is a Typescript &amp; React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports.
 </p>
 :::
+
+</div>
 
 ## Contributing
 

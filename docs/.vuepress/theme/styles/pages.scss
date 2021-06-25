@@ -5,3 +5,34 @@
     font-size: 1rem;
   }
 }
+
+// Team on Homepage
+@media (max-width: 960px) {
+  #mtgjson {
+    & ~ .team-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+
+      & > * {
+        margin: 0;
+      }
+
+      .custom-block.tip {
+        .custom-block-title {
+          text-align: center;
+        }
+        strong {
+          text-align: center;
+          display: block;
+          margin-bottom: 1rem;
+        }
+        img {
+          display: block;
+          float: none;
+          margin: 0 auto 1rem;
+        }
+      }
+    }
+  }
+}
