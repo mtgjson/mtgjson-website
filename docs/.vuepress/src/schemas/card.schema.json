@@ -35,7 +35,7 @@
     "introduced": "v4.0.0"
   },
   "colorIdentity": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors found in {{code@manaCost}}, {{code@colorIndicator}} and {{code@text}}.",
     "isAtomicProperty": true,
@@ -43,7 +43,7 @@
     "introduced": "v4.0.0"
   },
   "colorIndicator": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors in the color indicator (The symbol prefixed to a card's types).",
     "isAtomicProperty": true,
@@ -51,7 +51,7 @@
     "introduced": "v4.0.2"
   },
   "colors": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"B\", ... ]",
     "description": "List of all the colors in {{code@manaCost}} and {{code@colorIndicator}}. Some cards may not have a value, such as cards with \"Devoid\" in its {{code@text}}.",
     "isAtomicProperty": true,
@@ -135,14 +135,14 @@
     "introduced": "v4.0.0"
   },
   "foreignData": {
-    "type": "array(object) | array()",
+    "type": "array[object] | array[object]",
     "example": "[ {{link@Foreign Data@/data-models/foreign-data/}}, ... ]",
     "description": "See the {{link@Foreign Data@/data-models/foreign-data/}} data model.",
     "isAtomicProperty": true,
     "introduced": "v4.0.0"
   },
   "frameEffects": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"colorshifted\", ... ]",
     "description": "The visual frame effect.",
     "isTokenProperty": true,
@@ -433,7 +433,7 @@
     "introduced": "v4.0.0"
   },
   "otherFaceIds": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with counterparts, such as transformed or melded faces.",
     "introduced": "v4.6.1"
@@ -491,7 +491,7 @@
     "introduced": "v4.0.0"
   },
   "rulings": {
-    "type": "array(object) | array()",
+    "type": "array[] | array[object]",
     "example": "[ {{link@Rulings@/data-models/rulings/}}, ... ]",
     "description": "See the {{link@Rulings@/data-models/rulings/}} data model.",
     "isAtomicProperty": true,
@@ -516,7 +516,7 @@
     "introduced": "v4.1.0"
   },
   "subtypes": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"Myr\", \"Construct\", ... ]",
     "description": "List of card subtypes found after em-dash.",
     "isAtomicProperty": true,
@@ -524,7 +524,7 @@
     "introduced": "v4.0.0"
   },
   "supertypes": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"Legendary\", ... ]",
     "description": "List of card supertypes found before em-dash.",
     "isAtomicProperty": true,
@@ -578,7 +578,7 @@
     "introduced": "v4.0.0"
   },
   "variations": {
-    "type": "array | array()",
+    "type": "array[] | array[string]",
     "example": "[ \"7eb0f276-5e32-5a1e-acfd-9b0ddc19b845\", ... ]",
     "description": "List of UUID's of this card with alternate printings in the same set. Excludes Un-sets.",
     "introduced": "v4.1.2"

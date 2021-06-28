@@ -146,7 +146,7 @@ export default {
 
         img {
           float: left;
-          max-width: 50px;
+          max-width: 48px;
         }
 
         &::before,

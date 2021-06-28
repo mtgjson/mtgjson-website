@@ -139,6 +139,9 @@ module.exports = {
     toc: {
       includeLevel: [ 3 ] // Table only H3
     },
+    anchor: {
+      tabIndex: false
+    }
   },
   // Vuepress Themeing
   themeConfig: {
@@ -219,10 +222,6 @@ module.exports = {
           {
             title: 'MTGGraphQL',
             path: '/changelog/mtggraphql/'
-          },
-          {
-            title: 'Documentation',
-            path: '/changelog/documentation/'
           }
         ]
       },

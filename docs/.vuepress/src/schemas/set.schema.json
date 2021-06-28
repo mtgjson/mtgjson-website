@@ -26,7 +26,7 @@
     "introduced": "v5.0.0"
   },
   "cards": {
-    "type": "array(object)",
+    "type": "array[object]",
     "example": "[ {{link@Card@/data-models/card/}}, ... ]",
     "description": "List of cards in this set. See the {{link@Card@/data-models/card/}} data model.",
     "introduced": "v4.0.0"
@@ -184,7 +184,7 @@
     "introduced": "v4.2.1"
   },
   "tokens": {
-    "type": "array(object)",
+    "type": "array[object]",
     "example": "[ {{link@Card (Token)@/data-models/card-token/}}, ... ]",
     "description": "Tokens available to the set. See the {{link@Card (Token)@/data-models/card-token/}} data model.",
     "introduced": "v4.0.0"

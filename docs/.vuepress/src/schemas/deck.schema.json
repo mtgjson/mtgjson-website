@@ -22,7 +22,7 @@
     "introduced": "v4.3.0"
   },
   "mainBoard": {
-    "type": "array(object)",
+    "type": "array[object]",
     "example": "[ {{link@Card@/data-models/card/}}, ... ]",
     "description": "The cards in the main-board. See the {{link@Card@/data-models/card/}} data model.",
     "introduced": "v4.3.0"
@@ -35,7 +35,7 @@
     "introduced": "v4.3.0"
   },
   "sideBoard": {
-    "type": "array(object)",
+    "type": "array[object]",
     "example": "[ {{link@Card@/data-models/card/}}, ... ]",
     "description": "The cards in the side-board. See the {{link@Card@/data-models/card/}} data model.",
     "introduced": "v4.3.0"

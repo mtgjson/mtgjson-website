@@ -50,7 +50,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### availability  
 > List of the card's available printing types.  
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
@@ -64,14 +64,14 @@ The Card (Token) data model describes the properties and values of a single card
 > ### colorIdentity  
 > List of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
 > List of all the colors in the color indicator (The symbol prefixed to a card's types).  
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 > - **Attributes:** <i class="optional">optional</i>
@@ -79,7 +79,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### colors  
 > List of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with "Devoid" in its `text`.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -107,7 +107,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### frameEffects  
 > The visual frame effect.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 
@@ -133,7 +133,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### identifiers  
 > List of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
 >
-> - **Type:** `object(props)`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0` 
 
 > ### isFullArt  
@@ -167,7 +167,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### keywords  
 > All keywords found on a card.  
 >
-> - **Type:** `array(string)`  
+> - **Type:** `array[string]`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
@@ -208,7 +208,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### promoTypes  
 > List of promotional types for a card.  
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
@@ -216,7 +216,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### reverseRelated
 > The names of the cards that produce this card.  
 >
-> - **Type:** `array(string)`  
+> - **Type:** `array[string]`  
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
@@ -236,14 +236,14 @@ The Card (Token) data model describes the properties and values of a single card
 > ### subtypes  
 > List of card subtypes found after em-dash.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > List of card supertypes found before em-dash.  
 >
-> - **Type:** `array | array(string)`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -270,7 +270,7 @@ The Card (Token) data model describes the properties and values of a single card
 > ### types  
 > List of all card types of the card, including Un-sets and gameplay variants.
 >
-> - **Type:** `array(string)`
+> - **Type:** `array[string]`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 

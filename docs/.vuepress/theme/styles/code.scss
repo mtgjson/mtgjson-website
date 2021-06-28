@@ -7,13 +7,10 @@
 }
 
 pre {
-  line-height: 1.5rem;
   overflow-x: scroll;
   margin-bottom: 2rem;
-
-  &[class*="language-"] {
-    padding-top: .75em
-  }
+  line-height: 1.5rem;
+  padding: 1rem;
 
   code {
     padding-left: 0;

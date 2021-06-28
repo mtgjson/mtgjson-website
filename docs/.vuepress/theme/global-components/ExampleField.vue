@@ -56,10 +56,6 @@ export default {
   display: flex;
   align-items: center;
 
-  code {
-    line-height: 1.25rem;
-  }
-
   .show-btn {
     display: inline;
 

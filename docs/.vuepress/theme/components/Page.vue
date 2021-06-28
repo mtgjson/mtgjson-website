@@ -256,6 +256,7 @@ function flattern(items, res) {
 
   .inner {
     max-width: var(--content-width);
+    padding: 4px; // show focus outline
     margin-bottom: 0;
     overflow: auto; // clear float
   }

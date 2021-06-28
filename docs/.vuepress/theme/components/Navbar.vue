@@ -2,7 +2,7 @@
   header.navbar
     .navbar-options
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-      router-link.nav-logo-link(:to="$localePath")
+      router-link.nav-logo-link(:to="$localePath").desktop-hide
         NavMeta(:width="`60px`")
       //- NavLinks.mobile-hide
       ThemeSwitcher
@@ -31,9 +31,10 @@ export default {
   z-index: 9;
   height: var(--navbar-height);
   align-items: center;
+  padding: 0 4rem;
+  margin-left: var(--sidebar-width);
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
-  padding: 0 4rem;
 
   .nav-logo-link {
     text-decoration: none;
@@ -47,7 +48,7 @@ export default {
   &-options {
     width: 100%;
     display: flex;
-    justify-content: space-between;
+    justify-content: end;
     align-items: center;
   }
 }
@@ -55,6 +56,8 @@ export default {
 @media (max-width: 719px) {
   .navbar {
     left: 0;
+    border-bottom: 1px solid var(--bg-border-color);
+    margin-left: 0;
 
     &-options {
       display: flex;
