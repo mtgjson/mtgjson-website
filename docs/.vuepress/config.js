@@ -75,7 +75,7 @@ module.exports = {
       'meta',
       {
         property: 'og:image',
-        content: '/images/assets/logo-mtgjson-thumbnail.png'
+        content: '/images/assets/thumbnail-logo-mtgjson.png'
       }
     ],
     [
