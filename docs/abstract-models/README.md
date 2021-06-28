@@ -7,6 +7,10 @@
       "content": "Abstract Models documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Abstract Models documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, Abstract Models",
     }

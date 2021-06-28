@@ -5,11 +5,15 @@
   "meta": [
     {
       "name": "description",
-      "content": "DeckList data model documentation.",
+      "content": "Deck List file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Deck List file model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, decklist",
+      "content": "mtg, magic: the gathering, mtgjson, json, decklist, deck list",
     }
   ],
   "feed": {

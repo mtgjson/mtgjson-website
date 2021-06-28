@@ -5,7 +5,11 @@
     [
       {
         "name": "description",
-        "content": "Enum Values data model documentation."
+        "content": "Enum Values abstract model documentation."
+      },
+      {
+        "property": "og:description",
+        "content": "Enum Values abstract model documentation."
       },
       {
         "name": "keywords",

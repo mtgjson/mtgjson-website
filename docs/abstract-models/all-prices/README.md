@@ -5,7 +5,11 @@
     [
       {
         "name": "description",
-        "content": "All Prices data model documentation."
+        "content": "All Prices abstract model documentation."
+      },
+      {
+        "property": "og:description",
+        "content": "All Prices abstract model documentation."
       },
       {
         "name": "keywords",

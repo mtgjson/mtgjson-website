@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "LeadershipSkills data model documentation.",
+      "content": "Leadership Skills data model documentation.",
+    },
+    {
+      "property": "og:description",
+      "content": "Leadership Skills data model documentation."
     },
     {
       "name": "keywords",

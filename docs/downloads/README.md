@@ -7,6 +7,10 @@
       "content": "MTGJSON downloads.",
     },
     {
+      "property": "og:description",
+      "content": "MTGJSON downloads."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, downloads",
     }

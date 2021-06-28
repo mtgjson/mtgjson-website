@@ -6,6 +6,10 @@
       'content': 'MTGJSON brand assets.'
     },
     {
+      "property": "og:description",
+      "content": "MTGJSON brand assets."
+    },
+    {
       'name': 'keywords',
       'content': 'mtg, magic: the gathering, mtgjson, json, branding, branding assets, brand, assets, logo',
     },

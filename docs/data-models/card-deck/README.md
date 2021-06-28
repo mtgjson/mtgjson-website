@@ -8,6 +8,10 @@
       "content": "Card (Deck) data model documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Card (Deck) data model documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, card (deck)",
     }

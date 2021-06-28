@@ -8,6 +8,10 @@
       "content": "Identifiers data model documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Identifiers data model documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, identifiers",
     }

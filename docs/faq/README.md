@@ -6,6 +6,10 @@
       'content': 'MTGJSON frequently asked questions.'
     },
     {
+      "property": "og:description",
+      "content": "MTGJSON frequently asked questions."
+    },
+    {
       'name': 'keywords',
       'content': 'mtg, magic: the gathering, mtgjson, json, FAQ, frequently asked questions',
     },

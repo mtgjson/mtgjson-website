@@ -9,6 +9,10 @@
       "content": "Types data model documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Types data model documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, types",
     }

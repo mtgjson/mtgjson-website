@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Rulings data model for MTGJSON.",
+      "content": "Rulings data model documentation.",
+    },
+    {
+      "property": "og:description",
+      "content": "Rulings data model documentation."
     },
     {
       "name": "keywords",

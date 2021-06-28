@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Purchase URL data model for MTGJSON.",
+      "content": "Purchase Urls data model documentation.",
+    },
+    {
+      "property": "og:description",
+      "content": "Purchase Urls data model documentation."
     },
     {
       "name": "keywords",

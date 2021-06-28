@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "All keywords used on Magic: The Gathering cards.",
+      "content": "Keywords file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Keywords file model documentation.",
     },
     {
       "name": "keywords",

@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Atomic) data model documentation.",
+      "content": "Card (Atomic) file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Card (Atomic) file model documentation.",
     },
     {
       "name": "keywords",

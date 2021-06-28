@@ -5,7 +5,11 @@
     [
       {
         "name": "description",
-        "content": "TCGplayer SKUs data model documentation."
+        "content": "TCGplayer SKUs abstract model documentation."
+      },
+      {
+        "property": "og:description",
+        "content": "TCGplayer SKUs abstract model documentation."
       },
       {
         "name": "keywords",

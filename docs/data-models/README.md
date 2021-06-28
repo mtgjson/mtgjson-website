@@ -7,6 +7,10 @@
       "content": "Data Models documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Data Models documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, data models",
     }

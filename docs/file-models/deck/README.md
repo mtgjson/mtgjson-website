@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Deck data model documentation.",
+      "content": "Deck file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Deck file model documentation.",
     },
     {
       "name": "keywords",

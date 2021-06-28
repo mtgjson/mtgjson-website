@@ -7,6 +7,10 @@
       "content": "All compiled file download outputs by MTGJSON.",
     },
     {
+      "property": "og:description",
+      "content": "All compiled file download outputs by MTGJSON."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, downloads, download, files, all files",
     }

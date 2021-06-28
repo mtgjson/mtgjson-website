@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "ForeignData data model documentation.",
+      "content": "Foreign Data data model documentation.",
+    },
+    {
+      "property": "og:description",
+      "content": "Foreign Data data model documentation."
     },
     {
       "name": "keywords",

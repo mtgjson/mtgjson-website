@@ -5,11 +5,15 @@
   "meta": [
     {
       "name": "description",
-      "content": "Meta data model compiled output documentation.",
+      "content": "Meta file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Meta file model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, version",
+      "content": "mtg, magic: the gathering, mtgjson, json, version, meta",
     }
   ],
   "feed": {

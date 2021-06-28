@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card Types data model documentation.",
+      "content": "Card Types file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Card Types file model documentation.",
     },
     {
       "name": "keywords",

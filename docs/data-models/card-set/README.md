@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card data model documentation.",
+      "content": "Card (Set) data model documentation.",
+    },
+    {
+      "property": "og:description",
+      "content": "Card (Set) data model documentation."
     },
     {
       "name": "keywords",

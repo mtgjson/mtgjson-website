@@ -3,7 +3,14 @@
   'title': 'All Identifiers',
   'meta':
     [
-      { 'name': 'description', 'content': 'All Identifiers data model documentation.' },
+      {
+        'name': 'description', 
+        'content': 'All Identifiers abstract model documentation.'
+      },
+      {
+        "property": "og:description",
+        "content": "All Identifiers abstract model documentation."
+      },
       {
         'name': 'keywords',
         'content': 'mtg, magic: the gathering, mtgjson, json, all identifiers',

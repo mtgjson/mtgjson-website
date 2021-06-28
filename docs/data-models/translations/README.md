@@ -8,6 +8,10 @@
       "content": "Translations data model documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Translations data model documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, translations",
     }

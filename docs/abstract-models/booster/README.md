@@ -5,7 +5,11 @@
     [
       {
         "name": "description",
-        "content": "Booster data model documentation."
+        "content": "Booster abstract model documentation."
+      },
+      {
+        "property": "og:description",
+        "content": "Booster abstract model documentation."
       },
       {
         "name": "keywords",

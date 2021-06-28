@@ -6,6 +6,10 @@
       'content': 'MTGJSON License.'
     },
     {
+      "property": "og:description",
+      "content": "MTGJSON License."
+    },
+    {
       'name': 'keywords',
       'content': 'mtg, magic: the gathering, mtgjson, json, license',
     },

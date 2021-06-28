@@ -8,6 +8,10 @@
       "content": "All individual set downloads outputs from MTGJSON.",
     },
     {
+      "property": "og:description",
+      "content": "All individual set downloads outputs from MTGJSON."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, downloads, download set, individual sets, all sets",
     }

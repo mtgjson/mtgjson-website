@@ -8,6 +8,10 @@
       "content": "Legalities data model documentation.",
     },
     {
+      "property": "og:description",
+      "content": "Legalities data model documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, legal, legalities",
     }

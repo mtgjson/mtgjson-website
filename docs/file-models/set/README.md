@@ -5,7 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Set data model for MTGJSON.",
+      "content": "Set file model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Set file model documentation.",
     },
     {
       "name": "keywords",

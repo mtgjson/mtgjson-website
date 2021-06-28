@@ -7,6 +7,10 @@
       "content": "MTGGraphQL service documentation",
     },
     {
+      "property": "og:description",
+      "content": "MTGGraphQL service documentation."
+    },
+    {
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, graphql, mtggraphql",
     }
