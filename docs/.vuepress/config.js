@@ -222,10 +222,6 @@ module.exports = {
           {
             title: 'MTGGraphQL',
             path: '/changelog/mtggraphql/'
-          },
-          {
-            title: 'Documentation',
-            path: '/changelog/documentation/'
           }
         ]
       },
