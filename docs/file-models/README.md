@@ -25,12 +25,12 @@ The "Web API" or more commonly known as "files" that MTGJSON.com provides varies
 ::: tip While MTGJSON.com serves a variety of files, there are only a few major file types, and variations to those types, that utilize one or more data models:
 </br>
 
-- **AllPrintings**: Serves all set data using the [Set](/file-models/set/) file model.
-- **AllIdentifiers**: Serves all card data using the [Card (Set)](../card-set/) data model.
-- **AtomicCards**: Serves all card data using the [Card (Atomic)](/file-models/card-atomic) data model.
-- **[Format]**: Serves variable set data using the [Set](/file-models/set/) file model.
-- **[Format]Atomic**: Serves variable card data using [Card (Atomic)](/file-models/card-atomic/) data model.
-- Other files serve specific data using data models such as the [Deck](/file-models/deck/), [All Prices](/abstract-models/all-prices/) or other abstract data models.
+- **AllPrintings**: Serves all set data using the [Set](../file-models/set/) file model.
+- **AllIdentifiers**: Serves all card data using the [Card (Set)](../data-models/card-set/) data model.
+- **AtomicCards**: Serves all card data using the [Card (Atomic)](../file-models/card-atomic/) data model.
+- **[Format]**: Serves variable set data using the [Set](../file-models/set/) file model.
+- **[Format]Atomic**: Serves variable card data using [Card (Atomic)](../file-models/card-atomic/) data model.
+- Other files serve specific data using data models such as the [Deck](../file-models/deck/), [All Prices](../abstract-models/all-prices/) or other abstract data models.
 </br>
 </br>
 For a full list of files, see [All Files](../downloads/all-files/) downloads page.
