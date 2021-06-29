@@ -4,8 +4,6 @@ The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.
 
 ## Knowledge Requirements
 
----
-
 - Vue
 - VuePress
 - Markdown
@@ -18,22 +16,16 @@ The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.
 
 ## Technical Requirements
 
----
-
 - Node
 - npm
 
 ### Optional Requirements
-
----
 
 - n
 - imagemin
 - imagemin-webp
 
 ## Directory Structure
-
----
 
 Files/Directories were omitted that do not help understand this current project structure.
 
@@ -95,24 +87,16 @@ Files/Directories were omitted that do not help understand this current project 
 
 ## VuePress Configuration
 
----
-
 Explaining the configuration as a whole would be best served by directly linking to the [VuePress documentation](https://v1.vuepress.vuejs.org/config/).
 
 ## Markdown Files
 
----
-
 ### Use and Purpose
-
----
 
 > **Use**: To serve has as static routing of the application.  
 > **Purpose**: All markdown files should be named `README.md`. That file will act as the single `index.html` for a directory.
 
 ### Markdown Structure
-
----
 
 The structure of a file is simple. Frontmatter on top, everything else below it.
 
@@ -122,8 +106,6 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
 - Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
 
 ### Markdown Syntax for Documentation Fields
-
----
 
 An example of a property field structure in Markdown:
 
@@ -140,8 +122,6 @@ You can also use the `<ExampleField type='<Enum Name>'` component to render exam
 
 ### Using Frontmatter
 
----
-
 Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 
 You can also change configuration of VuePress by overwriting variables within the front matter, such a title, description, etc.
@@ -150,7 +130,7 @@ You can also change configuration of VuePress by overwriting variables within th
 
 #### Example
 
-```json
+```yaml
 {
   "title": "Card", # Meta title of page
   "schema": "card", # Powers certain Vue components
@@ -172,23 +152,16 @@ You can also change configuration of VuePress by overwriting variables within th
     "enable": "true" # Include this for atom/rss XML
   }
 }
----
 ```
 
 ## The Vuex Store
-
----
 
 We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and API remains as performant as possible.
 
 ## enhanceApp.js
 
----
-
 Because Vue backs this entire application we can inject some helpers in to Vue to be accessed in our components.
 
 ## Testing
-
----
 
 We use Jest and we do our best.
