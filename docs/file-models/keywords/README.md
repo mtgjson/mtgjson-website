@@ -38,21 +38,21 @@ The Keywords file model describes a list of all keywords used on Magic: The Gath
 ## Model Properties
 
 > ### abilityWords
-> List of ability words found in rules text on cards.
+> A list of ability words found in rules text on cards.
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='abilityWords'/>
 > - **Introduced:** `v4.3.0`
 
 > ### keywordAbilities
-> List of keyword abilities found in rules text on cards.
+> A list of keyword abilities found in rules text on cards.
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='keywordAbilities'/>
 > - **Introduced:** `v4.3.0`
 
 > ### keywordActions
-> List of keyword actions found in rules text on cards.
+> A list of keyword actions found in rules text on cards.
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='keywordActions'/>

@@ -38,7 +38,7 @@ The Deck file model describes a complete deck reference.
 ## Model Properties
 
 > ### code
-> Set code for the deck.
+> The set code for the deck.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
@@ -51,7 +51,7 @@ The Deck file model describes a complete deck reference.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### fileName
-> File name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
+> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.0`  
@@ -76,7 +76,7 @@ The Deck file model describes a complete deck reference.
 > - **Introduced:** `v4.3.0`
 
 > ### releaseDate
-> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
 >
 > - **Type:** `string | null`
 > - **Introduced:** `v4.3.0`

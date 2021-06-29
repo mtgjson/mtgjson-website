@@ -52,7 +52,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > - **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 
 > ### How do I access a card's imagery?
-> While we do not offer card images directly through MTGJSON, we recommend getting card images through Scryfall or Gatherer API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers) data model within the [Card](../data-models/card) data model.  
+> While we do not offer card images directly through MTGJSON, we recommend getting card images through Scryfall or Gatherer API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers/) data model within the various Card data models.  
 >
 > - **Scryfall:** `https://api.scryfall.com/cards/${scryfallId}?format=image`
 > - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
@@ -69,7 +69,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > ### What information is in AtomicCards?
 > [AtomicCards](/downloads/all-files/#atomiccards) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
-> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation. Note that depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
+> For a full list of properties, see the [Card (Atomic)](/file-models/card-atomic/) data model documentation. Note that depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 
 > ### Why is the file I just downloaded out of date?
 > You have probably received a cached version of the file. Try hard-refreshing the website (`CTRL + F5` on Windows, `Shift + Command + R` on Mac) and re-downloading to get the newest version.

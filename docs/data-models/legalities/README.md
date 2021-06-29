@@ -42,7 +42,7 @@ Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an exam
 :::
 
 > ### brawl  
-> Sol Ring is not legal in the Brawl play format. This property is omitted.  
+> Sol Ring is not legal in the Brawl play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -65,21 +65,21 @@ Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an exam
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### future  
-> Sol Ring is not legal in the Future play format. This property is omitted.  
+> Sol Ring is not legal in the Future play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### frontier  
-> Sol Ring is not legal in the Frontier play format. This property is omitted.  
+> Sol Ring is not legal in the Frontier play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### historic  
-> Sol Ring is not legal in the Historic play format. This property is omitted.  
+> Sol Ring is not legal in the Historic play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.1.0`  
@@ -94,35 +94,35 @@ Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an exam
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### modern  
-> Sol Ring is not legal in the Modern play format. This property is omitted.  
+> Sol Ring is not legal in the Modern play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### pauper  
-> Sol Ring is not legal in the Pauper play format. This property is omitted.  
+> Sol Ring is not legal in the Pauper play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### penny  
-> Sol Ring is not legal in the Penny play format. This property is omitted.  
+> Sol Ring is not legal in the Penny play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### pioneer  
-> Sol Ring is not legal in the Pioneer play format. This property is omitted.  
+> Sol Ring is not legal in the Pioneer play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.6.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### standard  
-> Sol Ring is not legal in the Standard play format. This property is omitted.  
+> Sol Ring is not legal in the Standard play format. **This property is omitted**.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  

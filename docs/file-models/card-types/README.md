@@ -26,7 +26,7 @@
 
 The Card Types file model describes top-level card types and the associated card types they may have.
 
-**Parent file:** [Card Types](/downloads/all-files/#cardtypes)   
+**Parent file:** [CardTypes](/downloads/all-files/#cardtypes)  
 **Parent property:** `data`
 
 ## Model Index

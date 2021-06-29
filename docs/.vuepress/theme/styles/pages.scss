@@ -6,6 +6,16 @@
   }
 }
 
+#brand-assets {
+  & ~ .language-html {
+    pre {
+      code {
+        white-space: pre-wrap;
+      }
+    }
+  }
+}
+
 // Team on Homepage
 @media (max-width: 960px) {
   #mtgjson {

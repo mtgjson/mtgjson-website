@@ -1,15 +1,15 @@
 ---
 {
-  "title": "SetList",
+  "title": "Set List",
   "schema": "set",
   "meta": [
     {
       "name": "description",
-      "content": "set List file model documentation.",
+      "content": "Set List file model documentation.",
     },
     {
       "name": "og:description",
-      "content": "set List file model documentation.",
+      "content": "Set List file model documentation.",
     },
     {
       "name": "keywords",
@@ -22,9 +22,9 @@
 }
 ---
 
-# SetList
+# Set List
 
-The SetList file model describes a metadata-like structure that holds top-level information about a [Set](../set/).
+The Set List file model describes a metadata-like structure that holds top-level information about a [Set](../set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`
@@ -38,26 +38,26 @@ The SetList file model describes a metadata-like structure that holds top-level 
 ## Model Properties
 
 > ### baseSetSize  
-> Number of cards in the set. Will default to `totalSetSize` if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
+> The number of cards in the set. Will default to `totalSetSize` if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`
 
 > ### block  
-> Block name the set was in.  
+> The block name the set was in.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### code  
-> Set code for the set.  
+> The set code for the set.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
 > ### codeV3  
-> Alternate set code Wizards uses for a select few duel deck sets.  
+> The alternate set code Wizards uses for a select few duel deck sets.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
@@ -84,13 +84,13 @@ The SetList file model describes a metadata-like structure that holds top-level 
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### isOnlineOnly  
-> If this set is available only online.  
+> If this set is only available online.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
 
 > ### isPaperOnly  
-> If this set is available only in paper.  
+> If this set is only available in paper.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.6.2`  
@@ -131,14 +131,14 @@ The SetList file model describes a metadata-like structure that holds top-level 
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### mtgoCode  
-> Set code for the set as it appears on [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
+> The set code for the set as it appears on [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### name  
-> Name of the set.  
+> The name of the set.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
@@ -151,39 +151,39 @@ The SetList file model describes a metadata-like structure that holds top-level 
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### releaseDate  
-> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set.  
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
 > ### sealedProduct
-> Sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### tcgplayerGroupId  
-> Group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
+> The group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i class="optional">optional</i> 
 
 > ### totalSetSize  
-> Total number of cards in the set, including promos and related supplemental products.  
+> The total number of cards in the set, including promos and related supplemental products.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`
 
 > ### translations  
-> Translated set name by language. See the [Translations](/data-models/translations/) data model.  
+> The translated set name by language. See the [Translations](/data-models/translations/) data model.  
 >
-> - **Type:** `object{props}`  
+> - **Type:** `object{} | object{props}`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  
-> Expansion type of the set.  
+> The expansion type of the set.  
 >
 > - **Type:** `string`
 > - <ExampleField type='type'/>

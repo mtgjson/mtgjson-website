@@ -24,7 +24,7 @@
 
 # Rulings
 
-The Rulings data model describes a list of rulings that are for a specific card.
+The Rulings data model describes a list of rulings for a specific card.
 
 **Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
 **Parent property:** `rulings`
@@ -38,13 +38,13 @@ The Rulings data model describes a list of rulings that are for a specific card.
 ## Model Properties
 
 > ### date  
-> Release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.  
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
 > ### text  
-> Text ruling of the card.  
+> The text ruling of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
