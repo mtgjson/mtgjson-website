@@ -12,7 +12,7 @@
             label(for="search-input") Search By:
             input.table-sort-select(
               id="search-input"
-              placeholder="name, code, etc"
+              placeholder="name, code, type, etc..."
               type="text"
               v-model="searchKey"
               @input="onHandleChange")
@@ -22,7 +22,7 @@
             select.table-sort-select(
               id="sort-input"
               v-model="sortKey"
-              @change="$helpers.sort(sortKey, decks)")
+              @input="onHandleChange")
               option(value="releaseDate:true") Release Date (Newest)
               option(value="releaseDate") Release Date (Oldest)
               option(value="code") Code (Ascending)
@@ -52,6 +52,7 @@
                   small &nbsp;{{ deck.releaseDate }}
             .text-wrap--downloads
               DownloadField(:fileName="`decks/${deck.fileName}`")
+      button.load-more-btn.cta-btn(@click="handleLoadMore") Load More
 </template>
 <script>
 import DownloadField from "./DownloadField";
@@ -63,6 +64,8 @@ export default {
       defaultDecks: [],
       filteredDecks: [],
       hasError: false,
+      lazyOffset: 25,
+      lazyToLoad: 25,
       searchKey: "",
       showOptions: true,
       sortKey: "releaseDate:true",
@@ -84,13 +87,17 @@ export default {
       this.hasError = true;
       this.message = `There was a problem loading this data from our API. Please let a MTGJSON developer know by contacting us through our Discord <a href="https://mtgjson.com/discord">here</a>.`
     } else {
-      this.filteredDecks = await this.$helpers.sort("releaseDate:true", this.defaultDecks);
+      this.filteredDecks = await this.$helpers.sort("releaseDate:true", this.defaultDecks).slice(0, this.lazyOffset);
       this.handleMessage(this.defaultDecks.length);
     }
   },
   methods: {
     handleMessage(length = 0) {
       this.message = `${length} results found...`;
+    },
+    handleLoadMore() {
+      this.lazyOffset = this.lazyOffset + this.lazyToLoad;
+      this.onHandleChange();
     },
     onHandleChange() {
       // Throttle so we don't go nuts
@@ -104,7 +111,13 @@ export default {
         const sorted = this.$helpers.sort(this.sortKey, searched);
 
         this.handleMessage(sorted.length);
-        this.filteredDecks = sorted;
+        this.filteredDecks = sorted.slice(0, this.lazyOffset);
+
+        if(this.lazyOffset >= sorted.length){
+          document.querySelector('.load-more-btn').classList.add('hide');
+        } else {
+          document.querySelector('.load-more-btn').classList.remove('hide');
+        }
       }, this.$throttleSpeed);
     }
   }

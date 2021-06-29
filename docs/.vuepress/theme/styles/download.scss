@@ -3,6 +3,12 @@
 .download-tables {
   position: relative;
 
+  .load-more-btn {
+    &.hide {
+      display: none;
+    }
+  }
+
   .results-message {
     line-height: 1.2rem;
     padding-bottom: 1rem;

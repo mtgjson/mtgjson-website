@@ -12,7 +12,7 @@
             label(for="search-input") Search By:
             input.table-sort-select(
               name="search-input"
-              placeholder="name, code, etc"
+              placeholder="name, code, type, etc..."
               type="text"
               v-model="searchKey"
               @input="onHandleChange")
@@ -31,7 +31,7 @@
             select.table-sort-select(
               id="sort-input"
               v-model="sortKey"
-              @change="$helpers.sort(sortKey, sets)")
+              @input="onHandleChange")
               option(value="releaseDate:true") Release Date (Newest)
               option(value="releaseDate") Release Date (Oldest)
               option(value="code") Code (Ascending)
@@ -92,6 +92,7 @@
                   small &nbsp;{{ set.releaseDate }}
             .text-wrap--downloads
               DownloadField(:fileName="set.code")
+      button.load-more-btn.cta-btn(@click="handleLoadMore") Load More
 </template>
 
 <script>
@@ -104,6 +105,8 @@ export default {
       defaultSets: [],
       dynamicSets: [],
       hasError: false,
+      lazyOffset: 25,
+      lazyToLoad: 25,
       filters: null,
       filterKey: "",
       searchKey: "",
@@ -131,13 +134,17 @@ export default {
     } else {
       this.dynamicSets = await this.$helpers.sort("releaseDate:true", this.defaultSets);
       this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
+      this.dynamicSets = this.dynamicSets.slice(0, this.lazyOffset);
       this.handleMessage(this.defaultSets.length);
     }
-
   },
   methods: {
     handleMessage(length = 0) {
       this.message = `${length} results found...`;
+    },
+    handleLoadMore() {
+      this.lazyOffset = this.lazyOffset + this.lazyToLoad;
+      this.onHandleChange();
     },
     onHandleChange() {
       // Throttle so we don't go nuts
@@ -158,7 +165,13 @@ export default {
         const filtered = this.$helpers.filter(this.filterKey, sorted);
 
         this.handleMessage(filtered.length);
-        this.dynamicSets = filtered;
+        this.dynamicSets = filtered.slice(0, this.lazyOffset);
+
+        if(this.lazyOffset >= filtered.length){
+          document.querySelector('.load-more-btn').classList.add('hide');
+        } else {
+          document.querySelector('.load-more-btn').classList.remove('hide');
+        }
       }, this.$throttleSpeed);
     }
   }
