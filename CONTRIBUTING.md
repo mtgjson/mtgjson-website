@@ -1,151 +1,194 @@
 # Contributing
+
 The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
 
 ## Knowledge Requirements
+
+---
+
 - Vue
 - VuePress
 - Markdown
 - JSON
 - SCSS
 - SEO
+- YAML
 - Accessibility
 - MTGJSON Files
 
 ## Technical Requirements
+
+---
+
 - Node
-- NPM
+- npm
 
 ### Optional Requirements
+
+---
+
 - n
 - imagemin
 - imagemin-webp
 
 ## Directory Structure
+
+---
+
 Files/Directories were omitted that do not help understand this current project structure.
 
 ```sh
 .
-├── __tests__ # unit tests
-└── utils # build utils run before site generation
-│   ├── generate-version-atom.js # util to create an atom of the site
-│   ├── output/ # general purpose util output directory
-│   └── regenerate-schema.js # Caution: Only to be used to add new fields via configuration
-└── docs # home directory, outputs to `/dist`
-    ├── README.md # acts like a route entry point
-    ├── **/* # directories and their route entry point
-    └── .vuepress # main source files for the application
-        ├── config.js # main VuePress configuration
-        ├── config.sidebar.js # function to render the sidebar
-        ├── enhanceApp.js # attach configuration to Vue before build time
+├── app.json # Configuration for Heroku review apps. Used to Heroku PR deployments
+├── check-version.js # Ensures the developer environment is correct
+├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
+├── __coverage__ # GENERATED. Coverage for unit tests
+├── __tests__ # Unit tests
+├── utils # Build utils run before site generation
+│   ├── output/ # General purpose util output directory
+│   ├── generate-contributors.js # Utility to generate a github contributors file
+│   ├── generate-version-atom.js # Utility to generate a version atom of the site
+│   ├── migrate-schema-to-markdown.js # DEPRECATED. Utility to generate markdown pages from a schema
+│   └── regenerate-schema.js # DEPRECATED. Utility to add new fields to JSON schemas
+└── docs # Home directory, outputs to `/dist`
+    ├── README.md # Acts like a route entry point
+    ├── **/* # Directories and their route entry point
+    └── .vuepress # Main source files for the application
+        ├── config.js # Main VuePress configuration
+        ├── config.sidebar.js # Function to render the sidebar
+        ├── enhanceApp.js # Attach configuration to Vue before build time
         ├── store.js # Vuex store for Vue to pseudo-prefetch API data
-        ├── public/ # available to the app home directory
-        │   ├── **/* # all public files like the favicon and manifests
-        │   ├── favicons/ # all favicon images
-        │   ├── images/ # all application images
+        ├── public/ # Available to the app home directory
+        │   ├── favicons/ # All favicon images
+        │   ├── images/ # All application images
         │   │   ├── assets/ # MTGJSON specific images
-        │   │   ├── avatars/ # user/supporters avatar images
+        │   │   ├── avatars/ # User/supporters avatar images
         │   │   └── **/* # Any other image
-        │   └── robots.txt # for the server
-        ├── src # helper data and function
-        │   ├── resources # any internal json
-        │   │   ├── contributors.json # contributors data from github
-        │   │   └── supporters.json # powers the Supporters Vue component
-        │   ├── schemas # powers certain Vue Documentation components, most of this is deprecated but saved for posterity
-        │   │   └── *.schema.json # specific schema that match API data
-        │   └── scripts # helper JS functions
-        │       └── * # any javascript function
+        │   └── robots.txt # For crawlers to index/not index certain pages
+        ├── src # Helper data and functions
+        │   ├── resources/ # JSON that powers parts of the site
+        │   │   ├── contributors.json # Contributors data from github
+        │   │   └── supporters.json # Project Patrons/Supporters
+        │   ├── schemas/ # DEPRECATED. Saved for posterity
+        │   │   └── *.schema.json # Specific schema that match API data
+        │   └── scripts/ # Helper JS functions
+        │       └── * # Any javascript helper function
         └── theme # Visuals
             ├── components/ # Vuepress theme components (Beware!)
-            ├── global-components
-            │   ├── BrandAssets.vue # Marketing
-            │   ├── DownloadDecks.vue # Download Decks
-            │   ├── DownloadField.vue # Download
-            │   ├── DownloadSets.vue # Download Sets
+            ├── global-components/
+            │   ├── DownloadDecks.vue # Download decks list
+            │   ├── DownloadField.vue # Renders a field within other components
+            │   ├── DownloadSets.vue # Download sets list
             │   ├── ExampleField.vue # Render examples from EnumValues.json
             │   ├── NavMeta.vue # Header logo
             │   ├── PropertyToggler.vue # Toggler for optional documentation properties
-            │   ├── Supporters.vue # Patron/Supporters
-            │   ├── ThemeSwitcher.vue # Logic light/dark theme
+            │   ├── Supporters.vue # Contributors/Patrons/Supporters for homepage
+            │   ├── ThemeSwitcher.vue # Toggler for light/dark theme
             │   └── Version.vue # Render the current Meta.json
-            ├── layouts # What the application will render at a top level
+            ├── layouts/ # What the application will render at a top level
             │   ├── 404.vue # 404 page
             │   └── Layout.vue # Main page
             └── styles/ # SCSS/Stylus
+                ├── *.scss # Styles
+                └── palette.styl # Stylus requirement for VuePress, DO NOT REMOVE
 ```
 
 ## VuePress Configuration
 
-Explaining the configuration as a whole would be best served by directly to their own documentation [here](https://v1.vuepress.vuejs.org/config/).
+---
+
+Explaining the configuration as a whole would be best served by directly linking to the [VuePress documentation](https://v1.vuepress.vuejs.org/config/).
 
 ## Markdown Files
 
-### Use and Purpose
-> **Use**: To serve has as static routing of the application.
+---
 
+### Use and Purpose
+
+---
+
+> **Use**: To serve has as static routing of the application.  
 > **Purpose**: All markdown files should be named `README.md`. That file will act as the single `index.html` for a directory.
 
 ### Markdown Structure
+
+---
+
 The structure of a file is simple. Frontmatter on top, everything else below it.
-  - Frontmatter is written in JSON (with strings).
-  - Markdown is written to a high-level of specification not can be manipulated.
-  - Vue components are pseudo-imported by placing them in a Vue component in template syntax.
-  - Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements.
+
+- Frontmatter is written in JSON (with strings).
+- Markdown is written to a high-level of specification and should not be manipulated.
+- Vue components are imported by placing them in a Markdown file.
+- Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
 
 ### Markdown Syntax for Documentation Fields
-The structure of a documentation field is as follows:
+
+---
+
+An example of a property field structure in Markdown:
+
+```markdown
 > ### artist
-> Name of the artist that illustrated the card art.  
+> The name of the artist that illustrated the card art.  
 >
-> **Type:** `string`
-> **Introduced:** `v4.0.0`
+> **Type:** `string`  
+> **Introduced:** `v4.0.0`  
 > **Attributes:** <i>optional</i>
+```
 
-You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file.
-
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example.
 
 ### Using Frontmatter
-Frontmatter is config that begins each markdown file to configuration a few things about that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 
-You can also change configuration of VuePress by overwriting variables within the front matter.
+---
+
+Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
+
+You can also change configuration of VuePress by overwriting variables within the front matter, such a title, description, etc.
 
 > Remember: Frontmatter goes at the top of any Markdown file.
 
 #### Example
+
 ```json
----
 {
-  "title": "Card",
-  "schema": "card",
-  "meta": [
+  "title": "Card", # Meta title of page
+  "schema": "card", # Powers certain Vue components
+  "meta": [ # Head meta properties
     {
       "name": "description",
-      "content": "Card data model documentation.",
+      "content": "Card (Set) data model documentation.",
+    },
+    {
+      "name": "og:description",
+      "content": "Card (Set) data model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, card",
+      "content": "mtg, magic: the gathering, mtgjson, json, card (set)",
     }
   ],
   "feed": {
-    "enable": "true"
+    "enable": "true" # Include this for atom/rss XML
   }
 }
 ---
 ```
 
-### When not using Frontmatter
-The markdown file will perform and parse just the way you would expect by writing any kind of Markdown or HTML.
-
-You can also use a Vue component by placing `<MyComponentName />` anywhere on the markdown file. Props can also be passed to the component by using Frontmatter within the component but do not beed to be explicitly passed. However, strings may be explicitly passed as props.
-
-## Documentation "Schemas"
-In some cases, and most are deprecated, we use these are the single source of truth for the documentation rendering. These files are supposed to match the files from the API. They are formatted in a way assist rendering Vue components. Most of these files are only available for posterity.
-
 ## The Vuex Store
-We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and api remains as performant as possible.
+
+---
+
+We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and API remains as performant as possible.
 
 ## enhanceApp.js
-Because Vue backs this entire application we can interject some helpers in to Vue to be accessed in our components.
+
+---
+
+Because Vue backs this entire application we can inject some helpers in to Vue to be accessed in our components.
 
 ## Testing
+
+---
+
 We use Jest and we do our best.

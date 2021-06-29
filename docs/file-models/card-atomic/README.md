@@ -145,7 +145,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### keywords  
-> A list of keywords found on a card.  
+> A list of keywords found on the card.  
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v5.1.0`  

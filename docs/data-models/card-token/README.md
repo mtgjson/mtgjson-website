@@ -169,7 +169,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### keywords  
-> A list of keywords found on a card.  
+> A list of keywords found on the card.  
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v5.0.0`  

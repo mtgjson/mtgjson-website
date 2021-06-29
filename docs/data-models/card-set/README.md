@@ -265,7 +265,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### keywords  
-> A list of keywords found on a card.  
+> A list of keywords found on the card.  
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v5.0.0`  
@@ -326,7 +326,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### originalReleaseDate  
-> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for a promotional card printed outside of a cycle window, such as Friday Night Magic and Secret Lair Drop promotions.
+> The original release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for a promotional card printed outside of a cycle window, such as Secret Lair Drop promotions.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.1.0`  

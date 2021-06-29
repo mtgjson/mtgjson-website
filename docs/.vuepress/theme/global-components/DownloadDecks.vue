@@ -12,7 +12,7 @@
             label(for="search-input") Search By:
             input.table-sort-select(
               id="search-input"
-              placeholder="name, code, etc..."
+              placeholder="name, code, etc"
               type="text"
               v-model="searchKey"
               @input="onHandleChange")

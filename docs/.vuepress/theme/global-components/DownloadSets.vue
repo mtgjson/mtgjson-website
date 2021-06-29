@@ -12,7 +12,7 @@
             label(for="search-input") Search By:
             input.table-sort-select(
               name="search-input"
-              placeholder="name, code, etc..."
+              placeholder="name, code, etc"
               type="text"
               v-model="searchKey"
               @input="onHandleChange")
@@ -48,6 +48,15 @@
               type="checkbox"
               :checked="spoilerKey"
               v-model="spoilerKey"
+              @input="onHandleChange")
+
+          .sort-row.checkbox
+            label(for="online-input") Include Online Only:
+            input(
+              id="online-input"
+              type="checkbox"
+              :checked="onlineKey"
+              v-model="onlineKey"
               @input="onHandleChange")
 
       strong.results-message(v-bind:class="{error: hasError}" v-html="message")
@@ -99,6 +108,7 @@ export default {
       filterKey: "",
       searchKey: "",
       spoilerKey: true,
+      onlineKey: true,
       showOptions: true,
       sortKey: "releaseDate:true",
       timeout: null,
@@ -135,10 +145,15 @@ export default {
 
       this.timeout = window.setTimeout(() => {
         const sets = this.defaultSets;
-        const removed = !this.spoilerKey
+        // Remove spoilers sets
+        let filteredSets = !this.spoilerKey
           ? sets.filter(set => !set.isPartialPreview)
           : sets;
-        const searched = this.$helpers.search(this.searchKey, removed);
+        // Removed online sets
+        filteredSets = !this.onlineKey
+          ? filteredSets.filter(set => !set.isOnlineOnly)
+          : filteredSets;
+        const searched = this.$helpers.search(this.searchKey, filteredSets);
         const sorted = this.$helpers.sort(this.sortKey, searched);
         const filtered = this.$helpers.filter(this.filterKey, sorted);
 

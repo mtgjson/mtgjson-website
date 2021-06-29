@@ -25,8 +25,9 @@ dist/
 # Utility testing output
 utils/output/**/*.*
 
-# Coverage reports
+# Reports
 __coverage__
+*.report.html
 
 # Env variables
 .env
