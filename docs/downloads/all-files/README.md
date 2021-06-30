@@ -54,7 +54,7 @@ All outputted files to download provided by MTGJSON.
 > ### AllPrices
 > File containing all prices of cards in various formats.
 >
-> <DownloadField fileName='AllPrices'/> 
+> <DownloadField fileName='AllPrices'/>
 
 > ### AllSetFiles
 > File containing each individual set file in a directory, compressed.
@@ -64,7 +64,7 @@ All outputted files to download provided by MTGJSON.
 > ### AtomicCards
 > File containing every atomic card as a unique card object.
 >
-> <DownloadField fileName='AtomicCards'/> 
+> <DownloadField fileName='AtomicCards'/>
 
 > ### CardTypes
 > File containing every card type of any type of card.

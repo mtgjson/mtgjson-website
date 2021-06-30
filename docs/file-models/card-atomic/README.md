@@ -89,7 +89,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > The converted mana cost of the card.  
 >
 > - **Type:** `float`  
-> - **Introduced:** `v4.0.0` 
+> - **Introduced:** `v4.0.0`
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -170,10 +170,10 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
 >
 > - **Type:** `object{} | object{props}`  
-> - **Introduced:** `v4.0.0` 
+> - **Introduced:** `v4.0.0`
 
 > ### life  
-> The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types). 
+> The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  

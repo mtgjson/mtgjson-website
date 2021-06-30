@@ -48,7 +48,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### code  
 > The set code for the set.  
@@ -61,14 +61,14 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isForeignOnly  
 > If this set is available only outside the United States.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.1`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isFoilOnly  
 > If this set is only available in foil.  
@@ -81,7 +81,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
 > If this set is only available online.  
@@ -94,14 +94,14 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.6.2`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isPartialPreview  
 > If this set is still in preview (spoiled). Preview sets do not have complete data.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### keyruneCode  
 > The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) image icons.  
@@ -114,28 +114,28 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.4.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### mcmIdExtras  
 > The split [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v5.1.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### mcmName  
 > The [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set name.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.4.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### mtgoCode  
 > The set code for the set as it appears on [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### name  
 > The name of the set.  
@@ -148,7 +148,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.0`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### releaseDate  
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set.  
@@ -168,7 +168,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.2.1`  
-> - **Attributes:** <i class="optional">optional</i> 
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### totalSetSize  
 > The total number of cards in the set, including promos and related supplemental products.  
@@ -188,4 +188,3 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.0.0`
-

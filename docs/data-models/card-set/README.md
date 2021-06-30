@@ -292,7 +292,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### life  
-> The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types). 
+> The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  

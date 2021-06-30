@@ -1,0 +1,10 @@
+{
+  "default": true,
+  "blanks-around-headings": false,
+  "fenced-code-language": false,
+  "heading-increment": false,
+  "line-length": false,
+  "no-blanks-blockquote": false,
+  "no-inline-html": false,
+  "single-title": false
+}

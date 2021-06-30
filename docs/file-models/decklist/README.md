@@ -67,4 +67,3 @@ The Deck List file model describes a metadata-like structure that holds top-leve
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.3.0`
-

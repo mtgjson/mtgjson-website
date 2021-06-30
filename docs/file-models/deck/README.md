@@ -56,7 +56,6 @@ The Deck file model describes a complete deck reference.
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.0`  
 
-
 > ### mainBoard
 > The cards in the main-board. See the [Card (Deck)](../../data-models/card-deck) data model.
 >

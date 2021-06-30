@@ -34,4 +34,5 @@ For example, any <strong>Data Model</strong> would look similar to this:
   ...
 }
 ```
+
 Most data output by MTGJSON are Data Models but some models have more complex structures with too many variable or optional keys to ensure reliable documentation. Because of this, we document those types of models as [Abstract Models](/abstract-models/).
