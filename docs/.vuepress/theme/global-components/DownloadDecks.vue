@@ -18,6 +18,16 @@
               @input="onHandleChange")
 
           .sort-row
+            label(for="filter-input") Filter By:
+            select.table-sort-select(
+              id="filter-input"
+              v-model="filterKey"
+              @change="onHandleChange")
+              option(value="" selected) All Decks
+              option(v-for="(type, key) in filters" :key="key" :value="type") {{ $helpers.prettifyType(type) }}
+
+
+          .sort-row
             label(for="sort-input") Sort By:
             select.table-sort-select(
               id="sort-input"
@@ -64,6 +74,8 @@ export default {
       defaultDecks: [],
       filteredDecks: [],
       hasError: false,
+      filters: null,
+      filterKey: "",
       lazyOffset: 25,
       lazyToLoad: 25,
       searchKey: "",
@@ -88,6 +100,7 @@ export default {
       this.message = `There was a problem loading this data from our API. Please let a MTGJSON developer know by contacting us through our Discord <a href="https://mtgjson.com/discord">here</a>.`
     } else {
       this.filteredDecks = await this.$helpers.sort("releaseDate:true", this.defaultDecks).slice(0, this.lazyOffset);
+      this.filters = Array.from(new Set(this.defaultDecks.map(cur => cur.type)));
       this.handleMessage(this.defaultDecks.length);
     }
   },
@@ -109,11 +122,12 @@ export default {
           this.defaultDecks
         );
         const sorted = this.$helpers.sort(this.sortKey, searched);
+        const filtered = this.$helpers.filter(this.filterKey, sorted);
+        this.filteredDecks = filtered.slice(0, this.lazyOffset);
 
-        this.handleMessage(sorted.length);
-        this.filteredDecks = sorted.slice(0, this.lazyOffset);
+        this.handleMessage(filtered.length);
 
-        if(this.lazyOffset >= sorted.length){
+        if(this.lazyOffset >= filtered.length){
           document.querySelector('.load-more-btn').classList.add('hide');
         } else {
           document.querySelector('.load-more-btn').classList.remove('hide');

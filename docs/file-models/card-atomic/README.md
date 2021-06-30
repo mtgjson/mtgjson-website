@@ -29,7 +29,7 @@ The Card (Atomic) file model describes the a single atomic card, an oracle-like 
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
 
-::: warning
+::: tip
 Card (Atomic) objects are accessed from a **single index array** with the property name being the card's name.
 
 **Example:**
@@ -45,6 +45,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
   "meta": <Meta Model> 
 }
 ```
+
 :::
 
 ## Model Index

@@ -12,6 +12,7 @@
   .results-message {
     line-height: 1.2rem;
     padding-bottom: 1rem;
+    padding-top: 1rem;
     display: inline-block;
 
     &.error {
@@ -21,10 +22,12 @@
 
   .sorting-options {
     position: sticky;
-    background-color: var(--bg-dark-color);
+    background-color: var(--bg-color);
+    border-radius: 5px;
     top: 0;
     z-index: 9;
-    padding: 1rem 0 1.5rem;
+    padding: 1rem;
+    border: 1px solid var(--accent-color);
     // grid-column: span 4;
 
     .show-options {
@@ -64,57 +67,74 @@
 
     .sort-rows {
       .sort-row {
-        display: block;
-        min-height: 2rem;
-        margin-right: 30px;
         margin-bottom: 10px;
+        display: flex;
+        align-items: center;
 
         label {
           font-weight: bold;
-          font-size: 16px;
-          color: var(--gray-color);
+          font-size: 14px;
+          flex: none;
         }
 
         select,
         input {
+          flex: 1;
           display: inline;
-          font-size: 16px;
+          font-size: 14px;
           margin-left: 10px;
-          padding: 3px 5px 5px 0;
+          max-width: 220px;
+          border-radius: 5px;
+          padding: .5rem;
+        }
+
+        select {
+          position: relative;
+          &::before {
+            content: "";
+            position: absolute;
+            right: 0;
+            border-left: 5px solid transparent;
+            border-right: 5px solid transparent;
+            border-bottom: 5px solid var(--text-color);
+          }
+
+          &:focus-within {
+            &::before {
+              content: "";
+              position: absolute;
+              right: 0;
+              border-left: 5px solid transparent;
+              border-right: 5px solid transparent;
+              border-bottom: 5px solid var(--text-color);
+            }
+          }
         }
 
         input {
           border-radius: 5px;
-          border: 1px solid #c8c8c8;
-        }
-
-        input[type='text'] {
-          border-width: 0;
-          border-radius: 0;
-          padding-left: 0;
-          background-color: transparent;
-          border-bottom: 1px solid var(--accent-color);
-          color: var(--text-color);
         }
 
         &.search {
-          display: flex;
-          align-items: center;
+          // display: flex;
+          // align-items: center;
 
           label {
             flex: none;
           }
 
           input {
-            flex: none;
+            // flex: none;
           }
         }
 
         &.checkbox {
-          min-height: auto;
-
           label {
             cursor: pointer;
+          }
+
+          input {
+            flex: none;
           }
         }
 
@@ -208,15 +228,18 @@
           margin-right: 0;
           display: flex;
           align-items: center;
+
           label {
             flex: none;
             margin-right: 1rem;
           }
+
           select,
           input {
             margin: 5px 0 0 0;
             display: block;
             flex: 1;
+            max-width: 100%;
           }
 
           .search {
