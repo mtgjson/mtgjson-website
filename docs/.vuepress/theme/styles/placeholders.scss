@@ -7,10 +7,11 @@
 
 %blockquote {
   position: relative;
-  margin: 2rem 0 2rem;
+  margin: 1rem 0 0;
   padding: 0 2rem 2rem;
   background-color: var(--bg-color);
   border-radius: 5px;
+  transition: transform .25s ease-in-out;
 
   & > *:first-child {
     padding-top: 2rem;

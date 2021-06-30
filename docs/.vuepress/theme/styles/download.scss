@@ -86,29 +86,7 @@
           max-width: 220px;
           border-radius: 5px;
           padding: .5rem;
-        }
-
-        select {
-          position: relative;
-          &::before {
-            content: "";
-            position: absolute;
-            right: 0;
-            border-left: 5px solid transparent;
-            border-right: 5px solid transparent;
-            border-bottom: 5px solid var(--text-color);
-          }
-
-          &:focus-within {
-            &::before {
-              content: "";
-              position: absolute;
-              right: 0;
-              border-left: 5px solid transparent;
-              border-right: 5px solid transparent;
-              border-bottom: 5px solid var(--text-color);
-            }
-          }
+          border: none;
         }
 
         input {
@@ -116,15 +94,8 @@
         }
 
         &.search {
-          // display: flex;
-          // align-items: center;
-
-          label {
-            flex: none;
-          }
-
           input {
-            // flex: none;
+            padding-left: .75rem;
           }
         }
 

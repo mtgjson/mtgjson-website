@@ -60,9 +60,10 @@ MTGJSON currently has affiliated with the following markets to keep a history of
         }
       },
       ... // More providers
-    }
+    },
+    ... // More formats
   },
-  ... // More formats
+  ... // More card UUIDs
 }
 ```
 

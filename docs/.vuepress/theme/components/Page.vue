@@ -221,12 +221,16 @@ function flattern(items, res) {
 
   .page-edit--links {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-between;
     max-width: 960px;
   }
 
   .edit-link {
     display: inline-block;
+    flex: 0 0 100%;
+    margin-bottom: 1rem;
+    margin-left: 0;
 
     a {
       color: var(--text-color);
@@ -237,6 +241,7 @@ function flattern(items, res) {
 
   .last-updated {
     font-size: 0.9em;
+    flex: 0 0 100%;
 
     .prefix {
       font-weight: 500;
@@ -287,15 +292,11 @@ function flattern(items, res) {
   }
 
   .page-edit--links {
-    flex-wrap: wrap;
-
     .edit-link {
-      flex: 0 0 100%;
       margin-bottom: 1rem;
     }
 
     .last-updated {
-      flex: 0 0 100%;
       text-align: left;
     }
   }

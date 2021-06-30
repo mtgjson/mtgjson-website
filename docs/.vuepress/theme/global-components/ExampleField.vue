@@ -64,6 +64,10 @@ export default {
       color: var(--accent-color);
       text-decoration: underline;
       cursor: pointer;
+
+      &:hover {
+        text-decoration: none;
+      }
     }
   }
 }

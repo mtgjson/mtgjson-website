@@ -16,6 +16,14 @@
   }
 }
 
+// #model-properties {
+//   & ~ blockquote {
+//     p {
+//       color: var(--gray-color);
+//     }
+//   }
+// }
+
 // Team on Homepage
 @media (max-width: 960px) {
   #mtgjson {

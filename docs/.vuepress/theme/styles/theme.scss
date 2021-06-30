@@ -377,18 +377,20 @@ blockquote {
 
 // Media query for mobile
 @media (max-width: 719px) {
-  .content__default,
-  .page-nav,
-  .page-edit {
-    padding-left: 2rem;
-    padding-right: 2rem;
-  }
-
   .desktop-hide {
     display: block !important;
   }
 
   .mobile-hide {
     display: none !important;
+  }
+}
+
+@media (max-width: 800px) {
+  .content__default,
+  .page-nav,
+  .page-edit {
+    padding-left: 2rem;
+    padding-right: 2rem;
   }
 }

@@ -39,9 +39,9 @@ The TCGplayer SKUs data model describes [TCGplayer](https://www.tcgplayer.com/?p
       "productId": <Int>,
       "skuId": <Int>
     },
-    ... // More SKU Objects
+    ... // More SKU objects
   ],
-  ... // More Card UUIDs
+  ... // More card UUIDs
 }
 ```
 
