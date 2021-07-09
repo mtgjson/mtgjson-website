@@ -289,19 +289,24 @@
       "link": "https://magicthegathering.io"
     },
     {
+      "name": "MTG Discover",
+      "image": "avatar-mtgdiscover.png",
+      "link": "https://apps.apple.com/us/app/mtg-discover/id1534340485"
+    },
+    {
       "name": "MTG Korean",
       "image": "avatar-mtg-korean.png",
       "link": "http://mtg-kr.com"
     },
     {
+      "name": "MTG NeuralNet",
+      "image": "avatar-mtg-neuralnet.jpg",
+      "link": "https://discord.gg/EH4BTDk"
+    },
+    {
       "name": "MTG On Curve",
       "image": "avatar-mtg-on-curve.png",
       "link": "https://mtgoncurve.com/"
-    },
-    {
-      "name": "MTG Discover",
-      "image": "avatar-mtgdiscover.png",
-      "link": "https://apps.apple.com/us/app/mtg-discover/id1534340485"
     },
     {
       "name": "MTG Search",

@@ -1,5 +1,5 @@
 <template lang="pug">
-  .theme-switcher(@click="switchTheme")
+  .theme-switcher(@click="switchTheme" @keydown.enter="switchTheme" tabindex="0")
     .theme-switcher--button(
     v-if="activeTheme === lightTheme"
     title="Enable Dark Theme"

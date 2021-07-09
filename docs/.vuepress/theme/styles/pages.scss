@@ -16,6 +16,14 @@
   }
 }
 
+#frequently-asked-questions {
+  & ~ .table-of-contents {
+    ul {
+      display: block;
+    }
+  }
+}
+
 // #model-properties {
 //   & ~ blockquote {
 //     p {

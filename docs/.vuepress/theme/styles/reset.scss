@@ -34,6 +34,10 @@ table {
 	border-spacing: 0;
 }
 
+p:empty {
+  display: none;
+}
+
 * {
 	box-sizing: border-box;
 }

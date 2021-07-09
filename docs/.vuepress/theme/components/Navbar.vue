@@ -2,8 +2,7 @@
   header.navbar
     .navbar-options
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-      router-link.nav-logo-link(:to="$localePath").desktop-hide
-        NavMeta(:width="`60px`")
+      NavMeta.desktop-hide(:width="`60px`")
       //- NavLinks.mobile-hide
       ThemeSwitcher
 </template>
@@ -58,24 +57,16 @@ export default {
     left: 0;
     border-bottom: 1px solid var(--bg-border-color);
     margin-left: 0;
+    padding: 0 2rem;
 
     &-options {
       display: flex;
       justify-content: space-between;
+      max-width: var(--content-width);
     }
 
     .sidebar-button {
       left: -0.5rem;
-    }
-  }
-}
-
-@media (max-width: 719px) {
-  .navbar {
-    padding: 0 2rem;
-
-    &-options {
-      max-width: var(--content-width);
     }
   }
 }

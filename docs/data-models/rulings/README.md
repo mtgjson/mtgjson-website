@@ -31,9 +31,9 @@ The Rulings data model describes a list of rulings for a specific card.
 
 ## Model Index
 
-[[toc]]
-
 <PropertyToggler/>
+
+[[toc]]
 
 ## Model Properties
 
@@ -42,9 +42,11 @@ The Rulings data model describes a list of rulings for a specific card.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
+> - **Attributes** <i class="optional">Optional</i>
 
 > ### text  
 > The text ruling of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
+> - **Attributes** <i class="optional">Optional</i>

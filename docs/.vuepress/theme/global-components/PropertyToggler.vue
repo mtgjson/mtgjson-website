@@ -1,8 +1,8 @@
 <template lang="pug">
-#property-toggler(v-if="noOptionals")
+#property-toggler.property-toggler(v-if="noOptionals")
   label(for="property-toggler-input") Include optional properties
     span {{" "}}(Showing {{ count }}):
-  input(id="property-toggler-input", type="checkbox", @click="toggleOptionals", v-model="checked")
+  input(id="property-toggler-input" type="checkbox" @click="toggleOptionals" v-model="checked")
 </div>
 </template>
 
@@ -34,7 +34,7 @@ export default {
         : this.allAnchors.length - this.hiddenAnchors.length;
     },
     count(){
-      return this.checked ? this.fullCount : this.hiddenCount
+      return this.checked ? this.fullCount : this.hiddenCount;
     }
   },
   mounted() {
@@ -58,9 +58,21 @@ export default {
     toggleOptionals() {
       this.toggleBlockOptionals(this.checked);
       this.toggleTOCOptionals(this.checked);
+      this.toggleHeadingsContent(this.checked);
+    },
+    toggleHeadingsContent(doHide) {
+      const $propsHeading = document.querySelector('#model-properties');
+      const $toggler = document.querySelector('.property-toggler');
+
+      if(doHide && this.hiddenCount === 0){
+        $propsHeading.classList.add('none');
+        $toggler.classList.add('none');
+      } else {
+        $propsHeading.classList.remove('none');
+        $toggler.classList.remove('none');
+      }
     },
     toggleBlockOptionals(doHide) {
-      this.isHidden = doHide;
       this.propertyBlocks.forEach((el) => {
         el.hidden = doHide;
       });
@@ -82,12 +94,31 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-label {
-  font-weight: bold;
-  cursor: pointer;
+.property-toggler {
+  margin-bottom: 1rem;
 
-  span {
-    font-weight: normal;
+  &.none {
+    position: relative;
+    margin-bottom: 2.5rem;
+
+    &::after {
+      content: "No Available Properties";
+      position: absolute;
+      top: 2.5rem;
+      left: 0;
+      font-size: 1rem;
+      color: var(--gray-color);
+      font-weight: bold;
+    }
+  }
+
+  label {
+    font-weight: bold;
+    cursor: pointer;
+
+    span {
+      font-weight: normal;
+    }
   }
 }
 </style>
