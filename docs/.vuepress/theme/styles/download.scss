@@ -4,6 +4,8 @@
   position: relative;
 
   .load-more-btn {
+    margin-top: 1rem;
+
     &.hide {
       display: none;
     }
@@ -28,7 +30,6 @@
     z-index: 9;
     padding: 1rem;
     border: 1px solid var(--accent-color);
-    // grid-column: span 4;
 
     .show-options {
       display: inline-block;
@@ -87,6 +88,7 @@
           border-radius: 5px;
           padding: .5rem;
           border: none;
+          background-color: var(--light-gray-color);
         }
 
         input {
@@ -107,6 +109,10 @@
           input {
             flex: none;
           }
+        }
+
+        &.reset {
+          cursor: pointer;
         }
 
         &:last-of-type {

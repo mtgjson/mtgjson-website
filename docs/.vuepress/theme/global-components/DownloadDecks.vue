@@ -42,6 +42,10 @@
               option(value="type") Type (Ascending)
               option(value="type:true") Type (Descending)
 
+          .sort-row.reset
+            small
+              a(@click="onHandleReset") Reset Toggles
+
       strong.results-message(v-bind:class="{error: hasError}" v-html="message")
       blockquote(v-for="(deck, key) in decks" :key="key")
         .download-wrap
@@ -111,6 +115,18 @@ export default {
     handleLoadMore() {
       this.lazyOffset = this.lazyOffset + this.lazyToLoad;
       this.onHandleChange();
+    },
+    onHandleReset() {
+      this.sortKey = "releaseDate:true";
+      this.lazyOffset = this.lazyToLoad;
+
+      const decks = this.$helpers.sort(this.sortKey, this.defaultDecks);
+
+      this.filteredDecks = decks.slice(0, this.lazyToLoad);
+      this.filterKey = "";
+      this.searchKey = "";
+
+      this.handleMessage(this.defaultDecks.length);
     },
     onHandleChange() {
       // Throttle so we don't go nuts

@@ -59,6 +59,10 @@
               v-model="onlineKey"
               @input="onHandleChange")
 
+          .sort-row.reset
+            small
+              a(@click="onHandleReset") Reset Toggles
+
       strong.results-message(v-bind:class="{error: hasError}" v-html="message")
       blockquote(v-for="(set, key) in sets" :key="key")
         .download-wrap
@@ -132,9 +136,8 @@ export default {
       this.hasError = true;
       this.message = `There was a problem loading this data from our API. Please let a MTGJSON developer know by contacting us through our Discord <a href="https://mtgjson.com/discord">here</a>.`
     } else {
-      this.dynamicSets = await this.$helpers.sort("releaseDate:true", this.defaultSets);
+      this.dynamicSets = await this.$helpers.sort(this.sortKey, this.defaultSets).slice(0, this.lazyOffset);
       this.filters = Array.from(new Set(this.dynamicSets.map(cur => cur.type)));
-      this.dynamicSets = this.dynamicSets.slice(0, this.lazyOffset);
       this.handleMessage(this.defaultSets.length);
     }
   },
@@ -145,6 +148,20 @@ export default {
     handleLoadMore() {
       this.lazyOffset = this.lazyOffset + this.lazyToLoad;
       this.onHandleChange();
+    },
+    onHandleReset() {
+      this.sortKey = "releaseDate:true";
+      this.lazyOffset = this.lazyToLoad;
+
+      const sets = this.$helpers.sort(this.sortKey, this.defaultSets);
+
+      this.dynamicSets = sets.slice(0, this.lazyOffset);
+      this.filterKey = "";
+      this.searchKey = "";
+      this.spoilerKey = true;
+      this.onlineKey = true;
+
+      this.handleMessage(this.defaultSets.length);
     },
     onHandleChange() {
       // Throttle so we don't go nuts

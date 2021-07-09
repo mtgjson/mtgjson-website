@@ -61,6 +61,15 @@ Here is a list of frequently asked questions from our users since some data can 
 > Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
 > For Scryfall, to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
 
+> ### How can I access a card's set imagery?
+> The `keyruneCode` property from the [Set](../file-models/set/) file model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
+>
+> Additionally, you can see Gatherer for a limited amount of set printings using the following Gatherer API.  
+>
+> **Example**: `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`  
+>
+> In this case, `rarity` is just the starting letter of the rarity, such as `m`, `r`, `u`, or `c`.
+
 > ### How do I find the other card faces of "Meld" cards?
 > The most effective way to get the other cards for "Meld" cards is to access the `otherFaceIds` property of any of the "Meld" cards. This property will return two `uuid` values for the other associated cards.
 >
