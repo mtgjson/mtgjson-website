@@ -6,7 +6,7 @@
         li(v-for="(contributor, key) in contributors" :key="key")
           div
             a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
-              img(class="lazy" :data-src="contributor.avatar" :alt="`Avatar for ${contributor.username}`" :title="`Avatar for ${contributor.username}`")
+              img(class="lazy" :data-src="contributor.avatar" :alt="`${contributor.username}'s avatar`" :title="`${contributor.username}'s avatar`")
     h2 Supporters
     .supporters-wrap(v-if="patrons")
       h3 Our Patreon Supporters

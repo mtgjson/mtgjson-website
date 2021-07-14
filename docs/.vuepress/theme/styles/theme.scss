@@ -110,6 +110,15 @@ img {
       font-size: 1rem;
       color: var(--gray-color);
     }
+
+    & ~ .custom-block {
+      display: none;
+    }
+  }
+
+  & ~ .custom-block {
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
 }
 
