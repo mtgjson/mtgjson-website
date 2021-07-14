@@ -36,6 +36,8 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 ## Service Overview
 
+[[toc]]
+
 ### Data Source
 
 The GraphQL endpoint is based on the latest MTGJSONv5 release. The dataset is normally refreshed once a week, coinciding with the MTGJSON weekly rebuild.
@@ -102,7 +104,7 @@ query{
 }
 ```
 
-## HTTP Request
+### HTTP Request
 
 You can use an HTTP request on the mtgjson.com GraphQL endpoint with the following format:
 
@@ -110,6 +112,6 @@ You can use an HTTP request on the mtgjson.com GraphQL endpoint with the followi
 https://mtgjson.com/graphql?query=query{cards(input:{name: "Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
 ```
 
-## Client-based Querying
+### Client-based Querying
 
 You can utilize a tool like Apollo to make client-based calls. See the [Apollo Documentation](https://www.apollographql.com/docs/react/data/queries/) for more information.

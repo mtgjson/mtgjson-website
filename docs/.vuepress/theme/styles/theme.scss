@@ -111,7 +111,7 @@ img {
       color: var(--gray-color);
     }
 
-    & ~ .custom-block {
+    & ~ * {
       display: none;
     }
   }
