@@ -4,28 +4,24 @@
       h3 Our Contributors
       ul.contributors-list
         li(v-for="(contributor, key) in contributors" :key="key")
-          div
-            a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
-              img(class="lazy" :data-src="contributor.avatar" :alt="`${contributor.username}'s avatar`" :title="`${contributor.username}'s avatar`")
+          a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
+            img(class="lazy" :data-src="contributor.avatar" :alt="`${contributor.username}'s avatar`" :title="`${contributor.username}'s avatar`" width="48px" height="48px")
     h2 Supporters
     .supporters-wrap(v-if="patrons")
       h3 Our Patreon Supporters
       p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
       small(v-html="projectMsg")
       .supporters-grid
-        blockquote.supporter(v-for="({ link, image, name, since, tier, blurb } = patron, key) in patrons" :data-tier="tier")
-          .supporter-link
-            .img-wrap(v-if="image")
-              .img-wrap--container
-                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`")
-            .img-wrap.no-image(v-else)
-              .img-wrap--container
-                p {{name.substring(0, 1)}}
-            a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
-              h4(v-html="name")
-            h4(v-else v-html="name")
-            p.tier {{ tier }} Supporter
-            p.tier-time(v-if="since" v-html="formatTime(since)")
+        .supporter(v-for="({ link, image, name, since, tier, blurb } = patron, key) in patrons" :data-tier="tier")
+          .img-wrap(v-if="image")
+            img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`" width="77px" height="77px")
+          .img-wrap.no-image(v-else)
+            p {{name.substring(0, 1)}}
+          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+            h4(v-html="name")
+          h4(v-else v-html="name")
+          p.tier {{ tier }} Supporter
+          p.tier-time(v-if="since" v-html="formatTime(since)")
 
     //- Not Patrons but services that use MTGJSON
     .supporters-wrap(v-if="services")
@@ -33,17 +29,14 @@
       p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
       small(v-html="projectMsg")
       .supporters-grid.services(:data-tier="0")
-        blockquote.supporter.service(v-for="({link, image, name} = supporter, key) in services" :key="key")
-          .supporter-link
-            .img-wrap(v-if="image")
-              .img-wrap--container
-                img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`")
-            .img-wrap.no-image(v-else)
-              .img-wrap--container
-                p {{name.substring(0, 1)}}
-            a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
-              h4(v-html="name")
-            h4(v-else v-html="name")
+        .supporter.service(v-for="({link, image, name} = supporter, key) in services" :key="key")
+          .img-wrap(v-if="image")
+            img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`" width="54px" height="54px")
+          .img-wrap.no-image(v-else)
+            p {{name.substring(0, 1)}}
+          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
+            h4(v-html="name")
+          h4(v-else v-html="name")
 
 </template>
 
@@ -167,10 +160,6 @@ export default {
     grid-gap: 1rem;
     margin-bottom: 2rem;
 
-    blockquote {
-      margin-top: 0;
-    }
-
     &.services {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -182,18 +171,25 @@ export default {
       justify-content: center;
       align-items: center;
       text-align: center;
-      margin-bottom: 0;
       position: relative;
       padding-left: 1rem;
       padding-right: 1rem;
-      border-color: var(--table-border-color);
+      padding-top: 2rem;
+      padding-bottom: 2rem;
+      background-color: var(--blockquote-bg-color);
+      border-radius: var(--common-radius);
 
       .img-wrap {
         display: inline-flex;
         justify-content: center;
         align-items: center;
-        flex: 0 0 100%;
-        margin-bottom: 15px;
+        margin-bottom: 1rem;
+        background-color: var(--supporter-bg-color);
+        border-radius: 50%;
+        overflow: hidden;
+        width: 90px;
+        height: 90px;
+        padding: 15px;
 
         &.no-image {
           text-align: center;
@@ -204,25 +200,14 @@ export default {
             color: var(--dark-color);
             margin-top: 0;
             padding-top: 0;
+            margin-bottom: 0;
           }
         }
 
-        &--container {
-          background-color: var(--supporter-bg-color);
-          border-radius: 50%;
-          overflow: hidden;
-          width: 90px;
-          height: 90px;
-          padding: 15px;
-          display: flex;
-          align-items: center;
-          justify-content: center;
-
-          img {
-            max-width: 90%;
-            height: auto;
-            max-height: 90%;
-          }
+        img {
+          max-width: 90%;
+          height: auto;
+          max-height: 90%;
         }
       }
 
@@ -254,6 +239,7 @@ export default {
 
       .linked-name {
         text-decoration: underline;
+        flex: 0 0 100%;
       }
 
       .tier {
@@ -269,16 +255,18 @@ export default {
         &-time {
           color: var(--text-color);
         }
+
+        &-time {
+          margin-bottom: 0;
+        }
       }
     }
 
     .supporter[data-tier='mythic'] {
       .img-wrap {
-        &--container {
-          height: 125px;
-          width: 125px;
-          padding: 20px;
-        }
+        height: 125px;
+        width: 125px;
+        padding: 20px;
       }
 
       .tier {

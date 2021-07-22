@@ -24,7 +24,7 @@
 
 By using this website and its content you agree to the following license:
 
-<img class="img-license" src="../.vuepress/public/images/assets/mit-license.jpg" alt="Logo for MIT License" title="MIT License" />
+<img class="img-license" src="../.vuepress/public/images/assets/mit-license.jpg" alt="Logo for MIT License" title="MIT License" width="200px" height="149px" />
 
 Copyright &copy; 2018 &ndash; Present, Zachary Halpern
 

@@ -2,7 +2,7 @@
   header.navbar
     .navbar-options
       SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-      NavMeta.desktop-hide(:width="`60px`")
+      NavMeta.desktop-hide(:width="`70px`")
       //- NavLinks.mobile-hide
       ThemeSwitcher
 </template>
@@ -46,8 +46,9 @@ export default {
 
   &-options {
     width: 100%;
+    height: 100%;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
     align-items: center;
   }
 }

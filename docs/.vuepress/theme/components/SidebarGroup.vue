@@ -49,7 +49,6 @@ export default {
 <style lang="scss">
 .sidebar-heading {
   color: var(--text-color);
-  transition: color 0.15s ease;
   font-weight: bold;
   line-height: 2;
   cursor: pointer;

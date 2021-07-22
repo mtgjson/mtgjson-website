@@ -1,7 +1,7 @@
 <template lang="pug">
   aside.sidebar
     .sidebar-logo.mobile-hide
-      NavMeta(:width="`60px`")
+      NavMeta(:width="`70px`")
     .sidebar-wrap-fixed
       AlgoliaSearchBox(
         v-if="isAlgoliaSearch"

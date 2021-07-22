@@ -2,11 +2,9 @@
   .example-field(v-if="enums.length > 0" :class="{'showing': showAll}")
     strong Examples:{{' '}}
     code(v-if="!showAll") {{ '"' + enums.slice(0, 5).join('", "') + '"' }}
-      .show-btn(v-if="enums.length > 5")
-        span(@click="toggleShowAll") Show&nbsp;More
+      .show-btn(v-if="enums.length > 5" @click="toggleShowAll") Show&nbsp;More
     code(v-if="showAll && enums.length > 5") {{ '"' + enums.join('", "') + '"' }}
-      .show-btn
-        span(@click="toggleShowAll") Show&nbsp;Less
+      .show-btn(@click="toggleShowAll") Show&nbsp;Less
 </template>
 
 <script>
@@ -59,15 +57,12 @@ export default {
   .show-btn {
     display: inline;
     margin-left: .5rem;
+    color: var(--accent-color);
+    text-decoration: underline;
+    cursor: pointer;
 
-    span {
-      color: var(--accent-color);
-      text-decoration: underline;
-      cursor: pointer;
-
-      &:hover {
-        text-decoration: none;
-      }
+    &:hover {
+      text-decoration: none;
     }
   }
 }
