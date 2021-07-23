@@ -78,12 +78,4 @@ export default {
     color: var(--gray-color);
   }
 }
-
-@media (max-width: 719px) {
-  .version {
-    &-number {
-      font-size: 16px;
-    }
-  }
-}
 </style>

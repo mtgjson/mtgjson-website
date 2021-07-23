@@ -1,8 +1,8 @@
 <template lang="pug">
   .download-tables
     .download-table
-      DownloadSorter(ref="sorter" :list="defaultList" :filters="listFilters" @updatedata="updateData" @updatecount="updateCount")
-      p.results-message {{ resultsLength }}
+      DownloadSorter(ref="sorter" :list="defaultList" :filters="listFilters" :noChecks="disableChecks" @updatedata="updateData" @updatecount="updateCount")
+      p.results-message Showing {{resultsLength}} of {{ resultsTotalLength }} Results
       blockquote(v-for="(item, key) in list" :key="key")
         .download-wrap
           .img-wrap
@@ -43,15 +43,16 @@ import DownloadSorter from "./DownloadSorter";
 export default {
   name: "DownloadList",
   components: { DownloadField, DownloadSorter },
-  props: [ 'file', 'type' ],
+  props: [ 'file', 'type', 'disableChecks' ],
   data() {
     return {
       defaultList: [],
       dynamicList: [],
       listFilters: [],
       lazyOffset: 25,
-      sortKey: "releaseDate:true",
-      resultsLength: 'Loading...'
+      resultsLength: 0,
+      resultsTotalLength: 0,
+      sortKey: "releaseDate:true"
     };
   },
   computed: {
@@ -64,14 +65,15 @@ export default {
     this.defaultList = await this.$store.getters[this._props.file];
     this.dynamicList = await this.$helpers.sort(this.sortKey, this.defaultList).slice(0, this.lazyOffset);
     this.listFilters = Array.from(new Set(this.defaultList.map(cur => cur.type)));
-    this.resultsLength = `${this.defaultList.length} Results`;
+    this.resultsTotalLength = this.defaultList.length;
+    this.resultsLength = this.list.length;
   },
   methods: {
     updateData(data){
       this.dynamicList = data;
     },
     updateCount(count){
-      this.resultsLength = `${count} Results`;
+      this.resultsLength = count;
     },
     onLoadMore(){
       this.$refs.sorter.onLoadMore();

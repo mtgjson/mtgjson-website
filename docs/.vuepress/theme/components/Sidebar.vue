@@ -1,17 +1,12 @@
 <template lang="pug">
   aside.sidebar
-    .sidebar-logo.mobile-hide
+    .sidebar-logo
       NavMeta(:width="`70px`")
     .sidebar-wrap-fixed
-      AlgoliaSearchBox(
-        v-if="isAlgoliaSearch"
-        :options="algolia")
       SearchBox(
-        v-else-if="$site.themeConfig.search !== false")
+        v-if="$site.themeConfig.search !== false")
 
     .sidebar-wrap
-      Version.desktop-hide
-
       NavLinks
 
       slot(name="top")
@@ -151,7 +146,12 @@ export default {
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
-    top: var(--navbar-height);
+    // top: var(--navbar-height);
+
+    &-logo {
+      margin-bottom: 0;
+      padding: 0 2rem;
+    }
 
     &-wrap {
       padding: 2rem 2rem 0;

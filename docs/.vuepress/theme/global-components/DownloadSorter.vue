@@ -37,7 +37,7 @@
           option(value="type") Type (Ascending)
           option(value="type:true") Type (Descending)
 
-      .sort-row.checkbox
+      .sort-row.checkbox(v-if="!noChecks")
         label(for="spoiler-input") Include Spoilers:
         input(
           id="spoiler-input"
@@ -46,7 +46,7 @@
           v-model="spoilerKey"
           @input="onHandleChange")
 
-      .sort-row.checkbox
+      .sort-row.checkbox(v-if="!noChecks")
         label(for="online-input") Include Online Only:
         input(
           id="online-input"
@@ -63,7 +63,7 @@
 <script>
 export default {
   name: 'DownloadSorter',
-  props: ['list', 'filters'],
+  props: ['list', 'filters', 'noChecks'],
   data() {
     return {
       lazyOffset: 25,
@@ -92,8 +92,8 @@ export default {
       this.onlineKey = true;
 
       const data = this.$helpers.sort(this.sortKey, this._props.list);
-      const newListCount = data.length;
       const dynamicData = data.slice(0, this.lazyOffset);
+      const newListCount = dynamicData.length;
 
       this.$emit('updatedata', dynamicData);
       this.$emit('updatecount', newListCount);
@@ -115,8 +115,8 @@ export default {
         const searched = this.$helpers.search(this.searchKey, filteredData);
         const sorted = this.$helpers.sort(this.sortKey, searched);
         const filtered = this.$helpers.filter(this.filterKey, sorted);
-        const newListCount = filtered.length;
         const dynamicData = filtered.slice(0, this.lazyOffset);
+        const newListCount = dynamicData.length;
 
         this.$emit('updatedata', dynamicData);
         this.$emit('updatecount', newListCount);

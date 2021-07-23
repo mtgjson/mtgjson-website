@@ -29,12 +29,4 @@ export default {
     text-decoration: none;
   }
 }
-
-@media (max-width: 719px) {
-  .version {
-    &-number {
-      font-size: 16px;
-    }
-  }
-}
 </style>
