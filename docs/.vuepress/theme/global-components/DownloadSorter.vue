@@ -62,7 +62,7 @@
 
 <script>
 export default {
-  name: 'SortingOptions',
+  name: 'DownloadSorter',
   props: ['list', 'filters'],
   data() {
     return {
@@ -92,9 +92,11 @@ export default {
       this.onlineKey = true;
 
       const data = this.$helpers.sort(this.sortKey, this._props.list);
+      const newListCount = data.length;
       const dynamicData = data.slice(0, this.lazyOffset);
 
       this.$emit('updatedata', dynamicData);
+      this.$emit('updatecount', newListCount);
     },
     onHandleChange() {
       // Throttle so we don't go nuts
@@ -113,9 +115,11 @@ export default {
         const searched = this.$helpers.search(this.searchKey, filteredData);
         const sorted = this.$helpers.sort(this.sortKey, searched);
         const filtered = this.$helpers.filter(this.filterKey, sorted);
+        const newListCount = filtered.length;
         const dynamicData = filtered.slice(0, this.lazyOffset);
 
         this.$emit('updatedata', dynamicData);
+        this.$emit('updatecount', newListCount);
 
         if(this.lazyOffset >= filtered.length){
           document.querySelector('.load-more-btn').classList.add('hide');

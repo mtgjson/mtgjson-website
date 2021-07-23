@@ -28,4 +28,4 @@ All individual set files to download provided by MTGJSON.
 
 ## Downloads
 
-<DownloadSets/>
+<DownloadList file="SetList" />
