@@ -33,4 +33,5 @@ Release Date: 2021-01-18
 
 ### Notes
 #### Prices
- - Prices are currently not supported but will be in release v1.1.0
+
+- Prices are currently not supported but will be in release v1.1.0

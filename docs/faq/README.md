@@ -29,7 +29,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > ### Which file should I use for my project?
 > In most cases, [AllPrintings](/downloads/all-files/#allprintings) is the correct file. It contains all data for every printing of each card organized by set. Alternatively you can browse the per-set json files or download database images.
 >
-> Note that the json files are minified, and not really human-readable: use a software like [JQ](https://stedolan.github.io/jq/) to parse and process them.
+> **Note:** The json files are minified, and not really human-readable. Depending on your implementation, you can use a software like [JQ](https://stedolan.github.io/jq/) to parse and process them.
 
 > ### Which file formats should I use for my project?
 > We recommend downloading the compressed files and unpacking them on your local/remote drive. This is be faster than downloading just the pure JSON files.
@@ -52,19 +52,19 @@ Here is a list of frequently asked questions from our users since some data can 
 > - **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 
 > ### How do I access a card's imagery?
-> While we do not offer card images directly through MTGJSON, we recommend getting card images through Scryfall or Gatherer API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers/) data model within the various Card data models.
+> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers/) data model within the various Card data models.
 >
 > - **Scryfall:** `https://api.scryfall.com/cards/${scryfallId}?format=image`
 > - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
 >
-> - **Notes:**
-> Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
-> For Scryfall, to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
+> - **Note:**
+> [Gatherer](https://gatherer.wizards.com/) may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
+> For [Scryfall](https://scryfall.com/), to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
 
 > ### How can I access a card's set imagery?
 > The `keyruneCode` property from the [Set](../file-models/set/) file model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
-> Additionally, you can see Gatherer for a limited amount of set printings using the following Gatherer API.  
+> Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API.  
 >
 > **Example**: `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`  
 >
@@ -73,15 +73,14 @@ Here is a list of frequently asked questions from our users since some data can 
 > ### How do I find the other card faces of "Meld" cards?
 > The most effective way to get the other cards for "Meld" cards is to access the `otherFaceIds` property of any of the "Meld" cards. This property will return two `uuid` values for the other associated cards.
 >
-> Depending on your use case, this can be enough data to get the information you need, otherwise you can use those cards to access their `otherFaceIds` to get the card you need by comparing the data that you have already.
+> **Note:** Depending on your use case, this can be enough data to get the information you need, otherwise you can use those cards to access their `otherFaceIds` to get the card you need by comparing the data that you have already.
 
 > ### What information is in AtomicCards?
 > [AtomicCards](/downloads/all-files/#atomiccards) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
-> For a full list of properties, see the [Card (Atomic)](/file-models/card-atomic/) data model documentation. Note that depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
+> For a full list of properties, see the [Card (Atomic)](/file-models/card-atomic/) data model documentation.
+>
+> **Note:** Depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 
-> ### Why is the file I just downloaded out of date?
-> You have probably received a cached version of the file. Try hard-refreshing the website (`CTRL + F5` on Windows, `Shift + Command + R` on Mac) and re-downloading to get the newest version.
-
-> ### Why is the website out of date or giving me errors?
-> You have probably received a cached version of the website or your browser is not supported. Update to the latest version of your internet browser or try hard-refreshing the website (`CTRL + F5` on Windows, `Shift + Command + R` on Mac) and try the action again.
+> ### Why is a file/website out of date?
+> You have probably received a cached version of the file or website. Try hard&#8209;refreshing the url (`CTRL + F5` on Windows, `Shift + Command + R` on Mac) to get the newest version.

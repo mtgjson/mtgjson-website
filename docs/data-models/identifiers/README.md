@@ -94,7 +94,7 @@ The Identifiers data model describes a list of identifiers associated to a card.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### multiverseId  
-> The Wizards of the Coast card identifier used in conjunction with [Gatherer](https://gatherer.wizards.com).  
+> The [Wizards of the Coast](https://company.wizards.com) card identifier used in conjunction with [Gatherer](https://gatherer.wizards.com).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  

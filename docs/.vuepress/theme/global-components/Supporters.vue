@@ -1,6 +1,6 @@
 <template lang="pug">
   .supporters
-    .supporters-wrap(v-if="contributors.length > 0")
+    .supporters-wrap(v-if="contributors")
       h3 Our Contributors
       ul.contributors-list
         li(v-for="(contributor, key) in contributors" :key="key")
@@ -49,18 +49,11 @@ export default {
   data() {
     return {
       contributors,
-      supporters,
+      patrons: supporters.patrons,
+      services: supporters.services,
       projectMsg:
         'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
     };
-  },
-  computed: {
-    patrons() {
-      return this.supporters.patrons;
-    },
-    services() {
-      return this.supporters.services;
-    }
   },
   async mounted() {
     const lazyImages = Array.from(document.querySelectorAll('img.lazy'));

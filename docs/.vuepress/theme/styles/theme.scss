@@ -1,3 +1,5 @@
+@import 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css';
+
 @import './vars';
 @import './reset';
 @import './custom-blocks';
@@ -99,30 +101,6 @@ img {
   }
 }
 
-#model-properties {
-  &.none {
-    position: relative;
-
-    &::after {
-      content: "No Available Properties";
-      position: absolute;
-      top: 5rem;
-      left: 0;
-      font-size: 1rem;
-      color: var(--gray-color);
-    }
-
-    & ~ * {
-      display: none;
-    }
-  }
-
-  & ~ .custom-block {
-    margin-bottom: 1rem;
-    margin-top: 0;
-  }
-}
-
 // Property blocks
 blockquote {
   @extend %blockquote;
@@ -155,11 +133,24 @@ blockquote {
     }
   }
 
-  i {
+  i.optional,
+  i.omitted {
     background-color: var(--yellow-color);
     color: var(--dark-color);
 
     @extend %code-block;
+  }
+
+  i.omitted {
+    background-color: var(--red-color);
+  }
+
+  i {
+    margin-right: 8px !important;
+
+    &:last-of-type {
+      margin-right: 0 !important;
+    }
   }
 
   ul {
@@ -195,6 +186,31 @@ blockquote {
         margin-bottom: 0;
       }
     }
+  }
+}
+
+// Model Properties of a page
+#model-properties {
+  &.none {
+    position: relative;
+
+    &::after {
+      content: "No Available Properties";
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      font-size: 1rem;
+      color: var(--gray-color);
+    }
+
+    & ~ * {
+      display: none;
+    }
+  }
+
+  & ~ .custom-block {
+    margin-bottom: 1rem;
+    margin-top: 0;
   }
 }
 

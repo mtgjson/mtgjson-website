@@ -71,7 +71,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
-> A list of all the colors in the color indicator (The symbol prefixed to a card's types).  
+> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).  
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='colorIndicator'/>
@@ -180,7 +180,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### loyalty  
-> The planeswalker loyalty value.  
+> The loyalty value of the card. Used on Planeswalker cards.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -269,7 +269,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Introduced:** `v4.0.0`
 
 > ### types  
-> A list of all card types of the card, including Un-sets and gameplay variants.
+> A list of all card types of the card, including Un&#8209;sets and gameplay variants.
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='types'/>

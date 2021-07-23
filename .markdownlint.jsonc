@@ -6,5 +6,6 @@
   "line-length": false,
   "no-blanks-blockquote": false,
   "no-inline-html": false,
-  "single-title": false
+  "single-title": false,
+  "no-duplicate-header": false
 }

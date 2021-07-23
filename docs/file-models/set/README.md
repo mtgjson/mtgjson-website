@@ -38,7 +38,7 @@ The Set file model describes the properties and values of an individual set.
 ## Model Properties
 
 > ### baseSetSize  
-> The number of cards in the set. Will default to `totalSetSize` if not available. Note that Wizards sometimes prints extra cards beyond the set size into promos or supplemental products.  
+> The number of cards in the set. Will default to `totalSetSize` if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`
@@ -51,14 +51,14 @@ The Set file model describes the properties and values of an individual set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### booster  
-> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) data model.  
+> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) abstract model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### cards  
-> The list of cards in this set. See the [Card (Set)](../card-set/) data model.  
+> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) data model.  
 >
 > - **Type:** `array[object]`  
 > - **Introduced:** `v4.0.0`
@@ -70,48 +70,47 @@ The Set file model describes the properties and values of an individual set.
 > - **Introduced:** `v4.0.0`
 
 > ### codeV3  
-> The alternate set code Wizards uses for a select few duel deck sets.  
+> The alternate set code [Wizards of the Coast](https://company.wizards.com) uses for a select few duel deck sets.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isForeignOnly  
-> If this set is available only outside the United States.  
+> If the set is available only outside the United States of America.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.1`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isFoilOnly  
-> If this set is only available in foil.  
+> If the set is only available in foil.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
 
 > ### isNonFoilOnly  
-> If this set is only available in non-foil.  
+> If the set is only available in non-foil.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
-> If this set is only available online.  
+> If the set is only available online.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
 
 > ### isPaperOnly  
-> If this set is available only in paper.  
+> If the set is available only in paper.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.6.2`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isPartialPreview  
-> If this set is still in preview (spoiled). Preview sets do not have complete data.  
->
+> If the set is still in preview (spoiled). Preview sets do not have complete data.
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i class="optional">optional</i>

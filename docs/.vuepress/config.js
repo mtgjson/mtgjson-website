@@ -2,9 +2,8 @@
 const generateSidebarRoutes = require('./config.sidebar');
 const [abstractModels, dataModels, fileModels] = generateSidebarRoutes(['/abstract-models/', '/data-models/', '/file-models/']);
 // SEO data
-const description =
-'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
+const description = 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
 module.exports = {
   // Uncomment to not support <=IE11
@@ -19,106 +18,46 @@ module.exports = {
   ga: 'UA-131358443-1',
   // Head Tags
   head: [
-    [
-      'meta',
-      {
-        charset: 'utf-8'
-      }
-    ],
-    [
-      'meta',
-      {
-        name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
-      }
-    ],
+    ['meta', { charset: 'utf-8' }],
+    ['meta', { name: 'viewport', content: 'width=device-width, initial-scale=1' }],
+    // Google SEO
+    ['meta', { property: 'og:title', content: title }],
+    ['meta', { property: 'og:description', content: description }],
+    ['meta', { property: 'og:image', content: '/images/assets/thumbnail-logo-mtgjson.png' }],
+    ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'}],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', type: "image/x-icon", href: '/favicons/favicon-dark.ico' }],
-    [
-      'link',
-      { rel: 'icon', href: '/favicons/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }
-    ],
-    [
-      'link',
-      { rel: 'icon', href: '/favicons/android-icon-144x144.png', sizes: '144x144', type: 'image/png' }
-    ],
+    ['link', { rel: 'icon', href: '/favicons/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicons/android-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/favicons/android-icon-96x96.png', sizes: '96x96', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/favicons/android-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/favicons/android-icon-48x48.png', sizes: '48x48', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/favicons/android-icon-36x36.png', sizes: '36x36', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-57x57.png', sizes: '57x57' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-60x60.png', sizes: '60x60' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-72x72.png', sizes: '72x72' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-76x76.png', sizes: '76x76' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-114x114.png', sizes: '114x114' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-120x120.png', sizes: '120x120' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-144x144.png', sizes: '144x144' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-152x152.png', sizes: '152x152' }],
-    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-180x180.png', sizes: '180x180' }],
-    ['link', { rel: 'msapplication-TileImage', href: '/favicons/ms-icon-144x144.png' }],
-    // Google SEO
-    [
-      'meta',
-      {
-        property: 'og:title',
-        content: title
-      }
-    ],
-    [
-      'meta',
-      {
-        property: 'og:description',
-        content: description
-      }
-    ],
-    [
-      'meta',
-      {
-        property: 'og:image',
-        content: '/images/assets/thumbnail-logo-mtgjson.png'
-      }
-    ],
-    [
-      'meta',
-      {
-        name: 'google-site-verification',
-        content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY'
-      }
-    ]
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-60x60.png', sizes: '60x60', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' }],
+    ['link', { rel: 'msapplication-TileImage', href: '/favicons/ms-icon-144x144.png' }]
   ],
   plugins: [
     ['@vuepress/back-to-top'],
-    [
-      'container',
-      {
-        type: 'tip',
-        defaultTitle: ''
-      }
-    ],
-    [
-      'container',
-      {
-        type: 'warning',
-        defaultTitle: ''
-      }
-    ],
+    ['container', { type: 'tip', defaultTitle: '' }],
+    ['container', { type: 'warning', defaultTitle: '' }],
     [
       'feed',
       {
         canonical_base: 'https://mtgjson.com',
         description_sources: ['frontmatter', 'description', 'excerpt'],
-        // Max is required
-        count: 100,
+        count: 100, // Max is required
         feeds: {
-          atom1: {
-            file_name: 'atom.xml'
-          },
-          rss2: {
-            file_name: 'site.rss'
-          },
-          json1: {
-            file_name: 'site.json'
-          }
+          atom1: { file_name: 'atom.xml' },
+          rss2: { file_name: 'site.rss' },
+          json1: { file_name: 'site.json' }
         }
       }
     ]
@@ -146,13 +85,6 @@ module.exports = {
   // Vuepress Themeing
   themeConfig: {
     // Algolia SEO
-    // algolia: {
-    //   apiKey: 'bfa11399ece64fbd87cbca3817bc498b',
-    //   indexName: 'mtgjson',
-    //   algoliaOptions: {
-    //     hitsPerPage: 10
-    //   }
-    // },
     searchPlaceholder: 'Search...',
     searchMaxSuggestions: 10,
     // Edit this page link in footer
@@ -163,7 +95,6 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     // Last updated time stamp
     lastUpdated: 'Last Updated',
-    title: title,
     logo: '/images/logo-3.svg',
     smoothScroll: true,
     nav: [

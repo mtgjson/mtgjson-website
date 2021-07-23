@@ -73,7 +73,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### colorIndicator  
-> A list of all the colors in the color indicator (The symbol prefixed to a card's types).  
+> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).  
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='colorIndicator'/>
@@ -115,7 +115,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### flavorName  
-> The promotional card name printed above the true card name on special cards that has no game function.  
+> The promotional card name printed above the true card name on special cards that has no game function. See [this card](https://scryfall.com/card/plg20/2/hangarback-walker) for an example. 
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
@@ -156,7 +156,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### hasContentWarning  
-> If the card marked by Wizards of the Coast for having sensitive content. Cards with this property may have missing or degraded properties and values. See this [official article](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10) for more information.  
+> If the card marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content. Cards with this property may have missing or degraded properties and values. See this [official article](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10) for more information.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.0.0`  
@@ -299,7 +299,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### loyalty  
-> The planeswalker loyalty value.  
+> The loyalty value of the card. Used on Planeswalker cards. 
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -442,7 +442,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### types  
-> A list of all card types of the card, including Un-sets and gameplay variants.  
+> A list of all card types of the card, including Un&#8209;sets and gameplay variants.  
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='types'/>
@@ -455,7 +455,7 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v4.0.0`
 
 > ### variations
-> A list of UUID's of this card with alternate printings in the same set. Excludes Un-sets.
+> A list of UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >
 > - **Type:** `array[] | array[string]`
 > - **Introduced:** `v4.1.2`

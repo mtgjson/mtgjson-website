@@ -72,7 +72,9 @@ All outputted files to download provided by MTGJSON.
 > <DownloadField fileName='CardTypes'/>
 
 > ### CompiledList
-> File containing all possible compiled outputs from MTGJSON, such as `AllPrintings`, `CardTypes`, etc. Note: This file does not contain data for this outputs, only string references to their existence. Generally, this data is used for documenting data on this website, but is also available to the public.
+> File containing all possible compiled outputs from MTGJSON, such as `AllPrintings`, `CardTypes`, etc.
+>
+> **Note:** This file does not contain data for this outputs, only string references to their existence. Generally, this data is used for documenting data on this website, but is also available to the public.
 >
 > <DownloadField fileName='CompiledList'/>
 
