@@ -1,25 +1,25 @@
 <template lang="pug">
   .download-links
-    select(v-if="fileName === 'AllPrintings'")
+    select(v-if="fileName === 'AllPrintings'" @change="downloadFile")
       option Select a file to download
-      option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json`" @click="downloadFile") {{ `${fileName}.json` }}
-      option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json.${format}`" @click="downloadFile") {{ `${fileName}.json.${format}` }}
-      option(v-if="format === 'sql'" v-for="(format, key) in sqlFormats" :key="`sql-${key + format}`" :value="`${$api}${fileName}.sql`" @click="downloadFile") {{ `${fileName}.sql` }}
-      option(v-if="format !== 'sql'" v-for="(format, key) in sqlFormats" :key="`sql-${key + format}`" :value="`${$api}${fileName}.sql.${format}`" @click="downloadFile") {{ `${fileName}.sql.${format}` }}
-      option(v-if="format === 'sqlite'" v-for="(format, key) in sqliteFormats" :key="`sqlite-${key + format}`" :value="`${$api}${fileName}.sqlite`" @click="downloadFile") {{ `${fileName}.sqlite` }}
-      option(v-if="format !== 'sqlite'" v-for="(format, key) in sqliteFormats" :key="`sqlite-${key + format}`" :value="`${$api}${fileName}.sqlite.${format}`" @click="downloadFile") {{ `${fileName}.sqlite.${format}` }}
+      option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json`") {{ `${fileName}.json` }}
+      option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json.${format}`") {{ `${fileName}.json.${format}` }}
+      option(v-if="format === 'sql'" v-for="(format, key) in sqlFormats" :key="`sql-${key + format}`" :value="`${$api}${fileName}.sql`") {{ `${fileName}.sql` }}
+      option(v-if="format !== 'sql'" v-for="(format, key) in sqlFormats" :key="`sql-${key + format}`" :value="`${$api}${fileName}.sql.${format}`") {{ `${fileName}.sql.${format}` }}
+      option(v-if="format === 'sqlite'" v-for="(format, key) in sqliteFormats" :key="`sqlite-${key + format}`" :value="`${$api}${fileName}.sqlite`") {{ `${fileName}.sqlite` }}
+      option(v-if="format !== 'sqlite'" v-for="(format, key) in sqliteFormats" :key="`sqlite-${key + format}`" :value="`${$api}${fileName}.sqlite.${format}`") {{ `${fileName}.sqlite.${format}` }}
     select(v-else-if="fileName.includes('Files')")
       option Select a file to download
-      option(v-if="format === 'zip'" v-for="(format, key) in fileFormats" :key="`file-${key + format}`" :value="`${$api}${fileName}.zip`" @click="downloadFile") {{ `${fileName}.zip` }}
-      option(v-if="format !== 'zip'" v-for="(format, key) in fileFormats" :key="`file-${key + format}`" :value="`${$api}${fileName}.tar.${format}`" @click="downloadFile") {{ `${fileName}.tar.${format}` }}
+      option(v-if="format === 'zip'" v-for="(format, key) in fileFormats" :key="`file-${key + format}`" :value="`${$api}${fileName}.zip`") {{ `${fileName}.zip` }}
+      option(v-if="format !== 'zip'" v-for="(format, key) in fileFormats" :key="`file-${key + format}`" :value="`${$api}${fileName}.tar.${format}`") {{ `${fileName}.tar.${format}` }}
     select(v-else-if="fileType === 'AllDecks'")
       option Select a file to download
-      option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}decks/${fileName}.json`" @click="downloadFile") {{ `${fileName}.json` }}
-      option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}decks/${fileName}.json.${format}`" @click="downloadFile") {{ `${fileName}.json.${format}` }}
+      option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}decks/${fileName}.json`") {{ `${fileName}.json` }}
+      option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}decks/${fileName}.json.${format}`") {{ `${fileName}.json.${format}` }}
     select(v-else)
       option Select a file to download
-      option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json`" @click="downloadFile") {{ `${fileName}.json` }}
-      option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json.${format}`" @click="downloadFile") {{ `${fileName}.json.${format}` }}
+      option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json`") {{ `${fileName}.json` }}
+      option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}${fileName}.json.${format}`") {{ `${fileName}.json.${format}` }}
 
 </template>
 
@@ -42,9 +42,11 @@ export default {
      * issues and should not be the case when live on the server.
      */
     downloadFile(e){
+      e.preventDefault();
+
       const target = e.target || e.currentTarget;
       const url = target.value;
-      const fileName = target.innerText;
+      const fileName = target.options[target.options.selectedIndex].innerText;
       const placeHolderAnchor = document.createElement('a');
       let $anchorElement;
 
