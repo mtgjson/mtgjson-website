@@ -137,7 +137,6 @@ export default {
 };
 </script>
 
-<style src="prismjs/themes/prism-tomorrow.css"></style>
 <style src="../styles/theme.scss" lang="scss"></style>
 <style lang="scss" scoped>
 .page {

@@ -119,9 +119,6 @@ export default {
       );
     }
   },
-  async created() {
-    await this.$helpers.setStoreState.apply(this, ["Meta"]);
-  },
   methods: {
     createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
       const bitbucket = /bitbucket.org/;

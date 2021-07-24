@@ -22,7 +22,7 @@
 
 # All Identifiers
 
-The All Identifiers data model describes a list of all cards organized by UUID using the [Card (Set)](../../data-models/card-set/) data model.
+The All Identifiers data model describes a list of all cards organized by UUID using the [Card (Set)](/data-models/card-set/) data model.
 
 **Parent file:** [AllIdentifiers](/downloads/all-files/#allidentifiers)  
 **Parent property:** `data`

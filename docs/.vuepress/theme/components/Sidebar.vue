@@ -21,9 +21,7 @@
 <script>
 import NavLinks from './NavLinks';
 import SidebarLinks from './SidebarLinks';
-import AlgoliaSearchBox from '@AlgoliaSearchBox';
 import SearchBox from '@SearchBox';
-import Version from '../global-components/Version';
 import NavMeta from '../global-components/NavMeta';
 
 export default {
@@ -32,22 +30,9 @@ export default {
     NavLinks,
     SidebarLinks,
     SearchBox,
-    AlgoliaSearchBox,
-    Version,
     NavMeta
   },
   props: ['items'],
-
-  computed: {
-    algolia() {
-      return (
-        this.$themeLocaleConfig.algolia || this.$site.themeConfig.algolia || {}
-      );
-    },
-    isAlgoliaSearch() {
-      return this.algolia && this.algolia.apiKey && this.algolia.indexName;
-    },
-  },
 };
 </script>
 

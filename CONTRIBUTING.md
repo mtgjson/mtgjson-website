@@ -66,17 +66,16 @@ Files/Directories were omitted that do not help understand this current project 
         │   └── scripts/ # Helper JS functions
         │       └── * # Any javascript helper function
         └── theme # Visuals
-            ├── components/ # Vuepress theme components (Beware!)
-            ├── global-components/
-            │   ├── DownloadDecks.vue # Download decks list
-            │   ├── DownloadField.vue # Renders a field within other components
-            │   ├── DownloadSets.vue # Download sets list
+            ├── components/ # Vuepress default Vue components (Beware!)
+            ├── global-components/ # Vuepress custom Vue components
+            │   ├── DownloadField.vue # Renders a download field for a list
+            │   ├── DownloadList.vue # Download decks/sets list
+            │   ├── DownloadSorter.vue # Sorter for downloads
             │   ├── ExampleField.vue # Render examples from EnumValues.json
-            │   ├── NavMeta.vue # Header logo
+            │   ├── NavMeta.vue # Header logo and version
             │   ├── PropertyToggler.vue # Toggler for optional documentation properties
             │   ├── Supporters.vue # Contributors/Patrons/Supporters for homepage
-            │   ├── ThemeSwitcher.vue # Toggler for light/dark theme
-            │   └── Version.vue # Render the current Meta.json
+            │   └── ThemeSwitcher.vue # Toggler for light/dark theme
             ├── layouts/ # What the application will render at a top level
             │   ├── 404.vue # 404 page
             │   └── Layout.vue # Main page

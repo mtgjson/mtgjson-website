@@ -78,6 +78,10 @@ export default {
     };
   },
   methods: {
+    emitNewData(data, count) {
+      this.$emit('updatedata', data);
+      this.$emit('updatecount', count);
+    },
     onLoadMore() {
       this.lazyOffset = this.lazyOffset + this.lazyToLoad;
 
@@ -95,8 +99,7 @@ export default {
       const dynamicData = data.slice(0, this.lazyOffset);
       const newListCount = dynamicData.length;
 
-      this.$emit('updatedata', dynamicData);
-      this.$emit('updatecount', newListCount);
+      this.emitNewData(dynamicData, newListCount);
     },
     onHandleChange() {
       // Throttle so we don't go nuts
@@ -118,8 +121,7 @@ export default {
         const dynamicData = filtered.slice(0, this.lazyOffset);
         const newListCount = dynamicData.length;
 
-        this.$emit('updatedata', dynamicData);
-        this.$emit('updatecount', newListCount);
+        this.emitNewData(dynamicData, newListCount);
 
         if(this.lazyOffset >= filtered.length){
           document.querySelector('.load-more-btn').classList.add('hide');

@@ -4,7 +4,7 @@
       h3 Our Contributors
       ul.contributors-list
         li(v-for="(contributor, key) in contributors" :key="key")
-          a(:href="contributor.url" rel="noopener noreferrer" target="_blank")
+          a(:href="contributor.url" rel="noopener noreferrer" target="_blank") {{ `${contributor.username}'s GitHub profile` }}
             img(class="lazy" :data-src="contributor.avatar" :alt="`${contributor.username}'s avatar`" :title="`${contributor.username}'s avatar`" width="48px" height="48px")
     h2 Supporters
     .supporters-wrap(v-if="patrons")
@@ -17,9 +17,8 @@
             img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`" width="77px" height="77px")
           .img-wrap.no-image(v-else)
             p {{name.substring(0, 1)}}
-          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
-            h4(v-html="name")
-          h4(v-else v-html="name")
+          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank" v-html="name")
+          p.unlinked-name(v-else v-html="name" tabindex="0")
           p.tier {{ tier }} Supporter
           p.tier-time(v-if="since" v-html="formatTime(since)")
 
@@ -34,9 +33,8 @@
             img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`" width="54px" height="54px")
           .img-wrap.no-image(v-else)
             p {{name.substring(0, 1)}}
-          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank")
-            h4(v-html="name")
-          h4(v-else v-html="name")
+          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank"  v-html="name")
+          p.unlinked-name(v-else v-html="name" tabindex="0")
 
 </template>
 
@@ -129,6 +127,7 @@ export default {
         border-radius: 50%;
         background-color: var(--light-color);
         overflow: hidden;
+        font-size: 0;
 
         img {
           float: left;
@@ -204,7 +203,7 @@ export default {
         }
       }
 
-      h4 {
+      p {
         flex: 0 0 100%;
         font-size: 16px;
         color: var(--accent-color);
@@ -212,33 +211,29 @@ export default {
         margin: 0 auto;
         padding: 0;
         line-height: 1.2rem;
-      }
-
-      p {
-        display: block;
-        flex: 0 0 100%;
-        font-size: 14px;
         line-height: 1.2em;
-
-        &:first-of-type {
-          margin-top: 10px;
-        }
-      }
-
-      h4,
-      p {
         word-wrap: anywhere;
       }
 
-      .linked-name {
+      .linked-name,
+      .unlinked-name {
         text-decoration: underline;
+        font-weight: bold;
         flex: 0 0 100%;
+
+        &:hover {
+          text-decoration: none;
+        }
+      }
+
+      .unlinked-name {
+        text-decoration: none;
       }
 
       .tier {
         text-align: center;
         flex: 0 0 100%;
-        margin: 0 auto;
+        margin: .5rem auto 0;
         font-size: 16px;
         line-height: 1.2em;
         font-weight: bold;
@@ -251,6 +246,7 @@ export default {
 
         &-time {
           margin-bottom: 0;
+          font-size: 14px;
         }
       }
     }

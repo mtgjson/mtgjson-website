@@ -32,12 +32,6 @@ sudo n 12
 
 **Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
 
-Install global dependencies. (Optional. May need admin rights.)
-
-```
-npm run boostrap
-```
-
 Install project dependencies.
 
 ```

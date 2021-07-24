@@ -46,6 +46,7 @@ module.exports = {
   ],
   plugins: [
     ['@vuepress/back-to-top'],
+    ['vuepress-plugin-nprogress'],
     ['container', { type: 'tip', defaultTitle: '' }],
     ['container', { type: 'warning', defaultTitle: '' }],
     [

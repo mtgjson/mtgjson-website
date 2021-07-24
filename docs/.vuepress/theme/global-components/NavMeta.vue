@@ -1,7 +1,7 @@
 <template lang="pug">
   .nav-meta
     .nav-meta--logo(title="MTGJSON Logo")
-      router-link(:to="$localePath")
+      router-link(:to="$localePath") MTGJSON.com
         svg(
           alt="MTGJSON Logo"
           xmlns="http://www.w3.org/2000/svg"
@@ -21,15 +21,24 @@
     .nav-meta--link.mobile-hide(v-if="!hideText")
       router-link(:to="$localePath")
         h3 MTGJSON
-      Version
+      div.version
+        router-link.version-number(v-if="version" :to="`/changelog/mtgjson-v5/`") v{{ version }}
 </template>
 
 <script>
-import Version from './Version';
 export default {
   name: "NavMeta",
-  components: { Version },
-  props: ["hideText", "hideLink", "width", "fill"]
+  props: ["hideText", "hideLink", "width", "fill"],
+  data(){
+    return {
+      version: ''
+    }
+  },
+  async created(){
+    await this.$helpers.setStoreState.apply(this, ["Meta"]);
+    this.version = this.$store.getters.Meta.version;
+
+  }
 };
 </script>
 
@@ -40,6 +49,10 @@ export default {
     align-items: center;
 
     &--logo {
+      a {
+        font-size: 0;
+      }
+
       svg {
         height: auto;
 
@@ -73,7 +86,7 @@ export default {
   position: relative;
 
   &-number {
-    font-size: 16px;
+    font-size: 12px;
     font-weight: bold;
     color: var(--gray-color);
   }
