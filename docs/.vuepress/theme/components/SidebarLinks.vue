@@ -73,7 +73,27 @@ function resolveOpenGroupIndex(route, items) {
 <style lang="scss" scoped>
 .sidebar-group-items {
   li {
-    list-style-type: circle;
+    .sidebar-link {
+      position: relative;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: -15px;
+        top: 7px;
+        border: 1px solid var(--text-color);
+        border-radius: 50%;
+        height: 4px;
+        width: 4px;
+      }
+
+      &.active {
+        &::before {
+          background-color: var(--text-color);
+        }
+      }
+    }
+
   }
 }
 </style>

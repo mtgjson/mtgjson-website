@@ -50,6 +50,11 @@
     .text-wrap {
       flex: 1;
 
+      h3 {
+        padding-bottom: 0;
+        line-height: 1.5rem;
+      }
+
       p {
         display: block;
         margin: 0;
@@ -85,51 +90,12 @@
       &--download--btn-wrap {
         display: block !important;
       }
-
-      .dl-btn {
-        text-transform: uppercase;
-      }
     }
   }
 }
 
 @media (max-width: 571px) {
   .download-tables {
-    .sorting-options {
-      .sort-rows {
-        .sort-row,
-        .sort-row.search,
-        .sort-row.checkbox {
-          margin-right: 0;
-          display: flex;
-          align-items: center;
-
-          label {
-            flex: none;
-            margin-right: 1rem;
-          }
-
-          select,
-          input {
-            margin: 5px 0 0 0;
-            display: block;
-            flex: 1;
-            max-width: 100%;
-          }
-
-          .search {
-            input {
-              width: 100%;
-            }
-          }
-
-          input[type='checkbox'] {
-            flex: none;
-          }
-        }
-      }
-    }
-
     .download-wrap {
       & > * {
         flex: 0 0 100% !important;

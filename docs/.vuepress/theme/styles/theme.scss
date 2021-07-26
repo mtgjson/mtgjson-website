@@ -59,8 +59,6 @@ a {
 
 a, .unlinked-name {
   &:focus {
-    outline: 2px solid var(--accent-color);
-    outline-offset: 2px;
     opacity: 100%;
   }
 }

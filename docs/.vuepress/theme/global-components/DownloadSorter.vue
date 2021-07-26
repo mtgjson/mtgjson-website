@@ -146,7 +146,7 @@ export default {
     margin-bottom: 1rem;
 
     .show-options {
-      display: inline-block;
+      display: block;
       padding: 0 0 1.5rem 1.25rem;
       margin-bottom: 0;
       position: relative;
@@ -231,6 +231,43 @@ export default {
 
         &:last-of-type {
           margin-bottom: 0;
+        }
+      }
+    }
+  }
+
+  @media (max-width: 571px) {
+    .sorting-options {
+      .sort-rows {
+        .sort-row,
+        .sort-row.search,
+        .sort-row.checkbox {
+          margin-right: 0;
+          display: flex;
+          align-items: center;
+
+          label {
+            flex: none;
+            margin-right: 1rem;
+          }
+
+          select,
+          input {
+            margin: 5px 0 0 0;
+            display: block;
+            flex: 1;
+            max-width: 100%;
+          }
+
+          .search {
+            input {
+              width: 100%;
+            }
+          }
+
+          input[type='checkbox'] {
+            flex: none;
+          }
         }
       }
     }

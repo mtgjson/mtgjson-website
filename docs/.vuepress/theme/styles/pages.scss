@@ -33,6 +33,13 @@
 // }
 
 // Team on Homepage
+#mtgjson {
+  & ~ .team-wrapper {
+    & > .custom-block:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
 @media (max-width: 960px) {
   #mtgjson {
     & ~ .team-wrapper {
@@ -42,6 +49,10 @@
 
       & > * {
         margin: 0;
+      }
+
+      & > .custom-block:first-of-type {
+        margin-top: 0;
       }
 
       .custom-block.tip {
