@@ -11,7 +11,7 @@
           .text-wrap
             .text-wrap--details
               h3(:id="item.name.replace(/ /g, '_')") {{ item.name }}
-              ol
+              ol.attributes
                 li(v-if="item.isPartialPreview")
                   div.spoiler spoiler
                 li(v-if="item.isOnlineOnly")
@@ -22,7 +22,7 @@
                   div.spoiler paper
                 li(v-if="item.isOnline")
                   div.spoiler online
-              ol
+              ol.details
                 li
                   small Code:
                   small &nbsp;{{ item.code }}
