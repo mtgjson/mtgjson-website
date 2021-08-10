@@ -57,12 +57,6 @@ a {
   }
 }
 
-a, .unlinked-name {
-  &:focus {
-    opacity: 100%;
-  }
-}
-
 small {
   font-size: 14px;
   line-height: 1rem;
