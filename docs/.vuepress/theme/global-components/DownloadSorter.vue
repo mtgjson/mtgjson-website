@@ -158,13 +158,12 @@ export default {
       &::before {
         left: 0;
         top: 10px;
-        border: solid transparent;
-        content: ' ';
+        content: '';
         height: 0;
         width: 0;
         position: absolute;
         pointer-events: none;
-        border-color: transparent;
+        border: solid transparent;
         border-top-color: var(--accent-color);
         border-width: 5px;
       }
@@ -173,9 +172,11 @@ export default {
         padding-bottom: 0;
 
         &::before {
-          border-top-color: transparent;
-          border-bottom-color: var(--accent-color);
-          top: 5px;
+          border-top: 5px solid transparent;
+          border-bottom: 5px solid transparent;
+          border-left: 5px solid var(--accent-color);
+          left: 2px;
+          top: 7px;
         }
       }
     }
