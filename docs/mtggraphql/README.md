@@ -50,13 +50,25 @@ The current rate limits are capped at `1,000` requests per IP Address per hour a
 
 To go along with MTGGraphQL, we have released a Typescript package for your convenience: [mtggraphql](https://www.npmjs.com/package/mtggraphql)
 
-### Example Authorization
+## Service Usage
+
+### GraphQL Playground
+
+We provide an [GraphQL Playground](https://mtgjson.com/graphql) where you can query the server and get a response. The playground consists of 3 main sections:
+
+- The top left, for your query.
+- The bottom left tabs, containing `HTTP HEADERS` for your authorization.
+- The right, which has the server response.
+
+#### Example Headers Authorization
 
 ```
-{ "authorization": "Bearer <Token>" }
+{
+  "authorization": "Bearer <Token>"
+}
 ```
 
-### Example Query
+#### Example Query
 
 ```
 query{
@@ -81,7 +93,7 @@ query{
 }
 ```
 
-### Example Response
+#### Example Response
 
 ```
 {
@@ -89,29 +101,22 @@ query{
     "cards": [
       {
         "name": "Phelddagrif",
-        "setCode": "ALL",
-        "type": "Legendary Creature — Phelddagrif",
-        "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card."
-      },
-      {
-        "name": "Phelddagrif",
         "setCode": "ME1",
         "type": "Legendary Creature — Phelddagrif",
         "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card."
-      }
+      },
+      ... // More cards
     ]
   }
 }
 ```
 
-### HTTP Request
-
-You can use an HTTP request on the mtgjson.com GraphQL endpoint with the following format:
-
-```
-https://mtgjson.com/graphql?query=query{cards(input:{name: "Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
-```
-
 ### Client-based Querying
+
+Assuming you send the proper Headers, you can use an HTTP request on the GraphQL endpoint with the following format:
+
+```
+https://mtgjson.com/graphql?query=query{cards(input:{name:"Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
+```
 
 You can utilize a tool like Apollo to make client-based calls. See the [Apollo Documentation](https://www.apollographql.com/docs/react/data/queries/) for more information.

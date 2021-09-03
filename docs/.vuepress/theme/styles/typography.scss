@@ -43,13 +43,13 @@ h2 {
 }
 
 h3 {
-  font-size: 1.2rem;
+  font-size: 1.35rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
 
 h4 {
-  font-size: 1.75rem;
+  font-size: 1rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -62,14 +62,15 @@ h5 {
 }
 
 h6 {
+  font-weight: bold;
   font-size: 1rem;
-  padding-top: 5px;
-  padding-bottom: 5px;
+  padding-top: .25rem;
+  padding-bottom: .25rem;
   color: var(--yellow-color);
 }
 
 p {
-  font-size: 16px;
+  font-size: 1rem;
 }
 
 a {

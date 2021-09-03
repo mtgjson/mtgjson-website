@@ -89,7 +89,8 @@ function resolveOpenGroupIndex(route, items) {
 
       &.active {
         &::before {
-          background-color: var(--text-color);
+          border-color: var(--accent-color);
+          background-color: var(--accent-color);
         }
       }
     }
