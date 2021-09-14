@@ -62,7 +62,7 @@ We provide an [GraphQL Playground](https://mtgjson.com/graphql) where you can qu
 
 #### Example Headers Authorization
 
-```
+```json
 {
   "authorization": "Bearer <Token>"
 }
@@ -95,7 +95,7 @@ query{
 
 #### Example Response
 
-```
+```json
 {
   "data": {
     "cards": [

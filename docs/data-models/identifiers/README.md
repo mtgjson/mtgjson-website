@@ -127,3 +127,10 @@ The Identifiers data model describes a list of identifiers associated to a card.
 > - **Type:** `string`  
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i class="optional">optional</i>
+
+> ### tcgplayerEtchedProductId
+> The [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) etched card identifier.  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>

@@ -24,7 +24,7 @@
 
 # Card (Set)
 
-The Card (Set) data model describes the properties of a single card.
+The Card (Set) data model describes the properties of a single card in a set.
 
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `cards`
@@ -114,6 +114,14 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
+> ### finishes
+> The finishes of the card.  
+>
+> - **Type:** `array[] | array[string]`  
+> - <ExampleField type='finishes'/>
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>  
+
 > ### flavorName  
 > The promotional card name printed above the true card name on special cards that has no game function. See [this card](https://scryfall.com/card/plg20/2/hangarback-walker) for an example. 
 >
@@ -162,24 +170,12 @@ The Card (Set) data model describes the properties of a single card.
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
-> ### hasFoil  
-> If the card be found in foil.  
->
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.0.0`
-
 > ### hasAlternativeDeckLimit  
 > If the card allows a value other than 4 copies in a deck.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
-
-> ### hasNonFoil  
-> If the card can be found in non-foil.  
->
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.0.0`
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  

@@ -58,9 +58,16 @@ The Purchase Urls data model describes url paths to purchase a product from a ma
 > - **Introduced:** `v4.4.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
-> ### tcgplayer  
+> ### tcgplayer
 > The URL to purchase a product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.4.0`  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### tcgplayerEtched
+> The URL to purchase an etched product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.2.0`  
 > - **Attributes:** <i class="optional">optional</i>

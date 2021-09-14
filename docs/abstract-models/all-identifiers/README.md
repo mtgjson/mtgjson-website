@@ -50,8 +50,6 @@ The All Identifiers data model describes a list of all cards organized by UUID u
     "flavorText": "He answers questions as readily as he asks them, but his answer is always \"no.\"",
     "foreignData": [],
     "frameVersion": "2015",
-    "hasFoil": true,
-    "hasNonFoil": false,
     "identifiers": {
       "cardKingdomFoilId": "206447",
       "mtgjsonV4Id": "7bf63c97-27da-516c-b722-75299370a28d",

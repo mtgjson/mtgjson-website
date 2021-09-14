@@ -24,6 +24,31 @@
 # MTGJSON Changelog
 The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.2.0
+Release Date: 2021-09-09
+
+### Card Model
+#### Added
+
+- added `finishes`
+
+#### Removed
+
+- removed `hasFoil`
+- removed `hasNonFoil`
+
+### Identifiers Model
+
+#### Added
+
+- added `tcgplayerEtchedProductId`
+
+### PurchaseUrls Model
+
+#### Added
+
+- added `tcgplayerEtched`
+
 ## 5.1.0
 Release Date: 2021-01-18
 

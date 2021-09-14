@@ -24,7 +24,7 @@
 
 # Card (Token)
 
-The Card (Token) data model describes the properties and values of a single card token.
+The Card (Token) data model describes the properties and values of a single token card.
 
 **Parent model:** [Set](/file-models/set/)  
 **Parent property:** `tokens`
@@ -101,6 +101,14 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
+> ### finishes
+> The finishes of the card.  
+>
+> - **Type:** `array[] | array[string]`  
+> - <ExampleField type='finishes'/>
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>  
+
 > ### flavorText  
 > The italicized text found below the rules text that has no game function.  
 >
@@ -120,18 +128,6 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `string`
 > - <ExampleField type='frameVersion'/>
-> - **Introduced:** `v4.0.0`
-
-> ### hasFoil  
-> If the card be found in foil.  
->
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.0.0`
-
-> ### hasNonFoil  
-> If the card can be found in non-foil  
->
-> - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
 
 > ### identifiers  
