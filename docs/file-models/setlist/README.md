@@ -38,7 +38,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 ## Model Properties
 
 > ### baseSetSize  
-> The number of cards in the set. Will default to `totalSetSize` if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
+> The number of cards in the set. This will default to [totalSetSize](#totalsetsize) if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`

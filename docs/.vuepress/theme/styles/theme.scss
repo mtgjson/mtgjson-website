@@ -134,14 +134,20 @@ blockquote {
   }
 
   i.optional,
-  i.omitted {
-    background-color: var(--yellow-color);
+  i.omitted,
+  i.deprecated {
+    background-color: var(--light-color);
     color: var(--dark-color);
 
     @extend %code-block;
   }
 
-  i.omitted {
+  i.optional {
+    background-color: var(--yellow-color);
+  }
+
+  i.omitted,
+  i.deprecated {
     background-color: var(--red-color);
   }
 

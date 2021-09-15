@@ -81,14 +81,14 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### colors  
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with `"Devoid"` in its `text`.  
+> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
 > ### convertedManaCost  
-> The converted mana cost of the card.  
+> The converted mana cost or mana value of the card.  
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
@@ -115,7 +115,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceConvertedManaCost  
-> The converted mana cost of the face of either half or part of the card.  
+> The converted mana cost or mana value of the face for either half or part of the card.  
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
@@ -129,12 +129,11 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### finishes
-> The finishes of the card.  
+> The finishes of the card.
 >
-> - **Type:** `array[] | array[string]`  
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='finishes'/>
-> - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Introduced:** `v5.2.0`
 
 > ### flavorName  
 > The promotional card name printed above the true card name on special cards that has no game function. See [this card](https://scryfall.com/card/plg20/2/hangarback-walker) for an example.
@@ -177,6 +176,13 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i class="optional">optional</i>  
 
+> ### hasAlternativeDeckLimit  
+> If the card allows a value other than 4 copies in a deck.  
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i class="optional">optional</i>  
+
 > ### hasContentWarning  
 > If the card marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content. Cards with this property may have missing or degraded properties and values. See this [official article](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10) for more information.  
 >
@@ -184,12 +190,19 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
-> ### hasAlternativeDeckLimit  
-> If the card allows a value other than 4 copies in a deck.  
+> ### hasFoil
+> If the card can be found in foil.
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Type:** `boolean`
+> - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
+
+> ### hasNonFoil
+> If the card can be found in non-foil.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
@@ -253,7 +266,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### isStarter  
-> If this card is found in a booster pack.  
+> If the card is found in a booster pack.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`  
@@ -274,7 +287,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### isTimeshifted  
-> If this card is `"timeshifted"`, a feature from Time Spiral block.  
+> If the card is `"timeshifted"`.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.1`  
@@ -315,18 +328,19 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### loyalty  
-> The loyalty value of the card. Used on Planeswalker cards.
+> The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
-> ### manaCost  
-> The mana cost of the card.  
+> ### manaCost
+> The mana cost of the card wrapped in brackets for each value.
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Type:** `string`
+> - **Example:** `"{1}{B}"`
+> - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
@@ -376,7 +390,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### printings  
-> A list of set codes the card was printed in, formatted in uppercase.  
+> A list of set printing codes the card was printed in, formatted in uppercase.  
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v4.0.0`  
@@ -410,7 +424,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
-> The set code that the card is from.  
+> The set printing code that the card is from.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`

@@ -79,14 +79,14 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### colors  
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with `"Devoid"` in its `text`.  
+> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
 > ### convertedManaCost  
-> The converted mana cost of the card.  
+> The converted mana cost or mana value of the card.  
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
@@ -99,7 +99,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceConvertedManaCost  
-> The converted mana cost of the face of either half or part of the card.  
+> The converted mana cost or mana value for the face of either half or part of the card.  
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
@@ -180,18 +180,19 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### loyalty  
-> The loyalty value of the card. Used on Planeswalker cards.
+> The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
-> ### manaCost  
-> The mana cost of the card.  
+> ### manaCost
+> The mana cost of the card wrapped in brackets for each value.
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Type:** `string`
+> - **Example:** `"{1}{B}"`
+> - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
@@ -208,7 +209,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### printings  
-> A list of set codes the card was printed in, formatted in uppercase.  
+> A list of set printing codes the card was printed in, formatted in uppercase.  
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v4.0.0`  

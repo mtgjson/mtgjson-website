@@ -81,7 +81,7 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### colors  
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with `"Devoid"` in its `text`.  
+> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
@@ -102,12 +102,11 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### finishes
-> The finishes of the card.  
+> The finishes of the card.
 >
-> - **Type:** `array[] | array[string]`  
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='finishes'/>
-> - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Introduced:** `v5.2.0`
 
 > ### flavorText  
 > The italicized text found below the rules text that has no game function.  
@@ -129,6 +128,20 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Type:** `string`
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
+
+> ### hasFoil
+> If the card can be found in foil.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
+
+> ### hasNonFoil
+> If the card can be found in non-foil.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
@@ -179,7 +192,7 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Introduced:** `v4.0.0`
 
 > ### loyalty  
-> The loyalty value of the card. Used on Planeswalker cards. 
+> The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -220,7 +233,7 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Introduced:** `v4.0.0`
 
 > ### setCode  
-> The set code of the card.  
+> The set printing code that the card is from.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
