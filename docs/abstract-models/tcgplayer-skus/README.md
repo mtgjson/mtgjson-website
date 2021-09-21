@@ -34,6 +34,7 @@ The TCGplayer SKUs data model describes [TCGplayer](https://www.tcgplayer.com/?p
   "<Card UUID>": [
     {
       "condition": "<String>",
+      "finish": "<String>",
       "language": "<String>",
       "printing": "<String>",
       "productId": <Int>,

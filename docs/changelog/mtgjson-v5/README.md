@@ -27,22 +27,55 @@ The following is the MTGJSON Application Changelog. Some parts may be updated fo
 ## 5.2.0
 Release Date: 2021-09-09
 
-### Card (Deck, Set, Token) Model
+### Card Models
+
+#### Fixed
+
+- Fixed MDFC cards having the wrong mana value on its face.
+- Fixed support for Dungeon cards
 #### Added
 
-- added `finishes` property
+- Added `finishes` property to [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/) models
+- Added `manaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
+- Added `faceManaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
+
+### Foreign Data Model
+
+#### Fixed
+
+- Fixed an issue where `foreignData` was not getting set
 
 ### Identifiers Model
 
 #### Added
 
-- added `tcgplayerEtchedProductId` property
+- Added `tcgplayerEtchedProductId` property
+- Added `cardKingdomeEtechedId` property
 
 ### PurchaseUrls Model
 
 #### Added
 
-- added `tcgplayerEtched` property
+- Added `tcgplayerEtched` property
+- Added `cardKingdomEtched` property
+
+### Enum Values File
+
+#### Added
+
+- Added `finishes` property to `card`
+
+### Keywords File
+
+#### Fixed
+
+- Fixed `ailityWords` showing wrong values
+
+### TCGPlayer SKUs File
+
+#### Added
+
+- Added optional `finish` property
 
 ## 5.1.0
 Release Date: 2021-01-18

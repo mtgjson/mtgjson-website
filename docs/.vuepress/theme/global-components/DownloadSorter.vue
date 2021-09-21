@@ -66,8 +66,8 @@ export default {
   props: ['list', 'filters', 'noChecks'],
   data() {
     return {
-      lazyOffset: 25,
-      lazyToLoad: 25,
+      lazyOffset: this.$lazyOffset,
+      lazyToLoad: this.$lazyOffset,
       filterKey: "",
       searchKey: "",
       spoilerKey: true,

@@ -52,7 +52,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > - **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 
 > ### How do I access a card's imagery?
-> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) API's using the MTGJSON a property from the [Identifiers](../data-models/identifiers/) data model within the various Card data models.
+> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) API's using the MTGJSON a property from the [Identifiers](/data-models/identifiers/) data model within the various Card data models.
 >
 > - **Scryfall:** `https://api.scryfall.com/cards/${scryfallId}?format=image`
 > - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
@@ -62,7 +62,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > For [Scryfall](https://scryfall.com/), to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
 
 > ### How can I access a card's set imagery?
-> The `keyruneCode` property from the [Set](../file-models/set/) file model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
+> The `keyruneCode` property from the [Set](/file-models/set/) file model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
 > Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API.  
 >
@@ -76,7 +76,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > **Note:** Depending on your use case, this can be enough data to get the information you need, otherwise you can use those cards to access their `otherFaceIds` to get the card you need by comparing the data that you have already.
 
 > ### What information is in AtomicCards?
-> [AtomicCards](/downloads/all-files/#atomiccards) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `convertedManaCost`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
+> [AtomicCards](/downloads/all-files/#atomiccards) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
 > For a full list of properties, see the [Card (Atomic)](/file-models/card-atomic/) data model documentation.
 >

@@ -54,7 +54,7 @@ To go along with MTGGraphQL, we have released a Typescript package for your conv
 
 ### GraphQL Playground
 
-We provide an [GraphQL Playground](https://mtgjson.com/graphql) where you can query the server and get a response. The playground consists of 3 main sections:
+We provide a [GraphQL Playground](https://mtgjson.com/graphql) where you can query the server and get a response. The playground consists of 3 main sections:
 
 - The top left, for your query.
 - The bottom left tabs, containing `HTTP HEADERS` for your authorization.

@@ -26,7 +26,7 @@
 
 The Purchase Urls data model describes url paths to purchase a product from a marketplace.
   
-**Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
+**Parent model:** [Card (Atomic)](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `purchaseUrls`
 
 ## Model Index
@@ -37,8 +37,15 @@ The Purchase Urls data model describes url paths to purchase a product from a ma
 
 ## Model Properties
 
-> ### cardKingdom  
+> ### cardKingdom
 > The URL to purchase a product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### cardKingdomEtched
+> The URL to purchase an etched product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  

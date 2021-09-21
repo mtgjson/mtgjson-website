@@ -116,7 +116,7 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### frameEffects  
-> The visual frame effect.  
+> The visual frame effects.  
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='frameEffects'/>
@@ -134,14 +134,14 @@ The Card (Token) data model describes the properties and values of a single toke
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
 
 > ### hasNonFoil
 > If the card can be found in non-foil.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  

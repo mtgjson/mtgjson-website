@@ -24,7 +24,7 @@
 
 # Set List
 
-The Set List file model describes a metadata-like structure that holds top-level information about a [Set](../set/).
+The Set List file model describes a metadata-like structure that holds top-level information about a [Set](/file-models/set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`
@@ -98,7 +98,8 @@ The Set List file model describes a metadata-like structure that holds top-level
 
 > ### isPartialPreview  
 > If the set is still in preview (spoiled). Preview sets do not have complete data.
-> - **Type:** `boolean`  
+>
+> - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i class="optional">optional</i>
 

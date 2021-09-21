@@ -43,9 +43,8 @@ export default {
     this.allAnchors = Array.from(
       document.querySelectorAll(".table-of-contents li a")
     );
-    this.propertyBlocks = Array.from(propertyBlocks);
-    this.hiddenAnchors = [];
 
+    this.propertyBlocks = Array.from(propertyBlocks);
     this.propertyBlocks.forEach((block) => {
       this.hiddenAnchors.push(block.children[0].id);
     });

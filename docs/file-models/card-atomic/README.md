@@ -90,6 +90,7 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">Deprecated in v6.0.0</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -98,19 +99,26 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Introduced:** `v4.5.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
-> ### faceConvertedManaCost  
-> The converted mana cost or mana value for the face of either half or part of the card.  
+> ### faceConvertedManaCost
+> The converted mana cost or mana value for the face of either half or part of the card.
+>
+> - **Type:** `float`
+> - **Introduced:** `v4.1.1`
+> - **Attributes:** <i class="optional">optional</i><i class="deprecated">Deprecated in v6.0.0</i>
+
+> ### faceManaValue  
+> The mana value of the face for either half or part of the card.  
 >
 > - **Type:** `float`  
-> - **Introduced:** `v4.1.1`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### faceName  
 > The name on the face of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
@@ -193,6 +201,12 @@ Card (Atomic) objects are accessed from a **single index array** with the proper
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
 > - **Attributes:** <i class="optional">optional</i>
+
+> ### manaValue
+> The mana value of the card.  
+>
+> - **Type:** `float`  
+> - **Introduced:** `v4.0.0`
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.

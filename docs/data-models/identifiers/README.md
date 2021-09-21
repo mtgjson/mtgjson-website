@@ -26,7 +26,7 @@
 
 The Identifiers data model describes a list of identifiers associated to a card.
 
-**Parent model:** [Card (Deck)](../card-deck/), [Card (Set)](../card-set/), [Card (Token)](../card-token/)  
+**Parent model:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)  
 **Parent property:** `identifiers`
 
 ## Model Index
@@ -37,8 +37,15 @@ The Identifiers data model describes a list of identifiers associated to a card.
 
 ## Model Properties
 
+> ### cardKingdomEtchedId
+> The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) etched card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
+
 > ### cardKingdomFoilId  
-> The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) card foil identifier.  
+> The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) foil card identifier.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  

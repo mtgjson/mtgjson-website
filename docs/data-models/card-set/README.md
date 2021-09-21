@@ -92,6 +92,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">Deprecated in v6.0.0</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -105,7 +106,14 @@ The Card (Set) data model describes the properties of a single card in a set.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i><i class="deprecated">Deprecated in v6.0.0</i>
+
+> ### faceManaValue  
+> The mana value of the face for either half or part of the card.  
+>
+> - **Type:** `float`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### faceName  
 > The name on the face of the card.
@@ -142,7 +150,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects  
-> The visual frame effect.  
+> The visual frame effects.  
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='frameEffects'/>
@@ -181,14 +189,14 @@ The Card (Set) data model describes the properties of a single card in a set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
 
 > ### hasNonFoil
 > If the card can be found in non-foil.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
@@ -321,6 +329,12 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
 > - **Attributes:** <i class="optional">optional</i>
+
+> ### manaValue
+> The mana value of the card.  
+>
+> - **Type:** `float`  
+> - **Introduced:** `v4.0.0`
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.  

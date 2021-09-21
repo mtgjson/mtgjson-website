@@ -49,7 +49,7 @@ export default {
       defaultList: [],
       dynamicList: [],
       listFilters: [],
-      lazyOffset: 25,
+      lazyOffset: this.$lazyOffset,
       resultsLength: 0,
       resultsTotalLength: 0,
       sortKey: "releaseDate:true"
