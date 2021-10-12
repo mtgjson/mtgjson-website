@@ -425,7 +425,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Introduced:** `v4.4.0`
 
 > ### rarity  
-> The card printing rarity.  
+> The card printing rarity.
 >
 > - **Type:** `string`
 > - <ExampleField type='rarity'/>

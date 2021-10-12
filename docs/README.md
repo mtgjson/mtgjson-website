@@ -42,12 +42,12 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
 </p>
 :::
 
-::: tip Mark - Cloud Developer
+<!-- ::: tip Mark - Cloud Developer
 <p>
   <img class="avatar" src="/images/avatars/avatar-mark.jpg" title="Mark's avatar" alt="Mark's avatar" width="100px" height="100px">
   Mark is an old man obsessed with learning anything he can, a self-proclaimed Jack of All Trades, yet Master of None. He spends his time gaming, writing, farming, cuddling with his dogs, and providing comedic relief.
 </p>
-:::
+::: -->
 
 ::: tip Milo - GraphQL Developer
 <p>

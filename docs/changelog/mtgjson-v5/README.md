@@ -25,16 +25,20 @@
 The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.2.0
-Release Date: 2021-09-09
+Release Date: 2021-10-18
 
 ### Card Models
 
 #### Fixed
 
-- Fixed MDFC cards having the wrong mana value on its face.
-- Fixed support for Dungeon cards
+- Fixed MDFC cards having the wrong mana value on its face
+- Fixed "Grist, the Hunger Tide" not being a valid commander card
+- Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
+- Fixed `hasAlternativeDeckLimit` for "Seven Dwarves" card
+
 #### Added
 
+- Added support for "Dungeon" cards in `*Atomic` files
 - Added `finishes` property to [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/) models
 - Added `manaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
 - Added `faceManaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
@@ -43,7 +47,8 @@ Release Date: 2021-09-09
 
 #### Fixed
 
-- Fixed an issue where `foreignData` was not getting set
+- Fixed an issue where data was not getting set at all
+- Fixed and issue where flavor names were not set correctly
 
 ### Identifiers Model
 
@@ -75,7 +80,7 @@ Release Date: 2021-09-09
 
 #### Added
 
-- Added optional `finish` property
+- Added `finishes` property
 
 ## 5.1.0
 Release Date: 2021-01-18
