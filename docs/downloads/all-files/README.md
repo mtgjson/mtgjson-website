@@ -129,7 +129,7 @@ All outputted files to download provided by MTGJSON.
 > <DownloadField fileName='Pioneer'/>
 
 > ### PioneerAtomic
-> File containing all actomic ards, restricted to cards legal in the Pioneer format.
+> File containing all atomic cards, restricted to cards legal in the Pioneer format.
 >
 > <DownloadField fileName='PioneerAtomic'/>
 
