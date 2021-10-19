@@ -244,7 +244,14 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### signature
+> The names of the signatures on the card.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  

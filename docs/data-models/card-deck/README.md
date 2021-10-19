@@ -425,7 +425,7 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Introduced:** `v4.4.0`
 
 > ### rarity  
-> The card printing rarity.
+> The card printing rarity. Rarity `bonus` relates to cards that have an alternate availability in booster packs, while `special` relates to "Timeshifted" cards.
 >
 > - **Type:** `string`
 > - <ExampleField type='rarity'/>
@@ -449,7 +449,14 @@ The Card (Deck) data model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### signature
+> The names of the signatures on the card.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  

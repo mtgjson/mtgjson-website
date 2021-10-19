@@ -30,19 +30,19 @@ The Card (Atomic) file model describes the a single atomic card, an oracle-like 
 **Parent property:** `data`  
 
 ::: tip
-Card (Atomic) objects are accessed from a **single index array** with the property name being the card's name.
+Card (Atomic) objects are accessed via a **single object property** with the property name being the card's name.
 
 **Example:**
 
 ```json
 {
-  "data": {
+  data: {
     "Dark Ritual": [
       <Card (Atomic) Model>
     ],
     ... // More cards
   },
-  "meta": <Meta Model> 
+  meta: <Meta Model> 
 }
 ```
 

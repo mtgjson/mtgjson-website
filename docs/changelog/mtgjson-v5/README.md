@@ -25,7 +25,7 @@
 The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.2.0
-Release Date: 2021-10-18
+Release Date: 2021-10-25
 
 ### Card Models
 
@@ -35,6 +35,7 @@ Release Date: 2021-10-18
 - Fixed "Grist, the Hunger Tide" not being a valid commander card
 - Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
 - Fixed `hasAlternativeDeckLimit` for "Seven Dwarves" card
+- Fixed an issue where flavor names were not set correctly for certain foreign cards
 
 #### Added
 
@@ -42,13 +43,13 @@ Release Date: 2021-10-18
 - Added `finishes` property to [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/) models
 - Added `manaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
 - Added `faceManaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
+- Added `signature` property to all Card models. This also updates `finishes` to include "signed"
 
 ### Foreign Data Model
 
 #### Fixed
 
 - Fixed an issue where data was not getting set at all
-- Fixed and issue where flavor names were not set correctly
 
 ### Identifiers Model
 
@@ -63,6 +64,16 @@ Release Date: 2021-10-18
 
 - Added `tcgplayerEtched` property
 - Added `cardKingdomEtched` property
+
+### Legalities Model
+
+#### Added
+
+- Added `gladiator` property
+- Added `historicbrawl` property
+- Added `oldschool` property
+- Added `paupercommander` property
+- Added `premodern` property
 
 ### Enum Values File
 

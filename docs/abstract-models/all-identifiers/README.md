@@ -22,16 +22,16 @@
 
 # All Identifiers
 
-The All Identifiers data model describes a list of all cards organized by UUID using the [Card (Set)](/data-models/card-set/) data model.
+The All Identifiers abstract data model describes a list of all cards organized by MTGJSON Card UUID using the [Card (Set)](/data-models/card-set/) data model.
 
 **Parent file:** [AllIdentifiers](/downloads/all-files/#allidentifiers)  
 **Parent property:** `data`
 
-## File Structure Overview
+## Structure Overview
 
 ```json
 {
-  "<Card UUID>": <Card (Set) Model>
+  <MTGJSON Card UUID>: <Card (Set) Model>
 }
 ```
 
@@ -39,66 +39,90 @@ The All Identifiers data model describes a list of all cards organized by UUID u
 
 ```json
 {
-  "00010d56-fe38-5e35-8aed-518019aa36a5": {
-    "artist": "Lius Lasahido",
-    "availability": ["paper"],
-    "borderColor": "black",
-    "colorIdentity": ["U"],
-    "colors": ["U"],
-    "convertedManaCost": 7.0,
-    "edhrecRank": 2932,
-    "finishes": ["foil"],
-    "flavorText": "He answers questions as readily as he asks them, but his answer is always \"no.\"",
-    "foreignData": [],
-    "frameVersion": "2015",
-    "hasFoil": true,
-    "hasNonFoil": false,
-    "identifiers": {
-      "cardKingdomFoilId": "206447",
-      "mtgjsonV4Id": "7bf63c97-27da-516c-b722-75299370a28d",
-      "scryfallId": "f6555d1f-d4cf-41f7-99d3-88fd53e75457",
-      "scryfallIllustrationId": "414c0cef-4fd9-4515-b602-91c206c33a3d",
-      "scryfallOracleId": "d4246e4d-390d-4925-a5a8-89cd096a237c",
-      "tcgplayerProductId": "111268"
-    },
-    "isPromo": true,
-    "isReprint": true,
-    "isStarter": true,
-    "keywords": ["Flying", "Hexproof"],
-    "layout": "normal",
-    "legalities": {
-      "commander": "Legal",
-      "duel": "Legal",
-      "legacy": "Legal",
-      "modern": "Legal",
-      "pioneer": "Legal",
-      "vintage": "Legal"
-    },
-    "manaCost": "{5}{U}{U}",
-    "name": "Sphinx of the Final Word",
-    "number": "63s",
-    "power": "5",
-    "printings": ["OGW", "POGW"],
-    "promoTypes": ["datestamped", "prerelease", "setpromo"],
-    "purchaseUrls": {
-      "cardKingdomFoil": "https://mtgjson.com/links/cf9936d3fed16d63",
-      "tcgplayer": "https://mtgjson.com/links/f81cadeb87698023"
-    },
-    "rarity": "mythic",
-    "rulings": [
-      {
-        "date": "2016-01-22",
-        "text": "A spell that can’t be countered can still be targeted by spells or abilities that would counter it. The part of their effect that would counter the spell won’t do anything, but any other effects those spells or abilities may have will still happen, if applicable."
-      }
+  84d2e61d-46ef-5fa7-aeff-7a4cd8db71c8: {
+    artist: "Jarel Threat",
+    availability: [
+      "arena",
+      "mtgo",
+      "paper"
     ],
-    "setCode": "POGW",
-    "subtypes": ["Sphinx"],
-    "supertypes": [],
-    "text": "This spell can't be countered.\nFlying, hexproof\nInstant and sorcery spells you control can't be countered.",
-    "toughness": "5",
-    "type": "Creature — Sphinx",
-    "types": ["Creature"],
-    "uuid": "00010d56-fe38-5e35-8aed-518019aa36a5"
+    borderColor: "black",
+    colorIdentity: [
+      "W"
+    ],
+    colors: [
+      "W"
+    ],
+    convertedManaCost: 2,
+    edhrecRank: 14032,
+    finishes: [
+      "nonfoil",
+      "foil"
+    ],
+    flavorText: "The weight of this magic weapon falls heavy on the wicked.",
+    foreignData: [],
+    frameVersion: "2015",
+    hasFoil: true,
+    hasNonFoil: true,
+    identifiers: {
+      cardKingdomFoilId: "248423",
+      cardKingdomId: "248071",
+      mcmId: "571299",
+      mcmMetaId: "343730",
+      mtgArenaId: "77106",
+      mtgjsonV4Id: "49ad4ebe-75b7-57b1-9716-db565edca0d0",
+      mtgoId: "91504",
+      scryfallId: "e882c9f9-bf30-46b6-bedc-379d2c80e5cb",
+      scryfallIllustrationId: "444cd469-4a05-4a58-a098-8af8a7b0f886",
+      scryfallOracleId: "629fe1be-272d-465f-b9b1-2ce177410f13",
+      tcgplayerProductId: "243201"
+    },
+    keywords: [
+      "Equip"
+    ],
+    layout: "normal",
+    legalities: {
+      brawl: "Legal",
+      commander: "Legal",
+      duel: "Legal",
+      future: "Legal",
+      gladiator: "Legal",
+      historic: "Legal",
+      historicbrawl: "Legal",
+      legacy: "Legal",
+      modern: "Legal",
+      pauper: "Legal",
+      penny: "Legal",
+      pioneer: "Legal",
+      standard: "Legal",
+      vintage: "Legal"
+    },
+    manaCost: "{1}{W}",
+    manaValue: 2,
+    name: "+2 Mace",
+    number: "1",
+    printings: [
+      "AFR"
+    ],
+    purchaseUrls: {
+      cardKingdom: "https://mtgjson.com/links/2466db20a07b5a89",
+      cardKingdomFoil: "https://mtgjson.com/links/60eeaa7b611aa07c",
+      cardmarket: "https://mtgjson.com/links/416d2f3c4583aac5",
+      tcgplayer: "https://mtgjson.com/links/2254f000ff7f8516"
+    },
+    rarity: "common",
+    rulings: [],
+    setCode: "AFR",
+    subtypes: [
+      "Equipment"
+    ],
+    supertypes: [],
+    text: "Equipped creature gets +2/+2. Equip {3} ({3}: Attach to target creature you control. Equip only as a sorcery.)",
+    type: "Artifact — Equipment",
+    types: [
+      "Artifact"
+    ],
+    uuid: "84d2e61d-46ef-5fa7-aeff-7a4cd8db71c8"
   }
 }
 ```

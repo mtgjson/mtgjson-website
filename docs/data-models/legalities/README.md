@@ -37,19 +37,15 @@ The Legalities data model describes a list of legalities in play formats for a s
 
 ## Model Properties
 
-::: warning
-Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an example of a returned data model.
-:::
-
 > ### brawl
-> Sol Ring is not legal in the Brawl play format.
+> If the card is legal in the Brawl play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### commander
-> Sol Ring is legal in the Commander play format.
+> If the card is legal in the Commander play format.
 >
 > - **Type:** `string`
 > - **Example:** `"Legal"`
@@ -57,7 +53,7 @@ Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an exam
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### duel
-> Sol Ring is banned in the Duel Commander play format.
+> If the card is legal in the Duel Commander play format.
 >
 > - **Type:** `string`
 > - **Example:** `"Banned"`
@@ -65,28 +61,42 @@ Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an exam
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### future
-> Sol Ring is not legal in the Future play format.
+> If the card is legal in the Future play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### frontier
-> Sol Ring is not legal in the Frontier play format.
+> If the card is legal in the Frontier play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### gladiator
+> If the card is legal in the Gladiator play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### historic
-> Sol Ring is not legal in the Historic play format.
+> If the card is legal in the Historic play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### historicbrawl
+> If the card is legal in the Historic Brawl play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### legacy
-> Sol Ring is banned in the Legacy play format.
+> If the card is legal in the Legacy play format.
 >
 > - **Type:** `string`
 > - **Example:** `"Banned"`
@@ -94,42 +104,63 @@ Below, [Sol Ring](https://scryfall.com/card/c18/222/sol-ring) is used as an exam
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### modern
-> Sol Ring is not legal in the Modern play format.
+> If the card is legal in the Modern play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### oldschool
+> If the card is legal in the Old School play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### pauper
-> Sol Ring is not legal in the Pauper play format.
+> If the card is legal in the Pauper play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### paupercommander
+> If the card is legal in the Pauper Commander play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### penny
-> Sol Ring is not legal in the Penny play format.
+> If the card is legal in the Penny play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### pioneer
-> Sol Ring is not legal in the Pioneer play format.
+> If the card is legal in the Pioneer play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### premodern
+> If the card is legal in the Pre-Modern play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.6.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### standard
-> Sol Ring is not legal in the Standard play format.
+> If the card is legal in the Standard play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="optional">optional</i><i class="omitted">omitted</i>
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### vintage
-> Sol Ring is restricted in the Vintage play format.
+> If the card is legal in the Vintage play format.
 >
 > - **Type:** `string`
 > - **Example:** `"Restricted"`
