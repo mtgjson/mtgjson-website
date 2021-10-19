@@ -74,7 +74,7 @@ Release Date: 2021-10-18
 
 #### Fixed
 
-- Fixed `ailityWords` showing wrong values
+- Fixed `abilityWords` showing wrong values
 
 ### TCGPlayer SKUs File
 
