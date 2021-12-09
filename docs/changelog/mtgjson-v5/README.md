@@ -25,12 +25,13 @@
 The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.2.0
-Release Date: 2021-10-25
+Release Date: 2021-12-09
 
 ### Card Models
 
 #### Fixed
 
+- Fixed duplicate UUID's on [Card (Token)](/data-models/card-token/) model for "AAFR" tokens
 - Fixed MDFC cards having the wrong mana value on its face
 - Fixed "Grist, the Hunger Tide" not being a valid commander card
 - Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
@@ -39,10 +40,12 @@ Release Date: 2021-10-25
 
 #### Added
 
+- Added clarity for new `special` and `bonus` rarities
 - Added support for "Dungeon" cards in `*Atomic` files
 - Added `finishes` property to [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/) models
 - Added `manaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
 - Added `faceManaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
+- Added `faceFlavorName` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
 - Added `signature` property to all Card models. This also updates `finishes` to include "signed"
 
 ### Foreign Data Model

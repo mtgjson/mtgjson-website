@@ -101,6 +101,13 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
+> ### faceFlavorName
+> The flavor name on the face of the card.
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
+
 > ### finishes
 > The finishes of the card.
 >

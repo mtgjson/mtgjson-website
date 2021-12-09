@@ -1,5 +1,6 @@
 <template lang="pug">
   .download-links
+    //- AllPrintings. Uses multiple file types including SQL
     select(v-if="fileName === 'AllPrintings'" @change="downloadFile")
       option Select a file to download
       optgroup(label="JSON")
@@ -14,17 +15,20 @@
         option(v-if="format === 'sqlite'" v-for="(format, key) in sqliteFormats" :key="`sqlite-${key + format}`" :value="`${$api}${fileName}.sqlite`") {{ `${fileName}.sqlite` }}
       optgroup(label="SQLite Compressed")
         option(v-if="format !== 'sqlite'" v-for="(format, key) in sqliteFormats" :key="`sqlite-${key + format}`" :value="`${$api}${fileName}.sqlite.${format}`") {{ `${fileName}.sqlite.${format}` }}
+    //- Files. Uses compressed formats
     select(v-else-if="fileName.includes('Files')" @change="downloadFile")
       option Select a file to download
       optgroup(label="Files Compressed")
         option(v-if="format === 'zip'" v-for="(format, key) in fileFormats" :key="`file-${key + format}`" :value="`${$api}${fileName}.zip`") {{ `${fileName}.zip` }}
         option(v-if="format !== 'zip'" v-for="(format, key) in fileFormats" :key="`file-${key + format}`" :value="`${$api}${fileName}.tar.${format}`") {{ `${fileName}.tar.${format}` }}
+    //- Decks. Uses a specific path
     select(v-else-if="fileType === 'AllDecks'" @change="downloadFile")
       option Select a file to download
       optgroup(label="JSON")
         option(v-if="format === 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}decks/${fileName}.json`") {{ `${fileName}.json` }}
       optgroup(label="JSON Compressed")
         option(v-if="format !== 'json'" v-for="(format, key) in jsonFormats" :key="`json-${key + format}`" :value="`${$api}decks/${fileName}.json.${format}`") {{ `${fileName}.json.${format}` }}
+    //- All otheres.
     select(v-else @change="downloadFile")
       option Select a file to download
       optgroup(label="JSON")
@@ -49,7 +53,7 @@ export default {
   methods: {
     /**
      * It is worth noting here that, locally, when downloading a regular JSON file
-     * the browser will attempt to open it in itself, this has to to with x-origin
+     * the browser will attempt to open it in itself, this has to do with x-origin
      * issues and should not be the case when live on the server.
      */
     downloadFile(e){

@@ -33,18 +33,20 @@
                   small Release Date:
                   small &nbsp;{{ item.releaseDate }}
             .text-wrap--downloads
-              DownloadField(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
+              DownloadSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
+              //- DownloadButtonsList(:fileName="item.fileName ? item.fileName : item.code")
       .load-more-container
         button.load-more-btn.cta-btn(v-show="canLoadMore" @click="onLoadMore") Show More
         button.load-more-btn.cta-btn(v-show="canLoadAll" @click="onLoadAll") Show All
 </template>
 
 <script>
-import DownloadField from "./DownloadField";
+import DownloadSelect from "./DownloadSelect";
+import DownloadButtonsList from "./DownloadButtonsList.vue";
 import DownloadSorter from "./DownloadSorter";
 export default {
   name: "DownloadList",
-  components: { DownloadField, DownloadSorter },
+  components: { DownloadSelect, DownloadButtonsList, DownloadSorter },
   props: [ 'file', 'type', 'disableChecks' ],
   data() {
     return {

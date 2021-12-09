@@ -108,6 +108,13 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Introduced:** `v4.1.1`  
 > - **Attributes:** <i class="optional">optional</i><i class="deprecated">Deprecated in v6.0.0</i>
 
+> ### faceFlavorName
+> The flavor name on the face of the card.
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
+
 > ### faceManaValue  
 > The mana value of the face for either half or part of the card.  
 >
