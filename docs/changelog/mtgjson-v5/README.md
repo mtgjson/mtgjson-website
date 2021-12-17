@@ -31,6 +31,7 @@ Release Date: 2021-12-09
 
 #### Fixed
 
+- Fixed an issue where `releaseDate` was not getting set on "flip" cards
 - Fixed duplicate UUID's on [Card (Token)](/data-models/card-token/) model for "AAFR" tokens
 - Fixed MDFC cards having the wrong mana value on its face
 - Fixed "Grist, the Hunger Tide" not being a valid commander card
@@ -40,6 +41,7 @@ Release Date: 2021-12-09
 
 #### Added
 
+- Added `reversable_card` value to the `layout` property
 - Added clarity for new `special` and `bonus` rarities
 - Added support for "Dungeon" cards in `*Atomic` files
 - Added `finishes` property to [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/) models

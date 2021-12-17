@@ -33,7 +33,8 @@
                   small Release Date:
                   small &nbsp;{{ item.releaseDate }}
             .text-wrap--downloads
-              DownloadSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
+              DownloadNativeSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
+              //- DownloadSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
               //- DownloadButtonsList(:fileName="item.fileName ? item.fileName : item.code")
       .load-more-container
         button.load-more-btn.cta-btn(v-show="canLoadMore" @click="onLoadMore") Show More
@@ -41,12 +42,13 @@
 </template>
 
 <script>
-import DownloadSelect from "./DownloadSelect";
-import DownloadButtonsList from "./DownloadButtonsList.vue";
+// import DownloadButtonsList from "./DownloadButtonsList.vue";
+// import DownloadSelect from "./DownloadSelect";
+import DownloadNativeSelect from "./DownloadNativeSelect";
 import DownloadSorter from "./DownloadSorter";
 export default {
   name: "DownloadList",
-  components: { DownloadSelect, DownloadButtonsList, DownloadSorter },
+  components: { /*DownloadSelect, DownloadButtonsList,*/ DownloadNativeSelect, DownloadSorter },
   props: [ 'file', 'type', 'disableChecks' ],
   data() {
     return {
