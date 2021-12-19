@@ -223,7 +223,14 @@ The Card (Set) data model describes the properties of a single card in a set.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### isFunny  
+> If the card is part of a funny set.
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
 > If the card is only available in [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
@@ -423,6 +430,14 @@ The Card (Set) data model describes the properties of a single card in a set.
 >
 > - **Type:** `array[] | array[object]`  
 > - **Introduced:** `v4.0.0`
+
+> ### securityStamp
+> The security stamp printed on the card.
+>
+> - **Type:** `string`
+> - <ExampleField type='securityStamp'/>
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### setCode  
 > The set printing code that the card is from.

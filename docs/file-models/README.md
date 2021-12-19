@@ -27,9 +27,9 @@ The "Web API" or more commonly known as "files" that MTGJSON.com provides varies
 
 - **AllPrintings**: Serves all set data using the [Set](/file-models/set/) file model.
 - **AllIdentifiers**: Serves all card data using the [Card (Set)](/data-models/card-set/) data model.
-- **AtomicCards**: Serves all card data using the [Card (Atomic)](/file-models/card-atomic/) data model.
+- **AtomicCards**: Serves all card data using the [Card (Atomic)](/data-models/card-atomic/) data model.
 - **[Format]**: Serves variable set data using the [Set](/file-models/set/) file model.
-- **[Format]Atomic**: Serves variable card data using [Card (Atomic)](/file-models/card-atomic/) data model.
+- **[Format]Atomic**: Serves variable card data using [Card (Atomic)](/data-models/card-atomic/) data model.
 - Other files serve specific data using data models such as the [Deck](/file-models/deck/), [All Prices](/abstract-models/all-prices/) or other abstract data models.
 </br>
 </br>

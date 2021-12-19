@@ -78,7 +78,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > ### What information is in AtomicCards?
 > [AtomicCards](/downloads/all-files/#atomiccards) only contains oracle information for each card. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
-> For a full list of properties, see the [Card (Atomic)](/file-models/card-atomic/) data model documentation.
+> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation.
 >
 > **Note:** Depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 

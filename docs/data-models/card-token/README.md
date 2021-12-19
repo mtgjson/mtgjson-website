@@ -161,7 +161,14 @@ The Card (Token) data model describes the properties and values of a single toke
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### isFunny  
+> If the card is part of a funny set.
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
 > If the card is only available in [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
@@ -218,6 +225,12 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
+> ### otherFaceIds  
+> A list of UUID's of this card with counterparts, such as transformed or melded faces.  
+>
+> - **Type:** `array[] | array[string]`  
+> - **Introduced:** `v4.6.1`
+
 > ### power  
 > The power of the card.  
 >
@@ -238,6 +251,14 @@ The Card (Token) data model describes the properties and values of a single toke
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v4.0.0`
+
+> ### securityStamp
+> The security stamp printed on the card.
+>
+> - **Type:** `string`
+> - <ExampleField type='securityStamp'/>
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### setCode  
 > The set printing code that the card is from.

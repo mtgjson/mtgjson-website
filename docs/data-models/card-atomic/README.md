@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Atomic) file model documentation.",
+      "content": "Card (Atomic) data model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Card (Atomic) file model documentation.",
+      "content": "Card (Atomic) data model documentation.",
     },
     {
       "name": "keywords",
@@ -24,29 +24,10 @@
 
 # Card (Atomic)
 
-The Card (Atomic) file model describes the a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
+The Card (Atomic) data model describes the a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
 
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
-
-::: tip
-Card (Atomic) objects are accessed via a **single object property** with the property name being the card's name.
-
-**Example:**
-
-```json
-{
-  data: {
-    "Dark Ritual": [
-      <Card (Atomic) Model>
-    ],
-    ... // More cards
-  },
-  meta: <Meta Model> 
-}
-```
-
-:::
 
 ## Model Index
 
@@ -145,6 +126,13 @@ Card (Atomic) objects are accessed via a **single object property** with the pro
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`
+
+> ### isFunny  
+> If the card is part of a funny set.
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isReserved  
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).  

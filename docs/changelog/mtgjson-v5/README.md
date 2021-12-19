@@ -31,24 +31,26 @@ Release Date: 2021-12-09
 
 #### Fixed
 
-- Fixed an issue where `releaseDate` was not getting set on "flip" cards
-- Fixed duplicate UUID's on [Card (Token)](/data-models/card-token/) model for "AAFR" tokens
 - Fixed MDFC cards having the wrong mana value on its face
-- Fixed "Grist, the Hunger Tide" not being a valid commander card
-- Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
 - Fixed `hasAlternativeDeckLimit` for "Seven Dwarves" card
+- Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
+- Fixed "Grist, the Hunger Tide" not being a valid commander card
+- Fixed an issue where `releaseDate` was not getting set on "flip" cards
 - Fixed an issue where flavor names were not set correctly for certain foreign cards
+- Fixed an issue caused by a source having its printed text not providing line breaks
+- Fixed duplicate UUID's on [Card (Token)](/data-models/card-token/) model for "AAFR" tokens
 
 #### Added
 
+- Added `isFunny` property
+- Added `finishes` property
+- Added `manaValue` property
+- Added `securityStamp` property
+- Added `faceManaValue` property
+- Added `faceFlavorName` property
+- Added `otherFaceIds` property to Card (Token)
 - Added `reversable_card` value to the `layout` property
-- Added clarity for new `special` and `bonus` rarities
-- Added support for "Dungeon" cards in `*Atomic` files
-- Added `finishes` property to [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/) models
-- Added `manaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
-- Added `faceManaValue` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
-- Added `faceFlavorName` property to [Card (Atomic](/file-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), and [Card (Set)](/data-models/card-set/) models
-- Added `signature` property to all Card models. This also updates `finishes` to include "signed"
+- Added `signature` property. This also the `finishes` data to include "signed"
 
 ### Foreign Data Model
 
