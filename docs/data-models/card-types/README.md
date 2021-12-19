@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card Types file model documentation.",
+      "content": "Card Types data model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Card Types file model documentation.",
+      "content": "Card Types data model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Card Types
 
-The Card Types file model describes top-level card types and the associated card types they may have.
+The Card Types data model describes top-level card types and the associated card types they may have.
 
 **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)  
 **Parent property:** `data`

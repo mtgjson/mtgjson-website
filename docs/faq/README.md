@@ -62,7 +62,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > For [Scryfall](https://scryfall.com/), to access another face of a card, such as for transform or meld cards, add `&face=front` or `&face=back` to the url to get the respective image.
 
 > ### How can I access a card's set imagery?
-> The `keyruneCode` property from the [Set](/file-models/set/) file model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
+> The `keyruneCode` property from the [Set](/data-models/set/) data model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
 > Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API.  
 >

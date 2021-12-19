@@ -27,6 +27,9 @@ The following is the MTGJSON Application Changelog. Some parts may be updated fo
 ## 5.2.0
 Release Date: 2021-12-09
 
+### Announcements
+With v5.2.0 the documentation has updating substantially. File models were merged to the Data models category to clear up any confusion about differences in these models which work the same way.
+
 ### Card Models
 
 #### Fixed

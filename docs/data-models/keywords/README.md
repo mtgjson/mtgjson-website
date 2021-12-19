@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Keywords file model documentation.",
+      "content": "Keywords data model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Keywords file model documentation.",
+      "content": "Keywords data model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Keywords
 
-The Keywords file model describes a list of all keywords used on Magic: The Gathering cards.
+The Keywords data model describes a list of all keywords used on cards.
 
 **Parent file:** [Keywords](/downloads/all-files/#keywords)  
 **Parent property:** `data`

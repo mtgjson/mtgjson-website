@@ -26,7 +26,7 @@
 
 The Card (Set) data model describes the properties of a single card in a set.
 
-**Parent model:** [Set](/file-models/set/)  
+**Parent model:** [Set](/data-models/set/)  
 **Parent property:** `cards`
 
 ## Model Index

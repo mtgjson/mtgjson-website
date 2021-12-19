@@ -1,19 +1,19 @@
 ---
 {
-  "title": "Deck",
+  "title": "Deck List",
   "schema": "deck",
   "meta": [
     {
       "name": "description",
-      "content": "Deck file model documentation.",
+      "content": "Deck List data model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Deck file model documentation.",
+      "content": "Deck List data model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, deck",
+      "content": "mtg, magic: the gathering, mtgjson, json, decklist, deck list",
     }
   ],
   "feed": {
@@ -22,11 +22,11 @@
 }
 ---
 
-# Deck
+# Deck List
 
-The Deck file model describes a complete deck reference.
+The Deck List data model describes a metadata-like structure that holds top-level information about a [Deck](/data-models/deck/).
 
-**Parent file:** [All Decks](/downloads/all-decks/)  
+**Parent file:** [DeckList](/downloads/all-files/#decklist)  
 **Parent property:** `data`
 
 ## Model Index
@@ -43,24 +43,11 @@ The Deck file model describes a complete deck reference.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### commander
-> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) data model.
->
-> - **Type:** `object{props}`
-> - **Introduced:** `v5.1.0`  
-> - **Attributes:** <i class="optional">optional</i>
-
 > ### fileName
 > The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.0`  
-
-> ### mainBoard
-> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) data model.
->
-> - **Type:** `array[object]`
-> - **Introduced:** `v4.3.0`
 
 > ### name
 > The name of the deck.
@@ -68,20 +55,14 @@ The Deck file model describes a complete deck reference.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### sideBoard
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) data model.
->
-> - **Type:** `array[object]`
-> - **Introduced:** `v4.3.0`
-
 > ### releaseDate
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
 >
-> - **Type:** `string | null`
+> - **Type:** `null | string`
 > - **Introduced:** `v4.3.0`
 
 > ### type
-> The type of deck.
+> The type of the deck.
 >
 > - **Type:** `string`
 > - <ExampleField type='type'/>

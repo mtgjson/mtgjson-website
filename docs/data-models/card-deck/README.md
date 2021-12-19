@@ -26,7 +26,7 @@
 
 The Card (Deck) data model describes the properties and values of a single card in a deck.
 
-**Parent model:** [Deck](/file-models/deck/)  
+**Parent model:** [Deck](/data-models/deck/)  
 **Parent property:** `commander`, `mainBoard`, `sideBoard`  
 
 ## Model Index

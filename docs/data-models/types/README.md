@@ -27,7 +27,7 @@
 
 The Types data model describes card types available to MTGJSON.
 
-**Parent model:** [Card Types](/file-models/card-types/)  
+**Parent model:** [Card Types](/data-models/card-types/)  
 **Parent property:** `artifact`, `conspiracy`, `creature`, `enchantment`, `instant`, `land`, `phenomenon`, `plane`, `planeswalker`, `scheme`, `sorcery`, `tribal`, `vanguard`
 
 ## Model Index

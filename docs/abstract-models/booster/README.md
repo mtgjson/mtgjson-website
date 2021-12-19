@@ -22,9 +22,9 @@
 
 # Booster
 
-The Booster abstract data model describes how a [Set](/file-models/set/)'s booster pack may be constructed.
+The Booster abstract data model describes how a [Set](/data-models/set/)'s booster pack may be constructed.
 
-**Parent model:** [Set](/file-models/set/)  
+**Parent model:** [Set](/data-models/set/)  
 **Parent property:** `booster`
 
 ## Structure Overview

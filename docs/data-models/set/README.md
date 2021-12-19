@@ -1,19 +1,19 @@
 ---
 {
-  "title": "Set List",
+  "title": "Set",
   "schema": "set",
   "meta": [
     {
       "name": "description",
-      "content": "Set List file model documentation.",
+      "content": "Set data model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Set List file model documentation.",
+      "content": "Set data model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, setlist",
+      "content": "mtg, magic: the gathering, mtgjson, json, set, individual",
     }
   ],
   "feed": {
@@ -22,11 +22,11 @@
 }
 ---
 
-# Set List
+# Set
 
-The Set List file model describes a metadata-like structure that holds top-level information about a [Set](/file-models/set/).
+The Set data model describes the properties and values of an individual set.
 
-**Parent file:** [SetList](/downloads/all-files/#setlist)  
+**Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)  
 **Parent property:** `data`
 
 ## Model Index
@@ -49,6 +49,19 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
+
+> ### booster  
+> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) abstract model.  
+>
+> - **Type:** `object{props}`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### cards  
+> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) data model.  
+>
+> - **Type:** `array[object]`  
+> - **Introduced:** `v4.0.0`
 
 > ### code  
 > The set code for the set.  
@@ -90,7 +103,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Introduced:** `v4.0.0`
 
 > ### isPaperOnly  
-> If the set is only available in paper.  
+> If the set is available only in paper.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.6.2`  
@@ -98,8 +111,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 
 > ### isPartialPreview  
 > If the set is still in preview (spoiled). Preview sets do not have complete data.
->
-> - **Type:** `boolean`
+> - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i class="optional">optional</i>
 
@@ -170,6 +182,12 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Introduced:** `v4.2.1`  
 > - **Attributes:** <i class="optional">optional</i>
 
+> ### tokens  
+> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.  
+>
+> - **Type:** `array[object]`  
+> - **Introduced:** `v4.0.0`
+
 > ### totalSetSize  
 > The total number of cards in the set, including promos and related supplemental products.  
 >
@@ -179,7 +197,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 > ### translations  
 > The translated set name by language. See the [Translations](/data-models/translations/) data model.  
 >
-> - **Type:** `object{} | object{props}`  
+> - **Type:** `object{props}`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  

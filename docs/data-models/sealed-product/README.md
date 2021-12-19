@@ -24,9 +24,9 @@
 
 # Sealed Product
 
-The Sealed Product data model describes a list of properties for a purchase-able product of a [Set](/file-models/set/).
+The Sealed Product data model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
 
-**Parent model:** [Set](/file-models/set/), [SetList](/file-models/setlist/)  
+**Parent model:** [Set](/data-models/set/), [SetList](/data-models/setlist/)  
 **Parent property:** `sealedProduct`
 
 ## Model Index
