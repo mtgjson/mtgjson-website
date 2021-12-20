@@ -24,7 +24,7 @@
 
 # Card Types
 
-The Card Types Data Model describes top-level card types and the associated card types they may have.
+The Card Types Data Model describes card types and the other associated card types they may have.
 
 **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)  
 **Parent property:** `data`

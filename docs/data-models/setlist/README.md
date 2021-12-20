@@ -24,7 +24,7 @@
 
 # Set List
 
-The Set List Data Model describes a metadata-like model that holds top-level information about a [Set](/data-models/set/).
+The Set List Data Model describes a metadata-like model that holds information about a [Set](/data-models/set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`

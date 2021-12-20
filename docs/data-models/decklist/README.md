@@ -24,7 +24,7 @@
 
 # Deck List
 
-The Deck List Data Model describes a metadata-like model that holds top-level information about a [Deck](/data-models/deck/).
+The Deck List Data Model describes a metadata-like model that holds information about a [Deck](/data-models/deck/).
 
 **Parent file:** [DeckList](/downloads/all-files/#decklist)  
 **Parent property:** `data`

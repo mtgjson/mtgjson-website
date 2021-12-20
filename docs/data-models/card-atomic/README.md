@@ -83,7 +83,7 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">Deprecated in v6.0.0</i>
+> - **Attributes:** <i class="deprecated">deprecated in v6.0.0</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -97,7 +97,7 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Attributes:** <i class="optional">optional</i><i class="deprecated">Deprecated in v6.0.0</i>
+> - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated in v6.0.0</i>
 
 > ### faceManaValue  
 > The mana value of the face for either half or part of the card.  

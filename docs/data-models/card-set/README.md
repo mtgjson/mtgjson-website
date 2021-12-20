@@ -99,7 +99,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">Deprecated in v6.0.0</i>
+> - **Attributes:** <i class="deprecated">deprecated in v6.0.0</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -113,7 +113,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
-> - **Attributes:** <i class="optional">optional</i><i class="deprecated">Deprecated in v6.0.0</i>
+> - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated in v6.0.0</i>
 
 > ### faceFlavorName
 > The flavor name on the face of the card.
