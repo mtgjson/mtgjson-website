@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Rulings data model documentation.",
+      "content": "Rulings Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Rulings data model documentation."
+      "content": "Rulings Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Rulings
 
-The Rulings data model describes a list of rulings for a specific card.
+The Rulings Data Model describes a list of rulings for a specific card.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `rulings`

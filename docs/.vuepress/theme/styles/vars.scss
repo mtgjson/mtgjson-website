@@ -16,21 +16,30 @@
   --true-gray-color: #aaaaaa;
   --true-light-gray-color: #eeeeee;
 
-  --gray-color: #aaaaaa;
-  --light-gray-color: #eeeeee;
-  --medium-gray-color: #eaecef;
-  --dark-gray-color: #2d2d2d;
-
   --discord-color: #7289da;
   --patreon-color: #f96753;
   --arrow-bg-color: gray;
   // Main theme colors
   --light-color: #ffffff;
 
+  --gray-color: #aaaaaa;
+  --light-gray-color: #eeeeee;
+  --medium-gray-color: #eaecef;
+  --mild-gray-color: #bababa;
+  --dark-gray-color: #2d2d2d;
+
+  --gray-1-color: #aaaaaa;
+  --gray-2-color: #eeeeee;
+  --gray-3-color: #eaecef;
+  --gray-4-color: #bababa;
+  --gray-5-color: #2d2d2d;
+
   --dark-color: #263646;
   --dark-1-color: #172839;
   --dark-2-color: #0e141f;
   --dark-3-color: #000000;
+
+  --header-border-color: var(--dark-color);
 
   // Fonts
   --font-base: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
@@ -98,6 +107,8 @@ body {
     // Code colors
     --code-bg-color: var(--dark-gray-color);
     --code-text-color: var(--yellow-color);
+
+    --header-border-color: var(--mild-gray-color);
 
     background-color: var(--bg-color);
     color: var(--text-color);

@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Foreign Data data model documentation.",
+      "content": "Foreign Data Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Foreign Data data model documentation."
+      "content": "Foreign Data Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Foreign Data
 
-The Foreign Data data model describes a list of properties for various card data models in alternate languages.
+The Foreign Data Data Model describes a list of properties for various card Data Models in alternate languages.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `foreignData`

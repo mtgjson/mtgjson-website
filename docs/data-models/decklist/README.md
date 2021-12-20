@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Deck List data model documentation.",
+      "content": "Deck List Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Deck List data model documentation.",
+      "content": "Deck List Data Model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Deck List
 
-The Deck List data model describes a metadata-like structure that holds top-level information about a [Deck](/data-models/deck/).
+The Deck List Data Model describes a metadata-like model that holds top-level information about a [Deck](/data-models/deck/).
 
 **Parent file:** [DeckList](/downloads/all-files/#decklist)  
 **Parent property:** `data`

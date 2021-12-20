@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Translations data model documentation.",
+      "content": "Translations Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Translations data model documentation."
+      "content": "Translations Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Translations
 
-The Translations data model describes the translated data per language as a key.
+The Translations Data Model describes the translated data per language as a key.
 
 **Parent model:** [Set](/data-models/set/)  
 **Parent property:** `translations`  

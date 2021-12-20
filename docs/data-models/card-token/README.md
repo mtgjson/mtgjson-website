@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Token) data model documentation.",
+      "content": "Card (Token) Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Card (Token) data model documentation."
+      "content": "Card (Token) Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Card (Token)
 
-The Card (Token) data model describes the properties and values of a single token card.
+The Card (Token) Data Model describes the properties and values of a single token card.
 
 **Parent model:** [Set](/data-models/set/)  
 **Parent property:** `tokens`
@@ -158,7 +158,7 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
 
 > ### identifiers  
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`
@@ -192,7 +192,7 @@ The Card (Token) data model describes the properties and values of a single toke
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isRebalanced
-> If the card is rebalanced for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
+> If the card is [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.2.0`  

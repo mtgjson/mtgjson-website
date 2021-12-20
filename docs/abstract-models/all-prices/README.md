@@ -22,7 +22,7 @@
 
 # All Prices
 
-The All Prices abstract data model describes a list of card prices based on MTGJSON Card UUID.
+The All Prices abstract Data Model describes a list of card prices based on MTGJSON Card UUID.
 
 **Parent file:** [AllPrices](/downloads/all-files/#allprices)  
 **Parent property:** `data`
@@ -34,7 +34,7 @@ MTGJSON currently has affiliated with the following price providers to keep a hi
 - paper: [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
 - mtgo: [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
-## Structure Overview
+## Model Overview
 
 ```json
 {

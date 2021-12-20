@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Set) data model documentation.",
+      "content": "Card (Set) Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Card (Set) data model documentation."
+      "content": "Card (Set) Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Card (Set)
 
-The Card (Set) data model describes the properties of a single card in a set.
+The Card (Set) Data Model describes the properties of a single card in a set.
 
 **Parent model:** [Set](/data-models/set/)  
 **Parent property:** `cards`
@@ -158,7 +158,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### foreignData  
-> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.  
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.  
 >
 > - **Type:** `array[] | array[object]`  
 > - **Introduced:** `v4.0.0`
@@ -213,7 +213,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
 
 > ### identifiers  
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`
@@ -261,7 +261,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isRebalanced
-> If the card is rebalanced for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
+> If the card is [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.2.0`  
@@ -324,14 +324,14 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Introduced:** `v4.0.0`
 
 > ### leadershipSkills  
-> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.  
+> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v4.5.1`  
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### legalities  
-> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.  
+> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.  
 >
 > - **Type:** `object{} | object{props}`  
 > - **Introduced:** `v4.0.0`
@@ -434,7 +434,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### purchaseUrls  
-> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v4.4.0`
@@ -454,7 +454,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### rulings  
-> The official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
+> The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.  
 >
 > - **Type:** `array[] | array[object]`  
 > - **Introduced:** `v4.0.0`

@@ -107,8 +107,13 @@ module.exports = {
     sidebarDepth: 0,
     sidebar: [
       {
-        title: 'About Us',
+        title: 'MTGJSON',
         path: '/'
+      },
+      {
+        title: 'Usage',
+        path: '/usage/',
+        collapsable: false
       },
       {
         title: 'F.A.Q.',

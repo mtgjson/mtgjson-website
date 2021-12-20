@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Meta data model documentation.",
+      "content": "Meta Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Meta data model documentation.",
+      "content": "Meta Data Model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Meta
 
-The Meta data model describes application build date and version number.
+The Meta Data Model describes application build date and version number.
 
 **Parent file:** [Meta](/downloads/all-files/#meta)  
 **Parent property:** `meta`  

@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Legalities data model documentation.",
+      "content": "Legalities Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Legalities data model documentation."
+      "content": "Legalities Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Legalities
 
-The Legalities data model describes a list of legalities in play formats for a specific card.
+The Legalities Data Model describes a list of legalities in play formats for a specific card.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `legalities`

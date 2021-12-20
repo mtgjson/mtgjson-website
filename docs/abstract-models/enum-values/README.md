@@ -22,17 +22,17 @@
 
 # Enum Values
 
-The Enum Values abstract data model describes a list of key value pairs that are direct possible values of key properties in specific data models. Generally, this data is used for documenting data on this website, but is also available to the public.
+The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documenting data on this website, but is also available to the public.
 
 **Parent file:** [EnumValues](/downloads/all-files/#enumvalues)  
 **Parent property:** `data`
 
-## Structure Overview
+## Model Overview
 
 ```json
 {
-  <Data Model>: { // Unique data model name
-    <Property Key>: [ // Property of a data model
+  <Data Model>: { // Unique Data Model name
+    <Property Key>: [ // Property of a Data Model
       <Property Value>, // Possible property value
       ... // More values
     ],

@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Leadership Skills data model documentation.",
+      "content": "Leadership Skills Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Leadership Skills data model documentation."
+      "content": "Leadership Skills Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Leadership Skills
 
-The Leadership Skills data model describes a list of formats that a specific card is legal to be your Commander in play formats that utilize commanders.
+The Leadership Skills Data Model describes a list of formats that a specific card is legal to be your Commander in play formats that utilize commanders.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `leadershipSkills`

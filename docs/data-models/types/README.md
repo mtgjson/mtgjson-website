@@ -1,16 +1,15 @@
 ---
 {
   "title": "Types",
-  "schema": "types",
-  "enum": "card",
+  "schema": "card",
   "meta": [
     {
       "name": "description",
-      "content": "Types data model documentation.",
+      "content": "Types Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Types data model documentation."
+      "content": "Types Data Model documentation."
     },
     {
       "name": "keywords",
@@ -25,7 +24,7 @@
 
 # Types
 
-The Types data model describes card types available to MTGJSON.
+The Types Data Model describes card types available to MTGJSON.
 
 **Parent model:** [Card Types](/data-models/card-types/)  
 **Parent property:** `artifact`, `conspiracy`, `creature`, `enchantment`, `instant`, `land`, `phenomenon`, `plane`, `planeswalker`, `scheme`, `sorcery`, `tribal`, `vanguard`
@@ -40,11 +39,13 @@ The Types data model describes card types available to MTGJSON.
 > ### subTypes  
 > A list of all available subtypes of a card.  
 >
-> - **Type:** `array[string]`  
+> - **Type:** `array[string]`
+> - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### superTypes  
 > A list of all available supertypes of a card.  
 >
-> - **Type:** `array[string]`  
+> - **Type:** `array[string]`
+> - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`

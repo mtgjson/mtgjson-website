@@ -33,13 +33,17 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5rem;
   padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 h2 {
   font-size: 1.75rem;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+}
+
+h1, h2 {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 h3 {

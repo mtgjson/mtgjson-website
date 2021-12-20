@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Purchase Urls data model documentation.",
+      "content": "Purchase Urls Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Purchase Urls data model documentation."
+      "content": "Purchase Urls Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Purchase Urls
 
-The Purchase Urls data model describes url paths to purchase a product from a marketplace.
+The Purchase Urls Data Model describes url paths to purchase a product from a marketplace.
   
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `purchaseUrls`

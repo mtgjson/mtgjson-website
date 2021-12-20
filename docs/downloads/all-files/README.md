@@ -84,7 +84,7 @@ All outputted files to download provided by MTGJSON.
 > <DownloadNativeSelect fileName='DeckList'/>
 
 > ### EnumValues
-> File containing known property values for various data models.
+> File containing known property values for various Data Models.
 >
 > **Note:** Generally, this data is used for documenting data on this website, but is also available to the public.
 >

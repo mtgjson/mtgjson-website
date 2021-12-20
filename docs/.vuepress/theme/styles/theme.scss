@@ -335,17 +335,29 @@ blockquote {
   position: relative;
 
   &::after {
-    content: "new";
     position: absolute;
     right: -40px;
     top: 0;
     padding: 0 5px;
     border-radius: 5px;
     font-size: 12px;
-    background-color: var(--green-color);
     font-family: var(--font-monospace);
     font-weight: bold;
     color: var(--dark-color);
+  }
+}
+.sidebar-link[href="/mtggraphql/"] {
+  &::after {
+    content: "beta";
+    background-color: var(--spoiler-color);
+    right: -50px;
+  }
+}
+
+.sidebar-link[href="/data-models/sealed-product/"] {
+  &::after {
+    content: "new";
+    background-color: var(--green-color);
   }
 }
 

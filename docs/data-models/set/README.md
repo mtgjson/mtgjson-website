@@ -5,15 +5,15 @@
   "meta": [
     {
       "name": "description",
-      "content": "Set data model documentation.",
+      "content": "Set Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Set data model documentation.",
+      "content": "Set Data Model documentation.",
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, set, individual",
+      "content": "mtg, magic: the gathering, mtgjson, json, set, individual set",
     }
   ],
   "feed": {
@@ -24,7 +24,7 @@
 
 # Set
 
-The Set data model describes the properties and values of an individual set.
+The Set Data Model describes the properties and values of an individual set.
 
 **Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)  
 **Parent property:** `data`
@@ -58,7 +58,7 @@ The Set data model describes the properties and values of an individual set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### cards  
-> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) data model.  
+> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) Data Model.  
 >
 > - **Type:** `array[object]`  
 > - **Introduced:** `v4.0.0`
@@ -111,12 +111,13 @@ The Set data model describes the properties and values of an individual set.
 
 > ### isPartialPreview  
 > If the set is still in preview (spoiled). Preview sets do not have complete data.
-> - **Type:** `boolean`  
+>
+> - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### keyruneCode  
-> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) image icons.  
+> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) set image icons.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.2`
@@ -169,7 +170,7 @@ The Set data model describes the properties and values of an individual set.
 > - **Introduced:** `v4.0.0`
 
 > ### sealedProduct
-> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
@@ -183,7 +184,7 @@ The Set data model describes the properties and values of an individual set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### tokens  
-> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.  
+> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) Data Model.  
 >
 > - **Type:** `array[object]`  
 > - **Introduced:** `v4.0.0`
@@ -195,7 +196,7 @@ The Set data model describes the properties and values of an individual set.
 > - **Introduced:** `v4.1.0`
 
 > ### translations  
-> The translated set name by language. See the [Translations](/data-models/translations/) data model.  
+> The translated set name by language. See the [Translations](/data-models/translations/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v4.3.2`
