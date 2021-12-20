@@ -100,10 +100,10 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 > - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated in v6.0.0</i>
 
 > ### faceManaValue  
-> The mana value of the face for either half or part of the card.  
+> The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
 >
-> - **Type:** `float`  
-> - **Introduced:** `v5.2.0`  
+> - **Type:** `float`
+> - **Introduced:** `v5.2.0`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### faceName  
@@ -203,10 +203,10 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### manaValue
-> The mana value of the card.  
+> The mana value of the card. Formally known as "converted mana cost".
 >
-> - **Type:** `float`  
-> - **Introduced:** `v4.0.0`
+> - **Type:** `float`
+> - **Introduced:** `v5.2.0`
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.

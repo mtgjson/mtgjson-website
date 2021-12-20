@@ -123,10 +123,10 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### faceManaValue  
-> The mana value of the face for either half or part of the card.  
+> The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
 >
-> - **Type:** `float`  
-> - **Introduced:** `v5.2.0`  
+> - **Type:** `float`
+> - **Introduced:** `v5.2.0`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### faceName  
@@ -359,13 +359,13 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### manaValue
-> The mana value of the card.  
+> The mana value of the card. Formally known as "converted mana cost".
 >
-> - **Type:** `float`  
-> - **Introduced:** `v4.0.0`
+> - **Type:** `float`
+> - **Introduced:** `v5.2.0`
 
 > ### name  
-> The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.  
+> The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter of `//`.  
 >
 > - **Type:** `string`
 > - **Example:** `"Wear // Tear"`

@@ -38,14 +38,14 @@ The Foreign Data Data Model describes a list of properties for various card Data
 ## Model Properties
 
 > ### faceName  
-> The name on the face of the card.  
+> The foreign name on the face of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### flavorText  
-> The flavor text of the card.  
+> The foreign flavor text of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -59,27 +59,27 @@ The Foreign Data Data Model describes a list of properties for various card Data
 > - **Introduced:** `v4.0.0`
 
 > ### multiverseId  
-> The multiverse identifier of the card.  
+> The foreign multiverse identifier of the card.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### name  
-> The name of the card.  
+> The foreign name of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
 > ### text  
-> The text ruling of the card.  
+> The foreign text ruling of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### type  
-> The type of the card. Includes any supertypes and subtypes.  
+> The foreign type of the card. Includes any supertypes and subtypes.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  

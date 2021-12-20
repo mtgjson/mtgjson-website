@@ -51,10 +51,11 @@ The Deck Data Model describes a complete deck reference.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### fileName
-> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
+> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions and are given a delimiter of `_`.
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.3.0`  
+> - **Type:** `string`
+> - **Examples:** `"SpiritSquadron_VOC"`
+> - **Introduced:** `v4.3.0`
 
 > ### mainBoard
 > The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.

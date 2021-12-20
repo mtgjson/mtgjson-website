@@ -191,13 +191,6 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i class="optional">optional</i>
 
-> ### isRebalanced
-> If the card is [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
->
-> - **Type:** `boolean`  
-> - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
-
 > ### isReprint  
 > If the card has been reprinted.  
 >
@@ -245,13 +238,6 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Type:** `array[] | array[string]`  
 > - **Introduced:** `v4.6.1`
 
-> ### originalPrintings
-> A list of card UUID's to original printings of the card if this card is somehow different from its original, such as [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) cards.
->
-> - **Type:** `array[string]`
-> - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
-
 > ### power  
 > The power of the card.  
 >
@@ -265,13 +251,6 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Type:** `array[string]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i>
-
-> ### rebalancedPrintings
-> A list of card UUID's to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
->
-> - **Type:** `array[string]`  
-> - **Introduced:** `v5.2.0`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### reverseRelated

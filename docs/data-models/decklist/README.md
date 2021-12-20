@@ -44,7 +44,7 @@ The Deck List Data Model describes a metadata-like model that holds information 
 > - **Introduced:** `v4.3.0`
 
 > ### fileName
-> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
+> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions and are given a delimiter of `_`.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.0`  

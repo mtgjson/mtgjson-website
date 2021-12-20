@@ -137,10 +137,10 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### faceManaValue  
-> The mana value of the face for either half or part of the card.  
+> The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
 >
-> - **Type:** `float`  
-> - **Introduced:** `v5.2.0`  
+> - **Type:** `float`
+> - **Introduced:** `v5.2.0`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### faceName  
@@ -379,10 +379,10 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### manaValue
-> The mana value of the card.  
+> The mana value of the card. Formally known as "converted mana cost".
 >
-> - **Type:** `float`  
-> - **Introduced:** `v4.0.0`
+> - **Type:** `float`
+> - **Introduced:** `v5.2.0`
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
