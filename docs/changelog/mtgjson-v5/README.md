@@ -25,7 +25,7 @@
 The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.2.0
-Release Date: 2021-12-09
+Release Date: 2021-12-19
 
 ### Announcements
 With v5.2.0 the documentation has updating substantially. File models were merged to the Data models category to clear up any confusion about differences in these models which work the same way.
@@ -48,9 +48,13 @@ With v5.2.0 the documentation has updating substantially. File models were merge
 - Added `isFunny` property
 - Added `finishes` property
 - Added `manaValue` property
+- Added `cardParts` property
+- Added `isRebalanced` property
 - Added `securityStamp` property
 - Added `faceManaValue` property
 - Added `faceFlavorName` property
+- Added `originalPrintings` property
+- Added `rebalancedPrintings` property
 - Added `otherFaceIds` property to Card (Token)
 - Added `reversable_card` value to the `layout` property
 - Added `signature` property. This also the `finishes` data to include "signed"

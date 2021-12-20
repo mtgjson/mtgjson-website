@@ -65,6 +65,13 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - <ExampleField type='borderColor'/>
 > - **Introduced:** `v4.0.0`
 
+> ### cardParts
+> A list of card names associated to this card, such as `"Meld"` card face names.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
+
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
@@ -212,7 +219,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Introduced:** `v5.0.0`
 
 > ### isAlternative  
-> If the card has some kind of alternative variation to its printed counterpart.  
+> If the card is an alternate variation to an original printing.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.2.0`  
@@ -233,7 +240,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
-> If the card is only available in [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
+> If the card is only available in online game variations.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.1`  
@@ -251,7 +258,14 @@ The Card (Set) data model describes the properties of a single card in a set.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### isRebalanced
+> If the card is rebalanced for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isReprint  
 > If the card has been reprinted.  
@@ -363,6 +377,13 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
+> ### originalPrintings
+> A list of card UUID's to original printings of the card if this card is somehow different from its original, such as [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) cards.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
+
 > ### originalReleaseDate  
 > The original release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for a promotional card printed outside of a cycle window, such as Secret Lair Drop promotions.
 >
@@ -385,7 +406,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### otherFaceIds  
-> A list of UUID's of this card with counterparts, such as transformed or melded faces.  
+> A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
 > - **Type:** `array[] | array[string]`  
 > - **Introduced:** `v4.6.1`
@@ -424,6 +445,13 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Type:** `string`
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
+
+> ### rebalancedPrintings
+> A list of card UUID's to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
+>
+> - **Type:** `array[string]`  
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### rulings  
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) data model.  
@@ -508,7 +536,7 @@ The Card (Set) data model describes the properties of a single card in a set.
 > - **Introduced:** `v4.0.0`
 
 > ### variations
-> A list of UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
+> A list of card UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >
 > - **Type:** `array[] | array[string]`
 > - **Introduced:** `v4.1.2`

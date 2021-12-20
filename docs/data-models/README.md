@@ -28,11 +28,10 @@ Data Models in MTGJSON describe any JSON object or nested JSON object that provi
 For example, any <strong>Data Model</strong> would look similar to this:
 
 ```json
-"<Some Property Key>": {
-  "<A Nested Property Key>": "<Array, Boolean, Float, Int, Object, String>",
-  "<Some Other Nested Property Key>": "<Array, Boolean, Float, Int, Object, String>",
+"<Parent Property>": {
+  "<Some Property>": <Array, Boolean, Float, Integer, Object, String>,
   ...
 }
 ```
 
-Most data output by MTGJSON are Data Models but some models have more complex structures which are outlined as [File Models](/data-models/) and [Abstract Models](/abstract-models/).
+Most data output by MTGJSON are Data Models but some models have more complex structures which are outlined as [Abstract Models](/abstract-models/).

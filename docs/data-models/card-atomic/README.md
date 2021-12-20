@@ -29,6 +29,18 @@ The Card (Atomic) data model describes the a single atomic card, an oracle-like 
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
 
+::: tip
+The Card (Atomic) data model is accessed through a single index array where its parent property is the name of the card, like such:
+```
+"data": {
+  "Oblivion Ring": [
+    <Card (Atomic) Model>
+  ],
+  ...
+}
+```
+:::
+
 ## Model Index
 
 <PropertyToggler/>
@@ -42,7 +54,7 @@ The Card (Atomic) data model describes the a single atomic card, an oracle-like 
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  

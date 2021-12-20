@@ -146,7 +146,7 @@ The Legalities data model describes a list of legalities in play formats for a s
 > If the card is legal in the [Pre-Modern](https://premodernmagic.com/) play format.
 >
 > - **Type:** `string`
-> - **Introduced:** `v4.6.0`
+> - **Introduced:** `v5.2.0`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### standard

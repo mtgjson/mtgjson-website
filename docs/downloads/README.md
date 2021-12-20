@@ -31,7 +31,7 @@ MTGJSON provides a variable amount of data to work with in various types of file
 - [All Sets](/downloads/all-sets) (All individual sets)
 - [All Decks](/downloads/all-decks) (All individual decks).
 
-## File Models
+## Understanding Files
 
 The "Web API" or more commonly known as "files" that MTGJSON.com provides formats from JSON to compressed files to SQL databases. The following describes the JSON-based files and how they are served. Compressed versions of these files have the same data inside of them.
 

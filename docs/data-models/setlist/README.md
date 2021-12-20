@@ -84,7 +84,7 @@ The Set List data model describes a metadata-like structure that holds top-level
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
-> If the set is only available online.  
+> If the set is only available in online game variations.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`

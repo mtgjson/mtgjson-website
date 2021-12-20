@@ -13,7 +13,7 @@
   #error.page
     .content__default
       h1 This page is lost...
-      p Sorry, there seems to be a problem. Go back to your previous page, check the URL or use one of these popular links below.
+      p Sorry, there seems to be a problem or this page no longer exists. Go back to your previous page, check the URL or use one of these popular links below.
       ul
         li
           router-link(to="/") Home

@@ -97,7 +97,7 @@ The Set data model describes the properties and values of an individual set.
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
-> If the set is only available online.  
+> If the set is only available in online game variations.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`

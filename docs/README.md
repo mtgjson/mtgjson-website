@@ -17,10 +17,10 @@
 
 ## What Is MTGJSON?
 
-MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.
+MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON and other files that you can learn about and download from this website.
 
 ::: warning Living Documentation Ahead!
-<p>This is living documentation, at any point this site may be updated for clarity.</p>
+This is living documentation, at any point this site may be updated for clarity.
 :::
 
 ## The Team
