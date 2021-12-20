@@ -272,7 +272,7 @@ export default {
       padding-left: calc(var(--common-padding) * 1.5);
       padding-bottom: calc(var(--common-padding) * 1.5);
       padding-right: 1.5rem;
-      background-color: var(--true-light-gray-color);
+      background-color: var(--true-gray-1-color);
       color: var(--dark-color);
       max-height: 2.5rem;
       overflow: hidden;
@@ -351,7 +351,7 @@ export default {
   .context-menu {
     border-radius: var(--common-radius);
     padding: var(--common-padding);
-    background-color: var(--true-light-gray-color);
+    background-color: var(--true-gray-1-color);
     color: var(--dark-color);
     border: 1px solid var(--true-gray-color);
     display: none;
@@ -374,7 +374,7 @@ export default {
 
     &::after {
       border-color: rgba(136, 183, 213, 0);
-      border-right-color: var(--true-light-gray-color);
+      border-right-color: var(--true-gray-1-color);
       border-width: 10px;
       margin-top: -10px;
     }

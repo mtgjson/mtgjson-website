@@ -169,7 +169,7 @@ export default {
       // make the arrow always down at desktop
       border-left: 4px solid transparent;
       border-right: 4px solid transparent;
-      border-top: 6px solid var(--arrow-bg-color);
+      border-top: 6px solid var(--true-gray-color);
       border-bottom: 0;
     }
 

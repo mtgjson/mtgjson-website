@@ -201,7 +201,7 @@ export default {
           padding: .5rem;
           border-radius: 5px;
           border: none;
-          background-color: var(--light-gray-color);
+          background-color: var(--gray-1-color);
           margin-left: 10px;
           max-width: 220px;
         }

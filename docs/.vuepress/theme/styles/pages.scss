@@ -1,3 +1,49 @@
+// Model Properties of a page
+#model-properties {
+  &.none {
+    position: relative;
+
+    &::after {
+      content: "No Available Properties";
+      position: absolute;
+      top: 5rem;
+      left: 0;
+      font-size: 1rem;
+      color: var(--gray-color);
+    }
+
+    & ~ * {
+      display: none;
+    }
+  }
+
+  & ~ .custom-block {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+}
+
+// Table of contents
+.table-of-contents {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    li {
+      grid-column: span 1;
+
+      &.disabled {
+        a {
+          color: var(--gray-color);
+          text-decoration: line-through;
+          pointer-events: none;
+        }
+      }
+    }
+  }
+}
+
 #mtgjson-changelog,
 #mtggraphql-changelog,
 #mtgjson-documentation-changelog {

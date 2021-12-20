@@ -86,3 +86,11 @@ a {
 sup {
   font-size: .7em;
 }
+
+// Custom small header
+.small-header {
+  display: block;
+  font-weight: .5rem;
+  padding: 1rem 0 .5rem;
+  font-weight: bold;
+}
