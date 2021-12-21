@@ -27,24 +27,30 @@ The following is the MTGJSON Application Changelog. Some parts may be updated fo
 ## 5.2.0
 Release Date: 2021-12-20
 
+### Announcements
+
+**Welcome to v5.2.0!** With this update we've added a lot of new Card Data Model properties with a focus on Card identification. Some thing we've included is signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
+
+We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them, MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
+
 ### Documentation
 
 #### Changed
 
-- Changed File models and some Abstract Models to be merged in to the Data Model category for more clarity and ease of use. This is no way changes how and where the files are downloaded or how their models are formed.
+- Changed File models and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This is no way changes how and where the files are downloaded or how their models are formed.
 
 ### Card Models
 
 #### Fixed
 
-- Fixed MDFC cards having the wrong mana value on its face
-- Fixed `hasAlternativeDeckLimit` for "Seven Dwarves" card
+- Fixed dual-faced cards having the wrong mana value on its face
+- Fixed `hasAlternativeDeckLimit` for `Seven Dwarves` card
 - Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
-- Fixed "Grist, the Hunger Tide" not being a valid commander card
+- Fixed an issue where `Grist, the Hunger Tide` was not a valid commander
+- Fixed an issue where duplicate UUID's were being set on "AAFR" tokens
 - Fixed an issue where `releaseDate` was not getting set on "flip" cards
 - Fixed an issue where flavor names were not set correctly for certain foreign cards
 - Fixed an issue caused by a source having its printed text not providing line breaks
-- Fixed duplicate UUID's on [Card (Token)](/data-models/card-token/) model for "AAFR" tokens
 
 #### Added
 
@@ -52,15 +58,31 @@ Release Date: 2021-12-20
 - Added `finishes` property
 - Added `manaValue` property
 - Added `cardParts` property
-- Added `isRebalanced` property
 - Added `securityStamp` property
 - Added `faceManaValue` property
 - Added `faceFlavorName` property
-- Added `originalPrintings` property
-- Added `rebalancedPrintings` property
 - Added `otherFaceIds` property to Card (Token)
 - Added `reversable_card` value to the `layout` property
-- Added `signature` property. This also the `finishes` data to include "signed"
+- Added `signature` property. This also updates the `finishes` property to have a `"signed"` value
+- Added support for "Dungeon" cards in Card (Atomic) Data Model
+- Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties.
+
+#### Deprecated
+
+- Deprecated `convertedManaCost` in favor of `manaValue`. Will be removed in `v6.0.0`
+- Deprecated `faceConvertedManaCost` in favor of `faceManaValue`. Will be removed in `v6.0.0`
+- Deprecated `hasFoil` in favor of `finishes`. Will be removed in `v5.3.0`
+- Deprecated `hasNonFoil` in favor of `finishes`. Will be removed in `v5.3.0`
+
+### Set Model
+
+#### Fixed
+
+- Fixed an issue where the French name of "Eldritch Moon" was incorrect
+
+#### Added
+
+- Added `sealedProduct` property
 
 ### Foreign Data Model
 
@@ -73,7 +95,11 @@ Release Date: 2021-12-20
 #### Added
 
 - Added `tcgplayerEtchedProductId` property
-- Added `cardKingdomeEtechedId` property
+- Added `cardKingdomEtechedId` property
+
+#### Changed
+
+- Changed `scryfallOracleId` property to be optional
 
 ### PurchaseUrls Model
 
@@ -109,6 +135,56 @@ Release Date: 2021-12-20
 #### Added
 
 - Added `finishes` property
+
+### Individual Sets
+
+#### Added
+
+- Added Time Spiral Remastered (`TSR`)
+- Added Commander 2021 (`C21`)
+- Added Oversized Commander 2021 (`OC21`)
+- Added Strixhaven (`STX`)
+- Added Strixhaven Mystical Archives (`STA`)
+- Added Strixhaven Promos (`PSTX`)
+- Added Strixhaven Minigames (`MSTX`)
+- Added Strixhaven Art Series (`ASTX`)
+- Added Historic Anthology 5 (`HA5`)
+- Added Modern Horizons 2 (`MH2`)
+- Added Modern Horizons 2 Promos (`PMH2`)
+- Added Modern Horizons 2 Minigames (`MMH2`)
+- Added Modern Horizons 2 Art Series (`AMH2`)
+- Added Modern Horizons 1 Timeshifted Cards (`H1R`)
+- Added Wizards Play Network 2021 (`PW21`)
+- Added Love Your LGS 2021 (`PLG21`)
+- Added Adventures in the Forgotten Realms (`AFR`)
+- Added Adventures in the Forgotten Realms Promos (`PAFR`)
+- Added Forgotten Realms Commander (`AFC`)
+- Added Forgotten Realms Commander Displays (`OAFC`)
+- Added Adventures in the Forgotten Realms Art Series (`AAFR`)
+- Added Adventures in the Forgotten Realms Minigames (`MAFR`)
+- Added 2020 Heroes of the Realm (`HTR20`)
+- Added Jumpstart: Historic Horizons (`J21`)
+- Added Innistrad Midnight Hunt (`MID`)
+- Added Innistrad Midnight Hunt Promos (`PMID`)
+- Added Innistrad Midnight Hunt Token Sub (`SMID`)
+- Added Midnight Hunt Commander (`MIC`)
+- Added Midnight Hunt Commander Displays (`OMIC`)
+- Added Pioneer Challenger Decks 2021 (`Q06`)
+- Added Innistrad Crimson Vow (`VOW`)
+- Added Innistrad Crimson Vow Promos (`PVOW`)
+- Added Crimson Vow Commander (`VOC`)
+- Added Crimson Vow Commander Displays (`OVOC`)
+- Added Alchemy: Innistrad (`Y22`)
+- Added Innistrad: Double Feature (`DBL`)
+- Added Commander Collection Black (`CC2`)
+- Added Wizards Play Network 2022 (`PW22`)
+- Added Kamigawa Neon Dynasty (`NEO`) Spoilers
+- Added Unfinity (`UNF`) Spoilers
+
+### Misc
+
+- MTGJSON now supports Python 3.6 - 3.10
+- Better handle Gatherer downtime haulting builds
 
 ## 5.1.0
 Release Date: 2021-01-18

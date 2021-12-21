@@ -42,7 +42,7 @@ The Identifiers Data Model describes a list of identifiers associated to a card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### cardKingdomFoilId  
 > The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) foil card identifier.  
@@ -140,4 +140,4 @@ The Identifiers Data Model describes a list of identifiers associated to a card.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>

@@ -77,4 +77,4 @@ The Purchase Urls Data Model describes url paths to purchase a product from a ma
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>

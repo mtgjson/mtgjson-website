@@ -70,7 +70,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
@@ -113,7 +113,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### finishes
 > The finishes of the card.
@@ -121,6 +121,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="new">new</i>
 
 > ### flavorText  
 > The italicized text found below the rules text that has no game function.  
@@ -144,18 +145,18 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Introduced:** `v4.0.0`
 
 > ### hasFoil
-> If the card can be found in foil.
+> If the card can be found in foil. Use the [finishes](/data-models/card-token/#finishes) property.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### hasNonFoil
-> If the card can be found in non-foil.
+> If the card can be found in non-foil. Use the [finishes](/data-models/card-token/#finishes) property.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
@@ -175,7 +176,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isOnlineOnly  
 > If the card is only available in online game variations.  
@@ -265,7 +266,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Type:** `string`
 > - <ExampleField type='securityStamp'/>
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### setCode  
 > The set printing code that the card is from.
@@ -286,7 +287,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  

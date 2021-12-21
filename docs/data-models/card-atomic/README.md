@@ -79,11 +79,11 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 > - **Introduced:** `v4.0.0`
 
 > ### convertedManaCost  
-> The converted mana cost or mana value of the card.  
+> The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated in v6.0.0</i>
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -93,18 +93,18 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceConvertedManaCost
-> The converted mana cost or mana value for the face of either half or part of the card.
+> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated in v6.0.0</i>
+> - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated</i>
 
 > ### faceManaValue  
 > The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### faceName  
 > The name on the face of the card.  
@@ -144,7 +144,7 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isReserved  
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).  
@@ -207,6 +207,7 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="new">new</i>
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.

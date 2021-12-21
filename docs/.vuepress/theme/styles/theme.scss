@@ -135,7 +135,8 @@ blockquote {
 
   i.optional,
   i.omitted,
-  i.deprecated {
+  i.deprecated,
+  i.new {
     background-color: var(--light-color);
     color: var(--dark-color);
 
@@ -149,6 +150,10 @@ blockquote {
   i.omitted,
   i.deprecated {
     background-color: var(--red-color);
+  }
+
+  i.new {
+    background-color: var(--green-color);
   }
 
   i {

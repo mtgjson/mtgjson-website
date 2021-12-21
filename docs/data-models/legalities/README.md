@@ -77,7 +77,7 @@ The Legalities Data Model describes a list of legalities in play formats for a s
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### historic
 > If the card is legal in the [Historic](https://mtg.fandom.com/wiki/Historic_(format)) play format.
@@ -91,7 +91,7 @@ The Legalities Data Model describes a list of legalities in play formats for a s
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### legacy
 > If the card is legal in the [Legacy](https://magic.wizards.com/en/game-info/gameplay/formats/legacy) play format.
@@ -112,7 +112,7 @@ The Legalities Data Model describes a list of legalities in play formats for a s
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### pauper
 > If the card is legal in the [Pauper](https://magic.wizards.com/en/game-info/gameplay/formats/pauper) play format.
@@ -126,7 +126,7 @@ The Legalities Data Model describes a list of legalities in play formats for a s
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### penny
 > If the card is legal in the [Penny Dreadful](https://mtg.fandom.com/wiki/Penny_Dreadful) play format.
@@ -147,7 +147,7 @@ The Legalities Data Model describes a list of legalities in play formats for a s
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### standard
 > If the card is legal in the [Standard](https://magic.wizards.com/en/content/standard-formats-magic-gathering) play format.

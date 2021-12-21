@@ -70,7 +70,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
@@ -95,11 +95,11 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Introduced:** `v4.0.0`
 
 > ### convertedManaCost  
-> The converted mana cost or mana value of the card.  
+> The converted mana cost of the card. Use the [manaValue](/data-models/card-deck/#manavalue) property.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated in v6.0.0</i>
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### count  
 > The count of how many of this card exists in a relevant deck.  
@@ -123,25 +123,25 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### faceConvertedManaCost  
-> The converted mana cost or mana value of the face for either half or part of the card.  
+> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-deck/#facemanavalue) property.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
-> - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated in v6.0.0</i>
+> - **Attributes:** <i class="optional">optional</i><i class="deprecated">deprecated</i>
 
 > ### faceFlavorName
 > The flavor name on the face of the card.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### faceManaValue  
 > The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### faceName  
 > The name on the face of the card.  
@@ -156,6 +156,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="new">new</i>
 
 > ### flavorName  
 > The promotional card name printed above the true card name on special cards that has no game function. See [this card](https://scryfall.com/card/plg20/2/hangarback-walker) for an example.
@@ -213,18 +214,18 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### hasFoil
-> If the card can be found in foil.
+> If the card can be found in foil. Use the [finishes](/data-models/card-deck/#finishes) property.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### hasNonFoil
-> If the card can be found in non-foil.
+> If the card can be found in non-foil.  Use the [finishes](/data-models/card-deck/#finishes) property.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Attributes:** <i class="deprecated">deprecated in v5.3.0</i>
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
@@ -257,7 +258,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isOnlineOnly  
 > If the card is only available in online game variations.
@@ -285,7 +286,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isReprint  
 > If the card has been reprinted.  
@@ -383,6 +384,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="new">new</i>
 
 > ### name  
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
@@ -402,7 +404,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### originalReleaseDate  
 > The original release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for a promotional card printed outside of a cycle window, such as Secret Lair Drop promotions.
@@ -471,7 +473,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### rulings  
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.  
@@ -485,7 +487,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='securityStamp'/>
 > - **Introduced:** `v5.2.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### setCode  
 > The set printing code that the card is from.
@@ -506,7 +508,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  
