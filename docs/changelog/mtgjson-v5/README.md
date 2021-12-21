@@ -29,9 +29,11 @@ Release Date: 2021-12-20
 
 ### Announcements
 
-**Welcome to v5.2.0!** With this update we've added a lot of new Card Data Model properties with a focus on Card identification. Some thing we've included is signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
+**Welcome to v5.2.0!** With this update we've added a lot of new Card Data Model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
 
 We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them, MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
+
+If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (recurring donations).
 
 ### Documentation
 
@@ -54,16 +56,15 @@ We want to remind everyone that while this Changelog can show updates to new Set
 
 #### Added
 
-- Added `isFunny` property
-- Added `finishes` property
 - Added `manaValue` property
-- Added `cardParts` property
-- Added `securityStamp` property
-- Added `faceManaValue` property
-- Added `faceFlavorName` property
-- Added `otherFaceIds` property to Card (Token)
-- Added `reversable_card` value to the `layout` property
-- Added `signature` property. This also updates the `finishes` property to have a `"signed"` value
+- Added the non-Atomic `isFunny` property
+- Added the non-Atomic `finishes` property
+- Added the non-Atomic `cardParts` property
+- Added the non-Atomic `securityStamp` property
+- Added the non-Atomic `faceManaValue` property
+- Added the non-Atomic `faceFlavorName` property
+- Added the non-Atomic `otherFaceIds` property to Card (Token)
+- Added the non-Atomic `signature` property
 - Added support for "Dungeon" cards in Card (Atomic) Data Model
 - Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties.
 

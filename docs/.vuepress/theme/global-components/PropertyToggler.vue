@@ -1,8 +1,12 @@
 <template lang="pug">
 #property-toggler.property-toggler(v-if="noOptionals")
   label(for="property-toggler-input") Include optional properties
-    span {{" "}}(Showing {{ count }}):
-  input(id="property-toggler-input" type="checkbox" @click="toggleOptionals" v-model="checked")
+    span {{ ' ' }}(Showing {{ count }}):
+  input#property-toggler-input(
+    type="checkbox",
+    @click="toggleOptionals",
+    v-model="checked"
+  )
 </div>
 </template>
 
@@ -33,42 +37,48 @@ export default {
         ? 0
         : this.allAnchors.length - this.hiddenAnchors.length;
     },
-    count(){
+    count() {
       return this.checked ? this.fullCount : this.hiddenCount;
-    }
+    },
   },
   mounted() {
-    const propertyBlocks = $("#property-toggler ~ blockquote:has(i.optional)");
-
     this.allAnchors = Array.from(
       document.querySelectorAll(".table-of-contents li a")
     );
 
-    this.propertyBlocks = Array.from(propertyBlocks);
-    this.propertyBlocks.forEach((block) => {
-      this.hiddenAnchors.push(block.children[0].id);
-    });
-
-    if (this.propertyBlocks.length === 0) {
-      this.hasOptionals = false;
-    }
+    this.setPropertyBlocks();
+    this.appendTOCVariations();
   },
   methods: {
+    setPropertyBlocks() {
+      const propertyBlocks = $(
+        "#property-toggler ~ blockquote:has(i.optional)"
+      );
+
+      this.propertyBlocks = Array.from(propertyBlocks);
+      this.propertyBlocks.forEach((block) => {
+        this.hiddenAnchors.push(block.children[0].id);
+      });
+
+      if (this.propertyBlocks.length === 0) {
+        this.hasOptionals = false;
+      }
+    },
     toggleOptionals() {
       this.toggleBlockOptionals(this.checked);
       this.toggleTOCOptionals(this.checked);
       this.toggleHeadingsContent(this.checked);
     },
     toggleHeadingsContent(doHide) {
-      const $propsHeading = document.querySelector('#model-properties');
-      const $toggler = document.querySelector('.property-toggler');
+      const $propsHeading = document.querySelector("#model-properties");
+      const $toggler = document.querySelector(".property-toggler");
 
-      if(doHide && this.hiddenCount === 0){
-        $propsHeading.classList.add('none');
-        $toggler.classList.add('none');
+      if (doHide && this.hiddenCount === 0) {
+        $propsHeading.classList.add("none");
+        $toggler.classList.add("none");
       } else {
-        $propsHeading.classList.remove('none');
-        $toggler.classList.remove('none');
+        $propsHeading.classList.remove("none");
+        $toggler.classList.remove("none");
       }
     },
     toggleBlockOptionals(doHide) {
@@ -86,6 +96,38 @@ export default {
             tocLink.hidden = doHide;
           }
         });
+      });
+    },
+    appendTOCVariations() {
+      const filteredTags = 'i:not(".optional")';
+
+      this.allAnchors.forEach((element) => {
+        const anchorName = element.innerText;
+
+        Array.from($("#property-toggler ~ blockquote:has(i)")).forEach(
+          (block) => {
+            const blockName = block.firstChild.textContent.split("# ")[1];
+            const tags = Array.from($(block).find(filteredTags)).reduce(
+              (reducer, element) => {
+                if (!reducer.includes(element)) {
+                  reducer.push(element);
+                }
+                return reducer;
+              },
+              []
+            );
+
+            if (blockName === anchorName && tags.length > 0) {
+              for (const tag of tags) {
+                if (element.classList.length < 1) {
+                  element.classList.add("tag");
+                  element.classList.add(tag.classList);
+                  element.title = tag.classList + ' property';
+                }
+              }
+            }
+          }
+        );
       });
     },
   },
