@@ -173,8 +173,8 @@ The Set Data Model describes the properties and values of an individual set.
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
 > - **Type:** `object{props}`
-> - **Introduced:** `v5.1.0`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### tcgplayerGroupId  
 > The group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
