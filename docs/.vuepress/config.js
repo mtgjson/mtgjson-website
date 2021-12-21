@@ -111,8 +111,8 @@ module.exports = {
         path: '/'
       },
       {
-        title: 'Usage',
-        path: '/usage/',
+        title: 'Getting Started',
+        path: '/getting-started/',
         collapsable: false
       },
       {
