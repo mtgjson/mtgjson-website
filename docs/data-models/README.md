@@ -12,7 +12,7 @@
     },
     {
       "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, data models",
+      "content": "mtg, magic: the gathering, mtgjson, json, Data Models",
     }
   ],
   "feed": {
@@ -28,11 +28,10 @@ Data Models in MTGJSON describe any JSON object or nested JSON object that provi
 For example, any <strong>Data Model</strong> would look similar to this:
 
 ```json
-"<Some Property Key>": {
-  "<A Nested Property Key>": "<Array, Boolean, Float, Int, Object, String>",
-  "<Some Other Nested Property Key>": "<Array, Boolean, Float, Int, Object, String>",
+"<Parent Property>": {
+  "<Some Property>": <Array, Boolean, Float, Integer, Object, String>,
   ...
 }
 ```
 
-Most data output by MTGJSON are Data Models but some models have more complex structures with too many variable or optional keys to ensure reliable documentation. Because of this, we document those types of models as [Abstract Models](/abstract-models/).
+Most data output by MTGJSON are Data Models but some models have more complex models which are outlined as [Abstract Models](/abstract-models/).

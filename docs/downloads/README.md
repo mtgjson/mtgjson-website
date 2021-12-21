@@ -23,10 +23,10 @@
 
 # Downloads
 
-MTGJSON provides a variable amount of data to work with in various types of file formats.
+MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.
 
 **Downloads are provided as:**
 
-- [All Files](/downloads/all-files/) (All available top-level download files)
-- [All Sets](/downloads/all-sets) (All individual sets)
-- [All Decks](/downloads/all-decks) (All individual decks).
+- [All Files](/downloads/all-files/) (All downloadable files)
+- [All Sets](/downloads/all-sets) (All downloadable individual sets)
+- [All Decks](/downloads/all-decks) (All downloadable individual decks)

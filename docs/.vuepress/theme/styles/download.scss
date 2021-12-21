@@ -1,12 +1,13 @@
 .download-tables {
   position: relative;
 
-  .load-more-btn {
-    margin-top: 1rem;
-    display: block;
+  .load-more-container {
+    display: flex;
 
-    &.hide {
-      display: none;
+    .load-more-btn {
+      margin-top: 1rem;
+      display: block;
+      flex: 1;
     }
   }
 

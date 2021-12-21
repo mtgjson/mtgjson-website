@@ -27,4 +27,4 @@ All pre-constructed deck files to download provided by MTGJSON.
 
 ## Downloads
 
-<DownloadList file="DeckList" type="AllDecks" disableChecks="1"/>
+<DownloadList file="DeckList" type="AllDecks"/>

@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Token) data model documentation.",
+      "content": "Card (Token) Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Card (Token) data model documentation."
+      "content": "Card (Token) Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,9 +24,9 @@
 
 # Card (Token)
 
-The Card (Token) data model describes the properties and values of a single card token.
+The Card (Token) Data Model describes the properties and values of a single token card.
 
-**Parent model:** [Set](/file-models/set/)  
+**Parent model:** [Set](/data-models/set/)  
 **Parent property:** `tokens`
 
 ## Model Index
@@ -65,6 +65,13 @@ The Card (Token) data model describes the properties and values of a single card
 > - <ExampleField type='borderColor'/>
 > - **Introduced:** `v4.0.0`
 
+> ### cardParts
+> A list of card names associated to this card, such as `"Meld"` card face names.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
+
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
@@ -81,7 +88,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### colors  
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have a value, such as cards with `"Devoid"` in its `text`.  
+> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
@@ -101,6 +108,21 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v5.0.0`  
 > - **Attributes:** <i class="optional">optional</i>  
 
+> ### faceFlavorName
+> The flavor name on the face of the card.
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
+
+> ### finishes
+> The finishes of the card.
+>
+> - **Type:** `array[] | array[string]`
+> - <ExampleField type='finishes'/>
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="new">new</i>
+
 > ### flavorText  
 > The italicized text found below the rules text that has no game function.  
 >
@@ -109,7 +131,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Attributes:** <i class="optional">optional</i>  
 
 > ### frameEffects  
-> The visual frame effect.  
+> The visual frame effects.  
 >
 > - **Type:** `array[] | array[string]`
 > - <ExampleField type='frameEffects'/>
@@ -122,20 +144,22 @@ The Card (Token) data model describes the properties and values of a single card
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
 
-> ### hasFoil  
-> If the card be found in foil.  
+> ### hasFoil
+> If the card can be found in foil. Use the [finishes](/data-models/card-token/#finishes) property.
 >
-> - **Type:** `boolean`  
+> - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
-> ### hasNonFoil  
-> If the card can be found in non-foil  
+> ### hasNonFoil
+> If the card can be found in non-foil. Use the [finishes](/data-models/card-token/#finishes) property.
 >
-> - **Type:** `boolean`  
+> - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
+> - **Attributes:** <i class="deprecated">deprecated</i>
 
 > ### identifiers  
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.  
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.0.0`
@@ -145,10 +169,17 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### isFunny  
+> If the card is part of a funny set.
+>
+> - **Type:** `boolean`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isOnlineOnly  
-> If the card is only available in [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).  
+> If the card is only available in online game variations.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.1`  
@@ -159,7 +190,7 @@ The Card (Token) data model describes the properties and values of a single card
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.4.2`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### isReprint  
 > If the card has been reprinted.  
@@ -183,7 +214,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Introduced:** `v4.0.0`
 
 > ### loyalty  
-> The loyalty value of the card. Used on Planeswalker cards. 
+> The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -202,6 +233,12 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
+> ### otherFaceIds  
+> A list of card UUID's to this card's counterparts, such as transformed or melded faces. 
+>
+> - **Type:** `array[] | array[string]`  
+> - **Introduced:** `v4.6.1`
+
 > ### power  
 > The power of the card.  
 >
@@ -215,7 +252,7 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `array[string]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
 
 > ### reverseRelated
 > The names of the cards that produce this card.  
@@ -223,8 +260,16 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `array[string]`  
 > - **Introduced:** `v4.0.0`
 
+> ### securityStamp
+> The security stamp printed on the card.
+>
+> - **Type:** `string`
+> - <ExampleField type='securityStamp'/>
+> - **Introduced:** `v5.2.0`
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
+
 > ### setCode  
-> The set code of the card.  
+> The set printing code that the card is from.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
@@ -235,7 +280,14 @@ The Card (Token) data model describes the properties and values of a single card
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`  
-> - **Attributes:** <i class="optional">optional</i>  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### signature
+> The names of the signatures on the card.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  

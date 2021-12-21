@@ -32,133 +32,135 @@ All outputted files to download provided by MTGJSON.
 ## Downloads
 
 > ### AllPrintings
-> File containing all cards, including all printings and variations, categorized by set.  SQL/SQLite downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).  
+> File containing all [Card (Set)](/data-models/card-set/) cards, including all printings and variations, categorized by set. SQL/SQLite downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).  
 >
-> <DownloadField fileName='AllPrintings'/>
+> <DownloadNativeSelect fileName='AllPrintings'/>
 
 > ### AllPrintingsCSVFiles
-> File containing a directory of CSV files containing all data from AllPrintings.json.
+> File containing a directory of CSV files containing all data from `AllPrintings.json`.
 >
-> <DownloadField fileName='AllPrintingsCSVFiles'/>
+> <DownloadNativeSelect fileName='AllPrintingsCSVFiles'/>
 
 > ### AllDeckFiles
-> File containing all pre-constructed decks, compressed.
+> File containing all individual [Deck](/data-models/deck/) data, compressed.
 >
-> <DownloadField fileName='AllDeckFiles'/>
+> <DownloadNativeSelect fileName='AllDeckFiles'/>
 
 > ### AllIdentifiers
-> File containing all cards organized by UUID.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by card UUID.
 >
-> <DownloadField fileName='AllIdentifiers'/>
+> <DownloadNativeSelect fileName='AllIdentifiers'/>
 
 > ### AllPrices
 > File containing all prices of cards in various formats.
 >
-> <DownloadField fileName='AllPrices'/>
+> <DownloadNativeSelect fileName='AllPrices'/>
 
 > ### AllSetFiles
-> File containing each individual set file in a directory, compressed.
+> File containing each individual [Set](/data-models/set) in a directory, compressed.
 >
-> <DownloadField fileName='AllSetFiles'/>
+> <DownloadNativeSelect fileName='AllSetFiles'/>
 
 > ### AtomicCards
-> File containing every atomic card as a unique card object.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card.
 >
-> <DownloadField fileName='AtomicCards'/>
+> <DownloadNativeSelect fileName='AtomicCards'/>
 
 > ### CardTypes
 > File containing every card type of any type of card.
 >
-> <DownloadField fileName='CardTypes'/>
+> <DownloadNativeSelect fileName='CardTypes'/>
 
 > ### CompiledList
-> File containing all possible compiled outputs from MTGJSON, such as `AllPrintings`, `CardTypes`, etc.
+> File containing all individual outputs from MTGJSON, such as `AllPrintings`, `CardTypes`, etc.
 >
 > **Note:** This file does not contain data for this outputs, only string references to their existence. Generally, this data is used for documenting data on this website, but is also available to the public.
 >
-> <DownloadField fileName='CompiledList'/>
+> <DownloadNativeSelect fileName='CompiledList'/>
 
 > ### DeckList
-> File containing all possible compiled pre-constructed deck outputs from MTGJSON.
+> File containing all individual [Deck](/data-models/deck/) data.
 >
-> <DownloadField fileName='DeckList'/>
+> <DownloadNativeSelect fileName='DeckList'/>
 
 > ### EnumValues
-> File containing known property values for data models. Generally, this data is used for documenting data on this website, but is also available to the public.
+> File containing known property values for various Data Models.
 >
-> <DownloadField fileName='EnumValues'/>
+> **Note:** Generally, this data is used for documenting data on this website, but is also available to the public.
+>
+> <DownloadNativeSelect fileName='EnumValues'/>
 
 > ### Keywords
-> File containing a list of all keywords used on Magic cards.
+> File containing a list of possible all keywords used on all cards.
 >
-> <DownloadField fileName='Keywords'/>
+> <DownloadNativeSelect fileName='Keywords'/>
 
 > ### Legacy
-> File containing all sets, restricted to sets legal in the Legacy format.
+> File containing all [Set](/data-models/set/) cards, restricted to sets legal in the Legacy format.
 >
-> <DownloadField fileName='Legacy'/>
+> <DownloadNativeSelect fileName='Legacy'/>
 
 > ### LegacyAtomic
-> File containing all atomic cards, restricted to sets legal in the Legacy format.
+> File containing all [Card (Atomic)](/data-models/card-atomic/) cards, restricted to sets legal in the Legacy format.
 >
-> <DownloadField fileName='LegacyAtomic'/>
+> <DownloadNativeSelect fileName='LegacyAtomic'/>
 
 > ### Meta
 > File containing the metadata object with [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) dates for latest build and [SemVer](https://semver.org/) specifications of the MTGJSON release.
 >
-> <DownloadField fileName='Meta'/>
+> <DownloadNativeSelect fileName='Meta'/>
 
 > ### Modern
-> File containing all sets, restricted to sets legal in the Modern format.
+> File containing all [Set](/data-models/set/) cards, restricted to sets legal in the Modern format.
 >
-> <DownloadField fileName='Modern'/>
+> <DownloadNativeSelect fileName='Modern'/>
 
 > ### ModernAtomic
-> File containing all atomic cards, restricted to sets legal in the Modern format.
+> File containing all [Card (Atomic)](/data-models/card-atomic/) cards, restricted to sets legal in the Modern format.
 >
-> <DownloadField fileName='ModernAtomic'/>
+> <DownloadNativeSelect fileName='ModernAtomic'/>
 
 > ### PauperAtomic
-> File containing all atomic cards, restricted to cards legal in the Pauper format.
+> File containing all [Card (Atomic)](/data-models/card-atomic/) cards, restricted to cards legal in the Pauper format.
 >
-> <DownloadField fileName='PauperAtomic'/>
+> <DownloadNativeSelect fileName='PauperAtomic'/>
 
 > ### Pioneer
-> File containing all sets, restricted to cards legal in the Pioneer format.
+> File containing all [Set](/data-models/set/) cards, restricted to cards legal in the Pioneer format.
 >
-> <DownloadField fileName='Pioneer'/>
+> <DownloadNativeSelect fileName='Pioneer'/>
 
 > ### PioneerAtomic
-> File containing all atomic cards, restricted to cards legal in the Pioneer format.
+> File containing all [Card (Atomic)](/data-models/card-atomic/) cards, restricted to cards legal in the Pioneer format.
 >
-> <DownloadField fileName='PioneerAtomic'/>
+> <DownloadNativeSelect fileName='PioneerAtomic'/>
 
 > ### SetList
-> File containing a list of meta data for all sets.
+> File containing a list of meta data for all [Set](/data-models/set/) data.
 >
-> <DownloadField fileName='SetList'/>
+> <DownloadNativeSelect fileName='SetList'/>
 
 > ### Standard
-> File containing all sets, restricted to cards legal in the Standard format.
+> File containing all [Set](/data-models/set/) cards, restricted to cards legal in the Standard format.
 >
-> <DownloadField fileName='Standard'/>
+> <DownloadNativeSelect fileName='Standard'/>
 
 > ### StandardAtomic
-> File containing all atomic cards, restricted to cards legal in the Standard format.
+> File containing all [Card (Atomic)](/data-models/card-atomic/) cards, restricted to cards legal in the Standard format.
 >
-> <DownloadField fileName='StandardAtomic'/>
+> <DownloadNativeSelect fileName='StandardAtomic'/>
 
 > ### TcgplayerSkus
 > File containing [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU information based on card UUIDs.
 >
-> <DownloadField fileName='TcgplayerSkus'/>
+> <DownloadNativeSelect fileName='TcgplayerSkus'/>
 
 > ### Vintage
-> File containing all sets, restricted to sets legal in the Vintage format.
+> File containing all [Set](/data-models/set/) cards, restricted to sets legal in the Vintage format.
 >
-> <DownloadField fileName='Vintage'/>
+> <DownloadNativeSelect fileName='Vintage'/>
 
 > ### VintageAtomic
-> File containing all atomic cards, restricted to sets legal in the Vintage format.
+> File containing all [Card (Atomic)](/data-models/card-atomic/) cards, restricted to sets legal in the Vintage format.
 >
-> <DownloadField fileName='VintageAtomic'/>
+> <DownloadNativeSelect fileName='VintageAtomic'/>

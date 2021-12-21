@@ -34,7 +34,7 @@ Files/Directories were omitted that do not help understand this current project 
 ├── app.json # Configuration for Heroku review apps. Used to Heroku PR deployments
 ├── check-version.js # Ensures the developer environment is correct
 ├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
-├── __coverage__ # GENERATED. Coverage for unit tests
+├── __coverage__ # GENERATED and GIT ignored. Coverage for unit tests
 ├── __tests__ # Unit tests
 ├── utils # Build utils run before site generation
 │   ├── output/ # General purpose util output directory
@@ -68,8 +68,10 @@ Files/Directories were omitted that do not help understand this current project 
         └── theme # Visuals
             ├── components/ # Vuepress default Vue components (Beware!)
             ├── global-components/ # Vuepress custom Vue components
-            │   ├── DownloadField.vue # Renders a download field for a list
+            │   ├── DownloadButtonsList.vue # Rendres a download field using a buttons list (not used)
             │   ├── DownloadList.vue # Download decks/sets list
+            │   ├── DownloadNativeSelect.vue # Renders a download field using a native selection for a download
+            │   ├── DownloadSelect.vue # Renders a download field using a custom selection for a download (not used)
             │   ├── DownloadSorter.vue # Sorter for downloads
             │   ├── ExampleField.vue # Render examples from EnumValues.json
             │   ├── NavMeta.vue # Header logo and version
@@ -77,8 +79,8 @@ Files/Directories were omitted that do not help understand this current project 
             │   ├── Supporters.vue # Contributors/Patrons/Supporters for homepage
             │   └── ThemeSwitcher.vue # Toggler for light/dark theme
             ├── layouts/ # What the application will render at a top level
-            │   ├── 404.vue # 404 page
-            │   └── Layout.vue # Main page
+            │   ├── 404.vue # 404 layout
+            │   └── Layout.vue # Main layout
             └── styles/ # SCSS/Stylus
                 ├── *.scss # Styles
                 └── palette.styl # Stylus requirement for VuePress, DO NOT REMOVE
@@ -104,21 +106,6 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
 - Vue components are imported by placing them in a Markdown file.
 - Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
 
-### Markdown Syntax for Documentation Fields
-
-An example of a property field structure in Markdown:
-
-```markdown
-> ### artist
-> The name of the artist that illustrated the card art.  
->
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i>
-```
-
-You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example.
-
 ### Using Frontmatter
 
 Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
@@ -136,11 +123,11 @@ You can also change configuration of VuePress by overwriting variables within th
   "meta": [ # Head meta properties
     {
       "name": "description",
-      "content": "Card (Set) data model documentation.",
+      "content": "Card (Set) Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Card (Set) data model documentation.",
+      "content": "Card (Set) Data Model documentation.",
     },
     {
       "name": "keywords",
@@ -152,6 +139,21 @@ You can also change configuration of VuePress by overwriting variables within th
   }
 }
 ```
+
+### Markdown Syntax for Documentation Fields
+
+An example of a property field structure in Markdown:
+
+```markdown
+> ### artist
+> The name of the artist that illustrated the card art.  
+>
+> **Type:** `string`  
+> **Introduced:** `v4.0.0`  
+> **Attributes:** <i>optional</i>
+```
+
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `"schema"` property have a value that equates to an EnumValues.json property.
 
 ## The Vuex Store
 

@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Purchase Urls data model documentation.",
+      "content": "Purchase Urls Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Purchase Urls data model documentation."
+      "content": "Purchase Urls Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,9 +24,9 @@
 
 # Purchase Urls
 
-The Purchase Urls data model describes url paths to purchase a product from a marketplace.
+The Purchase Urls Data Model describes url paths to purchase a product from a marketplace.
   
-**Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
+**Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `purchaseUrls`
 
 ## Model Index
@@ -37,8 +37,15 @@ The Purchase Urls data model describes url paths to purchase a product from a ma
 
 ## Model Properties
 
-> ### cardKingdom  
+> ### cardKingdom
 > The URL to purchase a product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.0.0`  
+> - **Attributes:** <i class="optional">optional</i>
+
+> ### cardKingdomEtched
+> The URL to purchase an etched product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.0`  
@@ -58,9 +65,16 @@ The Purchase Urls data model describes url paths to purchase a product from a ma
 > - **Introduced:** `v4.4.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
-> ### tcgplayer  
+> ### tcgplayer
 > The URL to purchase a product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.4.0`  
 > - **Attributes:** <i class="optional">optional</i>
+
+> ### tcgplayerEtched
+> The URL to purchase an etched product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).  
+>
+> - **Type:** `string`  
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>

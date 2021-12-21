@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Leadership Skills data model documentation.",
+      "content": "Leadership Skills Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Leadership Skills data model documentation."
+      "content": "Leadership Skills Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,9 +24,9 @@
 
 # Leadership Skills
 
-The Leadership Skills data model describes a list of formats that a specific card is legal to be your Commander in play formats that utilize commanders.
+The Leadership Skills Data Model describes a list of formats that a specific card is legal to be your Commander in play formats that utilize commanders.
 
-**Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
+**Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `leadershipSkills`
 
 ## Model Index
@@ -38,19 +38,19 @@ The Leadership Skills data model describes a list of formats that a specific car
 ## Model Properties
 
 > ### brawl  
-> If this card can be your commander in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) format.  
+> If the card can be your commander in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) format.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.5.1`
 
 > ### commander  
-> If this card can be your commander in the [Commander/EDH](https://magic.wizards.com/en/content/commander-format) format.  
+> If the card can be your commander in the [Commander/EDH](https://magic.wizards.com/en/content/commander-format) format.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.5.1`
 
 > ### oathbreaker  
-> If this card can be your commander in the [Oathbreaker](https://oathbreakermtg.org/) format.  
+> If the card can be your commander in the [Oathbreaker](https://oathbreakermtg.org/) format.  
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.5.1`

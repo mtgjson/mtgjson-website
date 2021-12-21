@@ -33,23 +33,31 @@
                   small Release Date:
                   small &nbsp;{{ item.releaseDate }}
             .text-wrap--downloads
-              DownloadField(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
-      button.load-more-btn.cta-btn(@click="onLoadMore") Load More
+              DownloadNativeSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
+              //- DownloadSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
+              //- DownloadButtonsList(:fileName="item.fileName ? item.fileName : item.code")
+      .load-more-container
+        button.load-more-btn.cta-btn(v-show="canLoadMore" @click="onLoadMore") Show More
+        button.load-more-btn.cta-btn(v-show="canLoadAll" @click="onLoadAll") Show All
 </template>
 
 <script>
-import DownloadField from "./DownloadField";
+// import DownloadButtonsList from "./DownloadButtonsList.vue";
+// import DownloadSelect from "./DownloadSelect";
+import DownloadNativeSelect from "./DownloadNativeSelect";
 import DownloadSorter from "./DownloadSorter";
 export default {
   name: "DownloadList",
-  components: { DownloadField, DownloadSorter },
+  components: { /*DownloadSelect, DownloadButtonsList,*/ DownloadNativeSelect, DownloadSorter },
   props: [ 'file', 'type', 'disableChecks' ],
   data() {
     return {
+      canLoadMore: true,
+      canLoadAll: true,
       defaultList: [],
       dynamicList: [],
       listFilters: [],
-      lazyOffset: 25,
+      lazyOffset: this.$lazyOffset,
       resultsLength: 0,
       resultsTotalLength: 0,
       sortKey: "releaseDate:true"
@@ -74,9 +82,21 @@ export default {
     },
     updateCount(count){
       this.resultsLength = count;
+
+      if(count === this.resultsTotalLength){
+        this.removeButtons();
+      }
     },
     onLoadMore(){
       this.$refs.sorter.onLoadMore();
+    },
+    onLoadAll(){
+      this.dynamicList = this.defaultList;
+      this.removeButtons();
+    },
+    removeButtons(){
+      this.canLoadMore = false;
+      this.canLoadAll = false;
     }
   }
 }

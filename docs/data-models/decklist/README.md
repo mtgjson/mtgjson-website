@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Deck List file model documentation.",
+      "content": "Deck List Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Deck List file model documentation.",
+      "content": "Deck List Data Model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Deck List
 
-The Deck List file model describes a metadata-like structure that holds top-level information about a [Deck](/file-models/deck/).
+The Deck List Data Model describes a metadata-like model that holds information about a [Deck](/data-models/deck/).
 
 **Parent file:** [DeckList](/downloads/all-files/#decklist)  
 **Parent property:** `data`
@@ -44,7 +44,7 @@ The Deck List file model describes a metadata-like structure that holds top-leve
 > - **Introduced:** `v4.3.0`
 
 > ### fileName
-> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions.  
+> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions and are given a delimiter of `_`.
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.0`  

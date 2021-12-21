@@ -1,3 +1,81 @@
+// Model Properties of a page
+#model-properties {
+  &.none {
+    position: relative;
+
+    &::after {
+      content: "No Available Properties";
+      position: absolute;
+      top: 6rem;
+      left: 0;
+      font-size: 1rem;
+      color: var(--gray-color);
+    }
+
+    & ~ * {
+      display: none;
+    }
+  }
+
+  & ~ .custom-block {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+}
+
+// Table of contents
+.table-of-contents {
+  ul {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    li {
+      grid-column: span 1;
+
+      a.tag {
+        position: absolute;
+
+        &::after {
+          content: "";
+          position: absolute;
+          display: block;
+          right: -20px;
+          top: 0;
+        }
+      }
+
+      a.deprecated {
+        color: var(--true-gray-color);
+
+        &::after {
+          content: "🗑️";
+          top: 2px;
+          right: -22px;
+        }
+      }
+
+      a.optional {
+        color: var(--yellow-color);
+
+        &::after {
+          content: "⚠️";
+          top: 2px;
+          right: -15px;
+        }
+      }
+
+      a.new {
+        &::after {
+          content: "🎉";
+          right: -20px;
+          top: 3px;
+        }
+      }
+    }
+  }
+}
+
 #mtgjson-changelog,
 #mtggraphql-changelog,
 #mtgjson-documentation-changelog {

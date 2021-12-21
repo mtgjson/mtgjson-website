@@ -24,6 +24,169 @@
 # MTGJSON Changelog
 The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.2.0
+Release Date: 2021-12-20
+
+### Announcements
+
+**Welcome to v5.2.0!** With this update we've added a lot of new Card Data Model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
+
+We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them, MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
+
+If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (recurring donations).
+
+### Documentation
+
+#### Changed
+
+- Changed File models and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This is no way changes how and where the files are downloaded or how their models are formed.
+
+### Card Models
+
+#### Fixed
+
+- Fixed dual-faced cards having the wrong mana value on its face
+- Fixed `hasAlternativeDeckLimit` for `Seven Dwarves` card
+- Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
+- Fixed an issue where `Grist, the Hunger Tide` was not a valid commander
+- Fixed an issue where duplicate UUID's were being set on "AAFR" tokens
+- Fixed an issue where `releaseDate` was not getting set on "flip" cards
+- Fixed an issue where flavor names were not set correctly for certain foreign cards
+- Fixed an issue caused by a source having its printed text not providing line breaks
+
+#### Added
+
+- Added `manaValue` property
+- Added the non-Atomic `isFunny` property
+- Added the non-Atomic `finishes` property
+- Added the non-Atomic `cardParts` property
+- Added the non-Atomic `securityStamp` property
+- Added the non-Atomic `faceManaValue` property
+- Added the non-Atomic `faceFlavorName` property
+- Added the non-Atomic `otherFaceIds` property to Card (Token)
+- Added the non-Atomic `signature` property
+- Added support for "Dungeon" cards in Card (Atomic) Data Model
+- Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties.
+
+#### Deprecated
+
+- Deprecated `convertedManaCost` in favor of `manaValue`. Will be removed in `v6.0.0`
+- Deprecated `faceConvertedManaCost` in favor of `faceManaValue`. Will be removed in `v6.0.0`
+- Deprecated `hasFoil` in favor of `finishes`. Will be removed in `v5.3.0`
+- Deprecated `hasNonFoil` in favor of `finishes`. Will be removed in `v5.3.0`
+
+### Set Model
+
+#### Fixed
+
+- Fixed an issue where the French name of "Eldritch Moon" was incorrect
+
+#### Added
+
+- Added `sealedProduct` property
+
+### Foreign Data Model
+
+#### Fixed
+
+- Fixed an issue where data was not getting set at all
+
+### Identifiers Model
+
+#### Added
+
+- Added `tcgplayerEtchedProductId` property
+- Added `cardKingdomEtechedId` property
+
+#### Changed
+
+- Changed `scryfallOracleId` property to be optional
+
+### PurchaseUrls Model
+
+#### Added
+
+- Added `tcgplayerEtched` property
+- Added `cardKingdomEtched` property
+
+### Legalities Model
+
+#### Added
+
+- Added `gladiator` property
+- Added `historicbrawl` property
+- Added `oldschool` property
+- Added `paupercommander` property
+- Added `premodern` property
+
+### Enum Values File
+
+#### Added
+
+- Added `finishes` property to `card`
+
+### Keywords File
+
+#### Fixed
+
+- Fixed `abilityWords` showing wrong values
+
+### TCGPlayer SKUs File
+
+#### Added
+
+- Added `finishes` property
+
+### Individual Sets
+
+#### Added
+
+- Added Time Spiral Remastered (`TSR`)
+- Added Commander 2021 (`C21`)
+- Added Oversized Commander 2021 (`OC21`)
+- Added Strixhaven (`STX`)
+- Added Strixhaven Mystical Archives (`STA`)
+- Added Strixhaven Promos (`PSTX`)
+- Added Strixhaven Minigames (`MSTX`)
+- Added Strixhaven Art Series (`ASTX`)
+- Added Historic Anthology 5 (`HA5`)
+- Added Modern Horizons 2 (`MH2`)
+- Added Modern Horizons 2 Promos (`PMH2`)
+- Added Modern Horizons 2 Minigames (`MMH2`)
+- Added Modern Horizons 2 Art Series (`AMH2`)
+- Added Modern Horizons 1 Timeshifted Cards (`H1R`)
+- Added Wizards Play Network 2021 (`PW21`)
+- Added Love Your LGS 2021 (`PLG21`)
+- Added Adventures in the Forgotten Realms (`AFR`)
+- Added Adventures in the Forgotten Realms Promos (`PAFR`)
+- Added Forgotten Realms Commander (`AFC`)
+- Added Forgotten Realms Commander Displays (`OAFC`)
+- Added Adventures in the Forgotten Realms Art Series (`AAFR`)
+- Added Adventures in the Forgotten Realms Minigames (`MAFR`)
+- Added 2020 Heroes of the Realm (`HTR20`)
+- Added Jumpstart: Historic Horizons (`J21`)
+- Added Innistrad Midnight Hunt (`MID`)
+- Added Innistrad Midnight Hunt Promos (`PMID`)
+- Added Innistrad Midnight Hunt Token Sub (`SMID`)
+- Added Midnight Hunt Commander (`MIC`)
+- Added Midnight Hunt Commander Displays (`OMIC`)
+- Added Pioneer Challenger Decks 2021 (`Q06`)
+- Added Innistrad Crimson Vow (`VOW`)
+- Added Innistrad Crimson Vow Promos (`PVOW`)
+- Added Crimson Vow Commander (`VOC`)
+- Added Crimson Vow Commander Displays (`OVOC`)
+- Added Alchemy: Innistrad (`Y22`)
+- Added Innistrad: Double Feature (`DBL`)
+- Added Commander Collection Black (`CC2`)
+- Added Wizards Play Network 2022 (`PW22`)
+- Added Kamigawa Neon Dynasty (`NEO`) Spoilers
+- Added Unfinity (`UNF`) Spoilers
+
+### Misc
+
+- MTGJSON now supports Python 3.6 - 3.10
+- Better handle Gatherer downtime haulting builds
+
 ## 5.1.0
 Release Date: 2021-01-18
 
@@ -139,7 +302,7 @@ Release Date: 2020-07-03
 ### Announcements
 <img src="/images/assets/thumbnail-logo-mtgjson.png" style="max-height: 100px; float: left; margin: 0px 15px 15px 0px;" alt="New MTGJSON Logo"/>We are proud to announce the 5th major release of MTGJSON! The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `Booster` information on the `Set` data model. For more information, see the documentation for [Booster](/abstract-models/booster) data model.
+We are also pleased to announce the addition of `Booster` information on the `Set` Data Model. For more information, see the documentation for [Booster](/abstract-models/booster) Data Model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon<svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" x="0px" y="0px" viewBox="0 0 100 100" width="15" height="15" class="icon outbound"><path fill="currentColor" d="M18.8,85.1h56l0,0c2.2,0,4-1.8,4-4v-32h-8v28h-48v-48h28v-8h-32l0,0c-2.2,0-4,1.8-4,4v56C14.8,83.3,16.6,85.1,18.8,85.1z"></path> <polygon fill="currentColor" points="45.7,48.7 51.3,54.3 77.2,28.5 77.2,37.2 85.2,37.2 85.2,14.9 62.8,14.9 62.8,22.9 71.5,22.9"></polygon></svg></a> (recurring donations).
 
@@ -171,7 +334,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 ### Sets
 #### Added
 
-- Added `booster`. See the [Booster](/abstract-models/booster/) data model
+- Added `booster`. See the [Booster](/abstract-models/booster/) Data Model
 - Added `isPartialPreview`
 - Added Love Your LGS (`PLGS`)
 - Added Historic Anthology 3 (`HA3`)
@@ -192,7 +355,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 - The `AllCards` file is now renamed `AtomicCards` to better clarify that these files only contain atomic card data
 - The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc
 - The `version` file is now renamed `Meta`
-- All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object
+- All files now used a top-level `data` and `meta` key. Any Data Models inside of `data` should lose the nested `meta` object
 
 #### Added
 
@@ -204,7 +367,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 - Added `Phyrexian` language where language data is available
 
-### Website
+### Documentation
 #### Updated
 
 - The documentation application server was switched over to Nginx
@@ -227,6 +390,6 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 #### Removed
 
-- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure data models
+- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure Data Models
 - The "About Us" page no longer uses a table of contents
-- `setCode` was mistakenly added and is now removed to the `Card` data model
+- `setCode` was mistakenly added and is now removed to the `Card` Data Model

@@ -15,6 +15,7 @@ import { Integrations as VueTracing } from '@sentry/tracing';
 export default ({ Vue }) => {
   Vue.prototype.$api = 'https://mtgjson.com/api/v5/';
   Vue.prototype.$throttleSpeed = 300;
+  Vue.prototype.$lazyOffset = 10;
   Vue.prototype.$helpers = {
     setStoreState,
     prettifyType,

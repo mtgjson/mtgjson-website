@@ -22,40 +22,40 @@
 
 # All Prices
 
-The All Prices data model describes a list of card prices based on card UUID.
+The All Prices abstract Data Model describes a list of card prices based on MTGJSON Card UUID.
 
 **Parent file:** [AllPrices](/downloads/all-files/#allprices)  
 **Parent property:** `data`
 
 ## Price Providers
 
-MTGJSON currently has affiliated with the following markets to keep a history of price data. The following examples are formatted for the data model:
+MTGJSON currently has affiliated with the following price providers to keep a history of price data. The following examples are providers and game formats:
 
 - paper: [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
 - mtgo: [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
-## File Structure Overview
+## Model Overview
 
 ```json
 {
-  "<Card UUID>": {
-    "<Card Format>": { // Game format
-      "<Price Provider Identifier>": { // Price provider
-        "buylist": { // Provider buylist values
-          "foil": { // Foil prices
-            "<YYYY-MM-DD>": <Float> // Date and price as value
+  <MTGJSON Card UUID>: {
+    <Card Format>: { // Game format
+      <Price Provider Identifier>: { // Price provider
+        buylist: { // Provider buylist values
+          foil: { // Foil prices
+            <YYYY-MM-DD>: <Float> // Date and price as value
           },
-          "normal": { // Normal prices
-            "<YYYY-MM-DD>": <Float> // Date and price as value
+          normal: { // Normal prices
+            <YYYY-MM-DD>: <Float> // Date and price as value
           }
         },
-        "currency": <String>, // Currency of the provider
-        "retail": { // Provider retail values
-          "foil": { // Foil prices
-            "<YYYY-MM-DD>": <Float> // Date and price as value
+        currency: <String>, // Currency of the provider
+        retail: { // Provider retail values
+          foil: { // Foil prices
+            <YYYY-MM-DD>: <Float> // Date and price as value
           },
-          "normal": { // Normal prices
-            "<YYYY-MM-DD>": <Float> // Date and price as value
+          normal: { // Normal prices
+            <YYYY-MM-DD>: <Float> // Date and price as value
           }
         }
       },
@@ -71,69 +71,69 @@ MTGJSON currently has affiliated with the following markets to keep a history of
 
 ```json
 {
-  "0120a941-9cfb-50b5-b5e4-4e0c7bd32410": {
-    "mtgo": {
-      "cardhoarder": {
-        "currency": "USD",
-        "retail": {
-          "foil": {
+  0120a941-9cfb-50b5-b5e4-4e0c7bd32410: {
+    mtgo: {
+      cardhoarder: {
+        currency: "USD",
+        retail: {
+          foil: {
             ..., // more rows
-            "2020-04-21": 0.02
+            2020-04-21: 0.02
           },
-          "normal": {
+          normal: {
             ..., // more rows
-            "2020-04-21": 0.02
+            2020-04-21: 0.02
           }
         }
       },
     },
-    "paper": {
-      "cardkingdom" : {
-        "buylist": {
-          "foil": {
+    paper: {
+      cardkingdom : {
+        buylist: {
+          foil: {
             ..., // more rows
-            "2020-04-21": 0.6
+            2020-04-21: 0.6
           },
-          "normal": {
+          normal: {
             ..., // more rows
-            "2020-04-21": 0.01
+            2020-04-21: 0.01
           }
         },
-        "currency": "USD",
-        "retail": {
-          "foil": {
+        currency: "USD",
+        retail: {
+          foil: {
             ..., // more rows
-            "2020-04-21": 0.12
+            2020-04-21: 0.12
           },
-          "normal": {
+          normal: {
             ..., // more rows
-            "2020-04-21": 0.02
+            2020-04-21: 0.02
           }
         }
       },
-      "cardmarket": {
-        "currency": "EUR",
-        "retail": {
-          "foil": {
+      cardmarket: {
+        currency: "EUR",
+        retail: {
+          foil: {
             ..., // more rows
-            "2020-04-21": 0.12
+            2020-04-21: 0.12
           },
-          "normal": {
+          normal: {
             ..., // more rows
-            "2020-04-21": 0.02
+            2020-04-21: 0.02
           }
         }
       },
-      "tcgplayer": {
-        "currency": "USD",
-        "retail": {
-          "foil": {
+      tcgplayer: {
+        currency: "USD",
+        retail: {
+          foil: {
             ..., // more rows
-            "2020-04-21": 0.12
+            2020-04-21: 0.12
           },
-          "normal": {
+          normal: {
             ..., // more rows
-            "2020-04-21": 0.02
+            2020-04-21: 0.02
           }
         }
       }

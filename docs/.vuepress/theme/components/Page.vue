@@ -186,7 +186,7 @@ function flattern(items, res) {
   z-index: 1;
   padding-top: calc(var(--navbar-height) - 1rem);
   padding-left: var(--sidebar-width);
-  background-color: var(--bg-dark-color);
+  background-color: var(--bg-2-color);
 
   .page-theme-switcher {
     position: absolute;

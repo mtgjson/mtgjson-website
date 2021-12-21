@@ -52,7 +52,7 @@ export default {
 .home {
   padding: var(--navbar-height) 2rem 0;
   display: block;
-  background-color: var(--bg-dark-color);
+  background-color: var(--bg-2-color);
 
   &-content {
     max-width: 960px;
@@ -81,7 +81,7 @@ export default {
       // max-width: 35rem;
       font-size: 1.6rem;
       line-height: 1.3;
-      color: var(--light-gray-color);
+      color: var(--gray-1-color);
     }
 
     .action-button {
@@ -122,11 +122,11 @@ export default {
       font-weight: 500;
       border-bottom: none;
       padding-bottom: 0;
-      color: var(--light-gray-color);
+      color: var(--gray-1-color);
     }
 
     p {
-      color: var(--light-gray-color);
+      color: var(--gray-1-color);
     }
   }
 
@@ -134,7 +134,7 @@ export default {
     padding: 2.5rem;
     border-top: 1px solid var(--gray-color);
     text-align: center;
-    color: var(--light-gray-color);
+    color: var(--gray-1-color);
   }
 }
 

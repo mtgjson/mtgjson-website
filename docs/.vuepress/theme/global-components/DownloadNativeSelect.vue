@@ -36,7 +36,7 @@
 
 <script>
 export default {
-  name: "DownloadField",
+  name: "DownloadNativeSelect",
   props: [ "fileName", "fileType" ],
   data(){
     return {
@@ -79,7 +79,7 @@ export default {
     padding: .5rem;
     border-radius: 5px;
     border: none;
-    background-color: var(--light-gray-color);
+    background-color: var(--gray-1-color);
   }
 }
 </style>

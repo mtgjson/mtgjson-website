@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Foreign Data data model documentation.",
+      "content": "Foreign Data Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Foreign Data data model documentation."
+      "content": "Foreign Data Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,9 +24,9 @@
 
 # Foreign Data
 
-The Foreign Data data model describes a list of properties for various card data models in alternate languages.
+The Foreign Data Data Model describes a list of properties for various card Data Models in alternate languages.
 
-**Parent model:** [Card (Atomic)](../card-atomic/), [Card (Deck)](../card-deck/), [Card (Set)](../card-set/)  
+**Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 **Parent property:** `foreignData`
 
 ## Model Index
@@ -38,14 +38,14 @@ The Foreign Data data model describes a list of properties for various card data
 ## Model Properties
 
 > ### faceName  
-> The name on the face of the card.  
+> The foreign name on the face of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### flavorText  
-> The flavor text of the card.  
+> The foreign flavor text of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
@@ -59,27 +59,27 @@ The Foreign Data data model describes a list of properties for various card data
 > - **Introduced:** `v4.0.0`
 
 > ### multiverseId  
-> The multiverse identifier of the card.  
+> The foreign multiverse identifier of the card.  
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### name  
-> The name of the card.  
+> The foreign name of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
 > ### text  
-> The text ruling of the card.  
+> The foreign text ruling of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### type  
-> The type of the card. Includes any supertypes and subtypes.  
+> The foreign type of the card. Includes any supertypes and subtypes.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  

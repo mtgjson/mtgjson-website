@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Sealed Product data model documentation.",
+      "content": "Sealed Product Data Model documentation.",
     },
     {
       "property": "og:description",
-      "content": "Sealed Product data model documentation."
+      "content": "Sealed Product Data Model documentation."
     },
     {
       "name": "keywords",
@@ -24,9 +24,9 @@
 
 # Sealed Product
 
-The Sealed Product data model describes a list of properties for a purchase-able product of a [Set](/file-models/set/).
+The Sealed Product Data Model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
 
-**Parent model:** [Set](/file-models/set/), [SetList](/file-models/setlist/)  
+**Parent model:** [Set](/data-models/set/), [SetList](/data-models/setlist/)  
 **Parent property:** `sealedProduct`
 
 ## Model Index
@@ -38,7 +38,7 @@ The Sealed Product data model describes a list of properties for a purchase-able
 ## Model Properties
 
 > ### identifiers  
-> A list of identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) data model.  
+> A list of identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.1.0`
@@ -50,7 +50,7 @@ The Sealed Product data model describes a list of properties for a purchase-able
 > - **Introduced:** `v5.1.0`
 
 > ### purchaseUrls  
-> Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.  
+> Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.  
 >
 > - **Type:** `object{props}`  
 > - **Introduced:** `v5.1.0`

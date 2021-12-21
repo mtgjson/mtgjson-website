@@ -1,0 +1,48 @@
+// Sidebar overrides
+.sidebar-group-items, .sidebar-sub-headers {
+  .sidebar-link {
+    font-size: 16px;
+    font-weight: normal;
+
+    &.active {
+      position: relative;
+      color: var(--accent-color);
+    }
+  }
+
+  .sidebar-sub-headers {
+    &:empty {
+      display: none;
+    }
+  }
+}
+.sidebar-link[href="/mtggraphql/"],
+.sidebar-link[href="/data-models/sealed-product/"] {
+  position: relative;
+
+  &::after {
+    position: absolute;
+    right: -40px;
+    top: 0;
+    padding: 0 5px;
+    border-radius: 5px;
+    font-size: 12px;
+    font-family: var(--font-monospace);
+    font-weight: bold;
+    color: var(--dark-color);
+  }
+}
+.sidebar-link[href="/mtggraphql/"] {
+  &::after {
+    content: "beta";
+    background-color: var(--spoiler-color);
+    right: -50px;
+  }
+}
+
+.sidebar-link[href="/data-models/sealed-product/"] {
+  &::after {
+    content: "new";
+    background-color: var(--green-color);
+  }
+}

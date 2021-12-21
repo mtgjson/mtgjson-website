@@ -119,7 +119,7 @@ export default {
     margin-left: 0;
 
     li {
-      flex: none;
+      flex: 0;
       list-style: none;
 
       a {

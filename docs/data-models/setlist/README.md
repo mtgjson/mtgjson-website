@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Set List file model documentation.",
+      "content": "Set List Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Set List file model documentation.",
+      "content": "Set List Data Model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Set List
 
-The Set List file model describes a metadata-like structure that holds top-level information about a [Set](../set/).
+The Set List Data Model describes a metadata-like model that holds information about a [Set](/data-models/set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`
@@ -38,7 +38,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 ## Model Properties
 
 > ### baseSetSize  
-> The number of cards in the set. Will default to `totalSetSize` if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
+> The number of cards in the set. This will default to [totalSetSize](#totalsetsize) if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`
@@ -84,7 +84,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### isOnlineOnly  
-> If the set is only available online.  
+> If the set is only available in online game variations.
 >
 > - **Type:** `boolean`  
 > - **Introduced:** `v4.0.0`
@@ -98,12 +98,13 @@ The Set List file model describes a metadata-like structure that holds top-level
 
 > ### isPartialPreview  
 > If the set is still in preview (spoiled). Preview sets do not have complete data.
-> - **Type:** `boolean`  
+>
+> - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`  
 > - **Attributes:** <i class="optional">optional</i>
 
 > ### keyruneCode  
-> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) image icons.  
+> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) set image icons.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.2`
@@ -156,7 +157,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Introduced:** `v4.0.0`
 
 > ### sealedProduct
-> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
@@ -176,7 +177,7 @@ The Set List file model describes a metadata-like structure that holds top-level
 > - **Introduced:** `v4.1.0`
 
 > ### translations  
-> The translated set name by language. See the [Translations](/data-models/translations/) data model.  
+> The translated set name by language. See the [Translations](/data-models/translations/) Data Model.  
 >
 > - **Type:** `object{} | object{props}`  
 > - **Introduced:** `v4.3.2`

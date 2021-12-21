@@ -1,6 +1,6 @@
 // Dynamic sidebar
 const generateSidebarRoutes = require('./config.sidebar');
-const [abstractModels, dataModels, fileModels] = generateSidebarRoutes(['/abstract-models/', '/data-models/', '/file-models/']);
+const [abstractModels, dataModels, fileModels] = generateSidebarRoutes(['/abstract-models/', '/data-models/']);
 // SEO data
 const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
 const description = 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
@@ -107,12 +107,21 @@ module.exports = {
     sidebarDepth: 0,
     sidebar: [
       {
-        title: 'About Us',
+        title: 'MTGJSON',
         path: '/'
+      },
+      {
+        title: 'Getting Started',
+        path: '/getting-started/',
+        collapsable: false
       },
       {
         title: 'F.A.Q.',
         path: '/faq/'
+      },
+      {
+        title: 'MTGGraphQL',
+        path: '/mtggraphql/'
       },
       {
         title: 'Downloads',
@@ -121,20 +130,10 @@ module.exports = {
         children: ['/downloads/all-files/', '/downloads/all-sets/', '/downloads/all-decks/']
       },
       {
-        title: 'MTGGraphQL',
-        path: '/mtggraphql/'
-      },
-      {
         title: 'Data Models',
         path: '/data-models/',
         collapsable: false,
         children: dataModels
-      },
-      {
-        title: 'File Models',
-        path: '/file-models/',
-        collapsable: false,
-        children: fileModels
       },
       {
         title: 'Abstract Models',

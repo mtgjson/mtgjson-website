@@ -33,17 +33,21 @@ h1, h2, h3, h4, h5, h6 {
 h1 {
   font-size: 2.5rem;
   padding-top: 2rem;
-  padding-bottom: 2rem;
 }
 
 h2 {
   font-size: 1.75rem;
   padding-top: 2rem;
-  padding-bottom: 2rem;
+}
+
+h1, h2 {
+  padding-bottom: 1rem;
+  margin-bottom: 1rem;
+  border-bottom: 1px solid var(--header-border-color);
 }
 
 h3 {
-  font-size: 1.35rem;
+  font-size: 1.25rem;
   padding-top: 1rem;
   padding-bottom: 1rem;
 }
@@ -81,4 +85,12 @@ a {
 
 sup {
   font-size: .7em;
+}
+
+// Custom small header
+.small-header {
+  display: block;
+  font-weight: .5rem;
+  padding: 1rem 0 .5rem;
+  font-weight: bold;
 }

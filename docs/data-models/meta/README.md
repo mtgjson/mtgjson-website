@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Meta file model documentation.",
+      "content": "Meta Data Model documentation.",
     },
     {
       "name": "og:description",
-      "content": "Meta file model documentation.",
+      "content": "Meta Data Model documentation.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Meta
 
-The Meta file model describes application build date and version number.
+The Meta Data Model describes application metadata.
 
 **Parent file:** [Meta](/downloads/all-files/#meta)  
 **Parent property:** `meta`  
@@ -38,13 +38,13 @@ The Meta file model describes application build date and version number.
 ## Model Properties
 
 > ### date  
-> [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date of the current MTGJSON build.  
+> The current release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the MTGJSON build.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`
 
 > ### version  
-> [SemVer](https://semver.org) specification of the current MTGJSON build.  
+> The current [SemVer](https://semver.org) version for the MTGJSON build.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`

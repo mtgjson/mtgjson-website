@@ -1,6 +1,5 @@
 ---
 {
-  # "title": "What is MTGJSON",
   "meta": [
     {
       "name": "keywords",
@@ -15,12 +14,10 @@
 
 # MTGJSON
 
-## What Is MTGJSON?
-
-MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.
+MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https://magic.wizards.com/en) data in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON and other files that you can learn about and download from this website.
 
 ::: warning Living Documentation Ahead!
-<p>This is living documentation, at any point this site may be updated for clarity.</p>
+This is living documentation, at any point this site may be updated for clarity.
 :::
 
 ## The Team
@@ -42,12 +39,12 @@ MTGJSON is an open-source project that catalogs all Magic: The Gathering cards i
 </p>
 :::
 
-::: tip Mark - Cloud Developer
+<!-- ::: tip Mark - Cloud Developer
 <p>
   <img class="avatar" src="/images/avatars/avatar-mark.jpg" title="Mark's avatar" alt="Mark's avatar" width="100px" height="100px">
   Mark is an old man obsessed with learning anything he can, a self-proclaimed Jack of All Trades, yet Master of None. He spends his time gaming, writing, farming, cuddling with his dogs, and providing comedic relief.
 </p>
-:::
+::: -->
 
 ::: tip Milo - GraphQL Developer
 <p>
