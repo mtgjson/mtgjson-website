@@ -48,8 +48,8 @@ The Purchase Urls Data Model describes url paths to purchase a product from a ma
 > The URL to purchase an etched product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
 >
 > - **Type:** `string`  
-> - **Introduced:** `v5.0.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Introduced:** `v5.2.0`  
+> - **Attributes:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### cardKingdomFoil  
 > The URL to purchase a foil product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).  
