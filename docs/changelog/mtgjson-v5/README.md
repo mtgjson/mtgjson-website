@@ -83,7 +83,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 #### Added
 
-- Added `sealedProduct` property
+- Added `sealedProduct` property (This is still a WIP, but the foundation is now available)
 
 ### Foreign Data Model
 
