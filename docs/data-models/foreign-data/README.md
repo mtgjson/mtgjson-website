@@ -42,14 +42,14 @@ The Foreign Data Data Model describes a list of properties for various card Data
 >
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
-> - **Attributes:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### flavorText  
 > The foreign flavor text of the card.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### language  
 > The foreign language of card.  
@@ -63,7 +63,7 @@ The Foreign Data Data Model describes a list of properties for various card Data
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### name  
 > The foreign name of the card.  
@@ -76,11 +76,11 @@ The Foreign Data Data Model describes a list of properties for various card Data
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### type  
 > The foreign type of the card. Includes any supertypes and subtypes.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`  
-> - **Attributes:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional">optional</i>

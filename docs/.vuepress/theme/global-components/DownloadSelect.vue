@@ -1,10 +1,7 @@
 <template lang="pug">
 .download-links
   ol.context-menu
-    li.context-menu--option.open(
-      data-value="",
-      @click="openFile"
-    ) Open (Slow)
+    li.context-menu--option.open(data-value="", @click="openFile") Open (Slow)
     li.context-menu--option.download(
       data-value="",
       data-name="",
@@ -108,7 +105,7 @@ export default {
   props: ["fileName", "fileType"],
   data() {
     return {
-      compressedFormats: ["bz2", "gz", "xz", "zip"]
+      compressedFormats: ["bz2", "gz", "xz", "zip"],
     };
   },
   methods: {
@@ -148,7 +145,7 @@ export default {
 
       this.resetContextMenu();
 
-      window.open(url, '_blank').focus();
+      window.open(url, "_blank").focus();
     },
     copyLink(e) {
       const $target = e.target || e.currentTarget;
@@ -227,18 +224,20 @@ export default {
       $contextMenu.classList.add("show");
       $target.classList.add("active");
     },
-    resetContextMenu(){
+    resetContextMenu() {
       const $otherMenus = document.querySelectorAll(".context-menu");
-      const $otherItems = document.querySelectorAll(".download-links-list--item");
+      const $otherItems = document.querySelectorAll(
+        ".download-links-list--item"
+      );
 
       $otherMenus.forEach(($omenu) => {
         $omenu.classList.remove("show");
       });
 
-      $otherItems.forEach( $oitem => {
+      $otherItems.forEach(($oitem) => {
         $oitem.classList.remove("active");
       });
-    }
+    },
   },
 };
 </script>
@@ -321,7 +320,8 @@ export default {
       padding-left: var(--common-padding);
       font-size: 14px;
 
-      &.active, &:hover {
+      &.active,
+      &:hover {
         border-radius: var(--common-radius);
         background-color: var(--dark-color);
         color: var(--light-color);

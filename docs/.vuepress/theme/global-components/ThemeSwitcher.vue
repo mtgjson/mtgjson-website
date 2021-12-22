@@ -1,21 +1,26 @@
 <template lang="pug">
-  .theme-switcher(@click="switchTheme" @keydown.enter="switchTheme" tabindex="0")
-    .theme-switcher--button(
-    v-if="activeTheme === lightTheme"
-    title="Enable Dark Theme"
-    :data-theme='darkTheme')
-      IconDark
-    .theme-switcher--button(
-    v-if="activeTheme === darkTheme"
-    title="Enable Light Theme"
-    :data-theme='lightTheme')
-      IconLight
-
+.theme-switcher(
+  @click="switchTheme",
+  @keydown.enter="switchTheme",
+  tabindex="0"
+)
+  .theme-switcher--button(
+    v-if="activeTheme === lightTheme",
+    title="Enable Dark Theme",
+    :data-theme="darkTheme"
+  )
+    IconDark
+  .theme-switcher--button(
+    v-if="activeTheme === darkTheme",
+    title="Enable Light Theme",
+    :data-theme="lightTheme"
+  )
+    IconLight
 </template>
 
 <script>
-import IconDark from '../../public/images/icon-dark.svg';
-import IconLight from '../../public/images/icon-light.svg';
+import IconDark from "../../public/images/icon-dark.svg";
+import IconLight from "../../public/images/icon-light.svg";
 
 export default {
   name: "ThemeSwitcher",
@@ -24,14 +29,14 @@ export default {
     return {
       activeTheme: "dark",
       darkTheme: "dark",
-      lightTheme: "light"
+      lightTheme: "light",
     };
   },
   mounted() {
     let savedTheme = undefined;
 
     // Attempt to retrieve localStorage state
-    if(this.$helpers.testStorage() === true){
+    if (this.$helpers.testStorage() === true) {
       const savedTheme = window.localStorage.getItem("theme");
       if (savedTheme) {
         // Apply the state to the button
@@ -65,13 +70,13 @@ export default {
       // Add new favicon
       document.getElementsByTagName("head")[0].appendChild(link);
       // Store state in localStorage
-      if(this.$helpers.testStorage() === true){
+      if (this.$helpers.testStorage() === true) {
         window.localStorage.setItem("theme", newTheme);
       }
-      this.$store.dispatch('SET_THEME_COLOR', newTheme);
+      this.$store.dispatch("SET_THEME_COLOR", newTheme);
       this.activeTheme = newTheme;
-    }
-  }
+    },
+  },
 };
 </script>
 

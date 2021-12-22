@@ -150,7 +150,7 @@ An example of a property field structure in Markdown:
 >
 > **Type:** `string`  
 > **Introduced:** `v4.0.0`  
-> **Attributes:** <i>optional</i>
+> **Tags:** <i>optional</i>
 ```
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `"schema"` property have a value that equates to an EnumValues.json property.
