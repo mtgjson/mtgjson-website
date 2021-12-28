@@ -18,8 +18,8 @@ export default {
   name: "PropertyToggler",
   data() {
     return {
-      hiddenAnchors: [],
-      allAnchors: [],
+      hiddenTOCProperties: [],
+      allTOCAnchors: [],
       propertyBlocks: [],
       hasOptionals: true,
       checked: true,
@@ -30,40 +30,36 @@ export default {
       return this.hasOptionals;
     },
     fullCount() {
-      return this.allAnchors.length;
+      return this.allTOCAnchors.length;
     },
     hiddenCount() {
-      return this.hiddenAnchors.length === this.allAnchors.length
+      return this.hiddenTOCProperties.length === this.allTOCAnchors.length
         ? 0
-        : this.allAnchors.length - this.hiddenAnchors.length;
+        : this.allTOCAnchors.length - this.hiddenTOCProperties.length;
     },
     count() {
       return this.checked ? this.fullCount : this.hiddenCount;
     },
   },
   mounted() {
-    this.allAnchors = Array.from(
-      document.querySelectorAll(".table-of-contents li a")
+    this.allTOCAnchors = Array.from($(".table-of-contents li a"));
+    this.propertyBlocks = Array.from(
+      $("#property-toggler ~ blockquote:has(i.optional)")
     );
 
-    this.setPropertyBlocks();
-    this.appendTOCVariations();
+    if (this.propertyBlocks.length === 0) {
+      this.hasOptionals = false;
+    }
+
+    for (const block of this.propertyBlocks) {
+      const propertyName = block.firstChild.innerText.split("# ")[1];
+
+      this.hiddenTOCProperties.push(propertyName);
+    }
+
+    this.toggleTOCVariations();
   },
   methods: {
-    setPropertyBlocks() {
-      const propertyBlocks = $(
-        "#property-toggler ~ blockquote:has(i.optional)"
-      );
-
-      this.propertyBlocks = Array.from(propertyBlocks);
-      this.propertyBlocks.forEach((block) => {
-        this.hiddenAnchors.push(block.children[0].id);
-      });
-
-      if (this.propertyBlocks.length === 0) {
-        this.hasOptionals = false;
-      }
-    },
     toggleOptionals() {
       this.toggleBlockOptionals(this.checked);
       this.toggleTOCOptionals(this.checked);
@@ -82,53 +78,50 @@ export default {
       }
     },
     toggleBlockOptionals(doHide) {
-      this.propertyBlocks.forEach((el) => {
-        el.hidden = doHide;
-      });
+      for (const element of this.propertyBlocks) {
+        element.hidden = doHide;
+      }
     },
     toggleTOCOptionals(doHide) {
-      this.hiddenAnchors.forEach((title) => {
-        this.allAnchors.forEach((a, index) => {
-          const href = a.href.split("#")[1];
-          const tocLink = this.allAnchors[index].parentElement;
+      for (const [thisIndex, anchorElement] of this.allTOCAnchors.entries()) {
+        const tocPropertyName = anchorElement.innerText;
+        const tocListItem = this.allTOCAnchors[thisIndex].parentElement;
 
-          if (href === title) {
-            tocLink.hidden = doHide;
-          }
-        });
-      });
+        if (this.hiddenTOCProperties.includes(tocPropertyName)) {
+          tocListItem.hidden = doHide;
+        }
+      }
     },
-    appendTOCVariations() {
-      const filteredTags = 'i:not(".optional")';
+    toggleTOCVariations() {
+      const tocAnchorsMap = {};
+      const tags = 'i:not(".optional")';
+      const propertyBlocks = Array.from(
+        $(`#property-toggler ~ blockquote:has(${tags})`)
+      );
 
-      this.allAnchors.forEach((element) => {
-        const anchorName = element.innerText;
+      // Map all TOC anchor links by its inner text
+      for (const element of this.allTOCAnchors) {
+        tocAnchorsMap[element.innerText] = element;
+      }
 
-        Array.from($("#property-toggler ~ blockquote:has(i)")).forEach(
-          (block) => {
-            const blockName = block.firstChild.textContent.split("# ")[1];
-            const tags = Array.from($(block).find(filteredTags)).reduce(
-              (reducer, element) => {
-                if (!reducer.includes(element)) {
-                  reducer.push(element);
-                }
-                return reducer;
-              },
-              []
-            );
+      // Set all TOC anchor link tags with tag properties
+      for (const propertyBlock of propertyBlocks) {
+        const blockPropertyName =
+          propertyBlock.firstChild.textContent.split("# ")[1];
+        const tocPropertyElement = tocAnchorsMap[blockPropertyName];
 
-            if (blockName === anchorName && tags.length > 0) {
-              for (const tag of tags) {
-                if (element.classList.length < 1) {
-                  element.classList.add("tag");
-                  element.classList.add(tag.classList);
-                  element.title = tag.classList + ' property';
-                }
-              }
-            }
+        if (tocPropertyElement) {
+          // Here's the problem...
+          // We only focus on getting the _first_ tag in the property block
+          const tag = Array.from($(propertyBlock).find(tags)[0].classList)[0];
+
+          if (tocPropertyElement.classList.length < 1) {
+            tocPropertyElement.classList.toggle("tag");
+            tocPropertyElement.classList.toggle(tag);
+            tocPropertyElement.title = tag + " property";
           }
-        );
-      });
+        }
+      }
     },
   },
 };

@@ -4,6 +4,7 @@ import { makeStore } from './store';
 import setStoreState from './src/scripts/setStoreState';
 import prettifyType from './src/scripts/prettifyType';
 import testStorage from './src/scripts/testStorage';
+import formatTime from './src/scripts/formatTime';
 import filter from './src/scripts/filter';
 import search from './src/scripts/search';
 import sort from './src/scripts/sort';
@@ -20,6 +21,7 @@ export default ({ Vue }) => {
     setStoreState,
     prettifyType,
     testStorage,
+    formatTime,
     search,
     filter,
     sort

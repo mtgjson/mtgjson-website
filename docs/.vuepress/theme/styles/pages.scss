@@ -34,14 +34,15 @@
       grid-column: span 1;
 
       a.tag {
-        position: absolute;
+        position: relative;
 
         &::after {
           content: "";
           position: absolute;
           display: block;
-          right: -20px;
           top: 0;
+          right: -25px;
+          font-size: 1rem;
         }
       }
 
@@ -49,27 +50,13 @@
         color: var(--true-gray-color);
 
         &::after {
-          content: "🗑️";
-          top: 2px;
-          right: -22px;
-        }
-      }
-
-      a.optional {
-        color: var(--yellow-color);
-
-        &::after {
           content: "⚠️";
-          top: 2px;
-          right: -15px;
         }
       }
 
       a.new {
         &::after {
           content: "🎉";
-          right: -20px;
-          top: 3px;
         }
       }
     }

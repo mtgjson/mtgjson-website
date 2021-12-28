@@ -1,102 +1,121 @@
 <template lang="pug">
-  .supporters
-    .supporters-wrap(v-if="contributors")
-      h3 Our Contributors
-      ul.contributors-list
-        li(v-for="(contributor, key) in contributors" :key="key")
-          a(:href="contributor.url" rel="noopener noreferrer" target="_blank") {{ `${contributor.username}'s GitHub profile` }}
-            img(class="lazy" :data-src="contributor.avatar" :alt="`${contributor.username}'s avatar`" :title="`${contributor.username}'s avatar`" width="48px" height="48px")
-    h2 Supporters
-    .supporters-wrap(v-if="patrons")
-      h3 Our Patreon Supporters
-      p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
-      small(v-html="projectMsg")
-      .supporters-grid
-        .supporter(v-for="({ link, image, name, since, tier, blurb } = patron, key) in patrons" :data-tier="tier")
-          .img-wrap(v-if="image")
-            img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`" width="77px" height="77px")
-          .img-wrap.no-image(v-else)
-            p {{name.substring(0, 1)}}
-          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank" v-html="name")
-          p.unlinked-name(v-else v-html="name" tabindex="0")
-          p.tier {{ tier }} Supporter
-          p.tier-time(v-if="since" v-html="formatTime(since)")
+.supporters
+  .supporters-wrap(v-if="contributors")
+    h3 Our Contributors
+    ul.contributors-list
+      li(v-for="(contributor, key) in contributors", :key="key")
+        a(:href="contributor.url", rel="noopener noreferrer", target="_blank") {{ `${contributor.username}'s GitHub profile` }}
+          img.lazy(
+            :data-src="contributor.avatar",
+            :alt="`${contributor.username}'s avatar`",
+            :title="`${contributor.username}'s avatar`",
+            width="48px",
+            height="48px"
+          )
+  h2 Supporters
+  .supporters-wrap(v-if="patrons")
+    h3 Our Patreon Supporters
+    p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
+    small(v-html="projectMsg")
+    .supporters-grid
+      .supporter(
+        v-for="(patron, key) in patrons",
+        :key="key",
+        :data-tier="patron.tier"
+      )
+        .img-wrap(v-if="patron.image")
+          img.lazy(
+            :data-src="'/images/avatars/' + patron.image",
+            :alt="`${patron.name} logo`",
+            :title="`${patron.name} logo`",
+            width="77px",
+            height="77px"
+          )
+        .img-wrap.no-image(v-else)
+          p {{ patron.name.substring(0, 1) }}
+        a.linked-name(
+          v-if="patron.link",
+          :href="patron.link",
+          rel="noopener noreferrer",
+          target="_blank",
+          v-html="patron.name"
+        )
+        p.unlinked-name(v-else, v-html="patron.name", tabindex="0")
+        p.tier {{ patron.tier }} Supporter
+        p.tier-time(
+          v-if="patron.since",
+          v-html="$helpers.formatTime(patron.since)"
+        )
 
-    //- Not Patrons but services that use MTGJSON
-    .supporters-wrap(v-if="services")
-      h3 Others Powered by MTGJSON
-      p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
-      small(v-html="projectMsg")
-      .supporters-grid.services(:data-tier="0")
-        .supporter.service(v-for="({link, image, name} = supporter, key) in services" :key="key")
-          .img-wrap(v-if="image")
-            img(class="lazy" :data-src="'/images/avatars/' + image" :alt="`${name} logo`" :title="`${name} logo`" width="54px" height="54px")
-          .img-wrap.no-image(v-else)
-            p {{name.substring(0, 1)}}
-          a.linked-name(v-if="link" :href="link" rel="noopener noreferrer" target="_blank"  v-html="name")
-          p.unlinked-name(v-else v-html="name" tabindex="0")
-
+  //- Not Patrons but services that use MTGJSON
+  .supporters-wrap(v-if="services")
+    h3 Others Powered by MTGJSON
+    p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
+    small(v-html="projectMsg")
+    .supporters-grid.services(:data-tier="0")
+      .supporter.service(v-for="(supporter, key) in services", :key="key")
+        .img-wrap(v-if="supporter.image")
+          img.lazy(
+            :data-src="'/images/avatars/' + supporter.image",
+            :alt="`${supporter.name} logo`",
+            :title="`${supporter.name} logo`",
+            width="54px",
+            height="54px"
+          )
+        .img-wrap.no-image(v-else)
+          p {{ supporter.name.substring(0, 1) }}
+        a.linked-name(
+          v-if="supporter.link",
+          :href="supporter.link",
+          rel="noopener noreferrer",
+          target="_blank",
+          v-html="supporter.name"
+        )
+        p.unlinked-name(v-else, v-html="supporter.name", tabindex="0")
 </template>
 
 <script>
-import supporters from '../../src/resources/supporters.json';
-import contributors from '../../src/resources/contributors.json';
+import supporters from "../../src/resources/supporters.json";
+import contributors from "../../src/resources/contributors.json";
 
 export default {
-  name: 'Supporters',
+  name: "Supporters",
   data() {
     return {
       contributors,
       patrons: supporters.patrons,
       services: supporters.services,
       projectMsg:
-        'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.'
+        'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.',
     };
   },
   async mounted() {
-    const lazyImages = Array.from(document.querySelectorAll('img.lazy'));
+    const lazyImages = Array.from(document.querySelectorAll("img.lazy"));
 
-    if ('IntersectionObserver' in window) {
+    if ("IntersectionObserver" in window) {
       let lazyImageObserver = new IntersectionObserver((entries, observer) => {
-        entries.forEach(entry => {
+        entries.forEach((entry) => {
           if (entry.isIntersecting) {
             let lazyImage = entry.target;
             lazyImage.src = lazyImage.dataset.src;
-            lazyImage.classList.remove('lazy');
+            lazyImage.classList.remove("lazy");
             lazyImageObserver.unobserve(lazyImage);
           }
         });
       });
 
-      lazyImages.forEach(lazyImage => {
+      lazyImages.forEach((lazyImage) => {
         lazyImageObserver.observe(lazyImage);
       });
     } else {
       // Boo, no observer
-      lazyImages.forEach(lazyImage => {
+      lazyImages.forEach((lazyImage) => {
         lazyImage.src = lazyImage.dataset.src;
-        lazyImage.classList.remove('lazy');
-        lazyImage.classList.add('not-lazy');
+        lazyImage.classList.remove("lazy");
+        lazyImage.classList.add("not-lazy");
       });
     }
   },
-  methods: {
-    formatTime(time) {
-      const newDate = new Date();
-      const year = newDate.getFullYear();
-      const month = newDate.getMonth() + 1; // +1 because arrays are 0
-
-      const sinceDate = time.split('-');
-      const sinceYear = Number(sinceDate[0]);
-      const sinceMonth = Number(sinceDate[1]);
-
-      const totalMonths = 12 * (year - sinceYear) + (month - sinceMonth) + 1;
-      if (totalMonths === 1) {
-        return `(1 Month)`;
-      }
-      return `(${totalMonths} Months)`;
-    }
-  }
 };
 </script>
 
@@ -136,7 +155,7 @@ export default {
 
         &::before,
         &::after {
-          content: '';
+          content: "";
           display: table;
           clear: both;
         }
@@ -233,7 +252,7 @@ export default {
       .tier {
         text-align: center;
         flex: 0 0 100%;
-        margin: .5rem auto 0;
+        margin: 0.5rem auto 0;
         font-size: 16px;
         line-height: 1.2em;
         font-weight: bold;
@@ -251,7 +270,7 @@ export default {
       }
     }
 
-    .supporter[data-tier='mythic'] {
+    .supporter[data-tier="mythic"] {
       .img-wrap {
         height: 125px;
         width: 125px;
@@ -263,7 +282,7 @@ export default {
       }
     }
 
-    .supporter[data-tier='rare'] {
+    .supporter[data-tier="rare"] {
       .tier {
         color: var(--yellow-color);
       }
