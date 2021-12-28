@@ -8,7 +8,7 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v2
+    - uses: actions/checkout@master
     - name: Use Node.js 12
       uses: actions/setup-node@v1
       with:
@@ -21,6 +21,11 @@ jobs:
         npm run test:full
       env:
         CI: true
+    - uses: actions/upload-artifact@v2
+      name: Upload artifact
+      with:
+        name: distribution
+        path: ./docs/.vuepress/dist/
     - uses: codecov/codecov-action@v1
       name: Upload code coverage
       with:
