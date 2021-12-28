@@ -242,13 +242,13 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 > - **Type:** `array[] | array[object]`  
 > - **Introduced:** `v4.0.0`
 
-> ### side  
-> The identifier of the card side. Used on cards with multiple faces.  
+> ### side
+> The identifier of the card side. Used on cards with multiple faces on the same card.
 >
 > - **Type:** `string`
 > - <ExampleField type='side'/>
-> - **Introduced:** `v4.1.0`  
-> - **Tags:** <i class="optional">optional</i>  
+> - **Introduced:** `v4.1.0`
+> - **Tags:** <i class="optional">optional</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  

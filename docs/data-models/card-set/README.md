@@ -254,11 +254,11 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Introduced:** `v4.0.0`  
 > - **Tags:** <i class="optional">optional</i>  
 
-> ### isPromo  
-> If the card is promotional.  
+> ### isPromo
+> If the card is a promotional printing.
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.4.2`  
+> - **Type:** `boolean`
+> - **Introduced:** `v4.4.2`
 > - **Tags:** <i class="optional">optional</i>
 
 > ### isRebalanced
@@ -282,12 +282,12 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Introduced:** `v4.0.1`  
 > - **Tags:** <i class="optional">optional</i>  
 
-> ### isStarter  
-> If the card is found in a booster pack.  
+> ### isStarter
+> If the card is found in a starter deck such as Planeswalker/Brawl decks.
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.0.0`  
-> - **Tags:** <i class="optional">optional</i>  
+> - **Type:** `boolean`
+> - **Introduced:** `v4.0.0`
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isStorySpotlight  
 > If the card has a story spotlight.  
@@ -373,10 +373,10 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
-> ### number  
-> The number of the card. Can be prefixed or suffixed with a `*` or other characters for promo sets.  
+> ### number
+> The number of the card. Can be prefixed or suffixed with a `*` or other characters for promotional sets.
 >
-> - **Type:** `string`  
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
 > ### originalPrintings
@@ -475,12 +475,12 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Type:** `string`  
 > - **Introduced:** `v5.0.1`
 
-> ### side  
-> The identifier of the card side. Used on cards with multiple faces.  
+> ### side
+> The identifier of the card side. Used on cards with multiple faces on the same card.
 >
 > - **Type:** `string`
 > - <ExampleField type='side'/>
-> - **Introduced:** `v4.1.0`  
+> - **Introduced:** `v4.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
 > ### signature
