@@ -18,8 +18,7 @@
     "generate-version-atom": "node ./utils/generate-version-atom.js",
     "generate-contributors": "node ./utils/generate-contributors.js",
     "requirements-check": "babel-node check-version.js",
-    "postinstall": "npm run requirements-check",
-    "commit": "cz"
+    "postinstall": "npm run requirements-check"
   },
   "babel": {
     "presets": [
@@ -33,15 +32,9 @@
       ]
     ]
   },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
-  },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test:full",
-      "prepare-commit-msg": "exec < /dev/tty && git cz --hook || true"
+      "pre-commit": "npm run test:full"
     }
   },
   "dependencies": {
@@ -66,8 +59,6 @@
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
     "codecov": "^3.8.1",
-    "commitizen": "^4.2.3",
-    "cz-conventional-changelog": "^3.3.0",
     "eslint": "^7.18.0",
     "eslint-plugin-vue": "^7.5.0",
     "eslint-plugin-vue-a11y": "^0.0.31",
