@@ -21,13 +21,11 @@ jobs:
         npm run test:full
       env:
         CI: true
-    - name: Archive distribution files
-      uses: thedoctor0/zip-release@master
+    - uses: actions/upload-artifact@v2
+      name: Upload artifact
       with:
-        type: 'zip'
-        filename: 'dist.zip'
-        directory: 'docs/.vuepress'
-        path: 'dist'
+        name: distribution
+        path: ./docs/.vuepress/dist/
     - uses: codecov/codecov-action@v1
       name: Upload code coverage
       with:
