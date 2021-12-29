@@ -112,8 +112,7 @@ module.exports = {
       },
       {
         title: 'Getting Started',
-        path: '/getting-started/',
-        collapsable: false
+        path: '/getting-started/'
       },
       {
         title: 'F.A.Q.',

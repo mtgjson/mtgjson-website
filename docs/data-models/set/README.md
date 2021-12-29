@@ -117,7 +117,7 @@ The Set Data Model describes the properties and values of an individual set.
 > - **Tags:** <i class="optional">optional</i>
 
 > ### keyruneCode  
-> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) set image icons.  
+> The matching [Keyrune](https://keyrune.andrewgioia.com) code for set image icons.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.2`
