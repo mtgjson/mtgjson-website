@@ -14,7 +14,7 @@ const fs = require('fs');
 
   try {
     const promised = await fetch(`${host}Meta.json`);
-    const data = await promised.json();
+    const { data } = await promised.json();
     const atom =
 `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -31,13 +31,6 @@ const fs = require('fs');
     <updated>${generationDate}</updated>
     <content>${data.date}</content>
     <summary>Current MTGJSON build date.</summary>
-  </entry>
-  <entry>
-    <title>MTGJSON Version Prices Date</title>
-    <id>urn:uuid:${uuidv4()}</id>
-    <updated>${generationDate}</updated>
-    <content>${data.pricesDate}</content>
-    <summary>Current MTGJSON prices date.</summary>
   </entry>
   <entry>
     <title>MTGJSON Version</title>

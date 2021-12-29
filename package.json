@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "vuepress dev docs",
-    "build": "vuepress build docs && npm run generate-version-atom && npm run generate-contributors",
+    "build": "npm run generate-contributors && vuepress build docs && npm run generate-version-atom",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
@@ -46,7 +46,6 @@
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.2",
     "jquery": "^3.6.0",
-    "semver": "^6.3.0",
     "vuepress": "^1.8.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-feed": "^0.1.9",
@@ -70,6 +69,7 @@
     "pug-plain-loader": "^1.1.0",
     "sass": "^1.32.5",
     "sass-loader": "^10.1.1",
+    "semver": "^6.3.0",
     "uuid": "^8.3.2",
     "vue-eslint-parser": "^7.4.1",
     "vue-svg-loader": "^0.16.0"
