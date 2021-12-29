@@ -2,7 +2,7 @@ name: Release Management
 
 on:
   push:
-    branches: [ develop ]
+    branches: [ master ]
 
 jobs:
   release:
@@ -13,20 +13,25 @@ jobs:
     - name: Checkout
       uses: actions/checkout@master
 
-    - name: Use Node.js 12
+    - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
 
-    - name: Install dependencies
+    - name: Install Dependencies
       run: |
         npm install
 
-    - name: Test and build project
+    - name: Build and Test Application
       run: |
         npm run test:full
       env:
         CI: true
+
+    - uses: codecov/codecov-action@v1
+      name: Upload Code Coverage
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
 
     - name: Generate Release Tag
       id: tag
@@ -36,10 +41,10 @@ jobs:
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
-        type: 'zip'
-        filename: 'release.zip'
-        directory: './docs/.vuepress'
-        path: 'dist'
+        type: zip
+        filename: release.zip
+        directory: ./docs/.vuepress
+        path: dist
 
 
     - name: Deliver Release
