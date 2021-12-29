@@ -1,26 +1,29 @@
-name: Node CI
+name: Test and Build Application
 
 on: [push]
 
 jobs:
   build:
-
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
-    - name: Use Node.js 12
+
+    - name: Test and Build Application using Node.js 12
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
-    - name: Install local dependencies
+
+    - name: Install dependencies
       run: |
         npm install
+
     - name: Test and build project
       run: |
         npm run test:full
       env:
         CI: true
+
     - uses: codecov/codecov-action@v1
       name: Upload code coverage
       with:
