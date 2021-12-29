@@ -198,7 +198,7 @@ The Set Data Model describes the properties and values of an individual set.
 > ### translations  
 > The translated set name by language. See the [Translations](/data-models/translations/) Data Model.  
 >
-> - **Type:** `object{props}`  
+> - **Type:** `object{} || object{props}`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  

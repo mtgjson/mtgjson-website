@@ -60,7 +60,7 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -75,7 +75,7 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
 > ### colors  
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -117,7 +117,7 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.  
 >
-> - **Type:** `array[] | array[object]`  
+> - **Type:** `array[] || array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### hand  
@@ -178,7 +178,7 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
 > ### legalities  
 > A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.  
 >
-> - **Type:** `object{} | object{props}`  
+> - **Type:** `object{} || object{props}`  
 > - **Introduced:** `v4.0.0`
 
 > ### life  
@@ -240,7 +240,7 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
 > ### rulings  
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.  
 >
-> - **Type:** `array[] | array[object]`  
+> - **Type:** `array[] || array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### side
@@ -254,14 +254,14 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
 > ### subtypes  
 > A list of card subtypes found after em-dash.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > A list of card supertypes found before em-dash.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
