@@ -44,7 +44,7 @@ The Meta Data Model describes application metadata.
 > - **Introduced:** `v4.0.0`
 
 > ### version  
-> The current [SemVer](https://semver.org) version for the MTGJSON build.  
+> The current [SemVer](https://semver.org) version for the MTGJSON build appended with the build date.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.0.0`

@@ -78,7 +78,7 @@ The Deck Data Model describes a complete deck reference.
 > ### releaseDate
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
 >
-> - **Type:** `string | null`
+> - **Type:** `null || string`
 > - **Introduced:** `v4.3.0`
 
 > ### type

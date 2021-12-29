@@ -30,11 +30,12 @@ The Card (Atomic) Data Model describes the a single atomic card, an oracle-like 
 **Parent property:** `data`  
 
 ::: tip
-The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card, like such:
+The Card (Atomic) Data Model is accessed through an array of card variations where its parent property is the name of the card, like such:
 ```
 "data": {
   "Oblivion Ring": [
-    <Card (Atomic) Model>
+    <Card (Atomic) Model>,
+    ...
   ],
   ...
 }
