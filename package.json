@@ -8,6 +8,7 @@
     "node": "^12.16.3"
   },
   "scripts": {
+    "preinstall": "babel-node check-version.js",
     "dev": "run-p lint:js:watch local",
     "local": "vuepress dev docs",
     "build": "npm run generate-contributors && vuepress build docs && npm run generate-version-atom",
@@ -19,27 +20,7 @@
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
-    "generate-contributors": "node ./utils/generate-contributors.js",
-    "requirements-check": "babel-node check-version.js",
-    "postinstall": "npm run requirements-check"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
-  },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "npm run test:full"
-    }
+    "generate-contributors": "node ./utils/generate-contributors.js"
   },
   "dependencies": {
     "@babel/node": "^7.13.13",
@@ -61,6 +42,7 @@
     "@babel/preset-env": "^7.12.11",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
+    "chalk": "^2.4.2",
     "codecov": "^3.8.1",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^8.2.0",
@@ -78,5 +60,23 @@
     "uuid": "^8.3.2",
     "vue-eslint-parser": "^7.4.1",
     "vue-svg-loader": "^0.16.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "npm run test",
+      "pre-push": "npm run test:full"
+    }
+  },
+  "babel": {
+    "presets": [
+      [
+        "@babel/preset-env",
+        {
+          "targets": {
+            "node": "current"
+          }
+        }
+      ]
+    ]
   }
 }
