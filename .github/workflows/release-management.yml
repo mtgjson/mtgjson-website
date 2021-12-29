@@ -35,8 +35,8 @@ jobs:
         directory: './docs/.vuepress'
         path: 'dist'
 
-    - name: Upload Release
-      uses: ncipollo/release-action@v1
+    - name: Deliver Release
+      uses: softprops/action-gh-release@v1
+      if: startsWith(github.ref, 'refs/tags/')
       with:
-        artifacts: "release.zip"
-        token: ${{ secrets.GITHUB_TOKEN }}
+        files: ./docs/vuepress/release.zip
