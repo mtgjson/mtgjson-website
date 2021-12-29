@@ -1,0 +1,54 @@
+name: Release Management
+
+on:
+  push:
+    branches: [ master ]
+
+jobs:
+  release:
+    name: 'Test, Build and Release Management'
+    runs-on: ubuntu-latest
+
+    steps:
+    - name: Checkout
+      uses: actions/checkout@master
+
+    - name: Setup Node.js
+      uses: actions/setup-node@v1
+      with:
+        node-version: '12.x'
+
+    - name: Install Dependencies
+      run: |
+        npm install
+
+    - name: Build and Test Application
+      run: |
+        npm run test:full
+      env:
+        CI: true
+
+    - uses: codecov/codecov-action@v1
+      name: Upload Code Coverage
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+
+    - name: Generate Release Tag
+      id: tag
+      run: |
+        echo "::set-output name=release_tag::Release_$(date +"%Y.%m.%d_%H-%M")"
+
+    - name: Archive Release
+      uses: thedoctor0/zip-release@master
+      with:
+        type: zip
+        filename: release.zip
+        directory: ./docs/.vuepress
+        path: dist
+
+
+    - name: Deliver Release
+      uses: softprops/action-gh-release@v1
+      with:
+        tag_name: ${{ steps.tag.outputs.release_tag }}
+        files: ./docs/.vuepress/release.zip
