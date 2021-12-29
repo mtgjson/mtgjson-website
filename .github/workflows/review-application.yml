@@ -25,14 +25,14 @@ jobs:
         npm install
 
     # Runs all tests and builds the application
-    - name: Build Application
+    - name: Run Tests and Build Application
       run: |
-        npm run build
+        npm run test:full
       env:
         CI: true
 
     # Upload CodeCov report to the remote server
-    - uses: codecov/codecov-action@v1
-      name: Upload Code Coverage
+    - name: Upload Code Coverage
+      uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
