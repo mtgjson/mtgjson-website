@@ -30,7 +30,7 @@ export default {
       type: Number,
     },
     sidebarDepth: {
-      required: true,
+      default: 0,
       type: Number,
     },
   },

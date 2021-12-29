@@ -9,7 +9,7 @@ export default {
       type: Object,
     },
     sidebarDepth: {
-      required: true,
+      default: 0,
       type: Number,
     },
   },
