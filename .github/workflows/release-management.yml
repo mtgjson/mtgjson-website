@@ -2,17 +2,17 @@ name: Release Management
 
 on:
   push:
-    branches:
-      - develop
+    branches: [ develop ]
 
 jobs:
-  build:
+  release:
+    name: 'Test, Build and Release Management'
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
 
-    - name: Test and Build Application using Node.js 12
+    - name: Use Node.js 12
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'

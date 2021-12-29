@@ -1,15 +1,21 @@
 name: Test and Build Application
 
-on: [push]
+on:
+  push:
+    branches: [ master ]
+  pull_request:
+    # The branches below must be a subset of the branches above
+    branches: [ master ]
 
 jobs:
   build:
+    name: 'Test and Build Application'
     runs-on: ubuntu-latest
 
     steps:
     - uses: actions/checkout@master
 
-    - name: Test and Build Application using Node.js 12
+    - name: Use Node.js 12
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
