@@ -1,9 +1,18 @@
 <script>
-import { isActive, hashRE, groupHeaders } from '../util';
+import { isActive, hashRE, groupHeaders } from "../util";
 
 export default {
   functional: true,
-  props: ['item', 'sidebarDepth'],
+  props: {
+    item: {
+      required: true,
+      type: Object,
+    },
+    sidebarDepth: {
+      required: true,
+      type: Number,
+    },
+  },
   render(
     h,
     {
@@ -17,10 +26,10 @@ export default {
     // for sidebar: auto pages, a hash link should be active if one of its child
     // matches
     const active =
-      item.type === 'auto'
+      item.type === "auto"
         ? selfActive ||
-          item.children.some(c =>
-            isActive($route, item.basePath + '#' + c.slug)
+          item.children.some((c) =>
+            isActive($route, item.basePath + "#" + c.slug)
           )
         : selfActive;
     const link = renderLink(h, item.path, item.title || item.path, active);
@@ -36,7 +45,7 @@ export default {
     const displayAllHeaders =
       $themeLocaleConfig.displayAllHeaders || $themeConfig.displayAllHeaders;
 
-    if (item.type === 'auto') {
+    if (item.type === "auto") {
       return [
         link,
         renderChildren(h, item.children, item.basePath, $route, maxDepth),
@@ -56,16 +65,16 @@ export default {
 
 function renderLink(h, to, text, active) {
   return h(
-    'router-link',
+    "router-link",
     {
       props: {
         to,
-        activeClass: '',
-        exactActiveClass: '',
+        activeClass: "",
+        exactActiveClass: "",
       },
       class: {
         active,
-        'sidebar-link': true,
+        "sidebar-link": true,
       },
     },
     text
@@ -73,14 +82,16 @@ function renderLink(h, to, text, active) {
 }
 
 function renderChildren(h, children, path, route, maxDepth, depth = 1) {
-  if (!children || depth > maxDepth) {return null;}
+  if (!children || depth > maxDepth) {
+    return null;
+  }
   return h(
-    'ul',
-    { class: 'sidebar-sub-headers' },
-    children.map(c => {
-      const active = isActive(route, path + '#' + c.slug);
-      return h('li', { class: 'sidebar-sub-header' }, [
-        renderLink(h, path + '#' + c.slug, c.title, active),
+    "ul",
+    { class: "sidebar-sub-headers" },
+    children.map((c) => {
+      const active = isActive(route, path + "#" + c.slug);
+      return h("li", { class: "sidebar-sub-header" }, [
+        renderLink(h, path + "#" + c.slug, c.title, active),
         renderChildren(h, c.children, path, route, maxDepth, depth + 1),
       ]);
     })

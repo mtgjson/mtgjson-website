@@ -10,7 +10,12 @@
 <script>
 export default {
   name: "ExampleField",
-  props: ["type"],
+  props: {
+    type: {
+      required: true,
+      type: String,
+    },
+  },
   data() {
     return {
       allEnums: null,

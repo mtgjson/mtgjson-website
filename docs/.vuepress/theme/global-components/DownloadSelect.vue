@@ -102,7 +102,16 @@
 <script>
 export default {
   name: "DownloadSelect",
-  props: ["fileName", "fileType"],
+  props: {
+    fileName: {
+      required: true,
+      type: String,
+    },
+    fileType: {
+      default: '',
+      type: String,
+    },
+  },
   data() {
     return {
       compressedFormats: ["bz2", "gz", "xz", "zip"],

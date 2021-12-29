@@ -1,42 +1,41 @@
 <template lang="pug">
-  main.page
-    slot(name="top")
+main.page
+  slot(name="top")
 
-    Content
+  Content
 
-    .page-nav(v-if="prev || next")
-      p.inner
-        span.prev(v-if="prev")
-          router-link.prev(
-            v-if="prev"
-            :to="prev.path") ← {{ prev.title || prev.path }}
+  .page-nav(v-if="prev || next")
+    p.inner
+      span.prev(v-if="prev")
+        router-link.prev(v-if="prev", :to="prev.path") ← {{ prev.title || prev.path }}
 
-        span.next(v-if="next")
-          router-link.prev(
-            v-if="next"
-            :to="next.path") {{ next.title || next.path }} →
+      span.next(v-if="next")
+        router-link.prev(v-if="next", :to="next.path") {{ next.title || next.path }} →
 
-    footer.page-edit
-      .page-edit--links
-        .edit-link.link-inline-image.github(v-if="editLink")
-          a(:href="editLink"
-          target="_blank"
-          rel="noopener noreferrer") {{ editLinkText }}
-          OutboundLink
+  footer.page-edit
+    .page-edit--links
+      .edit-link.link-inline-image.github(v-if="editLink")
+        a(:href="editLink", target="_blank", rel="noopener noreferrer") {{ editLinkText }}
+        OutboundLink
 
-        .last-updated(v-if="lastUpdated")
-          span.prefix {{ lastUpdatedText }}:&nbsp;
-          span.time {{ lastUpdated }}
+      .last-updated(v-if="lastUpdated")
+        span.prefix {{ lastUpdatedText }}:&nbsp;
+        span.time {{ lastUpdated }}
 
-    slot(name="bottom")
+  slot(name="bottom")
 </template>
 
 <script>
-import isNil from 'lodash/isNil'
+import isNil from "lodash/isNil";
 import { resolvePage, outboundRE, endingSlashRE } from "../util";
 
 export default {
-  props: ["sidebarItems"],
+  props: {
+    sidebarItems: {
+      required: true,
+      type: Array,
+    },
+  },
   computed: {
     lastUpdated() {
       const date = this.$page.lastUpdated;
@@ -98,7 +97,7 @@ export default {
         repo,
         docsDir = "",
         docsBranch = "master",
-        docsRepo = repo
+        docsRepo = repo,
       } = this.$site.themeConfig;
       if (showEditLink && docsRepo && this.$page.relativePath) {
         return this.createEditLink(
@@ -117,7 +116,7 @@ export default {
         this.$site.themeConfig.editLinkText ||
         `Edit this page`
       );
-    }
+    },
   },
   methods: {
     createEditLink(repo, docsRepo, docsDir, docsBranch, path) {
@@ -144,8 +143,8 @@ export default {
         (docsDir ? "/" + docsDir.replace(endingSlashRE, "/") : "") +
         path
       );
-    }
-  }
+    },
+  },
 };
 
 function resolvePrev(page, items) {
@@ -179,7 +178,7 @@ function flattern(items, res) {
 </script>
 
 <style lang="scss">
-@import '../styles/placeholders';
+@import "../styles/placeholders";
 
 .page {
   position: relative;
@@ -267,7 +266,8 @@ function flattern(items, res) {
     float: right;
   }
 
-  .next, .prev {
+  .next,
+  .prev {
     a {
       font-weight: bold;
 

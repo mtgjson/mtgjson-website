@@ -16,6 +16,7 @@ export default {
   props: {
     item: {
       required: true,
+      type: Object
     },
   },
   computed: {
