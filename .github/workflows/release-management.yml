@@ -6,38 +6,38 @@ on:
 
 jobs:
   release:
-    name: 'Test, Build and Release Management'
+    name: 'Tests, Build, and Release'
     runs-on: ubuntu-latest
 
     steps:
     - name: Checkout
       uses: actions/checkout@master
 
+    # Sets up the Node environment to build the application on
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '12.x'
 
+    # Installs local dependencies needed to build, test, etc.
     - name: Install Dependencies
       run: |
         npm install
 
-    - name: Build and Test Application
+    # Runs all tests and builds the application
+    - name: Run Tests and Build Application
       run: |
         npm run test:full
       env:
         CI: true
 
-    - uses: codecov/codecov-action@v1
-      name: Upload Code Coverage
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-
+    # Generate a dynamic release tag based on a nightly build format
     - name: Generate Release Tag
       id: tag
       run: |
         echo "::set-output name=release_tag::Release_$(date +"%Y.%m.%d_%H-%M")"
 
+    # Zip up the build files
     - name: Archive Release
       uses: thedoctor0/zip-release@master
       with:
@@ -46,7 +46,7 @@ jobs:
         directory: ./docs/.vuepress
         path: dist
 
-
+    # Deliver the build files to a new tag
     - name: Deliver Release
       uses: softprops/action-gh-release@v1
       with:
