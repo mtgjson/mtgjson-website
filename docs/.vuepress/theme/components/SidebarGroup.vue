@@ -1,46 +1,56 @@
 <template lang="pug">
-  section.sidebar-group(
-    :class="[{collapsable, 'is-sub-group': depth !== 0 },`depth-${depth}`]")
+section.sidebar-group(
+  :class="[{ collapsable, 'is-sub-group': depth !== 0 }, `depth-${depth}`]"
+)
+  router-link.sidebar-heading.clickable(
+    v-if="item.path",
+    :class="{ open, active: isActive($route, item.path) }",
+    :to="item.path",
+    @click.native="$emit('toggle')"
+  )
+    span {{ item.title }}
+    span.arrow(v-if="collapsable", :class="open ? 'down' : 'right'")
 
-    router-link.sidebar-heading.clickable(
-      v-if="item.path"
-      :class="{open, 'active': isActive($route, item.path)}"
-      :to="item.path"
-      @click.native="$emit('toggle')")
+  p.sidebar-heading(v-else, :class="{ open }", @click="$emit('toggle')")
+    span {{ item.title }}
+    span.arrow(v-if="collapsable", :class="open ? 'down' : 'right'")
 
-      span {{ item.title }}
-      span.arrow(
-        v-if="collapsable"
-        :class="open ? 'down' : 'right'")
-
-    p.sidebar-heading(
-      v-else
-      :class="{ open }"
-      @click="$emit('toggle')")
-      span {{ item.title }}
-      span.arrow(
-        v-if="collapsable"
-        :class="open ? 'down' : 'right'")
-
-    DropdownTransition
-      SidebarLinks.sidebar-group-items(
-        :items="item.children"
-        v-if="open || !collapsable"
-        :sidebarDepth="item.sidebarDepth"
-        :depth="depth + 1")
+  DropdownTransition
+    SidebarLinks.sidebar-group-items(
+      :items="item.children",
+      v-if="open || !collapsable",
+      :sidebarDepth="item.sidebarDepth",
+      :depth="depth + 1"
+    )
 </template>
 
 <script>
-import { isActive } from '../util';
-import DropdownTransition from './DropdownTransition.vue';
+import { isActive } from "../util";
+import DropdownTransition from "./DropdownTransition.vue";
 
 export default {
-  name: 'SidebarGroup',
+  name: "SidebarGroup",
   components: { DropdownTransition },
-  props: ['item', 'open', 'collapsable', 'depth'],
+  props: {
+    item: {
+      required: true,
+      type: Object,
+    },
+    open: {
+      type: Boolean,
+    },
+    collapsable: {
+      type: Boolean,
+    },
+    depth: {
+      required: true,
+      type: Number,
+    },
+  },
   // ref: https://vuejs.org/v2/guide/components-edge-cases.html#Circular-References-Between-Components
   beforeCreate() {
-    this.$options.components.SidebarLinks = require('./SidebarLinks.vue').default;
+    this.$options.components.SidebarLinks =
+      require("./SidebarLinks.vue").default;
   },
   methods: { isActive },
 };

@@ -65,7 +65,19 @@
 <script>
 export default {
   name: "DownloadSorter",
-  props: ["list", "filters", "noChecks"],
+  props: {
+    list: {
+      required: true,
+      type: Array,
+    },
+    filters: {
+      required: true,
+      type: Array,
+    },
+    noChecks: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
       lazyOffset: this.$lazyOffset,

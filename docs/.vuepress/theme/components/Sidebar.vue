@@ -32,7 +32,12 @@ export default {
     SearchBox,
     NavMeta
   },
-  props: ['items'],
+  props: {
+    items: {
+      required: true,
+      type: Array
+    }
+  },
 };
 </script>
 

@@ -38,7 +38,7 @@ npm install
 
 ### **Developing**
 
-Runs the local build server with hot module reloading.
+Runs the local build server with hot module reloading and eslint watcher.
 
 ```
 npm run dev
@@ -46,7 +46,7 @@ npm run dev
 
 ### **Linting**
 
-Lint's the files for any breaking changes.
+Manually lint the files for any breaking changes.
 
 ```
 npm run lint
@@ -54,7 +54,7 @@ npm run lint
 
 ### **Testing**
 
-Tests project using Jest tests and attempts to run a build. This command will also automatically run during Husky's pre-commit checks.
+Run all tests. This command will also automatically run during Husky's pre-commit checks.
 
 ```
 npm run test

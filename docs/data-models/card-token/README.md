@@ -75,7 +75,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -90,7 +90,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > ### colors  
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -118,7 +118,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > ### finishes
 > The finishes of the card.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
@@ -133,7 +133,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > ### frameEffects  
 > The visual frame effects.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 
@@ -236,7 +236,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > ### otherFaceIds  
 > A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
-> - **Type:** `array[] | array[string]`  
+> - **Type:** `array[] || array[string]`  
 > - **Introduced:** `v4.6.1`
 
 > ### power  
@@ -283,23 +283,23 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - **Tags:** <i class="optional">optional</i>
 
 > ### signature
-> The names of the signatures on the card.
+> The name of the signature on the card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`  
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > A list of card supertypes found before em-dash.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 

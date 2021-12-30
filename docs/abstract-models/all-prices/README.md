@@ -29,7 +29,7 @@ The All Prices abstract Data Model describes a list of card prices based on MTGJ
 
 ## Price Providers
 
-MTGJSON currently has affiliated with the following price providers to keep a history of price data. The following examples are providers and game formats:
+MTGJSON currently has affiliated with the following price providers to keep a **limited** history of price data. The following examples are providers and game formats:
 
 - paper: [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
 - mtgo: [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
@@ -43,19 +43,19 @@ MTGJSON currently has affiliated with the following price providers to keep a hi
       <Price Provider Identifier>: { // Price provider
         buylist: { // Provider buylist values
           foil: { // Foil prices
-            <YYYY-MM-DD>: <Float> // Date and price as value
+            <YYYY-MM-DD>: <Float> // Date as key and price as value
           },
           normal: { // Normal prices
-            <YYYY-MM-DD>: <Float> // Date and price as value
+            <YYYY-MM-DD>: <Float> // Date as key and price as value
           }
         },
         currency: <String>, // Currency of the provider
         retail: { // Provider retail values
           foil: { // Foil prices
-            <YYYY-MM-DD>: <Float> // Date and price as value
+            <YYYY-MM-DD>: <Float> // Date as key and price as value
           },
           normal: { // Normal prices
-            <YYYY-MM-DD>: <Float> // Date and price as value
+            <YYYY-MM-DD>: <Float> // Date as key and price as value
           }
         }
       },

@@ -104,7 +104,7 @@ The Set List Data Model describes a metadata-like model that holds information a
 > - **Tags:** <i class="optional">optional</i>
 
 > ### keyruneCode  
-> The matching Keyrune code for [Keyrune](https://keyrune.andrewgioia.com) set image icons.  
+> The matching [Keyrune](https://keyrune.andrewgioia.com) code for set image icons.  
 >
 > - **Type:** `string`  
 > - **Introduced:** `v4.3.2`
@@ -179,7 +179,7 @@ The Set List Data Model describes a metadata-like model that holds information a
 > ### translations  
 > The translated set name by language. See the [Translations](/data-models/translations/) Data Model.  
 >
-> - **Type:** `object{} | object{props}`  
+> - **Type:** `object{} || object{props}`  
 > - **Introduced:** `v4.3.2`
 
 > ### type  

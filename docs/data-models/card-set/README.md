@@ -75,7 +75,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### colorIdentity  
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -90,7 +90,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### colors  
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -139,7 +139,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### finishes
 > The finishes of the card.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
@@ -161,13 +161,13 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### foreignData  
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.  
 >
-> - **Type:** `array[] | array[object]`  
+> - **Type:** `array[] || array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects  
 > The visual frame effects.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 
@@ -289,12 +289,12 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
-> ### isStorySpotlight  
-> If the card has a story spotlight.  
+> ### isStorySpotlight
+> If the card is a [Story Spotlight](https://mtg.fandom.com/wiki/Story_Spotlight) card.
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.4.2`  
-> - **Tags:** <i class="optional">optional</i>  
+> - **Type:** `boolean`
+> - **Introduced:** `v4.4.2`
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isTextless  
 > If the card does not have a text box.  
@@ -303,12 +303,12 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Introduced:** `v4.4.2`  
 > - **Tags:** <i class="optional">optional</i>  
 
-> ### isTimeshifted  
-> If the card is `"timeshifted"`.  
+> ### isTimeshifted
+> If the card is "timeshifted", a feature of certain sets where a card will have a different [frameVersion](/data-models/card-set/#frameversion).
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.4.1`  
-> - **Tags:** <i class="optional">optional</i>  
+> - **Type:** `boolean`
+> - **Introduced:** `v4.4.1`
+> - **Tags:** <i class="optional">optional</i>
 
 > ### keywords  
 > A list of keywords found on the card.  
@@ -334,7 +334,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### legalities  
 > A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.  
 >
-> - **Type:** `object{} | object{props}`  
+> - **Type:** `object{} || object{props}`  
 > - **Introduced:** `v4.0.0`
 
 > ### life  
@@ -410,7 +410,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### otherFaceIds  
 > A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
-> - **Type:** `array[] | array[string]`  
+> - **Type:** `array[] || array[string]`  
 > - **Introduced:** `v4.6.1`
 
 > ### power  
@@ -458,7 +458,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### rulings  
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.  
 >
-> - **Type:** `array[] | array[object]`  
+> - **Type:** `array[] || array[object]`  
 > - **Introduced:** `v4.0.0`
 
 > ### securityStamp
@@ -484,23 +484,23 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Tags:** <i class="optional">optional</i>
 
 > ### signature
-> The names of the signatures on the card.
+> The name of the signature on the card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`  
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### subtypes  
 > A list of card subtypes found after em-dash.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### supertypes  
 > A list of card supertypes found before em-dash.  
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -540,7 +540,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### variations
 > A list of card UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `array[] || array[string]`
 > - **Introduced:** `v4.1.2`
 
 > ### watermark

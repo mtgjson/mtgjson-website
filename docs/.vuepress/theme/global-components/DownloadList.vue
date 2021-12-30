@@ -68,7 +68,19 @@ export default {
     /*DownloadSelect, DownloadButtonsList,*/ DownloadNativeSelect,
     DownloadSorter,
   },
-  props: ["file", "type", "disableChecks"],
+  props: {
+    file: {
+      required: true,
+      type: String,
+    },
+    type: {
+      default: "",
+      type: String,
+    },
+    disableChecks: {
+      type: Boolean,
+    },
+  },
   data() {
     return {
       canLoadMore: true,

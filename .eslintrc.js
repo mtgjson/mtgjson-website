@@ -14,8 +14,7 @@ module.exports = {
   extends: [
     // add more generic rulesets here, such as:
     "eslint:recommended",
-    "plugin:vue/recommended",
-    "plugin:vue-a11y/recommended"
+    "plugin:vue/recommended"
   ],
   plugins: [
     "vue"
@@ -23,7 +22,7 @@ module.exports = {
   ignorePatterns: ["dist/", "node_modules/", "*.json", ".temp/"],
   rules: {
     // Rules to ignore
-    "vue/require-prop-types": "off",
+    "vue/multi-word-component-names": "off",
     "no-use-before-define": "off", // Vuepress has hidden logic
     "no-case-declarations": "off",
     "no-unused-vars": "off",

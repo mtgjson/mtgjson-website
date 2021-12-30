@@ -37,14 +37,14 @@ The Types Data Model describes card types available to MTGJSON.
 ## Model Properties
 
 > ### subTypes  
-> A list of all available subtypes of a card.  
+> A list of all available subtypes of a type.  
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
 > ### superTypes  
-> A list of all available supertypes of a card.  
+> A list of all available supertypes of a type.  
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='supertypes'/>

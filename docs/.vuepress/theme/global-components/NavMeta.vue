@@ -44,7 +44,22 @@
 <script>
 export default {
   name: "NavMeta",
-  props: ["hideText", "hideLink", "width", "fill"],
+  props: {
+    hideText: {
+      type: Boolean,
+    },
+    hideLink: {
+      type: Boolean,
+    },
+    width: {
+      required: true,
+      type: String,
+    },
+    fill: {
+      default: "",
+      type: String,
+    },
+  },
   data() {
     return {
       version: "",

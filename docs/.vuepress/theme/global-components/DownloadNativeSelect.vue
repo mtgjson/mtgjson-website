@@ -96,7 +96,16 @@
 <script>
 export default {
   name: "DownloadNativeSelect",
-  props: ["fileName", "fileType"],
+  props: {
+    fileName: {
+      required: true,
+      type: String,
+    },
+    fileType: {
+      default: '',
+      type: String,
+    },
+  },
   data() {
     return {
       sqlFormats: ["sql", "bz2", "gz", "xz", "zip"],
