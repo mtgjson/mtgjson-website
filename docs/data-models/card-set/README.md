@@ -484,9 +484,9 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - **Tags:** <i class="optional">optional</i>
 
 > ### signature
-> The names of the signatures on the card.
+> The name of the signature on the card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`  
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
