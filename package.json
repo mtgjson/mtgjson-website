@@ -8,7 +8,7 @@
     "node": "^12.16.3"
   },
   "scripts": {
-    "preinstall": "babel-node check-version.js",
+    "preinstall": "node check-version.js",
     "dev": "run-p lint:js:watch local",
     "local": "vuepress dev docs",
     "build": "npm run generate-contributors && vuepress build docs && npm run generate-version-atom",
