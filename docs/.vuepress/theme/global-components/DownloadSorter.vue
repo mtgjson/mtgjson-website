@@ -91,10 +91,16 @@ export default {
       timeout: null,
     };
   },
+  mounted() {
+    this.onHandleChange(0);
+  },
   methods: {
-    emitNewData(data, count) {
+    emitNewData(data, counts) {
       this.$emit("updatedata", data);
-      this.$emit("updatecount", count);
+      this.$emit("updatecount", counts);
+    },
+    emitShowMoreButtonView( showButton ) {
+      this.$emit("canshowbutton", showButton);
     },
     onLoadMore() {
       this.lazyOffset = this.lazyOffset + this.lazyToLoad;
@@ -115,7 +121,7 @@ export default {
 
       this.emitNewData(dynamicData, newListCount);
     },
-    onHandleChange() {
+    onHandleChange(speed) {
       // Throttle so we don't go nuts
       clearTimeout(this.timeout);
 
@@ -134,15 +140,22 @@ export default {
         const filtered = this.$helpers.filter(this.filterKey, sorted);
         const dynamicData = filtered.slice(0, this.lazyOffset);
         const newListCount = dynamicData.length;
+        const newListTotalCount = filtered.length;
 
-        this.emitNewData(dynamicData, newListCount);
+        this.emitNewData(dynamicData, [
+          newListCount,
+          newListTotalCount
+        ]
+        );
 
         if (this.lazyOffset >= filtered.length) {
           document.querySelector(".load-more-btn").classList.add("hide");
+          this.emitShowMoreButtonView(false);
         } else {
           document.querySelector(".load-more-btn").classList.remove("hide");
+          this.emitShowMoreButtonView(true);
         }
-      }, this.$throttleSpeed);
+      }, speed || this.$throttleSpeed);
     },
   },
 };
