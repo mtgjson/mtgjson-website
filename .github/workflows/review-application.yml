@@ -15,7 +15,7 @@ jobs:
 
     # Sets up the Node environment to build the application on
     - name: Setup Node.js
-      uses: actions/setup-node@v2
+      uses: actions/setup-node@v1
       with:
         node-version: '12.x'
 
