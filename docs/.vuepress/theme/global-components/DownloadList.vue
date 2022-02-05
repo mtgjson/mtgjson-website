@@ -7,7 +7,8 @@
       :filters="listFilters",
       :noChecks="disableChecks",
       @updatedata="updateData",
-      @updatecount="updateCount"
+      @updatecount="updateCounts"
+      @canshowbutton="toggleShowMore"
     )
     p.results-message Showing {{ resultsLength }} of {{ resultsTotalLength }} Results
     blockquote(v-for="(item, key) in list", :key="key")
@@ -53,7 +54,7 @@
             //- DownloadSelect(:fileName="item.fileName ? item.fileName : item.code" :fileType="type")
             //- DownloadButtonsList(:fileName="item.fileName ? item.fileName : item.code")
     .load-more-container
-      button.load-more-btn.cta-btn(v-show="canLoadMore", @click="onLoadMore") Show More
+      button.load-more-btn.cta-btn(v-if="canLoadMore" v-show="canLoadMore", @click="onLoadMore") Show More
       button.load-more-btn.cta-btn(v-show="canLoadAll", @click="onLoadAll") Show All
 </template>
 
@@ -115,12 +116,15 @@ export default {
     updateData(data) {
       this.dynamicList = data;
     },
-    updateCount(count) {
-      this.resultsLength = count;
+    updateCounts(counts) {
+      const [currentCount, totalCount] = counts;
 
-      if (count === this.resultsTotalLength) {
+      if (currentCount === totalCount) {
         this.removeButtons();
       }
+
+      this.resultsLength = currentCount;
+      this.resultsTotalLength = totalCount;
     },
     onLoadMore() {
       this.$refs.sorter.onLoadMore();
@@ -132,6 +136,9 @@ export default {
     removeButtons() {
       this.canLoadMore = false;
       this.canLoadAll = false;
+    },
+    toggleShowMore(canShow) {
+      this.canLoadMore = canShow;
     },
   },
 };
