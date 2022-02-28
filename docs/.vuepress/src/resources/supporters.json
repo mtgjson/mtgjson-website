@@ -143,6 +143,13 @@
       "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
       "tier": "uncommon",
       "since": "2021-01"
+    },
+    {
+      "name": "BuyTradeSell Cards",
+      "image": "",
+      "link": "https://buytradesell.cards/",
+      "tier": "uncommon",
+      "since": "2022-02"
     }
   ],
   "services": [
