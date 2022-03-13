@@ -64,6 +64,17 @@ module.exports = {
     ]
   ],
   enhanceAppFiles: './store.js',
+  chainWebpack: config => {
+    // Start custom SVG importing via vue-svg-loader
+    config.module.rules.delete('svg');
+    config.module
+      .rule('svg')
+      .test(/\.svg$/)
+      .use('vue-svg-loader')
+      .loader('vue-svg-loader')
+      .end();
+    // End custom SVG importing
+  },
   markdown: {
     toc: {
       includeLevel: [ 3 ] // Table only H3
@@ -148,7 +159,7 @@ module.exports = {
         path: '/brand-assets/'
       },
       {
-        title: 'License',
+        title: 'License (MIT)',
         path: '/license/'
       }
     ]
