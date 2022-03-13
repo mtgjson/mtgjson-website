@@ -96,7 +96,6 @@ module.exports = {
     editLinkText: 'Help us improve this page!',
     // Last updated time stamp
     lastUpdated: 'Last Updated',
-    logo: '/images/logo-3.svg',
     smoothScroll: true,
     nav: [
       { text: 'Join us on Discord', link: 'https://mtgjson.com/discord' },

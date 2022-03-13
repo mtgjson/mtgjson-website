@@ -8,9 +8,8 @@
     "node": "^12.16.3"
   },
   "scripts": {
-    "postinstall": "node check-version.js",
     "dev": "run-p lint:js:watch local",
-    "local": "vuepress dev docs",
+    "local": "npm run check-version && vuepress dev docs",
     "build": "npm run generate-contributors && vuepress build docs && npm run generate-version-atom",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
@@ -19,15 +18,16 @@
     "lint:js": "esw --fix --ext .js,.vue docs/.vuepress",
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
+    "check-version": "node ./utils/check-version.js",
     "generate-version-atom": "node ./utils/generate-version-atom.js",
     "generate-contributors": "node ./utils/generate-contributors.js"
   },
   "dependencies": {
-    "@babel/node": "^7.13.13",
     "@vuepress/core": "^1.8.0",
     "@vuepress/plugin-back-to-top": "^1.8.0",
     "axios": "^0.21.2",
     "jquery": "^3.6.0",
+    "vue-svg-loader": "^0.16.0",
     "vuepress": "^1.8.0",
     "vuepress-plugin-container": "^2.1.5",
     "vuepress-plugin-feed": "^0.1.9",
@@ -39,7 +39,7 @@
     "@babel/preset-env": "^7.12.11",
     "babel-eslint": "^10.1.0",
     "babel-jest": "^26.6.3",
-    "chalk": "^2.4.2",
+    "chalk": "^4.1.0",
     "codecov": "^3.8.1",
     "eslint": "^8.5.0",
     "eslint-plugin-vue": "^8.2.0",
@@ -47,7 +47,6 @@
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "markdownlint-cli": "^0.27.1",
-    "node-fetch": "^2.6.1",
     "npm-run-all": "^4.1.5",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.1.0",
@@ -55,13 +54,11 @@
     "sass-loader": "^10.1.1",
     "semver": "^6.3.0",
     "uuid": "^8.3.2",
-    "vue-eslint-parser": "^7.4.1",
-    "vue-svg-loader": "^0.16.0"
+    "vue-eslint-parser": "^7.4.1"
   },
   "husky": {
     "hooks": {
-      "pre-commit": "npm run test",
-      "pre-push": "npm run test:full"
+      "pre-commit": "npm run test:full"
     }
   },
   "babel": {

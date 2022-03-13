@@ -3,11 +3,11 @@
   'meta': [
     {
       'name': 'description',
-      'content': 'MTGJSON License.'
+      'content': 'MTGJSON License (MIT) .'
     },
     {
       "property": "og:description",
-      "content": "MTGJSON License."
+      "content": "MTGJSON License (MIT)."
     },
     {
       'name': 'keywords',
@@ -20,7 +20,7 @@
 }
 ---
 
-# MTGJSON License
+# MTGJSON License (MIT)
 
 By using this website and its content you agree to the following license:
 

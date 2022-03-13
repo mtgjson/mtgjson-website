@@ -4,7 +4,7 @@
  */
 'use strict';
 
-const fetch = require('node-fetch');
+const axios = require('axios');
 const uuidv4 = require('uuid').v4;
 const fs = require('fs');
 
@@ -13,8 +13,9 @@ const fs = require('fs');
   const generationDate = new Date().toISOString();
 
   try {
-    const promised = await fetch(`${host}Meta.json`);
-    const { data } = await promised.json();
+    const promised = await axios.get(`${host}Meta.json`);
+    const { data } = await promised;
+    const { meta } = data;
     const atom =
 `<?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
@@ -29,14 +30,14 @@ const fs = require('fs');
     <title>MTGJSON Version Date</title>
     <id>urn:uuid:${uuidv4()}</id>
     <updated>${generationDate}</updated>
-    <content>${data.date}</content>
+    <content>${meta.date}</content>
     <summary>Current MTGJSON build date.</summary>
   </entry>
   <entry>
     <title>MTGJSON Version</title>
     <id>urn:uuid:${uuidv4()}</id>
     <updated>${generationDate}</updated>
-    <content>${data.version}</content>
+    <content>${meta.version}</content>
     <summary>Current MTGJSON version.</summary>
   </entry>
 </feed>`;
