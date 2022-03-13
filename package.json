@@ -47,7 +47,6 @@
     "husky": "^4.3.8",
     "jest": "^26.6.3",
     "markdownlint-cli": "^0.27.1",
-    "node-fetch": "^2.6.1",
     "npm-run-all": "^4.1.5",
     "pug": "^3.0.0",
     "pug-plain-loader": "^1.1.0",
@@ -55,8 +54,7 @@
     "sass-loader": "^10.1.1",
     "semver": "^6.3.0",
     "uuid": "^8.3.2",
-    "vue-eslint-parser": "^7.4.1",
-    "vue-svg-loader": "^0.16.0"
+    "vue-eslint-parser": "^7.4.1"
   },
   "husky": {
     "hooks": {
