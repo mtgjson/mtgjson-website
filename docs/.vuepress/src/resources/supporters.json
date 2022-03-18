@@ -254,6 +254,11 @@
       "link": "https://www.magiccardsmanager.com"
     },
     {
+      "name": "Magic Data Science",
+      "image": "avatar-mds.jpg",
+      "link": "https://mtgds.wordpress.com/"
+    },
+    {
       "name": "Magic Manager",
       "image": "avatar-magic-manager.png",
       "link": "https://magicmanager.cards"
