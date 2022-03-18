@@ -75,3 +75,14 @@ Clean out all Node packages.
 ```
 npm run purge
 ```
+
+### **Caveats**
+
+Occasionally we may want to upgrade all packages to keep the project up to date, but since Vuepress is built on Vue 2 there are some discrepencies when trying to update _everything_. The following should not be updated:
+
+- vuex
+- sass-loader
+
+Some dependencies need dev dependencies in order to work since their last update, this includes:
+
+- webpack (normally not needed as a package since its bundled with Vuepress, et. al.)
