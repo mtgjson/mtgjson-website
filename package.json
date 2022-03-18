@@ -56,11 +56,6 @@
     "vue-eslint-parser": "^8.3.0",
     "webpack": "^4.46.0"
   },
-  "husky": {
-    "hooks": {
-      "pre-commit": "npm run test:full"
-    }
-  },
   "babel": {
     "presets": [
       [
