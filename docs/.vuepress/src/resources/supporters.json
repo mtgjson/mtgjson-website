@@ -364,6 +364,11 @@
       "link": "https://mypcards.com/"
     },
     {
+      "name": "Planar Bridge",
+      "image": "avatar-planar-bridge.png",
+      "link": "https://github.com/maallaard/planar-bridge/"
+    },
+    {
       "name": "Planestrader",
       "image": "avatar-planestrader.png",
       "link": "https://planestrader.com/"
