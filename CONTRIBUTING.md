@@ -22,8 +22,6 @@ The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.
 ### Optional Requirements
 
 - n
-- imagemin
-- imagemin-webp
 
 ## Directory Structure
 
@@ -31,59 +29,44 @@ Files/Directories were omitted that do not help understand this current project 
 
 ```sh
 .
-├── app.json # Configuration for Heroku review apps. Used to Heroku PR deployments
-├── check-version.js # Ensures the developer environment is correct
+├── app.json # Configuration for Heroku review apps. Used for Heroku PR deployments
 ├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
-├── __coverage__ # GENERATED and GIT ignored. Coverage for unit tests
-├── __tests__ # Unit tests
-├── utils # Build utils run before site generation
-│   ├── output/ # General purpose util output directory
+├── util # Build utilities run during site generation
+|   ├── check-version.js # Ensures the developer environment is correct
 │   ├── generate-contributors.js # Utility to generate a github contributors file
-│   ├── generate-version-atom.js # Utility to generate a version atom of the site
-│   ├── migrate-schema-to-markdown.js # DEPRECATED. Utility to generate markdown pages from a schema
-│   └── regenerate-schema.js # DEPRECATED. Utility to add new fields to JSON schemas
+│   └── generate-version-atom.js # Utility to generate a version atom of the siteschemas
 └── docs # Home directory, outputs to `/dist`
-    ├── README.md # Acts like a route entry point
-    ├── **/* # Directories and their route entry point
+    ├── README.md # Route entry point
+    ├── **/*.md # Directories and their route entry point
     └── .vuepress # Main source files for the application
         ├── config.js # Main VuePress configuration
-        ├── config.sidebar.js # Function to render the sidebar
-        ├── enhanceApp.js # Attach configuration to Vue before build time
-        ├── store.js # Vuex store for Vue to pseudo-prefetch API data
-        ├── public/ # Available to the app home directory
+        ├── config.sidebar.js # Script to generate the sidebar heirarchy
+        ├── enhanceApp.js # Vue enhancements
+        ├── store.js # Vuex store
+        ├── public/ # Static assets
         │   ├── favicons/ # All favicon images
         │   ├── images/ # All application images
-        │   │   ├── assets/ # MTGJSON specific images
-        │   │   ├── avatars/ # User/supporters avatar images
-        │   │   └── **/* # Any other image
+        │   │   ├── assets/ # MTGJSON specifics
+        │   │   └── avatars/ # User/supporters avatars
         │   └── robots.txt # For crawlers to index/not index certain pages
         ├── src # Helper data and functions
         │   ├── resources/ # JSON that powers parts of the site
-        │   │   ├── contributors.json # Contributors data from github
-        │   │   └── supporters.json # Project Patrons/Supporters
-        │   ├── schemas/ # DEPRECATED. Saved for posterity
-        │   │   └── *.schema.json # Specific schema that match API data
-        │   └── scripts/ # Helper JS functions
-        │       └── * # Any javascript helper function
+        │   │   ├── contributors.json # For contributors data from github
+        │   │   └── supporters.json # For project Patrons/Supporters data
+        │   └── scripts/ # Any app helper functions
+        │       └── *.js # Vue helpers
         └── theme # Visuals
             ├── components/ # Vuepress default Vue components (Beware!)
-            ├── global-components/ # Vuepress custom Vue components
-            │   ├── DownloadButtonsList.vue # Rendres a download field using a buttons list (not used)
-            │   ├── DownloadList.vue # Download decks/sets list
-            │   ├── DownloadNativeSelect.vue # Renders a download field using a native selection for a download
-            │   ├── DownloadSelect.vue # Renders a download field using a custom selection for a download (not used)
-            │   ├── DownloadSorter.vue # Sorter for downloads
-            │   ├── ExampleField.vue # Render examples from EnumValues.json
-            │   ├── NavMeta.vue # Header logo and version
-            │   ├── PropertyToggler.vue # Toggler for optional documentation properties
-            │   ├── Supporters.vue # Contributors/Patrons/Supporters for homepage
-            │   └── ThemeSwitcher.vue # Toggler for light/dark theme
-            ├── layouts/ # What the application will render at a top level
-            │   ├── 404.vue # 404 layout
-            │   └── Layout.vue # Main layout
-            └── styles/ # SCSS/Stylus
-                ├── *.scss # Styles
-                └── palette.styl # Stylus requirement for VuePress, DO NOT REMOVE
+            ├── global-components/ # Custom Vue components
+            │   └── *.vue # Vue component
+            ├── layouts/ # Theme layout for all pages
+            │   ├── 404.vue # Layout for error page
+            │   └── Layout.vue # Layout for the rest of pages
+            ├── styles/ # Visual styling
+            │   ├── *.scss # CSS
+            │   └── palette.styl # Stylus requirement for VuePress (DO NOT REMOVE)
+            └── util/ # Theme helper functions
+                └── index.js # Helper functions for components
 ```
 
 ## VuePress Configuration
@@ -118,7 +101,7 @@ You can also change configuration of VuePress by overwriting variables within th
 
 ```yaml
 {
-  "title": "Card", # Meta title of page
+  "title": "Card (Set)", # Meta title of page
   "schema": "card", # Powers certain Vue components
   "meta": [ # Head meta properties
     {
@@ -135,22 +118,22 @@ You can also change configuration of VuePress by overwriting variables within th
     }
   ],
   "feed": {
-    "enable": "true" # Include this for atom/rss XML
+    "enable": "true" # Include this for atom/rss XML additions
   }
 }
 ```
 
 ### Markdown Syntax for Documentation Fields
 
-An example of a property field structure in Markdown:
+An example of a property field for a data object field in Markdown:
 
-```markdown
+```
 > ### artist
 > The name of the artist that illustrated the card art.  
 >
 > **Type:** `string`  
 > **Introduced:** `v4.0.0`  
-> **Tags:** <i>optional</i>
+> **Tags:** <i class="optional">optional</i>
 ```
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `"schema"` property have a value that equates to an EnumValues.json property.
@@ -165,4 +148,13 @@ Because Vue backs this entire application we can inject some helpers in to Vue t
 
 ## Testing
 
-We use Jest and we do our best.
+We use Jest and try our best. Test runs before commits and will fail the commit if necessary.
+
+## Pull Requests
+
+We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate:
+
+- `issue/123: fixed bug.` "issue" is a branch which PR handles something where an issue was opened
+- `ni/documentation_updates: updated README.` "ni" is branch which PR handles something with no open issue
+
+Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title clear and concise.

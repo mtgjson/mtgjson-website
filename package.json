@@ -1,7 +1,7 @@
 {
   "name": "mtgjson-website",
-  "version": "2.3.0",
-  "author": "MTGJSON Developers",
+  "version": "5.2.0",
+  "author": "Eric Lakatos and the OSS community",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
   "engines": {
@@ -18,9 +18,9 @@
     "lint:js": "esw --fix --ext .js,.vue docs/.vuepress",
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
-    "check-version": "node ./utils/check-version.js",
-    "generate-version-atom": "node ./utils/generate-version-atom.js",
-    "generate-contributors": "node ./utils/generate-contributors.js"
+    "check-version": "node ./util/check-version.js",
+    "generate-version-atom": "node ./util/generate-version-atom.js",
+    "generate-contributors": "node ./util/generate-contributors.js"
   },
   "dependencies": {
     "@vuepress/core": "^1.9.7",
