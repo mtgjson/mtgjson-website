@@ -8,7 +8,7 @@
 
 [![Actions Status](https://github.com/mtgjson/mtgjson-website/workflows/Node%20CI/badge.svg)](https://github.com/mtgjson/mtgjson-website/actions)
 ![CodeQL](https://github.com/mtgjson/mtgjson-website/workflows/CodeQL/badge.svg)
-[![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/master/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
+[![codecov](https://codecov.io/gh/mtgjson/mtgjson-website/branch/main/graph/badge.svg)](https://codecov.io/gh/mtgjson/mtgjson-website)
 
 [![PayPal](https://img.shields.io/static/v1.svg?label=PayPal&message=Support%20MTGJSON&color=Blue&logo=paypal)](https://paypal.me/zachhalpern)
 [![Patreon](https://img.shields.io/static/v1.svg?label=Patreon&message=Support%20MTGJSON&color=Orange&logo=patreon)](https://patreon.com/mtgjson)
@@ -28,7 +28,7 @@ brew install n
 sudo n 12
 ```
 
-**Option #2:** Install Node using the [official resource](https://nodejs.org/en/) installer.
+**Option #2:** Install Node using the [official resources](https://nodejs.org/en/download/releases/) installer.
 
 Install project dependencies.
 
@@ -54,10 +54,16 @@ npm run lint
 
 ### **Testing**
 
-Run all tests. This command will also automatically run during Husky's pre-commit checks.
+Run all tests.
 
 ```
 npm run test
+```
+
+or run the full tests that Husky will test for.
+
+```
+npm run test:full
 ```
 
 ### **Building**
@@ -85,4 +91,4 @@ Occasionally we may want to upgrade all packages to keep the project up to date,
 
 Some dependencies need dev dependencies in order to work since their last update, this includes:
 
-- webpack (normally not needed as a package since its bundled with Vuepress, et. al.)
+- webpack
