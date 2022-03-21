@@ -58,7 +58,7 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 > ### finishes
 > The finishes of the card.
 >
-> - **Type:** `arrray[string]`
+> - **Type:** `array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
