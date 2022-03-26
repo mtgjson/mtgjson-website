@@ -90,7 +90,7 @@ module.exports = {
     searchMaxSuggestions: 10,
     // Edit this page link in footer
     docsRepo: 'mtgjson/mtgjson-website',
-    docsBranch: 'master',
+    docsBranch: 'main',
     docsDir: 'docs/',
     editLinks: true,
     editLinkText: 'Help us improve this page!',
