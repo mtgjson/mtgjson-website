@@ -31,6 +31,12 @@ jobs:
       env:
         CI: true
 
+    # Upload CodeCov report to the remote server
+    - name: Upload Code Coverage
+      uses: codecov/codecov-action@v1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+
     # Generate a dynamic release tag based on a nightly build format
     - name: Generate Release Tag
       id: tag
