@@ -52,7 +52,7 @@ To go along with MTGGraphQL, we have released a Typescript package for your conv
 
 ### GraphQL Playground
 
-We provide a [GraphQL Playground](https://mtgjson.com/graphql) where you can query the server and get a response. The playground consists of 3 main sections:
+We provide a [GraphQL Playground](https://graphql.mtgjson.com/) where you can query the server and get a response. The playground consists of 3 main sections:
 
 - **The top left, for your query**
 - **The bottom left tabs, containing `HTTP HEADERS` for your authorization**
@@ -114,7 +114,7 @@ query{
 Assuming you send the proper Headers, you can use an HTTP request on the GraphQL endpoint with the following format:
 
 ```
-https://mtgjson.com/graphql?query=query{cards(input:{name:"Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
+https://graphql.mtgjson.com?query=query{cards(input:{name:"Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
 ```
 
 You can utilize a tool like [Apollo](https://www.apollographql.com/docs/react/data/queries/) to make Client-based calls.
