@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Deck Data Model documentation.",
+      "content": "The Deck Data Model describes a complete deck reference.",
     },
     {
       "name": "og:description",
-      "content": "Deck Data Model documentation.",
+      "content": "The Deck Data Model describes a complete deck reference.",
     },
     {
       "name": "keywords",

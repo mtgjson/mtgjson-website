@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Token) Data Model documentation.",
+      "content": "The Card (Token) Data Model describes the properties and values of a single token card.",
     },
     {
       "property": "og:description",
-      "content": "Card (Token) Data Model documentation."
+      "content": "The Card (Token) Data Model describes the properties and values of a single token card."
     },
     {
       "name": "keywords",

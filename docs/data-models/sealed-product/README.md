@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Sealed Product Data Model documentation.",
+      "content": "The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.",
     },
     {
       "property": "og:description",
-      "content": "Sealed Product Data Model documentation."
+      "content": "The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set."
     },
     {
       "name": "keywords",

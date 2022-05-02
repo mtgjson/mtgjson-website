@@ -5,11 +5,11 @@
     [
       {
         "name": "description",
-        "content": "Booster abstract model documentation."
+        "content": "The Booster abstract Data Model describes how a Set's booster pack may be constructed."
       },
       {
         "property": "og:description",
-        "content": "Booster abstract model documentation."
+        "content": "The Booster abstract Data Model describes how a Set's booster pack may be constructed."
       },
       {
         "name": "keywords",
@@ -22,7 +22,7 @@
 
 # Booster
 
-The Booster abstract Data Model describes how a [Set](/data-models/set/) booster pack may be constructed.
+The Booster abstract Data Model describes how a [Set](/data-models/set/)'s booster pack may be constructed.
 
 **Parent model:** [Set](/data-models/set/)  
 **Parent property:** `booster`

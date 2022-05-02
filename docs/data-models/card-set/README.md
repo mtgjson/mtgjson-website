@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Set) Data Model documentation.",
+      "content": "The Card (Set) Data Model describes the properties of a single card in a set.",
     },
     {
       "property": "og:description",
-      "content": "Card (Set) Data Model documentation."
+      "content": "The Card (Set) Data Model describes the properties of a single card in a set."
     },
     {
       "name": "keywords",

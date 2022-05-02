@@ -4,11 +4,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "MTGJSON downloads.",
+      "content": "MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.",
     },
     {
       "property": "og:description",
-      "content": "MTGJSON downloads."
+      "content": "MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server."
     },
     {
       "name": "keywords",

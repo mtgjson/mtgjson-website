@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Identifiers Data Model documentation.",
+      "content": "The Identifiers Data Model describes a list of identifiers associated to a Card.",
     },
     {
       "property": "og:description",
-      "content": "Identifiers Data Model documentation."
+      "content": "The Identifiers Data Model describes a list of identifiers associated to a Card."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Identifiers
 
-The Identifiers Data Model describes a list of identifiers associated to a card.
+The Identifiers Data Model describes a list of identifiers associated to a Card.
 
 **Parent model:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)  
 **Parent property:** `identifiers`

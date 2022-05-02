@@ -4,11 +4,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "MTGGraphQL service documentation",
+      "content": "MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.",
     },
     {
       "property": "og:description",
-      "content": "MTGGraphQL service documentation."
+      "content": "MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service."
     },
     {
       "name": "keywords",
@@ -23,7 +23,7 @@
 
 # MTGGraphQL
 
-MTGGraphQL is a sub-service of MTGJSON and a GraphQL API and Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service. This will also allow us to connect future projects & changes under a single API that can evolve over time. While more data is in the works, the current service focuses on JSON payloads for:
+MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service. This will also allow us to connect future projects & changes under a single API that can evolve over time. While more data is in the works, the current service focuses on JSON payloads for:
 
 - **Cards**
 - **Decks**

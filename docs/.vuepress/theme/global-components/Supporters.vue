@@ -1,7 +1,8 @@
 <template lang="pug">
 .supporters
   .supporters-wrap(v-if="contributors")
-    h3 Our Contributors
+    h2 Contributors
+    p MTGJSON is a labor of love and we would not have come as far as we have without our code contributors.
     ul.contributors-list
       li(v-for="(contributor, key) in contributors", :key="key")
         a(:href="contributor.url", rel="noopener noreferrer", target="_blank") {{ `${contributor.username}'s GitHub profile` }}
@@ -49,7 +50,7 @@
 
   //- Not Patrons but services that use MTGJSON
   .supporters-wrap(v-if="services")
-    h3 Others Powered by MTGJSON
+    h3 Applications Powered by MTGJSON
     p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
     small(v-html="projectMsg")
     .supporters-grid.services(:data-tier="0")
@@ -123,6 +124,11 @@ export default {
 .supporters {
   &-wrap {
     justify-content: center;
+    padding-bottom: 1rem;
+
+    h3 {
+      padding-top: 0;
+    }
 
     & > small {
       display: block;
@@ -132,10 +138,11 @@ export default {
   }
 
   .contributors-list {
-    display: flex;
-    flex-wrap: wrap;
+    display: grid;
+    grid-template-columns: repeat(10, 1fr);
     grid-gap: 20px;
     margin-left: 0;
+    margin-bottom: 0;
 
     li {
       flex: 0;
@@ -150,7 +157,9 @@ export default {
 
         img {
           float: left;
-          max-width: 48px;
+          width: 100%;
+          height: auto;
+          // max-width: 48px;
         }
 
         &::before,
@@ -291,11 +300,49 @@ export default {
 }
 
 @media (max-width: 960px) {
-  .supporters-grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
+  .supporters {
+    .contributors-list {
+      grid-template-columns: repeat(7, 1fr);
+    }
 
-    &.services {
+    &-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
+
+      &.services {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+      }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .supporters {
+    .contributors-list {
+      grid-template-columns: repeat(5, 1fr);
+    }
+  }
+}
+
+@media (max-width: 719px) {
+  .supporters {
+    .contributors-list {
+      grid-template-columns: repeat(8, 1fr);
+    }
+  }
+}
+
+@media (max-width: 600px) {
+  .supporters {
+    .contributors-list {
+      grid-template-columns: repeat(6, 1fr);
+    }
+  }
+}
+
+@media (max-width: 400px) {
+  .supporters {
+    .contributors-list {
+      grid-template-columns: repeat(4, 1fr);
     }
   }
 }

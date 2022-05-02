@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Atomic) Data Model documentation.",
+      "content": "The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.",
     },
     {
       "name": "og:description",
-      "content": "Card (Atomic) Data Model documentation.",
+      "content": "The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.",
     },
     {
       "name": "keywords",
@@ -24,13 +24,14 @@
 
 # Card (Atomic)
 
-The Card (Atomic) Data Model describes the a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
+The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
 
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
 
 ::: tip
 The Card (Atomic) Data Model is accessed through an array of card variations where its parent property is the name of the card, like such:
+
 ```
 "data": {
   "Oblivion Ring": [
@@ -40,6 +41,7 @@ The Card (Atomic) Data Model is accessed through an array of card variations whe
   ...
 }
 ```
+
 :::
 
 ## Model Index
