@@ -3,7 +3,7 @@
   'meta': [
     {
       'name': 'description',
-      'content': 'MTGJSON License (MIT) .'
+      'content': 'MTGJSON License (MIT).'
     },
     {
       "property": "og:description",

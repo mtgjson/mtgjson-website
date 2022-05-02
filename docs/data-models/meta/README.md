@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Meta Data Model documentation.",
+      "content": "The Meta Data Model describes application metadata.",
     },
     {
       "name": "og:description",
-      "content": "Meta Data Model documentation.",
+      "content": "The Meta Data Model describes application metadata.",
     },
     {
       "name": "keywords",

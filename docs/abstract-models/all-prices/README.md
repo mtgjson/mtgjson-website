@@ -5,11 +5,11 @@
     [
       {
         "name": "description",
-        "content": "All Prices abstract model documentation."
+        "content": "The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID."
       },
       {
         "property": "og:description",
-        "content": "All Prices abstract model documentation."
+        "content": "The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID."
       },
       {
         "name": "keywords",
@@ -22,7 +22,7 @@
 
 # All Prices
 
-The All Prices abstract Data Model describes a list of card prices based on MTGJSON Card UUID.
+The All Prices abstract Data Model describes a list of card prices based on MTGJSON a Card UUID.
 
 **Parent file:** [AllPrices](/downloads/all-files/#allprices)  
 **Parent property:** `data`

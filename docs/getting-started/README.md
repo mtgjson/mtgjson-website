@@ -4,11 +4,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Getting started documentation",
+      "content": "Getting started guide to understanding MTGJSON files.",
     },
     {
       "property": "og:description",
-      "content": "Getting started documentation"
+      "content": "Getting started guide to understanding MTGJSON files."
     },
     {
       "name": "keywords",

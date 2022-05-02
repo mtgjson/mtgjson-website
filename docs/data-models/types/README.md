@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Types Data Model documentation.",
+      "content": "The Types Data Model describes all types available on a Card.",
     },
     {
       "property": "og:description",
-      "content": "Types Data Model documentation."
+      "content": "The Types Data Model describes all types available on a Card."
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Types
 
-The Types Data Model describes card types available to MTGJSON.
+The Types Data Model describes all types available on a Card.
 
 **Parent model:** [Card Types](/data-models/card-types/)  
 **Parent property:** `artifact`, `conspiracy`, `creature`, `enchantment`, `instant`, `land`, `phenomenon`, `plane`, `planeswalker`, `scheme`, `sorcery`, `tribal`, `vanguard`

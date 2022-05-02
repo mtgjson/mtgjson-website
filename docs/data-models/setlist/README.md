@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Set List Data Model documentation.",
+      "content": "The Set List Data Model describes a metadata-like properties and values for an individual Set.",
     },
     {
       "name": "og:description",
-      "content": "Set List Data Model documentation.",
+      "content": "The Set List Data Model describes a metadata-like properties and values for an individual Set.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Set List
 
-The Set List Data Model describes a metadata-like model that holds information about a [Set](/data-models/set/).
+The Set List Data Model describes a metadata-like properties and values for an individual [Set](/data-models/set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`

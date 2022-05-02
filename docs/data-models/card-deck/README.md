@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Card (Deck) Data Model documentation.",
+      "content": "The Card (Deck) Data Model describes the properties and values of a single card in a deck.",
     },
     {
       "property": "og:description",
-      "content": "Card (Deck) Data Model documentation."
+      "content": "The Card (Deck) Data Model describes the properties and values of a single card in a deck."
     },
     {
       "name": "keywords",

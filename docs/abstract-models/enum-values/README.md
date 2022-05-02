@@ -5,11 +5,11 @@
     [
       {
         "name": "description",
-        "content": "Enum Values abstract model documentation."
+        "content": "The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models."
       },
       {
         "property": "og:description",
-        "content": "Enum Values abstract model documentation."
+        "content": "The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models."
       },
       {
         "name": "keywords",

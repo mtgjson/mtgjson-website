@@ -32,7 +32,7 @@ This is living documentation, at any point this site may be updated for clarity.
 </p>
 :::
 
-::: tip Eric - Documentation Developer
+::: tip Eric - Documentation Maintainer
 <p>
   <img class="avatar" src="/images/avatars/avatar-eric.jpg" title="Eric's avatar" alt="Eric's avatar" width="100px" height="100px">
   Eric is a conceptualizer that loves deer, cheesy sci-fi movies and delving in to any code he can find. He is an avid supporter of open-source software and the Magic: The Gathering developer community.

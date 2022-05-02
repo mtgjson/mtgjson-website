@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Set Data Model documentation.",
+      "content": "The Set Data Model describes the properties and values of an individual Set.",
     },
     {
       "name": "og:description",
-      "content": "Set Data Model documentation.",
+      "content": "The Set Data Model describes the properties and values of an individual Set.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Set
 
-The Set Data Model describes the properties and values of an individual set.
+The Set Data Model describes the properties and values of an individual Set.
 
 **Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)  
 **Parent property:** `data`

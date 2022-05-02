@@ -5,11 +5,11 @@
   "meta": [
     {
       "name": "description",
-      "content": "Keywords Data Model documentation.",
+      "content": "The Keywords Data Model describes a list of all keywords used on a Card.",
     },
     {
       "name": "og:description",
-      "content": "Keywords Data Model documentation.",
+      "content": "The Keywords Data Model describes a list of all keywords used on a Card.",
     },
     {
       "name": "keywords",
@@ -24,7 +24,7 @@
 
 # Keywords
 
-The Keywords Data Model describes a list of all keywords used on cards.
+The Keywords Data Model describes a list of all keywords used on a Card.
 
 **Parent file:** [Keywords](/downloads/all-files/#keywords)  
 **Parent property:** `data`
