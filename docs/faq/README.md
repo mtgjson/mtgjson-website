@@ -44,7 +44,7 @@ Here is a list of frequently asked questions from our users since some data can 
 > You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you are a data provider and would like to integrate your data with us, please join our [Discord](https://mtgjson.com/discord).
 
 > ### How often is the data updated?
-> Full builds are available weekly at **Tuesday, 12:01AM ET**, but prices are available daily at **12:01AM ET**. Also, when a new set is being previewed, that set will be rebuilt daily until the set is released.
+> Builds kick off at **3:00PM ET** taking between 4-5 hours to complete and go live at **9:00PM ET**.
 
 > ### Can I verify the downloaded files?
 > Yes. Every file has a SHA-256 file available at the same URL location appended with `.sha256`.
