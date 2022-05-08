@@ -94,13 +94,6 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### edhrecRank  
-> The card rank on [EDHRec](https://www.edhrec.com).  
->
-> - **Type:** `integer`  
-> - **Introduced:** `v4.5.0`  
-> - **Tags:** <i class="optional">optional</i>  
-
 > ### faceName  
 > The name on the face of the card.  
 >
