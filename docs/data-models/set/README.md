@@ -190,7 +190,7 @@ The Set Data Model describes the properties and values of an individual Set.
 > - **Introduced:** `v4.0.0`
 
 > ### totalSetSize  
-> The total number of cards in the set, including promos and related supplemental products.  
+> The total number of cards in the set, including promotional and related supplemental products but excluding [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) modifications - however those cards are included in the set itself.
 >
 > - **Type:** `integer`  
 > - **Introduced:** `v4.1.0`
