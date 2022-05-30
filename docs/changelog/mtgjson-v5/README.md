@@ -39,7 +39,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 #### Changed
 
-- Changed File models within the documentation and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This is no way changes how and where the data files are downloaded or how their models are formed.
+- Changed File models within the documentation and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This is no way changes how and where the data files are downloaded or how their models are formed
 
 ### Card Models
 
@@ -66,7 +66,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 - Added the non-Atomic `otherFaceIds` property to Card (Token)
 - Added the non-Atomic `signature` property
 - Added support for "Dungeon" cards in Card (Atomic) Data Model
-- Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties.
+- Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties
 
 #### Deprecated
 
@@ -331,6 +331,10 @@ The MTGJSON team we would like to thank the community for its continued support 
 - Added `mtgjsonV4Id` to identifiers to help transition developer's code
 - Added `faceName` to identify only the card face card's name
 
+#### Removed
+
+- Removed `prices` in favor of a dedicated `AllPrices` file
+
 ### Sets
 #### Added
 
@@ -359,8 +363,8 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 #### Added
 
-- SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format
-- `AllPrices.json` now contains prices from [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
+- Added SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format
+- Added `AllPrices` file to collect card prices based on Card UUID with a **limited** history of prices available. Contains paper prices from [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson); mtgo prices from [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
 ### Misc
 #### Added
@@ -376,15 +380,14 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 - Data "Structures" are now named "Models"
 - Models now reference their parent keys and parent files more accurately
-- Models now have the "optional" attribute marked on more properties for clarity
+- Models now have the "optional" tag marked on properties for clarity
 - Some text and spacing adjustments for the "Changelog" and "FAQ" page
-- The `Legalities` model now more clearly shows which properties would be omitted
 
 #### Added
 
 - More models are clearly defined now that the files deliver all the same top-level keys
 - Atomic Cards are now documented outright as a Data Model for clarity
-- Property value examples were added for properties with enum values
+- Property value examples were added for properties with enumuerated values from `EnumValues.json`
 - You can now toggle optional properties on/off within documentation. If all properties are optional than the UI is disabled
 - You can now try to edit/PR a specific documentation from the page footer
 
