@@ -229,8 +229,9 @@ The Card (Token) Data Model describes the properties and values of a single toke
 > ### otherFaceIds  
 > A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
-> - **Type:** `array[] || array[string]`  
+> - **Type:** `array[string]`  
 > - **Introduced:** `v4.6.1`
+> - **Tags:** <i class="optional">optional</i>  
 
 > ### power  
 > The power of the card.  
