@@ -58,6 +58,14 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
+> ### boosterTypes
+> A list of types this card is in a booster pack.
+>
+> - **Type:** `array[string]`
+> - <ExampleField type='boosterTypes'/>
+> - **Introduced:** `v5.2.0`
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+
 > ### borderColor  
 > The color of the card border.  
 >
@@ -315,7 +323,15 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `array[string]`  
 > - **Introduced:** `v5.0.0`  
-> - **Tags:** <i class="optional">optional</i>  
+> - **Tags:** <i class="optional">optional</i>
+
+> ### language
+> The language the card is printed in.
+>
+> - **Type:** `string`
+> - <ExampleField type='language'/>
+> - **Introduced:** `v5.2.0`
+> - **Tags:** <i class="new">new</i>
 
 > ### layout  
 > The type of card layout. For a token card, this will be `"token"`.  

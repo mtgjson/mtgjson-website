@@ -58,6 +58,13 @@ The Identifiers Data Model describes a list of identifiers associated to a Card.
 > - **Introduced:** `v5.0.0`  
 > - **Tags:** <i class="optional">optional</i>
 
+> ### cardsphereId
+> The [Cardsphere](https://www.cardsphere.com/) card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+
 > ### mcmId  
 > The [Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) card identifier.  
 >
