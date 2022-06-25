@@ -167,9 +167,10 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 > ### frameEffects  
 > The visual frame effects.  
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[string]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
+> - **Tags:** <i class="optional">optional</i>  
 
 > ### frameVersion  
 > The version of the card frame style.  
