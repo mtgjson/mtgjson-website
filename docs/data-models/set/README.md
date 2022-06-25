@@ -63,6 +63,13 @@ The Set Data Model describes the properties and values of an individual Set.
 > - **Type:** `array[object]`  
 > - **Introduced:** `v4.0.0`
 
+> ### cardsphereSetId
+> The [Cardsphere](https://www.cardsphere.com/) set identifier.
+>
+> - **Type:** `integer`
+> - **Introduced:** `v5.2.0`
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+
 > ### code  
 > The set code for the set.  
 >
