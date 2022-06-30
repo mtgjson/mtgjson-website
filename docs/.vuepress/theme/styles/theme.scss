@@ -135,11 +135,16 @@ blockquote {
   i.optional,
   i.omitted,
   i.deprecated,
+  .preview,
   i.new {
     background-color: var(--light-color);
     color: var(--dark-color);
 
     @extend %code-block;
+  }
+
+  i.preview {
+    background-color: var(--true-accent-1-color);
   }
 
   i.optional {
