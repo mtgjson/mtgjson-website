@@ -63,7 +63,7 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 > - **Type:** `array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new">New</i>
 
 > ### language
 > The language of the card.

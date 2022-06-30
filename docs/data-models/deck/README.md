@@ -48,7 +48,7 @@ The Deck Data Model describes a complete deck reference.
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`  
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional">Optional</i>
 
 > ### fileName
 > The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions and are given a delimiter of `_`.
