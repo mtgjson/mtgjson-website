@@ -4,4 +4,4 @@ User-agent: *
 Disallow: /404.html
 Disallow: /links/
 Disallow: /api/v5_backup/
-Disallow /api/v5/*.json
+Disallow: /api/v5/*.json
