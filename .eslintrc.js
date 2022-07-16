@@ -23,7 +23,7 @@ module.exports = {
   rules: {
     // Rules to ignore
     "vue/multi-word-component-names": "off",
-    "no-use-before-define": "off", // Vuepress has hidden logic
+    "no-use-before-define": "off",
     "no-case-declarations": "off",
     "no-unused-vars": "off",
     "no-console": "off",

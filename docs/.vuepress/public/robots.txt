@@ -1,6 +1,0 @@
-# All crawlers
-User-agent: *
-# should not show the 404 page
-Disallow: /404.html
-# but allow access to assets for better debugging/rendering
-# Disallow: /images

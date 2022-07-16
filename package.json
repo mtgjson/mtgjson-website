@@ -1,21 +1,21 @@
 {
   "name": "mtgjson-website",
   "version": "5.2.0",
-  "author": "Eric Lakatos and the OSS community",
+  "author": "MTGJSON Developers",
   "repository": "https://github.com/mtgjson/mtgjson-website",
   "license": "MIT",
   "engines": {
-    "node": "^12.16.3"
+    "node": "^16.16.0"
   },
   "scripts": {
     "dev": "run-p lint:js:watch local",
-    "local": "npm run check-version && vuepress dev docs",
-    "build": "npm run generate-contributors && vuepress build docs && npm run generate-version-atom",
+    "local": "npm run check-version && vitepress dev docs",
+    "build": "npm run generate-contributors && vitepress build docs && npm run generate-version-atom",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
-    "lint:js:watch": "esw --fix --ext .js,.vue docs/.vuepress -w",
-    "lint:js": "esw --fix --ext .js,.vue docs/.vuepress",
+    "lint:js:watch": "esw --fix --ext .js,.vue docs/.vitepress -w",
+    "lint:js": "esw --fix --ext .js,.vue docs/.vitepress",
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
     "check-version": "node ./util/check-version.js",
@@ -23,21 +23,14 @@
     "generate-contributors": "node ./util/generate-contributors.js"
   },
   "dependencies": {
-    "@vuepress/core": "^1.9.7",
-    "@vuepress/plugin-back-to-top": "^1.9.7",
-    "axios": "^0.26.1",
+    "axios": "^0.27.2",
     "jquery": "^3.6.0",
-    "vue-svg-loader": "^0.16.0",
-    "vuepress": "^1.9.7",
-    "vuepress-plugin-container": "^2.1.5",
-    "vuepress-plugin-feed": "^0.1.9",
-    "vuepress-plugin-nprogress": "^1.1.8",
-    "vuex": "^3.6.2"
+    "vuex": "^4.0.2"
   },
   "devDependencies": {
     "@babel/core": "^7.17.7",
+    "@babel/eslint-parser": "^7.18.2",
     "@babel/preset-env": "^7.16.11",
-    "babel-eslint": "^10.1.0",
     "babel-jest": "^27.5.1",
     "codecov": "^3.8.2",
     "eslint": "^8.11.0",
@@ -49,12 +42,13 @@
     "npm-run-all": "^4.1.5",
     "pug": "^3.0.2",
     "pug-plain-loader": "^1.1.0",
-    "sass": "^1.49.9",
-    "sass-loader": "^10.1.1",
+    "sass": "^1.53.0",
     "semver": "^7.3.5",
     "uuid": "^8.3.2",
-    "vue-eslint-parser": "^8.3.0",
-    "webpack": "^4.46.0"
+    "vite-svg-loader": "^3.4.0",
+    "vitepress": "^1.0.0-alpha.4",
+    "vue": "^3.2.37",
+    "vue-eslint-parser": "^8.3.0"
   },
   "babel": {
     "presets": [

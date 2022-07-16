@@ -1,4 +1,4 @@
-import filter from '../docs/.vuepress/src/scripts/filter';
+import filter from '../docs/.vitepress/src/scripts/filter';
 
 describe('filter', () => {
   it('should return the same data if no filter is passed', async () => {

@@ -1,11 +1,12 @@
 # Contributing
 
-The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
+The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/) Server-Side Generated website framework with some tricks of our own.
 
 ## Knowledge Requirements
 
-- Vue
-- VuePress
+- Vue 3
+- Vuex
+- VitePress
 - Markdown
 - JSON
 - SCSS
@@ -36,12 +37,11 @@ Files/Directories were omitted that do not help understand this current project 
 │   ├── generate-contributors.js # Utility to generate a github contributors file
 │   └── generate-version-atom.js # Utility to generate a version atom of the siteschemas
 └── docs # Home directory, outputs to `/dist`
-    ├── README.md # Route entry point
-    ├── **/*.md # Directories and their route entry point
-    └── .vuepress # Main source files for the application
-        ├── config.js # Main VuePress configuration
-        ├── config.sidebar.js # Script to generate the sidebar heirarchy
-        ├── enhanceApp.js # Vue enhancements
+    ├── index.md # Route entry point
+    ├── **/index.md # Directories and their route entry point
+    └── .vitepress # Main source files for the application
+        ├── config.js # Main VitePress configuration
+        ├── sidebarMapper.js # Script to generate the sidebar heirarchy
         ├── store.js # Vuex store
         ├── public/ # Static assets
         │   ├── favicons/ # All favicon images
@@ -56,29 +56,31 @@ Files/Directories were omitted that do not help understand this current project 
         │   └── scripts/ # Any app helper functions
         │       └── *.js # Vue helpers
         └── theme # Visuals
-            ├── components/ # Vuepress default Vue components (Beware!)
-            ├── global-components/ # Custom Vue components
+            ├── components/ # Vue components
+            │   └── *.vue # Vue component
+            ├── global-components/ # Global components (can be used inside Markdown)
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
             │   ├── 404.vue # Layout for error page
             │   └── Layout.vue # Layout for the rest of pages
             ├── styles/ # Visual styling
-            │   ├── *.scss # CSS
-            │   └── palette.styl # Stylus requirement for VuePress (DO NOT REMOVE)
-            └── util/ # Theme helper functions
-                └── index.js # Helper functions for components
+            │   └── *.scss # CSS
+            ├── util/ # Theme helper functions
+            │   └── index.js # Helper functions for components
+            ├── index.js # Theme config and enhancements
+            └── store.js # Vuex store
 ```
 
-## VuePress Configuration
+## VitePress Configuration
 
-Explaining the configuration as a whole would be best served by directly linking to the [VuePress documentation](https://v1.vuepress.vuejs.org/config/).
+Explaining the configuration as a whole would be best served by directly linking to the [VitePress documentation](https://vitepress.vuejs.org/config/introduction.html).
 
 ## Markdown Files
 
 ### Use and Purpose
 
 > **Use**: To serve has as static routing of the application.  
-> **Purpose**: All markdown files should be named `README.md`. That file will act as the single `index.html` for a directory.
+> **Purpose**: All markdown files should be named `index.md`. That file will act as the single `index.html` for a directory.
 
 ### Markdown Structure
 
@@ -87,13 +89,13 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
 - Frontmatter is written in JSON (with strings).
 - Markdown is written to a high-level of specification and should not be manipulated.
 - Vue components are imported by placing them in a Markdown file.
-- Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
+- Plugins are provided by the VitePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
 
 ### Using Frontmatter
 
 Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
 
-You can also change configuration of VuePress by overwriting variables within the front matter, such a title, description, etc.
+You can also change configuration of VitePress by overwriting variables within the frontmatter, such a title, description, etc.
 
 > Remember: Frontmatter goes at the top of any Markdown file.
 

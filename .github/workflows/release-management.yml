@@ -17,7 +17,7 @@ jobs:
     - name: Setup Node.js
       uses: actions/setup-node@v1
       with:
-        node-version: '12.x'
+        node-version: '16.x'
 
     # Installs local dependencies needed to build, test, etc.
     - name: Install Dependencies
@@ -49,7 +49,7 @@ jobs:
       with:
         type: zip
         filename: release.zip
-        directory: ./docs/.vuepress
+        directory: ./docs/.vitepress
         path: dist
 
     # Deliver the build files to a new tag
@@ -57,4 +57,4 @@ jobs:
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
-        files: ./docs/.vuepress/release.zip
+        files: ./docs/.vitepress/release.zip

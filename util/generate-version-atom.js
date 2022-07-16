@@ -43,7 +43,7 @@ const fs = require('fs');
 </feed>`;
 
     fs.writeFileSync(
-      `./docs/.vuepress/dist/changelog.atom`,
+      `./docs/.vitepress/dist/changelog.atom`,
       atom
     );
   } catch (err) {

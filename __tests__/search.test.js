@@ -1,4 +1,4 @@
-import search from '../docs/.vuepress/src/scripts/search';
+import search from '../docs/.vitepress/src/scripts/search';
 
 describe('search', () => {
   it('should return the same data if no terms is passed', async () => {
