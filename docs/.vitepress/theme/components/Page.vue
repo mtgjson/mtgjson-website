@@ -16,8 +16,8 @@ main.page
         a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 
       .last-updated(v-if="lastUpdated")
-        span.prefix {{ lastUpdatedText }}:&nbsp;
-        span.time {{ lastUpdated }}
+        span.prefix {{ lastUpdated.text }}:&nbsp;
+        span.time {{ lastUpdated.date }}
 </template>
 
 <script setup>
@@ -25,6 +25,8 @@ import { computed } from "vue";
 import { useData } from "vitepress";
 
 const { theme, page } = useData();
+
+const sidebarItems = theme.value.sidebar;
 
 const editLink = computed(() => {
   const editLink = theme.value.editLink;
@@ -40,28 +42,29 @@ const editLink = computed(() => {
 });
 
 const lastUpdated = computed(() => {
-  const date = page.value.lastUpdated;
+  const updated = page.value.lastUpdated;
   let formattedDate = null;
+  let date = null;
 
-  if (date) {
-    // Format for standard computer date and drop exact time
-    const unformattedDate = date.split(",")[0].split("/");
-    const unformattedMonth = unformattedDate[0];
-    const unformattedDay = unformattedDate[1];
-    const formattedYear = unformattedDate[2];
+  if (updated) {
+    date = new Date(updated);
+    const unformattedMonth = date.getMonth() + 1;
+    const unformattedDay = date.getDate();
+    const formattedYear = date.getFullYear();
     // Add padding
     const formattedMonth =
-      unformattedMonth.length < 2 ? "0" + unformattedMonth : unformattedMonth;
+      unformattedMonth < 10 ? "0" + unformattedMonth : unformattedMonth;
     const formattedDay =
-      unformattedDay.length < 2 ? "0" + unformattedDay : unformattedDay;
+      unformattedDay < 10 ? "0" + unformattedDay : unformattedDay;
 
     formattedDate = `${formattedYear}-${formattedMonth}-${formattedDay}`;
   }
 
-  return formattedDate;
+  return {
+    date: formattedDate,
+    text: theme.value.lastUpdatedText
+  }
 });
-
-const sidebarItems = theme.value.sidebar;
 
 const prev = computed(() => resolvePrev(page, sidebarItems));
 const next = computed(() => resolveNext(page, sidebarItems));
