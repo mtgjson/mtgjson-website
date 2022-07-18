@@ -10,7 +10,7 @@
       spellcheck="false"
       placeholder="Search..."
       type="search"
-      @change="openSearch()"
+      @input="openSearch()"
       :class="{ open: results.length > 0 }"
     )
     .search-suggestions(:class="{ open: results.length > 0 }")
@@ -24,8 +24,8 @@
           :href="item.link + item.hash"
           @click="cleanSearch()"
         )
-          p.search-item {{ item.title }} &rarr;&nbsp;
-            span {{ item.text }}
+          p.search-item {{ item.title }}
+            span &nbsp;&rarr; {{ item.text }}
         a(
           v-else
           :key="item.id"
@@ -37,12 +37,13 @@
 
 <script setup>
 import { ref, computed } from 'vue';
+import lunr from 'lunr';
+
 import data from '../../../../lunr_index.js';
-import lunr from '../scripts/lunr.js';
 
 const open = ref(false);
 const input = ref(null);
-const searchTerm = ref();
+const searchTerm = ref('');
 
 const LUNR_DATA = data.LUNR_DATA;
 const LUNR_LOOKUP = data.LUNR_LOOKUP;
@@ -50,12 +51,12 @@ const LUNR_LOOKUP = data.LUNR_LOOKUP;
 const results = computed(() => {
   const res = [];
 
-  if (searchTerm.value) {
+  if (searchTerm.value.length > 0) {
     const idx = lunr.Index.load(LUNR_DATA);
     const searchResults = idx.search(searchTerm.value);
 
     for (let i = 0; i < searchResults.length; i++) {
-      const id = searchResults[i]['ref'];
+      const id = searchResults[i].ref;
       const item = LUNR_LOOKUP[id];
       const title = item['t'].split('|')[0].trim();
       const link = '/' + item['l'].split('index.html')[0];
@@ -64,29 +65,41 @@ const results = computed(() => {
       let hash = null;
 
       if (anchors) {
-        for (let index in anchors) {
-          const anchor = anchors[index];
-
-          if (typeof anchor === 'object') {
+        anchors.forEach((anchor) => {
+          if (anchor.text && anchor.title) {
             const anchorTitle = anchor.title && anchor.title.split('|')[0].trim();
+            const loweredTerm = searchTerm.value.toLowerCase();
+            const loweredText = anchor.text.toLowerCase();
+            const containsTerms = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
 
-            if (anchorTitle === title) {
-              if (searchTerm.value.includes(anchor.text)) {
-                text = anchor.text;
-                hash = anchor.hash;
+            if (containsTerms) {
+              if (anchorTitle === title) {
+                if (title === anchor.text) {
+                  res.push({
+                    id,
+                    link,
+                    title,
+                  });
+                } else {
+                  res.push({
+                    id,
+                    link,
+                    title,
+                    text: anchor.text,
+                    hash: anchor.hash,
+                  });
+                }
               }
             }
           }
-        }
+        });
+      } else {
+        res.push({
+          id,
+          link,
+          title,
+        });
       }
-
-      res.push({
-        id,
-        link,
-        title,
-        text,
-        hash,
-      });
     }
   }
 
@@ -132,6 +145,7 @@ const cleanSearch = () => {
 
       &:focus {
         border: 1px solid var(--accent-color);
+        outline: 0;
       }
 
       &::placeholder {
@@ -165,6 +179,7 @@ const cleanSearch = () => {
         padding: 0.5rem 1rem;
         display: block;
         text-decoration: none;
+        color: var(--search-text-color);
       }
 
       .search-item {

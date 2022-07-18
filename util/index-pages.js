@@ -1,14 +1,13 @@
 const path = require('path');
 const fs = require('fs');
-const lunr = require('./lunr.min.js');
+const lunr = require('lunr');
 const cheerio = require('cheerio');
 
 // Change these constants to suit your needs
 const HTML_FOLDER = 'docs/.vitepress/dist'; // folder with your HTML files
-// Valid search fields: "title", "description", "keywords", "body"
 const SEARCH_FIELDS = ['title', 'description', 'keywords', 'body', 'anchor'];
-const EXCLUDE_FILES = ['search.html', '404.html'];
-const MAX_PREVIEW_CHARS = 62; // Number of characters to show for a given search result
+const EXCLUDE_FILES = ['404.html'];
+const EXCLUDE_DIRS = ['changelog'];
 const OUTPUT_INDEX_DEV = 'lunr_index.js'; // Index file
 
 function isHtml(filename) {
@@ -27,6 +26,9 @@ function findHtml(folder) {
   for (let i = 0; i < files.length; i++) {
     const filename = path.join(folder, files[i]);
     const stat = fs.lstatSync(filename);
+    if (EXCLUDE_DIRS.includes(files[i])) {
+      continue;
+    }
     if (stat.isDirectory()) {
       const recursed = findHtml(filename);
       for (let j = 0; j < recursed.length; j++) {
@@ -49,38 +51,25 @@ function readHtml(root, file, fileId) {
   if (typeof title == 'undefined') {
     title = file;
   }
-  let description = $('meta[name=description]').attr('content');
-  if (typeof description == 'undefined') {
-    description = '';
-  }
-  let keywords = $('meta[name=keywords]').attr('content');
-  if (typeof keywords == 'undefined') {
-    keywords = '';
-  }
   let body = $('.theme-container').text();
   if (typeof body == 'undefined') {
     body = '';
   }
-  let anchors = $('.header-anchor').map((index, anchor) => {
+  let anchors = Array.from($('.header-anchor')).map((anchor, index) => {
     return {
       hash: $(anchor).attr('href'),
       text: $(anchor).parent().text().split('#')[0].trim(),
-      title
+      title,
     };
   });
   if (typeof anchors == 'undefined') {
-    anchors = [];
+    anchors = null;
   }
-
-  delete anchors.prevObject;
-  delete anchors._root;
 
   const data = {
     id: fileId,
     link: file,
     t: title,
-    d: description,
-    k: keywords,
     b: body,
     a: anchors,
   };
@@ -104,16 +93,8 @@ function buildPreviews(docs) {
   const result = {};
   for (let i = 0; i < docs.length; i++) {
     const doc = docs[i];
-    let preview = doc['b'];
-    if (preview == '') {
-      preview = doc['b'];
-    }
-    if (preview.length > MAX_PREVIEW_CHARS) {
-      preview = preview.slice(0, MAX_PREVIEW_CHARS) + ' ...';
-    }
     result[doc['id']] = {
       t: doc['t'],
-      p: preview,
       l: doc['link'],
       a: doc['a'],
     };
@@ -122,11 +103,9 @@ function buildPreviews(docs) {
 }
 
 function main() {
-  console.log(process.argv0);
   const files = findHtml(HTML_FOLDER);
 
   const docs = [];
-  console.log('Building index for these files:');
   if (files !== undefined) {
     for (let i = 0; i < files.length; i++) {
       docs.push(readHtml(HTML_FOLDER, files[i], i));

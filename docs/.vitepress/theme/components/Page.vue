@@ -77,7 +77,9 @@ const resolveNext = (page, items) => {
 
 const find = (page, items, offset) => {
   const res = [];
+
   flattern(items, res);
+
   for (let i = 0; i < res.length; i++) {
     const cur = res[i];
     const relativePath = '/' + page.value.relativePath.split('index.md')[0];
@@ -93,6 +95,8 @@ const flattern = (items, res) => {
     const hasChildren = items[i].items && items[i].items.length > 0;
 
     if (hasChildren) {
+      res.push(items[i]);
+
       flattern(items[i].items || [], res);
     } else {
       res.push(items[i]);

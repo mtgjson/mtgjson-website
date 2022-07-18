@@ -33,7 +33,7 @@
   .nav-meta--link.mobile-hide(v-if="!hideText")
     a(href="/")
       h3 MTGJSON
-    .version
+    .version(v-if="version")
       a.version-number(:href="`/changelog/mtgjson-v5/`") v{{ version }}
 </template>
 

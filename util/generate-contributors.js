@@ -34,7 +34,7 @@ Promise.all(promises)
   })
   .then((data) => {
     fs.writeFileSync(
-      `./docs/.vitepress/theme/scripts/contributors.json`,
+      `./docs/.vitepress/theme/static/contributors.json`,
       JSON.stringify(data, null, 2),
       'utf-8',
       res => {
