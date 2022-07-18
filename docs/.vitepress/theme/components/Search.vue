@@ -4,19 +4,16 @@
     input.searchbar-input(
       ref="input"
       v-model="searchTerm"
-      aria-autocomplete="both"
-      aria-labelledby="docsearch-label"
       autocomplete="off"
       autocorrect="off"
       autocapitalize="off"
-      enterkeyhint="search"
       spellcheck="false"
-      autofocus="true"
       placeholder="Search..."
       type="search"
       @change="openSearch()"
+      :class="{ open: results.length > 0 }"
     )
-    .search-suggestions
+    .search-suggestions(:class="{ open: results.length > 0 }")
       .search-suggestion(
         v-for="(item, i) of results"
         :key="i"
@@ -27,7 +24,8 @@
           :href="item.link + item.hash"
           @click="cleanSearch()"
         )
-          p.search-item {{ item.title }} > {{ item.text }}
+          p.search-item {{ item.title }} &rarr;&nbsp;
+            span {{ item.text }}
         a(
           v-else
           :key="item.id"
@@ -38,19 +36,16 @@
 </template>
 
 <script setup>
-import { useData } from 'vitepress';
 import { ref, computed } from 'vue';
 import data from '../../../../lunr_index.js';
 import lunr from '../scripts/lunr.js';
 
-const { theme, site, localePath, page } = useData();
-
 const open = ref(false);
-const searchTerm = ref();
 const input = ref(null);
+const searchTerm = ref();
 
-let LUNR_DATA = data.LUNR_DATA;
-let PREVIEW_LOOKUP = data.PREVIEW_LOOKUP;
+const LUNR_DATA = data.LUNR_DATA;
+const LUNR_LOOKUP = data.LUNR_LOOKUP;
 
 const results = computed(() => {
   const res = [];
@@ -61,8 +56,7 @@ const results = computed(() => {
 
     for (let i = 0; i < searchResults.length; i++) {
       const id = searchResults[i]['ref'];
-      const item = PREVIEW_LOOKUP[id];
-
+      const item = LUNR_LOOKUP[id];
       const title = item['t'].split('|')[0].trim();
       const link = '/' + item['l'].split('index.html')[0];
       const anchors = item['a'];
@@ -77,7 +71,7 @@ const results = computed(() => {
             const anchorTitle = anchor.title && anchor.title.split('|')[0].trim();
 
             if (anchorTitle === title) {
-              if (searchTerm.value === anchor.text) {
+              if (searchTerm.value.includes(anchor.text)) {
                 text = anchor.text;
                 hash = anchor.hash;
               }
@@ -120,15 +114,25 @@ const cleanSearch = () => {
 .search {
   .searchbar {
     position: relative;
+
     input {
       background-color: var(--search-bg-color);
-      border: 1px solid var(--search-border-color);
       color: var(--search-text-color);
-      padding: 0.5rem;
-      border-radius: 5px;
+      padding: 0.5rem 1rem;
+      border-radius: var(--common-radius);
       font-weight: bold;
       font-size: 1rem;
       width: 100%;
+      border: 1px solid var(--search-bg-color);
+
+      &.open {
+        border-bottom-left-radius: 0;
+        border-bottom-right-radius: 0;
+      }
+
+      &:focus {
+        border: 1px solid var(--accent-color);
+      }
 
       &::placeholder {
         color: var(--search-text-color);
@@ -137,17 +141,24 @@ const cleanSearch = () => {
   }
 
   .search-suggestions {
-    border-radius: 5px;
-    top: calc(100% + 10px);
     position: absolute;
-    width: 100%;
     z-index: 100;
-    background-color: var(--light-color);
-    overflow: hidden;
+    top: calc(100% - 1px);
+    width: 100%;
+    background-color: var(--search-bg-color);
+    overflow: scroll;
+    max-height: var(--search-results-max-height);
+    border-radius: var(--common-radius);
+
+    &.open {
+      border: 1px solid var(--accent-color);
+      border-top-left-radius: 0;
+      border-top-right-radius: 0;
+    }
 
     .search-suggestion {
       &:hover {
-        background-color: var(--search-border-highlight-color);
+        background-color: var(--search-item-highlight-color);
       }
 
       a {
@@ -157,8 +168,12 @@ const cleanSearch = () => {
       }
 
       .search-item {
-        color: var(--dark-color);
+        color: var(--search-text-color);
         margin: 0;
+
+        span {
+          font-weight: normal;
+        }
       }
     }
   }

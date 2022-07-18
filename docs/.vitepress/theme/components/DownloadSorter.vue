@@ -170,7 +170,7 @@ defineExpose({
 .sorting-options {
   position: sticky;
   background-color: var(--bg-color);
-  border-radius: 5px;
+  border-radius: var(--common-radius);
   top: 0;
   z-index: 9;
   padding: 1rem;
@@ -231,7 +231,7 @@ defineExpose({
         display: inline;
         font-size: 14px;
         padding: 0.5rem;
-        border-radius: 5px;
+        border-radius: var(--common-radius);
         border: none;
         background-color: var(--gray-1-color);
         color: var(--dark-color);
@@ -240,7 +240,7 @@ defineExpose({
       }
 
       input {
-        border-radius: 5px;
+        border-radius: var(--common-radius);
 
         &::placeholder {
           color: var(--dark-color);

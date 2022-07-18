@@ -2,27 +2,27 @@
 main.page
   Content.page-content
 
-  .page-nav(v-if="prev || next")
-    p.inner
+  nav
+    .page-nav(v-if="prev || next")
       span.prev(v-if="prev")
-        a.prev(:href="prev.link") ← {{ prev.text }}
+        a.prev(:href="prev.link") &larr; {{ prev.text }}
 
       span.next(v-if="next")
-        a.prev(:href="next.link") {{ next.text }} →
+        a.prev(:href="next.link") {{ next.text }} &rarr;
 
-  footer.page-edit
-    .page-edit--links
-      .edit-link.link-inline-image.github(v-if="editLink")
+  footer
+    .page-footer
+      .edit-link(v-if="editLink")
         a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 
       .last-updated(v-if="lastUpdated")
-        span.prefix {{ lastUpdated.text }}:&nbsp;
-        span.time {{ lastUpdated.date }}
+        span.last-updated-text {{ lastUpdated.text }}:&nbsp;
+        span.last-updated-time {{ lastUpdated.date }}
 </template>
 
 <script setup>
-import { computed } from "vue";
-import { useData } from "vitepress";
+import { computed } from 'vue';
+import { useData } from 'vitepress';
 
 const { theme, page } = useData();
 
@@ -32,7 +32,7 @@ const editLink = computed(() => {
   const editLink = theme.value.editLink;
   const pattern = editLink.pattern;
   const text = editLink.text;
-  const link = pattern.replace(":path", page.value.relativePath);
+  const link = pattern.replace(':path', page.value.relativePath);
 
   return {
     pattern,
@@ -52,18 +52,16 @@ const lastUpdated = computed(() => {
     const unformattedDay = date.getDate();
     const formattedYear = date.getFullYear();
     // Add padding
-    const formattedMonth =
-      unformattedMonth < 10 ? "0" + unformattedMonth : unformattedMonth;
-    const formattedDay =
-      unformattedDay < 10 ? "0" + unformattedDay : unformattedDay;
+    const formattedMonth = unformattedMonth < 10 ? '0' + unformattedMonth : unformattedMonth;
+    const formattedDay = unformattedDay < 10 ? '0' + unformattedDay : unformattedDay;
 
     formattedDate = `${formattedYear}-${formattedMonth}-${formattedDay}`;
   }
 
   return {
     date: formattedDate,
-    text: theme.value.lastUpdatedText
-  }
+    text: theme.value.lastUpdatedText,
+  };
 });
 
 const prev = computed(() => resolvePrev(page, sidebarItems));
@@ -82,7 +80,7 @@ const find = (page, items, offset) => {
   flattern(items, res);
   for (let i = 0; i < res.length; i++) {
     const cur = res[i];
-    const relativePath = "/" + page.value.relativePath.split("index.md")[0];
+    const relativePath = '/' + page.value.relativePath.split('index.md')[0];
 
     if (cur.link === relativePath) {
       return res[i + offset];
@@ -104,101 +102,84 @@ const flattern = (items, res) => {
 </script>
 
 <style lang="scss">
-@import "../styles/placeholders";
+@import '../styles/placeholders';
 
 .page {
   position: relative;
   z-index: 1;
   padding-top: calc(var(--navbar-height) - 1rem);
   padding-left: var(--sidebar-width);
-  background-color: var(--bg-2-color);
+  background-color: var(--bg-darker-color);
 
-  .page-theme-switcher {
-    position: absolute;
-    left: calc(var(--sidebar-width) + 48rem);
-    top: 1.25rem;
-  }
-
-  .options {
+  &-nav {
     @extend %wrapper;
-    margin-bottom: 1rem;
-    width: 100%;
+    padding-top: 3rem;
 
-    &-wrap {
-      left: var(--sidebar-width);
-      max-width: var(--content-width);
-      display: flex;
-      flex-direction: row-reverse;
-      align-items: center;
-      justify-content: space-between;
+    &::before,
+    &::after {
+      content: "";
+      display: table;
+      clear: both;
+    }
+
+    .prev {
+      float: left;
+    }
+
+    .next {
+      float: right;
+    }
+
+    .next,
+    .prev {
+      a {
+        font-weight: bold;
+      }
     }
   }
-}
 
-.page-edit {
-  @extend %wrapper;
-  padding-top: 3rem;
-  padding-bottom: 2rem;
-  overflow: auto;
-
-  .page-edit--links {
+  &-footer {
+    @extend %wrapper;
+    padding-top: 3rem;
+    padding-bottom: 10rem;
+    overflow: auto;
     display: flex;
-    flex-wrap: wrap;
     justify-content: space-between;
-    max-width: 960px;
-  }
 
-  .edit-link {
-    display: inline-block;
-    flex: 0 0 100%;
-    margin-bottom: 1rem;
-    margin-left: 0;
+    .edit-link {
+      display: inline-block;
 
-    a {
-      color: var(--text-color);
-      margin-right: 0.25rem;
+      a {
+        color: var(--text-color);
+        font-weight: bold;
+      }
+    }
+
+    .last-updated {
       font-weight: bold;
-    }
-  }
 
-  .last-updated {
-    font-size: 0.9em;
-    flex: 0 0 100%;
+      &-text {
+        color: var(--text-color);
+      }
 
-    .prefix {
-      font-weight: 500;
-      color: var(--text-color);
-    }
-
-    .time {
-      font-weight: 400;
-      color: #aaa;
+      &-time {
+        color: var(--true-gray-color);
+      }
     }
   }
 }
 
-.page-nav {
-  @extend %wrapper;
-  padding-top: 3rem;
+@media (max-width: 969px) {
+  .page {
+    &-footer {
+      flex-wrap: wrap;
 
-  .inner {
-    max-width: var(--content-width);
-    padding: 4px; // show focus outline
-    margin-bottom: 0;
-    overflow: auto; // clear float
-  }
+      & > * {
+        flex: 0 0 100%;
 
-  .next {
-    float: right;
-  }
-
-  .next,
-  .prev {
-    a {
-      font-weight: bold;
-
-      &:hover {
-        text-decoration: underline;
+        &:first-of-type {
+          margin-bottom: 2rem;
+        }
       }
     }
   }
@@ -206,22 +187,7 @@ const flattern = (items, res) => {
 
 @media (max-width: 719px) {
   .page {
-    padding-top: 3rem;
     padding-left: 0;
-  }
-
-  .page-theme-switcher {
-    display: none !important;
-  }
-
-  .page-edit--links {
-    .edit-link {
-      margin-bottom: 1rem;
-    }
-
-    .last-updated {
-      text-align: left;
-    }
   }
 }
 </style>

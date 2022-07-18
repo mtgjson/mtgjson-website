@@ -35,34 +35,29 @@ Files/Directories were omitted that do not help understand this current project 
 ├── util # Build utilities run during site generation
 |   ├── check-version.js # Ensures the developer environment is correct
 │   ├── generate-contributors.js # Utility to generate a github contributors file
-│   └── generate-version-atom.js # Utility to generate a version atom of the siteschemas
+│   ├── generate-version-atom.js # Utility to generate a version atom of the site
+│   └── index-pages.js # Utility to generate a file that has indexed the build content
 └── docs # Home directory, outputs to `/dist`
-    ├── index.md # Route entry point
     ├── **/index.md # Directories and their route entry point
+    ├── public/ # Static assets
+    │   ├── favicons/ # All favicon images
+    │   ├── images/ # All application images
+    │   │   ├── assets/ # MTGJSON specifics
+    │   │   └── avatars/ # User/supporters avatars
+    │   └── robots.txt # For crawlers to index/not index certain pages
     └── .vitepress # Main source files for the application
         ├── config.js # Main VitePress configuration
         ├── sidebarMapper.js # Script to generate the sidebar heirarchy
-        ├── store.js # Vuex store
-        ├── public/ # Static assets
-        │   ├── favicons/ # All favicon images
-        │   ├── images/ # All application images
-        │   │   ├── assets/ # MTGJSON specifics
-        │   │   └── avatars/ # User/supporters avatars
-        │   └── robots.txt # For crawlers to index/not index certain pages
-        ├── src # Helper data and functions
-        │   ├── resources/ # JSON that powers parts of the site
-        │   │   ├── contributors.json # For contributors data from github
-        │   │   └── supporters.json # For project Patrons/Supporters data
-        │   └── scripts/ # Any app helper functions
-        │       └── *.js # Vue helpers
         └── theme # Visuals
             ├── components/ # Vue components
-            │   └── *.vue # Vue component
-            ├── global-components/ # Global components (can be used inside Markdown)
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
             │   ├── 404.vue # Layout for error page
             │   └── Layout.vue # Layout for the rest of pages
+            ├── scripts/ #  functions
+            │   └── *.js # Helper functions
+            ├── static/ # Static data
+            │   └── *.json # Static JSON
             ├── styles/ # Visual styling
             │   └── *.scss # CSS
             ├── util/ # Theme helper functions
@@ -84,12 +79,11 @@ Explaining the configuration as a whole would be best served by directly linking
 
 ### Markdown Structure
 
-The structure of a file is simple. Frontmatter on top, everything else below it.
+The structure of a file is simple. Frontmatter on top, everything else below it. Some notes:
 
-- Frontmatter is written in JSON (with strings).
-- Markdown is written to a high-level of specification and should not be manipulated.
-- Vue components are imported by placing them in a Markdown file.
-- Plugins are provided by the VitePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
+- Frontmatter is written in JSON.
+- Markdown is written to a high-level of specification.
+- Vue components can only be used if they are registered globally via `./docs/vitepress/theme/index.js`.
 
 ### Using Frontmatter
 
@@ -101,7 +95,7 @@ You can also change configuration of VitePress by overwriting variables within t
 
 #### Example
 
-```yaml
+```json
 {
   "title": "Card (Set)", # Meta title of page
   "schema": "card", # Powers certain Vue components
@@ -143,10 +137,6 @@ You can also use the `<ExampleField type='<Enum Name>'` component to render exam
 ## The Vuex Store
 
 We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and API remains as performant as possible.
-
-## enhanceApp.js
-
-Because Vue backs this entire application we can inject some helpers in to Vue to be accessed in our components.
 
 ## Testing
 

@@ -121,7 +121,7 @@ const downloadFile = (e) => {
     margin-top: 1rem;
     font-size: 14px;
     padding: 0.5rem;
-    border-radius: 5px;
+    border-radius: var(--common-radius);
     border: none;
     appearance: none;
     background-color: var(--gray-1-color);

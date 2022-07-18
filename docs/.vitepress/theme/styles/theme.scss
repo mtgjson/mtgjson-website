@@ -7,7 +7,6 @@
 @import './typography';
 @import './placeholders';
 @import './sidebar';
-@import './search';
 @import './code';
 @import './pages';
 
@@ -217,7 +216,7 @@ blockquote {
   display: inline-block;
   vertical-align: center;
   padding: 0.75rem 1rem;
-  border-radius: 5px;
+  border-radius: var(--common-radius);
   border: 1px solid var(--accent-color);
   text-decoration: none;
   transition: all 0.25s;
@@ -271,7 +270,7 @@ blockquote {
   font-size: 12px;
   background-color: var(--yellow-color);
   color: var(--dark-color);
-  border-radius: 5px;
+  border-radius: var(--common-radius);
   padding: 5px 10px;
   margin: 0;
   word-break: break-word;
@@ -321,7 +320,7 @@ blockquote {
 // Content wrapper
 .page-content {
   @extend %wrapper;
-  padding: 0 4rem;
+  padding: 0 2rem;
   height: 100%;
 
   & > * {

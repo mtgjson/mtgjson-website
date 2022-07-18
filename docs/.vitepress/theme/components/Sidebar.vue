@@ -2,11 +2,14 @@
 aside.sidebar
   .sidebar-logo
     NavMeta(:width="`70px`")
-  .sidebar-wrap-fixed
+
+  .sidebar-wrap-navlinks
+    NavLinks
+
+  .sidebar-wrap-search
     Search
 
   .sidebar-wrap
-    NavLinks
     SidebarLinks(:depth="0" :items="items")
 </template>
 
@@ -55,9 +58,8 @@ const props = defineProps({
   }
 
   &-logo {
-    padding: 0 4rem;
+    padding: 0 2rem;
     height: var(--navbar-height);
-    margin-bottom: 1rem;
     border-bottom: 1px solid var(--bg-border-color);
     display: flex !important;
     text-decoration: none;
@@ -73,7 +75,7 @@ const props = defineProps({
     }
 
     .mobile-hide {
-      display: block !important;
+      display: block;
     }
   }
 
@@ -83,10 +85,11 @@ const props = defineProps({
     height: 100%;
     grid-gap: 2rem;
     overflow-y: auto;
-    padding: 2rem 4rem 0;
+    padding: 2rem 2rem 10rem;
 
-    &-fixed {
-      padding: 0 4rem 1rem;
+    &-navlinks,
+    &-search {
+      padding: 1rem 2rem;
       border-bottom: 1px solid var(--bg-border-color);
     }
 
@@ -95,8 +98,8 @@ const props = defineProps({
     }
 
     & > .sidebar-links {
-      padding-left: 0 !important;
-      margin-bottom: 0 !important;
+      padding-left: 0;
+      margin-bottom: 0;
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 0.75rem;
@@ -120,21 +123,6 @@ const props = defineProps({
   .sidebar {
     transform: translateX(-100%);
     transition: transform 0.2s ease;
-    // top: var(--navbar-height);
-
-    &-logo {
-      margin-bottom: 0;
-      padding: 0 2rem;
-    }
-
-    &-wrap {
-      padding: 2rem 2rem 0;
-
-      &-fixed {
-        padding: 1rem 2rem;
-      }
-    }
-
   }
 }
 </style>

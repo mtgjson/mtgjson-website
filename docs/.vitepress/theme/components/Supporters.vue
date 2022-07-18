@@ -73,10 +73,8 @@
 
 <script setup>
 import { onMounted } from 'vue';
-
-import supporters from "../scripts/supporters.json";
-import contributors from "../scripts/contributors.json";
-
+import supporters from "../static/supporters.json";
+import contributors from "../static/contributors.json";
 import formatTime from '../scripts/formatTime';
 
 const patrons = supporters.patrons;

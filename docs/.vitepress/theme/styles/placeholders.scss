@@ -1,8 +1,8 @@
 %wrapper {
   max-width: var(--content-width);
   margin: 0 auto;
-  padding-left: 4rem;
-  padding-right: 4rem;
+  padding-left: 2rem;
+  padding-right: 2rem;
 }
 
 %blockquote {
@@ -10,7 +10,7 @@
   margin: 1rem 0 0;
   padding: 0 2rem 2rem;
   background-color: var(--bg-color);
-  border-radius: 5px;
+  border-radius: var(--common-radius);
   transition: transform .25s ease-in-out;
 
   // property title

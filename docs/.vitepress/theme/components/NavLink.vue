@@ -11,7 +11,7 @@ a.nav-link.external(
 <script setup>
 import { defineProps, computed } from "vue";
 import { useData } from "vitepress";
-import { isExternal, isMailto, isTel, ensureExt } from "../util";
+import { isMailto, isTel, ensureExt } from "../util";
 
 const { site } = useData();
 const props = defineProps({

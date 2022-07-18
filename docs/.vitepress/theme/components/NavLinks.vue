@@ -20,11 +20,10 @@ const userLinks = theme.value.nav;
   position: relative;
   display: flex;
   align-items: center;
+  justify-content: space-between;
 
   .nav-item {
     position: relative;
-    line-height: 1.7rem;
-    margin-right: 1rem;
     display: inline-flex;
     align-items: center;
 

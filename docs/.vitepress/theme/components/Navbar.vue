@@ -19,7 +19,7 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
   z-index: 9;
   height: var(--navbar-height);
   align-items: center;
-  padding: 0 4rem;
+  padding: 0 2rem;
   margin-left: var(--sidebar-width);
   background-color: var(--bg-color);
   border-bottom: 1px solid var(--bg-border-color);
@@ -42,7 +42,6 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
     left: 0;
     border-bottom: 1px solid var(--bg-border-color);
     margin-left: 0;
-    padding: 0 2rem;
 
     &-options {
       display: flex;

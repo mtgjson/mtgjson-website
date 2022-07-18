@@ -138,11 +138,11 @@ function main() {
     'const LUNR_DATA = ' +
     JSON.stringify(idx) +
     ';\n' +
-    'const PREVIEW_LOOKUP = ' +
+    'const LUNR_LOOKUP = ' +
     JSON.stringify(previews) +
     ';' +
     '\n' +
-    'const data = { LUNR_DATA, PREVIEW_LOOKUP };\n' +
+    'const data = { LUNR_DATA, LUNR_LOOKUP };\n' +
     'export default data;';
   fs.writeFile(OUTPUT_INDEX_DEV, js, function (err) {
     if (err) {

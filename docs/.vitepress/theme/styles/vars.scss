@@ -6,7 +6,8 @@
   // Sizes
   --sidebar-width: 300px;
   --navbar-height: 5rem;
-  --content-width: 800px;
+  --content-width: 720px;
+  --search-results-max-height: 428px;
   --line-numbers-width: 20px;
   --common-radius: 5px;
   --common-padding: .5rem;
@@ -44,7 +45,7 @@
   --accent-color: var(--true-accent-1-color);
   --text-color: var(--light-color);
   --bg-color: var(--dark-1-color);
-  --bg-2-color: var(--dark-2-color);
+  --bg-darker-color: var(--dark-2-color);
   --bg-border-color: var(--dark-2-color);
   --shadow-color: var(--dark-3-color);
   --blockquote-heading-color: var(--dark-color);
@@ -52,8 +53,7 @@
 
   // Search
   --search-bg-color: var(--dark-2-color);
-  --search-border-color: var(--dark-1-color);
-  --search-border-highlight-color: var(--accent-color);
+  --search-item-highlight-color: var(--accent-color);
   --search-text-color: var(--text-color);
 
   // Data Presentation
@@ -82,7 +82,7 @@ body {
     --accent-color: var(--true-accent-2-color);
     --text-color: var(--dark-1-color);
     --bg-color: var(--light-color);
-    --bg-2-color: var(--gray-1-color);
+    --bg-darker-color: var(--gray-1-color);
     --bg-border-color: var(--gray-1-color);
     --gray-color: var(--gray-4-color);
     --shadow-color: var(--gray-2-color);
