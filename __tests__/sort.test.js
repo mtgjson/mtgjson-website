@@ -1,4 +1,4 @@
-import sort from '../docs/.vitepress/src/scripts/sort';
+import sort from '../docs/.vitepress/theme/scripts/sort';
 
 describe('sort', () => {
   it('should return the same data if an empty filter is passed', () => {

@@ -3,13 +3,13 @@ header.navbar
   .navbar-options
     SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
     NavMeta.desktop-hide(:width="`70px`")
-    //- ThemeSwitcher
+    ThemeSwitcher
 </template>
 
 <script setup>
 import SidebarButton from './SidebarButton.vue';
 import NavMeta from './NavMeta.vue';
-// import ThemeSwitcher from './ThemeSwitcher.vue';
+import ThemeSwitcher from './ThemeSwitcher.vue';
 </script>
 
 <style lang="scss">

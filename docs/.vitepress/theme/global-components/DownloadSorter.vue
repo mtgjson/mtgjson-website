@@ -64,10 +64,10 @@
 
 <script setup>
 import { ref, onMounted, defineProps, defineEmits, defineExpose } from "vue";
-import search from "../../src/scripts/search";
-import filter from "../../src/scripts/filter";
-import sort from "../../src/scripts/sort";
-import prettifyType from "../../src/scripts/prettifyType";
+import search from "../scripts/search";
+import filter from "../scripts/filter";
+import sort from "../scripts/sort";
+import prettifyType from "../scripts/prettifyType";
 
 const emit = defineEmits(["updateData", "updateCount", "canShowButton"]);
 const props = defineProps({

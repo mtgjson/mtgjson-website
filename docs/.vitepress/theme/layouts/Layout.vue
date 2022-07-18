@@ -8,12 +8,12 @@
 </template>
 
 <script setup>
-import Navbar from "../components/Navbar.vue";
-import Page from "../components/Page.vue";
-import Sidebar from "../components/Sidebar.vue";
+import Navbar from '../components/Navbar.vue';
+import Page from '../components/Page.vue';
+import Sidebar from '../components/Sidebar.vue';
 
-import { ref } from 'vue'
-import { useData } from "vitepress";
+import { ref, computed } from 'vue';
+import { useData } from 'vitepress';
 
 const { theme } = useData();
 
@@ -23,17 +23,17 @@ const shouldShowSidebar = ref(theme.value.sidebar.length > 0);
 
 const sidebarItems = theme.value.sidebar;
 
-const pageClasses = () => {
+const pageClasses = computed(() => {
   return [
     {
-      "sidebar-open": isSidebarOpen.value,
-      "no-sidebar": !shouldShowSidebar.value,
+      'sidebar-open': isSidebarOpen.value,
+      'no-sidebar': !shouldShowSidebar.value,
     },
   ];
-};
+});
 
-const toggleSidebar = (to) => {
-  isSidebarOpen.value = typeof to === "boolean" ? to : !isSidebarOpen.value;
+const toggleSidebar = () => {
+  isSidebarOpen.value = isSidebarOpen.value !== true;
 };
 </script>
 

@@ -41,3 +41,6 @@ logo/
 
 # MTGSJON Brand Assets
 MTGJSON-Brand-Assets/
+
+# Lunr
+lunr_index.js

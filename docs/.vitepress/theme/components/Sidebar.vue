@@ -3,7 +3,7 @@ aside.sidebar
   .sidebar-logo
     NavMeta(:width="`70px`")
   .sidebar-wrap-fixed
-    //- SearchBox
+    Search
 
   .sidebar-wrap
     NavLinks
@@ -15,7 +15,7 @@ import { defineProps } from 'vue';
 import NavLinks from './NavLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';
-// import SearchBox from '@SearchBox';
+import Search from './Search.vue';
 
 const props = defineProps({
   items: {

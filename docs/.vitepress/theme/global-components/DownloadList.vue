@@ -67,7 +67,7 @@ import { useStore } from "vuex";
 import DownloadNativeSelect from "./DownloadNativeSelect.vue";
 import DownloadSorter from "./DownloadSorter.vue";
 
-import sort from "../../src/scripts/sort";
+import sort from "../scripts/sort";
 
 const store = useStore();
 

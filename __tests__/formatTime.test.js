@@ -1,4 +1,4 @@
-import formatTime from '../docs/.vitepress/src/scripts/formatTime';
+import formatTime from '../docs/.vitepress/theme/scripts/formatTime';
 
 describe('formatTime', () => {
   it('should return a single month', () => {

@@ -1,4 +1,4 @@
-import prettifyType from '../docs/.vitepress/src/scripts/prettifyType';
+import prettifyType from '../docs/.vitepress/theme/scripts/prettifyType';
 
 describe('prettifyType', () => {
   it('should return a string removed of underscores, spaces and capitalized words', async () => {
