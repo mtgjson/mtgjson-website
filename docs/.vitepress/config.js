@@ -1,10 +1,13 @@
 import sidebarRouteMapper from './sidebarMapper';
+import generatePages from './generatePages';
+
+const [abstractModels, dataModels] = sidebarRouteMapper(['/abstract-models/', '/data-models/']);
+const pages = generatePages();
 
 // SEO data
 const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
 const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
-const [abstractModels, dataModels] = sidebarRouteMapper(['/abstract-models/', '/data-models/']);
 
 export default {
   lang: 'en-US',
@@ -34,36 +37,22 @@ export default {
     ['link', { rel: 'apple-touch-icon', href: '/apple-icon-60x60.png', sizes: '60x60', type: 'image/png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' }],
-    [
-      'link',
-      { rel: 'apple-touch-icon', href: '/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' },
-    ],
-    [
-      'link',
-      { rel: 'apple-touch-icon', href: '/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' },
-    ],
-    [
-      'link',
-      { rel: 'apple-touch-icon', href: '/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' },
-    ],
-    [
-      'link',
-      { rel: 'apple-touch-icon', href: '/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' },
-    ],
-    [
-      'link',
-      { rel: 'apple-touch-icon', href: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' },
-    ],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' }],
     ['link', { rel: 'msapplication-TileImage', href: '/ms-icon-144x144.png' }],
   ],
   markdown: {
     toc: {
-      level: [ 3 ], // TOC only H3
+      level: [3],
     }
   },
   lastUpdated: true,
   // VitePress Themeing
   themeConfig: {
+    pages,
     // Search
     searchPlaceholder: 'Search...',
     searchMaxSuggestions: 10,
@@ -105,16 +94,16 @@ export default {
         items: [
           {
             text: 'All Files',
-            link: '/downloads/all-files/'
+            link: '/downloads/all-files/',
           },
           {
             text: 'All Sets',
-            link: '/downloads/all-sets/'
+            link: '/downloads/all-sets/',
           },
           {
             text: 'All Decks',
-            link: '/downloads/all-decks/'
-          }
+            link: '/downloads/all-decks/',
+          },
         ],
       },
       {

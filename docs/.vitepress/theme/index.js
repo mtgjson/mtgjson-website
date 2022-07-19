@@ -24,5 +24,5 @@ export default {
     app.component('Supporters', Supporters);
 
     app.use(store);
-  }
-}
+  },
+};

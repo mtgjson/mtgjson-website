@@ -19,88 +19,62 @@
         :key="i"
       )
         a(
-          v-if="item.hash"
           :key="item.id"
-          :href="item.link + item.hash"
+          :href="`${item.isOwnPage ? item.path : item.path + item.hash}`"
           @click="cleanSearch()"
         )
           p.search-item {{ item.title }}
-            span &nbsp;&rarr; {{ item.text }}
-        a(
-          v-else
-          :key="item.id"
-          :href="item.link"
-          @click="cleanSearch()"
-        )
-          p.search-item {{ item.title }}
+            span(v-if="!item.isOwnPage") &nbsp;&rarr; {{ item.text }}
 </template>
 
 <script setup>
 import { ref, computed } from 'vue';
-import lunr from 'lunr';
+import { useData } from 'vitepress';
 
-import data from '../../../../lunr_index.js';
+const { site, theme } = useData();
+
+const pages = theme.value.pages;
 
 const open = ref(false);
 const input = ref(null);
 const searchTerm = ref('');
 
-const LUNR_DATA = data.LUNR_DATA;
-const LUNR_LOOKUP = data.LUNR_LOOKUP;
-
 const results = computed(() => {
   const res = [];
 
   if (searchTerm.value.length > 0) {
-    const idx = lunr.Index.load(LUNR_DATA);
-    const searchResults = idx.search(searchTerm.value);
+    pages.forEach((page, index) => {
+      const pageId = index;
+      const pagePath = page.path;
+      const pageTitle = page.title;
+      const pageAnchors = page.anchors;
+      const loweredTitle = pageTitle.toLowerCase();
+      const loweredTerm = searchTerm.value.toLowerCase();
 
-    for (let i = 0; i < searchResults.length; i++) {
-      const id = searchResults[i].ref;
-      const item = LUNR_LOOKUP[id];
-      const title = item['t'].split('|')[0].trim();
-      const link = '/' + item['l'].split('index.html')[0];
-      const anchors = item['a'];
-      let text = null;
-      let hash = null;
+      if (pageAnchors) {
+        pageAnchors.forEach((anchor) => {
+          const loweredText = anchor.text.toLowerCase();
+          const containsTerms = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
+          const isOwnPage = pageTitle === anchor.text;
 
-      if (anchors) {
-        anchors.forEach((anchor) => {
-          if (anchor.text && anchor.title) {
-            const anchorTitle = anchor.title && anchor.title.split('|')[0].trim();
-            const loweredTerm = searchTerm.value.toLowerCase();
-            const loweredText = anchor.text.toLowerCase();
-            const containsTerms = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
-
-            if (containsTerms) {
-              if (anchorTitle === title) {
-                if (title === anchor.text) {
-                  res.push({
-                    id,
-                    link,
-                    title,
-                  });
-                } else {
-                  res.push({
-                    id,
-                    link,
-                    title,
-                    text: anchor.text,
-                    hash: anchor.hash,
-                  });
-                }
-              }
-            }
+          if (containsTerms) {
+            res.push({
+              id: index,
+              path: pagePath,
+              title: pageTitle,
+              isOwnPage,
+              ...anchor
+            });
           }
         });
       } else {
         res.push({
-          id,
-          link,
-          title,
+          id: index,
+          path: pagePath,
+          title: pageTitle,
         });
       }
-    }
+    });
   }
 
   return res;
