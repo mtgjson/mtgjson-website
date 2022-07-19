@@ -1,7 +1,7 @@
-import sidebarRouteMapper from './sidebarMapper';
+import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
-const [abstractModels, dataModels] = sidebarRouteMapper(['/abstract-models/', '/data-models/']);
+const [abstractModels, dataModels] = generateSidebar(['/abstract-models/', '/data-models/']);
 const pages = generatePages();
 
 // SEO data
@@ -118,7 +118,7 @@ export default {
       },
       {
         text: 'Changelog',
-        link: '/changelog/mtgjson-v5',
+        link: '/changelog/mtgjson-v5/',
         items: [
           {
             text: 'MTGJSON',

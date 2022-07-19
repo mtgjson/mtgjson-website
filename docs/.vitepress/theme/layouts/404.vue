@@ -6,17 +6,17 @@
     li
       a(href="/") Home
     li
-      a(href="/faq") F.A.Q.
+      a(href="/faq/") F.A.Q.
     li
-      a(href="/downloads/all-files") All Files
+      a(href="/downloads/all-files/") All Files
     li
-      a(href="/abstract-models/all-prices") All Prices
+      a(href="/abstract-models/all-prices/") All Prices
     li
-      a(href="/data-models/card-set") Card (Set) Model
+      a(href="/data-models/card-set/") Card (Set) Model
     li
-      a(href="/data-models/card-atomic") Card (Atomic) Model
+      a(href="/data-models/card-atomic/") Card (Atomic) Model
     li
-      a(href="/data-models/set") Set Model
+      a(href="/data-models/set/") Set Model
 </template>
 
 <style lang="scss" scoped>

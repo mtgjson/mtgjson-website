@@ -1,3 +1,13 @@
+/**
+ * Generate pages data about the page to be indexed for searching
+ *
+ * Iterate through the markdown files, convert them to HTML and
+ * use Cherrio to walk through the anchors.
+ *
+ * This is an implementation based off of the package
+ * vitepress-plugin-search: https://github.com/emersonbottero/vitepress-plugin-search
+ */
+
 import fs from 'fs';
 import path from 'path';
 import MarkdownIt from 'markdown-it';
