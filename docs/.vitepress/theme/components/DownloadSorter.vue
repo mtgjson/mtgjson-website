@@ -63,13 +63,13 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps, defineEmits, defineExpose } from "vue";
-import search from "../scripts/search";
-import filter from "../scripts/filter";
-import sort from "../scripts/sort";
-import prettifyType from "../scripts/prettifyType";
+import { ref, onMounted, defineProps, defineEmits, defineExpose } from 'vue';
+import search from '../scripts/search';
+import filter from '../scripts/filter';
+import sort from '../scripts/sort';
+import prettifyType from '../scripts/prettifyType';
 
-const emit = defineEmits(["updateData", "updateCount", "canShowButton"]);
+const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
 const props = defineProps({
   list: {
     type: Array,
@@ -86,12 +86,12 @@ const props = defineProps({
 
 const lazyOffset = ref(10);
 const lazyToLoad = ref(10);
-const filterKey = ref("");
-const searchKey = ref("");
+const filterKey = ref('');
+const searchKey = ref('');
 const spoilerKey = ref(true);
 const onlineKey = ref(true);
 const showOptions = ref(false);
-const sortKey = ref("releaseDate:true");
+const sortKey = ref('releaseDate:true');
 const timeout = ref(null);
 
 onMounted(() => {
@@ -99,12 +99,12 @@ onMounted(() => {
 });
 
 const emitNewData = (data, counts) => {
-  emit("updateData", data);
-  emit("updateCount", counts);
+  emit('updateData', data);
+  emit('updateCount', counts);
 };
 
 const emitShowMoreButtonView = (showButton) => {
-  emit("canShowButton", showButton);
+  emit('canShowButton', showButton);
 };
 
 const onLoadMore = () => {
@@ -114,10 +114,10 @@ const onLoadMore = () => {
 };
 
 const onHandleReset = () => {
-  sortKey.value = "releaseDate:true";
+  sortKey.value = 'releaseDate:true';
   lazyOffset.value = lazyToLoad;
-  filterKey.value = "";
-  searchKey.value = "";
+  filterKey.value = '';
+  searchKey.value = '';
   spoilerKey.value = true;
   onlineKey.value = true;
 
@@ -133,15 +133,12 @@ const onHandleChange = (speed) => {
   clearTimeout(timeout.value);
 
   timeout.value = window.setTimeout(() => {
+    const loadMoreEl = document.querySelector('.load-more-btn');
     const data = props.list;
     // Remove spoilers data
-    let filteredData = !spoilerKey.value
-      ? data.filter((set) => !set.isPartialPreview)
-      : data;
+    let filteredData = !spoilerKey.value ? data.filter((set) => !set.isPartialPreview) : data;
     // Removed online data
-    filteredData = !onlineKey.value
-      ? filteredData.filter((set) => !set.isOnlineOnly)
-      : filteredData;
+    filteredData = !onlineKey.value ? filteredData.filter((set) => !set.isOnlineOnly) : filteredData;
     const searched = search(searchKey.value, filteredData);
     const sorted = sort(sortKey.value, searched);
     const filtered = filter(filterKey.value, sorted);
@@ -152,10 +149,10 @@ const onHandleChange = (speed) => {
     emitNewData(dynamicData, [newListCount, newListTotalCount]);
 
     if (lazyOffset >= filtered.length) {
-      document.querySelector(".load-more-btn").classList.add("hide");
+      loadMoreEl && loadMoreEl.classList.add('hide');
       emitShowMoreButtonView(false);
     } else {
-      document.querySelector(".load-more-btn").classList.remove("hide");
+      loadMoreEl && loadMoreEl.classList.remove('hide');
       emitShowMoreButtonView(true);
     }
   }, speed || 300);
@@ -190,7 +187,7 @@ defineExpose({
     &::before {
       left: 0;
       top: 10px;
-      content: "";
+      content: '';
       height: 0;
       width: 0;
       position: absolute;
@@ -303,7 +300,7 @@ defineExpose({
           }
         }
 
-        input[type="checkbox"] {
+        input[type='checkbox'] {
           flex: none;
         }
       }
