@@ -55,7 +55,13 @@ const results = computed(() => {
         pageAnchors.forEach((anchor) => {
           const loweredText = anchor.text.toLowerCase();
           const containsTerms = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
-          const isOwnPage = pageTitle === anchor.text;
+          const isOwnPage = loweredTitle === loweredText;
+          const isChangelog = loweredTitle.includes('changelog');
+
+          // We keeps records of the changelog pages but do not want them to populate search
+          if (isChangelog) {
+            return;
+          }
 
           if (containsTerms) {
             res.push({
@@ -63,7 +69,7 @@ const results = computed(() => {
               path: pagePath,
               title: pageTitle,
               isOwnPage,
-              ...anchor
+              ...anchor,
             });
           }
         });
