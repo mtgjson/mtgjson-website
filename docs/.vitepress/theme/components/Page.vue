@@ -30,12 +30,10 @@ const sidebarItems = theme.value.sidebar;
 
 const editLink = computed(() => {
   const editLink = theme.value.editLink;
-  const pattern = editLink.pattern;
+  const link = editLink.pattern + page.value.relativePath;
   const text = editLink.text;
-  const link = pattern.replace(':path', page.value.relativePath);
 
   return {
-    pattern,
     link,
     text,
   };

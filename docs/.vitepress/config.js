@@ -1,3 +1,4 @@
+import { defineConfig } from 'vitepress';
 import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
@@ -9,7 +10,7 @@ const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portab
 const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
-export default {
+export default defineConfig({
   lang: 'en-US',
   // SEO
   title,
@@ -49,16 +50,12 @@ export default {
       level: [3],
     }
   },
-  lastUpdated: true,
   // VitePress Themeing
   themeConfig: {
     pages,
-    // Search
-    searchPlaceholder: 'Search...',
-    searchMaxSuggestions: 10,
     // Edit this page link in footer
     editLink: {
-      pattern: 'https://github.com/mtgjson/mtgjson-websit/edit/main/docs/:path',
+      pattern: 'https://github.com/mtgjson/mtgjson-websit/edit/main/docs/',
       text: 'Help us improve this page!',
     },
     // Last updated time stamp
@@ -70,7 +67,6 @@ export default {
       { text: 'Support us on Patreon', link: 'https://www.patreon.com/MTGJSON' },
       { text: 'Contribute on GitHub', link: 'https://github.com/mtgjson' },
     ],
-    sidebarDepth: 0,
     sidebar: [
       {
         text: 'MTGJSON',
@@ -140,4 +136,4 @@ export default {
       },
     ],
   },
-};
+});

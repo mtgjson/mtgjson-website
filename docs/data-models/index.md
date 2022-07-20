@@ -34,4 +34,4 @@ For example, any <strong>Data Model</strong> would look similar to this:
 }
 ```
 
-Most data output by MTGJSON are Data Models but some models have more complex models which are outlined as [Abstract Models](/abstract-models/).
+Most data output by MTGJSON are Data Models but some models have more complex structures which are outlined in [Abstract Models](/abstract-models/).

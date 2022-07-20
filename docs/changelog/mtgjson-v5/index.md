@@ -13,7 +13,7 @@
 
 # MTGJSON Changelog
 
-The following is the MTGJSON Application Changelog. Some parts may be updated for clarity or corrections at any point.
+The following is the MTGJSON Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.2.0
 

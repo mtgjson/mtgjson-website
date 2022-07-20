@@ -35,19 +35,19 @@ Files/Directories were omitted that do not help understand this current project 
 ├── util # Build utilities run during site generation
 |   ├── check-version.js # Ensures the developer environment is correct
 │   ├── generate-contributors.js # Utility to generate a github contributors file
-│   ├── generate-version-atom.js # Utility to generate a version atom of the site
-│   └── index-pages.js # Utility to generate a file that has indexed the build content
+│   └── generate-version-atom.js # Utility to generate a version atom of the site
 └── docs # Home directory, outputs to `/dist`
     ├── **/index.md # Directories and their route entry point
     ├── public/ # Static assets
-    │   ├── favicons/ # All favicon images
     │   ├── images/ # All application images
     │   │   ├── assets/ # MTGJSON specifics
     │   │   └── avatars/ # User/supporters avatars
+    │   ├── */*.* # Any public facing file, like favicons
     │   └── robots.txt # For crawlers to index/not index certain pages
     └── .vitepress # Main source files for the application
         ├── config.js # Main VitePress configuration
-        ├── sidebarMapper.js # Script to generate the sidebar heirarchy
+        ├── generateSidebar.js # Script to generate the sidebar heirarchy
+        ├── generatePages.js # Polyfill script to generate pages metadata for search
         └── theme # Visuals
             ├── components/ # Vue components
             │   └── *.vue # Vue component
