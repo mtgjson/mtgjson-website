@@ -11,7 +11,7 @@
     "dev": "run-p lint:js:watch local",
     "local": "npm run check-version && vitepress dev docs",
     "index": "node ./util/index-pages.js",
-    "build": "npm run generate-contributors && vitepress build docs && npm run generate-version-atom",
+    "build": "npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
@@ -20,8 +20,8 @@
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
     "check-version": "node ./util/check-version.js",
-    "generate-version-atom": "node ./util/generate-version-atom.js",
-    "generate-contributors": "node ./util/generate-contributors.js"
+    "generate:contributors": "node ./util/generate-contributors.js",
+    "generate:feeds": "node ./node_modules/.bin/babel-node ./util/generate-feeds.js"
   },
   "dependencies": {
     "axios": "^0.27.2",
@@ -31,6 +31,7 @@
   "devDependencies": {
     "@babel/core": "^7.17.7",
     "@babel/eslint-parser": "^7.18.2",
+    "@babel/node": "^7.18.9",
     "@babel/preset-env": "^7.16.11",
     "babel-jest": "^27.5.1",
     "cheerio": "^1.0.0-rc.12",
@@ -53,17 +54,5 @@
     "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.2.37",
     "vue-eslint-parser": "^8.3.0"
-  },
-  "babel": {
-    "presets": [
-      [
-        "@babel/preset-env",
-        {
-          "targets": {
-            "node": "current"
-          }
-        }
-      ]
-    ]
   }
 }

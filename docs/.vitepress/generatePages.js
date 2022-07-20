@@ -15,7 +15,7 @@ import MarkdownItAnchor from 'markdown-it-anchor';
 import { load as parseHtml } from 'cheerio';
 
 const SRC_FOLDER = 'docs';
-const EXCLUDE_DIRS = ['changelog', 'public', '.vitepress'];
+const EXCLUDE_DIRS = ['public', '.vitepress'];
 const FRONTMATTER_REGEX = /---(.*?)---/s;
 
 const isMarkdown = (filename) => {
