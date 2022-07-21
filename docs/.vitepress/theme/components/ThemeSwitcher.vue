@@ -23,19 +23,20 @@
 <script setup>
 import { onMounted, ref } from 'vue';
 import { useStore } from '../store.js';
-import { testStorage } from '../util';
 
 const store = useStore();
 
 const darkTheme = 'dark';
 const lightTheme = 'light';
-const activeTheme = ref('dark');
+const hasStorageCapabilities = window.localStorage && window.localStorage.setItem;
+
+const activeTheme = ref(darkTheme);
 
 onMounted(() => {
   let savedTheme = undefined;
 
   // Attempt to retrieve localStorage state
-  if (testStorage() === true) {
+  if (hasStorageCapabilities) {
     const savedTheme = window.localStorage.getItem('theme');
 
     if (savedTheme) {
@@ -68,7 +69,7 @@ const switchTheme = (e) => {
   // Add new favicon
   document.getElementsByTagName('head')[0].appendChild(link);
   // Store state in localStorage
-  if (testStorage() === true) {
+  if (hasStorageCapabilities) {
     window.localStorage.setItem('theme', newTheme);
   }
   store.setTheme(newTheme);

@@ -55,20 +55,6 @@ export function search(terms, searchableData) {
   });
 }
 
-export function testStorage(shouldTest = true) {
-  const store = !shouldTest ? undefined : window.localStorage;
-  const test = 'test';
-
-  try {
-    store.setItem(test, test);
-    store.removeItem(test);
-
-    return true;
-  } catch (err) {
-    return false;
-  }
-}
-
 export function filter(filter, dataToFilter) {
   return filter.length === 0
     ? // No filter, return all data
@@ -148,8 +134,11 @@ export function normalize(path) {
 
 export function getHash(path) {
   const match = path.match(hashRE);
+
   if (match) {
     return match[0];
+  } else {
+    return '';
   }
 }
 
@@ -177,6 +166,7 @@ export function ensureExt(path) {
   if (endingSlashRE.test(normalized)) {
     return path;
   }
+
   return normalized + '.html' + hash;
 }
 
