@@ -10,41 +10,41 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: Checkout
+    - name: ⬇️ Checkout
       uses: actions/checkout@master
 
     # Sets up the Node environment to build the application on
-    - name: Setup Node.js
+    - name: 📄 Setup Node.js
       uses: actions/setup-node@v1
       with:
         node-version: '16.x'
 
     # Installs local dependencies needed to build, test, etc.
-    - name: Install Dependencies
+    - name: 🏗 Install Dependencies
       run: |
         npm install
 
     # Runs all tests and builds the application
-    - name: Run Tests and Build Application
+    - name: 🧱 Run Tests and Build Application
       run: |
         npm run test:full
       env:
         CI: true
 
     # Upload CodeCov report to the remote server
-    - name: Upload Code Coverage
+    - name: ⬆️ Upload Code Coverage
       uses: codecov/codecov-action@v1
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
 
     # Generate a dynamic release tag based on a nightly build format
-    - name: Generate Release Tag
+    - name: 🏷 Generate Release Tag
       id: tag
       run: |
         echo "::set-output name=release_tag::Release_$(date +"%Y.%m.%d_%H-%M")"
 
     # Zip up the build files
-    - name: Archive Release
+    - name: 💾 Archive Release
       uses: thedoctor0/zip-release@master
       with:
         type: zip
@@ -53,7 +53,7 @@ jobs:
         path: dist
 
     # Deliver the build files to a new tag
-    - name: Deliver Release
+    - name: 🚙 Deliver Release
       uses: softprops/action-gh-release@v1
       with:
         tag_name: ${{ steps.tag.outputs.release_tag }}
