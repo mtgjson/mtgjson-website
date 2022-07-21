@@ -151,14 +151,14 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="deprecated">Deprecated v5.3.0</i>
 
 > ### hasNonFoil
 > If the card can be found in non-foil. Use the [finishes](/data-models/card-token/#finishes) property.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="deprecated">Deprecated v5.3.0</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  

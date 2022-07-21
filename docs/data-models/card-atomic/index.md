@@ -88,7 +88,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="deprecated">Deprecated v6.0.0</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -102,7 +102,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">Optional</i><i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="optional">Optional</i><i class="deprecated">Deprecated v6.0.0</i>
 
 > ### faceManaValue  
 > The mana value of the face for either half or part of the card. Formally known as "converted mana cost".

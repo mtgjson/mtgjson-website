@@ -107,7 +107,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="deprecated">Deprecated v6.0.0</i>
 
 > ### edhrecRank  
 > The card rank on [EDHRec](https://www.edhrec.com).  
@@ -121,7 +121,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `float`  
 > - **Introduced:** `v4.1.1`  
-> - **Tags:** <i class="optional">Optional</i><i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="optional">Optional</i><i class="deprecated">Deprecated v6.0.0</i>
 
 > ### faceFlavorName
 > The flavor name on the face of the card.
@@ -213,14 +213,14 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="deprecated">Deprecated v5.3.0</i>
 
 > ### hasNonFoil
 > If the card can be found in non-foil. Use the [finishes](/data-models/card-set/#finishes) property.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated</i>
+> - **Tags:** <i class="deprecated">Deprecated v5.3.0</i>
 
 > ### identifiers  
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
