@@ -48,17 +48,17 @@ For a full list of files see the [Downloads](/downloads/) page.
 
 Data Models are what we call the structures that contain data inside files and other Data Models. They vary in their availability and are based heavily on the type of file accessed and the Data Models in those files. Some of the base-level Data Models used in the files are:
 
-- [Card (Atomic)](/data-models/card-atomic/): Data inside `AtomicCards.json` and `<Format>Atomic.json`.
-- [Card (Set)](/data-models/card-set/): Data inside `AllIdentifiers.json`.
-- [Set](/data-models/set/): Data inside `AllPrintings.json` and `<Format>.json`.
+- [Card (Atomic)](/data-models/card-atomic/): Data inside `AtomicCards.json` and `<Format>Atomic.json`
+- [Card (Set)](/data-models/card-set/): Data inside `AllIdentifiers.json`
+- [Set](/data-models/set/): Data inside `AllPrintings.json` and `<Format>.json`
 
 ### Abstract Models
 
 Abstract models are what we call the structures that contain more complex data inside files. They tend to have many nested properties and thus documentation is formalized with example responses and structures. Some of the base-level models used in files are:
 
-- [All Prices](/abstract-models/all-prices/): Data inside `AllPrices.json`.
-- [Booster](/abstract-models/booster/): Data inside [Set](/data-models/set/#booster) `booster` property.
-- [Enum Values](/abstract-models/enum-values/): Data inside `EnumValues.json`.
+- [All Prices](/abstract-models/all-prices/): Data inside `AllPrices.json`
+- [Booster](/abstract-models/booster/): Data inside [Set](/data-models/set/#booster) `booster` property
+- [Enum Values](/abstract-models/enum-values/): Data inside `EnumValues.json`
 
 ## GraphQL API
 

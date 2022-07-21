@@ -48,6 +48,7 @@
 
       a.deprecated {
         color: var(--true-gray-color);
+        text-decoration: line-through;
 
         &::after {
           content: "⚠️";

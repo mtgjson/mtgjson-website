@@ -58,7 +58,7 @@ export default defineConfig({
       pattern: 'https://github.com/mtgjson/mtgjson-websit/edit/main/docs/',
       text: 'Help us improve this page!',
     },
-    // Last updated time stamp
+    lastUpdated: true,
     lastUpdatedText: 'Last Updated',
     smoothScroll: true,
     nav: [

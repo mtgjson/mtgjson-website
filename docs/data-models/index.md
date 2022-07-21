@@ -29,7 +29,7 @@ For example, any <strong>Data Model</strong> would look similar to this:
 
 ```json
 "<Parent Property>": {
-  "<Some Property>": <Array, Boolean, Float, Integer, Object, String>,
+  "<Some Property>": <array, boolean, float, number, object, string>,
   ...
 }
 ```

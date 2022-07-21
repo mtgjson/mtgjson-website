@@ -65,7 +65,7 @@ const switchTheme = (e) => {
   let link = document.createElement('link');
   link.type = 'image/x-icon';
   link.rel = 'shortcut icon';
-  link.href = `/favicons/favicon-${newTheme}.ico`;
+  link.href = `/favicon-${newTheme}.ico`;
   // Don't clog up the <head> with cascade
   oldLink.remove();
   // Add new favicon

@@ -12,12 +12,9 @@ main.page
 
   footer
     .page-footer
-      .edit-link(v-if="editLink")
-        a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
-
-      .last-updated(v-if="lastUpdated")
-        span.last-updated-text {{ lastUpdated.text }}:&nbsp;
-        span.last-updated-time {{ lastUpdated.date }}
+      blockquote
+        .edit-link(v-if="editLink")
+          a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 </template>
 
 <script setup>
@@ -36,29 +33,6 @@ const editLink = computed(() => {
   return {
     link,
     text,
-  };
-});
-
-const lastUpdated = computed(() => {
-  const updated = page.value.lastUpdated;
-  let formattedDate = null;
-  let date = null;
-
-  if (updated) {
-    date = new Date(updated);
-    const unformattedMonth = date.getMonth() + 1;
-    const unformattedDay = date.getDate();
-    const formattedYear = date.getFullYear();
-    // Add padding
-    const formattedMonth = unformattedMonth < 10 ? '0' + unformattedMonth : unformattedMonth;
-    const formattedDay = unformattedDay < 10 ? '0' + unformattedDay : unformattedDay;
-
-    formattedDate = `${formattedYear}-${formattedMonth}-${formattedDay}`;
-  }
-
-  return {
-    date: formattedDate,
-    text: theme.value.lastUpdatedText,
   };
 });
 
@@ -148,26 +122,20 @@ const flattern = (items, res) => {
     display: flex;
     justify-content: space-between;
 
-    .edit-link {
-      display: inline-block;
+    blockquote {
+      width: 100%;
+      text-align: center;
 
-      a {
-        color: var(--text-color);
-        font-weight: bold;
+      .edit-link {
+        display: inline-block;
+
+        a {
+          color: var(--text-color);
+          font-weight: bold;
+        }
       }
     }
 
-    .last-updated {
-      font-weight: bold;
-
-      &-text {
-        color: var(--text-color);
-      }
-
-      &-time {
-        color: var(--true-gray-color);
-      }
-    }
   }
 }
 

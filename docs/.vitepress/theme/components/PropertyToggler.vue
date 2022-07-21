@@ -70,7 +70,6 @@ const toggleTOCVariations = () => {
       if (tocPropertyElement.classList.length < 1) {
         tocPropertyElement.classList.toggle('tag');
         tocPropertyElement.classList.toggle(tag);
-        tocPropertyElement.title = tag + ' property';
       }
     }
   }
