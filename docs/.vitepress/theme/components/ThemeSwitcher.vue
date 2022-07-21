@@ -28,12 +28,14 @@ const store = useStore();
 
 const darkTheme = 'dark';
 const lightTheme = 'light';
-const hasStorageCapabilities = window.localStorage && window.localStorage.setItem;
+let hasStorageCapabilities = false;
 
 const activeTheme = ref(darkTheme);
 
 onMounted(() => {
   let savedTheme = undefined;
+
+  hasStorageCapabilities = window.localStorage && window.localStorage.setItem;
 
   // Attempt to retrieve localStorage state
   if (hasStorageCapabilities) {
