@@ -1,10 +1,10 @@
-import prettifyType from '../docs/.vitepress/theme/scripts/prettifyType';
+import { prettifyType } from '../docs/.vitepress/theme/util';
 
 describe('prettifyType', () => {
-  it('should return a string removed of underscores, spaces and capitalized words', async () => {
+  it('should return a string removed of underscores, spaces and capitalized words', () => {
     const uglyType = 'this_is_text';
     const expected = 'This Is Text';
-    const prettifiedType = await prettifyType(uglyType);
+    const prettifiedType = prettifyType(uglyType);
 
     expect(prettifiedType).toEqual(expected);
   });

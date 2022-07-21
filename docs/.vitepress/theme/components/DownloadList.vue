@@ -65,12 +65,12 @@
 
 <script setup>
 import { computed, ref, onMounted, defineProps } from 'vue';
-import { useStore } from 'vuex';
+import { useStore } from '../store.js';
 
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
 
-import sort from '../scripts/sort';
+import { sort } from '../util';
 
 const store = useStore();
 
@@ -97,7 +97,7 @@ const sorter = ref(null);
 const sortKey = ref('releaseDate:true');
 const sortedList = ref([]);
 
-const defaultList = computed(() => store.state[props.file]);
+const defaultList = computed(() => store[props.file]);
 const listFilters = computed(() => Array.from(new Set(defaultList.value.map((cur) => cur.type))));
 const list = computed(() => {
   if (sortedList.value.length > 0) {
@@ -143,7 +143,7 @@ const toggleShowMore = (canShow) => {
 };
 
 onMounted(() => {
-  store.dispatch('FETCH_DATA', props.file);
+  store.fetchFromApi(props.file);
   resultsTotalLength.value = defaultList.value.length;
   resultsLength.value = lazyOffset;
 });

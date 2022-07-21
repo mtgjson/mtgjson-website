@@ -22,8 +22,8 @@
 
 <script setup>
 import { onMounted, ref } from 'vue';
-import { useStore } from 'vuex';
-import testStorage from '../scripts/testStorage';
+import { useStore } from '../store.js';
+import { testStorage } from '../util';
 
 const store = useStore();
 
@@ -71,7 +71,7 @@ const switchTheme = (e) => {
   if (testStorage() === true) {
     window.localStorage.setItem('theme', newTheme);
   }
-  store.dispatch('SET_THEME_COLOR', newTheme);
+  store.setTheme(newTheme);
   activeTheme.value = newTheme;
 };
 </script>

@@ -1,73 +1,70 @@
-<script>
-import { h } from "vue";
-import { useData, useRoute } from "vitepress";
-import { isActive, hashRE, groupHeaders } from "../util";
+<template lang="pug">
+a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href") {{ link.children }}
+</template>
 
-export default {
-  props: {
-    item: {
-      type: Object,
-      required: true,
+<script setup>
+import { h, computed, defineProps } from 'vue';
+import { useData, useRoute } from 'vitepress';
+import { isActive, hashRE } from '../util';
+
+const props = defineProps({
+  item: {
+    type: Object,
+    required: true,
+  },
+});
+
+const { item } = props;
+const { theme } = useData();
+const route = useRoute();
+const configDepth = theme.value.sidebarDepth;
+const maxDepth = configDepth === null ? 1 : configDepth;
+const displayAllHeaders = theme.value.displayAllHeaders;
+
+const renderLink = (h, to, text, active) => {
+  return h(
+    'a',
+    {
+      href: to,
+      activeClass: '',
+      exactActiveClass: '',
+      class: {
+        active,
+        'sidebar-link': true,
+      },
     },
-  },
-  setup(props) {
-    const { item } = props;
-    const { theme } = useData();
-    const route = useRoute();
-
-    const renderLink = (h, to, text, active) => {
-      return h(
-        "a",
-        {
-          href: to,
-          activeClass: "",
-          exactActiveClass: "",
-          class: {
-            active,
-            "sidebar-link": true,
-          },
-        },
-        text
-      );
-    };
-
-    const renderChildren = (h, children, path, route, maxDepth, depth = 1) => {
-      if (!children || depth > maxDepth) {
-        return null;
-      }
-      return h(
-        "ul",
-        { class: "sidebar-sub-headers" },
-        children.map((c) => {
-          const active = isActive(route, path + "#" + c.slug);
-          return h("li", { class: "sidebar-sub-header" }, [
-            renderLink(h, path + "#" + c.slug, c.title, active),
-            renderChildren(h, c.children, path, route, maxDepth, depth + 1),
-          ]);
-        })
-      );
-    };
-
-    return () => {
-      const selfActive = isActive(route, item.link);
-      const link = renderLink(h, item.link, item.text || item.link, selfActive);
-      const configDepth = theme.value.sidebarDepth;
-      const maxDepth = configDepth === null ? 1 : configDepth;
-      const displayAllHeaders = theme.value.displayAllHeaders;
-
-      if (
-        (selfActive || displayAllHeaders) &&
-        item.headers &&
-        !hashRE.test(item.link)
-      ) {
-        const children = groupHeaders(item.headers);
-        return [link, renderChildren(h, children, item.link, route, maxDepth)];
-      } else {
-        return link;
-      }
-    };
-  },
+    text
+  );
 };
+
+const renderChildren = (h, children, path, route, maxDepth, depth = 1) => {
+  if (!children || depth > maxDepth) {
+    return null;
+  }
+  return h(
+    'ul',
+    { class: 'sidebar-sub-headers' },
+    children.map((c) => {
+      const active = isActive(route, path + '#' + c.slug);
+      return h('li', { class: 'sidebar-sub-header' }, [
+        renderLink(h, path + '#' + c.slug, c.title, active),
+        renderChildren(h, c.children, path, route, maxDepth, depth + 1),
+      ]);
+    })
+  );
+};
+
+const sidebarLink = () => {
+  if ((selfActive || displayAllHeaders) && item.headers && !hashRE.test(item.link)) {
+    const children = item.headers;
+    return [link, renderChildren(h, children, item.link, route, maxDepth)];
+  } else {
+    return link;
+  }
+}
+
+const selfActive = computed(() => isActive(route, item.link));
+const link = computed(() => renderLink(h, item.link, item.text || item.link, selfActive));
 </script>
 
 <style lang="scss">

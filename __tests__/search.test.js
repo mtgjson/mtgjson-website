@@ -1,7 +1,7 @@
-import search from '../docs/.vitepress/theme/scripts/search';
+import { search } from '../docs/.vitepress/theme/util';
 
 describe('search', () => {
-  it('should return the same data if no terms is passed', async () => {
+  it('should return the same data if no terms is passed', () => {
     const terms = '';
     const data = [
       {
@@ -13,12 +13,12 @@ describe('search', () => {
         type: 'artifact'
       }
     ];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(data);
   });
 
-  it('should return filtered data if terms for a valid type is passed in', async () => {
+  it('should return filtered data if terms for a valid type is passed in', () => {
     const terms = 'creature';
     const data = [
       {
@@ -36,12 +36,12 @@ describe('search', () => {
         type: 'creature'
       }
     ];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(result);
   });
 
-  it('should return filtered data if terms for a valid name is passed in', async () => {
+  it('should return filtered data if terms for a valid name is passed in', () => {
     const terms = 'Deadly Recluse';
     const data = [
       {
@@ -59,12 +59,12 @@ describe('search', () => {
         type: 'creature'
       }
     ];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(result);
   });
 
-  it('should return filtered data if terms for a valid code is passed in', async () => {
+  it('should return filtered data if terms for a valid code is passed in', () => {
     const terms = 'M20';
     const data = [
       {
@@ -85,12 +85,12 @@ describe('search', () => {
         code: 'M20'
       }
     ];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(result);
   });
 
-  it('should return filtered data if terms for a valid releaseData is passed in', async () => {
+  it('should return filtered data if terms for a valid releaseData is passed in', () => {
     const terms = '2021-01-01';
     const data = [
       {
@@ -114,12 +114,12 @@ describe('search', () => {
         releaseDate: '2021-01-01'
       }
     ];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(result);
   });
 
-  it('should return no data if a non-matching term is used', async () => {
+  it('should return no data if a non-matching term is used', () => {
     const terms = 'Vampire Nighthawk';
     const data = [
       {
@@ -132,12 +132,12 @@ describe('search', () => {
       }
     ];
     const result = [];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(result);
   });
 
-  it('should return no data if an object has invalid props', async () => {
+  it('should return no data if an object has invalid props', () => {
     const terms = 'Vampire Nighthawk';
     const data = [
       {
@@ -148,7 +148,7 @@ describe('search', () => {
       }
     ];
     const result = [];
-    const searched = await search(terms, data);
+    const searched = search(terms, data);
 
     expect(searched).toEqual(result);
   });

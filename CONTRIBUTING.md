@@ -4,14 +4,13 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 
 ## Knowledge Requirements
 
-- Vue 3
+- Vue 3 (Composition)
 - Vuex
 - VitePress
 - Markdown
 - JSON
 - SCSS
 - SEO
-- YAML
 - Accessibility
 - MTGJSON Files
 
@@ -46,24 +45,22 @@ Files/Directories were omitted that do not help understand this current project 
     │   └── robots.txt # For crawlers to index/not index certain pages
     └── .vitepress # Main source files for the application
         ├── config.js # Main VitePress configuration
-        ├── generateSidebar.js # Script to generate the sidebar heirarchy
         ├── generatePages.js # Polyfill script to generate pages metadata for search
+        ├── generateSidebar.js # Script to generate the sidebar heirarchy
         └── theme # Visuals
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
             │   ├── 404.vue # Layout for error page
             │   └── Layout.vue # Layout for the rest of pages
-            ├── scripts/ #  functions
-            │   └── *.js # Helper functions
             ├── static/ # Static data
             │   └── *.json # Static JSON
             ├── styles/ # Visual styling
             │   └── *.scss # CSS
-            ├── util/ # Theme helper functions
-            │   └── index.js # Helper functions for components
+            ├── util/ # Helpers
+            │   └── index.js # Exported functions
             ├── index.js # Theme config and enhancements
-            └── store.js # Vuex store
+            └── store.js # Pinia store
 ```
 
 ## VitePress Configuration

@@ -10,7 +10,7 @@
 <script setup>
 import { defineProps, ref, computed, onMounted } from "vue";
 import { useData } from "vitepress";
-import { useStore } from "vuex";
+import { useStore } from "../store.js";
 
 const { frontmatter } = useData();
 const store = useStore();
@@ -24,7 +24,7 @@ const props = defineProps({
 
 const show = ref(false);
 
-const allEnums = computed(() => store.state.EnumValues[frontmatter.value.schema]);
+const allEnums = computed(() => store.EnumValues[frontmatter.value.schema]);
 const showAll = computed(() => show.value);
 const enums = computed(() => {
   let enums;
@@ -45,7 +45,7 @@ const toggleShowAll = () => {
 };
 
 onMounted(() => {
-  store.dispatch("FETCH_DATA", "EnumValues");
+  store.fetchFromApi("EnumValues");
 });
 </script>
 

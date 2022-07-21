@@ -1,7 +1,7 @@
 import Layout from './layouts/Layout.vue';
 import NotFound from './layouts/404.vue';
 
-import store from './store';
+import { createPinia } from "pinia";
 
 // Global components to be injected in markdown files
 import DownloadList from './components/DownloadList.vue';
@@ -23,6 +23,6 @@ export default {
     app.component('PropertyToggler', PropertyToggler);
     app.component('Supporters', Supporters);
 
-    app.use(store);
+    app.use(createPinia());
   },
 };

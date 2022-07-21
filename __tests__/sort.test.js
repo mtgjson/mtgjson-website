@@ -1,4 +1,4 @@
-import sort from '../docs/.vitepress/theme/scripts/sort';
+import { sort } from '../docs/.vitepress/theme/util';
 
 describe('sort', () => {
   it('should return the same data if an empty filter is passed', () => {
@@ -25,7 +25,7 @@ describe('sort', () => {
     expect(sorted).toEqual(data);
   });
 
-  it('should return sorted data if a filter by recent releaseDate by descending order is passed', async () => {
+  it('should return sorted data if a filter by recent releaseDate by descending order is passed', () => {
     const filter = 'releaseDate:true';
     const data = [
       {
@@ -49,7 +49,7 @@ describe('sort', () => {
         releaseDate: '1995-07-13'
       }
     ];
-    const sorted = await sort(filter, data);
+    const sorted = sort(filter, data);
 
     expect(sorted).toEqual(expected);
   });

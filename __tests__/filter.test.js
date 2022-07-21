@@ -1,19 +1,19 @@
-import filter from '../docs/.vitepress/theme/scripts/filter';
+import { filter } from '../docs/.vitepress/theme/util';
 
 describe('filter', () => {
-  it('should return the same data if no filter is passed', async () => {
+  it('should return the same data if no filter is passed', () => {
     const dataFilter = '';
     const data = [
       {
         type: 'creature'
       }
     ];
-    const filtered = await filter(dataFilter, data);
+    const filtered = filter(dataFilter, data);
 
     expect(filtered).toEqual(data);
   });
 
-  it('should return filtered data if a filter is passed', async () => {
+  it('should return filtered data if a filter is passed', () => {
     const dataFilter = 'creature';
     const data = [
       {
@@ -28,7 +28,7 @@ describe('filter', () => {
         type: 'creature'
       }
     ];
-    const filtered = await filter(dataFilter, data);
+    const filtered = filter(dataFilter, data);
 
     expect(filtered).toEqual(expected);
   });

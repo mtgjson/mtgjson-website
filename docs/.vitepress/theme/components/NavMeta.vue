@@ -39,7 +39,8 @@
 
 <script setup>
 import { onMounted, computed, defineProps } from "vue";
-import { useStore } from "vuex";
+// import { useStore } from "vuex";
+import { useStore } from '../store.js';
 
 const props = defineProps({
   width: {
@@ -53,10 +54,10 @@ const props = defineProps({
 });
 
 const store = useStore();
-const version = computed(() => store.state.Meta.version);
+const version = computed(() => store.Meta.version);
 
 onMounted(() => {
-  store.dispatch("FETCH_DATA", "Meta");
+  store.fetchFromApi("Meta");
 });
 </script>
 
