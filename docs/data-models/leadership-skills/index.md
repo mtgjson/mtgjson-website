@@ -15,10 +15,7 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, leadership skills, commander",
     }
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 

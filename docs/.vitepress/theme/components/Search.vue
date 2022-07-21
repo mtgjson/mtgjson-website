@@ -23,8 +23,9 @@
           :href="`${item.isOwnPage ? item.path : item.path + item.hash}`"
           @click="cleanSearch()"
         )
-          p.search-item {{ item.title }}
-            span(v-if="!item.isOwnPage") &nbsp;&rarr; {{ item.text }}
+          .search-item
+            p {{ item.title }}
+            span(v-if="!item.isOwnPage") &hookrightarrow; {{ item.text }}
 </template>
 
 <script setup>
@@ -164,9 +165,14 @@ const cleanSearch = () => {
 
       .search-item {
         color: var(--search-text-color);
-        margin: 0;
+
+        p {
+          margin: 0;
+          line-height: 1.25rem;
+        }
 
         span {
+          margin-top: 5px;
           font-weight: normal;
         }
       }

@@ -1,35 +1,31 @@
 ---
 {
-  "title": "TCGplayer SKUs",
-  "schema": "tcgplayerSkus",
-  "meta":
+  'title': 'Tcgplayer Skus',
+  'schema': 'tcgplayerSkus',
+  'meta':
     [
       {
-        "name": "description",
-        "content": "The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs."
+        'name': 'description',
+        'content': 'The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs.',
       },
       {
-        "property": "og:description",
-        "content": "The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs."
+        'property': 'og:description',
+        'content': 'The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs.',
       },
-      {
-        "name": "keywords",
-        "content": "mtg, magic: the gathering, mtgjson, json, tcgplayer, tcgplayer skus"
-      }
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, tcgplayer, tcgplayer skus' },
     ],
-  "feed": { "enable": "true" },
 }
 ---
 
-# TCGplayer SKUs
+# Tcgplayer Skus
 
 The TCGplayer SKUs Data Model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
 
 **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)  
-**Parent property:** `data`  
+**Parent property:** `data`
 
 ::: tip
-The TCGplayer SKUs Data Model is accessed through a single index array where its parent property is the UUID of the card, like such:
+The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card, like such:
 
 ```
 "data": {
@@ -51,6 +47,7 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 ## Model Properties
 
 > ### condition
+>
 > The condition of the card.
 >
 > - **Type:** `string`
@@ -58,6 +55,7 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 > - **Introduced:** `v5.1.0`
 
 > ### finishes
+>
 > The finishes of the card.
 >
 > - **Type:** `array[string]`
@@ -66,6 +64,7 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 > - **Tags:** <i class="new">New</i>
 
 > ### language
+>
 > The language of the card.
 >
 > - **Type:** `string`
@@ -73,6 +72,7 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 > - **Introduced:** `v5.1.0`
 
 > ### printing
+>
 > The printing style of the card.
 >
 > - **Type:** `string`
@@ -80,12 +80,14 @@ The TCGplayer SKUs Data Model is accessed through a single index array where its
 > - **Introduced:** `v5.1.0`
 
 > ### productId
+>
 > The product identifier of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
 
 > ### skuId
+>
 > The SKU identifier of the card.
 >
 > - **Type:** `string`

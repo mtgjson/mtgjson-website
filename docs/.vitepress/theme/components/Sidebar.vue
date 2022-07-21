@@ -15,6 +15,7 @@ aside.sidebar
 
 <script setup>
 import { defineProps } from 'vue';
+
 import NavLinks from './NavLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';

@@ -7,7 +7,6 @@
       { 'property': 'og:description', 'content': 'MTGJSON v5 Changelog.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, changelog' },
     ],
-  'feed': { 'enable': 'true' },
 }
 ---
 

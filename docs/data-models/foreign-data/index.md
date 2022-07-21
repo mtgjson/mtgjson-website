@@ -15,10 +15,7 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, foreigndata, foreign data",
     }
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 

@@ -24,7 +24,9 @@ export default defineConfig({
     // Google SEO
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', content: '/images/assets/thumbnail-logo-mtgjson.png' }],
+    ['meta', { property: 'og:image', src: '/images/assets/thumbnail-logo-mtgjson.png' }],
+    // Analytics
+    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true'}],
     ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-dark.ico' }],
@@ -58,8 +60,6 @@ export default defineConfig({
       pattern: 'https://github.com/mtgjson/mtgjson-websit/edit/main/docs/',
       text: 'Help us improve this page!',
     },
-    lastUpdated: true,
-    lastUpdatedText: 'Last Updated',
     smoothScroll: true,
     nav: [
       { text: 'Join us on Discord', link: 'https://mtgjson.com/discord' },

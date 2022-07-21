@@ -15,10 +15,7 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, card (atomic)",
     }
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 
@@ -29,20 +26,20 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
 **Parent property:** `data`  
 
+<!-- For some reason tips before TOC will break the TOC, but HTML will not -->
 <blockquote>
-<h4>Note</h4>
-<p>The Card (Atomic) Data Model is accessed through an array of card variations where its parent property is the name of the card, like such:</p>
-<br />
+  <h4>Note</h4>
+  <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card, like such:</p>
+  <br />
 
-```json
-"data": {
-  "Oblivion Ring": [
-    <Card (Atomic) Model>,
+  ```json
+  "data": {
+    "Oblivion Ring": [
+      <Card (Atomic) Model>
+    ],
     ...
-  ],
-  ...
-}
-```
+  }
+  ```
 
 </blockquote>
 

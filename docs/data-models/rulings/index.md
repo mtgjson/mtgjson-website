@@ -15,10 +15,7 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, rules, rulings, ruling",
     }
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 

@@ -13,10 +13,7 @@
       'name': 'keywords',
       'content': 'mtg, magic: the gathering, mtgjson, json, branding, branding assets, brand, assets, logo',
     },
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 

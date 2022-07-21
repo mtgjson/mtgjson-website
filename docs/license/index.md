@@ -13,10 +13,7 @@
       'name': 'keywords',
       'content': 'mtg, magic: the gathering, mtgjson, json, license',
     },
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 

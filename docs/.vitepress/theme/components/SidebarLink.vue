@@ -14,12 +14,13 @@ const props = defineProps({
   },
 });
 
-const { item } = props;
 const { theme } = useData();
 const route = useRoute();
+
+const { item } = props;
+
 const configDepth = theme.value.sidebarDepth;
 const maxDepth = configDepth === null ? 1 : configDepth;
-const displayAllHeaders = theme.value.displayAllHeaders;
 
 const renderLink = (h, to, text, active) => {
   return h(
@@ -55,7 +56,7 @@ const renderChildren = (h, children, path, route, maxDepth, depth = 1) => {
 };
 
 const sidebarLink = () => {
-  if ((selfActive || displayAllHeaders) && item.headers && !hashRE.test(item.link)) {
+  if (selfActive && item.headers && !hashRE.test(item.link)) {
     const children = item.headers;
     return [link, renderChildren(h, children, item.link, route, maxDepth)];
   } else {

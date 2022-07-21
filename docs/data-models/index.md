@@ -14,10 +14,7 @@
       "name": "keywords",
       "content": "mtg, magic: the gathering, mtgjson, json, Data Models",
     }
-  ],
-  "feed": {
-    "enable": "true"
-  }
+  ]
 }
 ---
 
