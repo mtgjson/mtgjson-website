@@ -10,8 +10,8 @@
 </template>
 
 <script setup>
-import { onMounted, computed, ref } from "vue";
-import $ from "jquery";
+import { onMounted, computed, ref } from 'vue';
+import $ from 'jquery';
 
 const hiddenTOCProperties = ref([]);
 const allTOCAnchors = ref([]);
@@ -31,10 +31,8 @@ const hiddenCount = computed(() => {
 });
 
 onMounted(() => {
-  allTOCAnchors.value = Array.from($(".table-of-contents li a"));
-  propertyBlocks.value = Array.from(
-    $("#property-toggler ~ blockquote:has(i.optional)")
-  );
+  allTOCAnchors.value = Array.from($('.table-of-contents li a'));
+  propertyBlocks.value = Array.from($('#property-toggler ~ blockquote:has(i.optional)'));
 
   if (propertyBlocks.value.length === 0) {
     hasOptionals.value = false;
@@ -52,9 +50,7 @@ onMounted(() => {
 const toggleTOCVariations = () => {
   const tocAnchorsMap = {};
   const tags = 'i:not(".optional")';
-  const propertyBlocks = Array.from(
-    $(`#property-toggler ~ blockquote:has(${tags})`)
-  );
+  const propertyBlocks = Array.from($(`#property-toggler ~ blockquote:has(${tags})`));
 
   // Map all TOC anchor links by its inner text
   for (const element of allTOCAnchors.value) {
@@ -63,8 +59,7 @@ const toggleTOCVariations = () => {
 
   // Set all TOC anchor link tags with tag properties
   for (const propertyBlock of propertyBlocks) {
-    const blockPropertyName =
-      propertyBlock.firstChild.textContent.split("# ")[1];
+    const blockPropertyName = propertyBlock.firstChild.textContent.split('#')[0].trim();
     const tocPropertyElement = tocAnchorsMap[blockPropertyName];
 
     if (tocPropertyElement) {
@@ -73,9 +68,9 @@ const toggleTOCVariations = () => {
       const tag = Array.from($(propertyBlock).find(tags)[0].classList)[0];
 
       if (tocPropertyElement.classList.length < 1) {
-        tocPropertyElement.classList.toggle("tag");
+        tocPropertyElement.classList.toggle('tag');
         tocPropertyElement.classList.toggle(tag);
-        tocPropertyElement.title = tag + " property";
+        tocPropertyElement.title = tag + ' property';
       }
     }
   }
@@ -88,15 +83,15 @@ const toggleOptionals = () => {
 };
 
 const toggleHeadingsContent = (doHide) => {
-  const $propsHeading = document.querySelector("#model-properties");
-  const $toggler = document.querySelector(".property-toggler");
+  const $propsHeading = document.querySelector('#model-properties');
+  const $toggler = document.querySelector('.property-toggler');
 
-  if (doHide && hiddenCount === 0) {
-    $propsHeading.classList.add("none");
-    $toggler.classList.add("none");
+  if (doHide && hiddenCount.value === 0) {
+    $propsHeading.classList.add('none');
+    $toggler.classList.add('none');
   } else {
-    $propsHeading.classList.remove("none");
-    $toggler.classList.remove("none");
+    $propsHeading.classList.remove('none');
+    $toggler.classList.remove('none');
   }
 };
 
@@ -127,7 +122,7 @@ const toggleTOCOptionals = (doHide) => {
     margin-bottom: 2.5rem;
 
     &::after {
-      content: "No Available Properties";
+      content: 'No Available Properties';
       position: absolute;
       top: 2.5rem;
       left: 0;
