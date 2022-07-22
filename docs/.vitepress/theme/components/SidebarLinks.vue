@@ -6,8 +6,6 @@ ul.sidebar-links
 </template>
 
 <script setup>
-import { defineProps } from "vue";
-
 import SidebarGroup from "./SidebarGroup.vue";
 import SidebarLink from "./SidebarLink.vue";
 

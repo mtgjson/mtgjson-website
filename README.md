@@ -25,7 +25,7 @@
 
 ```
 brew install n
-sudo n 12
+sudo n 16.16
 ```
 
 **Option #2:** Install Node using the [official resources](https://nodejs.org/en/download/releases/) installer.

@@ -5,8 +5,6 @@ div.sidebar-button(@click="toggleSidebar" @keydown.enter="toggleSidebar" tabinde
 </template>
 
 <script setup>
-import { defineEmits } from 'vue';
-
 const emit = defineEmits(['toggle-sidebar']);
 
 const toggleSidebar = () => {

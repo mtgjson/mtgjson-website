@@ -64,7 +64,7 @@
 </template>
 
 <script setup>
-import { computed, ref, onMounted, defineProps } from 'vue';
+import { computed, ref, onMounted } from 'vue';
 import { useStore } from '../store.js';
 
 import DownloadNativeSelect from './DownloadNativeSelect.vue';

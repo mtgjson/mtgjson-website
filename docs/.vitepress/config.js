@@ -3,7 +3,10 @@ import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
 const [abstractModels, dataModels] = generateSidebar(['/abstract-models/', '/data-models/']);
-const pages = generatePages();
+const pages = generatePages({
+  INCLUDE_DIR: 'docs',
+  EXCLUDE_DIRS: ['public', '.vitepress'],
+});
 
 // SEO data
 const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
@@ -26,7 +29,7 @@ export default defineConfig({
     ['meta', { property: 'og:description', content: description }],
     ['meta', { property: 'og:image', src: '/images/assets/thumbnail-logo-mtgjson.png' }],
     // Analytics
-    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true'}],
+    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
     ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-dark.ico' }],
@@ -50,7 +53,7 @@ export default defineConfig({
   markdown: {
     toc: {
       level: [3],
-    }
+    },
   },
   // VitePress Themeing
   themeConfig: {
@@ -113,16 +116,16 @@ export default defineConfig({
         items: abstractModels,
       },
       {
-        text: 'Changelog',
-        link: '/changelog/mtgjson-v5/',
+        text: 'Changelogs',
+        link: '/changelogs/',
         items: [
           {
             text: 'MTGJSON',
-            link: '/changelog/mtgjson-v5/',
+            link: '/changelogs/mtgjson-v5/',
           },
           {
             text: 'MTGGraphQL',
-            link: '/changelog/mtggraphql/',
+            link: '/changelogs/mtggraphql/',
           },
         ],
       },

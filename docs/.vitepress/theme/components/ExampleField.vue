@@ -8,7 +8,7 @@
 </template>
 
 <script setup>
-import { defineProps, ref, computed, onMounted } from "vue";
+import { ref, computed, onMounted } from "vue";
 import { useData } from "vitepress";
 import { useStore } from "../store.js";
 

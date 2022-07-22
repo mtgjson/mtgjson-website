@@ -3,6 +3,25 @@ export const extRE = /\.(md|html)$/;
 export const endingSlashRE = /\/$/;
 export const outboundRE = /^(https?:|mailto:|tel:)/;
 
+// Custom slugify function for MarkdownItAnchor.
+export const slugify = (str) => {
+  return (
+    str
+      // Remove control characters
+      .replace(/[\u0000-\u001f]/g, '')
+      // Replace special characters
+      .replace( /[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?/]+/g, '-')
+      // Remove continuous separators
+      .replace(/\-{2,}/g, '-')
+      // Remove prefixing and trailing separators
+      .replace(/^\-+|\-+$/g, '')
+      // ensure it doesn't start with a number (#121)
+      .replace(/^(\d)/, '_$1')
+      // lowercase
+      .toLowerCase()
+  );
+};
+
 /**
  * A little different than the source but works
  * https://jsbin.com/wowezadolo/edit?js,console

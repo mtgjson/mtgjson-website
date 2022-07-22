@@ -71,7 +71,7 @@
         p.unlinked-name(v-else, v-html="supporter.name", tabindex="0")
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { onMounted } from 'vue';
 import supporters from "../static/supporters.json";
 import contributors from "../static/contributors.json";

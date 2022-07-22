@@ -25,8 +25,8 @@ div[class*="language-"] {
   &::before {
     position: absolute;
     z-index: 3;
-    top: 0.8em;
-    right: 1em;
+    top: 0.5em;
+    right: 0.7em;
     font-size: 0.75rem;
     color: rgba(255, 255, 255, 0.4);
   }
@@ -41,5 +41,11 @@ div[class~="language-json"] {
 div[class~="language-graphql"] {
   &:before {
     content: "graphql";
+  }
+}
+
+div[class~="language-html"] {
+  &:before {
+    content: "html";
   }
 }

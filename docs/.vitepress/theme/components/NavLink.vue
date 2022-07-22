@@ -9,7 +9,7 @@ a.nav-link.external(
 </template>
 
 <script setup>
-import { defineProps, computed } from "vue";
+import { computed } from "vue";
 import { useData } from "vitepress";
 import { isMailto, isTel, ensureExt } from "../util";
 

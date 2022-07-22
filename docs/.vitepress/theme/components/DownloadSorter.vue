@@ -63,7 +63,7 @@
 </template>
 
 <script setup>
-import { ref, onMounted, defineProps, defineEmits, defineExpose } from 'vue';
+import { ref, onMounted } from 'vue';
 import { search, filter, sort, prettifyType } from '../util';
 
 const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);

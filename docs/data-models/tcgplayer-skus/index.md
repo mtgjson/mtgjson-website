@@ -19,24 +19,25 @@
 
 # Tcgplayer Skus
 
-The TCGplayer SKUs Data Model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
+The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
 
 **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)  
 **Parent property:** `data`
 
-::: tip
-The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card, like such:
+<blockquote>
+  <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card, like such:</p>
+  <br />
 
-```
-"data": {
-  "00010d56-fe38-5e35-8aed-518019aa36a5": [
-    <TCGplayer SKUs Model>
-  ],
-  ...
-}
-```
+  ```json
+  "data": {
+    "00010d56-fe38-5e35-8aed-518019aa36a5": [
+      <TCGplayer SKUs Model>
+    ],
+    ...
+  }
+  ```
 
-:::
+</blockquote>
 
 ## Model Index
 

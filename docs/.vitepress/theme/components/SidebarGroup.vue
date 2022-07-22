@@ -17,7 +17,6 @@ section.sidebar-group
 </template>
 
 <script setup>
-import { defineProps } from "vue";
 import { useRoute } from "vitepress";
 import { isActive } from "../util";
 

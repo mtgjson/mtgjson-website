@@ -1,12 +1,12 @@
 <template lang="pug">
-#property-toggler.property-toggler(v-if="noOptionals")
-  label(for="property-toggler-input") Include optional properties
-    span {{ ' ' }}(Showing {{ count }}):
+#property-toggler.property-toggler(v-if="hasOptionals")
   input#property-toggler-input(
     type="checkbox",
     @click="toggleOptionals",
     v-model="checked"
   )
+  label(for="property-toggler-input") Include optional properties
+    span {{ ' ' }}(Showing {{ count }})
 </template>
 
 <script setup>
@@ -19,7 +19,6 @@ const propertyBlocks = ref([]);
 const hasOptionals = ref(true);
 const checked = ref(true);
 
-const noOptionals = computed(() => hasOptionals.value);
 const count = computed(() => (checked.value ? fullCount : hiddenCount));
 const fullCount = computed(() => allTOCAnchors.value.length);
 const hiddenCount = computed(() => {
@@ -129,6 +128,10 @@ const toggleTOCOptionals = (doHide) => {
       color: var(--gray-color);
       font-weight: bold;
     }
+  }
+
+  input {
+    margin-right: 0.5rem;
   }
 
   label {

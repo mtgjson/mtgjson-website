@@ -81,6 +81,7 @@
   }
 }
 
+// Reset FAQ TOC to regular layout
 #frequently-asked-questions {
   & ~ .table-of-contents {
     ul {
@@ -89,17 +90,13 @@
   }
 }
 
-// #model-properties {
-//   & ~ blockquote {
-//     p {
-//       color: var(--gray-color);
-//     }
-//   }
-// }
-
 // Team on Homepage
 #mtgjson {
   & ~ .team-wrapper {
+    img {
+      background-color: var(--bg-2-color);
+    }
+
     & > .custom-block:first-of-type {
       margin-top: 0;
     }
@@ -124,11 +121,13 @@
         .custom-block-title {
           text-align: center;
         }
+
         strong {
           text-align: center;
           display: block;
           margin-bottom: 1rem;
         }
+
         img {
           display: block;
           float: none;

@@ -48,12 +48,12 @@ const results = computed(() => {
       const pageId = index;
       const pagePath = page.path;
       const pageTitle = page.title;
-      const pageAnchors = page.anchors;
+      const pageHeaders = page.headers;
       const loweredTitle = pageTitle.toLowerCase();
       const loweredTerm = searchTerm.value.toLowerCase();
 
-      if (pageAnchors) {
-        pageAnchors.forEach((anchor) => {
+      if (Array.isArray(pageHeaders)) {
+        pageHeaders.forEach((anchor) => {
           const loweredText = anchor.text.toLowerCase();
           const containsTerms = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
           const isOwnPage = loweredTitle === loweredText;

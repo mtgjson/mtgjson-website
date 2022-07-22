@@ -3,7 +3,7 @@ a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href") 
 </template>
 
 <script setup>
-import { h, computed, defineProps } from 'vue';
+import { h, computed } from 'vue';
 import { useData, useRoute } from 'vitepress';
 import { isActive, hashRE } from '../util';
 

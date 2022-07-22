@@ -34,12 +34,11 @@
     a(href="/")
       h3 MTGJSON
     .version(v-if="version")
-      a.version-number(:href="`/changelog/mtgjson-v5/`") v{{ version }}
+      a.version-number(:href="`/changelogs/mtgjson-v5/`") v{{ version }}
 </template>
 
 <script setup>
-import { onMounted, computed, defineProps } from "vue";
-// import { useStore } from "vuex";
+import { onMounted, computed } from "vue";
 import { useStore } from '../store.js';
 
 const props = defineProps({

@@ -9,8 +9,7 @@
   },
   "scripts": {
     "dev": "run-p lint:js:watch local",
-    "local": "npm run check-version && vitepress dev docs",
-    "index": "node ./util/index-pages.js",
+    "local": "npm run check:version && vitepress dev docs",
     "build": "npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
@@ -19,7 +18,7 @@
     "lint:js": "esw --fix --ext .js,.vue docs/.vitepress",
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
-    "check-version": "node ./util/check-version.js",
+    "check:version": "node ./util/check-version.js",
     "generate:contributors": "node ./util/generate-contributors.js",
     "generate:feeds": "node ./node_modules/.bin/babel-node ./util/generate-feeds.js"
   },
@@ -51,6 +50,6 @@
     "uuid": "^8.3.2",
     "vitepress": "^1.0.0-alpha.4",
     "vue": "^3.2.37",
-    "vue-eslint-parser": "^8.3.0"
+    "vue-eslint-parser": "^9.0.0"
   }
 }
