@@ -18,8 +18,6 @@ export default defineConfig({
   // SEO
   title,
   description,
-  // Google Analytics
-  ga: 'UA-131358443-1',
   // Head Tags
   head: [
     ['meta', { charset: 'utf-8' }],
