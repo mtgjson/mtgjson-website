@@ -20,13 +20,12 @@ main.page
 <script setup lang='ts'>
 import { computed } from 'vue';
 import { useData } from 'vitepress';
-import type { ISidebarItem } from '../@types';
+import type { ISidebarItem, IEditLink } from '../@types';
 
 const { theme, page } = useData();
-
 const sidebarItems: ISidebarItem[] = theme.value.sidebar;
 
-const editLink = computed<any>((): any => {
+const editLink = computed<IEditLink>((): IEditLink => {
   const link: string = theme.value.editLink.pattern + page.value.relativePath;
   const text: string = theme.value.editLink.text;
 
@@ -62,7 +61,7 @@ const find = (page: any, items: ISidebarItem[], offset: number) => {
   }
 };
 
-const flattern = (items, res) => {
+const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
   for (let i = 0, l = items.length; i < l; i++) {
     const hasChildren = items[i].items && items[i].items.length > 0;
 

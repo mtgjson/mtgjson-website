@@ -76,13 +76,11 @@
 </template>
 
 <script setup lang='ts'>
+import type { HTMLChangeEvent } from '../@types';
+
 interface Props {
   fileName: string;
   fileType: string;
-}
-
-interface HTMLChangeEvent extends Event {
-  target: HTMLFormElement;
 }
 
 defineProps<Props>();
@@ -96,7 +94,7 @@ const api: string = 'https://mtgjson.com/api/v5/';
  * issues and should not be the case when live on the server.
  */
 const downloadFile = (e: HTMLChangeEvent) => {
-  const target: any = e.target;
+  const target: HTMLFormElement = e.target;
   const url: string = target.value;
   const fileName: string = target.options[target.options.selectedIndex].innerText;
   const placeHolderAnchor: HTMLAnchorElement = document.createElement("a");

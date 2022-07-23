@@ -91,7 +91,7 @@ onMounted((): void => {
   onHandleChange(0);
 });
 
-const emitNewData = (data: any, counts: number[]): void => {
+const emitNewData = (data: IList[], counts: number[]): void => {
   emit('updateData', data);
   emit('updateCount', counts);
 };

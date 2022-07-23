@@ -20,12 +20,13 @@ section.sidebar-group
 import { useRoute } from "vitepress";
 import { isActive } from "../util";
 import SidebarLinks from './SidebarLinks.vue';
+import type { Route } from 'vitepress';
 
 interface Props {
   item: object;
 }
 
-const route: any = useRoute();
+const route: Route = useRoute();
 
 defineProps<Props>();
 </script>

@@ -24,7 +24,7 @@ const show = ref<boolean>(false);
 
 const allEnums = computed<object>((): object => store.EnumValues[frontmatter.value.schema]);
 const showAll = computed<boolean>((): boolean => show.value);
-const enums = computed<any[]>((): any[] => {
+const enums = computed<string[]>((): string[] => {
   let enums: string[] = [];
 
   if (allEnums.value) {

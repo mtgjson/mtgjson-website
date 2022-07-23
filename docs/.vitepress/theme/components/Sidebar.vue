@@ -18,9 +18,10 @@ import NavLinks from './NavLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';
 import Search from './Search.vue';
+import type { ISidebarItem } from '../@types';
 
 interface Props {
-  items: any[];
+  items: ISidebarItem[];
 }
 
 defineProps<Props>();

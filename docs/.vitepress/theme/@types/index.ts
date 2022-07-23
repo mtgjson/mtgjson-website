@@ -36,3 +36,12 @@ export interface ISidebarItem {
   link: string;
   items: any[],
 }
+
+export interface IEditLink {
+  link: string;
+  text: string;
+}
+
+export interface HTMLChangeEvent extends Event {
+  target: HTMLFormElement;
+}

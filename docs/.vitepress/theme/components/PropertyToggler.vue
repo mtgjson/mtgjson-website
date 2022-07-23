@@ -47,7 +47,7 @@ onMounted((): void => {
 });
 
 const toggleTOCVariations = (): void => {
-  const tocAnchorsMap: any = {};
+  const tocAnchorsMap: object = {};
   const tags: string = 'i:not(".optional")';
   const propertyBlocks: HTMLElement[] = Array.from($(`#property-toggler ~ blockquote:has(${tags})`));
 

@@ -37,6 +37,12 @@ ol, ul {
   li {
     list-style: disc;
   }
+
+  ul {
+    li {
+      list-style: circle;
+    }
+  }
 }
 
 a {

@@ -6,21 +6,22 @@ a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href") 
 import { h, computed } from 'vue';
 import { useRoute } from 'vitepress';
 import { isActive } from '../util';
+import type { Route } from 'vitepress';
+import type { ISidebarItem } from '../@types';
 
-const props = defineProps({
-  item: {
-    type: Object,
-    required: true,
-  },
-});
+interface Props {
+  item: ISidebarItem;
+}
 
-const { item }: { item: any } = props;
-const route: any = useRoute();
+const props = defineProps<Props>();
+const route: Route = useRoute();
 
-const selfActive = computed<boolean>((): boolean => isActive(route, item.link));
-const link = computed<any>((): any => renderLink(h, item.link, item.text || item.link, selfActive.value));
+const selfActive = computed<boolean>((): boolean => isActive(route, props.item.link));
+const link = computed<ISidebarItem>(
+  (): ISidebarItem => renderLink(h, props.item.link, props.item.text || props.item.link, selfActive.value)
+);
 
-const renderLink = (h: any, to: string, text: string, active: boolean): any => {
+const renderLink = (h: any, to: string, text: string, active: boolean): ISidebarItem => {
   return h(
     'a',
     {
