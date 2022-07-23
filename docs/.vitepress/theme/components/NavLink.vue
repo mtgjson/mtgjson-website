@@ -8,18 +8,18 @@ a.nav-link.external(
 ) {{ item.text }}
 </template>
 
-<script setup>
-import { computed } from "vue";
-import { useData } from "vitepress";
-import { isMailto, isTel, ensureExt } from "../util";
+<script setup lang="ts">
+import { computed } from 'vue';
+import { isMailto, isTel, ensureExt } from '../util';
 
-const { site } = useData();
-const props = defineProps({
+interface Props {
   item: {
-    type: Object,
-    required: true,
-  },
-});
+    text: string;
+    link: string;
+  };
+}
+
+const props = defineProps<Props>();
 
 const link = computed(() => {
   return ensureExt(props.item.link);

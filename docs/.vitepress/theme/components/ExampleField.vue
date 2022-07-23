@@ -7,27 +7,25 @@
     .show-btn(@click="toggleShowAll") Show&nbsp;Less
 </template>
 
-<script setup>
-import { ref, computed, onMounted } from "vue";
-import { useData } from "vitepress";
-import { useStore } from "../store.js";
+<script setup lang="ts">
+import { ref, computed, onMounted } from 'vue';
+import { useData } from 'vitepress';
+import { useStore } from '../store.js';
+
+interface Props {
+  type: string;
+}
 
 const { frontmatter } = useData();
 const store = useStore();
+const props = defineProps<Props>();
 
-const props = defineProps({
-  type: {
-    type: String,
-    required: true,
-  },
-});
+const show = ref<boolean>(false);
 
-const show = ref(false);
-
-const allEnums = computed(() => store.EnumValues[frontmatter.value.schema]);
-const showAll = computed(() => show.value);
-const enums = computed(() => {
-  let enums;
+const allEnums = computed<object>((): object => store.EnumValues[frontmatter.value.schema]);
+const showAll = computed<boolean>((): boolean => show.value);
+const enums = computed<any[]>((): any[] => {
+  let enums: string[] = [];
 
   if (allEnums.value) {
     enums = allEnums.value[props.type];
@@ -37,15 +35,15 @@ const enums = computed(() => {
     }
   }
 
-  return [];
+  return enums;
 });
 
-const toggleShowAll = () => {
+const toggleShowAll = (): void => {
   show.value = !show.value;
 };
 
-onMounted(() => {
-  store.fetchFromApi("EnumValues");
+onMounted((): void => {
+  store.fetchFromApi('EnumValues');
 });
 </script>
 

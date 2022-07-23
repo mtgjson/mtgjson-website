@@ -73,38 +73,39 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import supporters from "../static/supporters.json";
-import contributors from "../static/contributors.json";
+import supporters from '../static/supporters.json';
+import contributors from '../static/contributors.json';
 import { formatTime } from '../util';
 
-const patrons = supporters.patrons;
-const services = supporters.services;
-const projectMsg = 'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.';
+const patrons: object = supporters.patrons;
+const services: object = supporters.services;
+const projectMsg: string =
+  'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.';
 
-onMounted(() => {
-  const lazyImages = Array.from(document.querySelectorAll("img.lazy"));
+onMounted((): void => {
+  const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));
 
-  if ("IntersectionObserver" in window) {
-    let lazyImageObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry) => {
+  if ('IntersectionObserver' in window) {
+    let lazyImageObserver: IntersectionObserver = new IntersectionObserver((entries, observer) => {
+      entries.forEach((entry: IntersectionObserverEntry) => {
         if (entry.isIntersecting) {
-          let lazyImage = entry.target;
+          let lazyImage: HTMLImageElement = entry.target as HTMLImageElement;
           lazyImage.src = lazyImage.dataset.src;
-          lazyImage.classList.remove("lazy");
+          lazyImage.classList.remove('lazy');
           lazyImageObserver.unobserve(lazyImage);
         }
       });
     });
 
-    lazyImages.forEach((lazyImage) => {
+    lazyImages.forEach((lazyImage: HTMLImageElement) => {
       lazyImageObserver.observe(lazyImage);
     });
   } else {
     // Boo, no observer
-    lazyImages.forEach((lazyImage) => {
+    lazyImages.forEach((lazyImage: HTMLImageElement) => {
       lazyImage.src = lazyImage.dataset.src;
-      lazyImage.classList.remove("lazy");
-      lazyImage.classList.add("not-lazy");
+      lazyImage.classList.remove('lazy');
+      lazyImage.classList.add('not-lazy');
     });
   }
 });
@@ -155,7 +156,7 @@ onMounted(() => {
 
         &::before,
         &::after {
-          content: "";
+          content: '';
           display: table;
           clear: both;
         }
@@ -270,7 +271,7 @@ onMounted(() => {
       }
     }
 
-    .supporter[data-tier="mythic"] {
+    .supporter[data-tier='mythic'] {
       .img-wrap {
         height: 125px;
         width: 125px;
@@ -282,7 +283,7 @@ onMounted(() => {
       }
     }
 
-    .supporter[data-tier="rare"] {
+    .supporter[data-tier='rare'] {
       .tier {
         color: var(--yellow-color);
       }

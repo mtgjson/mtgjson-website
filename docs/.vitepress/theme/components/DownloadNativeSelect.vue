@@ -75,40 +75,42 @@
       ) {{ `${fileName}.json.${format}` }}
 </template>
 
-<script setup>
-const props = defineProps({
-  fileName: {
-    type: String,
-    required: true,
-  },
-  fileType: {
-    type: String,
-    default: '',
-  },
-});
+<script setup lang='ts'>
+interface Props {
+  fileName: string;
+  fileType: string;
+}
 
-const compressedFormats = ["bz2", "gz", "xz", "zip"];
+interface HTMLChangeEvent extends Event {
+  target: HTMLFormElement;
+}
 
-const api = 'https://mtgjson.com/api/v5/';
+defineProps<Props>();
+
+const compressedFormats: string[] = ["bz2", "gz", "xz", "zip"];
+const api: string = 'https://mtgjson.com/api/v5/';
 
 /**
  * It is worth noting here that, locally, when downloading a regular JSON file
  * the browser will attempt to open it in itself, this has to to with x-origin
  * issues and should not be the case when live on the server.
  */
-const downloadFile = (e) => {
-  const target = e.target || e.currentTarget;
-  const url = target.value;
-  const fileName = target.options[target.options.selectedIndex].innerText;
-  const placeHolderAnchor = document.createElement("a");
-  let $anchorElement;
+const downloadFile = (e: HTMLChangeEvent) => {
+  const target: any = e.target;
+  const url: string = target.value;
+  const fileName: string = target.options[target.options.selectedIndex].innerText;
+  const placeHolderAnchor: HTMLAnchorElement = document.createElement("a");
+  let $anchorElement: HTMLAnchorElement;
 
   placeHolderAnchor.id = "temp-anchor";
   placeHolderAnchor.href = url;
   placeHolderAnchor.download = fileName;
+
   document.body.appendChild(placeHolderAnchor);
   $anchorElement = document.querySelector("#temp-anchor");
+
   placeHolderAnchor.click();
+
   document.body.removeChild($anchorElement);
 };
 </script>

@@ -6,7 +6,7 @@ header.navbar
     ThemeSwitcher
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import SidebarButton from './SidebarButton.vue';
 import NavMeta from './NavMeta.vue';
 import ThemeSwitcher from './ThemeSwitcher.vue';

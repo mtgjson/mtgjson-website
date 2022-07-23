@@ -5,16 +5,15 @@ ul.sidebar-links
     SidebarLink(v-else, :item="item")
 </template>
 
-<script setup>
-import SidebarGroup from "./SidebarGroup.vue";
-import SidebarLink from "./SidebarLink.vue";
+<script setup lang="ts">
+import SidebarGroup from './SidebarGroup.vue';
+import SidebarLink from './SidebarLink.vue';
 
-const props = defineProps({
-  items: {
-    type: Array,
-    required: true,
-  },
-});
+interface Props {
+  items: [];
+}
+
+defineProps<Props>();
 </script>
 
 <style lang="scss" scoped>
@@ -24,7 +23,7 @@ const props = defineProps({
       position: relative;
 
       &::before {
-        content: "";
+        content: '';
         position: absolute;
         left: -15px;
         top: 7px;

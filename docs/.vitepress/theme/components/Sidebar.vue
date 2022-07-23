@@ -13,18 +13,17 @@ aside.sidebar
     SidebarLinks(:depth="0" :items="items")
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import NavLinks from './NavLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';
 import Search from './Search.vue';
 
-const props = defineProps({
-  items: {
-    type: Array,
-    required: true
-  },
-});
+interface Props {
+  items: any[];
+}
+
+defineProps<Props>();
 </script>
 
 <style lang="scss">

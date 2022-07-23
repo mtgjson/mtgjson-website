@@ -63,43 +63,37 @@
         button.load-more-btn.cta-btn(v-show="canLoadAll", @click="onLoadAll") Show All
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { computed, ref, onMounted } from 'vue';
 import { useStore } from '../store.js';
-
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
-
 import { sort } from '../util';
+import type { IList } from '../@types';
+
+interface Props {
+  file: string;
+  type?: string;
+  disableChecks?: boolean;
+}
 
 const store = useStore();
+const props = defineProps<Props>();
 
-const props = defineProps({
-  file: {
-    type: String,
-    required: true,
-  },
-  type: {
-    type: String,
-    default: '',
-  },
-  disableChecks: {
-    type: Boolean,
-  },
-});
+const lazyOffset: number = 10;
+const canLoadMore = ref<boolean>(true);
+const canLoadAll = ref<boolean>(true);
+const resultsLength = ref<number>(0);
+const resultsTotalLength = ref<number>(0);
+const sorter = ref<any>(null);
+const sortKey = ref<string>('releaseDate:true');
+const sortedList = ref<IList[] | any[]>([]);
 
-const lazyOffset = 10;
-const canLoadMore = ref(true);
-const canLoadAll = ref(true);
-const resultsLength = ref(0);
-const resultsTotalLength = ref(0);
-const sorter = ref(null);
-const sortKey = ref('releaseDate:true');
-const sortedList = ref([]);
-
-const defaultList = computed(() => store[props.file]);
-const listFilters = computed(() => Array.from(new Set(defaultList.value.map((cur) => cur.type))));
-const list = computed(() => {
+const defaultList = computed<IList[] | any[]>((): IList[] | any[] => store[props.file]);
+const listFilters = computed<IList[] | any[]>((): IList[] | any[] =>
+  defaultList.value.map((cur: IList) => cur.type)
+);
+const list = computed<IList[]>((): IList[] => {
   if (sortedList.value.length > 0) {
     return sortedList.value;
   }
@@ -107,11 +101,11 @@ const list = computed(() => {
   return sort(sortKey.value, defaultList.value).slice(0, lazyOffset);
 });
 
-const updateData = (data) => {
+const updateData = (data: IList[]): void => {
   sortedList.value = data;
 };
 
-const updateCounts = (counts) => {
+const updateCounts = (counts: number[]): void => {
   const [currentCount, totalCount] = counts;
 
   if (currentCount === totalCount) {
@@ -122,28 +116,31 @@ const updateCounts = (counts) => {
   resultsTotalLength.value = totalCount;
 };
 
-const onLoadMore = () => {
+const onLoadMore = (): void => {
   sorter.value.onLoadMore();
 };
 
-const onLoadAll = () => {
+const onLoadAll = (): void => {
   sortedList.value = defaultList.value;
-  resultsLength.value = resultsTotalLength;
+  resultsLength.value = resultsTotalLength.value;
 
   removeButtons();
 };
 
-const removeButtons = () => {
+const removeButtons = (): void => {
   canLoadMore.value = false;
   canLoadAll.value = false;
 };
 
-const toggleShowMore = (canShow) => {
+const toggleShowMore = (canShow: boolean): void => {
   canLoadMore.value = canShow;
 };
 
-onMounted(() => {
-  store.fetchFromApi(props.file);
+onMounted(async (): Promise<void> => {
+  if (defaultList.value.length === 0) {
+    await store.fetchFromApi(props.file);
+  }
+
   resultsTotalLength.value = defaultList.value.length;
   resultsLength.value = lazyOffset;
 });

@@ -16,20 +16,18 @@ section.sidebar-group
   SidebarLinks.sidebar-group-items(:items="item.items")
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import { useRoute } from "vitepress";
 import { isActive } from "../util";
-
 import SidebarLinks from './SidebarLinks.vue';
 
-const route = useRoute();
+interface Props {
+  item: object;
+}
 
-const props = defineProps({
-  item: {
-    type: Object,
-    required: true,
-  },
-});
+const route: any = useRoute();
+
+defineProps<Props>();
 </script>
 
 <style lang="scss">

@@ -4,14 +4,11 @@ nav.nav-links
     NavLink(:item="item")
 </template>
 
-<script setup>
-import { computed } from "vue";
+<script setup lang='ts'>
 import { useData } from "vitepress";
-
 import NavLink from "./NavLink.vue";
 
 const { theme } = useData();
-
 const userLinks = theme.value.nav;
 </script>
 

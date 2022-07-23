@@ -4,8 +4,9 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 
 ## Knowledge Requirements
 
+- TypeScript
 - Vue 3 (Composition)
-- Vuex
+- Pinia
 - VitePress
 - Markdown
 - JSON
@@ -18,9 +19,6 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 
 - Node
 - npm
-
-### Optional Requirements
-
 - n
 
 ## Directory Structure
@@ -48,6 +46,7 @@ Files/Directories were omitted that do not help understand this current project 
         ├── generatePages.js # Polyfill script to generate pages metadata for search
         ├── generateSidebar.js # Script to generate the sidebar heirarchy
         └── theme # Visuals
+            ├── @types/ # TypeScript types/interfaces/etc.
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages

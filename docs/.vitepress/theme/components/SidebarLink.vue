@@ -2,10 +2,10 @@
 a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href") {{ link.children }}
 </template>
 
-<script setup>
+<script setup lang="ts">
 import { h, computed } from 'vue';
-import { useData, useRoute } from 'vitepress';
-import { isActive, hashRE } from '../util';
+import { useRoute } from 'vitepress';
+import { isActive } from '../util';
 
 const props = defineProps({
   item: {
@@ -14,15 +14,13 @@ const props = defineProps({
   },
 });
 
-const { theme } = useData();
-const route = useRoute();
+const { item }: { item: any } = props;
+const route: any = useRoute();
 
-const { item } = props;
+const selfActive = computed<boolean>((): boolean => isActive(route, item.link));
+const link = computed<any>((): any => renderLink(h, item.link, item.text || item.link, selfActive.value));
 
-const configDepth = theme.value.sidebarDepth;
-const maxDepth = configDepth === null ? 1 : configDepth;
-
-const renderLink = (h, to, text, active) => {
+const renderLink = (h: any, to: string, text: string, active: boolean): any => {
   return h(
     'a',
     {
@@ -37,35 +35,6 @@ const renderLink = (h, to, text, active) => {
     text
   );
 };
-
-const renderChildren = (h, children, path, route, maxDepth, depth = 1) => {
-  if (!children || depth > maxDepth) {
-    return null;
-  }
-  return h(
-    'ul',
-    { class: 'sidebar-sub-headers' },
-    children.map((c) => {
-      const active = isActive(route, path + '#' + c.slug);
-      return h('li', { class: 'sidebar-sub-header' }, [
-        renderLink(h, path + '#' + c.slug, c.title, active),
-        renderChildren(h, c.children, path, route, maxDepth, depth + 1),
-      ]);
-    })
-  );
-};
-
-const sidebarLink = () => {
-  if (selfActive && item.headers && !hashRE.test(item.link)) {
-    const children = item.headers;
-    return [link, renderChildren(h, children, item.link, route, maxDepth)];
-  } else {
-    return link;
-  }
-}
-
-const selfActive = computed(() => isActive(route, item.link));
-const link = computed(() => renderLink(h, item.link, item.text || item.link, selfActive));
 </script>
 
 <style lang="scss">

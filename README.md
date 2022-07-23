@@ -21,19 +21,11 @@
 
 ### **Installation**
 
-**Option #1 (Preferred)**: Install Node with [brew](https://brew.sh).
+Install Node with [brew](https://brew.sh):
 
 ```
 brew install n
 sudo n 16.16
-```
-
-**Option #2:** Install Node using the [official resources](https://nodejs.org/en/download/releases/) installer.
-
-Install project dependencies.
-
-```
-npm install
 ```
 
 ### **Developing**

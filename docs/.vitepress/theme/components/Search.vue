@@ -28,36 +28,37 @@
             span(v-if="!item.isOwnPage") &hookrightarrow; {{ item.text }}
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 
-const { site, theme } = useData();
+import type { ISearchResult, ISearchResultHeader } from '../@types';
 
-const pages = theme.value.pages;
+const { theme } = useData();
 
-const open = ref(false);
-const input = ref(null);
-const searchTerm = ref('');
+const pages: ISearchResult[] = theme.value.pages;
 
-const results = computed(() => {
-  const res = [];
+const open = ref<boolean>(false);
+const input = ref<HTMLElement | null>(null);
+const searchTerm = ref<string>('');
+
+const results = computed<ISearchResult[]>((): ISearchResult[] => {
+  const res: ISearchResult[] = [];
 
   if (searchTerm.value.length > 0) {
-    pages.forEach((page, index) => {
-      const pageId = index;
-      const pagePath = page.path;
-      const pageTitle = page.title;
-      const pageHeaders = page.headers;
-      const loweredTitle = pageTitle.toLowerCase();
-      const loweredTerm = searchTerm.value.toLowerCase();
+    pages.forEach((page: any, index: number) => {
+      const pagePath: string = page.path;
+      const pageTitle: string = page.title;
+      const pageHeaders: ISearchResultHeader[] = page.headers;
+      const loweredTitle: string = pageTitle.toLowerCase();
+      const loweredTerm: string = searchTerm.value.toLowerCase();
 
       if (Array.isArray(pageHeaders)) {
-        pageHeaders.forEach((anchor) => {
-          const loweredText = anchor.text.toLowerCase();
-          const containsTerms = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
-          const isOwnPage = loweredTitle === loweredText;
-          const isChangelog = loweredTitle.includes('changelog');
+        pageHeaders.forEach((anchor: ISearchResultHeader) => {
+          const loweredText: string = anchor.text.toLowerCase();
+          const containsTerms: boolean = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
+          const isOwnPage: boolean = loweredTitle === loweredText;
+          const isChangelog: boolean = loweredTitle.includes('changelog');
 
           // We keeps records of the changelog pages but do not want them to populate search
           if (isChangelog) {

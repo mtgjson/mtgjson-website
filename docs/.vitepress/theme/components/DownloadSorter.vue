@@ -62,90 +62,86 @@
         a(@click="onHandleReset") Reset Toggles
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import { ref, onMounted } from 'vue';
 import { search, filter, sort, prettifyType } from '../util';
+import type { IList } from '../@types';
+
+interface Props {
+  list: IList[],
+  file: string;
+  type?: string;
+  disableChecks?: boolean;
+}
 
 const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
-const props = defineProps({
-  list: {
-    type: Array,
-    required: true,
-  },
-  filters: {
-    type: Array,
-    required: true,
-  },
-  noChecks: {
-    type: Boolean,
-  },
-});
+const props = defineProps<Props>();
 
-const lazyOffset = ref(10);
-const lazyToLoad = ref(10);
-const filterKey = ref('');
-const searchKey = ref('');
-const spoilerKey = ref(true);
-const onlineKey = ref(true);
-const showOptions = ref(false);
-const sortKey = ref('releaseDate:true');
-const timeout = ref(null);
+const lazyOffset = ref<number>(10);
+const lazyToLoad = ref<number>(10);
+const filterKey = ref<string>('');
+const searchKey = ref<string>('');
+const spoilerKey = ref<boolean>(true);
+const onlineKey = ref<boolean>(true);
+const showOptions = ref<boolean>(false);
+const sortKey = ref<string>('releaseDate:true');
+const timeout = ref<any>(null);
 
-onMounted(() => {
+onMounted((): void => {
   onHandleChange(0);
 });
 
-const emitNewData = (data, counts) => {
+const emitNewData = (data: any, counts: number[]): void => {
   emit('updateData', data);
   emit('updateCount', counts);
 };
 
-const emitShowMoreButtonView = (showButton) => {
+const emitShowMoreButtonView = (showButton: boolean): void => {
   emit('canShowButton', showButton);
 };
 
-const onLoadMore = () => {
+const onLoadMore = (): void => {
   lazyOffset.value = lazyOffset.value + lazyToLoad.value;
 
-  onHandleChange();
+  onHandleChange(0);
 };
 
-const onHandleReset = () => {
+const onHandleReset = (): void => {
   sortKey.value = 'releaseDate:true';
-  lazyOffset.value = lazyToLoad;
+  lazyOffset.value = lazyToLoad.value;
   filterKey.value = '';
   searchKey.value = '';
   spoilerKey.value = true;
   onlineKey.value = true;
 
-  const data = sort(sortKey, props.list);
-  const dynamicData = data.slice(0, lazyOffset);
-  const newListCount = dynamicData.length;
+  const data: IList[] = sort(sortKey, props.list);
+  const dynamicData: IList[] = data.slice(0, lazyOffset.value);
+  const newListCount: number = dynamicData.length;
 
   emitNewData(dynamicData, [newListCount, data.length]);
 };
 
-const onHandleChange = (speed) => {
+const onHandleChange = (speed?: number): void => {
   // Throttle so we don't go nuts
   clearTimeout(timeout.value);
 
   timeout.value = window.setTimeout(() => {
-    const loadMoreEl = document.querySelector('.load-more-btn');
-    const data = props.list;
+    const loadMoreEl: HTMLElement = document.querySelector('.load-more-btn');
+    const data: IList[] = props.list;
     // Remove spoilers data
-    let filteredData = !spoilerKey.value ? data.filter((set) => !set.isPartialPreview) : data;
+    let filteredData: IList[] = !spoilerKey.value ? data.filter((set) => !set.isPartialPreview) : data;
     // Removed online data
     filteredData = !onlineKey.value ? filteredData.filter((set) => !set.isOnlineOnly) : filteredData;
-    const searched = search(searchKey.value, filteredData);
-    const sorted = sort(sortKey.value, searched);
-    const filtered = filter(filterKey.value, sorted);
-    const dynamicData = filtered.slice(0, lazyOffset.value);
-    const newListCount = dynamicData.length;
-    const newListTotalCount = filtered.length;
+    const searched: IList[] = search(searchKey.value, filteredData);
+    const sorted: IList[] = sort(sortKey.value, searched);
+    const filtered: IList[] = filter(filterKey.value, sorted);
+    const dynamicData: IList[] = filtered.slice(0, lazyOffset.value);
+    const newListCount: number = dynamicData.length;
+    const newListTotalCount: number = filtered.length;
 
     emitNewData(dynamicData, [newListCount, newListTotalCount]);
 
-    if (lazyOffset >= filtered.length) {
+    if (lazyOffset.value >= filtered.length) {
       loadMoreEl && loadMoreEl.classList.add('hide');
       emitShowMoreButtonView(false);
     } else {

@@ -17,18 +17,18 @@ main.page
           a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 </template>
 
-<script setup>
+<script setup lang='ts'>
 import { computed } from 'vue';
 import { useData } from 'vitepress';
+import type { ISidebarItem } from '../@types';
 
 const { theme, page } = useData();
 
-const sidebarItems = theme.value.sidebar;
+const sidebarItems: ISidebarItem[] = theme.value.sidebar;
 
-const editLink = computed(() => {
-  const editLink = theme.value.editLink;
-  const link = editLink.pattern + page.value.relativePath;
-  const text = editLink.text;
+const editLink = computed<any>((): any => {
+  const link: string = theme.value.editLink.pattern + page.value.relativePath;
+  const text: string = theme.value.editLink.text;
 
   return {
     link,
@@ -36,25 +36,25 @@ const editLink = computed(() => {
   };
 });
 
-const prev = computed(() => resolvePrev(page, sidebarItems));
-const next = computed(() => resolveNext(page, sidebarItems));
+const prev = computed<ISidebarItem>((): ISidebarItem => resolvePrev(page, sidebarItems));
+const next = computed<ISidebarItem>((): ISidebarItem => resolveNext(page, sidebarItems));
 
-const resolvePrev = (page, items) => {
+const resolvePrev = (page: any, items: ISidebarItem[]) => {
   return find(page, items, -1);
 };
 
-const resolveNext = (page, items) => {
+const resolveNext = (page: any, items: ISidebarItem[]) => {
   return find(page, items, 1);
 };
 
-const find = (page, items, offset) => {
-  const res = [];
+const find = (page: any, items: ISidebarItem[], offset: number) => {
+  const res: ISidebarItem[] = [];
 
   flattern(items, res);
 
   for (let i = 0; i < res.length; i++) {
-    const cur = res[i];
-    const relativePath = '/' + page.value.relativePath.split('index.md')[0];
+    const cur: ISidebarItem = res[i];
+    const relativePath: string = '/' + page.value.relativePath.split('index.md')[0];
 
     if (cur.link === relativePath) {
       return res[i + offset];

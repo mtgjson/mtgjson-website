@@ -37,26 +37,24 @@
       a.version-number(:href="`/changelogs/mtgjson-v5/`") v{{ version }}
 </template>
 
-<script setup>
-import { onMounted, computed } from "vue";
+<script setup lang="ts">
+import { onMounted, computed } from 'vue';
 import { useStore } from '../store.js';
 
-const props = defineProps({
-  width: {
-    type: String,
-    required: true,
-  },
-  hideText: {
-    type: Boolean,
-    required: false,
-  },
-});
+interface Props {
+  width: string;
+  hideText: boolean;
+}
 
 const store = useStore();
 const version = computed(() => store.Meta.version);
 
-onMounted(() => {
-  store.fetchFromApi("Meta");
+defineProps<Props>();
+
+onMounted(async (): Promise<void> => {
+  if (Object.keys(store.Meta).length === 0) {
+    await store.fetchFromApi('Meta');
+  }
 });
 </script>
 
