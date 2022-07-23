@@ -17,6 +17,7 @@
       .search-suggestion(
         v-for="(item, i) of results"
         :key="i"
+        tabindex="0"
       )
         a(
           :key="item.id"
@@ -28,10 +29,9 @@
             span(v-if="!item.isOwnPage") &hookrightarrow; {{ item.text }}
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
-
 import type { ISearchResult, ISearchResultHeader } from '../@types';
 
 const { theme } = useData();
@@ -88,7 +88,7 @@ const results = computed<ISearchResult[]>((): ISearchResult[] => {
   return res;
 });
 
-const openSearch = () => {
+const openSearch = (): void => {
   if (input.value) {
     input.value.focus();
     open.value = true;
@@ -99,7 +99,7 @@ const openSearch = () => {
   }
 };
 
-const cleanSearch = () => {
+const cleanSearch = (): void => {
   open.value = false;
   searchTerm.value = '';
 };
@@ -153,8 +153,10 @@ const cleanSearch = () => {
     }
 
     .search-suggestion {
-      &:hover {
+      &:hover,
+      &:focus {
         background-color: var(--search-item-highlight-color);
+        outline: 0;
       }
 
       a {
