@@ -1,19 +1,11 @@
 ---
 {
-  'meta': [
-    {
-      'name': 'description',
-      'content': 'MTGJSON License (MIT).'
-    },
-    {
-      "property": "og:description",
-      "content": "MTGJSON License (MIT)."
-    },
-    {
-      'name': 'keywords',
-      'content': 'mtg, magic: the gathering, mtgjson, json, license',
-    },
-  ]
+  'meta':
+    [
+      { 'name': 'description', 'content': 'MTGJSON License (MIT).' },
+      { 'property': 'og:description', 'content': 'MTGJSON License (MIT).' },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, license' },
+    ],
 }
 ---
 

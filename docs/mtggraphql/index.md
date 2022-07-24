@@ -1,20 +1,18 @@
 ---
 {
-  "title": "MTGGraphQL",
-  "meta": [
-    {
-      "name": "description",
-      "content": "MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.",
-    },
-    {
-      "property": "og:description",
-      "content": "MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service."
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, graphql, mtggraphql",
-    }
-  ]
+  'title': 'MTGGraphQL',
+  'meta':
+    [
+      {
+        'name': 'description',
+        'content': 'MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.',
+      },
+      {
+        'property': 'og:description',
+        'content': 'MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.',
+      },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, graphql, mtggraphql' },
+    ],
 }
 ---
 
@@ -66,20 +64,8 @@ We provide a [GraphQL Playground](https://graphql.mtgjson.com/) where you can qu
 #### Example Query
 
 ```graphql
-query{
-  cards(
-    input:{
-        name: "Phelddagrif"
-      },
-      page:{
-        take: 100,
-        skip: 0
-      },
-      order:{
-        order:ASC
-      }
-  )
-  {
+query {
+  cards(input: { name: "Phelddagrif" }, page: { take: 100, skip: 0 }, order: { order: ASC }) {
     name
     setCode
     type

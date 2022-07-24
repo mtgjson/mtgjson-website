@@ -1,21 +1,19 @@
 ---
 {
-  "title": "Card (Atomic)",
-  "schema": "card",
-  "meta": [
-    {
-      "name": "description",
-      "content": "The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.",
-    },
-    {
-      "name": "og:description",
-      "content": "The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.",
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, card (atomic)",
-    }
-  ]
+  'title': 'Card (Atomic)',
+  'schema': 'card',
+  'meta':
+    [
+      {
+        'name': 'description',
+        'content': 'The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.',
+      },
+      {
+        'name': 'og:description',
+        'content': 'The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.',
+      },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, card (atomic)' },
+    ],
 }
 ---
 
@@ -24,7 +22,7 @@
 The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
 
 **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)  
-**Parent property:** `data`  
+**Parent property:** `data`
 
 <!-- For some reason tips before TOC will break the TOC, but HTML will not -->
 <blockquote>
@@ -32,14 +30,14 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
   <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card, like such:</p>
   <br />
 
-  ```json
-  "data": {
-    "Oblivion Ring": [
-      <Card (Atomic) Model>
-    ],
-    ...
-  }
-  ```
+```json
+"data": {
+  "Oblivion Ring": [
+    <Card (Atomic) Model>
+  ],
+  ...
+}
+```
 
 </blockquote>
 
@@ -51,152 +49,174 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 ## Model Properties
 
-> ### asciiName  
-> The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.  
+> ### asciiName
 >
-> - **Type:** `string`  
-> - **Introduced:** `v5.0.0`  
+> The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">Optional</i>
 
-> ### colorIdentity  
-> A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.  
+> ### colorIdentity
+>
+> A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
 >
 > - **Type:** `array[] || array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### colorIndicator  
-> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).  
+> ### colorIndicator
+>
+> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 > - **Tags:** <i class="optional">Optional</i>
 
-> ### colors  
+> ### colors
+>
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `array[] || array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost  
+> ### convertedManaCost
+>
 > The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property.
 >
-> - **Type:** `float`  
+> - **Type:** `float`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="deprecated">Deprecated v6.0.0</i>
 
-> ### edhrecRank  
-> The card rank on [EDHRec](https://www.edhrec.com).  
+> ### edhrecRank
 >
-> - **Type:** `integer`  
-> - **Introduced:** `v4.5.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> The card rank on [EDHRec](https://www.edhrec.com).
+>
+> - **Type:** `integer`
+> - **Introduced:** `v4.5.0`
+> - **Tags:** <i class="optional">Optional</i>
 
 > ### faceConvertedManaCost
+>
 > The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
 > - **Tags:** <i class="optional">Optional</i><i class="deprecated">Deprecated v6.0.0</i>
 
-> ### faceManaValue  
+> ### faceManaValue
+>
 > The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
 
-> ### faceName  
-> The name on the face of the card.  
+> ### faceName
 >
-> - **Type:** `string`  
-> - **Introduced:** `v5.0.0`  
+> The name on the face of the card.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">Optional</i>
 
-> ### foreignData  
-> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.  
+> ### foreignData
 >
-> - **Type:** `array[] || array[object]`  
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
+>
+> - **Type:** `array[] || array[object]`
 > - **Introduced:** `v4.0.0`
 
-> ### hand  
-> The starting maximum hand size total modifier. A `+` or `-` character precedes an integer.  
+> ### hand
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.2.1`  
-> - **Tags:** <i class="optional">Optional</i>  
+> The starting maximum hand size total modifier. A `+` or `-` character precedes an integer.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.2.1`
+> - **Tags:** <i class="optional">Optional</i>
 
 > ### hasAlternativeDeckLimit
-> If the card allows a value other than 4 copies in a deck.  
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v5.0.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> If the card allows a value other than 4 copies in a deck.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v5.0.0`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### identifiers  
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.  
+> ### identifiers
 >
-> - **Type:** `object{props}`  
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
+>
+> - **Type:** `object{props}`
 > - **Introduced:** `v5.0.0`
 
-> ### isFunny  
+> ### isFunny
+>
 > If the card is part of a funny set.
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v5.2.0`  
+> - **Type:** `boolean`
+> - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
 
-> ### isReserved  
-> If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).  
+> ### isReserved
 >
-> - **Type:** `boolean`  
-> - **Introduced:** `v4.0.1`  
-> - **Tags:** <i class="optional">Optional</i>  
-
-> ### keywords  
-> A list of keywords found on the card.  
+> If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).
 >
-> - **Type:** `array[string]`  
-> - **Introduced:** `v5.1.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> - **Type:** `boolean`
+> - **Introduced:** `v4.0.1`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### layout  
-> The type of card layout. For a token card, this will be `"token"`.  
+> ### keywords
+>
+> A list of keywords found on the card.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v5.1.0`
+> - **Tags:** <i class="optional">Optional</i>
+
+> ### layout
+>
+> The type of card layout. For a token card, this will be `"token"`.
 >
 > - **Type:** `string`
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
-> ### leadershipSkills  
-> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.  
+> ### leadershipSkills
 >
-> - **Type:** `object{props}`  
-> - **Introduced:** `v4.5.1`  
-> - **Tags:** <i class="optional">Optional</i>  
+> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
+>
+> - **Type:** `object{props}`
+> - **Introduced:** `v4.5.1`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### legalities  
-> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.  
+> ### legalities
 >
-> - **Type:** `object{} || object{props}`  
+> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.
+>
+> - **Type:** `object{} || object{props}`
 > - **Introduced:** `v4.0.0`
 
-> ### life  
+> ### life
+>
 > The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.2.1`  
-> - **Tags:** <i class="optional">Optional</i>  
+> - **Type:** `string`
+> - **Introduced:** `v4.2.1`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### loyalty  
+> ### loyalty
+>
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.0.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+> - **Tags:** <i class="optional">Optional</i>
 
 > ### manaCost
+>
 > The mana cost of the card wrapped in brackets for each value.
 >
 > - **Type:** `string`
@@ -205,46 +225,53 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 > - **Tags:** <i class="optional">Optional</i>
 
 > ### manaValue
+>
 > The mana value of the card. Formally known as "converted mana cost".
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">New</i>
 
-> ### name  
+> ### name
+>
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
 >
 > - **Type:** `string`
 > - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
-> ### power  
-> The power of the card.  
+> ### power
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.0.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> The power of the card.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### printings  
-> A list of set printing codes the card was printed in, formatted in uppercase.  
+> ### printings
 >
-> - **Type:** `array[string]`  
-> - **Introduced:** `v4.0.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> A list of set printing codes the card was printed in, formatted in uppercase.
+>
+> - **Type:** `array[string]`
+> - **Introduced:** `v4.0.0`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### purchaseUrls  
-> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.  
+> ### purchaseUrls
 >
-> - **Type:** `object{props}`  
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
+>
+> - **Type:** `object{props}`
 > - **Introduced:** `v4.4.0`
 
-> ### rulings  
-> The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.  
+> ### rulings
 >
-> - **Type:** `array[] || array[object]`  
+> The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
+>
+> - **Type:** `array[] || array[object]`
 > - **Introduced:** `v4.0.0`
 
 > ### side
+>
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
 > - **Type:** `string`
@@ -252,41 +279,47 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 > - **Introduced:** `v4.1.0`
 > - **Tags:** <i class="optional">Optional</i>
 
-> ### subtypes  
-> A list of card subtypes found after em-dash.  
+> ### subtypes
+>
+> A list of card subtypes found after em-dash.
 >
 > - **Type:** `array[] || array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### supertypes  
-> A list of card supertypes found before em-dash.  
+> ### supertypes
+>
+> A list of card supertypes found before em-dash.
 >
 > - **Type:** `array[] || array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### text  
-> The rules text of the card.  
+> ### text
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.0.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> The rules text of the card.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### toughness  
-> The toughness of the card.  
+> ### toughness
 >
-> - **Type:** `string`  
-> - **Introduced:** `v4.0.0`  
-> - **Tags:** <i class="optional">Optional</i>  
+> The toughness of the card.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+> - **Tags:** <i class="optional">Optional</i>
 
-> ### type  
-> The type of the card as visible, including any supertypes and subtypes.  
+> ### type
 >
-> - **Type:** `string`  
+> The type of the card as visible, including any supertypes and subtypes.
+>
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### types  
+> ### types
+>
 > A list of all card types of the card, including Un&#8209;sets and gameplay variants.
 >
 > - **Type:** `array[string]`

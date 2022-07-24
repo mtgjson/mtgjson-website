@@ -22,6 +22,8 @@
 
 MTGJSON provides [Magic: The Gathering](https://magic.wizards.com/en) data for your applications in various file formats.
 
+## Data Index
+
 [[toc]]
 
 ## Files

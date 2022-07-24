@@ -28,14 +28,14 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
   <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card, like such:</p>
   <br />
 
-  ```json
-  "data": {
-    "00010d56-fe38-5e35-8aed-518019aa36a5": [
-      <TCGplayer SKUs Model>
-    ],
-    ...
-  }
-  ```
+```json
+"data": {
+  "00010d56-fe38-5e35-8aed-518019aa36a5": [
+    <TCGplayer SKUs Model>
+  ],
+  ...
+}
+```
 
 </blockquote>
 

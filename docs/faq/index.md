@@ -21,6 +21,8 @@
 
 Here is a list of frequently asked questions from our users since some data can be nuanced.
 
+## Question Index
+
 [[toc]]
 
 > ### Which file should I use for my project?

@@ -1,22 +1,18 @@
 ---
 {
-  "title": "Booster",
-  "meta":
+  'title': 'Booster',
+  'meta':
     [
       {
-        "name": "description",
-        "content": "The Booster abstract Data Model describes how a Set's booster pack may be constructed."
+        'name': 'description',
+        'content': "The Booster abstract Data Model describes how a Set's booster pack may be constructed.",
       },
       {
-        "property": "og:description",
-        "content": "The Booster abstract Data Model describes how a Set's booster pack may be constructed."
+        'property': 'og:description',
+        'content': "The Booster abstract Data Model describes how a Set's booster pack may be constructed.",
       },
-      {
-        "name": "keywords",
-        "content": "mtg, magic: the gathering, mtgjson, json, booster"
-      },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, booster' },
     ],
-  "feed": { "enable": "true" },
 }
 ---
 

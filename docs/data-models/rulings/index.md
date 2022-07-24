@@ -1,21 +1,13 @@
 ---
 {
-  "title": "Rulings",
-  "schema": "rulings",
-  "meta": [
-    {
-      "name": "description",
-      "content": "The Rulings Data Model describes a list of rulings for a Card.",
-    },
-    {
-      "property": "og:description",
-      "content": "The Rulings Data Model describes a list of rulings for a Card."
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, rules, rulings, ruling",
-    }
-  ]
+  'title': 'Rulings',
+  'schema': 'rulings',
+  'meta':
+    [
+      { 'name': 'description', 'content': 'The Rulings Data Model describes a list of rulings for a Card.' },
+      { 'property': 'og:description', 'content': 'The Rulings Data Model describes a list of rulings for a Card.' },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, rules, rulings, ruling' },
+    ],
 }
 ---
 
@@ -34,16 +26,18 @@ The Rulings Data Model describes a list of rulings for a Card.
 
 ## Model Properties
 
-> ### date  
-> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.  
+> ### date
 >
-> - **Type:** `string`  
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.
+>
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Attributes** <i class="optional">Optional</i>
 
-> ### text  
-> The text ruling of the card.  
+> ### text
 >
-> - **Type:** `string`  
+> The text ruling of the card.
+>
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Attributes** <i class="optional">Optional</i>

@@ -81,7 +81,8 @@
   }
 }
 
-// Reset FAQ TOC to regular layout
+// Reset TOC to regular layout on certain pages with less items
+#getting-started,
 #frequently-asked-questions {
   & ~ .table-of-contents {
     ul {

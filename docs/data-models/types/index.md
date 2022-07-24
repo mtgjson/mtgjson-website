@@ -1,21 +1,13 @@
 ---
 {
-  "title": "Types",
-  "schema": "card",
-  "meta": [
-    {
-      "name": "description",
-      "content": "The Types Data Model describes all types available on a Card.",
-    },
-    {
-      "property": "og:description",
-      "content": "The Types Data Model describes all types available on a Card."
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, types",
-    }
-  ]
+  'title': 'Types',
+  'schema': 'card',
+  'meta':
+    [
+      { 'name': 'description', 'content': 'The Types Data Model describes all types available on a Card.' },
+      { 'property': 'og:description', 'content': 'The Types Data Model describes all types available on a Card.' },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, types' },
+    ],
 }
 ---
 
@@ -31,17 +23,20 @@ The Types Data Model describes all types available on a Card.
 <PropertyToggler/>
 
 [[toc]]
+
 ## Model Properties
 
-> ### subTypes  
-> A list of all available subtypes of a type.  
+> ### subTypes
+>
+> A list of all available subtypes of a type.
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### superTypes  
-> A list of all available supertypes of a type.  
+> ### superTypes
+>
+> A list of all available supertypes of a type.
 >
 > - **Type:** `array[string]`
 > - <ExampleField type='supertypes'/>
