@@ -62,11 +62,11 @@ The Identifiers Data Model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">Preview v5.2.1</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
 
 > ### mcmId
 >
-> The [Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) card identifier.
+> The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) card identifier.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
@@ -74,7 +74,7 @@ The Identifiers Data Model describes a list of identifiers associated to a Card.
 
 > ### mcmMetaId
 >
-> The [Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) card meta identifier.
+> The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) card meta identifier.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`

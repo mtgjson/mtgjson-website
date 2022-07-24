@@ -187,13 +187,14 @@ blockquote {
 
       &:empty {
         margin: 0;
+        list-style: none;
       }
     }
 
     li {
       // display: flex;
       // align-items: center;
-      list-style: circle;
+      list-style: disc;
 
       p {
         width: 100%;

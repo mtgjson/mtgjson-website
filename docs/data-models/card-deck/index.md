@@ -63,7 +63,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[string]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">Preview v5.2.1</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
 
 > ### borderColor
 >
@@ -392,7 +392,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='language'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="new">new</i><i class="preview">Preview v5.2.1</i>
+> - **Tags:** <i class="new">new</i><i class="preview">preview v5.2.1</i>
 
 > ### layout
 >

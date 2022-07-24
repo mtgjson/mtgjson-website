@@ -68,7 +68,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > - **Type:** `integer`
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">Preview v5.2.1</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
 
 > ### code
 >
@@ -140,7 +140,7 @@ The Set Data Model describes the properties and values of an individual Set.
 
 > ### mcmId
 >
-> The [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.
+> The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.
 >
 > - **Type:** `integer`
 > - **Introduced:** `v4.4.0`
@@ -148,7 +148,7 @@ The Set Data Model describes the properties and values of an individual Set.
 
 > ### mcmIdExtras
 >
-> The split [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.
+> The split [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.
 >
 > - **Type:** `integer`
 > - **Introduced:** `v5.1.0`
@@ -156,7 +156,7 @@ The Set Data Model describes the properties and values of an individual Set.
 
 > ### mcmName
 >
-> The [Magic Card Market](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set name.
+> The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set name.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
