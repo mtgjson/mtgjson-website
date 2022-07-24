@@ -45,7 +45,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### code
 >
@@ -60,7 +60,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isForeignOnly
 >
@@ -68,7 +68,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isFoilOnly
 >
@@ -83,7 +83,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isOnlineOnly
 >
@@ -98,7 +98,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.6.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isPartialPreview
 >
@@ -106,7 +106,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### keyruneCode
 >
@@ -121,7 +121,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `integer`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### mcmIdExtras
 >
@@ -129,7 +129,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `integer`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### mcmName
 >
@@ -137,7 +137,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### mtgoCode
 >
@@ -145,7 +145,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### name
 >
@@ -160,7 +160,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### releaseDate
 >
@@ -175,7 +175,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### tcgplayerGroupId
 >
@@ -183,7 +183,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > - **Type:** `integer`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### totalSetSize
 >

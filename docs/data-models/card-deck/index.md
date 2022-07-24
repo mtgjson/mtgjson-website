@@ -38,7 +38,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### asciiName
 >
@@ -46,7 +46,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### availability
 >
@@ -63,7 +63,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[string]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i><i class="preview">Preview v5.2.1</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">Preview v5.2.1</i>
 
 > ### borderColor
 >
@@ -79,7 +79,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### colorIdentity
 >
@@ -96,7 +96,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[string]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### colors
 >
@@ -112,7 +112,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated v6.0.0</i>
+> - **Tags:** <i class="deprecated">deprecated v6.0.0</i>
 
 > ### count
 >
@@ -128,7 +128,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='duelDeck'/>
 > - **Introduced:** `v4.2.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### edhrecRank
 >
@@ -136,7 +136,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `integer`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### faceConvertedManaCost
 >
@@ -144,7 +144,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">Optional</i><i class="deprecated">Deprecated v6.0.0</i>
+> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated v6.0.0</i>
 
 > ### faceFlavorName
 >
@@ -152,7 +152,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### faceManaValue
 >
@@ -160,7 +160,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### faceName
 >
@@ -168,7 +168,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### finishes
 >
@@ -177,7 +177,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[] || array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### flavorName
 >
@@ -185,7 +185,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### flavorText
 >
@@ -193,7 +193,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### foreignData
 >
@@ -209,7 +209,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[string]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### frameVersion
 >
@@ -225,7 +225,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### hasAlternativeDeckLimit
 >
@@ -233,7 +233,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### hasContentWarning
 >
@@ -241,7 +241,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### hasFoil
 >
@@ -249,7 +249,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
 
 > ### hasNonFoil
 >
@@ -257,7 +257,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">Deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
 
 > ### identifiers
 >
@@ -272,7 +272,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.2.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isFoil
 >
@@ -287,7 +287,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isFunny
 >
@@ -295,7 +295,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isOnlineOnly
 >
@@ -303,7 +303,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isOversized
 >
@@ -311,7 +311,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isPromo
 >
@@ -319,7 +319,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isRebalanced
 >
@@ -327,7 +327,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### isReprint
 >
@@ -335,7 +335,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isReserved
 >
@@ -343,7 +343,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isStarter
 >
@@ -351,7 +351,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isStorySpotlight
 >
@@ -359,7 +359,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isTextless
 >
@@ -367,7 +367,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### isTimeshifted
 >
@@ -375,7 +375,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### keywords
 >
@@ -383,7 +383,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### language
 >
@@ -392,7 +392,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='language'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="new">New</i><i class="preview">Preview v5.2.1</i>
+> - **Tags:** <i class="new">new</i><i class="preview">Preview v5.2.1</i>
 
 > ### layout
 >
@@ -408,7 +408,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v4.5.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### legalities
 >
@@ -423,7 +423,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### loyalty
 >
@@ -431,7 +431,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### manaCost
 >
@@ -440,7 +440,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### manaValue
 >
@@ -448,7 +448,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### name
 >
@@ -471,7 +471,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### originalReleaseDate
 >
@@ -479,7 +479,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### originalText
 >
@@ -487,7 +487,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### originalType
 >
@@ -495,7 +495,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### otherFaceIds
 >
@@ -503,7 +503,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v4.6.1`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### power
 >
@@ -511,7 +511,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### printings
 >
@@ -519,7 +519,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### promoTypes
 >
@@ -528,7 +528,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `array[string]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### purchaseUrls
 >
@@ -551,7 +551,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `array[string]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### rulings
 >
@@ -567,7 +567,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='securityStamp'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### setCode
 >
@@ -583,7 +583,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### signature
 >
@@ -591,7 +591,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">Optional</i><i class="new">New</i>
+> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
 > ### subtypes
 >
@@ -615,7 +615,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### toughness
 >
@@ -623,7 +623,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### type
 >
@@ -661,4 +661,4 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>

@@ -39,7 +39,7 @@ The Deck Data Model describes a complete deck reference.
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">Optional</i>
+> - **Tags:** <i class="optional">optional</i>
 
 > ### fileName
 >

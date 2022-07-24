@@ -62,7 +62,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 > - **Type:** `array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### language
 >

@@ -144,7 +144,7 @@ blockquote {
   i.optional,
   i.omitted,
   i.deprecated,
-  .preview,
+  i.preview,
   i.new {
     background-color: var(--light-color);
     color: var(--dark-color);
@@ -178,7 +178,7 @@ blockquote {
   }
 
   ul {
-    margin-left: 0;
+    // margin-left: 0;
     margin-bottom: 0;
     margin-top: 1rem;
 
@@ -191,8 +191,9 @@ blockquote {
     }
 
     li {
-      display: flex;
-      align-items: center;
+      // display: flex;
+      // align-items: center;
+      list-style: circle;
 
       p {
         width: 100%;

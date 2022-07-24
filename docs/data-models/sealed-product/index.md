@@ -38,7 +38,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### name
 >
@@ -46,7 +46,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### purchaseUrls
 >
@@ -54,7 +54,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > - **Type:** `object{props}`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### releaseDate
 >
@@ -62,7 +62,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > - **Type:** `null || string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
 
 > ### uuid
 >
@@ -70,4 +70,4 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">New</i>
+> - **Tags:** <i class="new">new</i>
