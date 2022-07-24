@@ -1,9 +1,9 @@
-import { defineConfig } from 'vitepress';
 import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
 const [abstractModels, dataModels] = generateSidebar(['/abstract-models/', '/data-models/']);
-const pages = generatePages({
+
+export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
@@ -13,7 +13,7 @@ const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portab
 const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
-export default defineConfig({
+export default {
   lang: 'en-US',
   // SEO
   title,
@@ -143,4 +143,4 @@ export default defineConfig({
       },
     ],
   },
-});
+};

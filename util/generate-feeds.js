@@ -1,5 +1,5 @@
 import fs from 'fs';
-import site from '../docs/.vitepress/config';
+import site, { pages } from '../docs/.vitepress/config';
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 
@@ -12,8 +12,6 @@ const BASE_URL = 'https://mtgjson.com';
 const API_URL = BASE_URL + '/api/v5/';
 const CURRENT_DATE = new Date().toISOString();
 const CURRENT_DATE_UTC = new Date().toUTCString();
-
-const pages = site.themeConfig.pages;
 
 const generateJSON = async () => {
   try {
