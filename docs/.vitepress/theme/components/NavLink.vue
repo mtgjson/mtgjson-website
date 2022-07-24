@@ -21,7 +21,7 @@ interface Props {
 
 const props = defineProps<Props>();
 
-const link = computed(() => {
+const link = computed((): string => {
   return ensureExt(props.item.link);
 });
 </script>

@@ -19,27 +19,18 @@ interface Props {
 const { frontmatter } = useData();
 const store = useStore();
 const props = defineProps<Props>();
-
-const show = ref<boolean>(false);
-
+const showAll = ref<boolean>(false);
 const allEnums = computed<object>((): object => store.EnumValues[frontmatter.value.schema]);
-const showAll = computed<boolean>((): boolean => show.value);
 const enums = computed<string[]>((): string[] => {
-  let enums: string[] = [];
-
-  if (allEnums.value) {
-    enums = allEnums.value[props.type];
-
-    if (enums) {
-      return enums.sort();
-    }
+  if(allEnums.value && allEnums.value[props.type]) {
+    return allEnums.value[props.type];
+  } else {
+    return [];
   }
-
-  return enums;
 });
 
 const toggleShowAll = (): void => {
-  show.value = !show.value;
+  showAll.value = !showAll.value;
 };
 
 onMounted((): void => {

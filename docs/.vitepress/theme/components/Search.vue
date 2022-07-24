@@ -46,7 +46,7 @@ const results = computed<ISearchResult[]>((): ISearchResult[] => {
   const res: ISearchResult[] = [];
 
   if (searchTerm.value.length > 0) {
-    pages.forEach((page: any, index: number) => {
+    pages.forEach((page: any, index: number): void => {
       const pagePath: string = page.path;
       const pageTitle: string = page.title;
       const pageHeaders: ISearchResultHeader[] = page.headers;
@@ -54,7 +54,7 @@ const results = computed<ISearchResult[]>((): ISearchResult[] => {
       const loweredTerm: string = searchTerm.value.toLowerCase();
 
       if (Array.isArray(pageHeaders)) {
-        pageHeaders.forEach((anchor: ISearchResultHeader) => {
+        pageHeaders.forEach((anchor: ISearchResultHeader): void => {
           const loweredText: string = anchor.text.toLowerCase();
           const containsTerms: boolean = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
           const isOwnPage: boolean = loweredTitle === loweredText;

@@ -93,7 +93,7 @@ const api: string = 'https://mtgjson.com/api/v5/';
  * the browser will attempt to open it in itself, this has to to with x-origin
  * issues and should not be the case when live on the server.
  */
-const downloadFile = (e: HTMLChangeEvent) => {
+const downloadFile = (e: HTMLChangeEvent): void => {
   const target: HTMLFormElement = e.target;
   const url: string = target.value;
   const fileName: string = target.options[target.options.selectedIndex].innerText;

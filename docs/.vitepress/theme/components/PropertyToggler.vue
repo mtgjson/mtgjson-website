@@ -57,7 +57,7 @@ const toggleTOCVariations = (): void => {
   }
 
   // Set all TOC anchor link tags with tag properties
-  propertyBlocks.forEach((propertyBlock: HTMLElement) => {
+  propertyBlocks.forEach((propertyBlock: HTMLElement): void => {
     const blockPropertyName: string = propertyBlock.firstChild.textContent.split('#')[0].trim();
     const tocPropertyElement: HTMLElement = tocAnchorsMap[blockPropertyName];
 
@@ -99,7 +99,7 @@ const toggleBlockOptionals = (doHide: boolean): void => {
 };
 
 const toggleTOCOptionals = (doHide: boolean): void => {
-  allTOCAnchors.value.forEach((tocAnchor: HTMLAnchorElement, index: number) => {
+  allTOCAnchors.value.forEach((tocAnchor: HTMLAnchorElement, index: number): void => {
     const tocPropertyName: string = tocAnchor.innerText;
     const tocListItem: HTMLElement = allTOCAnchors.value[index].parentElement;
 

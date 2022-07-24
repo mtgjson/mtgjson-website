@@ -7,23 +7,20 @@
   Page
 </template>
 
-<script setup>
+<script setup lang='ts'>
+import { ref, computed } from 'vue';
+import { useData } from 'vitepress';
 import Navbar from '../components/Navbar.vue';
 import Page from '../components/Page.vue';
 import Sidebar from '../components/Sidebar.vue';
-
-import { ref, computed } from 'vue';
-import { useData } from 'vitepress';
+import type { ISidebarItem } from '../@types';
 
 const { theme } = useData();
+const isSidebarOpen = ref<boolean>(false);
+const shouldShowSidebar = ref<boolean>(theme.value.sidebar.length > 0);
+const sidebarItems: ISidebarItem[] = theme.value.sidebar;
 
-const isSidebarOpen = ref(false);
-
-const shouldShowSidebar = ref(theme.value.sidebar.length > 0);
-
-const sidebarItems = theme.value.sidebar;
-
-const pageClasses = computed(() => {
+const pageClasses = computed((): object[] => {
   return [
     {
       'sidebar-open': isSidebarOpen.value,
@@ -32,7 +29,7 @@ const pageClasses = computed(() => {
   ];
 });
 
-const toggleSidebar = () => {
+const toggleSidebar = (): void => {
   isSidebarOpen.value = isSidebarOpen.value !== true;
 };
 </script>

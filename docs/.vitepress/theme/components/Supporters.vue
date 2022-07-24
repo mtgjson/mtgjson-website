@@ -86,8 +86,8 @@ onMounted((): void => {
   const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));
 
   if ('IntersectionObserver' in window) {
-    let lazyImageObserver: IntersectionObserver = new IntersectionObserver((entries, observer) => {
-      entries.forEach((entry: IntersectionObserverEntry) => {
+    let lazyImageObserver: IntersectionObserver = new IntersectionObserver((entries, observer): void => {
+      entries.forEach((entry: IntersectionObserverEntry): void => {
         if (entry.isIntersecting) {
           let lazyImage: HTMLImageElement = entry.target as HTMLImageElement;
           lazyImage.src = lazyImage.dataset.src;
@@ -97,12 +97,12 @@ onMounted((): void => {
       });
     });
 
-    lazyImages.forEach((lazyImage: HTMLImageElement) => {
+    lazyImages.forEach((lazyImage: HTMLImageElement): void => {
       lazyImageObserver.observe(lazyImage);
     });
   } else {
     // Boo, no observer
-    lazyImages.forEach((lazyImage: HTMLImageElement) => {
+    lazyImages.forEach((lazyImage: HTMLImageElement): void => {
       lazyImage.src = lazyImage.dataset.src;
       lazyImage.classList.remove('lazy');
       lazyImage.classList.add('not-lazy');

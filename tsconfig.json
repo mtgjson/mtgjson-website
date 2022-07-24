@@ -6,6 +6,6 @@
   "vueCompilerOptions": {
     "experimentalDisableTemplateSupport": true
   },
-  "include": ["./docs/.vitepress/**/*.vue"],
+  "include": ["./docs/.vitepress/**/*.vue", "./docs/.vitepress/**/*.ts"],
   "exclude": ["node_modules/"]
 }
