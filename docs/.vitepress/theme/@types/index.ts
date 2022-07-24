@@ -1,3 +1,16 @@
+export interface IStoreRootState {
+  Meta: IMeta,
+  DeckList: IList[],
+  SetList: IList[],
+  EnumValues: any[],
+  ThemeColor: string,
+}
+
+export interface IMeta {
+  date: string;
+  version: string;
+}
+
 export interface IList {
   baseSetSize: number;
   code: string;
