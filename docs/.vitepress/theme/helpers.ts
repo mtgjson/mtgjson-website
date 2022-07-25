@@ -73,7 +73,7 @@ export const search = (terms: string, searchableData: any[]) => {
 export const filter = (filter: string, dataToFilter: any[]) => {
   return filter.length === 0
     ? // No filter, return all data
-      dataToFilter
+    dataToFilter
     : dataToFilter.filter((cur: any) => cur.type === filter);
 };
 
