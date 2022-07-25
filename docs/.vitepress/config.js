@@ -5,7 +5,7 @@ const [abstractModels, dataModels] = generateSidebar(['/abstract-models/', '/dat
 
 export const pages = generatePages({
   INCLUDE_DIR: 'docs',
-  EXCLUDE_DIRS: ['public', '.vitepress', '.vuepress'],
+  EXCLUDE_DIRS: ['public', '.vitepress'],
 });
 
 // SEO data
