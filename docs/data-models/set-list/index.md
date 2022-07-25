@@ -196,7 +196,7 @@ The Set List Data Model describes a metadata-like properties and values for an i
 >
 > The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
 >
-> - **Type:** `object{} || object{props}`
+> - **Type:** `object{} | object{props}`
 > - **Introduced:** `v4.3.2`
 
 > ### type

@@ -25,7 +25,8 @@
 
 // Table of contents
 .table-of-contents {
-  ul {
+  & > ul,
+  & > ol {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-column-gap: 2rem;

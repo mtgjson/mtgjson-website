@@ -2,6 +2,8 @@
 main.page
   Content.page-content
 
+  BackToTop
+
   nav
     .page-nav(v-if="prev || next")
       span.prev(v-if="prev")
@@ -20,6 +22,7 @@ main.page
 <script setup lang='ts'>
 import { computed } from 'vue';
 import { useData } from 'vitepress';
+import BackToTop from './BackToTop.vue';
 import type { ISidebarItem, IEditLink } from '../@types';
 
 const { theme, page } = useData();

@@ -2,7 +2,6 @@
 
 @import './vars';
 @import './reset';
-@import './keyframes';
 @import './custom-blocks';
 @import './typography';
 @import './placeholders';
@@ -34,11 +33,15 @@ body {
 ol, ul {
   margin-left: 1rem;
 
+  &:empty {
+    margin: 0;
+  }
+
   li {
     list-style: disc;
   }
 
-  ul {
+  ol, ul {
     li {
       list-style: circle;
     }
@@ -284,12 +287,6 @@ blockquote {
   word-break: break-word;
   font-weight: bold;
   margin-right: 5px;
-}
-
-// Back to top button
-.go-to-top {
-  color: var(--accent-color) !important;
-  right: 1rem !important;
 }
 
 // Loading spinner

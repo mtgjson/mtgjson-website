@@ -1,5 +1,5 @@
-// Sidebar overrides
-.sidebar-group-items, .sidebar-sub-headers {
+.sidebar-group-items,
+.sidebar-sub-headers {
   .sidebar-link {
     font-size: 16px;
     font-weight: normal;
@@ -9,13 +9,8 @@
       color: var(--accent-color);
     }
   }
-
-  .sidebar-sub-headers {
-    &:empty {
-      display: none;
-    }
-  }
 }
+
 .sidebar-link[href="/mtggraphql/"],
 .sidebar-link[href="/data-models/sealed-product/"] {
   position: relative;

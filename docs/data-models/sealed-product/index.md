@@ -60,7 +60,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product.
 >
-> - **Type:** `null || string`
+> - **Type:** `null | string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
 

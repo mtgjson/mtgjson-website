@@ -85,7 +85,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -102,7 +102,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -174,7 +174,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > The finishes of the card.
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
@@ -199,7 +199,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
 >
-> - **Type:** `array[] || array[object]`
+> - **Type:** `array[] | array[object]`
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects
@@ -414,7 +414,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.
 >
-> - **Type:** `object{} || object{props}`
+> - **Type:** `object{} | object{props}`
 > - **Introduced:** `v4.0.0`
 
 > ### life
@@ -557,7 +557,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
-> - **Type:** `array[] || array[object]`
+> - **Type:** `array[] | array[object]`
 > - **Introduced:** `v4.0.0`
 
 > ### securityStamp
@@ -597,7 +597,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card subtypes found after em-dash.
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -605,7 +605,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card supertypes found before em-dash.
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[] | array[string]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -651,7 +651,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >
-> - **Type:** `array[] || array[string]`
+> - **Type:** `array[] | array[string]`
 > - **Introduced:** `v4.1.2`
 
 > ### watermark
