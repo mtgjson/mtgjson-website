@@ -1,4 +1,4 @@
-import { isExternal } from '../docs/.vitepress/theme/util';
+import { isExternal } from '../docs/.vitepress/theme/helpers';
 
 test('should check that the path is an external link and return true', () => {
   const input = 'https://www.google.com';

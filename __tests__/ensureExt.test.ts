@@ -1,4 +1,4 @@
-import { ensureExt } from '../docs/.vitepress/theme/util';
+import { ensureExt } from '../docs/.vitepress/theme/helpers';
 
 test('should return an external link if it is external', () => {
   const input = 'https://www.google.com';

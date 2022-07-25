@@ -1,4 +1,4 @@
-import { formatTime } from '../docs/.vitepress/theme/util';
+import { formatTime } from '../docs/.vitepress/theme/helpers';
 
 test('should return a single month', () => {
   const inputTime = '2020-12';
@@ -64,17 +64,17 @@ test('should return a multiple years and multiple months', () => {
   expect(returnedTimeString).toBe('(2 Years, 2 Months)');
 });
 
-test('should return something', () => {
-  const inputTime = '2021-01';
-  const returnedTimeString = formatTime(inputTime);
-
-  expect(returnedTimeString.includes(')')).toBe(true);
-});
-
 test('should return an empty string if bad data is passed', () => {
   const inputTime = null;
   const expectedTimeString = '';
   const returnedTimeString = formatTime(inputTime);
 
   expect(returnedTimeString).toEqual(expectedTimeString);
+});
+
+test('should return something', () => {
+  const inputTime = '2021-01';
+  const returnedTimeString = formatTime(inputTime);
+
+  expect(returnedTimeString.includes(')')).toBe(true);
 });

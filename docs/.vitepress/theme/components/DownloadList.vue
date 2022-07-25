@@ -63,8 +63,8 @@ import { computed, ref, onMounted } from 'vue';
 import { useStore } from '../store.js';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
-import { sort } from '../util';
-import type { IList } from '../@types';
+import { sort } from '../helpers';
+import type { IList } from '../types';
 
 interface Props {
   file: string;

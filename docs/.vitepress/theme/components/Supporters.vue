@@ -75,7 +75,7 @@
 import { onMounted } from 'vue';
 import supporters from '../static/supporters.json';
 import contributors from '../static/contributors.json';
-import { formatTime } from '../util';
+import { formatTime } from '../helpers';
 
 const patrons: object = supporters.patrons;
 const services: object = supporters.services;

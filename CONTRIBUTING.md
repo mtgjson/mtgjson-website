@@ -29,37 +29,36 @@ Files/Directories were omitted that do not help understand this current project 
 .
 ├── app.json # Configuration for Heroku review apps. Used for Heroku PR deployments
 ├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
-├── util # Build utilities run during site generation
+├── util # Build utilities
 |   ├── check-version.js # Ensures the developer environment is correct
-│   ├── generate-contributors.js # Utility to generate a github contributors file
-│   └── generate-version-atom.js # Utility to generate a version atom of the site
+│   ├── generate-contributors.js # Utility to generate GitHub contributors JSON
+│   └── generate-feeds.js # Utility to generate RSS and other feeds
 └── docs # Home directory, outputs to `/dist`
     ├── **/index.md # Directories and their route entry point
     ├── public/ # Static assets
     │   ├── images/ # All application images
     │   │   ├── assets/ # MTGJSON specifics
     │   │   └── avatars/ # User/supporters avatars
-    │   ├── */*.* # Any public facing file, like favicons
+    │   ├── *.* # Any public facing file, like favicons
     │   └── robots.txt # For crawlers to index/not index certain pages
     └── .vitepress # Main source files for the application
         ├── config.js # Main VitePress configuration
-        ├── generatePages.js # Polyfill script to generate pages metadata for search
-        ├── generateSidebar.js # Script to generate the sidebar heirarchy
-        └── theme # Visuals
-            ├── @types/ # TypeScript types/interfaces/etc.
+        ├── generatePages.js # Polyfill script to generate pages data for search
+        ├── generateSidebar.js # Polyfill script to generate the sidebar heirarchy
+        └── theme # Themeing for VitePress
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
             │   ├── 404.vue # Layout for error page
             │   └── Layout.vue # Layout for the rest of pages
-            ├── static/ # Static data
-            │   └── *.json # Static JSON
+            ├── static/ # Static data to power Vue components
+            │   └── *.json # JSON
             ├── styles/ # Visual styling
             │   └── *.scss # CSS
-            ├── util/ # Helpers
-            │   └── index.js # Exported functions
-            ├── index.js # Theme config and enhancements
-            └── store.js # Pinia store
+            ├── helpers.ts # Helper functions
+            ├── index.ts # Theme config and enhancements
+            ├── store.ts # Pinia global state store
+            └── types.ts # TypeScript types, interfaces, etc.
 ```
 
 ## VitePress Configuration

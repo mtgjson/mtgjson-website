@@ -5,9 +5,9 @@ a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href") 
 <script setup lang="ts">
 import { h, computed } from 'vue';
 import { useRoute } from 'vitepress';
-import { isActive } from '../util';
+import { isActive } from '../helpers';
 import type { Route } from 'vitepress';
-import type { ISidebarItem } from '../@types';
+import type { ISidebarItem } from '../types';
 
 interface Props {
   item: ISidebarItem;

@@ -64,8 +64,8 @@
 
 <script setup lang='ts'>
 import { ref, onMounted } from 'vue';
-import { search, filter, sort, prettifyType } from '../util';
-import type { IList } from '../@types';
+import { search, filter, sort, prettifyType } from '../helpers';
+import type { IList } from '../types';
 
 interface Props {
   list: IList[],
@@ -114,7 +114,7 @@ const onHandleReset = (): void => {
   spoilerKey.value = true;
   onlineKey.value = true;
 
-  const data: IList[] = sort(sortKey, props.list);
+  const data: IList[] = sort(sortKey.value, props.list);
   const dynamicData: IList[] = data.slice(0, lazyOffset.value);
   const newListCount: number = dynamicData.length;
 

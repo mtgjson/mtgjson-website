@@ -13,7 +13,7 @@ import { useData } from 'vitepress';
 import Navbar from '../components/Navbar.vue';
 import Page from '../components/Page.vue';
 import Sidebar from '../components/Sidebar.vue';
-import type { ISidebarItem } from '../@types';
+import type { ISidebarItem } from '../types';
 
 const { theme } = useData();
 const isSidebarOpen = ref<boolean>(false);

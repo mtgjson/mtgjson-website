@@ -12,7 +12,24 @@ import path from 'path';
 import MarkdownIt from 'markdown-it';
 import MarkdownItAnchor from 'markdown-it-anchor';
 import { load as cherrioParse } from 'cheerio';
-import { slugify } from './theme/util';
+
+const slugify = (str) => {
+  return (
+    str
+      // Remove control characters
+      .replace(/[\u0000-\u001f]/g, '')
+      // Replace special characters
+      .replace(/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?/]+/g, '-')
+      // Remove continuous separators
+      .replace(/\-{2,}/g, '-')
+      // Remove prefixing and trailing separators
+      .replace(/^\-+|\-+$/g, '')
+      // ensure it doesn't start with a number (#121)
+      .replace(/^(\d)/, '_$1')
+      // lowercase
+      .toLowerCase()
+  );
+};
 
 // Config options
 const OPTIONS = {

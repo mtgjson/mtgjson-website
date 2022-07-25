@@ -76,7 +76,7 @@
 </template>
 
 <script setup lang='ts'>
-import type { HTMLChangeEvent } from '../@types';
+import type { HTMLChangeEvent } from '../types';
 
 interface Props {
   fileName: string;

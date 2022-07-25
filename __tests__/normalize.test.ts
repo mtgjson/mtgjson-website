@@ -1,4 +1,4 @@
-import { normalize } from '../docs/.vitepress/theme/util';
+import { normalize } from '../docs/.vitepress/theme/helpers';
 
 test('should take a path with an extension and return a normalized path', () => {
   const input = '/data-models/index.md';

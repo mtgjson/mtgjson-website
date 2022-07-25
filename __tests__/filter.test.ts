@@ -1,4 +1,4 @@
-import { filter } from '../docs/.vitepress/theme/util';
+import { filter } from '../docs/.vitepress/theme/helpers';
 
 test('should return the same data if no filter is passed', () => {
   const dataFilter = '';

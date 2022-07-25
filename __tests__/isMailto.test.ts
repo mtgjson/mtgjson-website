@@ -1,4 +1,4 @@
-import { isMailto } from '../docs/.vitepress/theme/util';
+import { isMailto } from '../docs/.vitepress/theme/helpers';
 
 test('should check that a link has a mailto prefix and return true', () => {
   const input = 'mailto:test@test.com';

@@ -1,4 +1,4 @@
-import { slugify } from "../docs/.vitepress/theme/util";
+import { slugify } from "../docs/.vitepress/theme/helpers";
 
 test('should take a string of various characters and return a url-friendly slug', () => {
   const input = 'Here is a _Weird_ string with character\'s that are-strange.';

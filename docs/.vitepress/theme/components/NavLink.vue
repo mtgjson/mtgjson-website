@@ -10,7 +10,7 @@ a.nav-link.external(
 
 <script setup lang="ts">
 import { computed } from 'vue';
-import { isMailto, isTel, ensureExt } from '../util';
+import { isMailto, isTel, ensureExt } from '../helpers';
 
 interface Props {
   item: {

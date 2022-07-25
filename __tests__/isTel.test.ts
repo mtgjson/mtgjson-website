@@ -1,4 +1,4 @@
-import { isTel } from '../docs/.vitepress/theme/util';
+import { isTel } from '../docs/.vitepress/theme/helpers';
 
 test('should check that a link has a mailto prefix and return true', () => {
   const input = 'tel:5558675309';

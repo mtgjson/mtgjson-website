@@ -1,4 +1,4 @@
-import { sort } from '../docs/.vitepress/theme/util';
+import { sort } from '../docs/.vitepress/theme/helpers';
 
 test('should return the same data if an empty filter is passed', () => {
   const filter = '';
@@ -138,16 +138,4 @@ test('should return sorted data if a filter by recent releaseData by ascending o
   const sorted = sort(filter, data);
 
   expect(sorted).toEqual(expected);
-});
-
-test('should throw a TypeError if no data was passed in and no filter was passed', () => {
-  expect(() => {
-    sort();
-  }).toThrow(TypeError);
-});
-
-test('should throw a TypeError if no data was passed in but a filter was', () => {
-  expect(() => {
-    sort('test-filter');
-  }).toThrow(TypeError);
 });

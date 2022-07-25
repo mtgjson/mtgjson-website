@@ -1,4 +1,4 @@
-import { search } from '../docs/.vitepress/theme/util';
+import { search } from '../docs/.vitepress/theme/helpers';
 
 test('should return the same data if no terms is passed', () => {
   const terms = '';

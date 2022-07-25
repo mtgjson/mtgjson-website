@@ -18,7 +18,7 @@ section.sidebar-group
 
 <script setup lang='ts'>
 import { useRoute } from "vitepress";
-import { isActive } from "../util";
+import { isActive } from "../helpers";
 import SidebarLinks from './SidebarLinks.vue';
 import type { Route } from 'vitepress';
 

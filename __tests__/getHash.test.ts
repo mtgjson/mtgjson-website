@@ -1,4 +1,4 @@
-import { getHash } from '../docs/.vitepress/theme/util';
+import { getHash } from '../docs/.vitepress/theme/helpers';
 
 test('should take a path with a hash and return the hash', () => {
   const input = '/data-models/#heading';

@@ -32,7 +32,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
-import type { ISearchResult, ISearchResultHeader } from '../@types';
+import type { ISearchResult, ISearchResultHeader } from '../types';
 
 const { theme } = useData();
 

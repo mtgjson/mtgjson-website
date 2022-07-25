@@ -23,7 +23,7 @@ main.page
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import BackToTop from './BackToTop.vue';
-import type { ISidebarItem, IEditLink } from '../@types';
+import type { ISidebarItem, IEditLink } from '../types';
 
 const { theme, page } = useData();
 const sidebarItems: ISidebarItem[] = theme.value.sidebar;

@@ -1,4 +1,4 @@
-import { isActive } from "../docs/.vitepress/theme/util";
+import { isActive } from "../docs/.vitepress/theme/helpers";
 
 test('should check if a route and path does not have matching hash and return false', () => {
   const route = {
