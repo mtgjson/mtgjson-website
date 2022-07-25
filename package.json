@@ -14,12 +14,12 @@
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
-    "lint:js:watch": "esw --fix --ext .js,.vue docs/.vitepress -w",
-    "lint:js": "esw --fix --ext .js,.vue docs/.vitepress",
+    "lint:js:watch": "esw --fix --ext .ts,.js,.vue docs/.vitepress -w",
+    "lint:js": "esw --fix --ext .ts,.js,.vue docs/.vitepress",
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
-    "check:version": "node ./util/check-version.js",
-    "generate:contributors": "node ./util/generate-contributors.js",
+    "check:version": "node ./check-version.js",
+    "generate:contributors": "node ./node_modules/.bin/babel-node ./util/generate-contributors.js",
     "generate:feeds": "node ./node_modules/.bin/babel-node ./util/generate-feeds.js"
   },
   "dependencies": {

@@ -52,7 +52,7 @@ Run all tests.
 npm run test
 ```
 
-or run the full tests that Husky will test for.
+or run all the tests and a test build.
 
 ```
 npm run test:full
