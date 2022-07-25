@@ -4,6 +4,7 @@
   'schema': 'purchaseUrls',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Purchase Urls' },
       {
         'name': 'description',
         'content': 'The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.',

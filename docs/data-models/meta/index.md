@@ -4,8 +4,9 @@
   'schema': 'meta',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Meta' },
       { 'name': 'description', 'content': 'The Meta Data Model describes application metadata.' },
-      { 'name': 'og:description', 'content': 'The Meta Data Model describes application metadata.' },
+      { 'property': 'og:description', 'content': 'The Meta Data Model describes application metadata.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, version, meta' },
     ],
 }

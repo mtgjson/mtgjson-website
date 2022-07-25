@@ -3,6 +3,7 @@
   'title': 'All Files',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'All Files' },
       { 'name': 'description', 'content': 'All compiled file download outputs by MTGJSON.' },
       { 'property': 'og:description', 'content': 'All compiled file download outputs by MTGJSON.' },
       {

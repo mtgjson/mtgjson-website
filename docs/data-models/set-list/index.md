@@ -4,12 +4,13 @@
   'schema': 'set',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Set List' },
       {
         'name': 'description',
         'content': 'The Set List Data Model describes a metadata-like properties and values for an individual Set.',
       },
       {
-        'name': 'og:description',
+        'property': 'og:description',
         'content': 'The Set List Data Model describes a metadata-like properties and values for an individual Set.',
       },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, setlist' },

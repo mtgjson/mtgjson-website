@@ -4,6 +4,7 @@
   'schema': 'identifiers',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Identifiers' },
       {
         'name': 'description',
         'content': 'The Identifiers Data Model describes a list of identifiers associated to a Card.',

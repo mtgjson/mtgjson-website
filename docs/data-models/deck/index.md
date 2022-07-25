@@ -4,8 +4,9 @@
   'schema': 'deck',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Deck' },
       { 'name': 'description', 'content': 'The Deck Data Model describes a complete deck reference.' },
-      { 'name': 'og:description', 'content': 'The Deck Data Model describes a complete deck reference.' },
+      { 'property': 'og:description', 'content': 'The Deck Data Model describes a complete deck reference.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, deck, individual deck' },
     ],
 }

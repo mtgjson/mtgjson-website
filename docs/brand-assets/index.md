@@ -1,7 +1,9 @@
 ---
 {
+  'title': 'Brand Assets',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Brand Assets' },
       { 'name': 'description', 'content': 'MTGJSON brand assets.' },
       { 'property': 'og:description', 'content': 'MTGJSON brand assets.' },
       {

@@ -4,8 +4,12 @@
   'schema': 'cardTypes',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Card Types' },
       { 'name': 'description', 'content': 'The Card Types Data Model describes card types that a card may have.' },
-      { 'name': 'og:description', 'content': 'The Card Types Data Model describes card types that a card may have.' },
+      {
+        'property': 'og:description',
+        'content': 'The Card Types Data Model describes card types that a card may have.',
+      },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, card types' },
     ],
 }

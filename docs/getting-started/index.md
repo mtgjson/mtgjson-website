@@ -1,20 +1,13 @@
 ---
 {
-  "title": "Getting Started",
-  "meta": [
-    {
-      "name": "description",
-      "content": "Getting started guide to understanding MTGJSON files.",
-    },
-    {
-      "property": "og:description",
-      "content": "Getting started guide to understanding MTGJSON files."
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, getting started",
-    }
-  ]
+  'title': 'Getting Started',
+  'meta':
+    [
+      { 'property': 'og:title', 'content': 'Getting Started' },
+      { 'name': 'description', 'content': 'Getting started guide to understanding MTGJSON files.' },
+      { 'property': 'og:description', 'content': 'Getting started guide to understanding MTGJSON files.' },
+      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, getting started' },
+    ],
 }
 ---
 

@@ -4,6 +4,7 @@
   'schema': 'tcgplayerSkus',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Tcgplayer Skus' },
       {
         'name': 'description',
         'content': 'The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs.',

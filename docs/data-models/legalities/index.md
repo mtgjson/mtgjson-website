@@ -4,6 +4,7 @@
   'schema': 'legalities',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Legalities' },
       {
         'name': 'description',
         'content': 'The Legalities Data Model describes a list of legalities in play formats for a Card.',

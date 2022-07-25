@@ -4,8 +4,9 @@
   'schema': 'deck',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Deck List' },
       { 'name': 'description', 'content': 'The Deck List Data Model describes a metadata-like model for a Deck.' },
-      { 'name': 'og:description', 'content': 'The Deck List Data Model describes a metadata-like model for a Deck.' },
+      { 'property': 'og:description', 'content': 'The Deck List Data Model describes a metadata-like model for a Deck.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, decklist, deck list' },
     ],
 }

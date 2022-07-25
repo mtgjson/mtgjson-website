@@ -3,6 +3,7 @@
   'title': 'MTGGraphQL Changelog',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'MTGGraphQL Changelog' },
       { 'name': 'description', 'content': 'MTGGraphQL Changelog.' },
       { 'property': 'og:description', 'content': 'MTGGraphQL Changelog.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, mtggraphql changelog, changelog' },

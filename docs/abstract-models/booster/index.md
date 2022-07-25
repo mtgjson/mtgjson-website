@@ -3,6 +3,7 @@
   'title': 'Booster',
   'meta':
     [
+      { 'propoerty': 'og:title', 'content': 'Booster' },
       {
         'name': 'description',
         'content': "The Booster abstract Data Model describes how a Set's booster pack may be constructed.",

@@ -4,6 +4,7 @@
   'schema': 'sealedProduct',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Sealed Product' },
       {
         'name': 'description',
         'content': 'The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.',

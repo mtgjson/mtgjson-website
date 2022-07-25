@@ -4,9 +4,10 @@
   'schema': 'keywords',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Keywords' },
       { 'name': 'description', 'content': 'The Keywords Data Model describes a list of all keywords used on a Card.' },
       {
-        'name': 'og:description',
+        'property': 'og:description',
         'content': 'The Keywords Data Model describes a list of all keywords used on a Card.',
       },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, keywords' },

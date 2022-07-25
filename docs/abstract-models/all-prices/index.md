@@ -3,6 +3,7 @@
   'title': 'All Prices',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'All Prices' },
       {
         'name': 'description',
         'content': 'The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID.',

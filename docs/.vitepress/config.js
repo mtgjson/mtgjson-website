@@ -7,10 +7,8 @@ export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
-
-// SEO data
-const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
-const description =
+export const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
+export const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
 
 export default {

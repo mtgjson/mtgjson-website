@@ -3,6 +3,7 @@
   'title': 'All Decks',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'All Decks' },
       { 'name': 'description', 'content': 'All pre-constructed deck outputs from MTGJSON.' },
       { 'property': 'og:description', 'content': 'All pre-constructed deck outputs from MTGJSON.' },
       {

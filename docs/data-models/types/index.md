@@ -4,6 +4,7 @@
   'schema': 'card',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Types' },
       { 'name': 'description', 'content': 'The Types Data Model describes all types available on a Card.' },
       { 'property': 'og:description', 'content': 'The Types Data Model describes all types available on a Card.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, types' },

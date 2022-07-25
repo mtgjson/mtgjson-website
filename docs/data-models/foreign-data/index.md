@@ -4,6 +4,7 @@
   'schema': 'foreignData',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Foreign Data' },
       {
         'name': 'description',
         'content': 'The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.',

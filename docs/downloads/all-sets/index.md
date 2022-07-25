@@ -4,6 +4,7 @@
   'download': 'SetList',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'All Sets' },
       { 'name': 'description', 'content': 'All individual set downloads outputs from MTGJSON.' },
       { 'property': 'og:description', 'content': 'All individual set downloads outputs from MTGJSON.' },
       {

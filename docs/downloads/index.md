@@ -3,6 +3,7 @@
   'title': 'Downloads',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Downloads' },
       {
         'name': 'description',
         'content': 'MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.',

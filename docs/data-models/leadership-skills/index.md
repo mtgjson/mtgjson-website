@@ -4,6 +4,7 @@
   'schema': 'leadershipSkills',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Leadership Skills' },
       {
         'name': 'description',
         'content': 'The Leadership Skills Data Model describes a list of formats that a Card is legal to be your Commander in play formats that utilize Commanders.',

@@ -4,6 +4,10 @@
   'meta':
     [
       {
+        'property': 'og:title',
+        'content': 'MTGGraphQL'
+      },
+      {
         'name': 'description',
         'content': 'MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.',
       },

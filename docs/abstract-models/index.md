@@ -3,6 +3,7 @@
   'title': 'Abstract Models',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Abstract Models' },
       {
         'name': 'description',
         'content': 'Abstract Models in MTGJSON describe any JSON object or nested JSON object that provides a non-flat response. As such, they will only have two or more levels of nested keys. It is worth noting that most, but not all, Abstract Models are related directly to the models of specific files, like AllPrices or EnumValues.',

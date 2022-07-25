@@ -3,6 +3,7 @@
   'title': 'Enum Values',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Enum Values' },
       {
         'name': 'description',
         'content': 'The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.',

@@ -4,6 +4,7 @@
   'schema': 'rulings',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Rulings' },
       { 'name': 'description', 'content': 'The Rulings Data Model describes a list of rulings for a Card.' },
       { 'property': 'og:description', 'content': 'The Rulings Data Model describes a list of rulings for a Card.' },
       { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, rules, rulings, ruling' },

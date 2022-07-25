@@ -4,6 +4,7 @@
   'schema': 'card',
   'meta':
     [
+      { 'property': 'og:title', 'content': 'Card (Token)' },
       {
         'name': 'description',
         'content': 'The Card (Token) Data Model describes the properties and values of a single token card.',

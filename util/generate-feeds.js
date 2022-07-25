@@ -1,5 +1,5 @@
 import fs from 'fs';
-import site, { pages } from '../docs/.vitepress/config';
+import { title, description, pages } from '../docs/.vitepress/config';
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 
@@ -7,6 +7,9 @@ const JSON_FILE_NAME = 'site.json';
 const RSS_FILE_NAME = 'site.rss';
 const XML_FILE_NAME = 'atom.xml';
 const ATOM_FILE_NAME = 'changelog.atom';
+
+const SITE_TITLE = title;
+const SITE_DESCRIPTION = description;
 
 const BASE_URL = 'https://mtgjson.com';
 const API_URL = BASE_URL + '/api/v5/';
@@ -19,8 +22,8 @@ const generateJSON = async () => {
       version: 'https://jsonfeed.org/version/1',
       home_page_url: BASE_URL,
       feed_url: `${BASE_URL}/${JSON_FILE_NAME}`,
-      title: site.title,
-      description: site.description,
+      title: SITE_TITLE,
+      description: SITE_DESCRIPTION,
       items: [],
     };
 
@@ -47,9 +50,9 @@ const generateXML = async () => {
     const xmlStart = `
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
-  <id>urn:uuid:${uuid(site.title, uuid.URL)}</id>
-  <title>${site.title}</title>
-  <subtitle>${site.description}</subtitle>
+  <id>urn:uuid:${uuid(SITE_TITLE, uuid.URL)}</id>
+  <title>${SITE_TITLE}</title>
+  <subtitle>${SITE_DESCRIPTION}</subtitle>
   <updated>${CURRENT_DATE}</updated>
   <link rel="alternate" href="${BASE_URL}"/>
   <link rel="self" href="${BASE_URL}/${XML_FILE_NAME}"/>
@@ -87,9 +90,9 @@ const generateRSS = async () => {
   <?xml version="1.0" encoding="utf-8"?>
   <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
     <channel>
-      <title>${site.title}</title>
+      <title>${SITE_TITLE}</title>
       <link>${BASE_URL}</link>
-      <description>${site.description}</description>
+      <description>${SITE_DESCRIPTION}</description>
       <lastBuildDate>${CURRENT_DATE_UTC}</lastBuildDate>
       <docs>http://blogs.law.harvard.edu/tech/rss</docs>
       <atom:link href="${BASE_URL}/${XML_FILE_NAME}" rel="self" type="application/rss+xml"/>
