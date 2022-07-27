@@ -1,21 +1,19 @@
 ---
-{
-  'title': 'Set',
-  'schema': 'set',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Set' },
-      {
-        'name': 'description',
-        'content': 'The Set Data Model describes the properties and values of an individual Set.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Set Data Model describes the properties and values of an individual Set.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, set, individual set' },
-    ],
-}
+title: Set
+enum: set
+head:
+  - - meta
+    - property: og:title
+      content: Set
+  - - meta
+    - name: description
+      content: The Set Data Model describes the properties and values of an individual Set.
+  - - meta
+    - property: og:description
+      content: The Set Data Model describes the properties and values of an individual Set.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, set
 ---
 
 # Set

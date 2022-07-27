@@ -1,21 +1,18 @@
 ---
-{
-  'title': 'Leadership Skills',
-  'schema': 'leadershipSkills',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Leadership Skills' },
-      {
-        'name': 'description',
-        'content': 'The Leadership Skills Data Model describes a list of formats that a Card is legal to be your Commander in play formats that utilize Commanders.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Leadership Skills Data Model describes a list of formats that a Card is legal to be your Commander in play formats that utilize Commanders.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, leadership skills, commander' },
-    ],
-}
+title: Leadership Skills
+head:
+  - - meta
+    - property: og:title
+      content: Leadership Skills
+  - - meta
+    - name: description
+      content: The Leadership Skills Data Model describes a list of formats that a Card is legal to be your Commander in play formats that utilize Commanders.
+  - - meta
+    - property: og:description
+      content: The Leadership Skills Data Model describes a list of formats that a Card is legal to be your Commander in play formats that utilize Commanders.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, leadership skills
 ---
 
 # Leadership Skills

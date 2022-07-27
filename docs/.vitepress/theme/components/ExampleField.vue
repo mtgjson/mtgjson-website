@@ -20,7 +20,7 @@ const { frontmatter } = useData();
 const store = useStore();
 const props = defineProps<Props>();
 const showAll = ref<boolean>(false);
-const allEnums = computed<object>((): object => store.EnumValues[frontmatter.value.schema]);
+const allEnums = computed<object>((): object => store.EnumValues[frontmatter.value.enum]);
 const enums = computed<string[]>((): string[] => {
   if(allEnums.value && allEnums.value[props.type]) {
     return allEnums.value[props.type];

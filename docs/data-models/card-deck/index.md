@@ -1,21 +1,19 @@
 ---
-{
-  'title': 'Card (Deck)',
-  'schema': 'card',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Card (Deck)' },
-      {
-        'name': 'description',
-        'content': 'The Card (Deck) Data Model describes the properties and values of a single card in a deck.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Card (Deck) Data Model describes the properties and values of a single card in a deck.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, card (deck)' },
-    ],
-}
+title: Card (Deck)
+enum: card
+head:
+  - - meta
+    - property: og:title
+      content: Card (Deck)
+  - - meta
+    - name: description
+      content: The Card (Deck) Data Model describes the properties and values of a single card in a deck.
+  - - meta
+    - property: og:description
+      content: The Card (Deck) Data Model describes the properties and values of a single card in a deck.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, card, card deck
 ---
 
 # Card (Deck)

@@ -1,20 +1,18 @@
 ---
-{
-  'title': 'All Prices',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'All Prices' },
-      {
-        'name': 'description',
-        'content': 'The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, all prices, prices' },
-    ],
-}
+title: All Prices
+head:
+  - - meta
+    - property: og:title
+      content: All Prices
+  - - meta
+    - name: description
+      content: The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID.
+  - - meta
+    - property: og:description
+      content: The All Prices abstract Data Model describes a list of card prices based on a MTGJSON Card UUID.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, all prices
 ---
 
 # All Prices

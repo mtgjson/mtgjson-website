@@ -1,17 +1,18 @@
 ---
-{
-  'title': 'Brand Assets',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Brand Assets' },
-      { 'name': 'description', 'content': 'MTGJSON brand assets.' },
-      { 'property': 'og:description', 'content': 'MTGJSON brand assets.' },
-      {
-        'name': 'keywords',
-        'content': 'mtg, magic: the gathering, mtgjson, json, branding, branding assets, brand, assets, logo',
-      },
-    ],
-}
+title: Brand Assets
+head:
+  - - meta
+    - property: og:title
+      content: Brand Assets
+  - - meta
+    - name: description
+      content: Brand assets for MTGJSON.
+  - - meta
+    - property: og:description
+      content: Brand assets for MTGJSON.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, branding, brand assets
 ---
 
 # Brand Assets

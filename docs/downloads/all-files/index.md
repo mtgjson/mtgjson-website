@@ -1,17 +1,18 @@
 ---
-{
-  'title': 'All Files',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'All Files' },
-      { 'name': 'description', 'content': 'All compiled file download outputs by MTGJSON.' },
-      { 'property': 'og:description', 'content': 'All compiled file download outputs by MTGJSON.' },
-      {
-        'name': 'keywords',
-        'content': 'mtg, magic: the gathering, mtgjson, json, downloads, download, files, all files',
-      },
-    ],
-}
+title: All Files
+head:
+  - - meta
+    - property: og:title
+      content: All Files
+  - - meta
+    - name: description
+      content: All compiled file download outputs by MTGJSON.
+  - - meta
+    - property: og:description
+      content: All compiled file download outputs by MTGJSON.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, all files
 ---
 
 # All Files

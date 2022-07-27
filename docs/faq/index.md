@@ -1,17 +1,18 @@
 ---
-{
-  'title': 'Frequently Asked Questions',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Freaquently Asked Questions' },
-      { 'name': 'description', 'content': 'Frequently asked questions about MTGJSON and MTGJSON documentation.' },
-      {
-        'property': 'og:description',
-        'content': 'Frequently asked questions about MTGJSON and MTGJSON documentation.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, faq, frequently asked questions' },
-    ],
-}
+title: Frequently Asked Questions
+head:
+  - - meta
+    - property: og:title
+      content: Frequently Asked Questions
+  - - meta
+    - name: description
+      content: Frequently Asked Questions for MTGJSON and documentation.
+  - - meta
+    - property: og:description
+      content: Frequently Asked Questions for MTGJSON and documentation.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, frequently asked questions, faq
 ---
 
 # Frequently Asked Questions

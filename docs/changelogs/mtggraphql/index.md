@@ -1,14 +1,18 @@
 ---
-{
-  'title': 'MTGGraphQL Changelog',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'MTGGraphQL Changelog' },
-      { 'name': 'description', 'content': 'MTGGraphQL Changelog.' },
-      { 'property': 'og:description', 'content': 'MTGGraphQL Changelog.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, mtggraphql changelog, changelog' },
-    ],
-}
+title: MTGGraphQL Changelog
+head:
+  - - meta
+    - property: og:title
+      content: MTGGraphQL Changelog
+  - - meta
+    - name: description
+      content: The changelog for the MTGGraphQL application.
+  - - meta
+    - property: og:description
+      content: The changelog for the MTGGraphQL application.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, mtggraphql, graphql
 ---
 
 # MTGGraphQL Changelog

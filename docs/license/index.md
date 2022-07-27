@@ -1,14 +1,18 @@
 ---
-{
-  'title': 'MTGJSON License (MIT)',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'MTGJSON License (MIT).' },
-      { 'name': 'description', 'content': 'Usage license for MTGJSON and the MTGJSON documentation.' },
-      { 'property': 'og:description', 'content': 'Usage license for MTGJSON and the MTGJSON documentation.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, license' },
-    ],
-}
+title: MTGJSON License (MIT)
+head:
+  - - meta
+    - property: og:title
+      content: MTGJSON License (MIT)
+  - - meta
+    - name: description
+      content: Usage license for MTGJSON and documentation.
+  - - meta
+    - property: og:description
+      content: Usage license for MTGJSON and documentation.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, license
 ---
 
 # MTGJSON License (MIT)

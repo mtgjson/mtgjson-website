@@ -1,21 +1,18 @@
 ---
-{
-  'title': 'Identifiers',
-  'schema': 'identifiers',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Identifiers' },
-      {
-        'name': 'description',
-        'content': 'The Identifiers Data Model describes a list of identifiers associated to a Card.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Identifiers Data Model describes a list of identifiers associated to a Card.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, identifiers' },
-    ],
-}
+title: Identifiers
+head:
+  - - meta
+    - property: og:title
+      content: Identifiers
+  - - meta
+    - name: description
+      content: The Identifiers Data Model describes a list of identifiers associated to a Card.
+  - - meta
+    - property: og:description
+      content: The Identifiers Data Model describes a list of identifiers associated to a Card.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, identifiers
 ---
 
 # Identifiers

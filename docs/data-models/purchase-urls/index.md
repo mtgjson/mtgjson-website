@@ -1,21 +1,18 @@
 ---
-{
-  'title': 'Purchase Urls',
-  'schema': 'purchaseUrls',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Purchase Urls' },
-      {
-        'name': 'description',
-        'content': 'The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, purchaseUrls, purchase urls' },
-    ],
-}
+title: Purchase Urls
+head:
+  - - meta
+    - property: og:title
+      content: Purchase Urls
+  - - meta
+    - name: description
+      content: The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.
+  - - meta
+    - property: og:description
+      content: The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, purchase urls
 ---
 
 # Purchase Urls

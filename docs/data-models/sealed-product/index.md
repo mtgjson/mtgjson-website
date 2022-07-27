@@ -1,21 +1,18 @@
 ---
-{
-  'title': 'Sealed Product',
-  'schema': 'sealedProduct',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Sealed Product' },
-      {
-        'name': 'description',
-        'content': 'The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, sealed product' },
-    ],
-}
+title: Sealed Product
+head:
+  - - meta
+    - property: og:title
+      content: Sealed Product
+  - - meta
+    - name: description
+      content: The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.
+  - - meta
+    - property: og:description
+      content: The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, sealed product
 ---
 
 # Sealed Product

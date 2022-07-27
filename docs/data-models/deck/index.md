@@ -1,15 +1,19 @@
 ---
-{
-  'title': 'Deck',
-  'schema': 'deck',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Deck' },
-      { 'name': 'description', 'content': 'The Deck Data Model describes a complete deck reference.' },
-      { 'property': 'og:description', 'content': 'The Deck Data Model describes a complete deck reference.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, deck, individual deck' },
-    ],
-}
+title: Deck
+enum: deck
+head:
+  - - meta
+    - property: og:title
+      content: Deck
+  - - meta
+    - name: description
+      content: The Deck Data Model describes a complete deck reference.
+  - - meta
+    - property: og:description
+      content: The Deck Data Model describes a complete deck reference.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, deck
 ---
 
 # Deck

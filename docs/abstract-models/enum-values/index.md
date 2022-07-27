@@ -1,20 +1,18 @@
 ---
-{
-  'title': 'Enum Values',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Enum Values' },
-      {
-        'name': 'description',
-        'content': 'The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, enum values, values' },
-    ],
-}
+title: Enum Values
+head:
+  - - meta
+    - property: og:title
+      content: Enum Values
+  - - meta
+    - name: description
+      content: The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.
+  - - meta
+    - property: og:description
+      content: The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, enum values
 ---
 
 # Enum Values

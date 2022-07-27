@@ -1,26 +1,24 @@
 ---
-{
-  'title': 'Set List',
-  'schema': 'set',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Set List' },
-      {
-        'name': 'description',
-        'content': 'The Set List Data Model describes a metadata-like properties and values for an individual Set.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Set List Data Model describes a metadata-like properties and values for an individual Set.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, setlist' },
-    ],
-}
+title: Set List
+enum: set
+head:
+  - - meta
+    - property: og:title
+      content: Set List
+  - - meta
+    - name: description
+      content: The Set List Data Model describes metadata-like properties and values for an individual Set.
+  - - meta
+    - property: og:description
+      content: The Set List Data Model describes metadata-like properties and values for an individual Set.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, set list
 ---
 
 # Set List
 
-The Set List Data Model describes a metadata-like properties and values for an individual [Set](/data-models/set/).
+The Set List Data Model describes metadata-like properties and values for an individual [Set](/data-models/set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
 **Parent property:** `data`

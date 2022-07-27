@@ -1,21 +1,19 @@
 ---
-{
-  'title': 'Tcgplayer Skus',
-  'schema': 'tcgplayerSkus',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Tcgplayer Skus' },
-      {
-        'name': 'description',
-        'content': 'The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The TCGplayer SKUs Data Model describes TCGplayer SKU values based on MTJSON Card UUIDs.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, tcgplayer, tcgplayer skus' },
-    ],
-}
+title: Tcgplayer Skus
+enum: set
+head:
+  - - meta
+    - property: og:title
+      content: Tcgplayer Skus
+  - - meta
+    - name: description
+      content: The Tcgplayer Skus Data Model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
+  - - meta
+    - property: og:description
+      content: The Tcgplayer Skus Data Model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, tcgplayer skus
 ---
 
 # Tcgplayer Skus

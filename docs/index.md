@@ -1,13 +1,18 @@
 ---
-{
-  'title': 'MTGJSON',
-  'meta':
-    [
-      { 'name': 'description', 'content': 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.' },
-      { 'property': 'og:description', 'content': 'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, about' },
-    ],
-}
+title: MTGJSON
+head:
+  - - meta
+    - property: og:title
+      content: MTGJSON
+  - - meta
+    - name: description
+      content: MTGJSON is an open-source project that catalogs all Magic The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.
+  - - meta
+    - property: og:description
+      content: MTGJSON is an open-source project that catalogs all Magic The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, about, home
 ---
 
 # MTGJSON

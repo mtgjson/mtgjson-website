@@ -1,14 +1,18 @@
 ---
-{
-  'title': 'Getting Started',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Getting Started' },
-      { 'name': 'description', 'content': 'Getting started guide to understanding MTGJSON files.' },
-      { 'property': 'og:description', 'content': 'Getting started guide to understanding MTGJSON files.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, getting started' },
-    ],
-}
+title: Getting Started
+head:
+  - - meta
+    - property: og:title
+      content: Getting Started
+  - - meta
+    - name: description
+      content: Guides for getting started with MTGJSON data.
+  - - meta
+    - property: og:description
+      content: Guides for getting started with MTGJSON data.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, getting started, guides
 ---
 
 # Getting Started

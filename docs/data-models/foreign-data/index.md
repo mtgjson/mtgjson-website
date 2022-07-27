@@ -1,21 +1,19 @@
 ---
-{
-  'title': 'Foreign Data',
-  'schema': 'foreignData',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Foreign Data' },
-      {
-        'name': 'description',
-        'content': 'The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, foreigndata, foreign data' },
-    ],
-}
+title: Foreign Data
+enum: foreignData
+head:
+  - - meta
+    - property: og:title
+      content: Foreign Data
+  - - meta
+    - name: description
+      content: The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.
+  - - meta
+    - property: og:description
+      content: The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, foreign data
 ---
 
 # Foreign Data

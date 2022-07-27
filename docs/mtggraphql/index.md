@@ -1,23 +1,18 @@
 ---
-{
-  'title': 'MTGGraphQL',
-  'meta':
-    [
-      {
-        'property': 'og:title',
-        'content': 'MTGGraphQL'
-      },
-      {
-        'name': 'description',
-        'content': 'MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, graphql, mtggraphql' },
-    ],
-}
+title: MTGGraphQL
+head:
+  - - meta
+    - property: og:title
+      content: MTGGraphQL
+  - - meta
+    - name: description
+      content: MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.
+  - - meta
+    - property: og:description
+      content: MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, graphql, mtggraphql
 ---
 
 # MTGGraphQL

@@ -1,18 +1,19 @@
 ---
-{
-  'title': 'Keywords',
-  'schema': 'keywords',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Keywords' },
-      { 'name': 'description', 'content': 'The Keywords Data Model describes a list of all keywords used on a Card.' },
-      {
-        'property': 'og:description',
-        'content': 'The Keywords Data Model describes a list of all keywords used on a Card.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, keywords' },
-    ],
-}
+title: Keywords
+enum: keywords
+head:
+  - - meta
+    - property: og:title
+      content: Keywords
+  - - meta
+    - name: description
+      content: The Keywords Data Model describes a list of all keywords used on a Card.
+  - - meta
+    - property: og:description
+      content: The Keywords Data Model describes a list of all keywords used on a Card.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, keywords
 ---
 
 # Keywords

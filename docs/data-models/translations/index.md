@@ -1,21 +1,18 @@
 ---
-{
-  'title': 'Translations',
-  'schema': 'translations',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Translations' },
-      {
-        'name': 'description',
-        'content': 'The Translations Data Model describes a Set name translated per available language.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Translations Data Model describes a Set name translated per available language.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, translations' },
-    ],
-}
+title: Translations
+head:
+  - - meta
+    - property: og:title
+      content: Translations
+  - - meta
+    - name: description
+      content: The Translations Data Model describes a Set name translated per available language.
+  - - meta
+    - property: og:description
+      content: The Translations Data Model describes a Set name translated per available language.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, translations
 ---
 
 # Translations

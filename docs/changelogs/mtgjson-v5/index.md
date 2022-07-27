@@ -1,14 +1,18 @@
 ---
-{
-  'title': 'MTGJSON Changelog',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'MTGJSON Changelog' },
-      { 'name': 'description', 'content': 'MTGJSON v5 Changelog.' },
-      { 'property': 'og:description', 'content': 'MTGJSON v5 Changelog.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, changelog' },
-    ],
-}
+title: MTGJSON Changelog
+head:
+  - - meta
+    - property: og:title
+      content: MTGJSON Changelog
+  - - meta
+    - name: description
+      content: The changelog for the MTGJSON application.
+  - - meta
+    - property: og:description
+      content: The changelog for the MTGJSON application.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, mtgjson changelog
 ---
 
 # MTGJSON Changelog

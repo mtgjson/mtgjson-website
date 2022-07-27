@@ -1,27 +1,25 @@
 ---
-{
-  'title': 'Data Models',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Data Models' },
-      {
-        'name': 'description',
-        'content': 'Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, Data Models' },
-    ],
-}
+title: Data Models
+head:
+  - - meta
+    - property: og:title
+      content: Data Models
+  - - meta
+    - name: description
+      content: Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.
+  - - meta
+    - property: og:description
+      content: Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, data models
 ---
 
 # Data Models
 
 Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.
 
-For example, any <strong>Data Model</strong> would look similar to this:
+For example, any **Data Model** would look similar to this:
 
 ```json
 "<Parent Property>": {

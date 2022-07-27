@@ -1,14 +1,18 @@
 ---
-{
-  'title': 'Changelogs',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Changelogs' },
-      { 'name': 'description', 'content': 'Various Changelogs.' },
-      { 'property': 'og:description', 'content': 'Various Changelog.' },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, changelogs' },
-    ],
-}
+title: Changelogs
+head:
+  - - meta
+    - property: og:title
+      content: Changelogs
+  - - meta
+    - name: description
+      content: Various Changelogs.
+  - - meta
+    - property: og:description
+      content: Various Changelogs.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, changelogs
 ---
 
 # Changelogs

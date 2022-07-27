@@ -1,21 +1,19 @@
 ---
-{
-  'title': 'Card (Atomic)',
-  'schema': 'card',
-  'meta':
-    [
-      { 'property': 'og:title', 'content': 'Card (Atomic)' },
-      {
-        'name': 'description',
-        'content': 'The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.',
-      },
-      {
-        'property': 'og:description',
-        'content': 'The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data about a card that would never change from printing to printing.',
-      },
-      { 'name': 'keywords', 'content': 'mtg, magic: the gathering, mtgjson, json, card (atomic)' },
-    ],
-}
+title: Card (Atomic)
+enum: card
+head:
+  - - meta
+    - property: og:title
+      content: Card (Atomic)
+  - - meta
+    - name: description
+      content: The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
+  - - meta
+    - property: og:description
+      content: The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data about a card that would never change from printing to printing.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, card, card atomic
 ---
 
 # Card (Atomic)
