@@ -1,7 +1,7 @@
 <template lang="pug">
 .supporters
+  h2 Contributors
   .supporters-wrap(v-if="contributors")
-    h2 Contributors
     p MTGJSON is a labor of love and we would not have come as far as we have without our code contributors.
     ul.contributors-list
       li(v-for="(contributor, key) in contributors", :key="key")

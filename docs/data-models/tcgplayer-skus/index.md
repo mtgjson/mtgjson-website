@@ -1,6 +1,6 @@
 ---
 title: Tcgplayer Skus
-enum: set
+enum: card
 head:
   - - meta
     - property: og:title

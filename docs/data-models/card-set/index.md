@@ -107,7 +107,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 
 > ### convertedManaCost
 >
-> The converted mana cost of the card. Use the [manaValue](/data-models/card-set/#manavalue) property.
+> The converted mana cost of the card. Use the [manaValue](/data-models/card-set/#manavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
@@ -123,7 +123,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 
 > ### faceConvertedManaCost
 >
-> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-set/#facemanavalue) property.
+> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-set/#facemanavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
@@ -139,7 +139,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 
 > ### faceManaValue
 >
-> The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
+> The mana value of the face for either half or part of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
@@ -420,7 +420,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 
 > ### manaValue
 >
-> The mana value of the card. Formally known as "converted mana cost".
+> The mana value of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`

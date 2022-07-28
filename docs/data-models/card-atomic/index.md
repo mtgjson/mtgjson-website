@@ -83,7 +83,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 > ### convertedManaCost
 >
-> The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property.
+> The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
@@ -99,7 +99,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 > ### faceConvertedManaCost
 >
-> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property.
+> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
@@ -107,7 +107,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 > ### faceManaValue
 >
-> The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
+> The mana value of the face for either half or part of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
@@ -225,7 +225,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 > ### manaValue
 >
-> The mana value of the card. Formally known as "converted mana cost".
+> The mana value of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`

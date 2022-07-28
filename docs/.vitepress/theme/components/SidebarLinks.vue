@@ -27,10 +27,10 @@ defineProps<Props>();
         position: absolute;
         left: -15px;
         top: 7px;
-        border: 1px solid var(--text-color);
+        background-color: var(--text-color);
         border-radius: 50%;
-        height: 4px;
-        width: 4px;
+        height: 5px;
+        width: 5px;
       }
 
       &.active {

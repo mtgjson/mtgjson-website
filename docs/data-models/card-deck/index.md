@@ -107,7 +107,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 
 > ### convertedManaCost
 >
-> The converted mana cost of the card. Use the [manaValue](/data-models/card-deck/#manavalue) property.
+> The converted mana cost of the card. Use the [manaValue](/data-models/card-deck/#manavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
@@ -139,7 +139,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 
 > ### faceConvertedManaCost
 >
-> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-deck/#facemanavalue) property.
+> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-deck/#facemanavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
@@ -155,7 +155,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 
 > ### faceManaValue
 >
-> The mana value of the face for either half or part of the card. Formally known as "converted mana cost".
+> The mana value of the face for either half or part of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
@@ -443,7 +443,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 
 > ### manaValue
 >
-> The mana value of the card. Formally known as "converted mana cost".
+> The mana value of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
