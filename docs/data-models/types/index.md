@@ -35,7 +35,7 @@ The Types Data Model describes all types available on a Card.
 >
 > A list of all available subtypes of a type.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -43,6 +43,6 @@ The Types Data Model describes all types available on a Card.
 >
 > A list of all available supertypes of a type.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`

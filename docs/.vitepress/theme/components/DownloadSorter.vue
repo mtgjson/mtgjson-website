@@ -166,7 +166,7 @@ defineExpose({
   z-index: 9;
   padding: 1rem;
   border: 1px solid var(--accent-color);
-  margin-bottom: 1rem;
+  margin-bottom: 2rem;
 
   .show-options {
     display: block;
@@ -220,12 +220,10 @@ defineExpose({
       input {
         flex: 1;
         display: inline;
-        font-size: 14px;
         padding: 0.5rem;
         border-radius: var(--common-radius);
         border: none;
         background-color: var(--gray-1-color);
-        color: var(--dark-color);
         margin-left: 10px;
         max-width: 220px;
       }

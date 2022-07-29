@@ -108,7 +108,7 @@ head:
       content: Card (Set)
   - - meta
     - name: description
-      content: The Card (Set) Data Model describes the properties of a single card in a set.
+      content: The Card (Set) Data Model describes the keys and calues of a single card in a set.
   - - meta
     - property: og:description
       content: The Card (Set) Data Model describes the properties of a single card in a set.
@@ -126,7 +126,7 @@ An example of a property field for a data object field in Markdown:
 >
 > The name of the artist that illustrated the card art.  
 >
-> **Type:** `string`  
+> **Type:** `<string>`  
 > **Introduced:** `v4.0.0`  
 > **Tags:** <i class="optional">optional</i>
 ```

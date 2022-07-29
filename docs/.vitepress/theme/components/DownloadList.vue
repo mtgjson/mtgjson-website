@@ -85,7 +85,7 @@ const sortKey = ref<string>('releaseDate:true');
 const sortedList = ref<IList[] | any[]>([]);
 
 const defaultList = computed<IList[] | any[]>((): IList[] | any[] => store[props.file]);
-const listFilters = computed<IList[] | any[]>((): IList[] | any[] => defaultList.value.map((cur: IList) => cur.type));
+const listFilters = computed<IList[] | any[]>((): IList[] | any[] => Array.from(new Set(defaultList.value.map((cur: IList) => cur.type))));
 const list = computed<IList[]>((): IList[] => {
   if (sortedList.value.length > 0) {
     return sortedList.value;
@@ -206,9 +206,10 @@ onMounted(async (): Promise<void> => {
 
       ol {
         padding: 0;
-        margin: 0 0 0.5rem;
+        margin: 0;
 
-        &.attributes {
+        &.attributes,
+        &.details {
           margin-top: 0.5rem;
         }
 

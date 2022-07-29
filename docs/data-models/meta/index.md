@@ -34,12 +34,12 @@ The Meta Data Model describes application metadata.
 >
 > The current release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the MTGJSON build.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`
 
 > ### version
 >
 > The current [SemVer](https://semver.org) version for the MTGJSON build appended with the build date.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`

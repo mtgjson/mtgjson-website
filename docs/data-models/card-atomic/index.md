@@ -31,9 +31,9 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
   ```json
   "data": {
     "Oblivion Ring": [
-      <Card (Atomic) Model>
+      "<Card (Atomic) Model>"
     ],
-    ...
+    ... // More card names
   }
   ```
 
@@ -59,7 +59,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -67,7 +67,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -75,7 +75,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 > - **Tags:** <i class="optional">optional</i>
@@ -84,7 +84,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -92,7 +92,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead.
 >
-> - **Type:** `float`
+> - **Type:** `<float>`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="deprecated">deprecated (v6.0.0 removal)</i>
 
@@ -100,7 +100,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The card rank on [EDHRec](https://www.edhrec.com).
 >
-> - **Type:** `number`
+> - **Type:** `<number>`
 > - **Introduced:** `v4.5.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -108,7 +108,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead.
 >
-> - **Type:** `float`
+> - **Type:** `<float>`
 > - **Introduced:** `v4.1.1`
 > - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated (v6.0.0 removal)</i>
 
@@ -116,7 +116,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The mana value of the face for either half or part of the card.
 >
-> - **Type:** `float`
+> - **Type:** `<float>`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -124,7 +124,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The name on the face of the card.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -132,14 +132,14 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
 >
-> - **Type:** `object[]`
+> - **Type:** `<object[]>`
 > - **Introduced:** `v4.0.0`
 
 > ### hand
 >
 > The starting maximum hand size total modifier. A `+` or `-` character precedes an integer.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.2.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -147,7 +147,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > If the card allows a value other than 4 copies in a deck.
 >
-> - **Type:** `boolean`
+> - **Type:** `<boolean>`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -155,14 +155,14 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
-> - **Type:** `object`
+> - **Type:** `<object>`
 > - **Introduced:** `v5.0.0`
 
 > ### isFunny
 >
-> If the card is part of a funny set.
+> If the card is part of a funny set, such as an Un-set.
 >
-> - **Type:** `boolean`
+> - **Type:** `<boolean>`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -170,7 +170,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).
 >
-> - **Type:** `boolean`
+> - **Type:** `<boolean>`
 > - **Introduced:** `v4.0.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -178,7 +178,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of keywords found on the card.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -186,7 +186,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The type of card layout. For a token card, this will be `"token"`.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
@@ -194,7 +194,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
 >
-> - **Type:** `object`
+> - **Type:** `<object>`
 > - **Introduced:** `v4.5.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -202,14 +202,14 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.
 >
-> - **Type:** `object`
+> - **Type:** `<object>`
 > - **Introduced:** `v4.0.0`
 
 > ### life
 >
 > The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.2.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -217,15 +217,15 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
 > ### manaCost
 >
-> The mana cost of the card wrapped in brackets for each value.
+> The mana cost of the card wrapped in curly brackets for each value.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
@@ -234,7 +234,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The mana value of the card.
 >
-> - **Type:** `float`
+> - **Type:** `<float>`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
 
@@ -242,7 +242,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
@@ -250,15 +250,15 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The power of the card.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
 > ### printings
 >
-> A list of set printing codes the card was printed in, formatted in uppercase.
+> A list of printing set codes the card was printed in, formatted in uppercase.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -266,21 +266,21 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
 >
-> - **Type:** `object`
+> - **Type:** `<object>`
 > - **Introduced:** `v4.4.0`
 
 > ### rulings
 >
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
-> - **Type:** `object[]`
+> - **Type:** `<object[]>`
 > - **Introduced:** `v4.0.0`
 
 > ### side
 >
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
 > - **Tags:** <i class="optional">optional</i>
@@ -289,7 +289,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of card subtypes found after em-dash.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -297,7 +297,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > A list of card supertypes found before em-dash.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -305,7 +305,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The rules text of the card.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -313,7 +313,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The toughness of the card.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -321,13 +321,13 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > The type of the card as visible, including any supertypes and subtypes.
 >
-> - **Type:** `string`
+> - **Type:** `<string>`
 > - **Introduced:** `v4.0.0`
 
 > ### types
 >
 > A list of all card types of the card, including Un&#8209;sets and gameplay variants.
 >
-> - **Type:** `string[]`
+> - **Type:** `<string[]>`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`

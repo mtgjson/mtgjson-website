@@ -38,24 +38,38 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 
 ```json
 {
-  <MTGJSON Card UUID>: {
-    <Format>: { // Game format
-      <Provider>: { // Price provider
-        buylist: { // Provider buylist values
-          foil: { // Foil prices
-            <YYYY-MM-DD>: <float> // Date as key and price as value
+  // Card UUID
+  "<MTGJSON Card UUID>": {
+    // Game format
+    "<Format>": {
+      // Price provider
+      "<Provider>": {
+        // Provider buylist values
+        "buylist": {
+          // Foil prices
+          "foil": {
+            // Date as key and price as value
+            "<YYYY-MM-DD>": "<float>"
           },
-          normal: { // Normal prices
-            <YYYY-MM-DD>: <float> // Date as key and price as value
+          // Normal prices
+          "normal": {
+            // Date as key and price as value
+            "<YYYY-MM-DD>": "<float>"
           }
         },
-        currency: <string>, // Currency of the provider
-        retail: { // Provider retail values
-          foil: { // Foil prices
-            <YYYY-MM-DD>: <float> // Date as key and price as value
+        // Currency of the provider
+        "currency": "<string>",
+        // Provider retail values
+        "retail": {
+          // Foil prices
+          "foil": {
+            // Date as key and price as value
+            "<YYYY-MM-DD>": "<float>"
           },
-          normal: { // Normal prices
-            <YYYY-MM-DD>: <float> // Date as key and price as value
+          // Normal prices
+          "normal": {
+            // Date as key and price as value
+            "<YYYY-MM-DD>": "<float>"
           }
         }
       },
@@ -71,102 +85,102 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 
 ```json
 {
-  0120a941-9cfb-50b5-b5e4-4e0c7bd32410: {
-    mtgo: {
-      cardhoarder: {
-        currency: "USD",
-        retail: {
-          foil: {
+  "0120a941-9cfb-50b5-b5e4-4e0c7bd32410": {
+    "mtgo": {
+      "cardhoarder": {
+        "currency": "USD",
+        "retail": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.02
+            "2020-04-21": 0.02
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.02
+            "2020-04-21": 0.02
           }
         }
       },
     },
-    paper: {
-      cardkingdom : {
-        buylist: {
-          foil: {
+    "paper": {
+      "cardkingdom": {
+        "buylist": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.6
+            "2020-04-21": 0.6
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.01
+            "2020-04-21": 0.01
           }
         },
-        currency: "USD",
-        retail: {
-          foil: {
+        "currency": "USD",
+        "retail": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.12
+            "2020-04-21": 0.12
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.02
+            "2020-04-21": 0.02
           }
         }
       },
-      cardmarket: {
-        buylist: {
-          foil: {
+      "cardmarket": {
+        "buylist": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.6
+            "2020-04-21": 0.6
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.01
+            "2020-04-21": 0.01
           }
         },
-        currency: "EUR",
-        retail: {
-          foil: {
+        "currency": "EUR",
+        "retail": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.12
+            "2020-04-21": 0.12
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.02
+            "2020-04-21": 0.02
           }
         }
       },
-      cardsphere: {
-        currency: "USD",
-        retail: {
-          foil: {
+      "cardsphere": {
+        "currency": "USD",
+        "retail": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.12
+            "2020-04-21": 0.12
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.02
+            "2020-04-21": 0.02
           }
         }
       },
-      tcgplayer: {
-        buylist: {
-          foil: {
+      "tcgplayer": {
+        "buylist": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.6
+            "2020-04-21": 0.6
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.01
+            "2020-04-21": 0.01
           }
         },
-        currency: "USD",
-        retail: {
-          foil: {
+        "currency": "USD",
+        "retail": {
+          "foil": {
             ..., // more rows
-            2020-04-21: 0.12
+            "2020-04-21": 0.12
           },
-          normal: {
+          "normal": {
             ..., // more rows
-            2020-04-21: 0.02
+            "2020-04-21": 0.02
           }
         }
       }

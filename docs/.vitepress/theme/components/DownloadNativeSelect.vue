@@ -116,7 +116,7 @@ const downloadFile = (e: HTMLChangeEvent): void => {
 <style lang="scss" scoped>
 .download-native-select {
   select {
-    margin-top: 0.5rem;
+    margin-top: 1rem;
     padding: 0.5rem;
     border-radius: var(--common-radius);
     border: none;

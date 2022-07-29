@@ -77,7 +77,7 @@ All outputted files to download provided by MTGJSON.
 >
 > File containing all individual outputs from MTGJSON, such as `AllPrintings`, `CardTypes`, etc.
 >
-> **Note:** This file does not contain data for this outputs, only string references to their existence. Generally, this data is used for documenting data on this website, but is also available to the public.
+> **Note:** This file does not contain data for these outputs, only string references to their existence. Generally, this data is used for documentation, but is also available to the public.
 >
 > <DownloadNativeSelect fileName='CompiledList'/>
 
@@ -91,7 +91,7 @@ All outputted files to download provided by MTGJSON.
 >
 > File containing known property values for various Data Models.
 >
-> **Note:** Generally, this data is used for documenting data on this website, but is also available to the public.
+> **Note:** Generally, this data is used for documentation, but is also available to the public.
 >
 > <DownloadNativeSelect fileName='EnumValues'/>
 
@@ -103,7 +103,7 @@ All outputted files to download provided by MTGJSON.
 
 > ### Legacy
 >
-> File containing all [Set](/data-models/set/) cards, restricted to sets legal in the Legacy format.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by [Set](/data-models/set/), restricted to sets legal in the Legacy format.
 >
 > <DownloadNativeSelect fileName='Legacy'/>
 
@@ -121,7 +121,7 @@ All outputted files to download provided by MTGJSON.
 
 > ### Modern
 >
-> File containing all [Set](/data-models/set/) cards, restricted to sets legal in the Modern format.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by [Set](/data-models/set/), restricted to sets legal in the Modern format.
 >
 > <DownloadNativeSelect fileName='Modern'/>
 
@@ -139,7 +139,7 @@ All outputted files to download provided by MTGJSON.
 
 > ### Pioneer
 >
-> File containing all [Set](/data-models/set/) cards, restricted to cards legal in the Pioneer format.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by [Set](/data-models/set/), restricted to cards legal in the Pioneer format.
 >
 > <DownloadNativeSelect fileName='Pioneer'/>
 
@@ -157,7 +157,7 @@ All outputted files to download provided by MTGJSON.
 
 > ### Standard
 >
-> File containing all [Set](/data-models/set/) cards, restricted to cards legal in the Standard format.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by [Set](/data-models/set/), restricted to cards legal in the Standard format.
 >
 > <DownloadNativeSelect fileName='Standard'/>
 
@@ -175,7 +175,7 @@ All outputted files to download provided by MTGJSON.
 
 > ### Vintage
 >
-> File containing all [Set](/data-models/set/) cards, restricted to sets legal in the Vintage format.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by [Set](/data-models/set/), restricted to sets legal in the Vintage format.
 >
 > <DownloadNativeSelect fileName='Vintage'/>
 

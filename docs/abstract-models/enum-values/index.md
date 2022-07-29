@@ -26,12 +26,15 @@ The Enum Values abstract Data Model describes a list of key value pairs that are
 
 ```json
 {
-  <Data Model>: { // Unique Data Model name
-    <Property Key>: [ // Property of a Data Model
-      <Property Value>, // Possible property value
-      ... // More values
+  // Data Model name
+  "<Data Model>": {
+    // Property of a Data Model
+    "<Property Key>": [
+      // Enumeration of property values
+      "<Property Value>",
+      ... // More enumeration values
     ],
-    ... // More keys
+    ... // More properties
   },
   ... // More models
 }
@@ -41,22 +44,22 @@ The Enum Values abstract Data Model describes a list of key value pairs that are
 
 ```json
 {
-  card: {
-    borderColor: [
+  "card": {
+    "borderColor": [
       "black",
       "borderless",
       "gold",
       "silver",
       "white"
     ],
-    colorIdentity: [
+    "colorIdentity": [
       "B",
       "G",
       "R",
       "U",
       "W"
     ],
-    ... // More keys
+    ... // More properties
   },
   ... // More models
 }

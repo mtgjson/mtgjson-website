@@ -38,6 +38,12 @@ div[class~="language-json"] {
   }
 }
 
+div[class~="language-js"] {
+  &:before {
+    content: "javascript";
+  }
+}
+
 div[class~="language-graphql"] {
   &:before {
     content: "graphql";
