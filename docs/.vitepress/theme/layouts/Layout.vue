@@ -4,7 +4,8 @@
 
   Sidebar(v-if="!isHome" :items="sidebarItems", @toggle-sidebar="toggleSidebar")
 
-  Page(:isHome="isHome")
+  Home(v-if="isHome")
+  Page(v-else)
 </template>
 
 <script setup lang='ts'>
@@ -12,6 +13,7 @@ import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 import Navbar from '../components/Navbar.vue';
 import Page from '../components/Page.vue';
+import Home from '../components/Home.vue';
 import Sidebar from '../components/Sidebar.vue';
 import type { ISidebarItem } from '../types';
 

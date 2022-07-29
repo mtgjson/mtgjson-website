@@ -4,7 +4,7 @@
     ref="sorter",
     :list="defaultList",
     :filters="listFilters",
-    :noChecks="disableChecks",
+    :disableChecks="disableChecks",
     @updateData="updateData",
     @updateCount="updateCounts",
     @canShowButton="toggleShowMore"

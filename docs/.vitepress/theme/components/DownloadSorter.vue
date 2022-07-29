@@ -39,7 +39,7 @@
         option(value="type") Type (Ascending)
         option(value="type:true") Type (Descending)
 
-    .sort-row.checkbox(v-if="!noChecks")
+    .sort-row.checkbox(v-if="!disableChecks")
       label(for="spoiler-input") Include Spoilers:
       input#spoiler-input(
         type="checkbox",
@@ -48,7 +48,7 @@
         @input="onHandleChange"
       )
 
-    .sort-row.checkbox(v-if="!noChecks")
+    .sort-row.checkbox(v-if="!disableChecks")
       label(for="online-input") Include Online Only:
       input#online-input(
         type="checkbox",
@@ -69,7 +69,8 @@ import type { IList } from '../types';
 
 interface Props {
   list: IList[],
-  file: string;
+  filters: IList[],
+  file?: string;
   type?: string;
   disableChecks?: boolean;
 }

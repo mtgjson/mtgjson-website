@@ -43,7 +43,7 @@ import { useStore } from '../store.js';
 
 interface Props {
   width: string;
-  hideText: boolean;
+  hideText?: boolean;
 }
 
 const store = useStore();

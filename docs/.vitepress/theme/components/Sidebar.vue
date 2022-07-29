@@ -9,8 +9,8 @@ aside.sidebar
   .sidebar-wrap-search
     Search
 
-  .sidebar-wrap
-    SidebarLinks(:depth="0" :items="items")
+  nav.sidebar-wrap
+    SidebarLinks(:items="items")
 </template>
 
 <script setup lang='ts'>

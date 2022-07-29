@@ -1,5 +1,5 @@
 <template lang="pug">
-.download-links
+.download-native-select
   select(v-if="fileName === 'AllPrintings'", @change="downloadFile")
     option Select a file to download
     optgroup(label="JSON")
@@ -80,7 +80,7 @@ import type { HTMLChangeEvent } from '../types';
 
 interface Props {
   fileName: string;
-  fileType: string;
+  fileType?: string;
 }
 
 defineProps<Props>();
@@ -114,7 +114,7 @@ const downloadFile = (e: HTMLChangeEvent): void => {
 </script>
 
 <style lang="scss" scoped>
-.download-links {
+.download-native-select {
   select {
     margin-top: 1rem;
     font-size: 14px;

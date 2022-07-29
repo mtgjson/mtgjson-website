@@ -1,5 +1,5 @@
 <template lang="pug">
-main.page(:class="{home: isHome}")
+main.page
   Content.page-content
 
   BackToTop
@@ -24,12 +24,6 @@ import { computed } from 'vue';
 import { useData } from 'vitepress';
 import BackToTop from './BackToTop.vue';
 import type { ISidebarItem, IEditLink } from '../types';
-
-interface Props {
-  isHome: boolean;
-}
-
-defineProps<Props>();
 
 const { theme, page } = useData();
 const sidebarItems: ISidebarItem[] = theme.value.sidebar;
@@ -85,7 +79,7 @@ const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
 };
 </script>
 
-<style lang="scss">
+<style lang="scss" scoped>
 @import '../styles/placeholders';
 
 .page {
@@ -94,14 +88,6 @@ const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
   padding-top: calc(var(--navbar-height) - 1rem);
   padding-left: var(--sidebar-width);
   background-color: var(--bg-darker-color);
-
-  &.home {
-    padding-left: 0;
-
-    .page-content {
-      max-width: 960px;
-    }
-  }
 
   &-content {
     @extend %wrapper;

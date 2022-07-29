@@ -28,7 +28,8 @@ import { computed, ref, onMounted } from 'vue';
 const scrollTop = ref<number>(0);
 const show = computed<boolean>(() => scrollTop.value > 300);
 
-const getScrollTop = (): number => window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
+const getScrollTop = (): number =>
+  window.pageYOffset || document.documentElement.scrollTop || document.body.scrollTop || 0;
 const scrollToTop = (): void => {
   window.scrollTo({ top: 0, behavior: 'smooth' });
   scrollTop.value = 0;
@@ -51,7 +52,7 @@ onMounted((): void => {
   right: 1rem;
   width: 2rem;
   z-index: 1;
-  padding: .25rem .5rem .5rem;
+  padding: 0.25rem 0.5rem 0.5rem;
   background-color: var(--bg-color);
   border-radius: var(--common-radius);
 
