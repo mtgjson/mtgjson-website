@@ -283,29 +283,10 @@ blockquote {
   margin-right: 5px;
 }
 
-// Loading spinner
-.loader {
-  display: inline-block;
-  width: 80px;
-  height: 80px;
-}
-.loader::after {
-  content: " ";
-  display: block;
-  width:40px;
-  height: 40px;
-  margin: 8px;
-  border-radius: 50%;
-  border: 6px solid #fff;
-  border-color: var(--text-color) transparent var(--text-color) transparent;
-  animation: loader-animation 1.2s linear infinite;
-}
-
+// Hide/Show elements
 .desktop-hide {
   display: none !important;
 }
-
-// Media query for mobile
 @media (max-width: 719px) {
   .desktop-hide {
     display: block !important;
@@ -313,30 +294,5 @@ blockquote {
 
   .mobile-hide {
     display: none !important;
-  }
-}
-
-// Content wrapper
-.page-content {
-  @extend %wrapper;
-  padding: 0 2rem;
-  height: 100%;
-
-  & > * {
-    max-width: var(--content-width);
-  }
-
-  & > *:first-child {
-    margin-top: 0;
-    padding-top: 0;
-  }
-}
-
-@media (max-width: 800px) {
-  .page-content,
-  .page-nav,
-  .page-edit {
-    padding-left: 2rem;
-    padding-right: 2rem;
   }
 }

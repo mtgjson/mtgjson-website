@@ -157,19 +157,19 @@ The Card (Token) Data Model describes the properties and values of a single toke
 
 > ### hasFoil
 >
-> If the card can be found in foil. Use the [finishes](/data-models/card-token/#finishes) property.
+> If the card can be found in foil. Use the [finishes](/data-models/card-token/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
 
 > ### hasNonFoil
 >
-> If the card can be found in non-foil. Use the [finishes](/data-models/card-token/#finishes) property.
+> If the card can be found in non-foil. Use the [finishes](/data-models/card-token/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
 
 > ### identifiers
 >

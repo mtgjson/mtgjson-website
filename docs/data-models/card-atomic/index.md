@@ -87,7 +87,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v6.0.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v6.0.0 removal)</i>
 
 > ### edhrecRank
 >
@@ -103,7 +103,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated v6.0.0</i>
+> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated (v6.0.0 removal)</i>
 
 > ### faceManaValue
 >

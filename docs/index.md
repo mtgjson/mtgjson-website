@@ -17,7 +17,7 @@ head:
 
 # MTGJSON
 
-MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https://magic.wizards.com/en) data in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON and other files that you can learn about and download from this website.
+MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https://magic.wizards.com/en) data in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON and other files that you can learn about and download from this documentation.
 
 ## Core Team
 
@@ -53,11 +53,5 @@ MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https
 :::
 
 </div>
-
-## Contributing
-
-Many others have devoted their time and effort into this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website).
-
-If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
 <Supporters/>

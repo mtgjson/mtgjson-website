@@ -1,15 +1,25 @@
 <template lang="pug">
-header.navbar
-  .navbar-options
+header.navbar(:class="{home: isHome}")
+  .navbar-options(v-if="!isHome")
     SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
     NavMeta.desktop-hide(:width="`70px`")
     ThemeSwitcher
+  .navbar-options.home(v-else)
+    a.docs-link(href="/getting-started/")
+      .cta-btn Docs
+    ThemeSwitcher
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import SidebarButton from './SidebarButton.vue';
 import NavMeta from './NavMeta.vue';
 import ThemeSwitcher from './ThemeSwitcher.vue';
+
+interface Props {
+  isHome: boolean;
+}
+
+defineProps<Props>();
 </script>
 
 <style lang="scss">
@@ -28,12 +38,24 @@ import ThemeSwitcher from './ThemeSwitcher.vue';
     text-decoration: none;
   }
 
+  .cta-btn {
+    margin: 0;
+  }
+
+  &.home {
+    margin-left: 0;
+  }
+
   &-options {
     width: 100%;
     height: 100%;
     display: flex;
     justify-content: flex-end;
     align-items: center;
+
+    &.home {
+      justify-content: space-between;
+    }
   }
 }
 

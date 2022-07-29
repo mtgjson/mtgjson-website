@@ -1,5 +1,5 @@
 <template lang="pug">
-main.page
+main.page(:class="{home: isHome}")
   Content.page-content
 
   BackToTop
@@ -24,6 +24,12 @@ import { computed } from 'vue';
 import { useData } from 'vitepress';
 import BackToTop from './BackToTop.vue';
 import type { ISidebarItem, IEditLink } from '../types';
+
+interface Props {
+  isHome: boolean;
+}
+
+defineProps<Props>();
 
 const { theme, page } = useData();
 const sidebarItems: ISidebarItem[] = theme.value.sidebar;
@@ -89,6 +95,25 @@ const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
   padding-left: var(--sidebar-width);
   background-color: var(--bg-darker-color);
 
+  &.home {
+    padding-left: 0;
+
+    .page-content {
+      max-width: 960px;
+    }
+  }
+
+  &-content {
+    @extend %wrapper;
+    padding: 0 2rem;
+    height: 100%;
+
+    & > *:first-child {
+      margin-top: 0;
+      padding-top: 0;
+    }
+  }
+
   &-nav {
     @extend %wrapper;
     padding-top: 3rem;
@@ -137,7 +162,6 @@ const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
         }
       }
     }
-
   }
 }
 
@@ -153,6 +177,17 @@ const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
           margin-bottom: 2rem;
         }
       }
+    }
+  }
+}
+
+@media (max-width: 800px) {
+  .page {
+    &-content,
+    &-nav,
+    &-edit {
+      padding-left: 2rem;
+      padding-right: 2rem;
     }
   }
 }

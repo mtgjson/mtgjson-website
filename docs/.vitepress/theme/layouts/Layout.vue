@@ -1,10 +1,10 @@
 <template lang="pug">
 .theme-container(:class="pageClasses")
-  Navbar(@toggle-sidebar="toggleSidebar")
+  Navbar(:isHome="isHome" @toggle-sidebar="toggleSidebar")
 
-  Sidebar(:items="sidebarItems", @toggle-sidebar="toggleSidebar")
+  Sidebar(v-if="!isHome" :items="sidebarItems", @toggle-sidebar="toggleSidebar")
 
-  Page
+  Page(:isHome="isHome")
 </template>
 
 <script setup lang='ts'>
@@ -15,16 +15,15 @@ import Page from '../components/Page.vue';
 import Sidebar from '../components/Sidebar.vue';
 import type { ISidebarItem } from '../types';
 
-const { theme } = useData();
+const { theme, frontmatter } = useData();
 const isSidebarOpen = ref<boolean>(false);
-const shouldShowSidebar = ref<boolean>(theme.value.sidebar.length > 0);
+const isHome = computed<boolean>(() => frontmatter.value.layout === 'home');
 const sidebarItems: ISidebarItem[] = theme.value.sidebar;
 
 const pageClasses = computed((): object[] => {
   return [
     {
-      'sidebar-open': isSidebarOpen.value,
-      'no-sidebar': !shouldShowSidebar.value,
+      'sidebar-open': isSidebarOpen.value
     },
   ];
 });

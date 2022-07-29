@@ -111,7 +111,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v6.0.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v6.0.0 removal)</i>
 
 > ### count
 >
@@ -143,7 +143,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated v6.0.0</i>
+> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated (v6.0.0 removal)</i>
 
 > ### faceFlavorName
 >
@@ -244,19 +244,19 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 
 > ### hasFoil
 >
-> If the card can be found in foil. Use the [finishes](/data-models/card-deck/#finishes) property.
+> If the card can be found in foil. Use the [finishes](/data-models/card-deck/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
 
 > ### hasNonFoil
 >
-> If the card can be found in non-foil. Use the [finishes](/data-models/card-deck/#finishes) property.
+> If the card can be found in non-foil. Use the [finishes](/data-models/card-deck/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
 
 > ### identifiers
 >

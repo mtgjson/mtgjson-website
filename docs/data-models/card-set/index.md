@@ -111,7 +111,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v6.0.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v6.0.0 removal)</i>
 
 > ### edhrecRank
 >
@@ -127,7 +127,7 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated v6.0.0</i>
+> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated (v6.0.0 removal)</i>
 
 > ### faceFlavorName
 >
@@ -228,19 +228,19 @@ The Card (Set) Data Model describes the properties of a single card in a set.
 
 > ### hasFoil
 >
-> If the card can be found in foil. Use the [finishes](/data-models/card-set/#finishes) property.
+> If the card can be found in foil. Use the [finishes](/data-models/card-set/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
 
 > ### hasNonFoil
 >
-> If the card can be found in non-foil. Use the [finishes](/data-models/card-set/#finishes) property.
+> If the card can be found in non-foil. Use the [finishes](/data-models/card-set/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated v5.3.0</i>
+> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
 
 > ### identifiers
 >

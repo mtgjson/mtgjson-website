@@ -1,8 +1,8 @@
 <template lang="pug">
 .supporters
-  h2 Contributors
+  h2#code-contributors Code Contributors
+    a.header-anchor(href="#code-contributors" aria-hidden="true") #
   .supporters-wrap(v-if="contributors")
-    p MTGJSON is a labor of love and we would not have come as far as we have without our code contributors.
     ul.contributors-list
       li(v-for="(contributor, key) in contributors", :key="key")
         a(:href="contributor.url", rel="noopener noreferrer", target="_blank") {{ `${contributor.username}'s GitHub profile` }}
@@ -13,10 +13,17 @@
             width="48px",
             height="48px"
           )
-  h2 Supporters
+
+  h2#contributing Contributing
+    a.header-anchor(href="#contributing" aria-hidden="true") #
+  <p>Many others have devoted their time and effort into this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>.
+  <p>If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).</p>
+  </p>
+
+  h2#patreon-supporters Patreon Supporters
+    a.header-anchor(href="#patreon-supporters" aria-hidden="true") #
+  p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters or their projects.
   .supporters-wrap(v-if="patrons")
-    h3 Our Patreon Supporters
-    p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters and their projects.
     small(v-html="projectMsg")
     .supporters-grid
       .supporter(
@@ -35,9 +42,9 @@
         a.linked-name(
           v-if="patron.link",
           :href="patron.link",
+          v-html="patron.name",
           rel="noopener noreferrer",
           target="_blank",
-          v-html="patron.name"
         )
         p.unlinked-name(v-else, v-html="patron.name", tabindex="0")
         p.tier {{ patron.tier }} Supporter
@@ -46,39 +53,37 @@
           v-html="formatTime(patron.since)"
         )
 
-  //- Not Patrons but services that use MTGJSON
-  .supporters-wrap(v-if="services")
-    h3 Applications Powered by MTGJSON
-    p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters and their projects.
+  h2#mtgjson-powered-applications MTGJSON Powered Applications
+    a.header-anchor(href="#mtgjson-powered-applications" aria-hidden="true") #
+  p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters or their projects.
+  .supporters-wrap(v-if="applications")
     small(v-html="projectMsg")
-    .supporters-grid.services(:data-tier="0")
-      .supporter.service(v-for="(supporter, key) in services", :key="key")
-        .img-wrap(v-if="supporter.image")
+    .supporters-grid.applications
+      .supporter.service(v-for="(application, key) in applications", :key="key")
+        .img-wrap(v-if="application.image")
           img.lazy(
-            :data-src="'/images/avatars/' + supporter.image",
-            :alt="`${supporter.name} logo`",
-            :title="`${supporter.name} logo`"
+            :data-src="'/images/avatars/' + application.image",
+            :alt="`${application.name} logo`",
+            :title="`${application.name} logo`"
           )
         .img-wrap.no-image(v-else)
-          p {{ supporter.name.substring(0, 1) }}
+          p {{ application.name.substring(0, 1) }}
         a.linked-name(
-          v-if="supporter.link",
-          :href="supporter.link",
+          v-if="application.link",
+          :href="application.link",
+          v-html="application.name",
           rel="noopener noreferrer",
           target="_blank",
-          v-html="supporter.name"
         )
-        p.unlinked-name(v-else, v-html="supporter.name", tabindex="0")
+        p.unlinked-name(v-else, v-html="application.name", tabindex="0")
 </template>
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import supporters from '../static/supporters.json';
+import { patrons, applications } from '../static/supporters.json';
 import contributors from '../static/contributors.json';
 import { formatTime } from '../helpers';
 
-const patrons: object = supporters.patrons;
-const services: object = supporters.services;
 const projectMsg: string =
   'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.';
 
@@ -114,7 +119,6 @@ onMounted((): void => {
 <style lang="scss" scoped>
 .supporters {
   &-wrap {
-    justify-content: center;
     padding-bottom: 1rem;
 
     h3 {
@@ -172,7 +176,7 @@ onMounted((): void => {
     grid-gap: 1rem;
     margin-bottom: 2rem;
 
-    &.services {
+    &.applications {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
 
@@ -253,7 +257,7 @@ onMounted((): void => {
       .tier {
         text-align: center;
         flex: 0 0 100%;
-        margin: 0.5rem auto 0;
+        margin: 0.5rem auto 0.25rem;
         font-size: 16px;
         line-height: 1.2em;
         font-weight: bold;
@@ -300,7 +304,7 @@ onMounted((): void => {
     &-grid {
       grid-template-columns: repeat(2, minmax(0, 1fr));
 
-      &.services {
+      &.applications {
         grid-template-columns: repeat(2, minmax(0, 1fr));
       }
     }

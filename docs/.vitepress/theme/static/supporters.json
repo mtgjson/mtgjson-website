@@ -152,7 +152,7 @@
       "since": "2022-02"
     }
   ],
-  "services": [
+  "applications": [
     {
       "name": "Aetherhub",
       "image": "avatar-aetherhub.png",
