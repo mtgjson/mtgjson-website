@@ -220,7 +220,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### hand
 >
-> The starting maximum hand size total modifier. A `+` or `-` character precedes an integer.
+> The starting maximum hand size total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.2.1`
@@ -418,7 +418,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### life
 >
-> The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types).
+> The starting life total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.2.1`

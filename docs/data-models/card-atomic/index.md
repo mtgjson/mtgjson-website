@@ -31,7 +31,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
   ```json
   "data": {
     "Oblivion Ring": [
-      "<Card (Atomic) Model>"
+      <Card (Atomic) Model>
     ],
     ... // More card names
   }
@@ -137,7 +137,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 > ### hand
 >
-> The starting maximum hand size total modifier. A `+` or `-` character precedes an integer.
+> The starting maximum hand size total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.2.1`
@@ -207,7 +207,7 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 
 > ### life
 >
-> The starting life total modifier. A plus or minus character precedes an integer. Used only on cards with `"Vanguard"` in its [types](./#types).
+> The starting life total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.2.1`

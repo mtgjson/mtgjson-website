@@ -16,7 +16,7 @@
 
   h2#contributing Contributing
     a.header-anchor(href="#contributing" aria-hidden="true") #
-  <p>Many others have devoted their time and effort into this project. If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>.
+  <p>If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>.
   <p>If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).</p>
   </p>
 
@@ -55,7 +55,7 @@
 
   h2#mtgjson-powered-applications MTGJSON Powered Applications
     a.header-anchor(href="#mtgjson-powered-applications" aria-hidden="true") #
-  p MTGJSON has allowed many different projects to serve data to their audiences and we're very proud of what our friends have accomplished. We'd like to highlight them here. MTGJSON does not endorse these supporters or their projects.
+  p MTGJSON has allowed many different projects to serve data to their audiences. We are very proud of what our friends have accomplished and we would like to highlight them here. MTGJSON does not endorse these applications.
   .supporters-wrap(v-if="applications")
     small(v-html="projectMsg")
     .supporters-grid.applications
@@ -261,7 +261,6 @@ onMounted((): void => {
         text-align: center;
         flex: 0 0 100%;
         margin: 0.5rem auto 0.25rem;
-        font-size: 16px;
         line-height: 1.2em;
         font-weight: bold;
         text-transform: capitalize;
@@ -269,11 +268,11 @@ onMounted((): void => {
         &,
         &-time {
           color: var(--text-color);
+        font-size: 14px;
         }
 
         &-time {
           margin-bottom: 0;
-          font-size: 14px;
         }
       }
     }

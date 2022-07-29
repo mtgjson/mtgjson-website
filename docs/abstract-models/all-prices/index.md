@@ -24,22 +24,22 @@ The All Prices abstract Data Model describes a list of card prices based on a MT
 
 ## Price Providers
 
-MTGJSON currently has affiliated with the following price providers to keep a **limited** history of price data. The following examples are providers and game formats:
+MTGJSON currently has affiliated with the following price providers to keep a **limited** history of price data. The following are examples of game formats and price providers:
 
 - `paper`
-  - `cardkingdom` from [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
-  - `cardmarket` from [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson)
-  - `cardsphere` from [Cardsphere](https://www.cardsphere.com/)
-  - `tcgplayer` from [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson)
+  - `cardkingdom` ( [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) )
+  - `cardmarket` ( [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) )
+  - `cardsphere` ( [Cardsphere](https://www.cardsphere.com/) )
+  - `tcgplayer` ( [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) )
 - `mtgo`
-  - `cardhoarder` from [Cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
+  - `cardhoarder` ( [Cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card) )
 
 ## Model Overview
 
 ```json
 {
   // Card UUID
-  "<MTGJSON Card UUID>": {
+  "<Card UUID>": {
     // Game format
     "<Format>": {
       // Price provider
@@ -49,27 +49,27 @@ MTGJSON currently has affiliated with the following price providers to keep a **
           // Foil prices
           "foil": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": "<float>"
+            "<YYYY-MM-DD>": <float>
           },
           // Normal prices
           "normal": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": "<float>"
+            "<YYYY-MM-DD>": <float>
           }
         },
         // Currency of the provider
-        "currency": "<string>",
+        "currency": <string>,
         // Provider retail values
         "retail": {
           // Foil prices
           "foil": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": "<float>"
+            "<YYYY-MM-DD>": <float>
           },
           // Normal prices
           "normal": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": "<float>"
+            "<YYYY-MM-DD>": <float>
           }
         }
       },

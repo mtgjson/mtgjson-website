@@ -30,7 +30,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
   ```json
   "data": {
     "00010d56-fe38-5e35-8aed-518019aa36a5": [
-     "<TCGplayer SKUs Model>"
+     <Tcgplayer Skus Model>
     ],
     ... // More Card UUIDs
   }
