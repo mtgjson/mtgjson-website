@@ -25,7 +25,7 @@
   p Without our Patreon supporters we would not be able to keep this site running. They keep the lights on here and we would like to highlight their efforts in supporting this project. MTGJSON does not endorse these supporters or their projects.
   .supporters-wrap(v-if="patrons")
     small(v-html="projectMsg")
-    .supporters-grid
+    .supporters-grid.patrons
       .supporter(
         v-for="(patron, key) in patrons",
         :key="key",
@@ -39,14 +39,14 @@
           )
         .img-wrap.no-image(v-else)
           p {{ patron.name.substring(0, 1) }}
-        a.linked-name(
+        a.name.linked-name(
           v-if="patron.link",
           :href="patron.link",
           v-html="patron.name",
           rel="noopener noreferrer",
           target="_blank",
         )
-        p.unlinked-name(v-else, v-html="patron.name", tabindex="0")
+        p.name.unlinked-name(v-else, v-html="patron.name", tabindex="0")
         p.tier {{ patron.tier }} Supporter
         p.tier-time(
           v-if="patron.since",
@@ -68,14 +68,14 @@
           )
         .img-wrap.no-image(v-else)
           p {{ application.name.substring(0, 1) }}
-        a.linked-name(
+        a.name.linked-name(
           v-if="application.link",
           :href="application.link",
           v-html="application.name",
           rel="noopener noreferrer",
           target="_blank",
         )
-        p.unlinked-name(v-else, v-html="application.name", tabindex="0")
+        p.name.unlinked-name(v-else, v-html="application.name", tabindex="0")
 </template>
 
 <script setup lang="ts">
@@ -85,7 +85,7 @@ import contributors from '../static/contributors.json';
 import { formatTime } from '../helpers';
 
 const projectMsg: string =
-  'Don\'t see your project? Join the <a href="https://mtgjson.com/discord" rel="noopener noreferrer" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.';
+  'Don\'t see your name? Join the <a href="https://mtgjson.com/discord" target="_blank">Discord</a> and let us know or open an issue on <a href="https://github.com/mtgjson/mtgjson-website/issues" rel="noopener noreferrer" target="_blank">GitHub</a>. We\'ll be happy to add your work to our list.';
 
 onMounted((): void => {
   const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));
@@ -176,6 +176,10 @@ onMounted((): void => {
     grid-gap: 1rem;
     margin-bottom: 2rem;
 
+    &.patrons {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     &.applications {
       grid-template-columns: repeat(3, minmax(0, 1fr));
     }
@@ -229,7 +233,7 @@ onMounted((): void => {
 
       p {
         flex: 0 0 100%;
-        font-size: 16px;
+        font-size: 1rem;
         color: var(--accent-color);
         display: block;
         margin: 0 auto;
@@ -239,11 +243,10 @@ onMounted((): void => {
         word-wrap: anywhere;
       }
 
-      .linked-name,
-      .unlinked-name {
+      .name {
         text-decoration: underline;
-        font-weight: bold;
         flex: 0 0 100%;
+        font-weight: bold;
 
         &:hover {
           text-decoration: none;
@@ -276,20 +279,20 @@ onMounted((): void => {
     }
 
     .supporter[data-tier='mythic'] {
-      .img-wrap {
-        height: 125px;
-        width: 125px;
-        padding: 20px;
-      }
-
       .tier {
-        color: var(--orange-color);
+        color: var(--supporter-mythic-color);
       }
     }
 
     .supporter[data-tier='rare'] {
       .tier {
-        color: var(--yellow-color);
+        color: var(--supporter-rare-color);
+      }
+    }
+
+    .supporter[data-tier='uncommon'] {
+      .tier {
+        color: var(--supporter-uncommon-color);
       }
     }
   }

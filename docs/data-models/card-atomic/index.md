@@ -24,19 +24,26 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 **Parent property:** `data`
 
 <!-- For some reason tips before TOC will break the TOC, but HTML will not -->
-<blockquote>
-  <h4>Note</h4>
-  <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card, like such:</p>
+<blockquote class="warning">
+  <p class="small-header">Note</p>
+  <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
+
+  ```json
+  "data": {
+    "Oblivion Ring": [
+      <Card (Atomic) Model>
+    ],
+    ...
+  }
+  ```
+
+  <br />
+  <p>and accessing the data would look like this:</p>
   <br />
 
-```json
-"data": {
-  "Oblivion Ring": [
-    <Card (Atomic) Model>
-  ],
-  ...
-}
-```
+  ```js
+  data["Oblivion Ring"][0];
+  ```
 
 </blockquote>
 

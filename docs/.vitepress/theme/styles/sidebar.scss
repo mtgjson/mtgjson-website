@@ -1,7 +1,7 @@
 .sidebar-group-items,
 .sidebar-sub-headers {
   .sidebar-link {
-    font-size: 16px;
+    font-size: 1rem;
     font-weight: normal;
 
     &.active {
@@ -17,26 +17,25 @@
 
   &::after {
     position: absolute;
-    right: -40px;
     top: 0;
-    padding: 0 5px;
+    display: block;
     border-radius: var(--common-radius);
-    font-size: 12px;
-    font-family: var(--font-monospace);
-    font-weight: bold;
     color: var(--dark-color);
+
+    @extend %code-block;
   }
 }
 .sidebar-link[href="/mtggraphql/"] {
   &::after {
     content: "beta";
-    background-color: var(--spoiler-color);
-    right: -50px;
+    background-color: var(--yellow-color);
+    right: -55px;
   }
 }
 .sidebar-link[href="/data-models/sealed-product/"] {
   &::after {
     content: "new";
     background-color: var(--green-color);
+    right: -50px;
   }
 }

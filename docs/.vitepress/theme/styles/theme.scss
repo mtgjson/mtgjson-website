@@ -97,7 +97,7 @@ img {
     max-width: 100px !important;
     border-radius: 100%;
     float: left;
-    margin-right: 30px;
+    margin-right: 2rem;
   }
 
   &[alt='logo'] {
@@ -108,7 +108,7 @@ img {
   &.img-license {
     max-width: 100px;
     height: auto;
-    margin-bottom: 15px;
+    margin-bottom: 1rem;
   }
 }
 
@@ -127,9 +127,17 @@ blockquote {
     clear: both;
   }
 
-  &.disabled {
-    opacity: 0.25;
-    pointer-events: none;
+  &.warning {
+    background-color: var(--blockquote-warning-bg-color);
+    color: var(--blockquote-warning-text-color);
+
+    a {
+      color: var(--blockquote-warning-text-color);
+    }
+  }
+
+  .small-header {
+    padding-bottom: 0;
   }
 
   h3 {
@@ -145,7 +153,6 @@ blockquote {
   }
 
   i.optional,
-  i.omitted,
   i.deprecated,
   i.preview,
   i.new {
@@ -163,7 +170,6 @@ blockquote {
     background-color: var(--yellow-color);
   }
 
-  i.omitted,
   i.deprecated {
     background-color: var(--red-color);
   }
@@ -173,7 +179,7 @@ blockquote {
   }
 
   i {
-    margin-right: 8px !important;
+    margin-right: 0.5rem !important;
 
     &:last-of-type {
       margin-right: 0 !important;
@@ -181,12 +187,11 @@ blockquote {
   }
 
   ul {
-    // margin-left: 0;
     margin-bottom: 0;
     margin-top: 1rem;
 
     & > li {
-      margin: 0 0 .5rem;
+      margin: 0 0 0.5rem;
 
       &:empty {
         margin: 0;
@@ -202,7 +207,7 @@ blockquote {
       }
 
       strong {
-        margin-right: 5px;
+        margin-right: 0.25rem;
       }
 
       pre {
@@ -244,10 +249,9 @@ blockquote {
 .link {
   &-inline-image {
     display: inline-flex;
-    padding-left: 20px;
-    margin-left: 5px;
-    background-size: 17px 17px;
-    background-position: left center;
+    padding-right: 1.5rem;
+    background-size: 1rem 1rem;
+    background-position: right center;
     background-repeat: no-repeat;
 
     &.paypal {
@@ -271,16 +275,11 @@ blockquote {
 
 // Spoiler attribute tag
 .spoiler {
-  font-family: var(--font-monospace);
-  font-size: 12px;
   background-color: var(--yellow-color);
   color: var(--dark-color);
-  border-radius: var(--common-radius);
-  padding: 5px 10px;
-  margin: 0;
-  word-break: break-word;
-  font-weight: bold;
   margin-right: 5px;
+
+  @extend %code-block;
 }
 
 // Hide/Show elements

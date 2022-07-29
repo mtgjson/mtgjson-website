@@ -23,18 +23,26 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)  
 **Parent property:** `data`
 
-<blockquote>
-  <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card, like such:</p>
+<blockquote class="warning">
+  <p class="small-header">Note</p>
+  <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
+
+  ```json
+  "data": {
+    "00010d56-fe38-5e35-8aed-518019aa36a5": [
+      <TCGplayer SKUs Model>
+    ],
+    ...
+  }
+  ```
+
+  <br />
+  <p>and accessing the data would look like this:</p>
   <br />
 
-```json
-"data": {
-  "00010d56-fe38-5e35-8aed-518019aa36a5": [
-    <TCGplayer SKUs Model>
-  ],
-  ...
-}
-```
+  ```js
+  data["00010d56-fe38-5e35-8aed-518019aa36a5"][0];
+  ```
 
 </blockquote>
 

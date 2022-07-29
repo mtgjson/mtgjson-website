@@ -24,8 +24,8 @@ MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of 
 - **Sets**
 - **Metadata**
 
-<blockquote>
-  <h4>Beta Information</h4>
+<blockquote class="warning">
+  <p class="small-header">Beta Information</p>
   <p>The beta rollout of the service will be available to all <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters with the goal of bringing a version to the rest of the community in the near future. Feel free to submit suggestions via the <a href="https://mtgjson.com/discord">Discord Server</a>.</p>
 </blockquote>
 
