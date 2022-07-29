@@ -2,7 +2,7 @@
 header.navbar(:class="{home: isHome}")
   .navbar-options(v-if="!isHome")
     SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-    NavMeta.desktop-hide(:width="`70px`")
+    NavMeta.desktop-hide(:width="`70px`" :hideText="true")
     ThemeSwitcher
   .navbar-options.home(v-else)
     a.docs-link(href="/getting-started/")

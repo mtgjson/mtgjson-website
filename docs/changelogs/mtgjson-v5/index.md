@@ -35,7 +35,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 #### Changed
 
-- Changed File models within the documentation and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This is no way changes how and where the data files are downloaded or how their models are formed
+- Changed File models within the documentation and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed
 
 ### Card Models
 

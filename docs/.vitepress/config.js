@@ -142,7 +142,7 @@ export default {
         link: '/brand-assets/',
       },
       {
-        text: 'License (MIT)',
+        text: 'License',
         link: '/license/',
       },
     ],

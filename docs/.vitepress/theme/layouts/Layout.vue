@@ -42,6 +42,7 @@ const toggleSidebar = (): void => {
     &.sidebar-open {
       .sidebar {
         transform: translateX(0);
+        border-right: 1px solid var(--bg-border-color);
       }
     }
   }

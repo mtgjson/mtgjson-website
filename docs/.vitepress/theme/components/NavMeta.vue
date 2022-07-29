@@ -30,7 +30,7 @@
           path(
             d="M4480,1689 l0,-881 l29,19 c187,120 181,115 196,168 c8,28 57,207 109,398 l95,348 l-108,342 l-107,342 l-107,73 l-107,73 l0,-882 z"
           )
-  .nav-meta--link.mobile-hide(v-if="!hideText")
+  .nav-meta--link(v-if="!hideText")
     a(href="/")
       h3 MTGJSON
     .version(v-if="version")
@@ -49,10 +49,10 @@ interface Props {
 const store = useStore();
 const version = computed(() => store.Meta.version);
 
-defineProps<Props>();
+const props = defineProps<Props>();
 
 onMounted(async (): Promise<void> => {
-  if (Object.keys(store.Meta).length === 0) {
+  if (Object.keys(store.Meta).length === 0 && !props.hideText) {
     await store.fetchFromApi('Meta');
   }
 });

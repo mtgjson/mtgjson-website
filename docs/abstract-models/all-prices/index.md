@@ -49,7 +49,7 @@ MTGJSON currently has affiliated with the following price providers to keep a **
             <YYYY-MM-DD>: <float> // Date as key and price as value
           }
         },
-        currency: <String>, // Currency of the provider
+        currency: <string>, // Currency of the provider
         retail: { // Provider retail values
           foil: { // Foil prices
             <YYYY-MM-DD>: <float> // Date as key and price as value
