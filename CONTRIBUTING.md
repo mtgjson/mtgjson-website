@@ -5,7 +5,7 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 ## Knowledge Requirements
 
 - TypeScript
-- Vue 3 (Composition)
+- Vue 3 (Composition API)
 - Pinia
 - VitePress
 - Markdown
@@ -21,9 +21,18 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 - npm
 - n
 
+## IDE Setup
+
+The current preferred IDE is [VS Code](https://code.visualstudio.com/). Be sure the install the following extensions:
+
+- Vue Language Features (Volar)
+- Typescript Vue Plugin (Volar)
+
+**Note:** You may have to enable "Takeover Mode" by disabling VS Code's builtin package `TypeScript and JavaScript Language Features` within the workspace.
+
 ## Directory Structure
 
-Files/Directories were omitted that do not help understand this current project structure.
+Some files and directories are omitted that do not help understand this current project structure.
 
 ```sh
 .
@@ -76,13 +85,13 @@ Explaining the configuration as a whole would be best served by directly linking
 
 The structure of a file is simple. Frontmatter on top, everything else below it. Some notes:
 
-- Frontmatter is written in JSON.
+- Frontmatter is written in YAML.
 - Markdown is written to a high-level of specification.
-- Vue components can only be used if they are registered globally via `./docs/vitepress/theme/index.js`.
+- Vue components can only be used in Markdown if they are registered globally via `./docs/vitepress/theme/index.js`.
 
 ### Using Frontmatter
 
-Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
+Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data and Vue component data and state.
 
 You can also change configuration of VitePress by overwriting variables within the frontmatter, such a title, description, etc.
 
@@ -90,28 +99,22 @@ You can also change configuration of VitePress by overwriting variables within t
 
 #### Example
 
-```json
-{
-  "title": "Card (Set)", # Meta title of page
-  "schema": "card", # Powers certain Vue components
-  "meta": [ # Head meta properties
-    {
-      "name": "description",
-      "content": "Card (Set) Data Model documentation.",
-    },
-    {
-      "name": "og:description",
-      "content": "Card (Set) Data Model documentation.",
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, card (set)",
-    }
-  ],
-  "feed": {
-    "enable": "true" # Include this for atom/rss XML additions
-  }
-}
+```yaml
+title: Card (Set)
+enum: card
+head:
+  - - meta
+    - property: og:title
+      content: Card (Set)
+  - - meta
+    - name: description
+      content: The Card (Set) Data Model describes the properties of a single card in a set.
+  - - meta
+    - property: og:description
+      content: The Card (Set) Data Model describes the properties of a single card in a set.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, card, card set
 ```
 
 ### Markdown Syntax for Documentation Fields
@@ -128,11 +131,13 @@ An example of a property field for a data object field in Markdown:
 > **Tags:** <i class="optional">optional</i>
 ```
 
-You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `"schema"` property have a value that equates to an EnumValues.json property.
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
-## The Vuex Store
+If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
 
-We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and API remains as performant as possible.
+## Pinia Store
+
+We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store remains as performant as possible.
 
 ## Testing
 

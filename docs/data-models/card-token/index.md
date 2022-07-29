@@ -51,7 +51,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of the card's available printing types.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
@@ -59,7 +59,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of types this card is in a booster pack.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
@@ -76,7 +76,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of card names associated to this card, such as `"Meld"` card face names.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -84,7 +84,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -92,7 +92,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 > - **Tags:** <i class="optional">optional</i>
@@ -101,7 +101,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -125,7 +125,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > The finishes of the card.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
@@ -142,7 +142,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > The visual frame effects.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
@@ -175,7 +175,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.0.0`
 
 > ### isFullArt
@@ -222,7 +222,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of keywords found on the card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -270,7 +270,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -286,7 +286,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of promotional types for a card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
@@ -295,7 +295,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > The names of the cards that produce this card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
 
 > ### securityStamp
@@ -335,7 +335,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of card subtypes found after em-dash.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -343,7 +343,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of card supertypes found before em-dash.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -374,7 +374,7 @@ The Card (Token) Data Model describes the properties and values of a single toke
 >
 > A list of all card types of the card, including Un&#8209;sets and gameplay variants.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 

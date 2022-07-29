@@ -42,7 +42,7 @@ The Deck Data Model describes a complete deck reference.
 >
 > The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -58,7 +58,7 @@ The Deck Data Model describes a complete deck reference.
 >
 > The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
-> - **Type:** `array[object]`
+> - **Type:** `object[]`
 > - **Introduced:** `v4.3.0`
 
 > ### name
@@ -72,7 +72,7 @@ The Deck Data Model describes a complete deck reference.
 >
 > The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
-> - **Type:** `array[object]`
+> - **Type:** `object[]`
 > - **Introduced:** `v4.3.0`
 
 > ### releaseDate

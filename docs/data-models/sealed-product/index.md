@@ -34,7 +34,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > A list of identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
 
@@ -50,7 +50,7 @@ The Sealed Product Data Model describes a list of properties for a purchase-able
 >
 > Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
 

@@ -51,7 +51,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of the card's available printing types.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
@@ -59,7 +59,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of types this card is in a booster pack.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
@@ -76,7 +76,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card names associated to this card, such as `"Meld"` card face names.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -84,7 +84,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
@@ -92,7 +92,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
 > - **Tags:** <i class="optional">optional</i>
@@ -101,7 +101,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
@@ -117,7 +117,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > The count of how many of this card exists in a relevant deck.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.4.1`
 
 > ### duelDeck
@@ -133,7 +133,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > The card rank on [EDHRec](https://www.edhrec.com).
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.5.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -173,7 +173,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > The finishes of the card.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
@@ -198,14 +198,14 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
 >
-> - **Type:** `array[] | array[object]`
+> - **Type:** `object[]`
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects
 >
 > The visual frame effects.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
@@ -262,7 +262,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.0.0`
 
 > ### isAlternative
@@ -380,7 +380,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of keywords found on the card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -405,7 +405,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v4.5.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -413,7 +413,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.
 >
-> - **Type:** `object{} | object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v4.0.0`
 
 > ### life
@@ -468,7 +468,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card UUID's to original printings of the card if this card is somehow different from its original, such as [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) cards.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -500,7 +500,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -516,7 +516,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of set printing codes the card was printed in, formatted in uppercase.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -524,7 +524,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of promotional types for a card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
@@ -533,7 +533,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v4.4.0`
 
 > ### rarity
@@ -548,7 +548,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card UUID's to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -556,7 +556,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
-> - **Type:** `array[] | array[object]`
+> - **Type:** `object[]`
 > - **Introduced:** `v4.0.0`
 
 > ### securityStamp
@@ -596,7 +596,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card subtypes found after em-dash.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='subtypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -604,7 +604,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card supertypes found before em-dash.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
@@ -635,7 +635,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of all card types of the card, including Un&#8209;sets and gameplay variants.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
 
@@ -650,7 +650,7 @@ The Card (Deck) Data Model describes the properties and values of a single card 
 >
 > A list of card UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >
-> - **Type:** `array[] | array[string]`
+> - **Type:** `string[]`
 > - **Introduced:** `v4.1.2`
 
 > ### watermark

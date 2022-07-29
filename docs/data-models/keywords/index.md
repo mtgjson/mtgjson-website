@@ -35,7 +35,7 @@ The Keywords Data Model describes a list of all keywords used on a Card.
 >
 > A list of ability words found in rules text on cards.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='abilityWords'/>
 > - **Introduced:** `v4.3.0`
 
@@ -43,7 +43,7 @@ The Keywords Data Model describes a list of all keywords used on a Card.
 >
 > A list of keyword abilities found in rules text on cards.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='keywordAbilities'/>
 > - **Introduced:** `v4.3.0`
 
@@ -51,6 +51,6 @@ The Keywords Data Model describes a list of all keywords used on a Card.
 >
 > A list of keyword actions found in rules text on cards.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='keywordActions'/>
 > - **Introduced:** `v4.3.0`

@@ -35,7 +35,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The number of cards in the set. This will default to [totalSetSize](#totalsetsize) if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.1.0`
 
 > ### block
@@ -50,7 +50,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) abstract model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -58,14 +58,14 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The list of cards in the set. See the [Card (Set)](/data-models/card-set/) Data Model.
 >
-> - **Type:** `array[object]`
+> - **Type:** `object[]`
 > - **Introduced:** `v4.0.0`
 
 > ### cardsphereSetId
 >
 > The [Cardsphere](https://www.cardsphere.com/) set identifier.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v5.2.1`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
 
@@ -141,7 +141,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.4.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -149,7 +149,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The split [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -195,7 +195,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -203,7 +203,7 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.2.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -211,21 +211,21 @@ The Set Data Model describes the properties and values of an individual Set.
 >
 > The tokens available to the set. See the [Card (Token)](/data-models/card-token/) Data Model.
 >
-> - **Type:** `array[object]`
+> - **Type:** `object[]`
 > - **Introduced:** `v4.0.0`
 
 > ### totalSetSize
 >
 > The total number of cards in the set, including promotional and related supplemental products but excluding [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) modifications - however those cards are included in the set itself.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.1.0`
 
 > ### translations
 >
 > The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
 >
-> - **Type:** `object{} | object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v4.3.2`
 
 > ### type

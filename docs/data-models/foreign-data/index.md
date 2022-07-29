@@ -59,7 +59,7 @@ The Foreign Data Data Model describes a list of properties for various Card Data
 >
 > The foreign multiverse identifier of the card.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 

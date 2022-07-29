@@ -35,7 +35,7 @@ The Set List Data Model describes metadata-like properties and values for an ind
 >
 > The number of cards in the set. This will default to [totalSetSize](#totalsetsize) if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.1.0`
 
 > ### block
@@ -118,7 +118,7 @@ The Set List Data Model describes metadata-like properties and values for an ind
 >
 > The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.4.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -126,7 +126,7 @@ The Set List Data Model describes metadata-like properties and values for an ind
 >
 > The split [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -172,7 +172,7 @@ The Set List Data Model describes metadata-like properties and values for an ind
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
-> - **Type:** `object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -180,7 +180,7 @@ The Set List Data Model describes metadata-like properties and values for an ind
 >
 > The group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.2.1`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -188,14 +188,14 @@ The Set List Data Model describes metadata-like properties and values for an ind
 >
 > The total number of cards in the set, including promos and related supplemental products.
 >
-> - **Type:** `integer`
+> - **Type:** `number`
 > - **Introduced:** `v4.1.0`
 
 > ### translations
 >
 > The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
 >
-> - **Type:** `object{} | object{props}`
+> - **Type:** `object`
 > - **Introduced:** `v4.3.2`
 
 > ### type

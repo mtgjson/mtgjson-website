@@ -58,7 +58,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 >
 > The finishes of the card.
 >
-> - **Type:** `array[string]`
+> - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
