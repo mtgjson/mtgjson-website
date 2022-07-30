@@ -87,7 +87,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost <i class="deprecated"></i>
+> ### convertedManaCost
 >
 > The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead.
 >
@@ -101,7 +101,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
 
-> ### faceConvertedManaCost <i class="optional"></i> <i class="deprecated"></i>
+> ### faceConvertedManaCost <i class="optional"></i>
 >
 > The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead.
 >
