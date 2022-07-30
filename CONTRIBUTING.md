@@ -108,10 +108,10 @@ head:
       content: Card (Set)
   - - meta
     - name: description
-      content: The Card (Set) Data Model describes the keys and calues of a single card in a set.
+      content: The Card (Set) data model describes the keys and calues of a single card in a set.
   - - meta
     - property: og:description
-      content: The Card (Set) Data Model describes the properties of a single card in a set.
+      content: The Card (Set) data model describes the properties of a single card in a set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card set

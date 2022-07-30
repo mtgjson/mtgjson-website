@@ -7,10 +7,10 @@ head:
       content: Card (Deck)
   - - meta
     - name: description
-      content: The Card (Deck) Data Model describes the properties of a single card in a deck.
+      content: The Card (Deck) data model describes the properties of a single card in a deck.
   - - meta
     - property: og:description
-      content: The Card (Deck) Data Model describes the properties of a single card in a deck.
+      content: The Card (Deck) data model describes the properties of a single card in a deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card deck
@@ -18,7 +18,7 @@ head:
 
 # Card (Deck)
 
-The Card (Deck) Data Model describes the properties of a single card in a [Deck](/data-models/deck/).
+The Card (Deck) data model describes the properties of a single card in a [Deck](/data-models/deck/).
 
 **Parent model:** [Deck](/data-models/deck/)  
 

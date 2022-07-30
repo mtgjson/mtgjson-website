@@ -6,10 +6,10 @@ head:
       content: Meta
   - - meta
     - name: description
-      content: The Meta Data Model describes application metadata.
+      content: The Meta data model describes application metadata.
   - - meta
     - property: og:description
-      content: The Meta Data Model describes application metadata.
+      content: The Meta data model describes application metadata.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, version, meta
@@ -17,7 +17,7 @@ head:
 
 # Meta
 
-The Meta Data Model describes application metadata.
+The Meta data model describes application metadata.
 
 **Parent file:** [Meta](/downloads/all-files/#meta)  
 

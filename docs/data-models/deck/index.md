@@ -7,10 +7,10 @@ head:
       content: Deck
   - - meta
     - name: description
-      content: The Deck Data Model describes a complete deck reference.
+      content: The Deck data model describes a complete deck reference.
   - - meta
     - property: og:description
-      content: The Deck Data Model describes a complete deck reference.
+      content: The Deck data model describes a complete deck reference.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, deck
@@ -18,7 +18,7 @@ head:
 
 # Deck
 
-The Deck Data Model describes a complete deck reference.
+The Deck data model describes a complete deck reference.
 
 **Parent file:** [All Decks](/downloads/all-decks/)  
 

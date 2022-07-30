@@ -3,8 +3,7 @@ main.home
   Content.home-content
 </template>
 
-<script setup lang='ts'>
-</script>
+<script setup lang="ts"></script>
 
 <style lang="scss" scoped>
 @import '../styles/placeholders';

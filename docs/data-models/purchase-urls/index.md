@@ -6,10 +6,10 @@ head:
       content: Purchase Urls
   - - meta
     - name: description
-      content: The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.
+      content: The Purchase Urls data model describes URL paths to purchase a product from a marketplace.
   - - meta
     - property: og:description
-      content: The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.
+      content: The Purchase Urls data model describes URL paths to purchase a product from a marketplace.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, purchase urls
@@ -17,7 +17,7 @@ head:
 
 # Purchase Urls
 
-The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.
+The Purchase Urls data model describes URL paths to purchase a product from a marketplace.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 

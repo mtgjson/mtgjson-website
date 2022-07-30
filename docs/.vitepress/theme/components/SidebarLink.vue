@@ -9,9 +9,9 @@ import { isActive } from '../helpers';
 import type { Route } from 'vitepress';
 import type { ISidebarItem } from '../types';
 
-interface Props {
+type Props = {
   item: ISidebarItem;
-}
+};
 
 const props = defineProps<Props>();
 const route: Route = useRoute();

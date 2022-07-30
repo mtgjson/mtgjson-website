@@ -7,10 +7,10 @@ head:
       content: Keywords
   - - meta
     - name: description
-      content: The Keywords Data Model describes a list of all keywords used on a Card.
+      content: The Keywords data model describes a list of all keywords used on a Card.
   - - meta
     - property: og:description
-      content: The Keywords Data Model describes a list of all keywords used on a Card.
+      content: The Keywords data model describes a list of all keywords used on a Card.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, keywords
@@ -18,7 +18,7 @@ head:
 
 # Keywords
 
-The Keywords Data Model describes a list of all keywords used on a Card.
+The Keywords data model describes a list of all keywords used on a Card.
 
 **Parent file:** [Keywords](/downloads/all-files/#keywords)  
 

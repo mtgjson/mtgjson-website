@@ -12,12 +12,12 @@ a.nav-link.external(
 import { computed } from 'vue';
 import { isMailto, isTel, ensureExt } from '../helpers';
 
-interface Props {
+type Props = {
   item: {
     text: string;
     link: string;
   };
-}
+};
 
 const props = defineProps<Props>();
 

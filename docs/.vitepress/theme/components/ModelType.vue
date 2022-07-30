@@ -9,12 +9,12 @@
 
 <script setup lang="ts">
 import { ref, computed } from 'vue';
-import Toggle from '@vueform/toggle'
+import Toggle from '@vueform/toggle';
 import typesAsJson from '../static/types.json';
 
-interface Props {
+type Props = {
   type: string;
-}
+};
 
 const props = defineProps<Props>();
 
@@ -24,7 +24,7 @@ const currentType = computed<object>(() => typesAsJson[props.type]);
 
 const toggleType = (): void => {
   showType.value = !showType.value;
-}
+};
 </script>
 
-<style src='@vueform/toggle/themes/default.css'></style>
+<style src="@vueform/toggle/themes/default.css"></style>

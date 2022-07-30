@@ -15,9 +15,9 @@ import SidebarButton from './SidebarButton.vue';
 import NavMeta from './NavMeta.vue';
 import ThemeSwitcher from './ThemeSwitcher.vue';
 
-interface Props {
+type Props = {
   isHome: boolean;
-}
+};
 
 defineProps<Props>();
 </script>

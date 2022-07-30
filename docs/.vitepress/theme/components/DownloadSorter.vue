@@ -6,26 +6,26 @@
   ) Toggle Options
   fieldset.sort-rows(v-if="showOptions")
     .sort-row.search
-      label(for="search-input") Search By:
+      label(for="search-input") Search:
       input.table-sort-select(
         name="search-input",
         placeholder="name, code, type, etc...",
         type="text",
-        v-model="searchKey",
+        v-model="searchValue",
         @input="onHandleChange"
       )
 
     .sort-row
-      label(for="filter-input") Filter By:
+      label(for="filter-input") Filter:
       select#filter-input.table-sort-select(
-        v-model="filterKey",
+        v-model="filterValue",
         @change="onHandleChange"
       )
         option(value="", selected) All Sets
         option(v-for="(type, key) in filters", :key="key", :value="type") {{ prettifyType(type) }}
 
     .sort-row
-      label(for="sort-input") Sort By:
+      label(for="sort-input") Sort:
       select#sort-input.table-sort-select(
         v-model="sortKey",
         @input="onHandleChange"
@@ -40,50 +40,43 @@
         option(value="type:true") Type (Descending)
 
     .sort-row.checkbox(v-if="!disableChecks")
-      label(for="spoiler-input") Include Spoilers:
-      input#spoiler-input(
-        type="checkbox",
-        :checked="spoilerKey",
-        v-model="spoilerKey",
-        @input="onHandleChange"
-      )
+      .vue-toggler-plugin.list-toggle
+        Toggle(@change="onHandleChange" v-model="spoilerValue")
+        p Include Spoilers
 
     .sort-row.checkbox(v-if="!disableChecks")
-      label(for="online-input") Include Online Only:
-      input#online-input(
-        type="checkbox",
-        :checked="onlineKey",
-        v-model="onlineKey",
-        @input="onHandleChange"
-      )
+      .vue-toggler-plugin.list-toggle
+        Toggle(@change="onHandleChange" v-model="onlineValue")
+        p Include Online Only
 
     .sort-row.reset
       small
         a(@click="onHandleReset") Reset Toggles
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { ref, onMounted } from 'vue';
+import Toggle from '@vueform/toggle';
 import { search, filter, sort, prettifyType } from '../helpers';
 import type { IList } from '../types';
 
-interface Props {
-  list: IList[],
-  filters: IList[],
+type Props = {
+  list: IList[];
+  filters: IList[];
   file?: string;
   type?: string;
   disableChecks?: boolean;
-}
+};
 
 const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
 const props = defineProps<Props>();
 
 const lazyOffset = ref<number>(10);
 const lazyToLoad = ref<number>(10);
-const filterKey = ref<string>('');
-const searchKey = ref<string>('');
-const spoilerKey = ref<boolean>(true);
-const onlineKey = ref<boolean>(true);
+const filterValue = ref<string>('');
+const searchValue = ref<string>('');
+const spoilerValue = ref<boolean>(true);
+const onlineValue = ref<boolean>(true);
 const showOptions = ref<boolean>(false);
 const sortKey = ref<string>('releaseDate:true');
 const timeout = ref<any>(null);
@@ -110,10 +103,10 @@ const onLoadMore = (): void => {
 const onHandleReset = (): void => {
   sortKey.value = 'releaseDate:true';
   lazyOffset.value = lazyToLoad.value;
-  filterKey.value = '';
-  searchKey.value = '';
-  spoilerKey.value = true;
-  onlineKey.value = true;
+  filterValue.value = '';
+  searchValue.value = '';
+  spoilerValue.value = true;
+  onlineValue.value = true;
 
   const data: IList[] = sort(sortKey.value, props.list);
   const dynamicData: IList[] = data.slice(0, lazyOffset.value);
@@ -130,12 +123,12 @@ const onHandleChange = (speed?: number): void => {
     const loadMoreEl: HTMLElement = document.querySelector('.load-more-btn');
     const data: IList[] = props.list;
     // Remove spoilers data
-    let filteredData: IList[] = !spoilerKey.value ? data.filter((set) => !set.isPartialPreview) : data;
+    let filteredData: IList[] = !spoilerValue.value ? data.filter((set) => !set.isPartialPreview) : data;
     // Removed online data
-    filteredData = !onlineKey.value ? filteredData.filter((set) => !set.isOnlineOnly) : filteredData;
-    const searched: IList[] = search(searchKey.value, filteredData);
+    filteredData = !onlineValue.value ? filteredData.filter((set) => !set.isOnlineOnly) : filteredData;
+    const searched: IList[] = search(searchValue.value, filteredData);
     const sorted: IList[] = sort(sortKey.value, searched);
-    const filtered: IList[] = filter(filterKey.value, sorted);
+    const filtered: IList[] = filter(filterValue.value, sorted);
     const dynamicData: IList[] = filtered.slice(0, lazyOffset.value);
     const newListCount: number = dynamicData.length;
     const newListTotalCount: number = filtered.length;
@@ -157,6 +150,7 @@ defineExpose({
 });
 </script>
 
+<style src="@vueform/toggle/themes/default.css"></style>
 <style lang="scss" scoped>
 .sorting-options {
   position: sticky;

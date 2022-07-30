@@ -4,7 +4,7 @@
     Toggle(v-model="toggleValue" @change="switchTheme")
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { onMounted, ref } from 'vue';
 import Toggle from '@vueform/toggle';
 import { useStore } from '../store.js';
@@ -62,4 +62,4 @@ const switchTheme = (): void => {
 };
 </script>
 
-<style src='@vueform/toggle/themes/default.css'></style>
+<style src="@vueform/toggle/themes/default.css"></style>

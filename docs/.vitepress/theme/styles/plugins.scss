@@ -2,6 +2,14 @@
   display: inline-flex;
   margin-bottom: 1rem;
 
+  &.list-toggle {
+    margin-bottom: 0;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
   &.theme-toggle {
     margin-bottom: 0;
     float: right;

@@ -16,15 +16,15 @@ section.sidebar-group
   SidebarLinks.sidebar-group-items(:items="item.items")
 </template>
 
-<script setup lang='ts'>
-import { useRoute } from "vitepress";
-import { isActive } from "../helpers";
+<script setup lang="ts">
+import { useRoute } from 'vitepress';
+import { isActive } from '../helpers';
 import SidebarLinks from './SidebarLinks.vue';
 import type { Route } from 'vitepress';
 
-interface Props {
+type Props = {
   item: object;
-}
+};
 
 const route: Route = useRoute();
 

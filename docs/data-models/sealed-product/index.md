@@ -6,10 +6,10 @@ head:
       content: Sealed Product
   - - meta
     - name: description
-      content: The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.
+      content: The Sealed Product data model describes a list of properties for a purchase-able product of a Set.
   - - meta
     - property: og:description
-      content: The Sealed Product Data Model describes a list of properties for a purchase-able product of a Set.
+      content: The Sealed Product data model describes a list of properties for a purchase-able product of a Set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product
@@ -17,7 +17,7 @@ head:
 
 # Sealed Product
 
-The Sealed Product Data Model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
+The Sealed Product data model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
 
 **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)  
 

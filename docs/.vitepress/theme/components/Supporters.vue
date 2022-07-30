@@ -268,7 +268,7 @@ onMounted((): void => {
         &,
         &-time {
           color: var(--text-color);
-        font-size: 14px;
+          font-size: 14px;
         }
 
         &-time {

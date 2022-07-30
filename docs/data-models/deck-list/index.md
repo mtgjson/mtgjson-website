@@ -7,10 +7,10 @@ head:
       content: Deck List
   - - meta
     - name: description
-      content: The Deck List Data Model describes a metadata-like model for a Deck.
+      content: The Deck List data model describes a metadata-like model for a Deck.
   - - meta
     - property: og:description
-      content: The Deck List Data Model describes a metadata-like model for a Deck.
+      content: The Deck List data model describes a metadata-like model for a Deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, deck list
@@ -18,7 +18,7 @@ head:
 
 # Deck List
 
-The Deck List Data Model describes a metadata-like model for all individual [Deck](/data-models/deck/) data.
+The Deck List data model describes a metadata-like model for all individual [Deck](/data-models/deck/) data.
 
 **Parent file:** [DeckList](/downloads/all-files/#decklist)  
 

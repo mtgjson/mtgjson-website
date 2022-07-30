@@ -19,7 +19,7 @@ main.page
           a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import BackToTop from './BackToTop.vue';
@@ -106,7 +106,7 @@ const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
 
     &::before,
     &::after {
-      content: "";
+      content: '';
       display: table;
       clear: both;
     }

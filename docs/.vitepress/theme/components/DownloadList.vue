@@ -66,11 +66,11 @@ import DownloadSorter from './DownloadSorter.vue';
 import { sort } from '../helpers';
 import type { IList } from '../types';
 
-interface Props {
+type Props = {
   file: string;
   type?: string;
   disableChecks?: boolean;
-}
+};
 
 const store = useStore();
 const props = defineProps<Props>();
@@ -85,7 +85,9 @@ const sortKey = ref<string>('releaseDate:true');
 const sortedList = ref<IList[] | any[]>([]);
 
 const defaultList = computed<IList[] | any[]>((): IList[] | any[] => store[props.file]);
-const listFilters = computed<IList[] | any[]>((): IList[] | any[] => Array.from(new Set(defaultList.value.map((cur: IList) => cur.type))));
+const listFilters = computed<IList[] | any[]>((): IList[] | any[] =>
+  Array.from(new Set(defaultList.value.map((cur: IList) => cur.type)))
+);
 const list = computed<IList[]>((): IList[] => {
   if (sortedList.value.length > 0) {
     return sortedList.value;

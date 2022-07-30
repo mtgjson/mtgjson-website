@@ -6,10 +6,10 @@ head:
       content: Identifiers
   - - meta
     - name: description
-      content: The Identifiers Data Model describes a list of identifiers associated to a Card.
+      content: The Identifiers data model describes a list of identifiers associated to a Card.
   - - meta
     - property: og:description
-      content: The Identifiers Data Model describes a list of identifiers associated to a Card.
+      content: The Identifiers data model describes a list of identifiers associated to a Card.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, identifiers
@@ -17,7 +17,7 @@ head:
 
 # Identifiers
 
-The Identifiers Data Model describes a list of identifiers associated to a Card.
+The Identifiers data model describes a list of identifiers associated to a Card.
 
 **Parent model:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)  
 

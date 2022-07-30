@@ -6,10 +6,10 @@ head:
       content: Booster
   - - meta
     - name: description
-      content: The Booster abstract Data Model describes how a Set's booster pack may be constructed.
+      content: The Booster abstract data model describes how a Set booster pack may be constructed.
   - - meta
     - property: og:description
-      content: The Booster abstract Data Model describes how a Set's booster pack may be constructed.
+      content: The Booster abstract data model describes how a Set booster pack may be constructed.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, booster
@@ -17,7 +17,7 @@ head:
 
 # Booster
 
-The Booster Abstract Model describes how a [Set](/data-models/set/)'s booster pack may be constructed.
+The Booster abstract model describes how a [Set](/data-models/set/) booster pack may be constructed.
 
 **Parent model:** [Set](/data-models/set/)  
 

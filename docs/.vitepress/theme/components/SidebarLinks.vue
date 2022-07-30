@@ -9,9 +9,9 @@ ul.sidebar-links
 import SidebarGroup from './SidebarGroup.vue';
 import SidebarLink from './SidebarLink.vue';
 
-interface Props {
+type Props = {
   items: [];
-}
+};
 
 defineProps<Props>();
 </script>

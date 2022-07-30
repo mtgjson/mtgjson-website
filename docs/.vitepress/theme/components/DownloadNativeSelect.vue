@@ -75,17 +75,17 @@
       ) {{ `${fileName}.json.${format}` }}
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import type { HTMLChangeEvent } from '../types';
 
-interface Props {
+type Props = {
   fileName: string;
   fileType?: string;
-}
+};
 
 defineProps<Props>();
 
-const compressedFormats: string[] = ["bz2", "gz", "xz", "zip"];
+const compressedFormats: string[] = ['bz2', 'gz', 'xz', 'zip'];
 const api: string = 'https://mtgjson.com/api/v5/';
 
 /**
@@ -97,15 +97,15 @@ const downloadFile = (e: HTMLChangeEvent): void => {
   const target: HTMLFormElement = e.target;
   const url: string = target.value;
   const fileName: string = target.options[target.options.selectedIndex].innerText;
-  const placeHolderAnchor: HTMLAnchorElement = document.createElement("a");
+  const placeHolderAnchor: HTMLAnchorElement = document.createElement('a');
   let $anchorElement: HTMLAnchorElement;
 
-  placeHolderAnchor.id = "temp-anchor";
+  placeHolderAnchor.id = 'temp-anchor';
   placeHolderAnchor.href = url;
   placeHolderAnchor.download = fileName;
 
   document.body.appendChild(placeHolderAnchor);
-  $anchorElement = document.querySelector("#temp-anchor");
+  $anchorElement = document.querySelector('#temp-anchor');
 
   placeHolderAnchor.click();
 

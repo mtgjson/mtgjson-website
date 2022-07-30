@@ -41,10 +41,10 @@
 import { onMounted, computed } from 'vue';
 import { useStore } from '../store.js';
 
-interface Props {
+type Props = {
   width: string;
   hideText?: boolean;
-}
+};
 
 const store = useStore();
 const version = computed(() => store.Meta.version);

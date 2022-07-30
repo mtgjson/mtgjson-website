@@ -6,10 +6,10 @@ head:
       content: Enum Values
   - - meta
     - name: description
-      content: The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.
+      content: The Enum Values abstract model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
   - - meta
     - property: og:description
-      content: The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models.
+      content: The Enum Values abstract model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, enum values
@@ -17,7 +17,7 @@ head:
 
 # Enum Values
 
-The Enum Values Abstract Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
+The Enum Values abstract model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
 
 **Parent file:** [EnumValues](/downloads/all-files/#enumvalues)  
 

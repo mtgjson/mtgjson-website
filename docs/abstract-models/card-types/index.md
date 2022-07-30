@@ -6,10 +6,10 @@ head:
       content: Card Types
   - - meta
     - name: description
-      content: The Card Types Abstract Model describes other possible sub-types and super-types of a card type.
+      content: The Card Types abstract model describes other possible sub-types and super-types of a card type.
   - - meta
     - property: og:description
-      content: The Card Types Abstract Model describes other possible sub-types and super-types of a card type.
+      content: The Card Types abstract model describes other possible sub-types and super-types of a card type.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card types
@@ -17,7 +17,7 @@ head:
 
 # Card Types
 
-The Card Types Abstract Model describes other possible sub-types and super-types of a card type.
+The Card Types abstract model describes other possible sub-types and super-types of a card type.
 
 **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)  
 

@@ -4,9 +4,9 @@ nav.nav-links
     NavLink(:item="item")
 </template>
 
-<script setup lang='ts'>
-import { useData } from "vitepress";
-import NavLink from "./NavLink.vue";
+<script setup lang="ts">
+import { useData } from 'vitepress';
+import NavLink from './NavLink.vue';
 
 const { theme } = useData();
 const userLinks = theme.value.nav;
@@ -29,7 +29,7 @@ const userLinks = theme.value.nav;
     }
 
     &::before {
-      content: "";
+      content: '';
       position: absolute;
       display: block;
       height: 25px;
@@ -57,25 +57,25 @@ const userLinks = theme.value.nav;
 
     &:nth-of-type(1) {
       &::before {
-        background-image: url("/images/icon-discord.svg");
+        background-image: url('/images/icon-discord.svg');
       }
     }
 
     &:nth-of-type(2) {
       &::before {
-        background-image: url("/images/icon-twt.svg");
+        background-image: url('/images/icon-twt.svg');
       }
     }
 
     &:nth-of-type(3) {
       &::before {
-        background-image: url("/images/icon-patreon.svg");
+        background-image: url('/images/icon-patreon.svg');
       }
     }
 
     &:nth-of-type(4) {
       &::before {
-        background-image: url("/images/icon-github.svg");
+        background-image: url('/images/icon-github.svg');
       }
     }
   }

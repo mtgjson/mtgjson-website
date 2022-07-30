@@ -13,16 +13,16 @@ aside.sidebar
     SidebarLinks(:items="items")
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import NavLinks from './NavLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';
 import Search from './Search.vue';
 import type { ISidebarItem } from '../types';
 
-interface Props {
+type Props = {
   items: ISidebarItem[];
-}
+};
 
 defineProps<Props>();
 </script>
@@ -39,7 +39,8 @@ defineProps<Props>();
   background-color: var(--bg-color);
   padding-bottom: 2rem;
 
-  ol, ul {
+  ol,
+  ul {
     margin-left: 0;
     margin-bottom: 0;
   }
@@ -52,7 +53,8 @@ defineProps<Props>();
     display: inline-block;
   }
 
-  ul, ol {
+  ul,
+  ol {
     padding-left: 25px;
   }
 

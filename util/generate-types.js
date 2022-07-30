@@ -3,89 +3,92 @@ import { pages } from '../docs/.vitepress/config';
 
 const shiki = require('shiki');
 
-// JSON Interfaces
+// Convert some incompatible types that we use for documentation clarity but differs from TypeScript types
+const convertIncompatibleTypes = (value) => {
+  if (value === 'float') {
+    return 'number';
+  } else {
+    return value;
+  }
+}
+
+// Convert page title to become a type name
+const convertPageNameToNamedType = (name) => {
+  return name.replace(/[\s()]/g, '');
+}
+
+// JSON TyepScript types for documentation
 const awaitJSONTypes = async () => new Promise(async (resolve, reject) => {
   const jsonTypes = {};
 
   for(let page of pages) {
-    const interfaceName = page.title.replace(/[\s()]/g, '');
+    const propName = convertPageNameToNamedType(page.title);
 
     if (page.model && page.model.length > 0) {
-      let interfaceValues = '';
+      let propValues = '';
       let isFirst = true;
 
       page.model.forEach((property) => {
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
-        let type = '';
-
-        if (property.type === 'float') {
-          type = 'number';
-        } else {
-          type = property.type;
-        }
+        const propertyType = convertIncompatibleTypes(property.type);
+        const propertyOptional = property.optional ? '?' : '';
 
         if( isFirst ) {
           isFirst = false;
-          interfaceValues += `${propertyName}${property.optional ? '?' : ''}: ${type};`;
+          propValues += `${propertyName}${propertyOptional}: ${propertyType};`;
         } else {
-          interfaceValues += `\n  ${propertyName}${property.optional ? '?' : ''}: ${type};`;
+          propValues += `\n  ${propertyName}${propertyOptional}: ${propertyType};`;
         }
       });
 
-      const interfaceString = `type ${interfaceName} = {
-  ${interfaceValues}
+      const propString = `type ${propName} = {
+  ${propValues}
 }
   `.trim();
 
       const shikiHighlighter = await shiki.getHighlighter({ theme: 'material-palenight' });
-      const shikiCode = shikiHighlighter.codeToHtml(`${interfaceString}`, { lang: 'ts' });
+      const shikiCode = shikiHighlighter.codeToHtml(`${propString}`, { lang: 'ts' });
 
-      jsonTypes[interfaceName] = shikiCode;
+      jsonTypes[propName] = shikiCode;
     }
   }
 
   resolve(jsonTypes);
 });
 
-// True Interface generation
+// True TypeScript type generation
 const generateTrueTypes = () => {
-  let interfaces = '';
+  let props = '';
 
   pages.forEach(async (page) => {
     if (page.model && page.model.length > 0) {
-      const interfaceName = page.title.replace(' ', '').replace('(', '').replace(')', '');
-      let interfaceValues = '';
-      let interfaceString = '';
+      const propName = convertPageNameToNamedType(page.title);
+      let propValues = '';
+      let propString = '';
 
       page.model.forEach((property) => {
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
-        let type = '';
+        const propertyType = convertIncompatibleTypes(property.type);
+        const propertyOptional = property.optional ? '?' : '';
 
-        if (property.type === 'float') {
-          type = 'number';
-        } else {
-          type = property.type;
-        }
-
-        interfaceValues += `
-  // ${propertyName}
-  ${propertyName}${property.optional ? '?' : ''}: ${type};
+        propValues += `
+  ${propertyName}${propertyOptional}: ${propertyType};
         `;
       });
 
-      interfaceString = `
-export type ${interfaceName} = {
-  ${interfaceValues}
+      propString = `
+export type ${propName} = {
+  ${propValues}
 }
   `;
 
-      interfaces += interfaceString;
+      props += propString;
     }
   });
 
   fs.writeFileSync(
     `./packages/mtgjson-types/index.ts`,
-    `${interfaces}
+    `${props}
   `
   );
 };

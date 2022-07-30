@@ -107,7 +107,7 @@ const toggleTOCOptionals = (doHide: boolean): void => {
 };
 </script>
 
-<style src='@vueform/toggle/themes/default.css'></style>
+<style src="@vueform/toggle/themes/default.css"></style>
 <style lang="scss" scoped>
 .property-toggler {
   &.none {
