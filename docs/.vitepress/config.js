@@ -24,6 +24,8 @@ export default {
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
     ['meta', { property: 'og:image', src: '/images/assets/thumbnail-logo-mtgjson.png' }],
+    // Shiki
+    ['script', { src: 'https://unpkg.com/shiki' } ],
     // Analytics
     ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
     [

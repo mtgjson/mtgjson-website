@@ -25,6 +25,8 @@ The Translations Data Model describes a Set name translated per available langua
 
 ## Model Index
 
+<ModelType type="Translations" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -35,7 +37,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Ancient Greek.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -43,7 +45,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Arabic.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -51,7 +53,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Chinese Simplified.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -59,7 +61,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Chinese Traditional.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -67,7 +69,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in French.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -75,7 +77,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in German.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -83,7 +85,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Hebrew.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -91,7 +93,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Italian.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -99,7 +101,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Japanese.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -107,7 +109,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Korean.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -115,7 +117,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Latin.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -123,7 +125,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Phyrexian.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.7.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -131,7 +133,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Portuguese (Brazil).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -139,7 +141,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Russian.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -147,7 +149,7 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Sanskrit.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -155,6 +157,6 @@ The Translations Data Model describes a Set name translated per available langua
 >
 > The set name translation in Spanish.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>

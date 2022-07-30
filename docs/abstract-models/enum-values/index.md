@@ -27,14 +27,10 @@ The Enum Values Abstract Model describes a list of key value pairs that are dire
 
 ```json
 {
-  // Data Model name
-  "<Data Model>": {
-    // Property of a Data Model
-    "<Property Key>": [
-      // Enumeration of property values
-      <string>,
-      ... // More enumeration values
-    ],
+  // Enum model name
+  "<Enum Model>": {
+    // Enumerable property name
+    "<Property Key>": <string[]>,
     ... // More properties
   },
   ... // More models

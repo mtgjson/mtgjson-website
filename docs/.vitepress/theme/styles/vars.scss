@@ -13,11 +13,12 @@
 
   // True colors, not to be changed
   --white-color: #ffffff;
+  --black-color: #000000;
   --yellow-color: #fcd253;
   --yellow-darker-color: #ad850e;
   --yellow-dark-color: #ffe9852d;
   --yellow-dark-2-color: #ffda372d;
-  --green-color: lightgreen;
+  --green-color: palegreen;
   --red-color: salmon;
   --orange-color: #ef6c2f;
   --discord-color: #7289da;
@@ -39,7 +40,7 @@
   --dark-color: #263646;
   --dark-1-color: #172839;
   --dark-2-color: #0e141f;
-  --dark-3-color: #000000;
+  --dark-3-color: var(--black-color);
 
   --header-border-color: var(--dark-color);
 

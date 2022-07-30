@@ -66,8 +66,8 @@ defineProps<Props>();
     margin-left: 0;
 
     &-options {
-      display: flex;
-      justify-content: space-between;
+      display: grid;
+      grid-template-columns: 1fr 1fr 1fr;
       max-width: var(--content-width);
     }
 

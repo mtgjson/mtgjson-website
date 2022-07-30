@@ -8,6 +8,7 @@
 @import './sidebar';
 @import './code';
 @import './pages';
+@import './plugins';
 
 html, body {
   min-width: 320px;
@@ -286,6 +287,12 @@ blockquote {
 }
 
 // Hide/Show elements
+.hidden-property-siblings {
+  & ~ blockquote {
+    display: none !important;
+  }
+}
+.hidden,
 .desktop-hide {
   display: none !important;
 }

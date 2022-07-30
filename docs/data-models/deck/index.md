@@ -26,6 +26,8 @@ The Deck Data Model describes a complete deck reference.
 
 ## Model Index
 
+<ModelType type="Deck" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -36,14 +38,14 @@ The Deck Data Model describes a complete deck reference.
 >
 > The printing deck code for the deck.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
 > ### commander
 >
 > The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
-> - **Type:** `<object>`
+> - **Type:** `CardDeck`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -51,7 +53,7 @@ The Deck Data Model describes a complete deck reference.
 >
 > The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a delimiter of `_`.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Examples:** `"SpiritSquadron_VOC"`
 > - **Introduced:** `v4.3.0`
 
@@ -59,34 +61,34 @@ The Deck Data Model describes a complete deck reference.
 >
 > The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
-> - **Type:** `<object[]>`
+> - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
 
 > ### name
 >
 > The name of the deck.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
 > ### sideBoard
 >
 > The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
-> - **Type:** `<object[]>`
+> - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
 
 > ### releaseDate
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
 >
-> - **Type:** `<null> | <string>`
+> - **Type:** `null | string`
 > - **Introduced:** `v4.3.0`
 
 > ### type
 >
 > The type of deck.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.3.0`

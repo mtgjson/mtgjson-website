@@ -25,6 +25,8 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 
 ## Model Index
 
+<ModelType type="Legalities" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -35,7 +37,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -43,7 +45,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Commander](https://magic.wizards.com/en/content/commander-format) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -51,7 +53,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Duel Commander](https://mtg.fandom.com/wiki/Duel_Commander) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -59,7 +61,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the future for the [Standard](https://magic.wizards.com/en/content/standard-formats-magic-gathering) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -67,7 +69,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Frontier](https://magic.wizards.com/en/articles/archive/feature/frontier-magic-2010-05-24) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -75,7 +77,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Gladiator](https://gladiator.blog/about-gladiator/) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -83,7 +85,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Historic](<https://mtg.fandom.com/wiki/Historic_(format)>) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.1.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -91,7 +93,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Historic Brawl](https://draftsim.com/mtg-arena-historic-brawl/) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -99,7 +101,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Legacy](https://magic.wizards.com/en/game-info/gameplay/formats/legacy) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -107,7 +109,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Modern](https://magic.wizards.com/en/game-info/gameplay/formats/modern) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -115,7 +117,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Old School](https://mtg.fandom.com/wiki/Old_School) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -123,7 +125,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Pauper](https://magic.wizards.com/en/game-info/gameplay/formats/pauper) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -131,7 +133,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Pauper Commander](https://mtg.fandom.com/wiki/Pauper_Commander) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -139,7 +141,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Penny Dreadful](https://mtg.fandom.com/wiki/Penny_Dreadful) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -147,7 +149,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Pioneer](https://magic.wizards.com/en/game-info/gameplay/formats/pioneer) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -155,7 +157,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Pre-Modern](https://premodernmagic.com/) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -163,7 +165,7 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Standard](https://magic.wizards.com/en/content/standard-formats-magic-gathering) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -171,6 +173,6 @@ The Legalities Data Model describes a list of legalities in play formats for a C
 >
 > Legality of the card in the [Vintage](https://magic.wizards.com/en/game-info/gameplay/formats/vintage) play format.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Tags:** <i class="optional">optional</i>

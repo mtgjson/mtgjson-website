@@ -49,6 +49,8 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 
 ## Model Index
 
+<ModelType type="TcgplayerSkus" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -59,7 +61,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 >
 > The condition of the card.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - <ExampleField type='condition'/>
 > - **Introduced:** `v5.1.0`
 
@@ -67,7 +69,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 >
 > The finishes of the card.
 >
-> - **Type:** `<string[]>`
+> - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="new">new</i>
@@ -76,7 +78,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 >
 > The language of the card.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - <ExampleField type='language'/>
 > - **Introduced:** `v5.1.0`
 
@@ -84,7 +86,7 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 >
 > The printing style of the card.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - <ExampleField type='printing'/>
 > - **Introduced:** `v5.1.0`
 
@@ -92,12 +94,12 @@ The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?p
 >
 > The product identifier of the card.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.1.0`
 
 > ### skuId
 >
 > The SKU identifier of the card.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.1.0`

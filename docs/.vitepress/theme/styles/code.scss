@@ -12,6 +12,10 @@ pre {
   line-height: 1.5rem;
   padding: 1rem;
 
+  &.shiki {
+    background-color: var(--code-bg-color) !important;
+  }
+
   code {
     padding-left: 0;
     padding-right: 0;
@@ -41,6 +45,12 @@ div[class~="language-json"] {
 div[class~="language-js"] {
   &:before {
     content: "javascript";
+  }
+}
+
+div[class~="language-ts"] {
+  &:before {
+    content: "typescript";
   }
 }
 

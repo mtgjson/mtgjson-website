@@ -67,6 +67,8 @@ onMounted(async (): Promise<void> => {
     &--logo {
       display: flex;
       align-items: center;
+      justify-content: center;
+
       a {
         font-size: 0;
       }

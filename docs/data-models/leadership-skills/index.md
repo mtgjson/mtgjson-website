@@ -25,6 +25,8 @@ The Leadership Skills Data Model describes a list of formats that a Card is lega
 
 ## Model Index
 
+<ModelType type="LeadershipSkills" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -35,19 +37,19 @@ The Leadership Skills Data Model describes a list of formats that a Card is lega
 >
 > If the card can be your commander in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) format.
 >
-> - **Type:** `<boolean>`
+> - **Type:** `boolean`
 > - **Introduced:** `v4.5.1`
 
 > ### commander
 >
 > If the card can be your commander in the [Commander/EDH](https://magic.wizards.com/en/content/commander-format) format.
 >
-> - **Type:** `<boolean>`
+> - **Type:** `boolean`
 > - **Introduced:** `v4.5.1`
 
 > ### oathbreaker
 >
 > If the card can be your commander in the [Oathbreaker](https://oathbreakermtg.org/) format.
 >
-> - **Type:** `<boolean>`
+> - **Type:** `boolean`
 > - **Introduced:** `v4.5.1`

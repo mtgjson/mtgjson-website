@@ -1,0 +1,77 @@
+.vue-toggler-plugin {
+  display: inline-flex;
+  margin-bottom: 1rem;
+
+  &.theme-toggle {
+    margin-bottom: 0;
+    float: right;
+
+    .toggle-container {
+      .toggle {
+        position: relative;
+
+        &::before {
+          position: absolute;
+          z-index: 1;
+          content: "";
+          width: 16px;
+          height: 16px;
+          background-size: cover;
+        }
+
+        .toggle-handle {
+          background-color: var(--light-color);
+        }
+
+        &.toggle-off,
+        &.toggle-on {
+          background-color: var(--gray-3-color);
+          border-color: var(--gray-3-color);
+        }
+
+        &.toggle-off {
+          background-color: var(--bg-darker-color);
+          border-color: var(--bg-darker-color);
+
+          &::before {
+            right: 3px;
+            left: auto;
+            background-image: url('/images/icon-light-theme.svg');
+          }
+        }
+
+        &.toggle-on {
+          &::before {
+            left: 3px;
+            right: auto;
+            background-image: url('/images/icon-dark-theme.svg');
+          }
+        }
+      }
+    }
+  }
+
+  .toggle-container {
+    &:focus {
+      box-shadow: none !important;
+    }
+
+    .toggle {
+      &.toggle-on {
+        background-color: var(--green-color);
+        border-color: var(--green-color);
+      }
+
+      &.toggle-off {
+        background-color: var(--gray-3-color);
+        border-color: var(--gray-3-color);
+      }
+    }
+  }
+
+  p {
+    margin-left: 0.5rem;
+    margin-bottom: 0;
+    font-weight: bold;
+  }
+}

@@ -25,6 +25,8 @@ The Rulings Data Model describes a list of rulings for a Card.
 
 ## Model Index
 
+<ModelType type="Rulings" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -35,7 +37,7 @@ The Rulings Data Model describes a list of rulings for a Card.
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the rule.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Attributes** <i class="optional">optional</i>
 
@@ -43,6 +45,6 @@ The Rulings Data Model describes a list of rulings for a Card.
 >
 > The text ruling of the card.
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 > - **Attributes** <i class="optional">optional</i>

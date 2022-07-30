@@ -25,6 +25,8 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 
 ## Model Index
 
+<ModelType type="PurchaseUrls" />
+
 <PropertyToggler/>
 
 [[toc]]
@@ -35,7 +37,7 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 >
 > The URL to purchase a product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -43,7 +45,7 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 >
 > The URL to purchase an etched product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>
 
@@ -51,7 +53,7 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 >
 > The URL to purchase a foil product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -59,7 +61,7 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 >
 > The URL to purchase a product on [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.4.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -67,7 +69,7 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 >
 > The URL to purchase a product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v4.4.0`
 > - **Tags:** <i class="optional">optional</i>
 
@@ -75,6 +77,6 @@ The Purchase Urls Data Model describes URL paths to purchase a product from a ma
 >
 > The URL to purchase an etched product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
 >
-> - **Type:** `<string>`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 > - **Tags:** <i class="optional">optional</i><i class="new">new</i>

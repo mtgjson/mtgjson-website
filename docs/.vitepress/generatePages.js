@@ -2,7 +2,7 @@
  * Generate pages data
  *
  * Iterate through the markdown files, convert them to HTML and
- * use Cherrio to walk through the anchors.
+ * use Cheerio to walk through the anchors.
  *
  * This is an implementation based off of the package
  * vitepress-plugin-search: https://github.com/emersonbottero/vitepress-plugin-search
@@ -11,7 +11,7 @@ import fs from 'fs';
 import path from 'path';
 import MarkdownIt from 'markdown-it';
 import MarkdownItAnchor from 'markdown-it-anchor';
-import { load as cherrioParse } from 'cheerio';
+import { load as cheerioParse } from 'cheerio';
 
 const slugify = (str) => {
   return (
@@ -163,28 +163,28 @@ const readMarkdown = (fileName) => {
   const markdownItHTML = markdownIt.render(markdownStrippedOfFrontmatter);
 
   /**
-   * Use cherrio to parse the the HTML in order to access headers.
+   * Use cheerio to parse the the HTML in order to access headers.
    */
-  const cherrio = cherrioParse(markdownItHTML);
+  const cheerio = cheerioParse(markdownItHTML);
 
   /**
    * Map each header from the cheerio HTML to an object containg data about the header.
    */
-  const headers = Array.from(cherrio('.header-anchor')).map((anchor) => {
+  const headers = Array.from(cheerio('.header-anchor')).map((anchor) => {
     /**
      * Store if the heading is the h1 which should be the page name
      */
-    const self = cherrio(anchor).parent()[0].name === 'h1';
+    const self = cheerio(anchor).parent()[0].name === 'h1';
 
     /**
      * Get the hash of the anchor but split out a question mark for out FAQ headings
      */
-    const hash = cherrio(anchor)[0].attribs.href.split('%3F')[0];
+    const hash = cheerio(anchor)[0].attribs.href.split('%3F')[0];
 
     /**
      * Get the text of the anchor
      */
-    const text = cherrio(anchor).text();
+    const text = cheerio(anchor).text();
 
     /**
      * Set the title of the current page if the header is an h1 heading.
@@ -200,12 +200,77 @@ const readMarkdown = (fileName) => {
     };
   });
 
+  const types = Array.from(cheerio('blockquote ul li strong')).reduce((reducer, element) => {
+    /**
+     * Get the inner text of a property block list item
+     */
+    const text = cheerio(element)[0].children[0].data.split(':')[0];
+
+    if (text === 'Type') {
+      const type = cheerio(element).parent()[0].children[2].children[0].data;
+
+      reducer.push(type);
+    }
+
+    return reducer;
+  }, []);
+
+  const optionals = Array.from(cheerio('blockquote ul li strong')).reduce((reducer, element) => {
+    /**
+     * Get the inner text of a property block list item
+     */
+    const text = cheerio(element)[0].children[0].data.split(':')[0];
+
+    if (text === 'Tags') {
+      const tag = cheerio(element).parent()[0].children[1].data;
+      const optional = tag.includes('optional');
+
+      reducer.push(optional);
+    }
+
+    return reducer;
+  }, []);
+
+  const model = Array.from(cheerio('blockquote h3')).reduce((reducer, element, index) => {
+    /**
+     * Get the inner text of a property name
+     */
+    const name = cheerio(element).text();
+    /**
+     *
+     */
+    const description = cheerio(element).next().text();
+    /**
+     * Get the current value mapped to an anchor
+     */
+    const type = types[index];
+    /**
+     * Get the optional tag
+     */
+    const optional = optionals[index] || false;
+
+    /**
+     * Filter out the non-mappables
+     */
+    if (type) {
+      reducer[index] = {
+        name,
+        description,
+        type,
+        optional
+      };
+    }
+
+    return reducer;
+  }, []);
+
   /**
    * Return the page itself with metadata.
    */
   return {
     path,
     headers,
+    model,
     title,
   };
 };

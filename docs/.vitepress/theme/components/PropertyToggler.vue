@@ -1,25 +1,22 @@
 <template lang="pug">
 #property-toggler.property-toggler(v-if="hasOptionals")
-  input#property-toggler-input(
-    type="checkbox",
-    @click="toggleOptionals",
-    v-model="checked"
-  )
-  label(for="property-toggler-input") Include optional properties
-    span {{ ' ' }}(Showing {{ count }})
+  .vue-toggler-plugin
+    Toggle(v-model="toggleValue" @change="toggleOptionals")
+    p Hide optional properties {{ ' ' }}(Showing {{ count }})
 </template>
 
 <script setup lang="ts">
 import { onMounted, computed, ref } from 'vue';
+import Toggle from '@vueform/toggle';
 import $ from 'jquery';
 
 const hiddenTOCProperties = ref<string[]>([]);
 const allTOCAnchors = ref<HTMLAnchorElement[]>([]);
 const propertyBlocks = ref<HTMLElement[]>([]);
-const hasOptionals = ref(true);
-const checked = ref(true);
+const hasOptionals = ref<boolean>(true);
+const toggleValue = ref<boolean>(false);
 
-const count = computed<number>((): number => (checked.value ? fullCount.value : hiddenCount.value));
+const count = computed<number>((): number => (!toggleValue.value ? fullCount.value : hiddenCount.value));
 const fullCount = computed<number>((): number => allTOCAnchors.value.length);
 const hiddenCount = computed<number>((): number => {
   if (hiddenTOCProperties.value.length !== allTOCAnchors.value.length) {
@@ -74,9 +71,9 @@ const toggleTOCVariations = (): void => {
 };
 
 const toggleOptionals = (): void => {
-  toggleBlockOptionals(checked.value);
-  toggleTOCOptionals(checked.value);
-  toggleHeadingsContent(checked.value);
+  toggleBlockOptionals(toggleValue.value);
+  toggleTOCOptionals(toggleValue.value);
+  toggleHeadingsContent(toggleValue.value);
 };
 
 const toggleHeadingsContent = (doHide: boolean): void => {
@@ -110,10 +107,9 @@ const toggleTOCOptionals = (doHide: boolean): void => {
 };
 </script>
 
+<style src='@vueform/toggle/themes/default.css'></style>
 <style lang="scss" scoped>
 .property-toggler {
-  margin-bottom: 1rem;
-
   &.none {
     position: relative;
     margin-bottom: 2.5rem;
@@ -126,19 +122,6 @@ const toggleTOCOptionals = (doHide: boolean): void => {
       font-size: 1rem;
       color: var(--gray-color);
       font-weight: bold;
-    }
-  }
-
-  input {
-    margin-right: 0.5rem;
-  }
-
-  label {
-    font-weight: bold;
-    cursor: pointer;
-
-    span {
-      font-weight: normal;
     }
   }
 }
