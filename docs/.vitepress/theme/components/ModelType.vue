@@ -3,8 +3,7 @@
   .vue-toggler-plugin
     Toggle(v-model="toggleValue" @change="toggleType")
     p Show model type
-  div(v-show="showType")
-    div.language-ts(v-html="currentType")
+  div.language-ts(v-show="showType" v-html="currentType")
 </template>
 
 <script setup lang="ts">
@@ -26,5 +25,3 @@ const toggleType = (): void => {
   showType.value = !showType.value;
 };
 </script>
-
-<style src="@vueform/toggle/themes/default.css"></style>

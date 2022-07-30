@@ -197,7 +197,7 @@ onMounted(async (): Promise<void> => {
       flex: 1;
 
       h3 {
-        padding-bottom: 0;
+        margin-top: 0;
         line-height: 1.5rem;
       }
 

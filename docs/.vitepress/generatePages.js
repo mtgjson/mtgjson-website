@@ -177,14 +177,14 @@ const readMarkdown = (fileName) => {
     const self = cheerio(anchor).parent()[0].name === 'h1';
 
     /**
-     * Get the hash of the anchor but split out a question mark for out FAQ headings
-     */
-    const hash = cheerio(anchor)[0].attribs.href.split('%3F')[0];
-
-    /**
      * Get the text of the anchor
      */
-    const text = cheerio(anchor).text();
+    const text = cheerio(anchor).text().split('<')[0].trim();
+
+    /**
+     * Create the hash of the anchor but split out a question mark for out FAQ headings
+     */
+    const hash = '#' + slugify(text);
 
     /**
      * Set the title of the current page if the header is an h1 heading.
@@ -213,25 +213,6 @@ const readMarkdown = (fileName) => {
       const type = cheerio(element).parent().text().split(' ')[1];
 
       reducer.push(type);
-    }
-
-    return reducer;
-  }, []);
-
-  /**
-   * Get an array of optional properties from the propery block
-   */
-  const optionals = Array.from(cheerio('blockquote ul li strong')).reduce((reducer, element) => {
-    /**
-     * Get the inner text of a property block list item
-     */
-    const text = cheerio(element).text().split(':')[0];
-
-    if (text === 'Tags') {
-      const tags = cheerio(element).parent().text();
-      const optional = tags.includes('optional');
-
-      reducer.push(optional);
     }
 
     return reducer;

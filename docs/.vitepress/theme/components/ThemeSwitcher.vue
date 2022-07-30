@@ -61,5 +61,3 @@ const switchTheme = (): void => {
   activeTheme.value = newTheme;
 };
 </script>
-
-<style src="@vueform/toggle/themes/default.css"></style>
