@@ -122,13 +122,12 @@ head:
 An example of a property field for a data object field in Markdown:
 
 ```
-> ### artist
+> ### artist <i class="optional"></i>
 >
 > The name of the artist that illustrated the card art.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Tags:** <i class="optional"></i>
+> **Type:** `string`
+> **Introduced:** `v4.0.0`
 ```
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:

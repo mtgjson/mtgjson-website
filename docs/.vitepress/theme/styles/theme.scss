@@ -145,7 +145,26 @@ blockquote {
   }
 
   h3 {
-    padding-top: 0;
+    position: static;
+    display: block;
+    padding: 0 !important;
+    margin: 2rem 0 1rem;
+
+    .header-anchor {
+      left: 1rem;
+    }
+
+    i {
+      position: absolute;
+      margin-right: 0 !important;
+
+      &.optional {
+        right: 0;
+        top: 0;
+        border-top-left-radius: 0 !important;
+        border-bottom-right-radius: 0 !important;
+      }
+    }
   }
 
   p {
@@ -312,6 +331,7 @@ blockquote {
 .desktop-hide {
   display: none !important;
 }
+
 @media (max-width: 719px) {
   .desktop-hide {
     display: block !important;

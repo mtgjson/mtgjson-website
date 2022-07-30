@@ -31,7 +31,7 @@ const awaitJSONTypes = async () => new Promise(async (resolve, reject) => {
       page.model.forEach((property) => {
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
         const propertyType = convertIncompatibleTypes(property.type);
-        const propertyOptional = property.optional ? '?' : '';
+        const propertyOptional = !!property.optional ? '?' : '';
 
         if( isFirst ) {
           isFirst = false;
@@ -69,7 +69,7 @@ const generateTrueTypes = () => {
       page.model.forEach((property) => {
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
         const propertyType = convertIncompatibleTypes(property.type);
-        const propertyOptional = property.optional ? '?' : '';
+        const propertyOptional = !!property.optional ? '?' : '';
 
         propValues += `
   ${propertyName}${propertyOptional}: ${propertyType};

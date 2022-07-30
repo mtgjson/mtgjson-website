@@ -34,21 +34,19 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 ## Model Properties
 
-> ### artist
+> ### artist <i class="optional"></i>
 >
 > The name of the artist that illustrated the card art.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### asciiName
+> ### asciiName <i class="optional"></i>
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### availability
 >
@@ -58,14 +56,13 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
-> ### boosterTypes
+> ### boosterTypes <i class="optional"></i>
 >
 > A list of types this card is in a booster pack.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional"></i><i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### borderColor
 >
@@ -75,13 +72,12 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='borderColor'/>
 > - **Introduced:** `v4.0.0`
 
-> ### cardParts
+> ### cardParts <i class="optional"></i>
 >
 > A list of card names associated to this card, such as `"Meld"` card face names.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### colorIdentity
 >
@@ -91,14 +87,13 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### colorIndicator
+> ### colorIndicator <i class="optional"></i>
 >
 > A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
-> - **Tags:** <i class="optional"></i>
 
 > ### colors
 >
@@ -110,51 +105,45 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### convertedManaCost
 >
-> The converted mana cost of the card. Use the [manaValue](/data-models/card-set/#manavalue) property instead.
+> The converted mana cost of the card. This property is deprecated. Use the [manaValue](/data-models/card-set/#manavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated"> (v6.0.0 removal)</i>
 
-> ### edhrecRank
+> ### edhrecRank <i class="optional"></i>
 >
 > The card rank on [EDHRec](https://www.edhrec.com).
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### faceConvertedManaCost
+> ### faceConvertedManaCost <i class="optional"></i>
 >
-> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-set/#facemanavalue) property instead.
+> The converted mana cost or mana value for the face for either half or part of the card. This property is deprecated. Use the [faceManaValue](/data-models/card-set/#facemanavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional"></i><i class="deprecated"> (v6.0.0 removal)</i>
 
-> ### faceFlavorName
+> ### faceFlavorName <i class="optional"></i>
 >
 > The flavor name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### faceManaValue
+> ### faceManaValue <i class="optional"></i>
 >
 > The mana value of the face for either half or part of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### faceName
+> ### faceName <i class="optional"></i>
 >
 > The name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### finishes
 >
@@ -163,23 +152,20 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new"></i>
 
-> ### flavorName
+> ### flavorName <i class="optional"></i>
 >
 > The promotional card name printed above the true card name on special cards that has no game function. See [this card](https://scryfall.com/card/plg20/2/hangarback-walker) for an example.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### flavorText
+> ### flavorText <i class="optional"></i>
 >
 > The italicized text found below the rules text that has no game function.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### foreignData
 >
@@ -188,14 +174,13 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `ForeignData`
 > - **Introduced:** `v4.0.0`
 
-> ### frameEffects
+> ### frameEffects <i class="optional"></i>
 >
 > The visual frame effects.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### frameVersion
 >
@@ -205,45 +190,40 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
 
-> ### hand
+> ### hand <i class="optional"></i>
 >
 > The starting maximum hand size total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### hasAlternativeDeckLimit
+> ### hasAlternativeDeckLimit <i class="optional"></i>
 >
 > If the card allows a value other than 4 copies in a deck.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### hasContentWarning
+> ### hasContentWarning <i class="optional"></i>
 >
 > If the card marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content. Cards with this property may have missing or degraded properties. See this [official article](https://magic.wizards.com/en/articles/archive/news/depictions-racism-magic-2020-06-10) for more information.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### hasFoil
 >
-> If the card can be found in foil. Use the [finishes](/data-models/card-set/#finishes) property instead.
+> If the card can be found in foil. This property is deprecated. Use the [finishes](/data-models/card-set/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated"> (v5.3.0 removal)</i>
 
 > ### hasNonFoil
 >
-> If the card can be found in non-foil. Use the [finishes](/data-models/card-set/#finishes) property instead.
+> If the card can be found in non-foil. This property is deprecated. Use the [finishes](/data-models/card-set/#finishes) property instead.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated"> (v5.3.0 removal)</i>
 
 > ### identifiers
 >
@@ -252,117 +232,103 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
 
-> ### isAlternative
+> ### isAlternative <i class="optional"></i>
 >
 > If the card is an alternate variation to an original printing.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.2.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### isFullArt
+> ### isFullArt <i class="optional"></i>
 >
 > If the card has full artwork.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional"></i>
 
-> ### isFunny
+> ### isFunny <i class="optional"></i>
 >
 > If the card is part of a funny set, such as an Un-set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### isOnlineOnly
+> ### isOnlineOnly <i class="optional"></i>
 >
 > If the card is only available in online game variations.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### isOversized
+> ### isOversized <i class="optional"></i>
 >
 > If the card is oversized.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### isPromo
+> ### isPromo <i class="optional"></i>
 >
 > If the card is a promotional printing.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional"></i>
 
-> ### isRebalanced
+> ### isRebalanced <i class="optional"></i>
 >
 > If the card is [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) for the [Alchemy](https://magic.wizards.com/en/articles/archive/magic-digital/introducing-alchemy-new-way-play-mtg-arena-2021-12-02) play format.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### isReprint
+> ### isReprint <i class="optional"></i>
 >
 > If the card has been reprinted.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional"></i>
 
-> ### isReserved
+> ### isReserved <i class="optional"></i>
 >
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### isStarter
+> ### isStarter <i class="optional"></i>
 >
 > If the card is found in a starter deck such as a Planeswalker/Brawl deck.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### isStorySpotlight
+> ### isStorySpotlight <i class="optional"></i>
 >
 > If the card is a [Story Spotlight](https://mtg.fandom.com/wiki/Story_Spotlight) card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional"></i>
 
-> ### isTextless
+> ### isTextless <i class="optional"></i>
 >
 > If the card does not have a text box.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional"></i>
 
-> ### isTimeshifted
+> ### isTimeshifted <i class="optional"></i>
 >
 > If the card is "timeshifted", a feature of certain sets where a card will have a different [frameVersion](/data-models/card-set/#frameversion).
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### keywords
+> ### keywords <i class="optional"></i>
 >
 > A list of keywords found on the card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### language
 >
@@ -371,7 +337,6 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='language'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### layout
 >
@@ -381,13 +346,12 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
-> ### leadershipSkills
+> ### leadershipSkills <i class="optional"></i>
 >
 > A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
-> - **Tags:** <i class="optional"></i>
 
 > ### legalities
 >
@@ -396,30 +360,27 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
 
-> ### life
+> ### life <i class="optional"></i>
 >
 > The starting life total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### loyalty
+> ### loyalty <i class="optional"></i>
 >
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### manaCost
+> ### manaCost <i class="optional"></i>
 >
 > The mana cost of the card wrapped in curly brackets for each value.
 >
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### manaValue
 >
@@ -427,7 +388,6 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new"></i>
 
 > ### name
 >
@@ -444,70 +404,62 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### originalPrintings
+> ### originalPrintings <i class="optional"></i>
 >
 > A list of card UUID's to original printings of the card if this card is somehow different from its original, such as [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) cards.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### originalReleaseDate
+> ### originalReleaseDate <i class="optional"></i>
 >
 > The original release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for a promotional card printed outside of a cycle window, such as Secret Lair Drop promotions.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### originalText
+> ### originalText <i class="optional"></i>
 >
 > The text on the card as originally printed.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### originalType
+> ### originalType <i class="optional"></i>
 >
 > The type of the card as originally printed. Includes any supertypes and subtypes.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### otherFaceIds
+> ### otherFaceIds <i class="optional"></i>
 >
 > A list of card UUID's to this card's counterparts, such as transformed or melded faces.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### power
+> ### power <i class="optional"></i>
 >
 > The power of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### printings
+> ### printings <i class="optional"></i>
 >
 > A list of printing set codes the card was printed in, formatted in uppercase.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### promoTypes
+> ### promoTypes <i class="optional"></i>
 >
 > A list of promotional types for a card.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### purchaseUrls
 >
@@ -524,13 +476,12 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### rebalancedPrintings
+> ### rebalancedPrintings <i class="optional"></i>
 >
 > A list of card UUID's to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### rulings
 >
@@ -539,14 +490,13 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`
 
-> ### securityStamp
+> ### securityStamp <i class="optional"></i>
 >
 > The security stamp printed on the card.
 >
 > - **Type:** `string`
 > - <ExampleField type='securityStamp'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### setCode
 >
@@ -555,22 +505,20 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
 
-> ### side
+> ### side <i class="optional"></i>
 >
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### signature
+> ### signature <i class="optional"></i>
 >
 > The name of the signature on the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### subtypes
 >
@@ -588,21 +536,19 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### text
+> ### text <i class="optional"></i>
 >
 > The rules text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### toughness
+> ### toughness <i class="optional"></i>
 >
 > The toughness of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### type
 >
@@ -633,11 +579,10 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - **Introduced:** `v4.1.2`
 
-> ### watermark
+> ### watermark <i class="optional"></i>
 >
 > The name of the watermark on the card.
 >
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>

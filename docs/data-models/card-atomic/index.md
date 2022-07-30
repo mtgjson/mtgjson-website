@@ -56,13 +56,12 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 ## Model Properties
 
-> ### asciiName
+> ### asciiName <i class="optional"></i>
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### colorIdentity
 >
@@ -72,14 +71,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### colorIndicator
+> ### colorIndicator <i class="optional"></i>
 >
 > A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
-> - **Tags:** <i class="optional"></i>
 
 > ### colors
 >
@@ -89,45 +87,40 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost
+> ### convertedManaCost <i class="deprecated"></i>
 >
 > The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated"> (v6.0.0 removal)</i>
 
-> ### edhrecRank
+> ### edhrecRank <i class="optional"></i>
 >
 > The card rank on [EDHRec](https://www.edhrec.com).
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### faceConvertedManaCost
+> ### faceConvertedManaCost <i class="optional"></i> <i class="deprecated"></i>
 >
 > The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead.
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional"></i><i class="deprecated"> (v6.0.0 removal)</i>
 
-> ### faceManaValue
+> ### faceManaValue <i class="optional"></i>
 >
 > The mana value of the face for either half or part of the card.
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### faceName
+> ### faceName <i class="optional"></i>
 >
 > The name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### foreignData
 >
@@ -136,21 +129,19 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `ForeignData`
 > - **Introduced:** `v4.0.0`
 
-> ### hand
+> ### hand <i class="optional"></i>
 >
 > The starting maximum hand size total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### hasAlternativeDeckLimit
+> ### hasAlternativeDeckLimit <i class="optional"></i>
 >
 > If the card allows a value other than 4 copies in a deck.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### identifiers
 >
@@ -159,29 +150,26 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
 
-> ### isFunny
+> ### isFunny <i class="optional"></i>
 >
 > If the card is part of a funny set, such as an Un-set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### isReserved
+> ### isReserved <i class="optional"></i>
 >
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### keywords
+> ### keywords <i class="optional"></i>
 >
 > A list of keywords found on the card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### layout
 >
@@ -191,13 +179,12 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
-> ### leadershipSkills
+> ### leadershipSkills <i class="optional"></i>
 >
 > A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
-> - **Tags:** <i class="optional"></i>
 
 > ### legalities
 >
@@ -206,30 +193,27 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
 
-> ### life
+> ### life <i class="optional"></i>
 >
 > The starting life total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### loyalty
+> ### loyalty <i class="optional"></i>
 >
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### manaCost
+> ### manaCost <i class="optional"></i>
 >
 > The mana cost of the card wrapped in curly brackets for each value.
 >
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### manaValue
 >
@@ -237,7 +221,6 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new"></i>
 
 > ### name
 >
@@ -247,21 +230,19 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
-> ### power
+> ### power <i class="optional"></i>
 >
 > The power of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### printings
+> ### printings <i class="optional"></i>
 >
 > A list of printing set codes the card was printed in, formatted in uppercase.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### purchaseUrls
 >
@@ -277,14 +258,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`
 
-> ### side
+> ### side <i class="optional"></i>
 >
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### subtypes
 >
@@ -302,21 +282,19 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### text
+> ### text <i class="optional"></i>
 >
 > The rules text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### toughness
+> ### toughness <i class="optional"></i>
 >
 > The toughness of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### type
 >

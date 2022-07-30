@@ -34,21 +34,19 @@ The Foreign Data data model describes a list of properties for various Card data
 
 ## Model Properties
 
-> ### faceName
+> ### faceName <i class="optional"></i>
 >
 > The foreign name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### flavorText
+> ### flavorText <i class="optional"></i>
 >
 > The foreign flavor text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### language
 >
@@ -58,13 +56,12 @@ The Foreign Data data model describes a list of properties for various Card data
 > - <ExampleField type='language'/>
 > - **Introduced:** `v4.0.0`
 
-> ### multiverseId
+> ### multiverseId <i class="optional"></i>
 >
 > The foreign multiverse identifier of the card.
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### name
 >
@@ -73,18 +70,16 @@ The Foreign Data data model describes a list of properties for various Card data
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### text
+> ### text <i class="optional"></i>
 >
 > The foreign text ruling of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### type
+> ### type <i class="optional"></i>
 >
 > The foreign type of the card. Includes any supertypes and subtypes.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>

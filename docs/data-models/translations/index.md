@@ -33,130 +33,114 @@ The Translations data model describes a Set name translated per available langua
 
 ## Model Properties
 
-> ### Ancient Greek
+> ### Ancient Greek <i class="optional"></i>
 >
 > The set name translation in Ancient Greek.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Arabic
+> ### Arabic <i class="optional"></i>
 >
 > The set name translation in Arabic.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Chinese Simplified
+> ### Chinese Simplified <i class="optional"></i>
 >
 > The set name translation in Chinese Simplified.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Chinese Traditional
+> ### Chinese Traditional <i class="optional"></i>
 >
 > The set name translation in Chinese Traditional.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### French
+> ### French <i class="optional"></i>
 >
 > The set name translation in French.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### German
+> ### German <i class="optional"></i>
 >
 > The set name translation in German.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Hebrew
+> ### Hebrew <i class="optional"></i>
 >
 > The set name translation in Hebrew.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Italian
+> ### Italian <i class="optional"></i>
 >
 > The set name translation in Italian.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Japanese
+> ### Japanese <i class="optional"></i>
 >
 > The set name translation in Japanese.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Korean
+> ### Korean <i class="optional"></i>
 >
 > The set name translation in Korean.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Latin
+> ### Latin <i class="optional"></i>
 >
 > The set name translation in Latin.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Phyrexian
+> ### Phyrexian <i class="optional"></i>
 >
 > The set name translation in Phyrexian.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.7.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Portuguese (Brazil)
+> ### Portuguese (Brazil) <i class="optional"></i>
 >
 > The set name translation in Portuguese (Brazil).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Russian
+> ### Russian <i class="optional"></i>
 >
 > The set name translation in Russian.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Sanskrit
+> ### Sanskrit <i class="optional"></i>
 >
 > The set name translation in Sanskrit.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### Spanish
+> ### Spanish <i class="optional"></i>
 >
 > The set name translation in Spanish.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>

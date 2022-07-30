@@ -41,21 +41,19 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `number`
 > - **Introduced:** `v4.1.0`
 
-> ### block
+> ### block <i class="optional"></i>
 >
 > The block name the set was in.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### booster
+> ### booster <i class="optional"></i>
 >
 > A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) abstract model.
 >
 > - **Type:** `object`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### cards
 >
@@ -64,13 +62,12 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `CardSet[]`
 > - **Introduced:** `v4.0.0`
 
-> ### cardsphereSetId
+> ### cardsphereSetId <i class="optional"></i>
 >
 > The [Cardsphere](https://www.cardsphere.com/) set identifier.
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional"></i><i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### code
 >
@@ -79,21 +76,19 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### codeV3
+> ### codeV3 <i class="optional"></i>
 >
 > The alternate printing set code [Wizards of the Coast](https://company.wizards.com) uses for a select few duel deck sets.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional"></i>
 
-> ### isForeignOnly
+> ### isForeignOnly <i class="optional"></i>
 >
 > If the set is only available outside the United States of America.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional"></i>
 
 > ### isFoilOnly
 >
@@ -102,13 +97,12 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### isNonFoilOnly
+> ### isNonFoilOnly <i class="optional"></i>
 >
 > If the set is only available in non-foil.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### isOnlineOnly
 >
@@ -117,21 +111,19 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### isPaperOnly
+> ### isPaperOnly <i class="optional"></i>
 >
 > If the set is available only in paper.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.6.2`
-> - **Tags:** <i class="optional"></i>
 
-> ### isPartialPreview
+> ### isPartialPreview <i class="optional"></i>
 >
 > If the set is still in preview (spoiled). Preview sets do not have complete data.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional"></i>
 
 > ### keyruneCode
 >
@@ -140,37 +132,33 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.2`
 
-> ### mcmId
+> ### mcmId <i class="optional"></i>
 >
 > The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### mcmIdExtras
+> ### mcmIdExtras <i class="optional"></i>
 >
 > The split [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier if a set is printed in two sets. This identifier represents the second set's identifier.
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### mcmName
+> ### mcmName <i class="optional"></i>
 >
 > The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set name.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### mtgoCode
+> ### mtgoCode <i class="optional"></i>
 >
 > The set code for the set as it appears on [Magic: The Gathering Online](https://magic.wizards.com/en/mtgo).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### name
 >
@@ -179,13 +167,12 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### parentCode
+> ### parentCode <i class="optional"></i>
 >
 > The parent printing set code for set variations like promotions, guild kits, etc.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### releaseDate
 >
@@ -194,21 +181,19 @@ The Set data model describes the properties of an individual Set.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### sealedProduct
+> ### sealedProduct <i class="optional"></i>
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
 >
 > - **Type:** `SealedProduct`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### tcgplayerGroupId
+> ### tcgplayerGroupId <i class="optional"></i>
 >
 > The group identifier of the set on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional"></i>
 
 > ### tokens
 >

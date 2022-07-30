@@ -3,13 +3,13 @@ export type CardAtomic = {
   
   asciiName?: string;
         
-  colorIdentity?: string[];
+  colorIdentity: string[];
         
-  colorIndicator: string[];
+  colorIndicator?: string[];
         
-  colors?: string[];
+  colors: string[];
         
-  convertedManaCost?: number;
+  convertedManaCost: number;
         
   edhrecRank?: number;
         
@@ -19,13 +19,13 @@ export type CardAtomic = {
         
   faceName?: string;
         
-  foreignData?: ForeignData;
+  foreignData: ForeignData;
         
   hand?: string;
         
   hasAlternativeDeckLimit?: boolean;
         
-  identifiers?: Identifiers;
+  identifiers: Identifiers;
         
   isFunny?: boolean;
         
@@ -37,7 +37,7 @@ export type CardAtomic = {
         
   leadershipSkills?: LeadershipSkills;
         
-  legalities?: Legalities;
+  legalities: Legalities;
         
   life?: string;
         
@@ -49,23 +49,23 @@ export type CardAtomic = {
         
   name: string;
         
-  power: string;
+  power?: string;
         
-  printings: string[];
+  printings?: string[];
         
   purchaseUrls: PurchaseUrls;
         
   rulings: Rulings[];
         
-  side: string;
+  side?: string;
         
   subtypes: string[];
         
   supertypes: string[];
         
-  text: string;
+  text?: string;
         
-  toughness: string;
+  toughness?: string;
         
   type: string;
         
@@ -79,27 +79,27 @@ export type CardDeck = {
         
   asciiName?: string;
         
-  availability?: string[];
+  availability: string[];
         
   boosterTypes?: string[];
         
-  borderColor?: string;
+  borderColor: string;
         
-  cardParts: string[];
+  cardParts?: string[];
         
-  colorIdentity?: string[];
+  colorIdentity: string[];
         
   colorIndicator?: string[];
         
-  colors?: string[];
+  colors: string[];
         
-  convertedManaCost?: number;
+  convertedManaCost: number;
         
-  count?: number;
+  count: number;
         
   duelDeck?: string;
         
-  edhrecRank: number;
+  edhrecRank?: number;
         
   faceConvertedManaCost?: number;
         
@@ -109,165 +109,7 @@ export type CardDeck = {
         
   faceName?: string;
         
-  finishes?: string[];
-        
-  flavorName?: string;
-        
-  flavorText: string;
-        
-  foreignData: ForeignData;
-        
-  frameEffects?: string[];
-        
-  frameVersion?: string;
-        
-  hand?: string;
-        
-  hasAlternativeDeckLimit?: boolean;
-        
-  hasContentWarning?: boolean;
-        
-  hasFoil?: boolean;
-        
-  hasNonFoil?: boolean;
-        
-  identifiers?: Identifiers;
-        
-  isAlternative?: boolean;
-        
-  isFoil?: boolean;
-        
-  isFullArt?: boolean;
-        
-  isFunny?: boolean;
-        
-  isOnlineOnly?: boolean;
-        
-  isOversized?: boolean;
-        
-  isPromo: boolean;
-        
-  isRebalanced?: boolean;
-        
-  isReprint?: boolean;
-        
-  isReserved?: boolean;
-        
-  isStarter?: boolean;
-        
-  isStorySpotlight: boolean;
-        
-  isTextless?: boolean;
-        
-  isTimeshifted?: boolean;
-        
-  keywords?: string[];
-        
-  language?: string;
-        
-  layout?: string;
-        
-  leadershipSkills?: LeadershipSkills;
-        
-  legalities?: Legalities;
-        
-  life?: string;
-        
-  loyalty?: string;
-        
-  manaCost?: string;
-        
-  manaValue?: number;
-        
-  name?: string;
-        
-  number?: string;
-        
-  originalPrintings?: string[];
-        
-  originalReleaseDate?: string;
-        
-  originalText: string;
-        
-  originalType: string;
-        
-  otherFaceIds: string[];
-        
-  power: string;
-        
-  printings: string[];
-        
-  promoTypes: string[];
-        
-  purchaseUrls: PurchaseUrls;
-        
-  rarity: string;
-        
-  rebalancedPrintings: string[];
-        
-  rulings: Rulings[];
-        
-  securityStamp: string;
-        
-  setCode: string;
-        
-  side: string;
-        
-  signature: string;
-        
-  subtypes: string[];
-        
-  supertypes: string[];
-        
-  text: string;
-        
-  toughness: string;
-        
-  type: string;
-        
-  types: string[];
-        
-  uuid: string;
-        
-  variations: string[];
-        
-  watermark: string;
-        
-}
-  
-export type CardSet = {
-  
-  artist?: string;
-        
-  asciiName?: string;
-        
-  availability?: string[];
-        
-  boosterTypes?: string[];
-        
-  borderColor?: string;
-        
-  cardParts: string[];
-        
-  colorIdentity?: string[];
-        
-  colorIndicator?: string[];
-        
-  colors?: string[];
-        
-  convertedManaCost?: number;
-        
-  edhrecRank?: number;
-        
-  faceConvertedManaCost: number;
-        
-  faceFlavorName?: string;
-        
-  faceManaValue?: number;
-        
-  faceName?: string;
-        
-  finishes?: string[];
+  finishes: string[];
         
   flavorName?: string;
         
@@ -275,9 +117,9 @@ export type CardSet = {
         
   foreignData: ForeignData;
         
-  frameEffects: string[];
+  frameEffects?: string[];
         
-  frameVersion?: string;
+  frameVersion: string;
         
   hand?: string;
         
@@ -285,13 +127,15 @@ export type CardSet = {
         
   hasContentWarning?: boolean;
         
-  hasFoil?: boolean;
+  hasFoil: boolean;
         
-  hasNonFoil?: boolean;
+  hasNonFoil: boolean;
         
-  identifiers?: Identifiers;
+  identifiers: Identifiers;
         
   isAlternative?: boolean;
+        
+  isFoil: boolean;
         
   isFullArt?: boolean;
         
@@ -305,7 +149,7 @@ export type CardSet = {
         
   isRebalanced?: boolean;
         
-  isReprint: boolean;
+  isReprint?: boolean;
         
   isReserved?: boolean;
         
@@ -315,17 +159,17 @@ export type CardSet = {
         
   isTextless?: boolean;
         
-  isTimeshifted: boolean;
+  isTimeshifted?: boolean;
         
   keywords?: string[];
         
-  language?: string;
+  language: string;
         
-  layout?: string;
+  layout: string;
         
   leadershipSkills?: LeadershipSkills;
         
-  legalities?: Legalities;
+  legalities: Legalities;
         
   life?: string;
         
@@ -333,11 +177,11 @@ export type CardSet = {
         
   manaCost?: string;
         
-  manaValue?: number;
+  manaValue: number;
         
-  name?: string;
+  name: string;
         
-  number?: string;
+  number: string;
         
   originalPrintings?: string[];
         
@@ -347,37 +191,37 @@ export type CardSet = {
         
   originalType?: string;
         
-  otherFaceIds: string[];
+  otherFaceIds?: string[];
         
-  power: string;
+  power?: string;
         
-  printings: string[];
+  printings?: string[];
         
-  promoTypes: string[];
+  promoTypes?: string[];
         
   purchaseUrls: PurchaseUrls;
         
   rarity: string;
         
-  rebalancedPrintings: string[];
+  rebalancedPrintings?: string[];
         
   rulings: Rulings[];
         
-  securityStamp: string;
+  securityStamp?: string;
         
   setCode: string;
         
-  side: string;
+  side?: string;
         
-  signature: string;
+  signature?: string;
         
   subtypes: string[];
         
   supertypes: string[];
         
-  text: string;
+  text?: string;
         
-  toughness: string;
+  toughness?: string;
         
   type: string;
         
@@ -387,7 +231,163 @@ export type CardSet = {
         
   variations: string[];
         
-  watermark: string;
+  watermark?: string;
+        
+}
+  
+export type CardSet = {
+  
+  artist?: string;
+        
+  asciiName?: string;
+        
+  availability: string[];
+        
+  boosterTypes?: string[];
+        
+  borderColor: string;
+        
+  cardParts?: string[];
+        
+  colorIdentity: string[];
+        
+  colorIndicator?: string[];
+        
+  colors: string[];
+        
+  convertedManaCost: number;
+        
+  edhrecRank?: number;
+        
+  faceConvertedManaCost?: number;
+        
+  faceFlavorName?: string;
+        
+  faceManaValue?: number;
+        
+  faceName?: string;
+        
+  finishes: string[];
+        
+  flavorName?: string;
+        
+  flavorText?: string;
+        
+  foreignData: ForeignData;
+        
+  frameEffects?: string[];
+        
+  frameVersion: string;
+        
+  hand?: string;
+        
+  hasAlternativeDeckLimit?: boolean;
+        
+  hasContentWarning?: boolean;
+        
+  hasFoil: boolean;
+        
+  hasNonFoil: boolean;
+        
+  identifiers: Identifiers;
+        
+  isAlternative?: boolean;
+        
+  isFullArt?: boolean;
+        
+  isFunny?: boolean;
+        
+  isOnlineOnly?: boolean;
+        
+  isOversized?: boolean;
+        
+  isPromo?: boolean;
+        
+  isRebalanced?: boolean;
+        
+  isReprint?: boolean;
+        
+  isReserved?: boolean;
+        
+  isStarter?: boolean;
+        
+  isStorySpotlight?: boolean;
+        
+  isTextless?: boolean;
+        
+  isTimeshifted?: boolean;
+        
+  keywords?: string[];
+        
+  language: string;
+        
+  layout: string;
+        
+  leadershipSkills?: LeadershipSkills;
+        
+  legalities: Legalities;
+        
+  life?: string;
+        
+  loyalty?: string;
+        
+  manaCost?: string;
+        
+  manaValue: number;
+        
+  name: string;
+        
+  number: string;
+        
+  originalPrintings?: string[];
+        
+  originalReleaseDate?: string;
+        
+  originalText?: string;
+        
+  originalType?: string;
+        
+  otherFaceIds?: string[];
+        
+  power?: string;
+        
+  printings?: string[];
+        
+  promoTypes?: string[];
+        
+  purchaseUrls: PurchaseUrls;
+        
+  rarity: string;
+        
+  rebalancedPrintings?: string[];
+        
+  rulings: Rulings[];
+        
+  securityStamp?: string;
+        
+  setCode: string;
+        
+  side?: string;
+        
+  signature?: string;
+        
+  subtypes: string[];
+        
+  supertypes: string[];
+        
+  text?: string;
+        
+  toughness?: string;
+        
+  type: string;
+        
+  types: string[];
+        
+  uuid: string;
+        
+  variations: string[];
+        
+  watermark?: string;
         
 }
   
@@ -397,23 +397,23 @@ export type CardToken = {
         
   asciiName?: string;
         
-  availability?: string[];
+  availability: string[];
         
   boosterTypes?: string[];
         
-  borderColor?: string;
+  borderColor: string;
         
   cardParts?: string[];
         
-  colorIdentity?: string[];
+  colorIdentity: string[];
         
-  colorIndicator: string[];
+  colorIndicator?: string[];
         
-  colors?: string[];
+  colors: string[];
         
   faceName?: string;
         
-  faceFlavorName: string;
+  faceFlavorName?: string;
         
   finishes: string[];
         
@@ -421,15 +421,15 @@ export type CardToken = {
         
   frameEffects?: string[];
         
-  frameVersion?: string;
+  frameVersion: string;
         
-  hasFoil?: boolean;
+  hasFoil: boolean;
         
-  hasNonFoil?: boolean;
+  hasNonFoil: boolean;
         
-  identifiers?: Identifiers;
+  identifiers: Identifiers;
         
-  isFullArt: boolean;
+  isFullArt?: boolean;
         
   isFunny?: boolean;
         
@@ -441,39 +441,39 @@ export type CardToken = {
         
   keywords?: string[];
         
-  language?: string;
+  language: string;
         
-  layout?: string;
+  layout: string;
         
   loyalty?: string;
         
-  name?: string;
+  name: string;
         
-  number?: string;
+  number: string;
         
-  otherFaceIds: string[];
+  otherFaceIds?: string[];
         
-  power: string;
+  power?: string;
         
-  promoTypes: string[];
+  promoTypes?: string[];
         
   reverseRelated: string[];
         
-  securityStamp: string;
+  securityStamp?: string;
         
   setCode: string;
         
-  side: string;
+  side?: string;
         
-  signature: string;
+  signature?: string;
         
   subtypes: string[];
         
   supertypes: string[];
         
-  text: string;
+  text?: string;
         
-  toughness: string;
+  toughness?: string;
         
   type: string;
         
@@ -481,15 +481,15 @@ export type CardToken = {
         
   uuid: string;
         
-  watermark: string;
+  watermark?: string;
         
 }
   
 export type Deck = {
   
-  code?: string;
+  code: string;
         
-  commander: CardDeck;
+  commander?: CardDeck;
         
   fileName: string;
         
@@ -499,7 +499,7 @@ export type Deck = {
         
   sideBoard: CardDeck[];
         
-  releaseDate: null | string;
+  releaseDate: null;
         
   type: string;
         
@@ -513,7 +513,7 @@ export type DeckList = {
         
   name: string;
         
-  releaseDate: null | string;
+  releaseDate: null;
         
   type: string;
         
@@ -525,15 +525,15 @@ export type ForeignData = {
         
   flavorText?: string;
         
-  language?: string;
+  language: string;
         
   multiverseId?: number;
         
-  name?: string;
+  name: string;
         
-  text: string;
+  text?: string;
         
-  type: string;
+  type?: string;
         
 }
   
@@ -673,7 +673,7 @@ export type SealedProduct = {
         
   purchaseUrls: PurchaseUrls;
         
-  releaseDate: null | string;
+  releaseDate: null;
         
   uuid: string;
         
@@ -681,51 +681,51 @@ export type SealedProduct = {
   
 export type Set = {
   
-  baseSetSize?: number;
+  baseSetSize: number;
         
   block?: string;
         
   booster?: object;
         
-  cards?: CardSet[];
+  cards: CardSet[];
         
   cardsphereSetId?: number;
         
-  code?: string;
+  code: string;
         
   codeV3?: string;
         
   isForeignOnly?: boolean;
         
-  isFoilOnly?: boolean;
+  isFoilOnly: boolean;
         
   isNonFoilOnly?: boolean;
         
-  isOnlineOnly?: boolean;
+  isOnlineOnly: boolean;
         
   isPaperOnly?: boolean;
         
   isPartialPreview?: boolean;
         
-  keyruneCode?: string;
+  keyruneCode: string;
         
   mcmId?: number;
         
-  mcmIdExtras: number;
+  mcmIdExtras?: number;
         
-  mcmName: string;
+  mcmName?: string;
         
-  mtgoCode: string;
+  mtgoCode?: string;
         
   name: string;
         
-  parentCode: string;
+  parentCode?: string;
         
   releaseDate: string;
         
-  sealedProduct: SealedProduct;
+  sealedProduct?: SealedProduct;
         
-  tcgplayerGroupId: number;
+  tcgplayerGroupId?: number;
         
   tokens: CardToken[];
         
@@ -739,45 +739,45 @@ export type Set = {
   
 export type SetList = {
   
-  baseSetSize?: number;
+  baseSetSize: number;
         
   block?: string;
         
-  code?: string;
+  code: string;
         
   codeV3?: string;
         
   isForeignOnly?: boolean;
         
-  isFoilOnly?: boolean;
+  isFoilOnly: boolean;
         
   isNonFoilOnly?: boolean;
         
-  isOnlineOnly?: boolean;
+  isOnlineOnly: boolean;
         
   isPaperOnly?: boolean;
         
   isPartialPreview?: boolean;
         
-  keyruneCode?: string;
+  keyruneCode: string;
         
   mcmId?: number;
         
   mcmIdExtras?: number;
         
-  mcmName: string;
+  mcmName?: string;
         
-  mtgoCode: string;
+  mtgoCode?: string;
         
   name: string;
         
-  parentCode: string;
+  parentCode?: string;
         
   releaseDate: string;
         
-  sealedProduct: SealedProduct;
+  sealedProduct?: SealedProduct;
         
-  tcgplayerGroupId: number;
+  tcgplayerGroupId?: number;
         
   totalSetSize: number;
         

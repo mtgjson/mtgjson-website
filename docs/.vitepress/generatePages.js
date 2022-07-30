@@ -210,7 +210,7 @@ const readMarkdown = (fileName) => {
     const text = cheerio(element).text().split(':')[0];
 
     if (text === 'Type') {
-      const type = cheerio(element).parent().children()[1].children[0]["data"];
+      const type = cheerio(element).parent().text().split(' ')[1];
 
       reducer.push(type);
     }
@@ -228,7 +228,7 @@ const readMarkdown = (fileName) => {
     const text = cheerio(element).text().split(':')[0];
 
     if (text === 'Tags') {
-      const tags = cheerio(element).parent()[0].children[1]["data"];
+      const tags = cheerio(element).parent().text();
       const optional = tags.includes('optional');
 
       reducer.push(optional);
@@ -242,17 +242,22 @@ const readMarkdown = (fileName) => {
    */
   const model = Array.from(cheerio('blockquote h3')).reduce((reducer, element, index) => {
     /**
-     * Get the inner text of a property name
+     * Get the header text of a property block
      */
-    const name = cheerio(element).text();
+    const header = cheerio(element).text();
+    /**
+     * Get the name of the header
+     */
+    const name = cheerio(element).text().split("<")[0].trim();
     /**
      * Get the current value mapped to an anchor
      */
     const type = types[index];
+
     /**
      * Get the optional tag
      */
-    const optional = optionals[index] || false;
+    const optional = header.includes("optional");
 
     /**
      * Filter out the non-mappables

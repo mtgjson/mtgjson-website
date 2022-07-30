@@ -70,7 +70,6 @@ The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?p
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new"></i>
 
 > ### language
 >

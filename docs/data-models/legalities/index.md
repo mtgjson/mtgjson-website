@@ -33,146 +33,128 @@ The Legalities data model describes a list of legalities in play formats for a C
 
 ## Model Properties
 
-> ### brawl
+> ### brawl <i class="optional"></i>
 >
 > Legality of the card in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### commander
+> ### commander <i class="optional"></i>
 >
 > Legality of the card in the [Commander](https://magic.wizards.com/en/content/commander-format) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### duel
+> ### duel <i class="optional"></i>
 >
 > Legality of the card in the [Duel Commander](https://mtg.fandom.com/wiki/Duel_Commander) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### future
+> ### future <i class="optional"></i>
 >
 > Legality of the card in the future for the [Standard](https://magic.wizards.com/en/content/standard-formats-magic-gathering) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### frontier
+> ### frontier <i class="optional"></i>
 >
 > Legality of the card in the [Frontier](https://magic.wizards.com/en/articles/archive/feature/frontier-magic-2010-05-24) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### gladiator
+> ### gladiator <i class="optional"></i>
 >
 > Legality of the card in the [Gladiator](https://gladiator.blog/about-gladiator/) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### historic
+> ### historic <i class="optional"></i>
 >
 > Legality of the card in the [Historic](<https://mtg.fandom.com/wiki/Historic_(format)>) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### historicbrawl
+> ### historicbrawl <i class="optional"></i>
 >
 > Legality of the card in the [Historic Brawl](https://draftsim.com/mtg-arena-historic-brawl/) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### legacy
+> ### legacy <i class="optional"></i>
 >
 > Legality of the card in the [Legacy](https://magic.wizards.com/en/game-info/gameplay/formats/legacy) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### modern
+> ### modern <i class="optional"></i>
 >
 > Legality of the card in the [Modern](https://magic.wizards.com/en/game-info/gameplay/formats/modern) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### oldschool
+> ### oldschool <i class="optional"></i>
 >
 > Legality of the card in the [Old School](https://mtg.fandom.com/wiki/Old_School) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### pauper
+> ### pauper <i class="optional"></i>
 >
 > Legality of the card in the [Pauper](https://magic.wizards.com/en/game-info/gameplay/formats/pauper) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### paupercommander
+> ### paupercommander <i class="optional"></i>
 >
 > Legality of the card in the [Pauper Commander](https://mtg.fandom.com/wiki/Pauper_Commander) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
 
-> ### penny
+> ### penny <i class="optional"></i>
 >
 > Legality of the card in the [Penny Dreadful](https://mtg.fandom.com/wiki/Penny_Dreadful) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### pioneer
+> ### pioneer <i class="optional"></i>
 >
 > Legality of the card in the [Pioneer](https://magic.wizards.com/en/game-info/gameplay/formats/pioneer) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### premodern
+> ### premodern <i class="optional"></i>
 >
 > Legality of the card in the [Pre-Modern](https://premodernmagic.com/) play format.
 >
 > - **Type:** `string`
-> - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional"></i><i class="new"></i>
+> - **Introduced:** `v5.2.0`<i class="new"></i>
 
-> ### standard
+> ### standard <i class="optional"></i>
 >
 > Legality of the card in the [Standard](https://magic.wizards.com/en/content/standard-formats-magic-gathering) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>
 
-> ### vintage
+> ### vintage <i class="optional"></i>
 >
 > Legality of the card in the [Vintage](https://magic.wizards.com/en/game-info/gameplay/formats/vintage) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional"></i>

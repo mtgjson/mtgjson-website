@@ -45,8 +45,8 @@ onMounted((): void => {
 
 const toggleTOCVariations = (): void => {
   const tocAnchorsMap: object = {};
-  const tags: string = 'i:not(".optional")';
-  const propertyBlocks: HTMLElement[] = Array.from($(`#property-toggler ~ blockquote:has(${tags})`));
+  const optionalTag: string = 'i.optional';
+  const propertyBlocks: HTMLElement[] = Array.from($(`#property-toggler ~ blockquote:has(${optionalTag})`));
 
   // Map all TOC anchor links by its inner text
   for (const element of allTOCAnchors.value) {
@@ -59,7 +59,7 @@ const toggleTOCVariations = (): void => {
     const tocPropertyElement: HTMLElement = tocAnchorsMap[blockPropertyName];
 
     if (tocPropertyElement) {
-      const tocElement: HTMLElement = $(propertyBlock).find(tags)[0];
+      const tocElement: HTMLElement = $(propertyBlock).find(optionalTag)[0];
       const tag: string = Array.from(tocElement.classList)[0];
 
       if (tocPropertyElement.classList.length < 1) {

@@ -41,13 +41,12 @@ The Deck data model describes a complete deck reference.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### commander
+> ### commander <i class="optional"></i>
 >
 > The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) data model.
 >
 > - **Type:** `CardDeck`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional"></i>
 
 > ### fileName
 >
