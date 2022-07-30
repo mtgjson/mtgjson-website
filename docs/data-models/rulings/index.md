@@ -20,6 +20,7 @@ head:
 The Rulings Data Model describes a list of rulings for a Card.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
+
 **Parent property:** `rulings`
 
 ## Model Index

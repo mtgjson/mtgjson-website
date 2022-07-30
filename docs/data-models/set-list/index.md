@@ -21,6 +21,7 @@ head:
 The Set List Data Model describes metadata-like properties for an individual [Set](/data-models/set/).
 
 **Parent file:** [SetList](/downloads/all-files/#setlist)  
+
 **Parent property:** `data`
 
 ## Model Index
@@ -63,7 +64,7 @@ The Set List Data Model describes metadata-like properties for an individual [Se
 
 > ### isForeignOnly
 >
-> If the set is available only outside the United States of America.
+> If the set is only available outside the United States of America.
 >
 > - **Type:** `<boolean>`
 > - **Introduced:** `v4.4.1`
@@ -155,7 +156,7 @@ The Set List Data Model describes metadata-like properties for an individual [Se
 
 > ### parentCode
 >
-> The parent set code for set variations like promotions, guild kits, etc.
+> The parent printing set code for set variations like promotions, guild kits, etc.
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.3.0`

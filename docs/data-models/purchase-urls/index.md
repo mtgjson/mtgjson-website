@@ -20,6 +20,7 @@ head:
 The Purchase Urls Data Model describes URL paths to purchase a product from a marketplace.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
+
 **Parent property:** `purchaseUrls`
 
 ## Model Index

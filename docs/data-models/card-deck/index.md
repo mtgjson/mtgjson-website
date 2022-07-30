@@ -21,6 +21,7 @@ head:
 The Card (Deck) Data Model describes the properties of a single card in a [Deck](/data-models/deck/).
 
 **Parent model:** [Deck](/data-models/deck/)  
+
 **Parent property:** `commander`, `mainBoard`, `sideBoard`
 
 ## Model Index

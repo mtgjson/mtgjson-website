@@ -18,9 +18,10 @@ head:
 
 # Deck List
 
-The Deck List Data Model describes a metadata-like model for a [Deck](/data-models/deck/).
+The Deck List Data Model describes a metadata-like model for all individual [Deck](/data-models/deck/) data.
 
 **Parent file:** [DeckList](/downloads/all-files/#decklist)  
+
 **Parent property:** `data`
 
 ## Model Index
@@ -40,7 +41,7 @@ The Deck List Data Model describes a metadata-like model for a [Deck](/data-mode
 
 > ### fileName
 >
-> The file name for the deck. Combines the `name` and `code` fields to avoid namespace collisions and are given a delimiter of `_`.
+> The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a delimiter of `_`.
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.3.0`

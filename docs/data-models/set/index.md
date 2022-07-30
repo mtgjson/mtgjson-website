@@ -21,6 +21,7 @@ head:
 The Set Data Model describes the properties of an individual Set.
 
 **Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)  
+
 **Parent property:** `data`
 
 ## Model Index
@@ -86,7 +87,7 @@ The Set Data Model describes the properties of an individual Set.
 
 > ### isForeignOnly
 >
-> If the set is available only outside the United States of America.
+> If the set is only available outside the United States of America.
 >
 > - **Type:** `<boolean>`
 > - **Introduced:** `v4.4.1`
@@ -178,7 +179,7 @@ The Set Data Model describes the properties of an individual Set.
 
 > ### parentCode
 >
-> The parent set code for set variations like promotions, guild kits, etc.
+> The parent printing set code for set variations like promotions, guild kits, etc.
 >
 > - **Type:** `<string>`
 > - **Introduced:** `v4.3.0`

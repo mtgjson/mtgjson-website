@@ -20,6 +20,7 @@ head:
 The Legalities Data Model describes a list of legalities in play formats for a Card.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
+
 **Parent property:** `legalities`
 
 ## Model Index

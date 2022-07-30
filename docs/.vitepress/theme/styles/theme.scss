@@ -132,6 +132,8 @@ blockquote {
     border: 1px solid var(--blockquote-warning-text-color);
     color: var(--blockquote-warning-text-color);
 
+    margin: 2rem 0;
+
     a {
       color: var(--blockquote-warning-text-color);
     }

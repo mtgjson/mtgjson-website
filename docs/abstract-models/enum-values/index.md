@@ -17,9 +17,10 @@ head:
 
 # Enum Values
 
-The Enum Values abstract Data Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
+The Enum Values Abstract Model describes a list of key value pairs that are direct possible values of key properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
 
 **Parent file:** [EnumValues](/downloads/all-files/#enumvalues)  
+
 **Parent property:** `data`
 
 ## Model Overview

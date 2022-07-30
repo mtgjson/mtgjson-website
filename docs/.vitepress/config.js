@@ -66,7 +66,7 @@ export default {
     pages,
     // Edit this page link in footer
     editLink: {
-      pattern: 'https://github.com/mtgjson/mtgjson-websit/edit/main/docs/',
+      pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/',
       text: 'Help us improve this page!',
     },
     smoothScroll: true,

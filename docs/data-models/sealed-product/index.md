@@ -20,6 +20,7 @@ head:
 The Sealed Product Data Model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
 
 **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)  
+
 **Parent property:** `sealedProduct`
 
 ## Model Index

@@ -21,6 +21,7 @@ head:
 The Keywords Data Model describes a list of all keywords used on a Card.
 
 **Parent file:** [Keywords](/downloads/all-files/#keywords)  
+
 **Parent property:** `data`
 
 ## Model Index

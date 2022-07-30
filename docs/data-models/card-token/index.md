@@ -21,6 +21,7 @@ head:
 The Card (Token) Data Model describes the properties of a single token card.
 
 **Parent model:** [Set](/data-models/set/)  
+
 **Parent property:** `tokens`
 
 ## Model Index
