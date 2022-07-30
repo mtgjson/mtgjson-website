@@ -43,11 +43,11 @@ The Deck data model describes a complete deck reference.
 
 > ### commander
 >
-> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) data model.
 >
 > - **Type:** `CardDeck`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### fileName
 >
@@ -59,7 +59,7 @@ The Deck data model describes a complete deck reference.
 
 > ### mainBoard
 >
-> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) data model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
@@ -73,7 +73,7 @@ The Deck data model describes a complete deck reference.
 
 > ### sideBoard
 >
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) data model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`

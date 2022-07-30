@@ -25,7 +25,7 @@ Release Date: 2021-12-20
 
 ### Announcements
 
-**Welcome to v5.2.0!** With this update we've added a lot of new Card Data Model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
+**Welcome to v5.2.0!** With this update we've added a lot of new Card data model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
 
 We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them, MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
 
@@ -61,7 +61,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 - Added the non-Atomic `faceFlavorName` property
 - Added the non-Atomic `otherFaceIds` property to Card (Token)
 - Added the non-Atomic `signature` property
-- Added support for "Dungeon" cards in Card (Atomic) Data Model
+- Added support for "Dungeon" cards in Card (Atomic) data model
 - Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties
 
 #### Deprecated
@@ -311,7 +311,7 @@ Release Date: 2020-07-03
 
 We are proud to announce the 5th major release of MTGJSON! The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `Booster` information on the `Set` Data Model. For more information, see the documentation for [Booster](https://mtgjson.com/abstract-models/booster) Data Model.
+We are also pleased to announce the addition of `Booster` information on the `Set` data model. For more information, see the documentation for [Booster](https://mtgjson.com/abstract-models/booster) data model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
@@ -349,7 +349,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 #### Added
 
-- Added `booster`. See the [Booster](https://mtgjson.com/abstract-models/booster/) Data Model
+- Added `booster`. See the [Booster](https://mtgjson.com/abstract-models/booster/) data model
 - Added `isPartialPreview`
 - Added Love Your LGS (`PLGS`)
 - Added Historic Anthology 3 (`HA3`)
@@ -371,7 +371,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 - The `AllCards` file is now renamed `AtomicCards` to better clarify that these files only contain atomic card data
 - The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc
 - The `version` file is now renamed `Meta`
-- All files now used a top-level `data` and `meta` key. Any Data Models inside of `data` should lose the nested `meta` object
+- All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object
 
 #### Added
 
@@ -409,4 +409,4 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 - `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure Data Models
 - The "About Us" page no longer uses a table of contents
-- `setCode` was mistakenly added and is now removed from the `Card` Data Model
+- `setCode` was mistakenly added and is now removed from the `Card` data model

@@ -39,7 +39,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### cardKingdomFoilId
 >
@@ -47,7 +47,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### cardKingdomId
 >
@@ -55,7 +55,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### cardsphereId
 >
@@ -63,7 +63,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### mcmId
 >
@@ -71,7 +71,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mcmMetaId
 >
@@ -79,7 +79,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mtgArenaId
 >
@@ -87,7 +87,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mtgoFoilId
 >
@@ -95,7 +95,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mtgoId
 >
@@ -103,7 +103,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mtgjsonV4Id
 >
@@ -111,7 +111,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### multiverseId
 >
@@ -119,7 +119,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### scryfallId
 >
@@ -127,7 +127,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### scryfallOracleId
 >
@@ -135,7 +135,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### scryfallIllustrationId
 >
@@ -143,7 +143,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### tcgplayerProductId
 >
@@ -151,7 +151,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### tcgplayerEtchedProductId
 >
@@ -159,4 +159,4 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>

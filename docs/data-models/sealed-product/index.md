@@ -35,11 +35,11 @@ The Sealed Product data model describes a list of properties for a purchase-able
 
 > ### identifiers
 >
-> A list of identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) Data Model.
+> A list of identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### name
 >
@@ -47,15 +47,15 @@ The Sealed Product data model describes a list of properties for a purchase-able
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### purchaseUrls
 >
-> Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
+> Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
 >
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### releaseDate
 >
@@ -63,7 +63,7 @@ The Sealed Product data model describes a list of properties for a purchase-able
 >
 > - **Type:** `null | string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### uuid
 >
@@ -71,4 +71,4 @@ The Sealed Product data model describes a list of properties for a purchase-able
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>

@@ -40,7 +40,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### asciiName
 >
@@ -48,7 +48,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### availability
 >
@@ -65,7 +65,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### borderColor
 >
@@ -81,7 +81,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### colorIdentity
 >
@@ -98,7 +98,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### colors
 >
@@ -114,7 +114,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated (v6.0.0 removal)</i>
+> - **Tags:** <i class="deprecated"> (v6.0.0 removal)</i>
 
 > ### edhrecRank
 >
@@ -122,7 +122,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### faceConvertedManaCost
 >
@@ -130,7 +130,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated (v6.0.0 removal)</i>
+> - **Tags:** <i class="optional"></i><i class="deprecated"> (v6.0.0 removal)</i>
 
 > ### faceFlavorName
 >
@@ -138,7 +138,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### faceManaValue
 >
@@ -146,7 +146,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### faceName
 >
@@ -154,7 +154,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### finishes
 >
@@ -163,7 +163,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### flavorName
 >
@@ -171,7 +171,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### flavorText
 >
@@ -179,11 +179,11 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### foreignData
 >
-> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >
 > - **Type:** `ForeignData`
 > - **Introduced:** `v4.0.0`
@@ -195,7 +195,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### frameVersion
 >
@@ -211,7 +211,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### hasAlternativeDeckLimit
 >
@@ -219,7 +219,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### hasContentWarning
 >
@@ -227,7 +227,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### hasFoil
 >
@@ -235,7 +235,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
+> - **Tags:** <i class="deprecated"> (v5.3.0 removal)</i>
 
 > ### hasNonFoil
 >
@@ -243,11 +243,11 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
+> - **Tags:** <i class="deprecated"> (v5.3.0 removal)</i>
 
 > ### identifiers
 >
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -258,7 +258,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.2.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isFullArt
 >
@@ -266,7 +266,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isFunny
 >
@@ -274,7 +274,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### isOnlineOnly
 >
@@ -282,7 +282,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isOversized
 >
@@ -290,7 +290,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isPromo
 >
@@ -298,7 +298,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isRebalanced
 >
@@ -306,7 +306,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### isReprint
 >
@@ -314,7 +314,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isReserved
 >
@@ -322,7 +322,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isStarter
 >
@@ -330,7 +330,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isStorySpotlight
 >
@@ -338,7 +338,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isTextless
 >
@@ -346,7 +346,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isTimeshifted
 >
@@ -354,7 +354,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### keywords
 >
@@ -362,7 +362,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### language
 >
@@ -371,7 +371,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='language'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="new">new</i><i class="preview">preview v5.2.1</i>
+> - **Tags:** <i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### layout
 >
@@ -383,15 +383,15 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### leadershipSkills
 >
-> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
+> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### legalities
 >
-> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.
+> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -402,7 +402,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### loyalty
 >
@@ -410,7 +410,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### manaCost
 >
@@ -419,7 +419,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### manaValue
 >
@@ -427,7 +427,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### name
 >
@@ -450,7 +450,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### originalReleaseDate
 >
@@ -458,7 +458,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### originalText
 >
@@ -466,7 +466,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### originalType
 >
@@ -474,7 +474,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### otherFaceIds
 >
@@ -482,7 +482,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### power
 >
@@ -490,7 +490,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### printings
 >
@@ -498,7 +498,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### promoTypes
 >
@@ -507,11 +507,11 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string[]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### purchaseUrls
 >
-> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
 >
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
@@ -530,11 +530,11 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### rulings
 >
-> The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
+> The official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`
@@ -546,7 +546,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='securityStamp'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### setCode
 >
@@ -562,7 +562,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### signature
 >
@@ -570,7 +570,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### subtypes
 >
@@ -594,7 +594,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### toughness
 >
@@ -602,7 +602,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### type
 >
@@ -640,4 +640,4 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>

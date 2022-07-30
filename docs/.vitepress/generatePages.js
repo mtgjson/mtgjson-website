@@ -200,14 +200,17 @@ const readMarkdown = (fileName) => {
     };
   });
 
+  /**
+   * Get an array of types from each property block
+   */
   const types = Array.from(cheerio('blockquote ul li strong')).reduce((reducer, element) => {
     /**
      * Get the inner text of a property block list item
      */
-    const text = cheerio(element)[0].children[0].data.split(':')[0];
+    const text = cheerio(element).text().split(':')[0];
 
     if (text === 'Type') {
-      const type = cheerio(element).parent()[0].children[2].children[0].data;
+      const type = cheerio(element).parent().children()[1].children[0]["data"];
 
       reducer.push(type);
     }
@@ -215,15 +218,18 @@ const readMarkdown = (fileName) => {
     return reducer;
   }, []);
 
+  /**
+   * Get an array of optional properties from the propery block
+   */
   const optionals = Array.from(cheerio('blockquote ul li strong')).reduce((reducer, element) => {
     /**
      * Get the inner text of a property block list item
      */
-    const text = cheerio(element)[0].children[0].data.split(':')[0];
+    const text = cheerio(element).text().split(':')[0];
 
     if (text === 'Tags') {
-      const tag = cheerio(element).parent()[0].children[1].data;
-      const optional = tag.includes('optional');
+      const tags = cheerio(element).parent()[0].children[1]["data"];
+      const optional = tags.includes('optional');
 
       reducer.push(optional);
     }
@@ -231,15 +237,14 @@ const readMarkdown = (fileName) => {
     return reducer;
   }, []);
 
+  /**
+   * Construct a type model for a property block
+   */
   const model = Array.from(cheerio('blockquote h3')).reduce((reducer, element, index) => {
     /**
      * Get the inner text of a property name
      */
     const name = cheerio(element).text();
-    /**
-     *
-     */
-    const description = cheerio(element).next().text();
     /**
      * Get the current value mapped to an anchor
      */
@@ -255,7 +260,6 @@ const readMarkdown = (fileName) => {
     if (type) {
       reducer[index] = {
         name,
-        description,
         type,
         optional
       };

@@ -17,7 +17,7 @@ const convertPageNameToNamedType = (name) => {
   return name.replace(/[\s()]/g, '');
 }
 
-// JSON TyepScript types for documentation
+// JSON TypeScript types for documentation
 const awaitJSONTypes = async () => new Promise(async (resolve, reject) => {
   const jsonTypes = {};
 

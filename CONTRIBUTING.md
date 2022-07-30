@@ -126,9 +126,9 @@ An example of a property field for a data object field in Markdown:
 >
 > The name of the artist that illustrated the card art.  
 >
-> **Type:** `<string>`  
+> **Type:** `string`  
 > **Introduced:** `v4.0.0`  
-> **Tags:** <i class="optional">optional</i>
+> **Tags:** <i class="optional"></i>
 ```
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
@@ -147,7 +147,7 @@ We use Jest and try our best. Test runs before commits and will fail the commit 
 
 We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate:
 
-- `issue/123: fixed bug.` "issue" is a branch which PR handles something where an issue was opened
-- `ni/documentation_updates: updated README.` "ni" is branch which PR handles something with no open issue
+- `issue/123: fixed bug.` "issue" is a branch which a PR handles something where an issue was opened
+- `no-issue/documentation_updates: updated README.` "no-issue" is branch which a PR handles something with no open issue
 
 Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title clear and concise.

@@ -47,7 +47,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### code
 >
@@ -62,7 +62,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isForeignOnly
 >
@@ -70,7 +70,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isFoilOnly
 >
@@ -85,7 +85,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isOnlineOnly
 >
@@ -100,7 +100,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.6.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isPartialPreview
 >
@@ -108,7 +108,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### keyruneCode
 >
@@ -123,7 +123,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mcmIdExtras
 >
@@ -131,7 +131,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mcmName
 >
@@ -139,7 +139,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mtgoCode
 >
@@ -147,7 +147,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### name
 >
@@ -162,7 +162,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### releaseDate
 >
@@ -173,11 +173,11 @@ The Set List data model describes metadata-like properties for an individual [Se
 
 > ### sealedProduct
 >
-> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
 >
 > - **Type:** `SealedProduct`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### tcgplayerGroupId
 >
@@ -185,7 +185,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### totalSetSize
 >
@@ -196,7 +196,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 
 > ### translations
 >
-> The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
+> The translated set name by language. See the [Translations](/data-models/translations/) data model.
 >
 > - **Type:** `Translations`
 > - **Introduced:** `v4.3.2`

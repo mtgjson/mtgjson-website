@@ -39,7 +39,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### commander
 >
@@ -47,7 +47,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### duel
 >
@@ -55,7 +55,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### future
 >
@@ -63,7 +63,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### frontier
 >
@@ -71,7 +71,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### gladiator
 >
@@ -79,7 +79,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### historic
 >
@@ -87,7 +87,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### historicbrawl
 >
@@ -95,7 +95,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### legacy
 >
@@ -103,7 +103,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### modern
 >
@@ -111,7 +111,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### oldschool
 >
@@ -119,7 +119,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### pauper
 >
@@ -127,7 +127,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### paupercommander
 >
@@ -135,7 +135,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### penny
 >
@@ -143,7 +143,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### pioneer
 >
@@ -151,7 +151,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### premodern
 >
@@ -159,7 +159,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### standard
 >
@@ -167,7 +167,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### vintage
 >
@@ -175,4 +175,4 @@ The Legalities data model describes a list of legalities in play formats for a C
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>

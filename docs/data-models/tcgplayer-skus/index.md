@@ -26,13 +26,11 @@ The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?p
 
 <blockquote class="warning">
   <p class="small-header">Note</p>
-  <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
+  <p>The Tcgplayer Skus data model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
 
   ```json
   "data": {
-    "00010d56-fe38-5e35-8aed-518019aa36a5": [
-     <Tcgplayer Skus Model>
-    ],
+    "00010d56-fe38-5e35-8aed-518019aa36a5": TcgplayerSkus[],
     ... // More Card UUIDs
   }
   ```
@@ -72,7 +70,7 @@ The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?p
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### language
 >

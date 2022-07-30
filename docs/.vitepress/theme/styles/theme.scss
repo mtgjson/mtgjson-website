@@ -168,18 +168,34 @@ blockquote {
 
   i.preview {
     background-color: var(--true-accent-1-color);
-  }
 
-  i.optional {
-    background-color: var(--yellow-color);
+    &::before {
+      content: "preview";
+    }
   }
 
   i.deprecated {
     background-color: var(--red-color);
+
+    &::before {
+      content: "deprecated";
+    }
+  }
+
+  i.optional {
+    background-color: var(--yellow-color);
+
+    &::before {
+      content: "optional";
+    }
   }
 
   i.new {
     background-color: var(--green-color);
+
+    &::before {
+      content: "new";
+    }
   }
 
   i {

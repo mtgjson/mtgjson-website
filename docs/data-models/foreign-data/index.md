@@ -7,10 +7,10 @@ head:
       content: Foreign Data
   - - meta
     - name: description
-      content: The Foreign Data data model describes a list of properties for various Card Data Models in alternate languages.
+      content: The Foreign Data data model describes a list of properties for various Card data models in alternate languages.
   - - meta
     - property: og:description
-      content: The Foreign Data data model describes a list of properties for various Card Data Models in alternate languages.
+      content: The Foreign Data data model describes a list of properties for various Card data models in alternate languages.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, foreign data
@@ -18,7 +18,7 @@ head:
 
 # Foreign Data
 
-The Foreign Data data model describes a list of properties for various Card Data Models in alternate languages.
+The Foreign Data data model describes a list of properties for various Card data models in alternate languages.
 
 **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
 
@@ -40,7 +40,7 @@ The Foreign Data data model describes a list of properties for various Card Data
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### flavorText
 >
@@ -48,7 +48,7 @@ The Foreign Data data model describes a list of properties for various Card Data
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### language
 >
@@ -64,7 +64,7 @@ The Foreign Data data model describes a list of properties for various Card Data
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### name
 >
@@ -79,7 +79,7 @@ The Foreign Data data model describes a list of properties for various Card Data
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### type
 >
@@ -87,4 +87,4 @@ The Foreign Data data model describes a list of properties for various Card Data
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>

@@ -40,7 +40,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### asciiName
 >
@@ -48,7 +48,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### availability
 >
@@ -65,7 +65,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### borderColor
 >
@@ -81,7 +81,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### colorIdentity
 >
@@ -98,7 +98,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### colors
 >
@@ -114,7 +114,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### faceFlavorName
 >
@@ -122,7 +122,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### finishes
 >
@@ -131,7 +131,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### flavorText
 >
@@ -139,7 +139,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### frameEffects
 >
@@ -148,7 +148,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string[]`
 > - <ExampleField type='frameEffects'/>
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### frameVersion
 >
@@ -164,7 +164,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
+> - **Tags:** <i class="deprecated"> (v5.3.0 removal)</i>
 
 > ### hasNonFoil
 >
@@ -172,11 +172,11 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated (v5.3.0 removal)</i>
+> - **Tags:** <i class="deprecated"> (v5.3.0 removal)</i>
 
 > ### identifiers
 >
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -187,7 +187,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isFunny
 >
@@ -195,7 +195,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### isOnlineOnly
 >
@@ -203,7 +203,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isPromo
 >
@@ -211,7 +211,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isReprint
 >
@@ -219,7 +219,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### keywords
 >
@@ -227,7 +227,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### language
 >
@@ -236,7 +236,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string`
 > - <ExampleField type='language'/>
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="new">new</i><i class="preview">preview v5.2.1</i>
+> - **Tags:** <i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### layout
 >
@@ -252,7 +252,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### name
 >
@@ -275,7 +275,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### power
 >
@@ -283,7 +283,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### promoTypes
 >
@@ -292,7 +292,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string[]`
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### reverseRelated
 >
@@ -308,7 +308,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string`
 > - <ExampleField type='securityStamp'/>
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### setCode
 >
@@ -324,7 +324,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### signature
 >
@@ -332,7 +332,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### subtypes
 >
@@ -356,7 +356,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### toughness
 >
@@ -364,7 +364,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### type
 >
@@ -395,4 +395,4 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>

@@ -39,7 +39,7 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### cardKingdomEtched
 >
@@ -47,7 +47,7 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### cardKingdomFoil
 >
@@ -55,7 +55,7 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### cardmarket
 >
@@ -63,7 +63,7 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### tcgplayer
 >
@@ -71,7 +71,7 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### tcgplayerEtched
 >
@@ -79,4 +79,4 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>

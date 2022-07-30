@@ -39,7 +39,7 @@ The Rulings data model describes a list of rulings for a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes** <i class="optional">optional</i>
+> - **Attributes** <i class="optional"></i>
 
 > ### text
 >
@@ -47,4 +47,4 @@ The Rulings data model describes a list of rulings for a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes** <i class="optional">optional</i>
+> - **Attributes** <i class="optional"></i>

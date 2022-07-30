@@ -57,7 +57,7 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How do I access a card's imagery?
 >
-> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) using the MTGJSON property from the [Identifiers](/data-models/identifiers/) Data Model within the various Card Data Models.
+> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) using the MTGJSON property from the [Identifiers](/data-models/identifiers/) data model within the various Card data models.
 >
 > - **Scryfall:** `https://api.scryfall.com/cards/${scryfallId}?format=image`
 > - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
@@ -67,7 +67,7 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How can I access a card's set imagery?
 >
-> The `keyruneCode` property from the [Set](/data-models/set/) Data Model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
+> The `keyruneCode` property from the [Set](/data-models/set/) data model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
 > Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API.
 >
@@ -83,9 +83,9 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### What information is in AtomicCards or similar files?
 >
-> These files contains oracle-like information for every card using the [Card (Atomic)](/data-models/card-atomic/) Data Model. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
+> These files contains oracle-like information for every card using the [Card (Atomic)](/data-models/card-atomic/) data model. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
-> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) Data Model documentation.
+> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation.
 >
 > **Note:** Depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 

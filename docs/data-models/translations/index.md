@@ -39,7 +39,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Arabic
 >
@@ -47,7 +47,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Chinese Simplified
 >
@@ -55,7 +55,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Chinese Traditional
 >
@@ -63,7 +63,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### French
 >
@@ -71,7 +71,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### German
 >
@@ -79,7 +79,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Hebrew
 >
@@ -87,7 +87,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Italian
 >
@@ -95,7 +95,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Japanese
 >
@@ -103,7 +103,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Korean
 >
@@ -111,7 +111,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Latin
 >
@@ -119,7 +119,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Phyrexian
 >
@@ -127,7 +127,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.7.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Portuguese (Brazil)
 >
@@ -135,7 +135,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Russian
 >
@@ -143,7 +143,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Sanskrit
 >
@@ -151,7 +151,7 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### Spanish
 >
@@ -159,4 +159,4 @@ The Translations data model describes a Set name translated per available langua
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>

@@ -27,13 +27,11 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 <!-- For some reason tips before TOC will break the TOC, but HTML will not -->
 <blockquote class="warning">
   <p class="small-header">Note</p>
-  <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
+  <p>The Card (Atomic) data model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
 
   ```json
   "data": {
-    "Oblivion Ring": [
-      <Card (Atomic) Model>
-    ],
+    "Oblivion Ring": CardAtomic[],
     ... // More card names
   }
   ```
@@ -64,7 +62,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### colorIdentity
 >
@@ -81,7 +79,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
 > - **Introduced:** `v4.0.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### colors
 >
@@ -97,7 +95,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="deprecated">deprecated (v6.0.0 removal)</i>
+> - **Tags:** <i class="deprecated"> (v6.0.0 removal)</i>
 
 > ### edhrecRank
 >
@@ -105,7 +103,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### faceConvertedManaCost
 >
@@ -113,7 +111,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
-> - **Tags:** <i class="optional">optional</i><i class="deprecated">deprecated (v6.0.0 removal)</i>
+> - **Tags:** <i class="optional"></i><i class="deprecated"> (v6.0.0 removal)</i>
 
 > ### faceManaValue
 >
@@ -121,7 +119,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### faceName
 >
@@ -129,11 +127,11 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### foreignData
 >
-> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >
 > - **Type:** `ForeignData`
 > - **Introduced:** `v4.0.0`
@@ -144,7 +142,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### hasAlternativeDeckLimit
 >
@@ -152,11 +150,11 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### identifiers
 >
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
+> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -167,7 +165,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### isReserved
 >
@@ -175,7 +173,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### keywords
 >
@@ -183,7 +181,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### layout
 >
@@ -195,15 +193,15 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### leadershipSkills
 >
-> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
+> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### legalities
 >
-> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) Data Model.
+> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -214,7 +212,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### loyalty
 >
@@ -222,7 +220,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### manaCost
 >
@@ -231,7 +229,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### manaValue
 >
@@ -239,7 +237,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `float`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="new">new</i>
+> - **Tags:** <i class="new"></i>
 
 > ### name
 >
@@ -255,7 +253,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### printings
 >
@@ -263,18 +261,18 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### purchaseUrls
 >
-> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
 >
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
 
 > ### rulings
 >
-> The official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
+> The official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`
@@ -286,7 +284,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### subtypes
 >
@@ -310,7 +308,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### toughness
 >
@@ -318,7 +316,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### type
 >

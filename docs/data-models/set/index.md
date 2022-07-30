@@ -47,7 +47,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### booster
 >
@@ -55,11 +55,11 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `object`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### cards
 >
-> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) Data Model.
+> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) data model.
 >
 > - **Type:** `CardSet[]`
 > - **Introduced:** `v4.0.0`
@@ -70,7 +70,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.2.1`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i><i class="preview">preview v5.2.1</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i><i class="preview"> v5.2.1</i>
 
 > ### code
 >
@@ -85,7 +85,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isForeignOnly
 >
@@ -93,7 +93,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isFoilOnly
 >
@@ -108,7 +108,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isOnlineOnly
 >
@@ -123,7 +123,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.6.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### isPartialPreview
 >
@@ -131,7 +131,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### keyruneCode
 >
@@ -146,7 +146,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mcmIdExtras
 >
@@ -154,7 +154,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.1.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mcmName
 >
@@ -162,7 +162,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### mtgoCode
 >
@@ -170,7 +170,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### name
 >
@@ -185,7 +185,7 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### releaseDate
 >
@@ -196,11 +196,11 @@ The Set data model describes the properties of an individual Set.
 
 > ### sealedProduct
 >
-> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
 >
 > - **Type:** `SealedProduct`
 > - **Introduced:** `v5.2.0`
-> - **Tags:** <i class="optional">optional</i><i class="new">new</i>
+> - **Tags:** <i class="optional"></i><i class="new"></i>
 
 > ### tcgplayerGroupId
 >
@@ -208,11 +208,11 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.2.1`
-> - **Tags:** <i class="optional">optional</i>
+> - **Tags:** <i class="optional"></i>
 
 > ### tokens
 >
-> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) Data Model.
+> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.
 >
 > - **Type:** `CardToken[]`
 > - **Introduced:** `v4.0.0`
@@ -226,7 +226,7 @@ The Set data model describes the properties of an individual Set.
 
 > ### translations
 >
-> The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
+> The translated set name by language. See the [Translations](/data-models/translations/) data model.
 >
 > - **Type:** `Translations`
 > - **Introduced:** `v4.3.2`
