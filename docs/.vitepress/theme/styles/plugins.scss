@@ -27,20 +27,13 @@
           background-size: cover;
         }
 
-        .toggle-handle {
-          background-color: var(--light-color);
-        }
-
         &.toggle-off,
         &.toggle-on {
-          background-color: var(--gray-3-color);
-          border-color: var(--gray-3-color);
+          background-color: var(--toggle-off-bg-color);
+          border-color: var(--toggle-off-bg-color);
         }
 
         &.toggle-off {
-          background-color: var(--bg-darker-color);
-          border-color: var(--bg-darker-color);
-
           &::before {
             right: 3px;
             left: auto;
@@ -71,8 +64,12 @@
       }
 
       &.toggle-off {
-        background-color: var(--gray-3-color);
-        border-color: var(--gray-3-color);
+        background-color: var(--toggle-off-bg-color);
+        border-color: var(--toggle-off-bg-color);
+      }
+
+      .toggle-handle {
+        background-color: var(--toggle-off-handle-color);
       }
     }
   }

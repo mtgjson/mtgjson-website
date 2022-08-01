@@ -26,13 +26,13 @@ The Keywords data model describes a list of all keywords used on a Card.
 
 ## Model Index
 
-<ModelType type="Keywords" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Keywords" />
 
 > ### abilityWords
 >

@@ -25,13 +25,13 @@ The Sealed Product data model describes a list of properties for a purchase-able
 
 ## Model Index
 
-<ModelType type="SealedProduct" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="SealedProduct" />
 
 > ### identifiers
 >

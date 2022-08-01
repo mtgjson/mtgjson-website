@@ -25,13 +25,13 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 
 ## Model Index
 
-<ModelType type="Identifiers" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Identifiers" />
 
 > ### cardKingdomEtchedId <i class="optional"></i>
 >

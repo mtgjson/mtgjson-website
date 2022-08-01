@@ -159,10 +159,8 @@ blockquote {
       margin-right: 0 !important;
 
       &.optional {
-        right: 0;
-        top: 0;
-        border-top-left-radius: 0 !important;
-        border-bottom-right-radius: 0 !important;
+        right: 1rem;
+        top: 1rem;
       }
     }
   }

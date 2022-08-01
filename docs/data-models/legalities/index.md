@@ -25,13 +25,13 @@ The Legalities data model describes a list of legalities in play formats for a C
 
 ## Model Index
 
-<ModelType type="Legalities" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Legalities" />
 
 > ### brawl <i class="optional"></i>
 >

@@ -26,13 +26,13 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 ## Model Index
 
-<ModelType type="CardSet" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="CardSet" />
 
 > ### artist <i class="optional"></i>
 >
@@ -340,7 +340,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### layout
 >
-> The type of card layout. For a token card, this will be `"token"`.
+> The type of card layout.
 >
 > - **Type:** `string`
 > - <ExampleField type='layout'/>

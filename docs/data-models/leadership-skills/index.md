@@ -25,13 +25,13 @@ The Leadership Skills data model describes a list of formats that a Card is lega
 
 ## Model Index
 
-<ModelType type="LeadershipSkills" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="LeadershipSkills" />
 
 > ### brawl
 >

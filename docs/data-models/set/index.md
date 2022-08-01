@@ -26,13 +26,13 @@ The Set data model describes the properties of an individual Set.
 
 ## Model Index
 
-<ModelType type="Set" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Set" />
 
 > ### baseSetSize
 >

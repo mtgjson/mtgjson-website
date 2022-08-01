@@ -26,13 +26,13 @@ The Card (Token) data model describes the properties of a single token card.
 
 ## Model Index
 
-<ModelType type="CardToken" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="CardToken" />
 
 > ### artist <i class="optional"></i>
 >
@@ -221,10 +221,10 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### layout
 >
-> The type of card layout. For a token card, this will be `"token"`.
+> The type of card layout. For a Card (Token), this will only ever be `"token"`.
 >
 > - **Type:** `string`
-> - <ExampleField type='layout'/>
+> - **Example:** `"token"`
 > - **Introduced:** `v4.0.0`
 
 > ### loyalty <i class="optional"></i>

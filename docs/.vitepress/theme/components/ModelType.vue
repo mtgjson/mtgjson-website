@@ -2,7 +2,7 @@
 .model-type
   .vue-toggler-plugin
     Toggle(v-model="toggleValue" @change="toggleType")
-    p Show model type
+    p Show TypeScript notation
   div.language-ts(v-show="showType" v-html="currentType")
 </template>
 

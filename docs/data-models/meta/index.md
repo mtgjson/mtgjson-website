@@ -25,13 +25,13 @@ The Meta data model describes application metadata.
 
 ## Model Index
 
-<ModelType type="Meta" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Meta" />
 
 > ### date
 >

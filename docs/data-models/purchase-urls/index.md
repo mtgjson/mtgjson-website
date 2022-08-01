@@ -25,13 +25,13 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 
 ## Model Index
 
-<ModelType type="PurchaseUrls" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="PurchaseUrls" />
 
 > ### cardKingdom <i class="optional"></i>
 >

@@ -4,7 +4,7 @@
   --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
   // Sizes
-  --sidebar-width: 300px;
+  --sidebar-width: 260px;
   --navbar-height: 5rem;
   --content-width: 720px;
   --search-results-max-height: 423px;
@@ -78,6 +78,8 @@
   --supporter-mythic-color: var(--orange-color);
   --supporter-rare-color: var(--yellow-color);
   --supporter-uncommon-color: var(--gray-3-color);
+  --toggle-off-bg-color: var(--gray-2-color);
+  --toggle-off-handle-color: var(--bg-color);
 }
 
 body {
@@ -120,6 +122,8 @@ body {
     --supporter-rare-color: var(--yellow-darker-color);
     --attribute-standard-color: var(--dark-color);
     --header-border-color: var(--gray-3-color);
+    --toggle-off-bg-color: var(--gray-3-color);
+    --toggle-off-handle-color: var(--light-color);
 
     // Set base theme CSS
     background-color: var(--bg-color);

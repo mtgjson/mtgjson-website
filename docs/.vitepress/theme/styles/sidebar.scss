@@ -32,10 +32,3 @@
     right: -55px;
   }
 }
-.sidebar-link[href="/data-models/sealed-product/"] {
-  &::after {
-    content: "new";
-    background-color: var(--green-color);
-    right: -50px;
-  }
-}

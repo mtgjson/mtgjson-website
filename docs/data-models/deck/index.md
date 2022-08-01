@@ -26,13 +26,13 @@ The Deck data model describes a complete deck reference.
 
 ## Model Index
 
-<ModelType type="Deck" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Deck" />
 
 > ### code
 >

@@ -25,13 +25,13 @@ The Translations data model describes a Set name translated per available langua
 
 ## Model Index
 
-<ModelType type="Translations" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Translations" />
 
 > ### Ancient Greek <i class="optional"></i>
 >

@@ -26,13 +26,13 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 ## Model Index
 
-<ModelType type="CardDeck" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="CardDeck" />
 
 > ### artist <i class="optional"></i>
 >
@@ -362,7 +362,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### layout
 >
-> The type of card layout. For a token card, this will be `"token"`.
+> The type of card layout.
 >
 > - **Type:** `string`
 > - <ExampleField type='layout'/>

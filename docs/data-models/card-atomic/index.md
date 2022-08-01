@@ -48,13 +48,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 ## Model Index
 
-<ModelType type="CardAtomic" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="CardAtomic" />
 
 > ### asciiName <i class="optional"></i>
 >
@@ -173,7 +173,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### layout
 >
-> The type of card layout. For a token card, this will be `"token"`.
+> The type of card layout.
 >
 > - **Type:** `string`
 > - <ExampleField type='layout'/>

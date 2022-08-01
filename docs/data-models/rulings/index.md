@@ -25,13 +25,13 @@ The Rulings data model describes a list of rulings for a Card.
 
 ## Model Index
 
-<ModelType type="Rulings" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="Rulings" />
 
 > ### date
 >

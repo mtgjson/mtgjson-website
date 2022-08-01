@@ -26,13 +26,13 @@ The Foreign Data data model describes a list of properties for various Card data
 
 ## Model Index
 
-<ModelType type="ForeignData" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="ForeignData" />
 
 > ### faceName <i class="optional"></i>
 >
