@@ -188,11 +188,9 @@ blockquote {
       color: var(--dark-color);
       display: inline-block;
       font-style: normal;
-      font-weight: bold;
 
       @extend %code-block;
 
-      font-size: 14px;
       font-family: var(--font-base);
 
       a {
@@ -249,6 +247,10 @@ blockquote {
         margin-bottom: 0;
       }
     }
+  }
+
+  div[class*="language-"] {
+    background-color: transparent;
   }
 
   pre {

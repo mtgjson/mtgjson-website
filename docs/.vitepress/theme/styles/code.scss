@@ -14,6 +14,7 @@ pre {
 
   &.shiki {
     background-color: var(--code-bg-color) !important;
+    margin-bottom: 1rem;
   }
 
   code {
@@ -39,25 +40,25 @@ div[class*="language-"] {
 
 div[class~="language-json"] {
   &:before {
-    content: "json";
+    content: "JSON";
   }
 }
 
 div[class~="language-js"] {
   &:before {
-    content: "javascript";
+    content: "JavaScript";
   }
 }
 
 div[class~="language-ts"] {
   &:before {
-    content: "typescript";
+    content: "TypeScript";
   }
 }
 
 div[class~="language-graphql"] {
   &:before {
-    content: "graphql";
+    content: "GraphQL";
   }
 }
 

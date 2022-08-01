@@ -25,13 +25,13 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### Which file should I use for my project?
 >
-> In most cases, [AllPrintings](/downloads/all-files/#allprintings) is the correct file. It contains all data for every printing of each card organized by set, however, this file is quite large. Alternatively, you can browse the [All Sets](/downloads/all-sets/) and [All Decks](/downloads/all-decks/) files or even download [Databases](/downloads/all-files/#allprintings).
+> In most cases, [AllPrintings](/downloads/all-files/#allprintings) is the correct file. It contains all data for every printing of each card organized by set, however, this file is quite large. Alternatively, you can browse the [All Sets](/downloads/all-sets/) and [All Decks](/downloads/all-decks/) files individually.
 >
 > **Note:** The JSON files are minified, and not human-readable. Depending on your implementation, you can use a software like [JQ](https://stedolan.github.io/jq/) to parse and process them.
 
 > ### Which file formats should I use for my project?
 >
-> We recommend downloading the compressed files and unpacking them on your local/remote drive. This would be faster than downloading the JSON files.
+> We recommend downloading the compressed files and unpacking them locally or remotely. This would be faster than downloading the JSON files.
 
 > ### Where does the data come from?
 >
@@ -43,15 +43,15 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How can I help, report a bug, etc?
 >
-> You can contribute to the project through the main [MTGJSON repo](https://github.com/mtgjson/mtgjson) or the [MTGJSON website repo](https://github.com/mtgjson/mtgjson-website). If you are a data provider and would like to integrate your data with us, please join our [Discord](https://mtgjson.com/discord).
+> You can contribute to the project through the [MTGJSON Repository](https://github.com/mtgjson/mtgjson) or the [Documentation Repository](https://github.com/mtgjson/mtgjson-website). If you are a data provider and would like to integrate your data with us, please join our [Discord](https://mtgjson.com/discord).
 
 > ### How often is the data updated?
 >
 > Builds kick off at **3:00PM ET** taking between 4-5 hours to complete and go live at **9:00PM ET**.
 
-> ### Can I verify the downloaded files?
+> ### How can I verify the downloaded files?
 >
-> Yes. Every file has a SHA-256 file available at the same URL location appended with `.sha256`.
+> Yes. Every file has a SHA-256 file available at the same location appended with `.sha256`.
 >
 > - **Example:** `https://mtgjson.com/api/v5/AllPrintings.json.sha256`
 
@@ -62,8 +62,8 @@ Here is a list of frequently asked questions from our users since some data can 
 > - **Scryfall:** `https://api.scryfall.com/cards/${scryfallId}?format=image`
 > - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
 >
-> - **Note:** > [Gatherer](https://gatherer.wizards.com/) may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
->   For [Scryfall](https://scryfall.com/), to access another face of a card, such as `"transform"` or `"meld"` cards, add `&face=front` or `&face=back` to the url to get the respective image.
+> - **Note:** [Gatherer](https://gatherer.wizards.com/) may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
+>   For [Scryfall](https://scryfall.com/), to access another face of a card add `&face=front` or `&face=back` to the url to get the respective image.
 
 > ### How can I access a card's set imagery?
 >

@@ -17,7 +17,7 @@ head:
 
 # MTGGraphQL
 
-MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service. This will also allow us to connect future projects & changes under a single API that can evolve over time. While more data is in the works, the current service focuses on these JSON payloads:
+MTGGraphQL is a sub-service of MTGJSON and a GraphQL API built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service. This will also allow us to connect future projects & changes under a single API that can evolve over time. While more data is in the works, the current service focuses on these JSON payloads:
 
 - **Cards**
 - **Decks**
@@ -35,7 +35,7 @@ MTGGraphQL is a sub-service of MTGJSON and a GraphQL API/Server built on top of 
 
 ### Data Source
 
-The GraphQL endpoint is based on the latest MTGJSON release. The dataset is normally refreshed once a week, coinciding with the MTGJSON weekly rebuild.
+MTGGraphQL is based on the latest MTGJSON release. For the timings of data updates, see [this FAQ question](/faq/#how-often-is-the-data-updated).
 
 ### Rate Limits
 
@@ -49,15 +49,23 @@ To go along with MTGGraphQL, we have released a [TypeScript package](https://www
 
 You can utilize a tool like [Apollo](https://www.apollographql.com/docs/) to make Client-based calls.
 
+### Endpoint Calls
+
+You can hit the GraphQL endpoint directly like the following:
+
+```
+https://graphql.mtgjson.com?query=query{cards(input:{name:"Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
+```
+
 ### GraphQL Playground
 
 We provide a [GraphQL Playground](https://graphql.mtgjson.com/) where you can query the server and get a response.
 
 The playground consists of 3 main sections:
 
-- **The top left, for your query**
-- **The bottom left tabs, containing `HTTP HEADERS` for your authorization**
-- **The right, which has the server response**
+- The top left, for your query
+- The bottom left tabs, containing `HTTP HEADERS` for your authorization
+- The right, which has the server response
 
 #### Example Query
 
