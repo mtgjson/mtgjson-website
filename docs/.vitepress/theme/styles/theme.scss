@@ -113,6 +113,17 @@ img {
   }
 }
 
+// iframes
+.doc-iframe {
+  margin: 1rem 0;
+  border-radius: var(--common-radius);
+  overflow: hidden;
+
+  &.graphql-playground {
+    margin-bottom: 0;
+  }
+}
+
 // Property blocks
 blockquote {
   @extend %blockquote;
@@ -130,7 +141,6 @@ blockquote {
 
   &.warning {
     background-color: var(--blockquote-warning-bg-color);
-    border: 1px solid var(--blockquote-warning-text-color);
     color: var(--blockquote-warning-text-color);
 
     margin: 2rem 0;
@@ -171,6 +181,24 @@ blockquote {
     &:last-of-type {
       margin-bottom: 0;
     }
+
+    em {
+      background-color: var(--red-color);
+      border-radius: var(--common-radius);
+      color: var(--dark-color);
+      display: inline-block;
+      font-style: normal;
+      font-weight: bold;
+
+      @extend %code-block;
+
+      font-size: 14px;
+      font-family: var(--font-base);
+
+      a {
+        color: var(--dark-color);
+      }
+    }
   }
 
   i.optional,
@@ -181,45 +209,15 @@ blockquote {
     color: var(--dark-color);
 
     @extend %code-block;
-  }
 
-  i.preview {
-    background-color: var(--true-accent-1-color);
-
-    &::before {
-      content: "preview";
-    }
-  }
-
-  i.deprecated {
-    background-color: var(--red-color);
-
-    &::before {
-      content: "deprecated";
-    }
+    font-family: var(--font-base) !important;
   }
 
   i.optional {
     background-color: var(--yellow-color);
 
     &::before {
-      content: "optional";
-    }
-  }
-
-  i.new {
-    background-color: var(--green-color);
-
-    &::before {
-      content: "new";
-    }
-  }
-
-  i {
-    margin-right: 0.5rem !important;
-
-    &:last-of-type {
-      margin-right: 0 !important;
+      content: "Optional";
     }
   }
 

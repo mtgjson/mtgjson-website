@@ -6,7 +6,7 @@
   // Sizes
   --sidebar-width: 260px;
   --navbar-height: 5rem;
-  --content-width: 720px;
+  --content-width: 800px;
   --search-results-max-height: 423px;
   --common-radius: 0.5rem;
   --common-padding: 0.5rem;
@@ -16,7 +16,7 @@
   --black-color: #000000;
   --yellow-color: #fcd253;
   --yellow-darker-color: #ad850e;
-  --yellow-dark-color: #ffe9852d;
+  --yellow-dark-color: #3c330c;
   --yellow-dark-2-color: #ffda372d;
   --green-color: palegreen;
   --red-color: salmon;
@@ -53,8 +53,8 @@
   --shadow-color: var(--dark-3-color);
   --blockquote-heading-color: var(--dark-color);
   --blockquote-bg-color: var(--dark-1-color);
-  --blockquote-warning-text-color: var(--yellow-color);
-  --blockquote-warning-bg-color: var(--yellow-dark-color);
+  --blockquote-warning-bg-color: var(--yellow-color);
+  --blockquote-warning-text-color: var(--dark-color);
 
   // Search
   --search-bg-color: var(--dark-2-color);
@@ -98,8 +98,8 @@ body {
     --shadow-color: var(--gray-2-color);
     --blockquote-heading-color: var(--gray-2-color);
     --blockquote-bg-color: var(--light-color);
-    --blockquote-warning-text-color: var(--yellow-darker-color);
-    --blockquote-warning-bg-color: var(--yellow-dark-2-color);
+    --blockquote-warning-bg-color: var(--yellow-color);
+    --blockquote-warning-text-color: var(--dark-color);
 
     // Search
     --search-bg-color: var(--gray-2-color);

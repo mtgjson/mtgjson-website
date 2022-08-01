@@ -26,13 +26,13 @@ The Deck List data model describes a metadata-like model for all individual [Dec
 
 ## Model Index
 
-<ModelType type="DeckList" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="DeckList" />
 
 > ### code
 >

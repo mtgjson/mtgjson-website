@@ -1,5 +1,5 @@
 <template lang="pug">
-.back-to-top(v-if="show")
+.back-to-top(v-if="show" title="Back to top")
   svg(
     xmlns="http://www.w3.org/2000/svg"
     viewBox="0 0 49.484 28.284"
@@ -55,6 +55,7 @@ onMounted((): void => {
   padding: 0.25rem 0.5rem 0.5rem;
   background-color: var(--bg-color);
   border-radius: var(--common-radius);
+  border: 1px solid var(--accent-color);
 
   svg {
     color: var(--accent-color);

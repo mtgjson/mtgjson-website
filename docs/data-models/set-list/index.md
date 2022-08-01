@@ -26,13 +26,13 @@ The Set List data model describes metadata-like properties for an individual [Se
 
 ## Model Index
 
-<ModelType type="SetList" />
-
 <PropertyToggler/>
 
 [[toc]]
 
 ## Model Properties
+
+<ModelType type="SetList" />
 
 > ### baseSetSize
 >

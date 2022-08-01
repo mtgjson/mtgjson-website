@@ -72,14 +72,14 @@ The Foreign Data data model describes a list of properties for various Card data
 
 > ### text <i class="optional"></i>
 >
-> The foreign text ruling of the card.
+> The foreign text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
 > ### type <i class="optional"></i>
 >
-> The foreign type of the card. Includes any supertypes and subtypes.
+> The foreign type of the card, including any supertypes and subtypes with a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

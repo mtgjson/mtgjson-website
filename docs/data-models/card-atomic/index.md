@@ -25,7 +25,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 **Parent property:** `data`
 
 <!-- For some reason tips before TOC will break the TOC, but HTML will not -->
-<blockquote class="warning">
+<blockquote>
   <p class="small-header">Note</p>
   <p>The Card (Atomic) data model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
 
@@ -65,7 +65,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### colorIdentity
 >
-> A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
+> A list of all the colors found in `manaCost`, `colorIndicator`, and `text` properties.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIdentity'/>
@@ -73,7 +73,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### colorIndicator <i class="optional"></i>
 >
-> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
+> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
@@ -81,7 +81,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
@@ -89,7 +89,9 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### convertedManaCost
 >
-> The converted mana cost of the card. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead.
+> The converted mana cost of the card.
+>
+> _This property is deprecated. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead._
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
@@ -103,7 +105,9 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### faceConvertedManaCost <i class="optional"></i>
 >
-> The converted mana cost or mana value for the face for either half or part of the card. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead.
+> The converted mana cost or mana value for the face for either half or part of the card.
+>
+> _This property is deprecated. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead._
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
@@ -181,14 +185,14 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### leadershipSkills <i class="optional"></i>
 >
-> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
+> The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
 
 > ### legalities
 >
-> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.
+> The legalities of play formats the card has. See the [Legalities](/data-models/legalities/) data model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -224,7 +228,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### name
 >
-> The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
+> The name of the card. Cards with multiple faces are given a `//` delimiter.
 >
 > - **Type:** `string`
 > - **Example:** `"Wear // Tear"`
@@ -298,7 +302,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes.
+> The type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

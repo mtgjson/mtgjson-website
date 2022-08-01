@@ -23,11 +23,13 @@
     color: var(--dark-color);
 
     @extend %code-block;
+
+    font-family: var(--font-base) !important;
   }
 }
 .sidebar-link[href="/mtggraphql/"] {
   &::after {
-    content: "beta";
+    content: "Beta";
     background-color: var(--yellow-color);
     right: -55px;
   }

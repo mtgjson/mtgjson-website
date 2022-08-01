@@ -28,8 +28,8 @@ The Card Types abstract model describes other possible sub-types and super-types
 ```json
 {
   "<Card Type>": {
-    "subTypes": <string[]>,
-    "superTypes": <string[]>
+    "subTypes": string[],
+    "superTypes": string[]
   }
 }
 ```

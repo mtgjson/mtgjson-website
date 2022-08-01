@@ -81,7 +81,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### colorIdentity
 >
-> A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
+> A list of all the colors found in `manaCost`, `colorIndicator`, and `text` properties.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIdentity'/>
@@ -89,7 +89,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### colorIndicator <i class="optional"></i>
 >
-> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
+> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
@@ -97,7 +97,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
@@ -150,14 +150,18 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### hasFoil
 >
-> If the card can be found in foil. This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead.
+> If the card can be found in foil.
+>
+> _This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
 > ### hasNonFoil
 >
-> If the card can be found in non-foil. This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead.
+> If the card can be found in non-foil.
+>
+> _This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -236,7 +240,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### name
 >
-> The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
+> The name of the card. Cards with multiple faces are given a `//` delimiter.
 >
 > - **Type:** `string`
 > - **Example:** `"Wear // Tear"`
@@ -244,7 +248,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### number
 >
-> The number of the card. Can be prefixed or suffixed with a `*` or other characters for promotional sets.
+> The number of the card. Cards can be prefixed or suffixed with a `*` or other characters for promotional qualities.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
@@ -340,7 +344,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes.
+> The type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

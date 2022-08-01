@@ -30,7 +30,7 @@ The Enum Values abstract model describes a list of key value pairs that are dire
   // Enum model name
   "<Enum Model>": {
     // Enumerable property name
-    "<Property Key>": <string[]>,
+    "<Property Key>": string[],
     ... // More properties
   },
   ... // More models

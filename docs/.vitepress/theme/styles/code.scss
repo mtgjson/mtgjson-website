@@ -25,6 +25,7 @@ pre {
 
 div[class*="language-"] {
   position: relative;
+  background-color: var(--bg-darker-color);
 
   &::before {
     position: absolute;
@@ -32,7 +33,7 @@ div[class*="language-"] {
     top: 0.5em;
     right: 0.7em;
     font-size: 0.75rem;
-    color: rgba(255, 255, 255, 0.4);
+    color: var(--gray-3-color);
   }
 }
 

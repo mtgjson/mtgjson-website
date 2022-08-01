@@ -6,13 +6,13 @@
     &::after {
       content: "No Available Properties";
       position: absolute;
-      top: 6rem;
+      top: 8.25rem;
       left: 0;
       font-size: 1rem;
       color: var(--gray-color);
     }
 
-    & ~ * {
+    & ~ blockquote {
       display: none;
     }
   }
@@ -33,35 +33,6 @@
 
     li {
       grid-column: span 1;
-
-      // a.tag {
-      //   position: relative;
-
-      //   &::after {
-      //     content: "";
-      //     position: absolute;
-      //     display: block;
-      //     top: 0;
-      //     left: 100%;
-      //     margin-left: 8px;
-      //     font-size: 1rem;
-      //   }
-      // }
-
-      // a.deprecated {
-      //   color: var(--true-gray-color);
-      //   text-decoration: line-through;
-
-      //   &::after {
-      //     content: "⚠️";
-      //   }
-      // }
-
-      // a.new {
-      //   &::after {
-      //     content: "🎉";
-      //   }
-      // }
     }
   }
 }

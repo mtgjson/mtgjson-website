@@ -35,32 +35,32 @@ The Booster abstract model describes how a [Set](/data-models/set/) booster pack
         // Card contents of a booster pack
         "contents": {
           // Amount of this cards from this sheet name in configuration
-          "<Sheet Name>": <number>,
+          "<Sheet Name>": number,
           ... // More sheet names
         },
         // Odds of getting this configuration against other configurations
-        "weight": <number>
+        "weight": number
       },
       ... // More configurations
     ],
     // Sum of all booster configurations weights
-    "boostersTotalWeight": <number>,
+    "boostersTotalWeight": number,
     // All possible sheets of cards to use within booster packs
     "sheets": {
       // A sheet of cards for use in a booster
       "<Sheet Name>": {
         // Colors of the sheet need to be balanced
-        "balanceColors": <boolean>,
+        "balanceColors": boolean,
         // Cards used on a sheet
         "cards": {
           // Unique MTGJSON card UUID with a weight as its value
-          "<Card UUID>": <number>,
+          "<Card UUID>": number,
           ... // More cards
         },
         // Is the sheet foiled?
-        "foil": <boolean>,
+        "foil": boolean,
         // Sum of all card weights
-        "totalWeight": <number>
+        "totalWeight": number
       },
       ... // More sheet names
     }
@@ -68,7 +68,7 @@ The Booster abstract model describes how a [Set](/data-models/set/) booster pack
   // An extended object for the future that may be used for alternative booster packs
   "premium": {
     // Name of the premium booster pack
-    "name": <string>,
+    "name": string,
     ... // All other keys are the same as 'default'
   }
 }

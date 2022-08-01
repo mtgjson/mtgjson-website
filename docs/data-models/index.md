@@ -23,8 +23,8 @@ For example, any **Data Model** would look similar to this:
 
 ```json
 "<Parent Property>": {
-  "<Some Property>": <array, boolean, float, number, object, string>,
-  ...
+  "<Some Property>": any,
+  ... // More properties
 }
 ```
 

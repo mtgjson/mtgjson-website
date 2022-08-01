@@ -24,7 +24,7 @@ The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?p
 
 **Parent property:** `data`
 
-<blockquote class="warning">
+<blockquote>
   <p class="small-header">Note</p>
   <p>The Tcgplayer Skus data model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
 

@@ -1,9 +1,9 @@
 <template lang="pug">
 .example-field(v-if="enums.length > 0", :class="{ showing: showAll }")
-  strong Examples:{{ ' ' }}
-  code(v-if="!showAll") {{ '"' + enums.slice(0, 5).join('", "') + '"' }}
-    .show-btn(v-if="enums.length > 5", @click="toggleShowAll") Show&nbsp;More
-  code(v-if="showAll && enums.length > 5") {{ '"' + enums.join('", "') + '"' }}
+  strong Example:{{ ' ' }}
+  code(v-if="!showAll") {{ '"' + enums.slice(0, 1).join('", "') + '"' }}
+    .show-btn(v-if="enums.length > 1", @click="toggleShowAll") Show&nbsp;More
+  code(v-if="showAll && enums.length > 1") {{ '"' + enums.join('", "') + '"' }}
     .show-btn(@click="toggleShowAll") Show&nbsp;Less
 </template>
 
@@ -43,6 +43,10 @@ onMounted((): void => {
   position: relative;
   display: flex;
   align-items: center;
+
+  &.showing {
+    align-items: flex-start;
+  }
 
   .show-btn {
     display: inline;

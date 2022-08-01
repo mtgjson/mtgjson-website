@@ -81,7 +81,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### colorIdentity
 >
-> A list of all the colors found in `manaCost`, `colorIndicator`, and `text`.
+> A list of all the colors found in `manaCost`, `colorIndicator`, and `text` properties.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIdentity'/>
@@ -89,7 +89,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### colorIndicator <i class="optional"></i>
 >
-> A list of all the colors in the color indicator (The symbol prefixed to a card's [types](#types)).
+> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
@@ -97,7 +97,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator`. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
@@ -105,7 +105,9 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### convertedManaCost
 >
-> The converted mana cost of the card. This property is deprecated. Use the [manaValue](/data-models/card-deck/#manavalue) property instead.
+> The converted mana cost of the card.
+>
+> _This property is deprecated. Use the [manaValue](/data-models/card-deck/#manavalue) property instead._
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.0.0`
@@ -134,7 +136,9 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### faceConvertedManaCost <i class="optional"></i>
 >
-> The converted mana cost or mana value for the face for either half or part of the card. This property is deprecated. Use the [faceManaValue](/data-models/card-deck/#facemanavalue) property instead.
+> The converted mana cost or mana value for the face for either half or part of the card.
+>
+> _This property is deprecated. Use the [faceManaValue](/data-models/card-deck/#facemanavalue) property instead._
 >
 > - **Type:** `float`
 > - **Introduced:** `v4.1.1`
@@ -228,14 +232,18 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### hasFoil
 >
-> If the card can be found in foil. This property is deprecated. Use the [finishes](/data-models/card-deck/#finishes) property instead.
+> If the card can be found in foil.
+>
+> _This property is deprecated. Use the [finishes](/data-models/card-deck/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
 > ### hasNonFoil
 >
-> If the card can be found in non-foil. This property is deprecated. Use the [finishes](/data-models/card-deck/#finishes) property instead.
+> If the card can be found in non-foil.
+>
+> _This property is deprecated. Use the [finishes](/data-models/card-deck/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -370,14 +378,14 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### leadershipSkills <i class="optional"></i>
 >
-> A list of formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
+> The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
 
 > ### legalities
 >
-> A list of play formats the card the card is legal in. See the [Legalities](/data-models/legalities/) data model.
+> The legalities of play formats the card has. See the [Legalities](/data-models/legalities/) data model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -413,7 +421,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### name
 >
-> The name of the card. Cards with multiple faces, like `"Split"` and `"Meld"` cards are given a delimiter.
+> The name of the card. Cards with multiple faces are given a `//` delimiter.
 >
 > - **Type:** `string`
 > - **Example:** `"Wear // Tear"`
@@ -421,7 +429,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### number
 >
-> The number of the card. Can be prefixed or suffixed with a `*` or other characters for promotional sets.
+> The number of the card. Cards can be prefixed or suffixed with a `*` or other characters for promotional qualities.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
@@ -574,7 +582,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes.
+> The type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

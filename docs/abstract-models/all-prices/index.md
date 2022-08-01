@@ -42,41 +42,41 @@ MTGJSON currently has affiliated with the following price providers to keep a **
   // Card UUID
   "<Card UUID>": {
     // Game format
-    "<Format>": {
+    "<Game Format>": {
       // Price provider
-      "<Provider>": {
+      "<Price Provider>": {
         // Provider buylist values
         "buylist": {
           // Foil prices
           "foil": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": <float>
+            "<YYYY-MM-DD>": float
           },
           // Normal prices
           "normal": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": <float>
+            "<YYYY-MM-DD>": float
           }
         },
         // Currency of the provider
-        "currency": <string>,
+        "currency": string,
         // Provider retail values
         "retail": {
           // Foil prices
           "foil": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": <float>
+            "<YYYY-MM-DD>": float
           },
           // Normal prices
           "normal": {
             // Date as key and price as value
-            "<YYYY-MM-DD>": <float>
+            "<YYYY-MM-DD>": float
           }
         }
       },
-      ... // More providers
+      ... // More price providers
     },
-    ... // More formats
+    ... // More game formats
   },
   ... // More card UUIDs
 }
@@ -92,11 +92,11 @@ MTGJSON currently has affiliated with the following price providers to keep a **
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.02
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -106,22 +106,22 @@ MTGJSON currently has affiliated with the following price providers to keep a **
       "cardkingdom": {
         "buylist": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.6
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.01
           }
         },
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -129,22 +129,22 @@ MTGJSON currently has affiliated with the following price providers to keep a **
       "cardmarket": {
         "buylist": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.6
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.01
           }
         },
         "currency": "EUR",
         "retail": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -153,11 +153,11 @@ MTGJSON currently has affiliated with the following price providers to keep a **
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -165,22 +165,22 @@ MTGJSON currently has affiliated with the following price providers to keep a **
       "tcgplayer": {
         "buylist": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.6
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.01
           }
         },
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // more rows
+            ..., // More entries
             "2020-04-21": 0.02
           }
         }
