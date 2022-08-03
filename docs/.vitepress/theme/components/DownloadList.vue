@@ -27,17 +27,17 @@
         .text-wrap
           .text-wrap--details
             h3 {{ item.name }}
-            ol.attributes
+            ol.tags
               li(v-if="item.isPartialPreview")
-                .spoiler spoiler
+                .tag.preview Preview
               li(v-if="item.isOnlineOnly")
-                .spoiler online only
+                .tag.online-only Online Only
               li(v-if="item.isPaperOnly")
-                .spoiler paper only
+                .tag.paper-only Paper Only
               li(v-if="item.isPaper")
-                .spoiler paper
+                .tag.paper Paper
               li(v-if="item.isOnline")
-                .spoiler online
+                .tag.online Online
             ol.details
               li
                 small Code:
@@ -64,7 +64,7 @@ import { useStore } from '../store.js';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
 import { sort } from '../helpers';
-import type { IList } from '../types';
+import type { TList } from '../types';
 
 type Props = {
   file: string;
@@ -82,13 +82,13 @@ const resultsLength = ref<number>(0);
 const resultsTotalLength = ref<number>(0);
 const sorter = ref<any>(null);
 const sortKey = ref<string>('releaseDate:true');
-const sortedList = ref<IList[] | any[]>([]);
+const sortedList = ref<TList[] | any[]>([]);
 
-const defaultList = computed<IList[] | any[]>((): IList[] | any[] => store[props.file]);
-const listFilters = computed<IList[] | any[]>((): IList[] | any[] =>
-  Array.from(new Set(defaultList.value.map((cur: IList) => cur.type)))
+const defaultList = computed<TList[] | any[]>((): TList[] | any[] => store[props.file]);
+const listFilters = computed<TList[] | any[]>((): TList[] | any[] =>
+  Array.from(new Set(defaultList.value.map((cur: TList) => cur.type)))
 );
-const list = computed<IList[]>((): IList[] => {
+const list = computed<TList[]>((): TList[] => {
   if (sortedList.value.length > 0) {
     return sortedList.value;
   }
@@ -96,7 +96,7 @@ const list = computed<IList[]>((): IList[] => {
   return sort(sortKey.value, defaultList.value).slice(0, lazyOffset);
 });
 
-const updateData = (data: IList[]): void => {
+const updateData = (data: TList[]): void => {
   sortedList.value = data;
 };
 
@@ -142,6 +142,7 @@ onMounted(async (): Promise<void> => {
 </script>
 
 <style lang="scss" scoped>
+@import '../styles/placeholders';
 .download-list {
   position: relative;
 
@@ -210,9 +211,19 @@ onMounted(async (): Promise<void> => {
         padding: 0;
         margin: 0;
 
-        &.attributes,
+        &.tags,
         &.details {
           margin-top: 0.5rem;
+
+          .tag {
+            background-color: var(--yellow-color);
+            color: var(--dark-color);
+            margin-right: 5px;
+
+            @extend %code-block;
+
+            font-family: var(--font-base);
+          }
         }
 
         li {

@@ -57,7 +57,7 @@ The Deck List data model describes a metadata-like model for all individual [Dec
 
 > ### releaseDate
 >
-> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
 > - **Type:** `null | string`
 > - **Introduced:** `v4.3.0`

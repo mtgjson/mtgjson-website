@@ -7,10 +7,10 @@ head:
       content: Deck
   - - meta
     - name: description
-      content: The Deck data model describes a complete deck reference.
+      content: The Deck data model describes a complete deck reference of an individual deck.
   - - meta
     - property: og:description
-      content: The Deck data model describes a complete deck reference.
+      content: The Deck data model describes a complete deck reference of an individual deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, deck
@@ -18,7 +18,7 @@ head:
 
 # Deck
 
-The Deck data model describes a complete deck reference.
+The Deck data model describes a complete deck reference of an individual deck.
 
 **Parent file:** [All Decks](/downloads/all-decks/)  
 
@@ -79,7 +79,7 @@ The Deck data model describes a complete deck reference.
 
 > ### releaseDate
 >
-> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the set was not formally released as a product.
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
 > - **Type:** `null | string`
 > - **Introduced:** `v4.3.0`

@@ -58,11 +58,11 @@
 import { ref, onMounted } from 'vue';
 import Toggle from '@vueform/toggle';
 import { search, filter, sort, prettifyType } from '../helpers';
-import type { IList } from '../types';
+import type { TList } from '../types';
 
 type Props = {
-  list: IList[];
-  filters: IList[];
+  list: TList[];
+  filters: TList[];
   file?: string;
   type?: string;
   disableChecks?: boolean;
@@ -85,7 +85,7 @@ onMounted((): void => {
   onHandleChange(0);
 });
 
-const emitNewData = (data: IList[], counts: number[]): void => {
+const emitNewData = (data: TList[], counts: number[]): void => {
   emit('updateData', data);
   emit('updateCount', counts);
 };
@@ -108,8 +108,8 @@ const onHandleReset = (): void => {
   spoilerValue.value = true;
   onlineValue.value = true;
 
-  const data: IList[] = sort(sortKey.value, props.list);
-  const dynamicData: IList[] = data.slice(0, lazyOffset.value);
+  const data: TList[] = sort(sortKey.value, props.list);
+  const dynamicData: TList[] = data.slice(0, lazyOffset.value);
   const newListCount: number = dynamicData.length;
 
   emitNewData(dynamicData, [newListCount, data.length]);
@@ -121,15 +121,15 @@ const onHandleChange = (speed?: number): void => {
 
   timeout.value = window.setTimeout(() => {
     const loadMoreEl: HTMLElement = document.querySelector('.load-more-btn');
-    const data: IList[] = props.list;
+    const data: TList[] = props.list;
     // Remove spoilers data
-    let filteredData: IList[] = !spoilerValue.value ? data.filter((set) => !set.isPartialPreview) : data;
+    let filteredData: TList[] = !spoilerValue.value ? data.filter((set) => !set.isPartialPreview) : data;
     // Removed online data
     filteredData = !onlineValue.value ? filteredData.filter((set) => !set.isOnlineOnly) : filteredData;
-    const searched: IList[] = search(searchValue.value, filteredData);
-    const sorted: IList[] = sort(sortKey.value, searched);
-    const filtered: IList[] = filter(filterValue.value, sorted);
-    const dynamicData: IList[] = filtered.slice(0, lazyOffset.value);
+    const searched: TList[] = search(searchValue.value, filteredData);
+    const sorted: TList[] = sort(sortKey.value, searched);
+    const filtered: TList[] = filter(filterValue.value, sorted);
+    const dynamicData: TList[] = filtered.slice(0, lazyOffset.value);
     const newListCount: number = dynamicData.length;
     const newListTotalCount: number = filtered.length;
 
@@ -150,7 +150,6 @@ defineExpose({
 });
 </script>
 
-<style src="@vueform/toggle/themes/default.css"></style>
 <style lang="scss" scoped>
 .sorting-options {
   position: sticky;

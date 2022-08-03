@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "run-p lint:js:watch local",
-    "local": "npm run check:version && vitepress dev docs",
+    "local": "npm run check:version && npm run generate:types && vitepress dev docs",
     "build": "npm run generate:types && npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",

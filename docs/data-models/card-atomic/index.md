@@ -130,7 +130,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >
-> - **Type:** `ForeignData`
+> - **Type:** `ForeignData[]`
 > - **Introduced:** `v4.0.0`
 
 > ### hand <i class="optional"></i>
@@ -149,7 +149,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### identifiers
 >
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -257,7 +257,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### rulings
 >
-> The official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
+> A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`

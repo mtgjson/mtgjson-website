@@ -40,35 +40,35 @@ onMounted((): void => {
     hiddenTOCProperties.value.push(propertyName);
   }
 
-  toggleTOCVariations();
+  // toggleTOCVariations();
 });
 
-const toggleTOCVariations = (): void => {
-  const tocAnchorsMap: object = {};
-  const optionalTag: string = 'i.optional';
-  const propertyBlocks: HTMLElement[] = Array.from($(`#property-toggler ~ blockquote:has(${optionalTag})`));
+// const toggleTOCVariations = (): void => {
+//   const tocAnchorsMap: object = {};
+//   const optionalTag: string = 'i.optional';
+//   const propertyBlocks: HTMLElement[] = Array.from($(`#property-toggler ~ blockquote:has(${optionalTag})`));
 
-  // Map all TOC anchor links by its inner text
-  for (const element of allTOCAnchors.value) {
-    tocAnchorsMap[element.innerText] = element;
-  }
+//   // Map all TOC anchor links by its inner text
+//   for (const element of allTOCAnchors.value) {
+//     tocAnchorsMap[element.innerText] = element;
+//   }
 
-  // Set all TOC anchor link tags with tag properties
-  propertyBlocks.forEach((propertyBlock: HTMLElement): void => {
-    const blockPropertyName: string = propertyBlock.firstChild.textContent.split('#')[0].trim();
-    const tocPropertyElement: HTMLElement = tocAnchorsMap[blockPropertyName];
+//   // Set all TOC anchor link tags with tag properties
+//   propertyBlocks.forEach((propertyBlock: HTMLElement): void => {
+//     const blockPropertyName: string = propertyBlock.firstChild.textContent.split('#')[0].trim();
+//     const tocPropertyElement: HTMLElement = tocAnchorsMap[blockPropertyName];
 
-    if (tocPropertyElement) {
-      const tocElement: HTMLElement = $(propertyBlock).find(optionalTag)[0];
-      const tag: string = Array.from(tocElement.classList)[0];
+//     if (tocPropertyElement) {
+//       const tocElement: HTMLElement = $(propertyBlock).find(optionalTag)[0];
+//       const tag: string = Array.from(tocElement.classList)[0];
 
-      if (tocPropertyElement.classList.length < 1) {
-        tocPropertyElement.classList.toggle('tag');
-        tocPropertyElement.classList.toggle(tag);
-      }
-    }
-  });
-};
+//       if (tocPropertyElement.classList.length < 1) {
+//         tocPropertyElement.classList.toggle('tag');
+//         tocPropertyElement.classList.toggle(tag);
+//       }
+//     }
+//   });
+// };
 
 const toggleOptionals = (): void => {
   toggleBlockOptionals(toggleValue.value);

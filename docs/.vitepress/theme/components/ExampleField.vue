@@ -1,9 +1,9 @@
 <template lang="pug">
 .example-field(v-if="enums.length > 0", :class="{ showing: showAll }")
   strong Example:{{ ' ' }}
-  code(v-if="!showAll") {{ '"' + enums.slice(0, 1).join('", "') + '"' }}
-    .show-btn(v-if="enums.length > 1", @click="toggleShowAll") Show&nbsp;More
-  code(v-if="showAll && enums.length > 1") {{ '"' + enums.join('", "') + '"' }}
+  code(v-if="!showAll") {{ '"' + enums.slice(0, minimumToShow).join('", "') + '"' }}
+    .show-btn(v-if="enums.length > minimumToShow", @click="toggleShowAll") Show&nbsp;More
+  code(v-if="showAll && enums.length > minimumToShow") {{ '"' + enums.join('", "') + '"' }}
     .show-btn(@click="toggleShowAll") Show&nbsp;Less
 </template>
 
@@ -16,14 +16,17 @@ type Props = {
   type: string;
 };
 
+const minimumToShow = 5;
+
 const { frontmatter } = useData();
 const store = useStore();
 const props = defineProps<Props>();
 const showAll = ref<boolean>(false);
-const allEnums = computed<object>((): object => store.EnumValues[frontmatter.value.enum]);
+const allEnums = computed<object>((): object => store.EnumValues);
+const thisEnum = computed<object>((): object => allEnums.value[frontmatter.value.enum]);
 const enums = computed<string[]>((): string[] => {
-  if (allEnums.value && allEnums.value[props.type]) {
-    return allEnums.value[props.type];
+  if (thisEnum.value && thisEnum.value[props.type]) {
+    return thisEnum.value[props.type];
   } else {
     return [];
   }
@@ -32,10 +35,6 @@ const enums = computed<string[]>((): string[] => {
 const toggleShowAll = (): void => {
   showAll.value = !showAll.value;
 };
-
-onMounted((): void => {
-  store.fetchFromApi('EnumValues');
-});
 </script>
 
 <style lang="scss" scoped>

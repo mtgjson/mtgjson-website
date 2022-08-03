@@ -210,7 +210,7 @@ const readMarkdown = (fileName) => {
     const text = cheerio(element).text().split(':')[0];
 
     if (text === 'Type') {
-      const type = cheerio(element).parent().text().split(' ')[1];
+      const type = cheerio(element).parent().text().split(': ')[1];
 
       reducer.push(type);
     }

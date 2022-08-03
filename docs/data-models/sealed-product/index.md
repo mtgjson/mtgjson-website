@@ -35,7 +35,7 @@ The Sealed Product data model describes a list of properties for a purchase-able
 
 > ### identifiers
 >
-> A list of identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.2.0`
@@ -56,7 +56,7 @@ The Sealed Product data model describes a list of properties for a purchase-able
 
 > ### releaseDate
 >
-> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product.
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product. Returns `null` if the set was not formally released as a product.
 >
 > - **Type:** `null | string`
 > - **Introduced:** `v5.2.0`

@@ -19,7 +19,7 @@ export type CardAtomic = {
         
   faceName?: string;
         
-  foreignData: ForeignData;
+  foreignData: ForeignData[];
         
   hand?: string;
         
@@ -115,7 +115,7 @@ export type CardDeck = {
         
   flavorText?: string;
         
-  foreignData: ForeignData;
+  foreignData: ForeignData[];
         
   frameEffects?: string[];
         
@@ -273,7 +273,7 @@ export type CardSet = {
         
   flavorText?: string;
         
-  foreignData: ForeignData;
+  foreignData: ForeignData[];
         
   frameEffects?: string[];
         
@@ -499,7 +499,7 @@ export type Deck = {
         
   sideBoard: CardDeck[];
         
-  releaseDate: null;
+  releaseDate: null | string;
         
   type: string;
         
@@ -513,7 +513,7 @@ export type DeckList = {
         
   name: string;
         
-  releaseDate: null;
+  releaseDate: null | string;
         
   type: string;
         
@@ -673,7 +673,7 @@ export type SealedProduct = {
         
   purchaseUrls: PurchaseUrls;
         
-  releaseDate: null;
+  releaseDate: null | string;
         
   uuid: string;
         

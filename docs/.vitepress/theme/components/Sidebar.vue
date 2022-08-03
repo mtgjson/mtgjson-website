@@ -18,10 +18,10 @@ import NavLinks from './NavLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';
 import Search from './Search.vue';
-import type { ISidebarItem } from '../types';
+import type { TSidebarItem } from '../types';
 
 type Props = {
-  items: ISidebarItem[];
+  items: TSidebarItem[];
 };
 
 defineProps<Props>();

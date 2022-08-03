@@ -23,12 +23,12 @@ main.page
 import { computed } from 'vue';
 import { useData } from 'vitepress';
 import BackToTop from './BackToTop.vue';
-import type { ISidebarItem, IEditLink } from '../types';
+import type { TSidebarItem, TEditLink } from '../types';
 
 const { theme, page } = useData();
-const sidebarItems: ISidebarItem[] = theme.value.sidebar;
+const sidebarItems: TSidebarItem[] = theme.value.sidebar;
 
-const editLink = computed<IEditLink>((): IEditLink => {
+const editLink = computed<TEditLink>((): TEditLink => {
   const link: string = theme.value.editLink.pattern + page.value.relativePath;
   const text: string = theme.value.editLink.text;
 
@@ -38,24 +38,24 @@ const editLink = computed<IEditLink>((): IEditLink => {
   };
 });
 
-const prev = computed<ISidebarItem>((): ISidebarItem => resolvePrev(page, sidebarItems));
-const next = computed<ISidebarItem>((): ISidebarItem => resolveNext(page, sidebarItems));
+const prev = computed<TSidebarItem>((): TSidebarItem => resolvePrev(page, sidebarItems));
+const next = computed<TSidebarItem>((): TSidebarItem => resolveNext(page, sidebarItems));
 
-const resolvePrev = (page: any, items: ISidebarItem[]) => {
+const resolvePrev = (page: any, items: TSidebarItem[]) => {
   return find(page, items, -1);
 };
 
-const resolveNext = (page: any, items: ISidebarItem[]) => {
+const resolveNext = (page: any, items: TSidebarItem[]) => {
   return find(page, items, 1);
 };
 
-const find = (page: any, items: ISidebarItem[], offset: number) => {
-  const res: ISidebarItem[] = [];
+const find = (page: any, items: TSidebarItem[], offset: number) => {
+  const res: TSidebarItem[] = [];
 
   flattern(items, res);
 
   for (let i = 0; i < res.length; i++) {
-    const cur: ISidebarItem = res[i];
+    const cur: TSidebarItem = res[i];
     const relativePath: string = '/' + page.value.relativePath.split('index.md')[0];
 
     if (cur.link === relativePath) {
@@ -64,7 +64,7 @@ const find = (page: any, items: ISidebarItem[], offset: number) => {
   }
 };
 
-const flattern = (items: ISidebarItem[], res: ISidebarItem[]) => {
+const flattern = (items: TSidebarItem[], res: TSidebarItem[]) => {
   for (let i = 0, l = items.length; i < l; i++) {
     const hasChildren = items[i].items && items[i].items.length > 0;
 

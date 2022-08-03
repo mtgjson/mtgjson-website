@@ -310,15 +310,6 @@ blockquote {
   color: var(--accent-color);
 }
 
-// Spoiler attribute tag
-.spoiler {
-  background-color: var(--yellow-color);
-  color: var(--dark-color);
-  margin-right: 5px;
-
-  @extend %code-block;
-}
-
 // Hide/Show elements
 .hidden-property-siblings {
   & ~ blockquote {
@@ -331,6 +322,15 @@ blockquote {
 }
 
 @media (max-width: 719px) {
+  .theme-container {
+    &.sidebar-open {
+      .sidebar {
+        transform: translateX(0);
+        border-right: 1px solid var(--bg-border-color);
+      }
+    }
+  }
+
   .desktop-hide {
     display: block !important;
   }

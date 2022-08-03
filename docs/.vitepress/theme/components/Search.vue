@@ -25,8 +25,8 @@
           @click="cleanSearch()"
         )
           .search-item
-            p {{ item.title }}
-            span(v-if="!item.isOwnPage") &hookrightarrow; {{ item.text }}
+            p.search-item--page {{ item.title }}
+            span.search-item--text(v-if="!item.isOwnPage") &hookrightarrow; {{ item.text }}
 </template>
 
 <script setup lang="ts">
@@ -155,8 +155,13 @@ const cleanSearch = (): void => {
     .search-suggestion {
       &:hover,
       &:focus {
-        background-color: var(--search-item-highlight-color);
         outline: 0;
+
+        .search-item {
+          &--page {
+            text-decoration: none;
+          }
+        }
       }
 
       a {
@@ -169,12 +174,14 @@ const cleanSearch = (): void => {
       .search-item {
         color: var(--search-text-color);
 
-        p {
+        &--page {
           margin: 0;
           line-height: 1.25rem;
+          text-decoration: underline;
+          color: var(--accent-color);
         }
 
-        span {
+        &--text {
           margin-top: 5px;
           font-weight: normal;
         }

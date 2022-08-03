@@ -1,6 +1,6 @@
 import { defineStore } from 'pinia';
 import axios, { AxiosResponse } from 'axios';
-import type { IStoreRootState } from './types';
+import type { TStoreRootState } from './types';
 
 const api: string = 'https://mtgjson.com/api/v5/';
 
@@ -11,9 +11,9 @@ export const useStore = defineStore({
       Meta: {},
       DeckList: [],
       SetList: [],
-      EnumValues: [],
+      EnumValues: {},
       ThemeColor: 'light',
-    } as IStoreRootState),
+    } as TStoreRootState),
   actions: {
     async fetchFromApi(fileName: string): Promise<void> {
       try {

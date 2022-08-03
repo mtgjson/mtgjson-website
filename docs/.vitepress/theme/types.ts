@@ -1,17 +1,17 @@
-export interface IStoreRootState {
-  Meta: IMeta,
-  DeckList: IList[],
-  SetList: IList[],
-  EnumValues: any[],
+export type TStoreRootState = {
+  Meta: TMeta,
+  DeckList: TList[],
+  SetList: TList[],
+  EnumValues: object,
   ThemeColor: string,
 }
 
-export interface IMeta {
+export type TMeta = {
   date: string;
   version: string;
 }
 
-export interface IList {
+export type TList = {
   baseSetSize: number;
   code: string;
   fileName: string;
@@ -31,6 +31,17 @@ export interface IList {
   type: string;
 }
 
+export type TSidebarItem = {
+  text: string;
+  link: string;
+  items: any[],
+}
+
+export type TEditLink = {
+  link: string;
+  text: string;
+}
+
 export interface ISearchResultHeader {
   text?: string;
   slug?: string;
@@ -42,17 +53,6 @@ export interface ISearchResult extends ISearchResultHeader {
   path: string;
   title: string;
   isOwnPage?: boolean;
-}
-
-export interface ISidebarItem {
-  text: string;
-  link: string;
-  items: any[],
-}
-
-export interface IEditLink {
-  link: string;
-  text: string;
 }
 
 export interface HTMLChangeEvent extends Event {

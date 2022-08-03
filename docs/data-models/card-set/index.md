@@ -175,7 +175,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >
-> - **Type:** `ForeignData`
+> - **Type:** `ForeignData[]`
 > - **Introduced:** `v4.0.0`
 
 > ### frameEffects <i class="optional"></i>
@@ -235,7 +235,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### identifiers
 >
-> A list of identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -493,7 +493,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### rulings
 >
-> The official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
+> A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`

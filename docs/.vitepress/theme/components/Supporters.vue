@@ -134,8 +134,8 @@ onMounted((): void => {
 
   .contributors-list {
     display: grid;
-    grid-template-columns: repeat(10, 1fr);
-    grid-gap: 20px;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 1rem;
     margin-left: 0;
     margin-bottom: 0;
 
@@ -149,8 +149,8 @@ onMounted((): void => {
         background-color: var(--light-color);
         overflow: hidden;
         font-size: 0;
-        max-width: 48px;
-        max-height: 48px;
+        max-width: 60px;
+        max-height: 60px;
 
         img {
           float: left;
@@ -300,7 +300,7 @@ onMounted((): void => {
 @media (max-width: 960px) {
   .supporters {
     .contributors-list {
-      grid-template-columns: repeat(7, 1fr);
+      grid-template-columns: repeat(10, 1fr);
     }
 
     &-grid {
@@ -316,7 +316,7 @@ onMounted((): void => {
 @media (max-width: 800px) {
   .supporters {
     .contributors-list {
-      grid-template-columns: repeat(5, 1fr);
+      grid-template-columns: repeat(8, 1fr);
     }
   }
 }
@@ -324,7 +324,7 @@ onMounted((): void => {
 @media (max-width: 719px) {
   .supporters {
     .contributors-list {
-      grid-template-columns: repeat(8, 1fr);
+      grid-template-columns: repeat(10, 1fr);
     }
   }
 }
@@ -332,7 +332,7 @@ onMounted((): void => {
 @media (max-width: 600px) {
   .supporters {
     .contributors-list {
-      grid-template-columns: repeat(6, 1fr);
+      grid-template-columns: repeat(8, 1fr);
     }
   }
 }
@@ -340,7 +340,7 @@ onMounted((): void => {
 @media (max-width: 400px) {
   .supporters {
     .contributors-list {
-      grid-template-columns: repeat(4, 1fr);
+      grid-template-columns: repeat(6, 1fr);
     }
   }
 }

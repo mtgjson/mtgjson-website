@@ -7,21 +7,21 @@ import { h, computed } from 'vue';
 import { useRoute } from 'vitepress';
 import { isActive } from '../helpers';
 import type { Route } from 'vitepress';
-import type { ISidebarItem } from '../types';
+import type { TSidebarItem } from '../types';
 
 type Props = {
-  item: ISidebarItem;
+  item: TSidebarItem;
 };
 
 const props = defineProps<Props>();
 const route: Route = useRoute();
 
 const selfActive = computed<boolean>((): boolean => isActive(route, props.item.link));
-const link = computed<ISidebarItem>(
-  (): ISidebarItem => renderLink(h, props.item.link, props.item.text || props.item.link, selfActive.value)
+const link = computed<TSidebarItem>(
+  (): TSidebarItem => renderLink(h, props.item.link, props.item.text || props.item.link, selfActive.value)
 );
 
-const renderLink = (h: any, to: string, text: string, active: boolean): ISidebarItem => {
+const renderLink = (h: any, to: string, text: string, active: boolean): TSidebarItem => {
   return h(
     'a',
     {

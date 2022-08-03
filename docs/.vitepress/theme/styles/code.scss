@@ -18,8 +18,7 @@ pre {
   }
 
   code {
-    padding-left: 0;
-    padding-right: 0;
+    padding: 0;
     background-color: transparent !important;
   }
 }
@@ -31,8 +30,8 @@ div[class*="language-"] {
   &::before {
     position: absolute;
     z-index: 3;
-    top: 0.5em;
-    right: 0.7em;
+    top: 1rem;
+    right: 1rem;
     font-size: 0.75rem;
     color: var(--gray-3-color);
   }
