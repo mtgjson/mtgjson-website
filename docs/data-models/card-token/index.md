@@ -189,7 +189,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### isOnlineOnly <i class="optional"></i>
 >
-> If the card is only available in online game variations.
+> If the card is only available in online game play variations.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`

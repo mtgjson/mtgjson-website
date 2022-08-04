@@ -63,9 +63,9 @@ We provide a [GraphQL Playground](https://graphql.mtgjson.com/) where you can qu
 
 The playground consists of 3 main sections:
 
-- The top left, for your query
-- The bottom left tabs, containing `HTTP HEADERS` for your authorization
-- The right, which has the server response
+- **The top left, for your query**
+- **The bottom left tabs, containing `HTTP HEADERS` for your authorization**
+- **The right, which has the server response**
 
 #### Example Query
 

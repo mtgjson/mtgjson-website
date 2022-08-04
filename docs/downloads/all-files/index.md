@@ -17,7 +17,7 @@ head:
 
 # All Files
 
-All outputted files to download provided by MTGJSON.
+All outputted files to download provided by MTGJSON. You can see a dump of all files available by going to the [file server directory](https://mtgjson.com/api/v5/).
 
 ## Downloads Index
 

@@ -43,7 +43,7 @@ The Set data model describes the properties of an individual Set.
 
 > ### block <i class="optional"></i>
 >
-> The block name the set was in.
+> The block name the set is in.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
@@ -106,14 +106,14 @@ The Set data model describes the properties of an individual Set.
 
 > ### isOnlineOnly
 >
-> If the set is only available in online game variations.
+> If the set is only available in online game play variations.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
 > ### isPaperOnly <i class="optional"></i>
 >
-> If the set is available only in paper.
+> If the set is only available in paper game play.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.6.2`

@@ -43,7 +43,7 @@ The Set List data model describes metadata-like properties for an individual [Se
 
 > ### block <i class="optional"></i>
 >
-> The block name the set was in.
+> The block name the set is in.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
@@ -85,14 +85,14 @@ The Set List data model describes metadata-like properties for an individual [Se
 
 > ### isOnlineOnly
 >
-> If the set is only available in online game variations.
+> If the set is only available in online game play variations.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
 > ### isPaperOnly <i class="optional"></i>
 >
-> If the set is only available in paper.
+> If the set is only available in paper game play.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.6.2`

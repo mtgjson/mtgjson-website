@@ -71,9 +71,9 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How can I access a card's set imagery?
 >
-> The `keyruneCode` property from the [Set](/data-models/set/) data model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
+> The `keyruneCode` property from the [Set](/data-models/set/#keyrunecode) data model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
-> Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API.
+> Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API endpoint.
 >
 > **Example**: `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`
 >
@@ -95,4 +95,4 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### Why is a file/website out of date?
 >
-> You have probably received a cached version of the file or website. If you are using the website or have a file open in the browser, try hard&#8209;refreshing the url (`CTRL + F5` on Windows, `Shift + Command + R` on MacOS).
+> You have probably received a cached version of the file or website. If you are using the website or have a file open in the browser, try hard&#8209;refreshing the path (`CTRL + F5` on Windows, `Shift + Command + R` on MacOS).
