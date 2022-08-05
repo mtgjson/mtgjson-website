@@ -22,6 +22,10 @@ The Leadership Skills data model describes a list of formats that a Card is lega
 - **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent model:** `leadershipSkills`
 
+## Model Type
+
+<ModelType type="LeadershipSkills" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Leadership Skills data model describes a list of formats that a Card is lega
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="LeadershipSkills" />
 
 > ### brawl
 >

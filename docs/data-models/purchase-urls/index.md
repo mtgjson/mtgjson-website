@@ -22,6 +22,10 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 - **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent model:** `purchaseUrls`
 
+## Model Type
+
+<ModelType type="PurchaseUrls" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Purchase Urls data model describes URL paths to purchase a product from a ma
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="PurchaseUrls" />
 
 > ### cardKingdom <i class="optional"></i>
 >

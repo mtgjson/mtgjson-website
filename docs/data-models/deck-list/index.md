@@ -23,6 +23,10 @@ The Deck List data model describes a metadata-like model for all individual [Dec
 - **Parent file:** [DeckList](/downloads/all-files/#decklist)
 - **Parent model:** `data`
 
+## Model Type
+
+<ModelType type="DeckList" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Deck List data model describes a metadata-like model for all individual [Dec
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="DeckList" />
 
 > ### code
 >
@@ -42,7 +44,7 @@ The Deck List data model describes a metadata-like model for all individual [Dec
 
 > ### fileName
 >
-> The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a delimiter of `_`.
+> The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a `_` delimiter.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`

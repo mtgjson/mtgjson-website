@@ -23,6 +23,10 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 - **Parent file:** [Deck](/data-models/deck/)
 - **Parent model:** `commander`, `mainBoard`, `sideBoard`
 
+## Model Type
+
+<ModelType type="CardDeck" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="CardDeck" />
 
 > ### artist <i class="optional"></i>
 >
@@ -581,7 +583,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
+> The type of the card as visible, including any supertypes and subtypes anre are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

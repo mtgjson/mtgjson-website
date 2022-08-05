@@ -23,6 +23,10 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 - **Parent file:** [Set](/data-models/set/)
 - **Parent model:** `cards`
 
+## Model Type
+
+<ModelType type="CardSet" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="CardSet" />
 
 > ### artist <i class="optional"></i>
 >
@@ -559,7 +561,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### type
 >
-> Type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
+> Type of the card as visible, including any supertypes and subtypes and are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

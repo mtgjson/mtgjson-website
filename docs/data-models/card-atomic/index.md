@@ -45,6 +45,10 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 </blockquote>
 
+## Model Type
+
+<ModelType type="CardAtomic" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -52,8 +56,6 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="CardAtomic" />
 
 > ### asciiName <i class="optional"></i>
 >
@@ -301,7 +303,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
+> The type of the card as visible, including any supertypes and subtypes are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

@@ -22,6 +22,10 @@ The Sealed Product data model describes a list of properties for a purchase-able
 - **Parent file:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
 - **Parent model:** `sealedProduct`
 
+## Model Type
+
+<ModelType type="SealedProduct" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Sealed Product data model describes a list of properties for a purchase-able
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="SealedProduct" />
 
 > ### identifiers
 >

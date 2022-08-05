@@ -23,6 +23,10 @@ The Card (Token) data model describes the properties of a single token card.
 - **Parent file:** [Set](/data-models/set/)
 - **Parent model:** `tokens`
 
+## Model Type
+
+<ModelType type="CardToken" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Card (Token) data model describes the properties of a single token card.
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="CardToken" />
 
 > ### artist <i class="optional"></i>
 >
@@ -343,7 +345,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes with a `-` delimiter if appropriate.
+> The type of the card as visible, including any supertypes and subtypes and are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

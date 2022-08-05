@@ -22,8 +22,10 @@ Data Models in MTGJSON describe any JSON object or nested JSON object that provi
 For example, any **Data Model** would look similar to this:
 
 ```json
-"<Parent Property>": {
-  "<Some Property>": any,
+{
+  "<Property 1>": any,
+  "<Property 2>": any,
+  "<Property 3>": any,
   ... // More properties
 }
 ```

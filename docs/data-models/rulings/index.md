@@ -22,6 +22,10 @@ The Rulings data model describes a list of rulings for a Card.
 - **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent model:** `rulings`
 
+## Model Type
+
+<ModelType type="Rulings" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Rulings data model describes a list of rulings for a Card.
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="Rulings" />
 
 > ### date
 >

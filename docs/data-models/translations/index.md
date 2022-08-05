@@ -22,6 +22,10 @@ The Translations data model describes a Set name translated per available langua
 - **Parent file:** [Set](/data-models/set/)
 - **Parent model:** `translations`
 
+## Model Type
+
+<ModelType type="Translations" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Translations data model describes a Set name translated per available langua
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="Translations" />
 
 > ### Ancient Greek <i class="optional"></i>
 >

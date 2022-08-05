@@ -44,6 +44,10 @@ The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?p
 
 </blockquote>
 
+## Model Type
+
+<ModelType type="TcgplayerSkus" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -51,8 +55,6 @@ The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?p
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="TcgplayerSkus" />
 
 > ### condition
 >

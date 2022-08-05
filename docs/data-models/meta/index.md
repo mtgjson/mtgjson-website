@@ -22,6 +22,10 @@ The Meta data model describes application metadata.
 - **Parent file:** [Meta](/downloads/all-files/#meta)
 - **Parent model:** `meta`, `data`
 
+## Model Type
+
+<ModelType type="Meta" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Meta data model describes application metadata.
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="Meta" />
 
 > ### date
 >

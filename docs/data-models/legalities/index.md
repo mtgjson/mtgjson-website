@@ -22,6 +22,10 @@ The Legalities data model describes a list of legalities in play formats for a C
 - **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent model:** `legalities`
 
+## Model Type
+
+<ModelType type="Legalities" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -29,8 +33,6 @@ The Legalities data model describes a list of legalities in play formats for a C
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="Legalities" />
 
 > ### brawl <i class="optional"></i>
 >

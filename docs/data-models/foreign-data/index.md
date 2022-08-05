@@ -23,6 +23,10 @@ The Foreign Data data model describes a list of properties for various Card data
 - **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent model:** `foreignData`
 
+## Model Type
+
+<ModelType type="ForeignData" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Foreign Data data model describes a list of properties for various Card data
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="ForeignData" />
 
 > ### faceName <i class="optional"></i>
 >
@@ -78,7 +80,7 @@ The Foreign Data data model describes a list of properties for various Card data
 
 > ### type <i class="optional"></i>
 >
-> The foreign type of the card, including any supertypes and subtypes with a `-` delimiter if appropriate.
+> The foreign type of the card, including any supertypes and subtypesa and are given a ` - ` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

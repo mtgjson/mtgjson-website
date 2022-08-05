@@ -23,6 +23,10 @@ The Set List data model describes metadata-like properties for an individual [Se
 - **Parent file:** [SetList](/downloads/all-files/#setlist)
 - **Parent model:** `data`
 
+## Model Type
+
+<ModelType type="SetList" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Set List data model describes metadata-like properties for an individual [Se
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="SetList" />
 
 > ### baseSetSize
 >

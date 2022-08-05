@@ -23,6 +23,10 @@ The Deck data model describes a complete deck reference of an individual deck.
 - **Parent file:** [All Decks](/downloads/all-decks/)
 - **Parent model:** `data`
 
+## Model Type
+
+<ModelType type="Deck" />
+
 ## Model Index
 
 <PropertyToggler/>
@@ -30,8 +34,6 @@ The Deck data model describes a complete deck reference of an individual deck.
 [[toc]]
 
 ## Model Properties
-
-<ModelType type="Deck" />
 
 > ### code
 >
@@ -49,7 +51,7 @@ The Deck data model describes a complete deck reference of an individual deck.
 
 > ### fileName
 >
-> The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a delimiter of `_`.
+> The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a `_` delimiter.
 >
 > - **Type:** `string`
 > - **Example:** `"SpiritSquadron_VOC"`
