@@ -42,7 +42,7 @@
     .sort-row.checkbox(v-if="!disableChecks")
       .vue-toggler-plugin.list-toggle
         Toggle(@change="onHandleChange" v-model="spoilerValue")
-        p Include Spoilers
+        p Include Previews
 
     .sort-row.checkbox(v-if="!disableChecks")
       .vue-toggler-plugin.list-toggle

@@ -7,6 +7,7 @@
 @import './placeholders';
 @import './sidebar';
 @import './code';
+@import './blockquote';
 @import './pages';
 @import './plugins';
 
@@ -120,140 +121,6 @@ img {
   overflow: hidden;
 
   &.graphql-playground {
-    margin-bottom: 0;
-  }
-}
-
-// Property blocks
-blockquote {
-  @extend %blockquote;
-
-  &:first-of-type {
-    margin-top: 0;
-  }
-
-  &::before,
-  &::after {
-    content: '';
-    display: table;
-    clear: both;
-  }
-
-  &.warning {
-    background-color: var(--blockquote-warning-bg-color);
-    color: var(--blockquote-warning-text-color);
-
-    margin: 2rem 0;
-
-    a {
-      color: var(--blockquote-warning-text-color);
-    }
-  }
-
-  .small-header {
-    padding-bottom: 0;
-  }
-
-  h3 {
-    position: static;
-    display: block;
-    padding: 0 !important;
-    margin: 2rem 0 1rem;
-
-    .header-anchor {
-      left: 1rem;
-    }
-
-    i {
-      position: absolute;
-      margin-right: 0 !important;
-
-      &.optional {
-        right: 1rem;
-        top: 1rem;
-      }
-    }
-  }
-
-  p {
-    margin-bottom: 1rem;
-
-    &:last-of-type {
-      margin-bottom: 0;
-    }
-
-    em {
-      background-color: var(--red-color);
-      border-radius: var(--common-radius);
-      color: var(--dark-color);
-      display: inline-block;
-      font-style: normal;
-
-      @extend %code-block;
-
-      font-family: var(--font-base);
-
-      a {
-        color: var(--dark-color);
-      }
-    }
-  }
-
-  i.optional,
-  i.deprecated,
-  i.preview,
-  i.new {
-    background-color: var(--light-color);
-    color: var(--dark-color);
-
-    @extend %code-block;
-
-    font-family: var(--font-base) !important;
-  }
-
-  i.optional {
-    background-color: var(--yellow-color);
-
-    &::before {
-      content: "Optional";
-    }
-  }
-
-  ul {
-    margin-bottom: 0;
-    margin-top: 1rem;
-
-    & > li {
-      margin: 0 0 0.5rem;
-
-      &:empty {
-        margin: 0;
-        list-style: none;
-      }
-    }
-
-    li {
-      list-style: disc;
-
-      p {
-        width: 100%;
-      }
-
-      strong {
-        margin-right: 0.25rem;
-      }
-
-      pre {
-        margin-bottom: 0;
-      }
-    }
-  }
-
-  div[class*="language-"] {
-    background-color: transparent;
-  }
-
-  pre {
     margin-bottom: 0;
   }
 }

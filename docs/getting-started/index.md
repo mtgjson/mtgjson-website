@@ -42,7 +42,7 @@ For a full list of files see the [Downloads](/downloads/) page.
 
 ### Data Models
 
-Data Models are what we call the structures that contain data inside files and other Data Models. They vary in their availability and are based heavily on the type of file accessed and the Data Models in those files. Some of the data models used in the files are:
+Data Models are what we call the structures that contain data inside files and other data models. They vary in their availability and are based heavily on the type of file accessed and the data models in those files. Some of the data models used in the files are:
 
 - [Card (Atomic)](/data-models/card-atomic/): Data inside `AtomicCards.json` and `<Format>Atomic.json`
 - [Card (Set)](/data-models/card-set/): Data inside `AllIdentifiers.json`
