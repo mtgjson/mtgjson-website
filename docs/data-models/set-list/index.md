@@ -20,9 +20,8 @@ head:
 
 The Set List data model describes metadata-like properties for an individual [Set](/data-models/set/).
 
-**Parent file:** [SetList](/downloads/all-files/#setlist)  
-
-**Parent property:** `data`
+- **Parent file:** [SetList](/downloads/all-files/#setlist)
+- **Parent model:** `data`
 
 ## Model Index
 

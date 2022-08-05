@@ -27,11 +27,14 @@ const hiddenCount = computed<number>((): number => {
 });
 
 onMounted((): void => {
+  const location: URL = new URL(window.location.href);
+  const params: string[][] = Array.from(location.searchParams.entries());
+
   allTOCAnchors.value = Array.from($('.table-of-contents li a'));
   propertyBlocks.value = Array.from($('#property-toggler ~ blockquote:has(i.optional)'));
 
   if (propertyBlocks.value.length === 0) {
-    hasOptionals.value = false;
+    hasOptionals.value = true;
   }
 
   for (const block of propertyBlocks.value) {
@@ -39,6 +42,16 @@ onMounted((): void => {
 
     hiddenTOCProperties.value.push(propertyName);
   }
+
+  params.forEach((param: string[]): void => {
+    const p: string = param[0];
+    const v: string = param[1];
+
+    if (p === 'optionals' && v === 'false') {
+      toggleValue.value = true;
+      toggleOptionals();
+    }
+  });
 
   // toggleTOCVariations();
 });

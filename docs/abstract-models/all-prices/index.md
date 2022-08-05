@@ -19,9 +19,8 @@ head:
 
 The All Prices abstract model describes a list of card prices based on a Card UUID.
 
-**Parent file:** [AllPrices](/downloads/all-files/#allprices)  
-
-**Parent property:** `data`
+- **Parent file:** [AllPrices](/downloads/all-files/#allprices)
+- **Parent model:** `data`
 
 ## Price Providers
 

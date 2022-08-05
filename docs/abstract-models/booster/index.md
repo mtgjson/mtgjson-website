@@ -19,9 +19,8 @@ head:
 
 The Booster abstract model describes how a [Set](/data-models/set/) booster pack may be constructed.
 
-**Parent model:** [Set](/data-models/set/)  
-
-**Parent property:** `booster`
+- **Parent file:** [Set](/data-models/set/)
+- **Parent model:** `booster`
 
 ## Model Overview
 
@@ -77,44 +76,73 @@ The Booster abstract model describes how a [Set](/data-models/set/) booster pack
 ## Example Model
 
 ```json
-{
-  "default": {
-    "boosters": [
-      {
-        "contents": {
-          "basic": 1,
-          "common": 10,
-          "uncommon": 3,
-          "rareMythic": 1
+  {
+    "default": {
+      "boosters": [
+        {
+          "contents": {
+            "basic": 1,
+            "common": 10,
+            "rareMythic": 1,
+            "uncommon": 3
+          },
+          "weight": 2
         },
-        "weight": 3
-      },"
-      {
-        "contents": {
-          "basic": 1,
-          "common": 9,
-          "uncommon": 3,
-          "rareMythic": 1,
-          "foil": 1
+        {
+          "contents": {
+            "basic": 1,
+            "common": 9,
+            "foil": 1,
+            "rareMythic": 1,
+            "uncommon": 3
+          },
+          "weight": 1
+        }
+      ],
+      "boostersTotalWeight": 3,
+      "sheets": {
+        "basic": {
+          "cards": {
+            "08ca354f-d163-5aa7-80cb-6b8dab4893e8": 2,
+            ... // More card UUIDs with weights
+          },
+          "foil": false,
+          "totalWeight": 30
         },
-        "weight": 1
+        "common": {
+          "balanceColors": true,
+          "cards": {
+            "00542ebe-9ff3-5ba1-9015-1028e95b7f8e": 1,
+            ... // More card UUIDs with weights
+          },
+          "foil": false,
+          "totalWeight": 101
+        },
+        "foil": {
+          "cards": {
+            "00542ebe-9ff3-5ba1-9015-1028e95b7f8e": 6720,
+            ... // More card UUIDs with weights
+          },
+          "foil": true,
+          "totalWeight": 1355200
+        },
+        "rareMythic": {
+          "cards": {
+            "00adcf10-69b4-56f5-b393-c17511ba207c": 1,
+            ... // More card UUIDs with weights
+          },
+          "foil": false,
+          "totalWeight": 140
+        },
+        "uncommon": {
+          "cards": {
+            "0906fd55-3248-5fe3-ac3c-717ae4bece94": 1,
+            ... // More card UUIDs with weights
+          },
+          "foil": false,
+          "totalWeight": 80
+        }
       }
-    ],
-    "boostersTotalWeight": 4,
-    "sheets": {
-      "basic": {
-        "cards": {
-          "1e12b68d-d81d-5169-8f3a-4700816406e8": 1,
-          "3cdf6dca-88b2-561e-8998-6eb71118e9c7": 1,
-          "5e7cff36-a8bf-5e46-9cea-57c1762969f9": 1,
-          "8a040f0a-a84a-5e02-bebe-41bb9ac95e0e": 1,
-          "c9c94efd-5caf-5de9-9bed-a812aa2dd301": 1
-        },
-        "foil": false,
-        "totalWeight": 5
-      },
-      ... // More sheet names
     }
   }
-}
 ```

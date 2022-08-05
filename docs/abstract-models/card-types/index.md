@@ -19,16 +19,18 @@ head:
 
 The Card Types abstract model describes other possible sub-types and super-types of a card type.
 
-**Parent file:** [CardTypes](/downloads/all-files/#cardtypes)  
-
-**Parent property:** `data`
+- **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)
+- **Parent model:** `data`
 
 ## Model Overview
 
 ```json
 {
+  // Card type
   "<Card Type>": {
+    // Any subtypes available to a card type
     "subTypes": string[],
+    // Any supertypes available to a card type
     "superTypes": string[]
   }
 }

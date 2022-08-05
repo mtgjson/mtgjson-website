@@ -43,9 +43,9 @@ const toggleShowAll = (): void => {
   display: flex;
   align-items: center;
 
-  &.showing {
-    align-items: flex-start;
-  }
+  // &.showing {
+  //   align-items: flex-start;
+  // }
 
   .show-btn {
     display: inline;

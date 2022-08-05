@@ -20,9 +20,8 @@ head:
 
 The Deck List data model describes a metadata-like model for all individual [Deck](/data-models/deck/) data.
 
-**Parent file:** [DeckList](/downloads/all-files/#decklist)  
-
-**Parent property:** `data`
+- **Parent file:** [DeckList](/downloads/all-files/#decklist)
+- **Parent model:** `data`
 
 ## Model Index
 

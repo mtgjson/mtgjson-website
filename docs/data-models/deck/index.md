@@ -20,9 +20,8 @@ head:
 
 The Deck data model describes a complete deck reference of an individual deck.
 
-**Parent file:** [All Decks](/downloads/all-decks/)  
-
-**Parent property:** `data`
+- **Parent file:** [All Decks](/downloads/all-decks/)
+- **Parent model:** `data`
 
 ## Model Index
 
@@ -53,7 +52,7 @@ The Deck data model describes a complete deck reference of an individual deck.
 > The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a delimiter of `_`.
 >
 > - **Type:** `string`
-> - **Examples:** `"SpiritSquadron_VOC"`
+> - **Example:** `"SpiritSquadron_VOC"`
 > - **Introduced:** `v4.3.0`
 
 > ### mainBoard

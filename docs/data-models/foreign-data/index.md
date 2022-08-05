@@ -20,9 +20,8 @@ head:
 
 The Foreign Data data model describes a list of properties for various Card data models in alternate languages.
 
-**Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)  
-
-**Parent property:** `foreignData`
+- **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
+- **Parent model:** `foreignData`
 
 ## Model Index
 

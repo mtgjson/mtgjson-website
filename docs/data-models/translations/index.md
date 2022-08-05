@@ -19,9 +19,8 @@ head:
 
 The Translations data model describes a Set name translated per available language.
 
-**Parent model:** [Set](/data-models/set/)  
-
-**Parent property:** `translations`
+- **Parent file:** [Set](/data-models/set/)
+- **Parent model:** `translations`
 
 ## Model Index
 
