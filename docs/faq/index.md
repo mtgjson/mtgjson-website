@@ -35,11 +35,11 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### Where does the data come from?
 >
-> Data is collected from a variety of sources, including Magic: The Gathering's own [Gatherer](https://gatherer.wizards.com/Pages/Default.aspx), API's like [Scryfall](https://scryfall.com/docs/api) and [TCGplayer](https://docs.tcgplayer.com/docs), and many more. For more information, or if you would like to help, please join our [Discord](https://mtgjson.com/discord)!
+> Data is collected from a variety of sources, including Magic: The Gathering's own [Gatherer](https://gatherer.wizards.com/Pages/Default.aspx), API's like [Scryfall](https://scryfall.com/docs/api) and [TCGplayer](https://docs.tcgplayer.com/docs), and many more. For more information, or if you would like to help, please join our [Discord](https://mtgjson.com/discord).
 
 > ### How much does MTGJSON cost?
 >
-> MTGJSON is free and open source under the License (MIT). If you find this project useful, please consider helping us to keep the lights on and develop new features for you with a one-time donation using <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> or recurring donations using <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a>.
+> MTGJSON is free and open source under the MIT License. If you find this project useful, please consider helping us to keep the lights on and develop new features for you with a one-time donation using <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> or recurring donations using <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a>.
 
 > ### How can I help, report a bug, etc?
 >
@@ -63,8 +63,8 @@ Here is a list of frequently asked questions from our users since some data can 
 >
 > While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) using the MTGJSON property from the [Identifiers](/data-models/identifiers/) data model within the various Card data models.
 >
-> - **Scryfall:** `https://api.scryfall.com/cards/${scryfallId}?format=image`
-> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
+> - **Scryfall:** `https://api.scryfall.com/cards/<scryfallId>?format=image`
+> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=<multiverseId>`
 >
 > - **Note:** [Gatherer](https://gatherer.wizards.com/) may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
 >   For [Scryfall](https://scryfall.com/), to access another face of a card add `&face=front` or `&face=back` to the url to get the respective image.
@@ -75,7 +75,7 @@ Here is a list of frequently asked questions from our users since some data can 
 >
 > Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API endpoint.
 >
-> **Example**: `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`
+> **Example**: `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=<setCode>&rarity=<rarity>&size=large`
 >
 > In this case, `rarity` is just the starting letter of the rarity, such as `m`, `r`, `u`, or `c`.
 

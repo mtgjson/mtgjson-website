@@ -2,7 +2,8 @@
 #property-toggler.property-toggler(v-if="hasOptionals")
   .vue-toggler-plugin
     Toggle(v-model="toggleValue" @change="toggleOptionals")
-    p Hide optional properties {{ ' ' }}(Showing {{ count }})
+    p Hide optional properties
+      span (Showing {{ count }})
 </template>
 
 <script setup lang="ts">
@@ -31,10 +32,10 @@ onMounted((): void => {
   const params: string[][] = Array.from(location.searchParams.entries());
 
   allTOCAnchors.value = Array.from($('.table-of-contents li a'));
-  propertyBlocks.value = Array.from($('#property-toggler ~ blockquote:has(i.optional)'));
+  propertyBlocks.value = Array.from($('#model-properties ~ blockquote:has(i.optional)'));
 
   if (propertyBlocks.value.length === 0) {
-    hasOptionals.value = true;
+    hasOptionals.value = false;
   }
 
   for (const block of propertyBlocks.value) {
@@ -122,9 +123,15 @@ const toggleTOCOptionals = (doHide: boolean): void => {
 
 <style lang="scss" scoped>
 .property-toggler {
+  p {
+    span {
+      color: var(--gray-color);
+      margin-left: 0.5rem;
+    }
+  }
   &.none {
     position: relative;
-    margin-bottom: 2.5rem;
+    margin-bottom: 1rem;
 
     &::after {
       content: 'No Available Properties';

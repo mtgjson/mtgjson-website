@@ -69,7 +69,7 @@ import type { TList } from '../types';
 type Props = {
   file: string;
   type?: string;
-  disableChecks?: boolean;
+  disableChecks?: string;
 };
 
 const store = useStore();

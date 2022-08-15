@@ -7,15 +7,16 @@ export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
-export const title = 'MTGJSON.com | Cataloging all Magic: The Gathering cards in portable formats.';
+export const title = 'MTGJSON.com | Portable formats for all Magic: The Gathering data.';
 export const description =
-  'MTGJSON is an open-source project that catalogs all Magic: The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various JSON files that you can learn about and download from this website.';
+  'MTGJSON is an open-source project that catalogs all Magic The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various downloadable formats.';
 
 export default {
   lang: 'en-US',
   // SEO
   title,
   description,
+  appearance: false,
   // Head Tags
   head: [
     ['meta', { charset: 'utf-8' }],
@@ -23,9 +24,7 @@ export default {
     // Google SEO
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', src: '/images/assets/thumbnail-logo-mtgjson.png' }],
-    // Shiki
-    ['script', { src: 'https://unpkg.com/shiki' } ],
+    ['meta', { property: 'og:image', src: '/thumbnail-mtgjson.jpg' }],
     // Analytics
     ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
     [
@@ -40,38 +39,28 @@ export default {
     ],
     ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
     // Favicon and OS Tiles
-    ['link', { rel: 'shortcut icon', type: 'image/x-icon', href: '/favicon-dark.ico' }],
-    ['link', { rel: 'icon', href: '/android-icon-192x192.png', sizes: '192x192', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-icon-96x96.png', sizes: '96x96', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-icon-48x48.png', sizes: '48x48', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-icon-36x36.png', sizes: '36x36', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-57x57.png', sizes: '57x57', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-60x60.png', sizes: '60x60', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-72x72.png', sizes: '72x72', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-76x76.png', sizes: '76x76', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-114x114.png', sizes: '114x114', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-120x120.png', sizes: '120x120', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-144x144.png', sizes: '144x144', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-152x152.png', sizes: '152x152', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-icon-180x180.png', sizes: '180x180', type: 'image/png' }],
-    ['link', { rel: 'msapplication-TileImage', href: '/ms-icon-144x144.png' }],
+    ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
+    ['link', { rel: 'icon', href: '/favicon-16x16.ico', sizes: '16x16', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicon-32x32.ico', sizes: '32x32', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/android-chrome-384x384.png', sizes: '384x384', type: 'image/png' }],
+    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
+    ['link', { rel: 'msapplication-TileImage', href: '/mstile-150x150.png' }],
   ],
   markdown: {
     toc: {
       level: [3],
-    },
+    }
   },
   // VitePress Themeing
   themeConfig: {
-    pages,
-    // Edit this page link in footer
+    pages, // Used for search
+    smoothScroll: true,
     editLink: {
       pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/',
       text: 'Help us improve this page!',
     },
-    smoothScroll: true,
     nav: [
       { text: 'Join us on Discord', link: 'https://mtgjson.com/discord' },
       { text: 'Follow us on Twitter', link: 'https://twitter.com/mtgjson' },
@@ -80,18 +69,12 @@ export default {
     ],
     sidebar: [
       {
-        text: 'MTGJSON',
-        link: '/',
-        items: [
-          {
-            text: 'Getting Started',
-            link: '/getting-started/',
-          },
-          {
-            text: 'F.A.Q.',
-            link: '/faq/',
-          },
-        ],
+        text: 'Getting Started',
+        link: '/getting-started/',
+      },
+      {
+        text: 'F.A.Q.',
+        link: '/faq/',
       },
       {
         text: 'MTGGraphQL',

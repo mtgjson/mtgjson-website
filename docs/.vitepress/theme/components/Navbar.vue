@@ -1,12 +1,8 @@
 <template lang="pug">
-header.navbar(:class="{home: isHome}")
-  .navbar-options(v-if="!isHome")
+header.navbar
+  .navbar-options
     SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
     NavMeta.desktop-hide(:width="`70px`" :hideText="true")
-    ThemeSwitcher
-  .navbar-options.home(v-else)
-    a.docs-link(href="/getting-started/")
-      .cta-btn Docs
     ThemeSwitcher
 </template>
 
@@ -14,12 +10,6 @@ header.navbar(:class="{home: isHome}")
 import SidebarButton from './SidebarButton.vue';
 import NavMeta from './NavMeta.vue';
 import ThemeSwitcher from './ThemeSwitcher.vue';
-
-type Props = {
-  isHome: boolean;
-};
-
-defineProps<Props>();
 </script>
 
 <style lang="scss">
@@ -31,7 +21,7 @@ defineProps<Props>();
   align-items: center;
   padding: 0 2rem;
   margin-left: var(--sidebar-width);
-  background-color: var(--bg-color);
+  background-color: var(--bg-darker-color);
   border-bottom: 1px solid var(--bg-border-color);
 
   .nav-logo-link {
@@ -62,6 +52,7 @@ defineProps<Props>();
 @media (max-width: 719px) {
   .navbar {
     left: 0;
+    background-color: var(--bg-color);
     border-bottom: 1px solid var(--bg-border-color);
     margin-left: 0;
 

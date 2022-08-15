@@ -38,20 +38,10 @@ onMounted((): void => {
 });
 
 const switchTheme = (): void => {
-  const oldLink: HTMLElement = document.querySelector("link[rel*='icon']");
   const newTheme: string = toggleValue.value === true ? 'light' : 'dark';
-
-  let link = document.createElement('link');
-  link.type = 'image/x-icon';
-  link.rel = 'shortcut icon';
-  link.href = `/favicon-${newTheme}.ico`;
-  // Don't clog up the <head> with cascade
-  oldLink.remove();
   // Set state on body
   document.body.classList.remove(activeTheme.value);
   document.body.classList.add(newTheme);
-  // Add new favicon
-  document.getElementsByTagName('head')[0].appendChild(link);
   // Store state in localStorage
   if (hasStorageCapabilities.value) {
     window.localStorage.setItem('theme', newTheme);

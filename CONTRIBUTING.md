@@ -37,11 +37,12 @@ Some files and directories are omitted that do not help understand this current 
 ```sh
 .
 ├── app.json # Configuration for Heroku review apps. Used for Heroku PR deployments
+├── check-version.js # Ensures the Node environment is correct
 ├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
 ├── util # Build utilities
-|   ├── check-version.js # Ensures the developer environment is correct
 │   ├── generate-contributors.js # Utility to generate GitHub contributors JSON
-│   └── generate-feeds.js # Utility to generate RSS and other feeds
+│   ├── generate-feeds.js # Utility to generate RSS and other feeds
+│   └── generate-types.js # Utility to generate TypeScript notations for documentation
 └── docs # Home directory, outputs to `/dist`
     ├── **/index.md # Directories and their route entry point
     ├── public/ # Static assets

@@ -193,7 +193,7 @@ Welcome to the next release of MTGJSON - With this release we are no longer supp
 
 **Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 2021 all v4 endpoints will be removed.**
 
-<img style="max-height: 100px; float: left; margin: 0 15px 10px 0;" alt="MTGGraphQL logo" src="/images/assets/thumbnail-logo-mtggraphql.jpg" />We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](https://mtgjson.com/mtggraphql) documentation. Access during our beta rollout is limited to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters. A GraphQL GUI can be accessed via <a href="https://graphql.mtgjson.com/" target="_blank" rel="noreferrer noopener">MTGGraphQL Playground</a>
+We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](/mtggraphql/) documentation. Access during our beta rollout is limited to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters. A GraphQL GUI can be accessed via <a href="https://graphql.mtgjson.com/" target="_blank" rel="noreferrer noopener">MTGGraphQL Playground</a>
 
 ### Files
 

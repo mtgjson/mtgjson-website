@@ -1,10 +1,19 @@
 <template lang="pug">
 .sorting-options
-  p.show-options(
-    @click="showOptions = !showOptions",
-    :class="{ 'hide-options': !showOptions }"
-  ) Toggle Options
-  fieldset.sort-rows(v-if="showOptions")
+  div.vue-toggler-plugin.list-toggle
+    Toggle(v-model="toggleValue" @change="onToggleChange")
+    p Show Options
+  fieldset.sort-rows(v-if="toggleValue")
+    .sort-row.checkbox(v-if="disableChecks !== 'true'")
+      .vue-toggler-plugin.list-toggle
+        Toggle(@change="onHandleChange" v-model="spoilerValue")
+        p Include Previews
+
+    .sort-row.checkbox(v-if="disableChecks !== 'true'")
+      .vue-toggler-plugin.list-toggle
+        Toggle(@change="onHandleChange" v-model="onlineValue")
+        p Include Online Only
+
     .sort-row.search
       label(for="search-input") Search:
       input.table-sort-select(
@@ -39,16 +48,6 @@
         option(value="type") Type (Ascending)
         option(value="type:true") Type (Descending)
 
-    .sort-row.checkbox(v-if="!disableChecks")
-      .vue-toggler-plugin.list-toggle
-        Toggle(@change="onHandleChange" v-model="spoilerValue")
-        p Include Previews
-
-    .sort-row.checkbox(v-if="!disableChecks")
-      .vue-toggler-plugin.list-toggle
-        Toggle(@change="onHandleChange" v-model="onlineValue")
-        p Include Online Only
-
     .sort-row.reset
       small
         a(@click="onHandleReset") Reset Toggles
@@ -65,7 +64,7 @@ type Props = {
   filters: TList[];
   file?: string;
   type?: string;
-  disableChecks?: boolean;
+  disableChecks?: string;
 };
 
 const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
@@ -75,9 +74,9 @@ const lazyOffset = ref<number>(10);
 const lazyToLoad = ref<number>(10);
 const filterValue = ref<string>('');
 const searchValue = ref<string>('');
+const toggleValue = ref<boolean>(false);
 const spoilerValue = ref<boolean>(true);
 const onlineValue = ref<boolean>(true);
-const showOptions = ref<boolean>(false);
 const sortKey = ref<string>('releaseDate:true');
 const timeout = ref<any>(null);
 
@@ -114,6 +113,10 @@ const onHandleReset = (): void => {
 
   emitNewData(dynamicData, [newListCount, data.length]);
 };
+
+const onToggleChange = (): void => {
+  toggleValue.value = !!toggleValue.value;
+}
 
 const onHandleChange = (speed?: number): void => {
   // Throttle so we don't go nuts
@@ -161,51 +164,30 @@ defineExpose({
   border: 1px solid var(--accent-color);
   margin-bottom: 2rem;
 
-  .show-options {
+  .sort-toggle {
     display: block;
-    padding: 0 0 1.5rem 1.25rem;
     margin-bottom: 0;
     position: relative;
-    color: var(--accent-color);
-    text-decoration: underline;
-    font-weight: bold;
-    cursor: pointer;
+    color: var(--text-color);
+    display: flex;
 
-    &::before {
-      left: 0;
-      top: 10px;
-      content: '';
-      height: 0;
-      width: 0;
-      position: absolute;
-      pointer-events: none;
-      border: solid transparent;
-      border-top-color: var(--accent-color);
-      border-width: 5px;
-    }
-
-    &.hide-options {
-      padding-bottom: 0;
-
-      &::before {
-        border-top: 5px solid transparent;
-        border-bottom: 5px solid transparent;
-        border-left: 5px solid var(--accent-color);
-        left: 2px;
-        top: 7px;
-      }
+    p {
+      font-weight: bold;
+      margin-left: 0.5rem;
     }
   }
 
   .sort-rows {
+    margin-top: 1rem;
+
     .sort-row {
-      margin-bottom: 10px;
+      margin-bottom: 1rem;
       display: flex;
       align-items: center;
 
       label {
         font-weight: bold;
-        font-size: 14px;
+        font-size: 1rem;
         flex: none;
       }
 
@@ -283,10 +265,6 @@ defineExpose({
           input {
             width: 100%;
           }
-        }
-
-        input[type='checkbox'] {
-          flex: none;
         }
       }
     }

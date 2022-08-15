@@ -9,9 +9,7 @@
           img.lazy(
             :data-src="contributor.avatar",
             :alt="`${contributor.username}'s avatar`",
-            :title="`${contributor.username}'s avatar`",
-            width="48px",
-            height="48px"
+            :title="`${contributor.username}'s avatar`"
           )
 
   h2#contributing Contributing
@@ -80,8 +78,8 @@
 
 <script setup lang="ts">
 import { onMounted } from 'vue';
-import { patrons, applications } from '../static/supporters.json';
 import contributors from '../static/contributors.json';
+import { patrons, applications } from '../static/supporters.json';
 import { formatTime } from '../helpers';
 
 const projectMsg: string =

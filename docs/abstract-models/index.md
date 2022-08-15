@@ -23,11 +23,11 @@ For example, any <strong>Abstract Model</strong> would look similar to this:
 
 ```json
 {
-  "<Property 1": {
-    "<Nested Property 1": any
+  "<Property 1>": {
+    "<Nested Property 1>": any
   },
-  "<Property 2": {
-    "<Nested Property 1": any
+  "<Property 2>": {
+    "<Nested Property 1>": any
   },
   ... // More properties
 }

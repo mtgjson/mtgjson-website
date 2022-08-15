@@ -1,11 +1,14 @@
 <template lang="pug">
 .theme-container(:class="pageClasses")
-  Navbar(:isHome="isHome" @toggle-sidebar="toggleSidebar")
+  .page(v-if="!isHome")
+    Navbar(@toggle-sidebar="toggleSidebar")
 
-  Sidebar(v-if="!isHome" :items="sidebarItems", @toggle-sidebar="toggleSidebar")
+    Sidebar(:items="sidebarItems", @toggle-sidebar="toggleSidebar")
 
-  Home(v-if="isHome")
-  Page(v-else)
+    Page
+
+  .home(v-else)
+    Home
 </template>
 
 <script setup lang='ts'>
@@ -21,7 +24,7 @@ import type { TSidebarItem } from '../types';
 const { theme, frontmatter } = useData();
 const store = useStore();
 const isSidebarOpen = ref<boolean>(false);
-const isHome = computed<boolean>(() => frontmatter.value.layout === 'home');
+const isHome = computed<boolean>(() => frontmatter.value.home);
 const sidebarItems: TSidebarItem[] = theme.value.sidebar;
 
 const pageClasses = computed((): object[] => {

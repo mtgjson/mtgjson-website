@@ -6,10 +6,10 @@ head:
       content: MTGJSON License
   - - meta
     - name: description
-      content: Usage license for MTGJSON and documentation.
+      content: Usage license for MTGJSON.com.
   - - meta
     - property: og:description
-      content: Usage license for MTGJSON and documentation.
+      content: Usage license for MTGJSON.com.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, license
@@ -17,7 +17,7 @@ head:
 
 # MTGJSON License
 
-By using this website and its content you agree to the following license:
+By using this website and its content you agree to the following MIT License:
 
 <img class="img-license" src="/images/assets/mit-license.jpg" alt="Logo for MIT License" title="MIT License" />
 

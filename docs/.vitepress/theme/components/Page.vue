@@ -85,7 +85,6 @@ const flattern = (items: TSidebarItem[], res: TSidebarItem[]) => {
 .page {
   position: relative;
   z-index: 1;
-  padding-top: calc(var(--navbar-height) - 1rem);
   padding-left: var(--sidebar-width);
   background-color: var(--bg-darker-color);
 
@@ -180,6 +179,7 @@ const flattern = (items: TSidebarItem[], res: TSidebarItem[]) => {
 
 @media (max-width: 719px) {
   .page {
+    padding-top: calc(var(--navbar-height) - 1rem);
     padding-left: 0;
   }
 }

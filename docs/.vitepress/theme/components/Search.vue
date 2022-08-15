@@ -175,6 +175,7 @@ const cleanSearch = (): void => {
         color: var(--search-text-color);
 
         &--page {
+          text-align: left;
           margin: 0;
           line-height: 1.25rem;
           text-decoration: underline;
@@ -182,6 +183,8 @@ const cleanSearch = (): void => {
         }
 
         &--text {
+          text-align: left;
+          display: block;
           margin-top: 5px;
           font-weight: normal;
         }

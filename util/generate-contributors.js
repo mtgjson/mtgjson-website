@@ -20,7 +20,9 @@ Promise.all(promises)
   })
   .then((data) => {
     return Array.from(new Set(contributors.map((c) => c.login)))
-      .filter((login) => !login.includes('[bot]'))
+      .filter((login) => !login.toLowerCase().includes('[bot]'))
+      .filter((login) => !login.toLowerCase().includes('staghouse'))
+      .filter((login) => !login.toLowerCase().includes('zeldazach'))
       .map((login) => {
         return {
           username: contributors.find((c) => c.login === login).login,

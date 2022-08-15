@@ -133,19 +133,37 @@ img {
   border-radius: var(--common-radius);
   border: 1px solid var(--accent-color);
   text-decoration: none;
-  transition: all 0.25s;
   margin-right: 1rem;
   margin-bottom: 1rem;
   text-decoration: none !important;
-  background-color: var(--bg-color);
+  background-color: transparent;
   color: var(--accent-color);
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
 
-  &:hover {
-    background-color: var(--accent-color);
+  &:hover,
+  &:focus {
     color: var(--light-color);
+  }
+
+  &:focus {
+    outline: 2px solid white;
+    outline-offset: 2px;
+  }
+
+  &.light {
+
+    &:hover,
+    &:focus {
+      color: var(--dark-color);
+    }
+
+    &:focus {
+      outline: 2px solid var(--dark-color);
+      outline-offset: 2px;
+    }
+
   }
 }
 

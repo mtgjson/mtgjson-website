@@ -21,15 +21,19 @@ When creating your project a credit to MTGJSON is greatly appreciated, though it
 
 ## Downloadable Assets
 
-<a href="/images/assets/MTGJSON-Brand-Assets.zip">
-  <button tabindex="-1" class="cta-btn" style="margin: 0;">Download Brand Assets</button>
+<a href="/images/assets/logo-mtgjson.png" target="_blank">
+  <button class="cta-btn" style="margin: 0 1rem 0 0;">Download PNG</button>
+</a>
+
+<a href="/images/assets/logo-mtgjson.svg" target="_blank">
+  <button class="cta-btn" style="margin: 0;">Download SVG</button>
 </a>
 
 ## Embed Code
 
 ```html
 <a href="https://mtgjson.com" style="display: inline-flex; align-items: center;">
-  <img src="http://mtgjson.com/images/assets/logo-mtgjson-light-blue.svg" width="60px" title="MTGJSON logo" />
+  <img src="https://mtgjson.com/images/assets/logo-mtgjson.svg" width="60px" title="MTGJSON logo" />
   <p style="margin-left: 10px">Powered by MTGJSON</p>
 </a>
 ```

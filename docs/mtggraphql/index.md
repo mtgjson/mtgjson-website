@@ -17,7 +17,7 @@ head:
 
 # MTGGraphQL
 
-MTGGraphQL is a sub-service of MTGJSON and a GraphQL API built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service. This will also allow us to connect future projects & changes under a single API that can evolve over time. While more data is in the works, the current service focuses on these JSON payloads:
+MTGGraphQL is a sub-service of MTGJSON and a GraphQL API built on top of the MTGJSON data sets. The goal being to reduce the amount of unnecessary data retrieved and empowering users to ask for exactly what they need from the GraphQL service. This will also allow us to connect future projects and changes under a single API that can evolve over time. While more data is in the works, the current service focuses on these JSON payloads:
 
 - **Cards**
 - **Decks**
@@ -48,14 +48,6 @@ To go along with MTGGraphQL, we have released a [TypeScript package](https://www
 ### Client-based Querying
 
 You can utilize a tool like [Apollo](https://www.apollographql.com/docs/) to make Client-based calls.
-
-### Endpoint Calls
-
-You can hit the GraphQL endpoint directly like the following:
-
-```
-https://graphql.mtgjson.com?query=query{cards(input:{name:"Phelddagrif"},page:{take:100,skip:0},order:{order:ASC}){name,setCode,type,text}}
-```
 
 ### GraphQL Playground
 
@@ -113,5 +105,5 @@ query {
 You can use the below embedded playground start a query right now, provided you enter your authorization token in the HTTP Headers:
 
 <div class="doc-iframe graphql-playground">
-  <iframe src="https://graphql.mtgjson.com/?query=query {%0A%20 cards(%0A%20%20%20 input%3A { name%3A %22Phelddagrif%22 }%0A%20%20%20 page%3A { take%3A 100%2C skip%3A 0 }%0A%20%20%20 order%3A { order%3A ASC }%0A%20 ) {%0A%20%20%20 name%0A%20%20%20 setCode%0A%20%20%20 type%0A%20%20%20 text%0A%20 }%0A}%0A" height="600px" width="100%"></iframe>
+  <iframe src="https://graphql.mtgjson.com/?query=query {%0A%20 cards(%0A%20%20%20 input%3A { name%3A %22Phelddagrif%22 }%0A%20%20%20 page%3A { take%3A 100%2C skip%3A 0 }%0A%20%20%20 order%3A { order%3A ASC }%0A%20 ) {%0A%20%20%20 name%0A%20%20%20 setCode%0A%20%20%20 type%0A%20%20%20 text%0A%20 }%0A}%0A" height="700px" width="100%"></iframe>
 </div>

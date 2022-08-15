@@ -18,14 +18,17 @@
   --yellow-darker-color: #ad850e;
   --yellow-dark-color: #3c330c;
   --yellow-dark-2-color: #ffda372d;
-  --green-color: palegreen;
+  --green-color: rgb(121, 211, 121);
   --red-color: salmon;
   --orange-color: #ef6c2f;
   --discord-color: #7289da;
   --patreon-color: #f96753;
-  --true-accent-1-color: #85d3ff;
-  --true-accent-2-color: #1e90ff;
-  --true-gray-color: #aaaaaa;
+  // Fix this
+  --true-accent-light-color: #85d3ff;
+  --true-accent-dark-color: #1e90ff;
+  --true-accent-1-color: var(--true-accent-dark-color);
+  --true-accent-2-color: var(--true-accent-dark-color);
+  --true-gray-color: #f9f9f9;
   --true-gray-1-color: #eeeeee;
 
   // Main colors
@@ -36,9 +39,10 @@
   --gray-2-color: #eaecef;
   --gray-3-color: #bababa;
   --gray-4-color: #2d2d2d;
+  --gray-5-color: #676767;
 
   --dark-color: #263646;
-  --dark-1-color: #172839;
+  --dark-1-color: #0f263c;
   --dark-2-color: #0e141f;
   --dark-3-color: var(--black-color);
 

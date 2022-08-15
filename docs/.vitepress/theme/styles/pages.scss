@@ -2,12 +2,14 @@
 #model-properties {
   &.none {
     position: relative;
+    margin-bottom: 1.5rem;
 
     &::after {
       content: "No Available Properties";
-      position: absolute;
-      top: 8.25rem;
-      left: 0;
+      position: relative;
+      display: inline-block;
+      top: 3rem;
+      left: -14.75rem;
       font-size: 1rem;
       color: var(--gray-color);
     }
