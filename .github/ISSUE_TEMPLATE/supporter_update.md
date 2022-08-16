@@ -1,16 +1,16 @@
 ---
 name: Supporter Update
-about: Add a new supporter, service, or patreon to the list
+about: Add a new patron or application to the homepage
 title: ''
-labels: supporter update
+labels: Supporter Update
 assignees: ''
 
 ---
 
-### Describe the desired name of the supporter as it should appear on the website
+### The desired name of the supporter as it should appear on the website
 
-### Describe the web URL for this supporter
+### The web URL for this supporter (if applicable)
 
-### Provide an image if available for this supporter (at least 200px width or height)
+### An image for this supporter at least 200px width or height (if applicable)
 
-### If Patreon, describe Tier and start date as "YYYY-MM"
+### If a Patron, the tier and start date as "YYYY-MM"

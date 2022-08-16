@@ -1,8 +1,8 @@
 ---
 name: Bug Report
-about: Report a bug on this project
+about: Report a bug in the documentation website
 title: ''
-labels: bug
+labels: Bug
 assignees: ''
 
 ---
@@ -13,4 +13,4 @@ assignees: ''
 
 ### What is actually happening?
 
-### Other relevant information
+### Additional context
