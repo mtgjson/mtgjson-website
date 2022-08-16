@@ -126,11 +126,6 @@
     "link": "https://magicmanager.cards"
   },
   {
-    "name": "Magic The Gathering Companion",
-    "image": "avatar-mtg-desktop-companion.png",
-    "link": "https://nicho92.github.io/MtgDesktopCompanion/"
-  },
-  {
     "name": "Magic Trade Binder",
     "image": "avatar-magic-trade-binder.png",
     "link": "https://www.magictradebinder.com"
@@ -153,6 +148,11 @@
     "name": "MTG Addict",
     "image": "avatar-mtgaddict.png",
     "link": "https://mtgaddict.net"
+  },
+  {
+    "name": "MTG Companion",
+    "image": "avatar-mtg-desktop-companion.png",
+    "link": "https://nicho92.github.io/MtgDesktopCompanion/"
   },
   {
     "name": "MTG Developers",

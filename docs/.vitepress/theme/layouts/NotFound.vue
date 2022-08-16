@@ -1,5 +1,5 @@
 <template lang="pug">
-.error-page
+.error-page#not-found-error
   h1 Page Not Found
   p Sorry, there seems to be a problem or this page no longer exists. Go back to your previous page, check the URL or use one of these popular links below.
   ul

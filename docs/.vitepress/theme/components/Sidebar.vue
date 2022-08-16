@@ -62,22 +62,7 @@ defineProps<Props>();
     padding: 0 2rem;
     height: var(--navbar-height);
     border-bottom: 1px solid var(--bg-border-color);
-    display: flex !important;
-    text-decoration: none;
-
-    .logo-meta {
-      &--logo {
-        display: none;
-      }
-
-      &--link {
-        margin-left: 0;
-      }
-    }
-
-    .mobile-hide {
-      display: block;
-    }
+    display: flex;
   }
 
   &-wrap {
@@ -86,7 +71,7 @@ defineProps<Props>();
     height: 100%;
     grid-gap: 2rem;
     overflow-y: auto;
-    padding: 2rem 2rem 10rem;
+    padding: 1.5rem 2rem 10rem;
 
     &-navlinks,
     &-search {
@@ -104,18 +89,6 @@ defineProps<Props>();
       display: grid;
       grid-template-columns: 1fr;
       grid-gap: 0.75rem;
-
-      & .sidebar-group-items {
-        margin-bottom: 0;
-        overflow: initial;
-      }
-
-      // First link as a header
-      & > li > a.sidebar-link {
-        font-size: 1em;
-        line-height: 2;
-        font-weight: bold;
-      }
     }
   }
 }

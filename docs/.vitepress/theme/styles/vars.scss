@@ -1,6 +1,6 @@
 :root {
   // Fonts
-  --font-base: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', 'Helvetica Neue', sans-serif;
+  --font-base: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
   --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
 
   // Sizes
@@ -84,11 +84,12 @@
   --supporter-uncommon-color: var(--gray-3-color);
   --toggle-off-bg-color: var(--light-color);
   --toggle-off-handle-color: var(--bg-color);
+  --version-color: var(--gray-3-color);
 }
 
 body {
   // Set base theme CSS
-  background-color: var(--dark-1-color);
+  background-color: var(--dark-2-color);
   color: var(--text-color);
 
   &.light {
@@ -128,9 +129,10 @@ body {
     --header-border-color: var(--gray-3-color);
     --toggle-off-bg-color: var(--dark-color);
     --toggle-off-handle-color: var(--light-color);
+    --version-color: var(--gray-5-color);
 
     // Set base theme CSS
-    background-color: var(--bg-color);
+    background-color: var(--gray-1-color);
     color: var(--text-color);
   }
 }

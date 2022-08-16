@@ -17,7 +17,9 @@ head:
 
 # Getting Started
 
-MTGJSON provides [Magic: The Gathering](https://magic.wizards.com/en) data for your applications in various file formats.
+MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https://magic.wizards.com/en) data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.
+
+Below is some guiding information to get you started on working with MTGJSON data.
 
 ## Data Index
 

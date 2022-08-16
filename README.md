@@ -2,7 +2,7 @@
 
 # MTGJSON Documentation Application
 
-<img src="./docs/public/images/assets/logo-mtgjson-dark-blue.svg" height="100px">
+<img src="./docs/public/images/assets/logo-mtgjson.svg" height="100px">
 <br />
 <br />
 
@@ -61,6 +61,8 @@ npm run test:full
 ### **Building**
 
 Build out the entire site as a static project.
+
+**Note:** This is done via the GitHub Action and pushed to a Release Tag so no need to do this unless you are testing the actual build. Additionally, when submitting a PR, Heroku will deploy an environment to test your Pull Request.
 
 ```
 npm run build

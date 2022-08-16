@@ -40,18 +40,15 @@ const renderLink = (h: any, to: string, text: string, active: boolean): TSidebar
 
 <style lang="scss">
 a.sidebar-link {
-  font-size: 16px;
+  font-size: 1rem;
+  line-height: 2rem;
   font-weight: bold;
-  display: inline-block;
   color: var(--text-color);
-  line-height: 2;
-  width: 100%;
-  box-sizing: border-box;
 
   &.active {
     position: relative;
-    color: var(--accent-color);
     font-weight: bold;
+    color: var(--accent-color);
   }
 
   &:hover {
