@@ -89,6 +89,30 @@ export const prettifyType = (str: string) => {
   );
 };
 
+export const formatDateToPretty = (stringDate: string): string => {
+  const isoDate: Date = new Date(stringDate);
+  const rawDate: Date = new Date(isoDate.getTime() - isoDate.getTimezoneOffset() * -60000);
+  const year: number = rawDate.getFullYear();
+  const date: number = rawDate.getDate();
+  const months: string[] = [
+    'January',
+    'February',
+    'March',
+    'April',
+    'May',
+    'June',
+    'July',
+    'August',
+    'September',
+    'October',
+    'November',
+    'December',
+  ];
+  const month: string = months[rawDate.getMonth()];
+
+  return `${month} ${date}, ${year}`;
+};
+
 export const formatTime = (time: string, overrideTime?: string): string => {
   if (!time && typeof time !== 'string') {
     return '';

@@ -14,9 +14,8 @@ main.page
 
   footer
     .page-footer
-      blockquote
-        .edit-link(v-if="editLink")
-          a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
+      .edit-link(v-if="editLink")
+        a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 </template>
 
 <script setup lang="ts">
@@ -129,38 +128,22 @@ const flattern = (items: TSidebarItem[], res: TSidebarItem[]) => {
   &-footer {
     @extend %wrapper;
     padding-top: 3rem;
-    padding-bottom: 10rem;
+    padding-bottom: 3rem;
     overflow: auto;
     display: flex;
     justify-content: space-between;
 
-    blockquote {
+    .edit-link {
       width: 100%;
+      padding: 2rem;
+      background-color: var(--bg-color);
+      display: block;
       text-align: center;
+      border-radius: var(--common-radius);
 
-      .edit-link {
-        display: inline-block;
-
-        a {
-          color: var(--text-color);
-          font-weight: bold;
-        }
-      }
-    }
-  }
-}
-
-@media (max-width: 969px) {
-  .page {
-    &-footer {
-      flex-wrap: wrap;
-
-      & > * {
-        flex: 0 0 100%;
-
-        &:first-of-type {
-          margin-bottom: 2rem;
-        }
+      a {
+        color: var(--text-color);
+        font-weight: bold;
       }
     }
   }

@@ -47,7 +47,7 @@
                 small &nbsp;{{ item.type.replace(/_/g, ' ') }}
               li
                 small Release Date:
-                small &nbsp;{{ item.releaseDate }}
+                small &nbsp;{{ formatDateToPretty(item.releaseDate) }}
           .text-wrap--downloads
             DownloadNativeSelect(
               :fileName="item.fileName ? item.fileName : item.code",
@@ -63,7 +63,7 @@ import { computed, ref, onMounted } from 'vue';
 import { useStore } from '../store.js';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
-import { sort } from '../helpers';
+import { sort, formatDateToPretty } from '../helpers';
 import type { TList } from '../types';
 
 type Props = {

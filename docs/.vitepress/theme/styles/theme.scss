@@ -54,6 +54,7 @@ a {
   text-decoration: underline;
 
   &:hover,
+  &:focus,
   &.sidebar-link,
   &.sidebar-heading {
     text-decoration: none;
@@ -141,15 +142,16 @@ img {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
+  transition: all .25s;
 
   &:hover,
   &:focus {
     color: var(--light-color);
+    border-color: var(--light-color);
   }
 
   &:focus {
-    outline: 2px solid white;
-    outline-offset: 2px;
+    outline: 0;
   }
 
   &.light {
@@ -157,13 +159,8 @@ img {
     &:hover,
     &:focus {
       color: var(--dark-color);
+      border-color: var(--dark-color);
     }
-
-    &:focus {
-      outline: 2px solid var(--dark-color);
-      outline-offset: 2px;
-    }
-
   }
 }
 

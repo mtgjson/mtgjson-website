@@ -79,7 +79,8 @@
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import contributors from '../static/contributors.json';
-import { patrons, applications } from '../static/supporters.json';
+import patrons from '../static/patrons.json';
+import applications from '../static/applications.json';
 import { formatTime } from '../helpers';
 
 const projectMsg: string =

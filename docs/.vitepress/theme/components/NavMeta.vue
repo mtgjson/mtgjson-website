@@ -108,7 +108,7 @@ onMounted(async (): Promise<void> => {
   &-number {
     font-size: 12px;
     font-weight: bold;
-    color: var(--gray-color);
+    color: var(--text-color);
   }
 }
 </style>

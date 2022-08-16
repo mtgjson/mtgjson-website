@@ -1,0 +1,153 @@
+[
+  {
+    "name": "Cardhoarder",
+    "image": "avatar-cardhoarder.png",
+    "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
+    "tier": "mythic",
+    "since": "2018-11"
+  },
+  {
+    "name": "CardCastle",
+    "image": "avatar-cardcastle.png",
+    "link": "https://cardcastle.co",
+    "tier": "mythic",
+    "since": "2019-04"
+  },
+  {
+    "name": "MTG Labs",
+    "image": "avatar-mtglabs.png",
+    "link": "http://mtglabs.com",
+    "tier": "mythic",
+    "since": "2019-05"
+  },
+  {
+    "name": "CardBoard Live",
+    "image": "avatar-cardboard-live.png",
+    "link": "https://cardboard.live",
+    "tier": "mythic",
+    "since": "2019-09"
+  },
+  {
+    "name": "Out of Cards",
+    "image": "avatar-outofcards.png",
+    "link": "https://outof.cards",
+    "tier": "mythic",
+    "since": "2019-11"
+  },
+  {
+    "name": "MTGBAN",
+    "image": "avatar-mtg-ban.png",
+    "link": "https://www.mtgban.com/",
+    "tier": "mythic",
+    "since": "2020-03"
+  },
+  {
+    "name": "Fetchbot Sorter",
+    "tier": "mythic",
+    "since": "2020-03"
+  },
+  {
+    "name": "My MTG Collection",
+    "image": "avatar-my-mtg-collection-logo.png",
+    "link": "https://www.reddit.com/r/Mymtgapp",
+    "tier": "rare",
+    "since": "2019-04"
+  },
+  {
+    "name": "DeckTech.io",
+    "image": "avatar-decktech.png",
+    "link": "https://decktech.io",
+    "tier": "rare",
+    "since": "2020-08"
+  },
+  {
+    "name": "MTG Familiar",
+    "image": "avatar-mtg-familiar.svg",
+    "link": "https://github.com/AEFeinstein/mtg-familiar",
+    "tier": "rare",
+    "since": "2021-02"
+  },
+  {
+    "name": "MTG Decks",
+    "image": "avatar-mtgdecks.png",
+    "link": "https://www.mtgdecks.net",
+    "tier": "uncommon",
+    "since": "2019-04"
+  },
+  {
+    "name": "MTG Brewmaster",
+    "image": "avatar-mtgbrewmaster.png",
+    "link": "http://mtgbrewmaster.com",
+    "tier": "uncommon",
+    "since": "2019-04"
+  },
+  {
+    "name": "ComboDeck",
+    "image": "avatar-combodeck.png",
+    "link": "http://combodeck.net",
+    "tier": "uncommon",
+    "since": "2019-04"
+  },
+  {
+    "name": "Cockatrice",
+    "image": "avatar-cockatrice.png",
+    "link": "https://cockatrice.github.io",
+    "tier": "uncommon",
+    "since": "2019-04"
+  },
+  {
+    "name": "MagicMerchant",
+    "image": "avatar-magicmerchant.png",
+    "link": "https://magicmerchant.it",
+    "tier": "uncommon",
+    "since": "2019-06"
+  },
+  {
+    "name": "MTG.Design",
+    "image": "avatar-mtg-design.svg",
+    "link": "https://mtg.design",
+    "tier": "uncommon",
+    "since": "2019-11"
+  },
+  {
+    "name": "LoadingReadyRun Bot",
+    "image": "avatar-lrrbot.png",
+    "link": "https://lrrbot.com/",
+    "tier": "uncommon",
+    "since": "2019-12"
+  },
+  {
+    "name": "Fran&ccedil;ois Andrieux",
+    "image": "avatar-francois-andrieux.png",
+    "tier": "uncommon",
+    "since": "2019-12"
+  },
+  {
+    "name": "MagicHunter",
+    "image": "avatar-magic-hunter.jpg",
+    "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
+    "tier": "uncommon",
+    "since": "2020-02"
+  },
+  {
+    "name": "MagicML",
+    "image": "avatar-magicml.png",
+    "link": "https://www.magicml.com/",
+    "tier": "uncommon",
+    "since": "2021-01"
+  },
+  {
+    "name": "MTGStocks",
+    "image": "avatar-mtgstocks.jpg",
+    "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
+    "tier": "uncommon",
+    "since": "2021-01"
+  },
+  {
+    "name": "Buy Trade Sell Cards",
+    "image": "avatar-btsc.png",
+    "link": "https://buytradesell.cards/",
+    "tier": "uncommon",
+    "since": "2022-02"
+  }
+]

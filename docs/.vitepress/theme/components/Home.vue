@@ -6,35 +6,21 @@ main.home
       .home-masthead-logo
         svg(
           alt="MTGJSON Logo"
-          xmlns="http://www.w3.org/2000/svg"
           fill="#1e90ff"
           version="1.0"
           viewBox="0 0 5000 3500"
-          preserveAspectRatio="xMidYMid meet"
-          style="zoom: 1"
         )
-          g
-            path(
-              d="M1950,3374 c-177,-47 -300,-179 -361,-384 c-20,-69 -22,-105 -29,-465 c-9,-431 -13,-464 -73,-532 c-40,-45 -94,-70 -174,-79 l-63,-7 l0,-212 l0,-212 l64,-5 c83,-7 150,-39 182,-88 c52,-78 56,-107 64,-530 c8,-435 10,-450 76,-588 c23,-47 55,-93 92,-130 c100,-101 208,-142 369,-142 l93,0 l0,189 l0,188 l-51,6 c-87,11 -147,66 -181,169 c-6,19 -14,183 -18,393 c-9,385 -16,445 -64,552 c-14,30 -39,72 -56,93 c-34,43 -110,95 -155,106 l-29,7 l37,13 c84,29 164,109 206,206 c47,109 54,176 61,548 c4,197 11,369 17,386 c32,95 73,131 168,147 l65,11 l0,188 l0,188 l-92,-1 c-51,0 -118,-7 -148,-15 z z m-1844.999634,-205.244141 z z"
-            )
-            path(
-              d="M2720,3202 l0,-188 l65,-11 c95,-16 136,-52 168,-147 c6,-17 13,-189 17,-386 c7,-372 14,-439 61,-548 c42,-97 122,-177 206,-206 l37,-13 l-29,-7 c-45,-11 -121,-63 -155,-106 c-17,-21 -42,-63 -56,-93 c-48,-107 -55,-167 -64,-552 c-4,-210 -12,-374 -18,-393 c-34,-103 -94,-158 -181,-169 l-51,-6 l0,-188 l0,-189 l93,0 c161,0 269,41 369,142 c37,37 69,83 92,130 c66,138 68,153 76,588 c8,423 12,452 64,530 c32,49 99,81 182,88 l64,5 l0,212 l0,212 l-62,7 c-81,9 -135,34 -175,79 c-60,68 -64,101 -73,532 c-7,360 -9,396 -29,465 c-34,115 -85,202 -156,269 c-100,93 -203,131 -357,131 l-88,0 l0,-188 z"
-            )
-            path(
-              d="M690,1690 l0,-1340 l285,0 l285,0 l0,165 l0,165 l-140,0 l-140,0 l0,1015 l0,1015 l140,0 l140,0 l0,160 l0,160 l-285,0 l-285,0 l0,-1340 z"
-            )
-            path(
-              d="M3650,2870 l0,-160 l140,0 l140,0 l0,-1015 l0,-1015 l-140,0 l-140,0 l0,-165 l0,-165 l285,0 l285,0 l0,1340 l0,1340 l-285,0 l-285,0 l0,-160 z"
-            )
-            path(
-              d="M321,2496 l-105,-71 l-107,-342 l-108,-342 l108,-395 c59,-218 110,-398 112,-400 c2,-2 49,-33 104,-70 l100,-66 l3,440 c1,242 1,637 0,879 l-3,439 l-104,-72 z"
-            )
-            path(
-              d="M4480,1689 l0,-881 l29,19 c187,120 181,115 196,168 c8,28 57,207 109,398 l95,348 l-108,342 l-107,342 l-107,73 l-107,73 l0,-882 z"
-            )
+          path(d="M1950,3374 c-177,-47 -300,-179 -361,-384 c-20,-69 -22,-105 -29,-465 c-9,-431 -13,-464 -73,-532 c-40,-45 -94,-70 -174,-79 l-63,-7 l0,-212 l0,-212 l64,-5 c83,-7 150,-39 182,-88 c52,-78 56,-107 64,-530 c8,-435 10,-450 76,-588 c23,-47 55,-93 92,-130 c100,-101 208,-142 369,-142 l93,0 l0,189 l0,188 l-51,6 c-87,11 -147,66 -181,169 c-6,19 -14,183 -18,393 c-9,385 -16,445 -64,552 c-14,30 -39,72 -56,93 c-34,43 -110,95 -155,106 l-29,7 l37,13 c84,29 164,109 206,206 c47,109 54,176 61,548 c4,197 11,369 17,386 c32,95 73,131 168,147 l65,11 l0,188 l0,188 l-92,-1 c-51,0 -118,-7 -148,-15 z z m-1844.999634,-205.244141 z z")
+          path(d="M2720,3202 l0,-188 l65,-11 c95,-16 136,-52 168,-147 c6,-17 13,-189 17,-386 c7,-372 14,-439 61,-548 c42,-97 122,-177 206,-206 l37,-13 l-29,-7 c-45,-11 -121,-63 -155,-106 c-17,-21 -42,-63 -56,-93 c-48,-107 -55,-167 -64,-552 c-4,-210 -12,-374 -18,-393 c-34,-103 -94,-158 -181,-169 l-51,-6 l0,-188 l0,-189 l93,0 c161,0 269,41 369,142 c37,37 69,83 92,130 c66,138 68,153 76,588 c8,423 12,452 64,530 c32,49 99,81 182,88 l64,5 l0,212 l0,212 l-62,7 c-81,9 -135,34 -175,79 c-60,68 -64,101 -73,532 c-7,360 -9,396 -29,465 c-34,115 -85,202 -156,269 c-100,93 -203,131 -357,131 l-88,0 l0,-188 z")
+          path(d="M690,1690 l0,-1340 l285,0 l285,0 l0,165 l0,165 l-140,0 l-140,0 l0,1015 l0,1015 l140,0 l140,0 l0,160 l0,160 l-285,0 l-285,0 l0,-1340 z")
+          path(d="M3650,2870 l0,-160 l140,0 l140,0 l0,-1015 l0,-1015 l-140,0 l-140,0 l0,-165 l0,-165 l285,0 l285,0 l0,1340 l0,1340 l-285,0 l-285,0 l0,-160 z")
+          path(d="M321,2496 l-105,-71 l-107,-342 l-108,-342 l108,-395 c59,-218 110,-398 112,-400 c2,-2 49,-33 104,-70 l100,-66 l3,440 c1,242 1,637 0,879 l-3,439 l-104,-72 z")
+          path(d="M4480,1689 l0,-881 l29,19 c187,120 181,115 196,168 c8,28 57,207 109,398 l95,348 l-108,342 l-107,342 l-107,73 l-107,73 l0,-882 z")
       h1 MTGJSON
+      span.version(v-if="version")
+        a(href="/changelogs/mtgjson-v5/" tabindex="0") v{{ version }}
       h2 Portable formats for all Magic: The Gathering data
-      p MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various downloadable formats.
+      p MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.
       a(href="/getting-started/")
         button.cta-btn Explore The Documentation
 
@@ -97,37 +83,40 @@ main.home
               path(d="M228.897 82.749c-12.328 63.32-54.53 85.221-108.429 85.221H93.024c-6.584 0-12.145 4.795-13.168 11.296L61.817 293.621c-.674 4.262 2.622 8.124 6.934 8.124h48.67a11.71 11.71 0 0 0 11.563-9.88l.474-2.48 9.173-58.136.591-3.213a11.71 11.71 0 0 1 11.562-9.88h7.284c47.147 0 84.064-19.154 94.852-74.55 4.503-23.15 2.173-42.478-9.739-56.054-3.613-4.112-8.1-7.508-13.327-10.28-.283 1.79-.59 3.604-.957 5.477z" fill="#2790C3")
               path(d="M216.952 72.128a89.928 89.928 0 0 0-5.818-1.49 109.904 109.904 0 0 0-6.177-1.174c-7.408-1.199-15.5-1.765-24.19-1.765h-73.309a11.57 11.57 0 0 0-5.053 1.149 11.683 11.683 0 0 0-6.51 8.74l-15.582 98.798-.45 2.88c1.025-6.501 6.585-11.296 13.17-11.296h27.444c53.898 0 96.1-21.892 108.428-85.221.367-1.873.675-3.688.958-5.477-3.122-1.648-6.501-3.072-10.14-4.279a83.26 83.26 0 0 0-2.77-.865" fill="#1F264F")
             h3 PayPal
-            p Donate to MTGJSON and help keep this project available to everyone for free.
+            p Donate to MTGJSON and help keep this project available for free to everyone.
         li
           a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
             svg(alt="GitHub logo" viewBox="0 0 1024 1024" xmlns="http://www.w3.org/2000/svg")
               path(fill="#ababab" d="M8 0C3.58 0 0 3.58 0 8C0 11.54 2.29 14.53 5.47 15.59C5.87 15.66 6.02 15.42 6.02 15.21C6.02 15.02 6.01 14.39 6.01 13.72C4 14.09 3.48 13.23 3.32 12.78C3.23 12.55 2.84 11.84 2.5 11.65C2.22 11.5 1.82 11.13 2.49 11.12C3.12 11.11 3.57 11.7 3.72 11.94C4.44 13.15 5.59 12.81 6.05 12.6C6.12 12.08 6.33 11.73 6.56 11.53C4.78 11.33 2.92 10.64 2.92 7.58C2.92 6.71 3.23 5.99 3.74 5.43C3.66 5.23 3.38 4.41 3.82 3.31C3.82 3.31 4.49 3.1 6.02 4.13C6.66 3.95 7.34 3.86 8.02 3.86C8.7 3.86 9.38 3.95 10.02 4.13C11.55 3.09 12.22 3.31 12.22 3.31C12.66 4.41 12.38 5.23 12.3 5.43C12.81 5.99 13.12 6.7 13.12 7.58C13.12 10.65 11.25 11.33 9.47 11.53C9.76 11.78 10.01 12.26 10.01 13.01C10.01 14.08 10 14.94 10 15.21C10 15.42 10.15 15.67 10.55 15.59C13.71 14.53 16 11.53 16 8C16 3.58 12.42 0 8 0Z" transform="scale(64)")
             h3 GitHub
-            p Contribute to MTGJSON and get your profile on our homepage.
+            p Contribute to MTGJSON, help the community, and get your profile on our homepage.
 
-  section.home-team
+  section.dark.home-team
     .text-wrapper
       h2 Team Leads
       ul.home-team-leads
         li
           div.home-team-leads-member
-            img.lazy(data-src="/images/avatars/avatar-zach.jpg" title="Zach's avatar" alt="Zach's avatar")
+            img.lazy(data-src="/images/avatars/avatar-zach.jpg" title="Zachery Halpern's avatar" alt="Zach's avatar")
             div
-              h4 Zach
+              a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
+                h4 Zachery Halpern
               span Developer &amp; Maintainer
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member
-            img.lazy(data-src="/images/avatars/avatar-milo.jpg" title="Milo's avatar" alt="Milo's avatar")
+            img.lazy(data-src="/images/avatars/avatar-milo.jpg" title="Milo Rue's avatar" alt="Milo's avatar")
             div
-              h4 Milo
+              a(href="https://github.com/milorue" target="_blank" rel="noreferrer noopener")
+                h4 Milo Rue
               span GraphQL Developer
               p Milo is a TypeScript and React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports.
         li
           div.home-team-leads-member
-            img.lazy(data-src="/images/avatars/avatar-eric.jpg" title="Eric's avatar" alt="Eric's avatar")
+            img.lazy(data-src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos' avatar" alt="Eric's avatar")
             div
-              h4 Eric
+              a(href="https://github.com/staghouse" target="_blank" rel="noreferrer noopener")
+                h4 Eric Lakatos
               span Documentation Maintainer
               p Eric is a conceptualizer that loves deer, cheesy sci-fi movies and delving in to any code he can find. He is an avid supporter of open-source software and the Magic: The Gathering developer community.
 
@@ -141,9 +130,9 @@ main.home
               :title="`${contributor.username}'s avatar`"
           )
 
-  section.home-patrons
-    h2 Patreon Supporters
+  section.dark.home-patrons
     .text-wrapper
+      h2 Patreon Supporters
       ul
         li(
           v-for="(patron, key) in patrons",
@@ -165,13 +154,14 @@ main.home
             rel="noopener noreferrer",
             target="_blank",
           )
-          p.name.unlinked-name(v-else, v-html="patron.name", tabindex="0")
+          p.name.unlinked-name(v-else, v-html="patron.name")
           p.tier {{ patron.tier }} Supporter
           p.tier-time(
             v-if="patron.since",
             v-html="formatTime(patron.since)"
           )
-  section.home-applications
+
+  section.dark.home-applications
     .text-wrapper
       h2 MTGJSON Powered Applications
       ul
@@ -191,7 +181,7 @@ main.home
             rel="noopener noreferrer",
             target="_blank",
           )
-          p.name.unlinked-name(v-else, v-html="application.name", tabindex="0")
+          p.name.unlinked-name(v-else, v-html="application.name")
 
   section.home-footer
     .content-wrapper
@@ -203,12 +193,17 @@ main.home
 </template>
 
 <script setup lang="ts">
-import { onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import contributors from '../static/contributors.json';
-import { patrons, applications } from '../static/supporters.json';
+import patrons from '../static/patrons.json';
+import applications from '../static/applications.json';
 import { formatTime } from '../helpers';
+import { useStore } from '../store.js';
 
-onMounted((): void => {
+const store = useStore();
+const version = computed(() => store.Meta.version);
+
+onMounted(async (): Promise<void> => {
   const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));
 
   if ('IntersectionObserver' in window) {
@@ -217,6 +212,7 @@ onMounted((): void => {
         if (entry.isIntersecting) {
           let lazyImage: HTMLImageElement = entry.target as HTMLImageElement;
           lazyImage.src = lazyImage.dataset.src;
+          delete lazyImage.dataset.src;
           lazyImage.classList.remove('lazy');
           lazyImageObserver.unobserve(lazyImage);
         }
@@ -230,9 +226,14 @@ onMounted((): void => {
     // Boo, no observer
     lazyImages.forEach((lazyImage: HTMLImageElement): void => {
       lazyImage.src = lazyImage.dataset.src;
+      delete lazyImage.dataset.src;
       lazyImage.classList.remove('lazy');
       lazyImage.classList.add('not-lazy');
     });
+  }
+
+  if (Object.keys(store.Meta).length === 0) {
+    await store.fetchFromApi('Meta');
   }
 });
 </script>
@@ -262,14 +263,24 @@ onMounted((): void => {
       background-color: var(--light-color);
       color: var(--dark-color);
 
+      h2 {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--gray-2-color);
+      }
+
       a {
         color: var(--true-accent-2-color);
       }
     }
 
     &.dark {
-      background-color: var(--dark-color);
+      background-color: var(--dark-2-color);
       color: var(--light-color);
+
+      h2 {
+        padding-bottom: 1rem;
+        border-bottom: 1px solid var(--dark-1-color);
+      }
 
       a {
         color: var(--true-accent-1-color);
@@ -289,7 +300,20 @@ onMounted((): void => {
   }
 
   h1 {
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
+
+    & + span.version {
+      color: var(--gray-3-color) !important;
+      font-weight: bold;
+      font-size: 1rem;
+      margin-bottom: 2rem;
+      display: block;
+
+      a {
+        color: inherit;
+        text-decoration: none;
+      }
+    }
   }
 
   h2 {
@@ -408,10 +432,16 @@ onMounted((): void => {
         }
 
         div {
-          h4 {
-            margin-bottom: 0.5rem;
-            text-align: left;
-            font-weight: bold;
+          text-align: left;
+
+          a {
+            display: inline-block;
+
+            h4 {
+              margin-bottom: 0.5rem;
+              text-align: left;
+              font-weight: bold;
+            }
           }
 
           span {
@@ -482,7 +512,7 @@ onMounted((): void => {
 
           svg {
             width: 100%;
-            max-height: 80px;
+            max-height: 50px;
             height: auto;
             margin-bottom: 1rem;
           }
@@ -502,14 +532,12 @@ onMounted((): void => {
     }
   }
 
-  &-patrons,
-  &-applications {
+  &-patrons {
     background-color: var(--dark-2-color);
 
     ul {
       display: grid;
       grid-template-columns: repeat(3, minmax(0, 1fr));
-      grid-template-rows: auto;
       justify-items: center;
       grid-gap: 2rem;
 
@@ -620,6 +648,53 @@ onMounted((): void => {
 
           &-time {
             margin-bottom: 0;
+          }
+        }
+      }
+    }
+  }
+
+  &-applications {
+    background-color: var(--dark-2-color);
+
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-gap: 1rem;
+
+      li {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        text-align: center;
+        position: relative;
+
+        .img-wrap {
+          background-color: var(--light-color);
+          border-radius: 50%;
+          height: 60px;
+          display: flex;
+          align-items: center;
+          justify-content: center;
+          margin-right: 1rem;
+
+          img {
+            padding: 0.75rem;
+            width: 60px;
+            max-height: 60px;
+            height: auto;
+          }
+
+          &.no-image {
+            text-align: center;
+
+            p {
+              width: 60px;
+              padding: 0 0.75rem;
+              font-size: 2rem;
+              font-weight: bold;
+              color: var(--dark-color);
+            }
           }
         }
       }
