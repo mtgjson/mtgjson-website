@@ -29,7 +29,7 @@ onMounted((): void => {
 .back-to-top {
   cursor: pointer;
   position: fixed;
-  bottom: 2rem;
+  bottom: 3rem;
   right: 1rem;
   width: 2rem;
   z-index: 1;

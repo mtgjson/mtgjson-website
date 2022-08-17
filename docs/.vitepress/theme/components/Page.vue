@@ -1,6 +1,7 @@
 <template lang="pug">
 main.page
-  Content.page-content
+  section.page-content
+    Content
 
   BackToTop
 
@@ -90,7 +91,6 @@ const flattern = (items: TSidebarItem[], res: TSidebarItem[]) => {
   &-content {
     @extend %wrapper;
     padding: 0 2rem;
-    height: 100%;
 
     & > *:first-child {
       margin-top: 0;
