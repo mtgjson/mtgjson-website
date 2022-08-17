@@ -26,6 +26,7 @@ import BackToTop from './BackToTop.vue';
 import type { TSidebarItem, TEditLink } from '../types';
 
 const { theme, page } = useData();
+
 const sidebarItems: TSidebarItem[] = theme.value.sidebar;
 
 const editLink = computed<TEditLink>((): TEditLink => {
@@ -37,7 +38,6 @@ const editLink = computed<TEditLink>((): TEditLink => {
     text,
   };
 });
-
 const prev = computed<TSidebarItem>((): TSidebarItem => resolvePrev(page, sidebarItems));
 const next = computed<TSidebarItem>((): TSidebarItem => resolveNext(page, sidebarItems));
 

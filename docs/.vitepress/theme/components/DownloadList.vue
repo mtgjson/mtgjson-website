@@ -76,6 +76,7 @@ const store = useStore();
 const props = defineProps<Props>();
 
 const lazyOffset: number = 10;
+
 const canLoadMore = ref<boolean>(true);
 const canLoadAll = ref<boolean>(true);
 const resultsLength = ref<number>(0);

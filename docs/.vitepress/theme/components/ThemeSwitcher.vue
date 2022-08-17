@@ -13,9 +13,9 @@ const store = useStore();
 const darkTheme: string = 'dark';
 const lightTheme: string = 'light';
 
-const checked = ref<boolean>(false);
 const hasStorageCapabilities = ref<boolean>(false);
 const activeTheme = ref<string>(darkTheme);
+const checked = ref<boolean>(false);
 
 onMounted((): void => {
   switchTheme(null, true);

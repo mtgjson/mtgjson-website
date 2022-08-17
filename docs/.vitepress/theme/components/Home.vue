@@ -185,8 +185,8 @@ import { formatTime } from '../helpers';
 import { useStore } from '../store.js';
 
 const store = useStore();
-const version = computed<string>((): string => store.Meta.version);
 const pageLoaded = ref<boolean>(false);
+const version = computed<string>((): string => store.Meta.version);
 
 onMounted(async (): Promise<void> => {
   const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));

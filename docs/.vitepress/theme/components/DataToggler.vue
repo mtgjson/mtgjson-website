@@ -10,16 +10,18 @@ label.data-toggler(:class="class")
 </template>
 
 <script setup lang="ts">
+import type { HTMLChangeEvent } from '../types';
+
 type Props = {
   class?: string;
   label?: string;
   checked?: boolean;
-  callback?: (event: any) => {};
+  callback?: (event: HTMLChangeEvent) => {};
 };
 
 const props = defineProps<Props>();
 
-const onChange = (event: any): void => {
+const onChange = (event: HTMLChangeEvent): void => {
   props.callback(event.target.checked);
 };
 </script>

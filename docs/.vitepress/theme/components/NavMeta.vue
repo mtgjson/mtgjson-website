@@ -22,10 +22,11 @@ type Props = {
   hideText?: boolean;
 };
 
-const store = useStore();
-const version = computed(() => store.Meta.version);
-
 const props = defineProps<Props>();
+
+const store = useStore();
+
+const version = computed(() => store.Meta.version);
 
 onMounted(async (): Promise<void> => {
   if (Object.keys(store.Meta).length === 0 && !props.hideText) {

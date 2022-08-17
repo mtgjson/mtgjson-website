@@ -14,6 +14,7 @@ type Props = {
 };
 
 const props = defineProps<Props>();
+
 const route: Route = useRoute();
 
 const selfActive = computed<boolean>((): boolean => isActive(route, props.item.link));

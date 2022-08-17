@@ -7,6 +7,7 @@
 import { computed, ref, onMounted } from 'vue';
 
 const scrollTop = ref<number>(0);
+
 const show = computed<boolean>(() => scrollTop.value > 300);
 
 const getScrollTop = (): number =>

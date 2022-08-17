@@ -17,6 +17,7 @@ export default {
   title,
   description,
   appearance: false,
+  cleanUrls: 'with-subfolders',
   // Head Tags
   head: [
     ['meta', { charset: 'utf-8' }],
@@ -47,8 +48,6 @@ export default {
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'msapplication-TileImage', href: '/mstile-150x150.png' }],
-    // Preloads
-    ['link', { rel: 'preload', href: '/images/assets/bg-masthead.gif', as: 'image' }],
   ],
   markdown: {
     toc: {

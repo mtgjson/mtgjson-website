@@ -9,6 +9,7 @@ import { useData } from 'vitepress';
 import NavLink from './NavLink.vue';
 
 const { theme } = useData();
+
 const userLinks = theme.value.nav;
 </script>
 

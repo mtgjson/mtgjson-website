@@ -26,9 +26,10 @@ type Props = {
   item: object;
 };
 
+defineProps<Props>();
+
 const route: Route = useRoute();
 
-defineProps<Props>();
 </script>
 
 <style lang="scss">

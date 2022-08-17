@@ -16,12 +16,15 @@ type Props = {
   type: string;
 };
 
+const props = defineProps<Props>();
+
 const minimumToShow = 5;
 
 const { frontmatter } = useData();
 const store = useStore();
-const props = defineProps<Props>();
+
 const showAll = ref<boolean>(false);
+
 const allEnums = computed<object>((): object => store.EnumValues);
 const thisEnum = computed<object>((): object => allEnums.value[frontmatter.value.enum]);
 const enums = computed<string[]>((): string[] => {
