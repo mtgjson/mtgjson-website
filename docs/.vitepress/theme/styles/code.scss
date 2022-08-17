@@ -27,6 +27,11 @@ div[class*="language-"] {
   position: relative;
   background-color: var(--bg-darker-color);
 
+  button.copy,
+  span.lang {
+    display: none;
+  }
+
   &::before {
     position: absolute;
     z-index: 3;

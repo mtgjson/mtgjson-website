@@ -1,6 +1,6 @@
 <template lang="pug">
 .theme-container(:class="pageClasses")
-  .page(v-if="!isHome")
+  .doc(v-if="!isHome")
     Navbar(@toggle-sidebar="toggleSidebar")
 
     Sidebar(:items="sidebarItems", @toggle-sidebar="toggleSidebar")
@@ -11,7 +11,7 @@
     Home
 </template>
 
-<script setup lang='ts'>
+<script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useStore } from '../store.js';
@@ -30,7 +30,7 @@ const sidebarItems: TSidebarItem[] = theme.value.sidebar;
 const pageClasses = computed((): object[] => {
   return [
     {
-      'sidebar-open': isSidebarOpen.value
+      'sidebar-open': isSidebarOpen.value,
     },
   ];
 });

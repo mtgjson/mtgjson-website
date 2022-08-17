@@ -63,7 +63,7 @@ const userLinks = theme.value.nav;
 
     &:nth-of-type(2) {
       &::before {
-        background-image: url('/images/icon-twt.svg');
+        background-image: url('/images/icon-twitter.svg');
       }
     }
 

@@ -65,7 +65,7 @@
           &::before {
             right: 3px;
             left: auto;
-            background-image: url('/images/icon-dark-theme.svg');
+            background-image: url('/images/icon-theme-toggle-dark.svg');
           }
         }
 
@@ -73,7 +73,7 @@
           &::before {
             left: 3px;
             right: auto;
-            background-image: url('/images/icon-light-theme.svg');
+            background-image: url('/images/icon-theme-toggle-light.svg');
           }
         }
       }

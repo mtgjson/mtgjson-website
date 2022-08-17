@@ -40,8 +40,8 @@ export default {
     ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
-    ['link', { rel: 'icon', href: '/favicon-16x16.ico', sizes: '16x16', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/favicon-32x32.ico', sizes: '32x32', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' }],
     ['link', { rel: 'icon', href: '/android-chrome-384x384.png', sizes: '384x384', type: 'image/png' }],
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],

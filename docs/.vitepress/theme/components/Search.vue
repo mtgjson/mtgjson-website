@@ -11,6 +11,7 @@
       placeholder="Search..."
       type="search"
       @input="openSearch()"
+      @blur="cleanSearch()"
       :class="{ open: results.length > 0 }"
     )
     .search-suggestions(:class="{ open: results.length > 0 }")
