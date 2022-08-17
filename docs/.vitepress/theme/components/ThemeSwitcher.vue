@@ -1,12 +1,11 @@
 <template lang="pug">
 .theme-switcher
-  .vue-toggler-plugin.theme-toggle
-    Toggle(v-model="toggleValue" @change="switchTheme")
+  DataToggler(:callback="switchTheme" :class="'theme-toggler'" :checked="checked")
 </template>
 
 <script setup lang="ts">
-import { onMounted, ref } from 'vue';
-import Toggle from '@vueform/toggle';
+import { ref, onMounted } from 'vue';
+import DataToggler from './DataToggler.vue';
 import { useStore } from '../store.js';
 
 const store = useStore();
@@ -14,34 +13,43 @@ const store = useStore();
 const darkTheme: string = 'dark';
 const lightTheme: string = 'light';
 
-const toggleValue = ref<boolean>(false);
+const checked = ref<boolean>(false);
 const hasStorageCapabilities = ref<boolean>(false);
 const activeTheme = ref<string>(darkTheme);
 
 onMounted((): void => {
+  switchTheme(null, true);
+});
+
+const switchTheme = (value?: boolean, onLoad?: boolean): void => {
   let savedTheme: string | undefined = undefined;
+  let newTheme: string | undefined = undefined;
 
   hasStorageCapabilities.value = !!(window.localStorage && window.localStorage.setItem);
 
-  // Attempt to retrieve localStorage state
-  if (hasStorageCapabilities.value) {
-    const savedTheme: string = window.localStorage.getItem('theme');
+  // Value retrieved from storage
+  if (hasStorageCapabilities.value && onLoad === true) {
+    savedTheme = window.localStorage.getItem('theme');
 
-    if (savedTheme) {
-      toggleValue.value = savedTheme === lightTheme;
+    if (savedTheme === lightTheme) {
+      newTheme = lightTheme;
+      checked.value = true;
+    } else {
+      newTheme = darkTheme;
+    }
+  } else {
+    // Value passed from toggling
+    if (value === true) {
+      newTheme = lightTheme;
+    } else if (value === false) {
+      newTheme = darkTheme;
     }
   }
 
-  activeTheme.value = savedTheme || activeTheme.value;
-
-  switchTheme();
-});
-
-const switchTheme = (): void => {
-  const newTheme: string = toggleValue.value === true ? 'light' : 'dark';
   // Set state on body
-  document.body.classList.remove(activeTheme.value);
+  document.body.classList.remove(lightTheme, darkTheme);
   document.body.classList.add(newTheme);
+
   // Store state in localStorage
   if (hasStorageCapabilities.value) {
     window.localStorage.setItem('theme', newTheme);
@@ -51,3 +59,10 @@ const switchTheme = (): void => {
   activeTheme.value = newTheme;
 };
 </script>
+
+<style lang="scss" scoped>
+.theme-switcher {
+  display: flex;
+  justify-content: flex-end;
+}
+</style>

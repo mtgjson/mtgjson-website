@@ -1,13 +1,15 @@
 <template lang="pug">
 main.home
   //- Content.content-wrapper
-  section.home-masthead
+  section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
-        NavMeta(:hideText="true", :width="`250px`")
+        NavMeta(:hideText="true", :width="`250px`", :height="`173px`")
       h1 MTGJSON
       span.version(v-if="version")
         a(href="/changelogs/mtgjson-v5/") v{{ version }}
+      span.version(v-else)
+        a(href="/changelogs/mtgjson-v5/") &nbsp;
       h2 Portable formats for all Magic: The Gathering data
       p MTGJSON is an open-source project that catalogs all <a href="https://magic.wizards.com/en" target="_blank" rel="noreferrer noopener">Magic: The Gathering</a> data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.
       a(href="/getting-started/")
@@ -45,7 +47,7 @@ main.home
           p While you can use the File Server to locate downloads we provide a simple <a href="/downloads/all-files/">User&nbsp;Interface</a> to get the files you need.
 
       a(href="/getting-started/")
-        button.cta-btn.light Explore The Documentation
+        button.cta-btn.light Get Started Now
 
   section.light.home-contributing
     .content-wrapper
@@ -53,22 +55,22 @@ main.home
       ul
         li
           a(href="https://mtgjson.com/discord/" target="_blank")
-            img(alt="Discord logo" src="/images/icon-discord.svg")
+            img(alt="Discord logo" src="/images/icons/icon-discord.svg")
             h3 Discord
             p Discuss MTGJSON, get updates, report issues and more.
         li
           a(href="https://www.patreon.com/MTGJSON" target="_blank" rel="noreferrer noopener")
-            img(alt="Patreon logo" src="/images/icon-patreon.svg")
+            img(alt="Patreon logo" src="/images/icons/icon-patreon.svg")
             h3 Patreon
             p Pledge to our Patreon and get access to MTGGraphQL and site recognition.
         li
           a(href="https://www.paypal.me/Zachhalpern" target="_blank" rel="noreferrer noopener")
-            img(alt="Paypal logo" src="/images/icon-paypal.svg")
+            img(alt="Paypal logo" src="/images/icons/icon-paypal.svg")
             h3 PayPal
             p Donate to MTGJSON and help keep this project available for free to everyone.
         li
           a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
-            img(alt="Github logo" src="/images/icon-github.svg")
+            img(alt="Github logo" src="/images/icons/icon-github.svg")
             h3 GitHub
             p Contribute to MTGJSON, help the community, and get your profile on our homepage.
 
@@ -78,7 +80,7 @@ main.home
       ul.home-team-leads
         li
           div.home-team-leads-member
-            img.lazy(data-src="/images/avatars/avatar-zach.jpg" title="Zachery Halpern's avatar" alt="Zach's avatar")
+            img(src="/images/avatars/avatar-zach.jpg" title="Zachery Halpern's avatar" alt="Zach's avatar")
             div
               a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
                 h4 Zachary Halpern
@@ -86,7 +88,7 @@ main.home
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member
-            img.lazy(data-src="/images/avatars/avatar-milo.jpg" title="Milo Rue's avatar" alt="Milo's avatar")
+            img(src="/images/avatars/avatar-milo.jpg" title="Milo Rue's avatar" alt="Milo's avatar")
             div
               a(href="https://github.com/milorue" target="_blank" rel="noreferrer noopener")
                 h4 Milo Rue
@@ -94,7 +96,7 @@ main.home
               p Milo is a TypeScript and React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports.
         li
           div.home-team-leads-member
-            img.lazy(data-src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos' avatar" alt="Eric's avatar")
+            img(src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos' avatar" alt="Eric's avatar")
             div
               a(href="https://github.com/staghouse" target="_blank" rel="noreferrer noopener")
                 h4 Eric Lakatos
@@ -174,7 +176,7 @@ main.home
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
+import { ref, computed, onMounted } from 'vue';
 import NavMeta from './NavMeta.vue';
 import contributors from '../static/contributors.json';
 import patrons from '../static/patrons.json';
@@ -183,7 +185,8 @@ import { formatTime } from '../helpers';
 import { useStore } from '../store.js';
 
 const store = useStore();
-const version = computed(() => store.Meta.version);
+const version = computed<string>((): string => store.Meta.version);
+const pageLoaded = ref<boolean>(false);
 
 onMounted(async (): Promise<void> => {
   const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));
@@ -217,6 +220,8 @@ onMounted(async (): Promise<void> => {
   if (Object.keys(store.Meta).length === 0) {
     await store.fetchFromApi('Meta');
   }
+
+  pageLoaded.value = true;
 });
 </script>
 
@@ -329,9 +334,37 @@ onMounted(async (): Promise<void> => {
   }
 
   &-masthead {
+    position: relative;
+    z-index: 1;
     background-color: var(--dark-2-color);
     color: var(--light-color);
     text-align: center;
+
+    &::before {
+      content: '';
+      position: absolute;
+      width: 100%;
+      max-width: 1024px;
+      height: 100%;
+      left: 0;
+      right: 0;
+      top: 0;
+      bottom: 0;
+      margin: 0 auto;
+      background-image: url('/images/assets/bg-masthead.gif');
+      background-size: 100%;
+      background-position: center top;
+      opacity: 0;
+      background-repeat: no-repeat;
+      z-index: -1;
+    }
+
+    &.loaded {
+      &::before {
+        transition: all 1s;
+        opacity: 0.10;
+      }
+    }
 
     &-logo {
       margin-bottom: 1rem;
@@ -760,7 +793,8 @@ onMounted(async (): Promise<void> => {
           }
 
           div {
-            &, span {
+            &,
+            span {
               text-align: center;
             }
           }

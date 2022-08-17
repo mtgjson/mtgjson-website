@@ -1,19 +1,7 @@
 <template lang="pug">
 .sorting-options
-  div.vue-toggler-plugin.list-toggle
-    Toggle(v-model="toggleValue" @change="onToggleChange")
-    p Show Options
+  DataToggler(:callback="onToggleChange" :label="'Show Options'")
   fieldset.sort-rows(v-if="toggleValue")
-    .sort-row.checkbox(v-if="disableChecks !== 'true'")
-      .vue-toggler-plugin.list-toggle
-        Toggle(@change="onHandleChange" v-model="spoilerValue")
-        p Include Previews
-
-    .sort-row.checkbox(v-if="disableChecks !== 'true'")
-      .vue-toggler-plugin.list-toggle
-        Toggle(@change="onHandleChange" v-model="onlineValue")
-        p Include Online Only
-
     .sort-row.search
       label(for="search-input") Search:
       input.table-sort-select(
@@ -48,6 +36,14 @@
         option(value="type") Type (Ascending)
         option(value="type:true") Type (Descending)
 
+    .sort-row.checkbox(v-if="disableChecks !== 'true'")
+      input(id="preview-toggle" type="checkbox" @change="onHandleChange" v-model="spoilerValue")
+      label(for="preview-toggle") Include Previews
+
+    .sort-row.checkbox(v-if="disableChecks !== 'true'")
+      input(id="online-toggle" type="checkbox" @change="onHandleChange" v-model="onlineValue")
+      label(for="online-toggle") Include Online Only
+
     .sort-row.reset
       small
         a(@click="onHandleReset") Reset Toggles
@@ -55,7 +51,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import Toggle from '@vueform/toggle';
+import DataToggler from './DataToggler.vue';
 import { search, filter, sort, prettifyType } from '../helpers';
 import type { TList } from '../types';
 
@@ -81,7 +77,7 @@ const sortKey = ref<string>('releaseDate:true');
 const timeout = ref<any>(null);
 
 onMounted((): void => {
-  onHandleChange(0);
+  onHandleChange();
 });
 
 const emitNewData = (data: TList[], counts: number[]): void => {
@@ -96,7 +92,7 @@ const emitShowMoreButtonView = (showButton: boolean): void => {
 const onLoadMore = (): void => {
   lazyOffset.value = lazyOffset.value + lazyToLoad.value;
 
-  onHandleChange(0);
+  onHandleChange();
 };
 
 const onHandleReset = (): void => {
@@ -114,11 +110,11 @@ const onHandleReset = (): void => {
   emitNewData(dynamicData, [newListCount, data.length]);
 };
 
-const onToggleChange = (): void => {
-  toggleValue.value = !!toggleValue.value;
+const onToggleChange = (value: boolean): void => {
+  toggleValue.value = value;
 }
 
-const onHandleChange = (speed?: number): void => {
+const onHandleChange = (value?: boolean): void => {
   // Throttle so we don't go nuts
   clearTimeout(timeout.value);
 
@@ -145,7 +141,7 @@ const onHandleChange = (speed?: number): void => {
       loadMoreEl && loadMoreEl.classList.remove('hide');
       emitShowMoreButtonView(true);
     }
-  }, speed || 300);
+  }, 300);
 };
 
 defineExpose({
@@ -208,6 +204,16 @@ defineExpose({
 
         &::placeholder {
           color: var(--dark-color);
+        }
+
+        &[type="checkbox"] {
+          margin: 0 0.5rem 0 0;
+
+          & + label {
+            margin-bottom: 0;
+            font-weight: bold;
+            font-size: 0.75rem;
+          }
         }
       }
 

@@ -19,7 +19,7 @@ head:
 
 By using this website and its content you agree to the following MIT License:
 
-<img class="img-license" src="/images/assets/mit-license.jpg" alt="Logo for MIT License" title="MIT License" />
+<img class="img-license" src="/images/assets/license.jpg" alt="MIT License logo" title="MIT License" />
 
 Copyright &copy; 2018 &ndash; Present, Zachary Halpern, Eric Lakatos
 

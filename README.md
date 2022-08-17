@@ -2,7 +2,7 @@
 
 # MTGJSON Documentation Application
 
-<img src="./docs/public/images/assets/logo-mtgjson.svg" height="100px">
+<img src="./docs/public/logo-mtgjson.svg" height="100px">
 <br />
 <br />
 

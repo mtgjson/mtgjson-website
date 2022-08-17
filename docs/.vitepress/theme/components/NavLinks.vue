@@ -57,25 +57,25 @@ const userLinks = theme.value.nav;
 
     &:nth-of-type(1) {
       &::before {
-        background-image: url('/images/icon-discord.svg');
+        background-image: url('/images/icons/icon-discord.svg');
       }
     }
 
     &:nth-of-type(2) {
       &::before {
-        background-image: url('/images/icon-twitter.svg');
+        background-image: url('/images/icons/icon-twitter.svg');
       }
     }
 
     &:nth-of-type(3) {
       &::before {
-        background-image: url('/images/icon-patreon.svg');
+        background-image: url('/images/icons/icon-patreon.svg');
       }
     }
 
     &:nth-of-type(4) {
       &::before {
-        background-image: url('/images/icon-github.svg');
+        background-image: url('/images/icons/icon-github.svg');
       }
     }
   }

@@ -14,7 +14,7 @@ const convertIncompatibleTypes = (value) => {
 
 // Convert page title to become a type name
 const convertPageNameToNamedType = (name) => {
-  return name.replace(/[\s()]/g, '');
+  return name?.replace(/[\s()]/g, '');
 }
 
 // JSON TypeScript types for documentation
@@ -24,7 +24,7 @@ const awaitJSONTypes = async () => new Promise(async (resolve, reject) => {
   for(let page of pages) {
     const propName = convertPageNameToNamedType(page.title);
 
-    if (page.model && page.model.length > 0) {
+    if (propName && page.model && page.model.length > 0) {
       let propValues = '';
       let isFirst = true;
 
@@ -61,8 +61,9 @@ const generateTrueTypes = () => {
   let props = '';
 
   pages.forEach(async (page) => {
-    if (page.model && page.model.length > 0) {
-      const propName = convertPageNameToNamedType(page.title);
+    const propName = convertPageNameToNamedType(page.title);
+
+    if (propName && page.model && page.model.length > 0) {
       let propValues = '';
       let propString = '';
 

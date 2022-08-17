@@ -1,14 +1,12 @@
 <template lang="pug">
 #property-toggler.property-toggler(v-if="hasOptionals")
-  .vue-toggler-plugin
-    Toggle(v-model="toggleValue" @change="toggleOptionals")
-    p Hide optional properties
-      span (Showing {{ count }})
+  DataToggler(:callback="toggleOptionals" :label="'Hide Optional Properties'")
+  span (Showing {{ count }})
 </template>
 
 <script setup lang="ts">
 import { onMounted, computed, ref } from 'vue';
-import Toggle from '@vueform/toggle';
+import DataToggler from './DataToggler.vue';
 import $ from 'jquery';
 
 const hiddenTOCProperties = ref<string[]>([]);
@@ -28,9 +26,6 @@ const hiddenCount = computed<number>((): number => {
 });
 
 onMounted((): void => {
-  const location: URL = new URL(window.location.href);
-  const params: string[][] = Array.from(location.searchParams.entries());
-
   allTOCAnchors.value = Array.from($('.table-of-contents li a'));
   propertyBlocks.value = Array.from($('#model-properties ~ blockquote:has(i.optional)'));
 
@@ -43,51 +38,16 @@ onMounted((): void => {
 
     hiddenTOCProperties.value.push(propertyName);
   }
-
-  params.forEach((param: string[]): void => {
-    const p: string = param[0];
-    const v: string = param[1];
-
-    if (p === 'optionals' && v === 'false') {
-      toggleValue.value = true;
-      toggleOptionals();
-    }
-  });
-
-  // toggleTOCVariations();
 });
 
-// const toggleTOCVariations = (): void => {
-//   const tocAnchorsMap: object = {};
-//   const optionalTag: string = 'i.optional';
-//   const propertyBlocks: HTMLElement[] = Array.from($(`#property-toggler ~ blockquote:has(${optionalTag})`));
-
-//   // Map all TOC anchor links by its inner text
-//   for (const element of allTOCAnchors.value) {
-//     tocAnchorsMap[element.innerText] = element;
-//   }
-
-//   // Set all TOC anchor link tags with tag properties
-//   propertyBlocks.forEach((propertyBlock: HTMLElement): void => {
-//     const blockPropertyName: string = propertyBlock.firstChild.textContent.split('#')[0].trim();
-//     const tocPropertyElement: HTMLElement = tocAnchorsMap[blockPropertyName];
-
-//     if (tocPropertyElement) {
-//       const tocElement: HTMLElement = $(propertyBlock).find(optionalTag)[0];
-//       const tag: string = Array.from(tocElement.classList)[0];
-
-//       if (tocPropertyElement.classList.length < 1) {
-//         tocPropertyElement.classList.toggle('tag');
-//         tocPropertyElement.classList.toggle(tag);
-//       }
-//     }
-//   });
-// };
-
 const toggleOptionals = (): void => {
-  toggleBlockOptionals(toggleValue.value);
-  toggleTOCOptionals(toggleValue.value);
-  toggleHeadingsContent(toggleValue.value);
+  const showOptionals = !toggleValue.value;
+
+  toggleValue.value = showOptionals;
+
+  toggleBlockOptionals(showOptionals);
+  toggleTOCOptionals(showOptionals);
+  toggleHeadingsContent(showOptionals);
 };
 
 const toggleHeadingsContent = (doHide: boolean): void => {
@@ -123,12 +83,16 @@ const toggleTOCOptionals = (doHide: boolean): void => {
 
 <style lang="scss" scoped>
 .property-toggler {
-  p {
-    span {
-      color: var(--gray-color);
-      margin-left: 0.5rem;
-    }
+  display: inline-flex;
+  align-content: center;
+  margin-bottom: 1rem;
+
+  span {
+    margin-left: 0.5rem;
+    display: inline-flex;
+    align-items: center;
   }
+
   &.none {
     position: relative;
     margin-bottom: 1rem;

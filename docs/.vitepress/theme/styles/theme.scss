@@ -9,7 +9,6 @@
 @import './code';
 @import './blockquote';
 @import './pages';
-@import './plugins';
 
 html, body {
   min-width: 320px;
@@ -174,15 +173,15 @@ img {
     background-repeat: no-repeat;
 
     &.paypal {
-      background-image: url('/images/icon-paypal.svg');
+      background-image: url('/images/icons/icon-paypal.svg');
     }
 
     &.patreon {
-      background-image: url('/images/icon-patreon.svg');
+      background-image: url('/images/icons/icon-patreon.svg');
     }
 
     &.github {
-      background-image: url('/images/icon-github.svg');
+      background-image: url('/images/icons/icon-github.svg');
     }
   }
 }

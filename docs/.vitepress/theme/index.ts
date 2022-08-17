@@ -10,7 +10,6 @@ import DownloadSorter from './components/DownloadSorter.vue';
 import ExampleField from './components/ExampleField.vue';
 import ModelType from './components/ModelType.vue';
 import PropertyToggler from './components/PropertyToggler.vue';
-import Supporters from './components/Supporters.vue';
 
 export default {
   Layout,
@@ -23,7 +22,6 @@ export default {
     app.component('ExampleField', ExampleField);
     app.component('ModelType', ModelType);
     app.component('PropertyToggler', PropertyToggler);
-    app.component('Supporters', Supporters);
 
     app.use(createPinia());
   },

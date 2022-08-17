@@ -51,7 +51,7 @@ const results = computed<ISearchResult[]>((): ISearchResult[] => {
       const pagePath: string = page.path;
       const pageTitle: string = page.title;
       const pageHeaders: ISearchResultHeader[] = page.headers;
-      const loweredTitle: string = pageTitle.toLowerCase();
+      const loweredTitle: string = pageTitle?.toLowerCase();
       const loweredTerm: string = searchTerm.value.toLowerCase();
 
       if (Array.isArray(pageHeaders)) {

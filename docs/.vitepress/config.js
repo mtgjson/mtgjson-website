@@ -7,9 +7,9 @@ export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
-export const title = 'MTGJSON | Portable formats for all Magic: The Gathering data.';
+export const title = 'MTGJSON: Portable formats for all Magic: The Gathering data';
 export const description =
-  'MTGJSON is an open-source project that catalogs all Magic The Gathering cards in a portable format. A dedicated group of fans maintains and supplies data for a variety of projects and sites in the community. Using an aggregation process we fetch data between multiple resources and approved partners, and combine all this data in to various downloadable formats.';
+  'MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.';
 
 export default {
   lang: 'en-US',
@@ -47,6 +47,8 @@ export default {
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'msapplication-TileImage', href: '/mstile-150x150.png' }],
+    // Preloads
+    ['link', { rel: 'preload', href: '/images/assets/bg-masthead.gif', as: 'image' }],
   ],
   markdown: {
     toc: {

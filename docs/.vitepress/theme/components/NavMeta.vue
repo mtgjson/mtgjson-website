@@ -1,13 +1,15 @@
 <template lang="pug">
 .nav-meta
   .nav-meta--logo(title="MTGJSON Logo")
-    a(href="/") MTGJSON.com
-      img(alt="MTGJSON logo", :style="{width: width}", src="/images/assets/logo-mtgjson.svg")
+    a(href="/" :style="{width: width, height: height ? height : 'auto'}") MTGJSON.com
+      img(alt="MTGJSON logo", :style="{width: width, height: height ? height : 'auto'}", src="/images/assets/logo-mtgjson.svg")
   .nav-meta--link(v-if="!hideText")
     a(href="/")
       h3 MTGJSON
     .version(v-if="version")
       a.version-number(:href="`/changelogs/mtgjson-v5/`") v{{ version }}
+    .version(v-else)
+      a.version-number &nbsp;
 </template>
 
 <script setup lang="ts">
@@ -16,6 +18,7 @@ import { useStore } from '../store.js';
 
 type Props = {
   width: string;
+  height?: string;
   hideText?: boolean;
 };
 

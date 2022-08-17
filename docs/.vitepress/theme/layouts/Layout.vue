@@ -47,4 +47,3 @@ onMounted(async (): Promise<void> => {
 </script>
 
 <style src="../styles/theme.scss" lang="scss"></style>
-<style src="@vueform/toggle/themes/default.css"></style>
