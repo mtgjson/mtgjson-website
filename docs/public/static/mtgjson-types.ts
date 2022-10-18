@@ -3,6 +3,8 @@ export type CardAtomic = {
   
   asciiName?: string;
         
+  attractionLights?: string[];
+        
   colorIdentity: string[];
         
   colorIndicator?: string[];
@@ -240,6 +242,8 @@ export type CardSet = {
   artist?: string;
         
   asciiName?: string;
+        
+  attractionLights?: string[];
         
   availability: string[];
         
@@ -595,15 +599,17 @@ export type LeadershipSkills = {
   
 export type Legalities = {
   
+  alchemy?: string;
+        
   brawl?: string;
         
   commander?: string;
         
   duel?: string;
         
-  future?: string;
+  explorer?: string;
         
-  frontier?: string;
+  future?: string;
         
   gladiator?: string;
         
@@ -618,8 +624,6 @@ export type Legalities = {
   oldschool?: string;
         
   pauper?: string;
-        
-  paupercommander?: string;
         
   penny?: string;
         

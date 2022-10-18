@@ -88,7 +88,7 @@ export type ${propName} = {
   });
 
   fs.writeFileSync(
-    `./packages/mtgjson-types/index.ts`,
+    `./docs/public/static/mtgjson-types.ts`,
     `${props}
   `
   );

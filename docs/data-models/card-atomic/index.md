@@ -64,6 +64,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
+> ### attractionLights <i class="optional"></i>
+>
+> A list of attraction lights found on a card. These are available to cards printed in certain "Un-sets".
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
+
 > ### colorIdentity
 >
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text` properties.

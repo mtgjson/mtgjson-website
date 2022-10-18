@@ -31,7 +31,7 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### Which file formats should I use for my project?
 >
-> We recommend downloading the compressed files and unpacking them locally or remotely. This would be faster than downloading the JSON files.
+> We recommend downloading the compressed files and unpacking them locally or remotely. This would be faster than downloading the JSON files. If you are wanting to work with database files, we also export SQL and SQLite databases.
 
 > ### Where does the data come from?
 >
@@ -57,27 +57,30 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How can I use TypeScript typings for MTGJSON data?
 >
-> There is currently no official typings exported from MTGJSON, however each data model documentation page does outline its associated type notation.
+> There is currently no official typings exported from MTGJSON, however each data model documentation page does outline its associated type notation. As well, a TypeScript types file for all data models can be accessed <a href="/static/mtgjson-types.ts" target="_blank" rel="noreferrer noopener">here</a>.
 
 > ### How do I access a card's imagery?
 >
 > While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) using the MTGJSON property from the [Identifiers](/data-models/identifiers/) data model within the various Card data models.
 >
-> - **Scryfall:** `https://api.scryfall.com/cards/<scryfallId>?format=image`
-> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=<multiverseId>`
+> - **Scryfall:**
+>   - Front face: `https://cards.scryfall.io/large/front/6/7/67f4c93b-080c-4196-b095-6a120a221988.jpg`
+>   - Back face: `https://cards.scryfall.io/large/back/6/7/67f4c93b-080c-4196-b095-6a120a221988.jpg`
 >
-> - **Note:** [Gatherer](https://gatherer.wizards.com/) may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
->   For [Scryfall](https://scryfall.com/), to access another face of a card add `&face=front` or `&face=back` to the url to get the respective image.
+> **Note:** Notice that before the `scrylfallId` is two other paths, these coincide with the first and second string entry of the scryfallId. See the official documentaion [here](https://scryfall.com/docs/api/images) for more information about different image variants.
+>
+> - **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=card&multiverseid=${multiverseId}`
+>
+> **Note:** Gatherer may not have all images. If a `multiverseId` is missing, the imagery will not exist there.
 
 > ### How can I access a card's set imagery?
 >
 > The `keyruneCode` property from the [Set](/data-models/set/#keyrunecode) data model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
-> Additionally, you can use [Gatherer](https://gatherer.wizards.com/) for a limited amount of set printings using the following Gatherer API endpoint.
+> **Scryfall:** `https://svgs.scryfall.io/sets/${setCode}.svg`  
+> **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`
 >
-> **Example**: `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=<setCode>&rarity=<rarity>&size=large`
->
-> In this case, `rarity` is just the starting letter of the rarity, such as `m`, `r`, `u`, or `c`.
+> For Gatherer, `rarity` is just the starting letter of the rarity, such as `m`, `r`, `u`, or `c`.
 
 > ### How do I find the other card faces of "Meld" cards?
 >

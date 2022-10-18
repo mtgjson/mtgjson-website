@@ -1,9 +1,9 @@
 <template lang="pug">
 .example-field(v-if="enums.length > 0", :class="{ showing: showAll }")
   strong Example:{{ ' ' }}
-  code(v-if="!showAll") {{ '"' + enums.slice(0, minimumToShow).join('", "') + '"' }}
+  code(v-if="!showAll") {{ '"' + enums.sort().slice(0, minimumToShow).join('", "') + '"' }}
     .show-btn(v-if="enums.length > minimumToShow", @click="toggleShowAll") Show&nbsp;More
-  code(v-if="showAll && enums.length > minimumToShow") {{ '"' + enums.join('", "') + '"' }}
+  code(v-if="showAll && enums.length > minimumToShow") {{ '"' + enums.sort().join('", "') + '"' }}
     .show-btn(@click="toggleShowAll") Show&nbsp;Less
 </template>
 

@@ -19,6 +19,33 @@ head:
 
 The following is the MTGJSON Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.2.1
+
+Release Date: TBD
+
+### Card Models
+
+#### Added
+
+- Added `attractionLights` property to Card (Atomic) and Card (Set)
+
+### Identifiers
+
+#### Added
+
+- Added `cardsphereId` property
+
+### EnumValues
+
+#### Added
+
+- Added `language` property to `card`
+- Added `tcgplayerSkus` model
+  - Added `condition` property
+  - Added `finishes` property
+  - Added `language` property
+  - Added `printing` property
+
 ## 5.2.0
 
 Release Date: 2021-12-20

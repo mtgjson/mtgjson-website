@@ -74,8 +74,10 @@ const toggleTOCOptionals = (doHide: boolean): void => {
     const tocPropertyName: string = tocAnchor.innerText;
     const tocListItem: HTMLElement = allTOCAnchors.value[index].parentElement;
 
-    if (hiddenTOCProperties.value.includes(tocPropertyName)) {
-      tocListItem.hidden = doHide;
+    if (hiddenTOCProperties.value.includes(tocPropertyName) && doHide) {
+      tocListItem.setAttribute('hidden', 'true');
+    } else {
+      tocListItem.removeAttribute('hidden');
     }
   });
 };

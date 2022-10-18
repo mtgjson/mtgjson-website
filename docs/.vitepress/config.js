@@ -14,7 +14,7 @@ export const description =
 export default {
   lang: 'en-US',
   // SEO
-  title,
+  titleTemplate: ':title · ' + title,
   description,
   appearance: false,
   cleanUrls: 'with-subfolders',

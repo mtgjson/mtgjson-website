@@ -285,7 +285,7 @@ const getPages = () => {
 };
 
 /**
- * Export the getPages function
+ * Export the generatePages function
  */
 export default (config) => {
   if (!config) {

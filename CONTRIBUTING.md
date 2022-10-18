@@ -4,6 +4,7 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 
 ## Knowledge Requirements
 
+- Node
 - TypeScript
 - Vue 3 (Composition API)
 - Pinia
@@ -39,30 +40,32 @@ Some files and directories are omitted that do not help understand this current 
 ├── app.json # Configuration for Heroku review apps. Used for Heroku PR deployments
 ├── check-version.js # Ensures the Node environment is correct
 ├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
-├── util # Build utilities
+├── util/ # Build utilities
 │   ├── generate-contributors.js # Utility to generate GitHub contributors JSON
 │   ├── generate-feeds.js # Utility to generate RSS and other feeds
 │   └── generate-types.js # Utility to generate TypeScript notations for documentation
-└── docs # Home directory, outputs to `/dist`
+└── docs/ # Home directory, outputs to `/dist`
     ├── **/index.md # Directories and their route entry point
     ├── public/ # Static assets
     │   ├── images/ # All application images
     │   │   ├── assets/ # MTGJSON specifics
-    │   │   └── avatars/ # User/supporters avatars
-    │   ├── *.* # Any public facing file, like favicons
-    │   └── robots.txt # For crawlers to index/not index certain pages
-    └── .vitepress # Main source files for the application
+    │   │   ├── avatars/ # User/supporters avatars
+    │   │   └── icons/ # General icons
+    │   ├── static/ # Desired public facing assets
+    │   │   └── mtgjson-types.ts # TypeScript types for MTGJSON data models
+    │   └── *.* # Any public facing file, like favicons or robots.txt
+    └── .vitepress/ # Main source files for the application
         ├── config.js # Main VitePress configuration
         ├── generatePages.js # Polyfill script to generate pages data for search
         ├── generateSidebar.js # Polyfill script to generate the sidebar heirarchy
-        └── theme # Themeing for VitePress
+        └── theme/ # Themeing for VitePress
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
-            │   ├── 404.vue # Layout for error page
-            │   └── Layout.vue # Layout for the rest of pages
+            │   ├── Layout.vue # Layout for non-error pages
+            │   └── NotFound.vue # Layout for error page
             ├── static/ # Static data to power Vue components
-            │   └── *.json # JSON
+            │   └── *.json # JSON data
             ├── styles/ # Visual styling
             │   └── *.scss # CSS
             ├── helpers.ts # Helper functions
@@ -150,4 +153,4 @@ We like to keep our history as clearly labeled as possible. Here are some exampl
 - `issue/123: fixed bug.` "issue" is a branch which a PR handles something where an issue was opened
 - `no-issue/documentation_updates: updated README.` "no-issue" is branch which a PR handles something with no open issue
 
-Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title clear and concise.
+Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title exact and concise.
