@@ -51,7 +51,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### attractionLights <i class="optional"></i>
 >
-> A list of attraction lights found on a card. These are available to cards printed in certain "Un-sets".
+> A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`

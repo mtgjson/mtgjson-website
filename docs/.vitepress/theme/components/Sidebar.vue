@@ -55,7 +55,7 @@ defineProps<Props>();
 
   ul,
   ol {
-    padding-left: 25px;
+    padding-left: 1rem;
   }
 
   &-logo {

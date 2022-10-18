@@ -66,7 +66,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### attractionLights <i class="optional"></i>
 >
-> A list of attraction lights found on a card. These are available to cards printed in certain "Un-sets".
+> A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
