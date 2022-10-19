@@ -2,7 +2,7 @@ name: Build and Test Application
 
 on:
   pull_request:
-    branches: [ main ]
+    types: ['opened', 'edited', 'synchronize']
 
 jobs:
   build:
