@@ -57,6 +57,8 @@ export type CardAtomic = {
         
   purchaseUrls: PurchaseUrls;
         
+  relatedCards?: RelatedCards;
+        
   rulings: Rulings[];
         
   side?: string;
@@ -80,6 +82,8 @@ export type CardDeck = {
   artist?: string;
         
   asciiName?: string;
+        
+  attractionLights?: string[];
         
   availability: string[];
         
@@ -204,6 +208,8 @@ export type CardDeck = {
   purchaseUrls: PurchaseUrls;
         
   rarity: string;
+        
+  relatedCards?: RelatedCards;
         
   rebalancedPrintings?: string[];
         
@@ -363,6 +369,8 @@ export type CardSet = {
         
   rarity: string;
         
+  relatedCards?: RelatedCards;
+        
   rebalancedPrintings?: string[];
         
   rulings: Rulings[];
@@ -460,6 +468,8 @@ export type CardToken = {
   power?: string;
         
   promoTypes?: string[];
+        
+  relatedCards?: RelatedCards;
         
   reverseRelated: string[];
         
@@ -658,6 +668,12 @@ export type PurchaseUrls = {
   tcgplayer?: string;
         
   tcgplayerEtched?: string;
+        
+}
+  
+export type RelatedCards = {
+  
+  spellbook: string[];
         
 }
   

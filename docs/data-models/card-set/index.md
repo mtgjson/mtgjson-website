@@ -492,6 +492,13 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
 
+> ### relatedCards <i class="optional"></i>
+>
+> The related cards for this card.
+>
+> - **Type:** `RelatedCards`
+> - **Introduced:** `v5.2.1`
+
 > ### rebalancedPrintings <i class="optional"></i>
 >
 > A list of card UUID's to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.

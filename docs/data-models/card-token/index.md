@@ -276,6 +276,13 @@ The Card (Token) data model describes the properties of a single token card.
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
 
+> ### relatedCards <i class="optional"></i>
+>
+> The related cards for this card.
+>
+> - **Type:** `RelatedCards`
+> - **Introduced:** `v5.2.1`
+
 > ### reverseRelated
 >
 > The names of the cards that produce this card.

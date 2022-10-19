@@ -49,6 +49,13 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
+> ### attractionLights <i class="optional"></i>
+>
+> A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
+
 > ### availability
 >
 > A list of the card's available printing types.
@@ -506,6 +513,13 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `string`
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
+
+> ### relatedCards <i class="optional"></i>
+>
+> The related cards for this card.
+>
+> - **Type:** `RelatedCards`
+> - **Introduced:** `v5.2.1`
 
 > ### rebalancedPrintings <i class="optional"></i>
 >

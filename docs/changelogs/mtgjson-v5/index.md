@@ -27,7 +27,8 @@ Release Date: TBD
 
 #### Added
 
-- Added `attractionLights` property to Card (Atomic) and Card (Set)
+- Added `attractionLights` property to Card (Atomic), Card (Deck), and Card (Set)
+- Added `relatedCards` property to Card (Atomic), Card (Deck), and Card (Set)
 
 ### Identifiers
 
@@ -40,11 +41,17 @@ Release Date: TBD
 #### Added
 
 - Added `language` property to `card`
-- Added `tcgplayerSkus` model
+- Added `tcgplayerSkus` property
   - Added `condition` property
   - Added `finishes` property
   - Added `language` property
   - Added `printing` property
+
+### Related Cards
+
+#### Added
+
+- Added data model for `relatedCards` property
 
 ## 5.2.0
 
