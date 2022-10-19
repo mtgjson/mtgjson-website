@@ -1,0 +1,17 @@
+name: 'Netlify Preview Deploy'
+
+on:
+  pull_request:
+    types: ['opened', 'edited', 'synchronize']
+
+jobs:
+  deploy:
+    name: 'Deploy Preview'
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@master
+      - uses: jsmrcaga/action-netlify-deploy@master
+        with:
+          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

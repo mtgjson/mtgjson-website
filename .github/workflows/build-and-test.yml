@@ -10,29 +10,29 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ⬇️ Checkout
+    - name: Checkout
       uses: actions/checkout@master
 
     # Sets up the Node environment to build the application on
-    - name: 📄 Setup Node.js
-      uses: actions/setup-node@v1
+    - name: Setup Node.js
+      uses: actions/setup-node@v3
       with:
-        node-version: '16.x'
+        node-version: '16'
 
     # Installs local dependencies needed to build, test, etc.
-    - name: 🏗 Install Dependencies
+    - name: Install Dependencies
       run: |
         npm install
 
     # Runs all tests and builds the application
-    - name: 🧱 Run Tests and Build Application
+    - name: Run Tests and Build Application
       run: |
         npm run test:full
       env:
         CI: true
 
     # Upload CodeCov report to the remote server
-    - name: ⬆️ Upload Code Coverage
+    - name: Upload Code Coverage
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
