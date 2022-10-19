@@ -6,9 +6,24 @@ on:
 
 jobs:
   build:
-    runs-on: ubuntu-18.04
+    runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@master
+      - name: Checkout
+        uses: actions/checkout@master
+
+      # Sets up the Node environment to build the application on
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '16'
+
+      - name: Install Dependencies
+        run: |
+          npm install
+
+      - name: Build Application
+        run: |
+          npm run build
 
       - name: Deploy to Netlify
         uses: nwtgck/actions-netlify@v1.2
