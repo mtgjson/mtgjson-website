@@ -1,4 +1,4 @@
-name: Generate Review Application
+name: Build and Test Application
 
 on:
   pull_request:
@@ -36,14 +36,3 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
-
-  deploy:
-    name: 'Deploy to Netlify'
-    runs-on: ubuntu-latest
-
-    steps:
-      - name: 🚀 Deploy Review App
-      - uses: jsmrcaga/action-netlify-deploy@v1.1.0
-        with:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-          NETLIFY_DEPLOY_TO_PROD: true
