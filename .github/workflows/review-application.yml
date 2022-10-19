@@ -1,8 +1,6 @@
 name: Generate Review Application
 
-on:
-  pull_request:
-    branches: [ main ]
+on: [push, commit, pull_request]
 
 jobs:
   build:
