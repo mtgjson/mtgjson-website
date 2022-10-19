@@ -15,8 +15,6 @@ name: "CodeQL Analysis"
 on:
   pull_request:
     types: ['opened', 'edited', 'synchronize']
-  schedule:
-    - cron: '32 13 * * 1'
 
 jobs:
   analyze:
