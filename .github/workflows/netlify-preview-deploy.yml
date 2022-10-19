@@ -5,13 +5,15 @@ on:
     types: ['opened', 'edited', 'synchronize']
 
 jobs:
-  deploy:
-    name: 'Deploy Preview'
-    runs-on: ubuntu-latest
-
+  build:
+    runs-on: ubuntu-18.04
     steps:
       - uses: actions/checkout@master
-      - uses: jsmrcaga/action-netlify-deploy@master
+
+      - name: Deploy to Netlify
+        uses: nwtgck/actions-netlify@v1.2
         with:
+          publish-dir: './docs/.vitepress/dist'
+        env:
           NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
           NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
