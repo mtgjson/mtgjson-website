@@ -513,7 +513,7 @@ export type Deck = {
         
   sideBoard: CardDeck[];
         
-  releaseDate: null | string;
+  releaseDate: string | null;
         
   type: string;
         
@@ -527,7 +527,7 @@ export type DeckList = {
         
   name: string;
         
-  releaseDate: null | string;
+  releaseDate: string | null;
         
   type: string;
         
@@ -693,7 +693,7 @@ export type SealedProduct = {
         
   purchaseUrls: PurchaseUrls;
         
-  releaseDate: null | string;
+  releaseDate: string | null;
         
   uuid: string;
         

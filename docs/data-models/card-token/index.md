@@ -20,8 +20,8 @@ head:
 
 The Card (Token) data model describes the properties of a single token card.
 
-- **Parent file:** [Set](/data-models/set/)
-- **Parent model:** `tokens`
+- **Parent model:** [Set](/data-models/set/)
+- **Parent property:** `tokens`
 
 ## Model Type
 
@@ -149,7 +149,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
 
-> ### hasFoil
+> ### hasFoil <i class="deprecated"></i>
 >
 > If the card can be found in foil.
 >
@@ -158,7 +158,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### hasNonFoil
+> ### hasNonFoil <i class="deprecated"></i>
 >
 > If the card can be found in non-foil.
 >

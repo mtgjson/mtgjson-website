@@ -19,8 +19,8 @@ head:
 
 The Related Cards data model describes cards that have relations to other cards.
 
-- **Parent file:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
-- **Parent model:** `relatedCards`
+- **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
+- **Parent property:** `relatedCards`
 
 ## Model Type
 
@@ -36,7 +36,7 @@ The Related Cards data model describes cards that have relations to other cards.
 
 > ### spellbook
 >
-> A list of card names associated to a Card's `spellbook` mechanic.
+> A list of card names associated to a card's `spellbook` mechanic.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`

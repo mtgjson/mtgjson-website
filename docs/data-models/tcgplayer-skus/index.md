@@ -21,7 +21,7 @@ head:
 The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
 
 - **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)
-- **Parent model:** `data`
+- **Parent property:** `data`
 
 <blockquote>
   <p class="small-header">Note</p>

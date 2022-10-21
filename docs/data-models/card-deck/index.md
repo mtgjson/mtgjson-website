@@ -20,8 +20,8 @@ head:
 
 The Card (Deck) data model describes the properties of a single card in a [Deck](/data-models/deck/).
 
-- **Parent file:** [Deck](/data-models/deck/)
-- **Parent model:** `commander`, `mainBoard`, `sideBoard`
+- **Parent model:** [Deck](/data-models/deck/)
+- **Parent property:** `commander`, `mainBoard`, `sideBoard`
 
 ## Model Type
 
@@ -111,7 +111,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost
+> ### convertedManaCost <i class="deprecated"></i>
 >
 > The converted mana cost of the card.
 >
@@ -142,7 +142,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
 
-> ### faceConvertedManaCost <i class="optional"></i>
+> ### faceConvertedManaCost <i class="deprecated"></i><i class="optional"></i>
 >
 > The converted mana cost or mana value for the face for either half or part of the card.
 >
@@ -238,7 +238,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
 
-> ### hasFoil
+> ### hasFoil <i class="deprecated"></i>
 >
 > If the card can be found in foil.
 >
@@ -247,7 +247,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### hasNonFoil
+> ### hasNonFoil <i class="deprecated"></i>
 >
 > If the card can be found in non-foil.
 >

@@ -21,7 +21,7 @@ head:
 The Deck List data model describes a metadata-like model for all individual [Deck](/data-models/deck/) data.
 
 - **Parent file:** [DeckList](/downloads/all-files/#decklist)
-- **Parent model:** `data`
+- **Parent property:** `data`
 
 ## Model Type
 
@@ -60,7 +60,7 @@ The Deck List data model describes a metadata-like model for all individual [Dec
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
-> - **Type:** `null | string`
+> - **Type:** `string | null`
 > - **Introduced:** `v4.3.0`
 
 > ### type

@@ -21,7 +21,7 @@ head:
 The Deck data model describes a complete deck reference of an individual deck.
 
 - **Parent file:** [All Decks](/downloads/all-decks/)
-- **Parent model:** `data`
+- **Parent property:** `data`
 
 ## Model Type
 
@@ -82,7 +82,7 @@ The Deck data model describes a complete deck reference of an individual deck.
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
-> - **Type:** `null | string`
+> - **Type:** `string | null`
 > - **Introduced:** `v4.3.0`
 
 > ### type

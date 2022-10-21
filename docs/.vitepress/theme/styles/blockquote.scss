@@ -41,9 +41,14 @@ blockquote {
       position: absolute;
       margin-right: 0 !important;
 
-      &.optional {
+      &:first-of-type {
+        right: 6rem;
+        bottom: 1rem;
+      }
+
+      &:last-of-type {
         right: 1rem;
-        top: 1rem;
+        bottom: 1rem;
       }
     }
   }
@@ -55,22 +60,22 @@ blockquote {
       margin-bottom: 0;
     }
 
-    em {
-      background-color: var(--red-color);
-      border-radius: var(--common-radius);
-      color: var(--dark-color);
-      display: inline-block;
-      font-style: normal;
+    // em {
+    //   background-color: var(--red-color);
+    //   border-radius: var(--common-radius);
+    //   color: var(--dark-color);
+    //   display: inline-block;
+    //   font-style: normal;
 
-      @extend %code-block;
+    //   @extend %code-block;
 
-      font-family: var(--font-base);
-      font-size: 14px;
+    //   font-family: var(--font-base);
+    //   font-size: 14px;
 
-      a {
-        color: var(--dark-color);
-      }
-    }
+    //   a {
+    //     color: var(--dark-color);
+    //   }
+    // }
   }
 
   i.optional,
@@ -90,6 +95,14 @@ blockquote {
 
     &::before {
       content: "Optional";
+    }
+  }
+
+  i.deprecated {
+    background-color: var(--red-color);
+
+    &::before {
+      content: "Deprecated";
     }
   }
 

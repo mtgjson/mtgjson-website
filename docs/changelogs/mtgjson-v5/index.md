@@ -28,7 +28,7 @@ Release Date: TBD
 #### Added
 
 - Added `attractionLights` property to Card (Atomic), Card (Deck), and Card (Set)
-- Added `relatedCards` property to Card (Atomic), Card (Deck), and Card (Set)
+- Added `relatedCards` property to all Card data models
 
 ### Identifiers
 

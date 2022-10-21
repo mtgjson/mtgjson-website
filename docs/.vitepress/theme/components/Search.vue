@@ -1,7 +1,7 @@
 <template lang="pug">
 .search
-  .searchbar
-    input.searchbar-input(
+  .search-bar
+    input.search-bar-input(
       ref="input"
       v-model="searchTerm"
       autocomplete="off"
@@ -11,8 +11,11 @@
       placeholder="Search..."
       type="search"
       @input="openSearch()"
-      @blur="cleanSearch()"
       :class="{ open: results.length > 0 }"
+    )
+    .search-clear-button(
+      v-if="searchTerm.length > 0"
+      @click="clearSearch()"
     )
     .search-suggestions(:class="{ open: results.length > 0 }")
       .search-suggestion(
@@ -23,7 +26,7 @@
         a(
           :key="item.id"
           :href="`${item.isOwnPage ? item.path : item.path + item.hash}`"
-          @click="cleanSearch()"
+          @click="clearSearch()"
         )
           .search-item
             p.search-item--page {{ item.title }}
@@ -100,7 +103,7 @@ const openSearch = (): void => {
   }
 };
 
-const cleanSearch = (): void => {
+const clearSearch = (): void => {
   open.value = false;
   searchTerm.value = '';
 };
@@ -108,7 +111,7 @@ const cleanSearch = (): void => {
 
 <style lang="scss">
 .search {
-  .searchbar {
+  &-bar {
     position: relative;
 
     input {
@@ -137,7 +140,34 @@ const cleanSearch = (): void => {
     }
   }
 
-  .search-suggestions {
+  &-clear-button {
+    position: absolute;
+    top: 0.75rem;
+    right: 1rem;
+    width: 15px;
+    height: 15px;
+    cursor: pointer;
+
+    &::before,
+    &::after {
+      content: '';
+      width: 2px;
+      height: 14px;
+      background-color: var(--accent-color);
+      position: absolute;
+      left: 6px;
+    }
+
+    &::before {
+      transform: rotate(45deg);
+    }
+
+    &::after {
+      transform: rotate(-45deg);
+    }
+  }
+
+  &-suggestions {
     position: absolute;
     z-index: 100;
     top: calc(100% - 1px);

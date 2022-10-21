@@ -1,6 +1,6 @@
 <template lang="pug">
 .sorting-options
-  DataToggler(:callback="onToggleChange" :label="'Show Options'")
+  DataToggler(:callback="onToggleChange" :label="'Show Toggles'")
   fieldset.sort-rows(v-if="toggleValue")
     .sort-row.search
       label(for="search-input") Search:

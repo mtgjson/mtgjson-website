@@ -20,7 +20,7 @@ head:
 The Meta data model describes application metadata.
 
 - **Parent file:** [Meta](/downloads/all-files/#meta)
-- **Parent model:** `meta`, `data`
+- **Parent property:** `meta`, `data`
 
 ## Model Type
 

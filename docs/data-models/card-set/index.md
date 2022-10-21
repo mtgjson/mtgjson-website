@@ -20,8 +20,8 @@ head:
 
 The Card (Set) data model describes the properties of a single card in a [Set](/data-models/set/).
 
-- **Parent file:** [Set](/data-models/set/)
-- **Parent model:** `cards`
+- **Parent model:** [Set](/data-models/set/)
+- **Parent property:** `cards`
 
 ## Model Type
 
@@ -111,7 +111,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost
+> ### convertedManaCost <i class="deprecated"></i>
 >
 > The converted mana cost of the card.
 >
@@ -127,7 +127,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
 
-> ### faceConvertedManaCost <i class="optional"></i>
+> ### faceConvertedManaCost <i class="deprecated"></i><i class="optional"></i>
 >
 > The converted mana cost or mana value for the face for either half or part of the card.
 >
@@ -223,7 +223,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
 
-> ### hasFoil
+> ### hasFoil <i class="deprecated"></i>
 >
 > If the card can be found in foil.
 >
@@ -232,7 +232,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### hasNonFoil
+> ### hasNonFoil <i class="deprecated"></i>
 >
 > If the card can be found in non-foil.
 >

@@ -19,8 +19,8 @@ head:
 
 The Sealed Product data model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
 
-- **Parent file:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
-- **Parent model:** `sealedProduct`
+- **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
+- **Parent property:** `sealedProduct`
 
 ## Model Type
 
@@ -59,7 +59,7 @@ The Sealed Product data model describes a list of properties for a purchase-able
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product. Returns `null` if the set was not formally released as a product.
 >
-> - **Type:** `null | string`
+> - **Type:** `string | null`
 > - **Introduced:** `v5.2.0`
 
 > ### uuid

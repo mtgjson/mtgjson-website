@@ -52,6 +52,7 @@ export interface ISearchResult extends ISearchResultHeader {
   id: number;
   path: string;
   title: string;
+  headers?: ISearchResultHeader[];
   isOwnPage?: boolean;
 }
 

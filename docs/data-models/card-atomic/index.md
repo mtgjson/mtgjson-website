@@ -21,7 +21,7 @@ head:
 The Card (Atomic) data model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data that would never change from printing to printing.
 
 - **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)
-- **Parent model:** `data`
+- **Parent property:** `data`
 
 <!-- For some reason tips before TOC will break the TOC, but HTML will not -->
 <blockquote>
@@ -95,7 +95,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost
+> ### convertedManaCost <i class="deprecated"></i>
 >
 > The converted mana cost of the card.
 >
@@ -111,7 +111,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
 
-> ### faceConvertedManaCost <i class="optional"></i>
+> ### faceConvertedManaCost <i class="deprecated"></i><i class="optional"></i>
 >
 > The converted mana cost or mana value for the face for either half or part of the card.
 >

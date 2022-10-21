@@ -19,8 +19,8 @@ head:
 
 The Identifiers data model describes a list of identifiers associated to a Card.
 
-- **Parent file:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
-- **Parent model:** `identifiers`
+- **Parent model:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
+- **Parent property:** `identifiers`
 
 ## Model Type
 

@@ -19,8 +19,8 @@ head:
 
 The Rulings data model describes a list of rulings for a Card.
 
-- **Parent file:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
-- **Parent model:** `rulings`
+- **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
+- **Parent property:** `rulings`
 
 ## Model Type
 
@@ -40,7 +40,6 @@ The Rulings data model describes a list of rulings for a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes** <i class="optional"></i>
 
 > ### text
 >
@@ -48,4 +47,3 @@ The Rulings data model describes a list of rulings for a Card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-> - **Attributes** <i class="optional"></i>
