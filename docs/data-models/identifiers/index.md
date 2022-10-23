@@ -60,7 +60,7 @@ The Identifiers data model describes a list of identifiers associated to a Card.
 > The [Cardsphere](https://www.cardsphere.com/) card identifier.
 >
 > - **Type:** `string`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### mcmId <i class="optional"></i>
 >

@@ -68,7 +68,7 @@ The Set data model describes the properties of an individual Set.
 > The [Cardsphere](https://www.cardsphere.com/) set identifier.
 >
 > - **Type:** `number`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### code
 >

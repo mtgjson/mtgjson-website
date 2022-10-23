@@ -1,5 +1,10 @@
 // Model Properties of a page
 #model-properties {
+  & ~ blockquote {
+    ul {
+      padding-bottom: 0.75rem;
+    }
+  }
   &.none {
     position: relative;
     margin-bottom: 1.5rem;

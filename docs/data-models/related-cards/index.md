@@ -39,4 +39,4 @@ The Related Cards data model describes cards that have relations to other cards.
 > A list of card names associated to a card's `spellbook` mechanic.
 >
 > - **Type:** `string[]`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`

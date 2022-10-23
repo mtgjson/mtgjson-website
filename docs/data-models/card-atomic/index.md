@@ -69,7 +69,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
 >
 > - **Type:** `string[]`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### colorIdentity
 >
@@ -268,7 +268,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > The related cards for this card.
 >
 > - **Type:** `RelatedCards`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### rulings
 >

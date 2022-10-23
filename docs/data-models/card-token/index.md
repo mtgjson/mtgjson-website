@@ -63,7 +63,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### borderColor
 >
@@ -222,7 +222,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### layout
 >
@@ -281,7 +281,7 @@ The Card (Token) data model describes the properties of a single token card.
 > The related cards for this card.
 >
 > - **Type:** `RelatedCards`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.1 (Preview)`
 
 > ### reverseRelated
 >
