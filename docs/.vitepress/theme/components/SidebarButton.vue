@@ -5,10 +5,15 @@ div.sidebar-button(@click="toggleSidebar" @keydown.enter="toggleSidebar" tabinde
 </template>
 
 <script setup lang="ts">
-const emit = defineEmits(['toggle-sidebar']);
+import { useStore } from '../store.js';
+
+const store = useStore();
+
+// const emit = defineEmits(['toggle-sidebar']);
 
 const toggleSidebar = (): void => {
-  emit('toggle-sidebar');
+  // emit('toggle-sidebar');
+  store.updateSidebar();
 };
 </script>
 

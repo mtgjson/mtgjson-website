@@ -61,7 +61,6 @@ const onChange = (event: HTMLChangeEvent): void => {
     background-color: var(--gray-5-color);
     /* In case the label gets really long, the toggle shouldn't shrink. */
     flex-shrink: 0;
-    transition: background-color 0.25s ease-in-out;
 
     &::before {
       content: '';
@@ -74,7 +73,6 @@ const onChange = (event: HTMLChangeEvent): void => {
       border-radius: 50%;
       background-color: var(--light-color);
       border: 2px solid var(--gray-5-color);
-      transition: transform 0.25s ease-in-out;
     }
 
     &::after {

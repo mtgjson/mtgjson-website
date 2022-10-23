@@ -1,10 +1,11 @@
 <template lang="pug">
-a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href") {{ link.children }}
+a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href" @click="toggleSidebar") {{ link.children }}
 </template>
 
 <script setup lang="ts">
 import { h, computed } from 'vue';
 import { useRoute } from 'vitepress';
+import { useStore } from '../store.js';
 import { isActive } from '../helpers';
 import type { Route } from 'vitepress';
 import type { TSidebarItem } from '../types';
@@ -14,6 +15,7 @@ type Props = {
 };
 
 const props = defineProps<Props>();
+const store = useStore();
 
 const route: Route = useRoute();
 
@@ -36,6 +38,12 @@ const renderLink = (h: any, to: string, text: string, active: boolean): TSidebar
     },
     text
   );
+};
+
+const toggleSidebar = (): void => {
+  if (store.SidebarOpen) {
+    store.updateSidebar();
+  }
 };
 </script>
 

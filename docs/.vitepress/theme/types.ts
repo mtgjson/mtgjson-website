@@ -1,4 +1,5 @@
 export type TStoreRootState = {
+  SidebarOpen: boolean,
   Meta: TMeta,
   DeckList: TList[],
   SetList: TList[],

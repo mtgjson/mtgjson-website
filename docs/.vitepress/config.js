@@ -48,6 +48,8 @@ export default {
     ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],
     ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
     ['link', { rel: 'msapplication-TileImage', href: '/mstile-150x150.png' }],
+    // iOS Safari Theme
+    ['meta', { name: 'theme-color', content: '#0f263c' }]
   ],
   markdown: {
     toc: {

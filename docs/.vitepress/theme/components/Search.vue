@@ -26,7 +26,7 @@
         a(
           :key="item.id"
           :href="`${item.isOwnPage ? item.path : item.path + item.hash}`"
-          @click="clearSearch()"
+          @click="clearSearch(true)"
         )
           .search-item
             p.search-item--page {{ item.title }}
@@ -36,6 +36,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
+import { useStore } from '../store.js';
 import type { ISearchResult, ISearchResultHeader } from '../types';
 
 const { theme } = useData();
@@ -45,6 +46,7 @@ const pages: ISearchResult[] = theme.value.pages;
 const open = ref<boolean>(false);
 const input = ref<HTMLElement | null>(null);
 const searchTerm = ref<string>('');
+const store = useStore();
 
 const results = computed<ISearchResult[]>((): ISearchResult[] => {
   const res: ISearchResult[] = [];
@@ -103,9 +105,19 @@ const openSearch = (): void => {
   }
 };
 
-const clearSearch = (): void => {
+const clearSearch = (shouldCloseSidebar): void => {
   open.value = false;
   searchTerm.value = '';
+
+  if (shouldCloseSidebar) {
+    toggleSidebar();
+  }
+};
+
+const toggleSidebar = (): void => {
+  if (store.SidebarOpen) {
+    store.updateSidebar();
+  }
 };
 </script>
 

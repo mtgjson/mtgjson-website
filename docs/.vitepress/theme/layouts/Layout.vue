@@ -12,7 +12,7 @@
 </template>
 
 <script setup lang="ts">
-import { ref, computed, onMounted } from 'vue';
+import { computed, onMounted } from 'vue';
 import { useData } from 'vitepress';
 import { useStore } from '../store.js';
 import Navbar from '../components/Navbar.vue';
@@ -23,20 +23,19 @@ import type { TSidebarItem } from '../types';
 
 const { theme, frontmatter } = useData();
 const store = useStore();
-const isSidebarOpen = ref<boolean>(false);
 const isHome = computed<boolean>(() => frontmatter.value.home);
 const sidebarItems: TSidebarItem[] = theme.value.sidebar;
 
 const pageClasses = computed((): object[] => {
   return [
     {
-      'sidebar-open': isSidebarOpen.value,
+      'sidebar-open': store.SidebarOpen,
     },
   ];
 });
 
 const toggleSidebar = (): void => {
-  isSidebarOpen.value = isSidebarOpen.value !== true;
+  store.updateSidebar();
 };
 
 onMounted(async (): Promise<void> => {
