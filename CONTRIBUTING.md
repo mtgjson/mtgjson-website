@@ -123,6 +123,8 @@ head:
 
 ### Markdown Syntax for Documentation Fields
 
+#### Property Field
+
 An example of a property field for a data object field in Markdown:
 
 ```
@@ -134,9 +136,19 @@ An example of a property field for a data object field in Markdown:
 > **Introduced:** `v4.0.0`
 ```
 
-You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
+The `<i class="optional"></i>` markup will render a UI change in the property that denotes the property is optional and also power a component that will allow toggling the UI to view or not view these fields.
+
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
 If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
+
+#### TypeScript Notations
+
+Use the `<ModelType type='<Model Name>' />` component to render the TypeScript notation for a data model where `<Model Name>` is the data model, such as `CardAtomic` or `DeckList`.
+
+#### Table of Contents
+
+Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers and use the `<PropertyToggler/>` component right above `[[toc]]` to enable toggling optional properties on the Table of Contents.
 
 ## Pinia Store
 
@@ -148,9 +160,9 @@ We use Jest and try our best. Test runs before commits and will fail the commit 
 
 ## Pull Requests
 
-We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate:
+We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate but are not strict about:
 
-- `issue/123: fixed bug.` "issue" is a branch which a PR handles something where an issue was opened
-- `no-issue/documentation_updates: updated README.` "no-issue" is branch which a PR handles something with no open issue
+- `issue/123: Fixed bug`: "issue" is a branch which a PR handles something where an issue was opened
+- `no-issue/documentation_updates: Updated README`: "no-issue" is branch which a PR handles something with no open issue
 
 Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title exact and concise.
