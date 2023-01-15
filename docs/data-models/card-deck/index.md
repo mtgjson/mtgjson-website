@@ -54,7 +54,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
 >
 > - **Type:** `string[]`
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1`
 
 > ### availability
 >
@@ -70,7 +70,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 >
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1`
 
 > ### borderColor
 >
@@ -141,6 +141,13 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
+
+> ### edhrecSaltiness <i class="optional"></i>
+>
+> The card saltiness score on [EDHRec](https://www.edhrec.com).
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.1`
 
 > ### faceConvertedManaCost <i class="deprecated"></i><i class="optional"></i>
 >
@@ -374,7 +381,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1 `
 
 > ### layout
 >
@@ -393,7 +400,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### legalities
 >
-> The legalities of play formats the card has. See the [Legalities](/data-models/legalities/) data model.
+> The legalities of play formats for this printing of the card. See the [Legalities](/data-models/legalities/) data model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -516,10 +523,10 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### relatedCards <i class="optional"></i>
 >
-> The related cards for this card.
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
 >
 > - **Type:** `RelatedCards`
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1`
 
 > ### rebalancedPrintings <i class="optional"></i>
 >
@@ -564,6 +571,13 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
+
+> ### subset <i class="optional"></i>
+>
+> The name of the subset printing a card is in. Used on "Secret Lair Drop" cards.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
 
 > ### subtypes
 >

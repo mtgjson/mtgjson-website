@@ -23,6 +23,7 @@ MTGGraphQL is a sub-service of MTGJSON and a GraphQL API built on top of the MTG
 - **Decks**
 - **Sets**
 - **Metadata**
+- **Prices**
 
 <blockquote>
   <p class="small-header">Beta Information</p>

@@ -63,7 +63,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1 `
 
 > ### borderColor
 >
@@ -222,7 +222,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1 `
 
 > ### layout
 >
@@ -278,10 +278,10 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### relatedCards <i class="optional"></i>
 >
-> The related cards for this card.
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
 >
 > - **Type:** `RelatedCards`
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1`
 
 > ### reverseRelated
 >
@@ -319,6 +319,13 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
+
+> ### subset <i class="optional"></i>
+>
+> The name of the subset printing a card is in. Used on "Secret Lair Drop" cards.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
 
 > ### subtypes
 >

@@ -19,14 +19,14 @@ module.exports = {
     // Rules to ignore
     'vue/no-setup-props-destructure': 'off',
     'vue/multi-word-component-names': 'off',
-    'no-use-before-define': 'off', // Vuepress has hidden logic
     'no-case-declarations': 'off',
-    'no-useless-escape': 'off',
-    'no-control-regex': 'off',
-    'no-unused-vars': 'off',
     'no-console': 'off',
+    'no-control-regex': 'off',
     'no-empty': 'off',
+    'no-eq-null': 'off',
     'no-prototype-builtins': 'off',
+    'no-useless-escape': 'off',
+    'no-unused-vars': 'off',
     'guard-for-in': 'off',
     // Rules to warn
     indent: ['warn', 2, { SwitchCase: 1 }],
@@ -38,7 +38,6 @@ module.exports = {
     'no-useless-return': 'error',
     'no-multi-spaces': 'error',
     'no-alert': 'error',
-    'no-eq-null': 'error',
     'no-eval': 'error',
   },
 };

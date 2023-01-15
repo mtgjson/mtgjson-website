@@ -69,7 +69,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
 >
 > - **Type:** `string[]`
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1`
 
 > ### colorIdentity
 >
@@ -110,6 +110,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
+
+> ### edhrecSaltiness <i class="optional"></i>
+>
+> The card saltiness score on [EDHRec](https://www.edhrec.com).
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.1`
 
 > ### faceConvertedManaCost <i class="deprecated"></i><i class="optional"></i>
 >
@@ -200,7 +207,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### legalities
 >
-> The legalities of play formats the card has. See the [Legalities](/data-models/legalities/) data model.
+> The legalities of play formats for this printing of the card. See the [Legalities](/data-models/legalities/) data model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -263,13 +270,6 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
 
-> ### relatedCards <i class="optional"></i>
->
-> The related cards for this card.
->
-> - **Type:** `RelatedCards`
-> - **Introduced:** `v5.2.1 (Preview)`
-
 > ### rulings
 >
 > A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
@@ -284,6 +284,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string`
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
+
+> ### subset <i class="optional"></i>
+>
+> The name of the subset printing a card is in. Used on "Secret Lair Drop" cards.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
 
 > ### subtypes
 >

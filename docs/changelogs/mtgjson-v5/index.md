@@ -19,6 +19,67 @@ head:
 
 The following is the MTGJSON Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.2.1
+
+Release Date: TBD
+
+### Announcements
+
+TBD
+
+### Card Model
+
+### Fixed
+
+- Fixed some cards showing side `b` for both faces of a card
+- Fixed "meld" cards in The Brothers' War (`BRO`) set
+
+#### Changed
+
+- Changed `legalities` to be printing-based for a card
+
+#### Added
+
+- Added `attractionLights` optional property to Card (Atomic), Card (Deck), and Card (Set)
+- Added `edhrecSaltiness` optional property to Card (Atomic), Card (Deck), and Card (Set)
+- Added `isFunny` optional property to Card (Atomic)
+- Added `relatedCards` property to Card (Deck), Card (Set), and Card (Token)
+- Added `subset` optional property for the Secret Lair Drop printing name to all Card models
+
+### Related Cards Model (New)
+
+#### Added
+
+- Added `reverseRelated` property
+- Added `spellbook` property
+
+### Identifiers Model
+
+### Fixed
+
+- Fixed `scryfallOracleId` not appearing on some cards
+
+#### Added
+
+- Added `mtgjsonFoilVersionId` optional property
+- Added `mtgjsonNonFoilVersionId` optional property
+
+### Set Model
+
+#### Fixed
+
+- Fixed `translations` not having values
+
+#### Added
+
+- Added `languages` property
+- Added `tokenSetCode` optional property
+
+### Misc
+
+- MTGJSON dropped support for Python 3.6
+- MTGJSON added support for Python 3.11
+
 ## 5.2.0
 
 Release Date: 2021-12-20
@@ -27,7 +88,7 @@ Release Date: 2021-12-20
 
 **Welcome to v5.2.0!** With this update we've added a lot of new Card data model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
 
-We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them, MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
+We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them. MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 

@@ -68,7 +68,7 @@ The Set data model describes the properties of an individual Set.
 > The [Cardsphere](https://www.cardsphere.com/) set identifier.
 >
 > - **Type:** `number`
-> - **Introduced:** `v5.2.1 (Preview)`
+> - **Introduced:** `v5.2.1 `
 
 > ### code
 >
@@ -132,6 +132,13 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.2`
+
+> ### languages
+>
+> Languages the set was printed in.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
 
 > ### mcmId <i class="optional"></i>
 >
@@ -202,6 +209,13 @@ The Set data model describes the properties of an individual Set.
 >
 > - **Type:** `CardToken[]`
 > - **Introduced:** `v4.0.0`
+
+> ### tokenSetCode <i class="optional"></i>
+>
+> The tokens set code.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
 
 > ### totalSetSize
 >

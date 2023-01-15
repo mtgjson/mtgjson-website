@@ -15,6 +15,8 @@ export type CardAtomic = {
         
   edhrecRank?: number;
         
+  edhrecSaltiness?: number;
+        
   faceConvertedManaCost?: number;
         
   faceManaValue?: number;
@@ -57,11 +59,11 @@ export type CardAtomic = {
         
   purchaseUrls: PurchaseUrls;
         
-  relatedCards?: RelatedCards;
-        
   rulings: Rulings[];
         
   side?: string;
+        
+  subset?: string[];
         
   subtypes: string[];
         
@@ -106,6 +108,8 @@ export type CardDeck = {
   duelDeck?: string;
         
   edhrecRank?: number;
+        
+  edhrecSaltiness?: number;
         
   faceConvertedManaCost?: number;
         
@@ -223,6 +227,8 @@ export type CardDeck = {
         
   signature?: string;
         
+  subset?: string[];
+        
   subtypes: string[];
         
   supertypes: string[];
@@ -268,6 +274,8 @@ export type CardSet = {
   convertedManaCost: number;
         
   edhrecRank?: number;
+        
+  edhrecSaltiness?: number;
         
   faceConvertedManaCost?: number;
         
@@ -383,6 +391,8 @@ export type CardSet = {
         
   signature?: string;
         
+  subset?: string[];
+        
   subtypes: string[];
         
   supertypes: string[];
@@ -481,6 +491,8 @@ export type CardToken = {
         
   signature?: string;
         
+  subset?: string[];
+        
   subtypes: string[];
         
   supertypes: string[];
@@ -567,11 +579,15 @@ export type Identifiers = {
         
   mtgArenaId?: string;
         
+  mtgjsonFoilVersionId?: string;
+        
+  mtgjsonNonFoilVersionId?: string;
+        
+  mtgjsonV4Id?: string;
+        
   mtgoFoilId?: string;
         
   mtgoId?: string;
-        
-  mtgjsonV4Id?: string;
         
   multiverseId?: string;
         
@@ -673,6 +689,8 @@ export type PurchaseUrls = {
   
 export type RelatedCards = {
   
+  reverseRelated: string[];
+        
   spellbook: string[];
         
 }
@@ -729,6 +747,8 @@ export type Set = {
         
   keyruneCode: string;
         
+  languages: string[];
+        
   mcmId?: number;
         
   mcmIdExtras?: number;
@@ -748,6 +768,8 @@ export type Set = {
   tcgplayerGroupId?: number;
         
   tokens: CardToken[];
+        
+  tokenSetCode?: string;
         
   totalSetSize: number;
         

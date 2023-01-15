@@ -18,10 +18,6 @@ yarn-error.log*
 # Node modules
 node_modules/
 
-# Builds
-dist/
-.temp/
-
 # Utility testing output
 utils/output/**/*.*
 
@@ -42,5 +38,7 @@ logo/
 # MTGSJON Brand Assets
 MTGJSON-Brand-Assets/
 
-# Lunr
-lunr_index.js
+# Vitepress
+dist/
+.temp/
+docs/.vitepress/cache/
