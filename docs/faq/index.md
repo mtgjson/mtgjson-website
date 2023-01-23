@@ -48,6 +48,8 @@ Here is a list of frequently asked questions from our users since some data can 
 > ### How often is the data updated?
 >
 > Builds kick off at **2:00PM ET** taking between 4-5 hours to complete and go live at **7:00PM ET**.
+>
+> **Note:** These time may be adjusted to compensate upstream issues and may not be accurately reflected here.
 
 > ### How can I verify the downloaded files?
 >

@@ -11,6 +11,7 @@
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 import { useStore } from '../store.js';
+import type { TMeta } from '../types';
 
 type Props = {
   type: string;
@@ -26,13 +27,18 @@ const store = useStore();
 const showAll = ref<boolean>(false);
 
 const allEnums = computed<object>((): object => store.EnumValues);
+const metaFakeEnums = computed<TMeta>((): TMeta => store.Meta);
 const thisEnum = computed<object>((): object => allEnums.value[frontmatter.value.enum]);
-const enums = computed<string[]>((): string[] => {
+const enums = computed<string[] | string>((): string[] | string => {
+  if ( metaFakeEnums.value && frontmatter.value.enum === 'meta') {
+    return [ metaFakeEnums.value[props.type] ];
+  }
+
   if (thisEnum.value && thisEnum.value[props.type]) {
     return thisEnum.value[props.type];
-  } else {
-    return [];
   }
+
+  return [];
 });
 
 const toggleShowAll = (): void => {

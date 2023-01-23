@@ -21,7 +21,7 @@ main.home
       ul
         li
           h3 Portable Formats
-          p With various formats available at our <a href="https://mtgjson.com/api/v5/">File&nbsp;Server</a> you can download JSON, CSV's and even Databases.
+          p With various formats available at our <a href="https://mtgjson.com/api/v5/">"API-like" server</a>, you can download JSON, CSV's and even databases.
         li
           h3 Daily Updates
           p MTGJSON files are built daily so you can keep your projects in sync as new cards, sets, rules, and other updates are added.
@@ -38,13 +38,13 @@ main.home
           p Learn about all data property names and values, even optional properties and enumerations.
         li
           h3 Simplified Searching
-          p We index all documentation so searching is naturally simple. Search for anything and get immediate results.
+          p We index all documentation so searching is naturally easy. Search for anything and get immediate results.
         li
           h3 TypeScript Notations
           p View the TypeScript types of each data model and help keep your code type safe.
         li
           h3 Direct Downloads
-          p While you can use the File Server to locate downloads we provide a simple <a href="/downloads/all-files/">User&nbsp;Interface</a> to get the files you need.
+          p You can use remotely fetch files but we also provide a <a href="/downloads/all-files/">simple interface</a> to get the files as needed.
 
       a(href="/getting-started/")
         button.cta-btn.light Get Started Now

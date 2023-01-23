@@ -29,7 +29,7 @@ MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https
 
 ### Formats
 
-Formats are provided via a file server and not a true API. JSON can be fetched in your code but many of the files are extremely large in size so it is not recommended to open links in your browser.
+Formats are provided via an "API-like" server. JSON can be fetched in your code, but many of the files are extremely large in size so it is not recommended to open links in your browser.
 
 - **JSON**
 - **CSV**

@@ -72,6 +72,7 @@
   --table-heading-color: var(--dark-1-color);
   --table-bg-color: var(--dark-color);
   --table-border-color: var(--dark-color);
+  --pre-bg-color: var(--gray-4-color);
   --code-bg-color: var(--gray-4-color);
   --code-text-color: var(--yellow-color);
 
@@ -85,6 +86,7 @@
   --supporter-rare-color: var(--yellow-color);
   --supporter-uncommon-color: var(--gray-3-color);
   --version-color: var(--gray-3-color);
+  --download-details-text-color: var(--gray-3-color);
 }
 
 body {
@@ -117,8 +119,9 @@ body {
     --table-bg-color: var(--light-color);
     --table-border-color: var(--gray-2-color);
     --table-heading-color: var(--light-color);
-    --code-bg-color: var(--gray-2-color);
-    --code-text-color: var(--dark-1-color);
+    // --pre-bg-color: var(--gray-4-color);
+    // --code-bg-color: var(--gray-4-color);
+    // --code-text-color: var(--dark-1-color);
 
     // Misc
     --spoiler-color: var(--yellow-dark-2-color);
@@ -128,6 +131,7 @@ body {
     --attribute-standard-color: var(--dark-color);
     --header-border-color: var(--gray-3-color);
     --version-color: var(--gray-5-color);
+    --download-details-text-color: var(--gray-5-color);
 
     // Set base theme CSS
     background-color: var(--gray-1-color);

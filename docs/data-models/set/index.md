@@ -68,7 +68,7 @@ The Set data model describes the properties of an individual Set.
 > The [Cardsphere](https://www.cardsphere.com/) set identifier.
 >
 > - **Type:** `number`
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### code
 >
@@ -135,9 +135,10 @@ The Set data model describes the properties of an individual Set.
 
 > ### languages
 >
-> Languages the set was printed in.
+> The languages the set was printed in.
 >
 > - **Type:** `string[]`
+> - <ExampleField type='languages'/>
 > - **Introduced:** `v5.2.1`
 
 > ### mcmId <i class="optional"></i>

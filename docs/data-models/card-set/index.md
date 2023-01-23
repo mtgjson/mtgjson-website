@@ -54,7 +54,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
 >
 > - **Type:** `string[]`
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### availability
 >
@@ -70,7 +70,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### borderColor
 >
@@ -359,7 +359,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### layout
 >
@@ -422,7 +422,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### number
 >
-> The number of the card. Cards can be prefixed or suffixed with a `*` or other characters for promotional qualities.
+> The number of the card. Cards can have a variety of numbers, letters and/or symbols for promotional qualities.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

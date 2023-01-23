@@ -381,7 +381,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### layout
 >
@@ -444,7 +444,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### number
 >
-> The number of the card. Cards can be prefixed or suffixed with a `*` or other characters for promotional qualities.
+> The number of the card. Cards can have a variety of numbers, letters and/or symbols for promotional qualities.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

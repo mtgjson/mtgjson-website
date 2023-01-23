@@ -27,12 +27,12 @@ The All Prices abstract model describes a list of card prices based on a Card UU
 MTGJSON currently has affiliated with the following price providers to keep a **limited** history of price data. The following are examples of game formats and price providers:
 
 - `paper`
-  - `cardkingdom` &DoubleRightArrow; [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
-  - `cardmarket` &DoubleRightArrow; [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson)
-  - `cardsphere` &DoubleRightArrow; [Cardsphere](https://www.cardsphere.com/)
-  - `tcgplayer` &DoubleRightArrow; [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson)
+  - `cardkingdom`: [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson)
+  - `cardmarket`: [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson)
+  - `cardsphere`: [Cardsphere](https://www.cardsphere.com/)
+  - `tcgplayer`: [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson)
 - `mtgo`
-  - `cardhoarder` &DoubleRightArrow; [Cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
+  - `cardhoarder`: [Cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
 ## Model Overview
 

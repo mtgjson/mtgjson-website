@@ -43,6 +43,7 @@ TBD
 - Added `attractionLights` optional property to Card (Atomic), Card (Deck), and Card (Set)
 - Added `edhrecSaltiness` optional property to Card (Atomic), Card (Deck), and Card (Set)
 - Added `isFunny` optional property to Card (Atomic)
+- Added `language` proptery to Card (Deck), Card (Set), and Card (Token)
 - Added `relatedCards` property to Card (Deck), Card (Set), and Card (Token)
 - Added `subset` optional property for the Secret Lair Drop printing name to all Card models
 
@@ -98,7 +99,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 - Changed File models within the documentation and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed
 
-### Card Models
+### Card Model
 
 #### Fixed
 

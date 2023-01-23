@@ -15,36 +15,32 @@
     p.results-message Showing {{ resultsLength }} of {{ resultsTotalLength }} Results
     blockquote(v-for="(item, key) in list", :key="key")
       .download-wrap
-        .img-wrap
-          div(
-            v-if="item.keyruneCode",
-            :class="`ss ss-${item.keyruneCode.toLowerCase()}`"
-          )
-          div(
-            v-else-if="item.code",
-            :class="`ss ss-${item.code.toLowerCase()}`"
-          )
         .text-wrap
           .text-wrap--details
+            .text-wrap--details-img
+              div(
+                v-if="item.keyruneCode",
+                :class="`ss ss-${item.keyruneCode.toLowerCase()}`"
+              )
+              div(
+                v-else-if="item.code",
+                :class="`ss ss-${item.code.toLowerCase()}`"
+              )
             h3 {{ item.name }}
             ol.tags
               li(v-if="item.isPartialPreview")
-                .tag.preview Preview
+                .tag.preview(title="Only partial data is available") Preview
               li(v-if="item.isOnlineOnly")
                 .tag.online-only Online Only
               li(v-if="item.isPaperOnly")
                 .tag.paper-only Paper Only
-              li(v-if="item.isPaper")
-                .tag.paper Paper
-              li(v-if="item.isOnline")
-                .tag.online Online
             ol.details
-              li
-                small Code:
-                small &nbsp;{{ item.code }}
               li
                 small Type:
                 small &nbsp;{{ item.type.replace(/_/g, ' ') }}
+              li
+                small Code:
+                small &nbsp;{{ item.code }}
               li
                 small Release Date:
                 small &nbsp;{{ formatDateToPretty(item.releaseDate) }}
@@ -197,10 +193,12 @@ onMounted(async (): Promise<void> => {
 
     .text-wrap {
       flex: 1;
+      padding-bottom: 0.75rem;
 
       h3 {
         margin-top: 0;
         line-height: 1.5rem;
+        margin-bottom: 0.5rem;
       }
 
       p {
@@ -216,15 +214,34 @@ onMounted(async (): Promise<void> => {
         &.details {
           margin-top: 0.5rem;
 
+          li {
+            small {
+              &:first-of-type {
+                color: var(--download-details-text-color);
+              }
+            }
+          }
+
           .tag {
             background-color: var(--yellow-color);
             color: var(--dark-color);
-            margin-right: 5px;
+            margin-left: 5px;
 
             @extend %code-block;
 
             font-family: var(--font-base);
+
+            &:first-of-type {
+              margin-left: 0;
+            }
           }
+        }
+
+        &.tags {
+          margin-top: 0;
+          position: absolute;
+          right: 1rem;
+          bottom: 1rem;
         }
 
         li {
@@ -252,6 +269,18 @@ onMounted(async (): Promise<void> => {
 
       &--download--btn-wrap {
         display: block !important;
+      }
+
+      &--details {
+        &-img {
+          float: left;
+          margin-right: 1rem;
+
+          .ss {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+          }
+        }
       }
     }
   }

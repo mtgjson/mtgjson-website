@@ -63,7 +63,7 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='boosterTypes'/>
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### borderColor
 >
@@ -222,14 +222,14 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v5.2.1 `
+> - **Introduced:** `v5.2.1`
 
 > ### layout
 >
 > The type of card layout. For a Card (Token), this will only ever be `"token"`.
 >
 > - **Type:** `string`
-> - **Example:** `"token"`
+> - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
 > ### loyalty <i class="optional"></i>
@@ -249,7 +249,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### number
 >
-> The number of the card. Cards can be prefixed or suffixed with a `*` or other characters for promotional qualities.
+> The number of the card. Cards can have a variety of numbers, letters and/or symbols for promotional qualities.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
