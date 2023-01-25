@@ -141,6 +141,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
+> ### firstPrinting <i class="optional"></i>
+>
+> The set code the card was first printed in.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
+
 > ### foreignData
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.

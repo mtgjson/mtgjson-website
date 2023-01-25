@@ -1,0 +1,287 @@
+
+  <?xml version="1.0" encoding="utf-8"?>
+  <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+    <channel>
+      <title>MTGJSON: Portable formats for all Magic: The Gathering data</title>
+      <link>https://mtgjson.com</link>
+      <description>MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.</description>
+      <lastBuildDate>Wed, 25 Jan 2023 04:32:49 GMT</lastBuildDate>
+      <docs>http://blogs.law.harvard.edu/tech/rss</docs>
+      <atom:link href="https://mtgjson.com/atom.xml" rel="self" type="application/rss+xml"/>
+    
+      <item>
+        <title><![CDATA[Abstract Models]]></title>
+        <link>https://mtgjson.com/abstract-models/</link>
+        <guid>https://mtgjson.com/abstract-models/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[All Prices]]></title>
+        <link>https://mtgjson.com/abstract-models/all-prices/</link>
+        <guid>https://mtgjson.com/abstract-models/all-prices/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Booster]]></title>
+        <link>https://mtgjson.com/abstract-models/booster/</link>
+        <guid>https://mtgjson.com/abstract-models/booster/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Card Types]]></title>
+        <link>https://mtgjson.com/abstract-models/card-types/</link>
+        <guid>https://mtgjson.com/abstract-models/card-types/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Enum Values]]></title>
+        <link>https://mtgjson.com/abstract-models/enum-values/</link>
+        <guid>https://mtgjson.com/abstract-models/enum-values/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Brand Assets]]></title>
+        <link>https://mtgjson.com/brand-assets/</link>
+        <guid>https://mtgjson.com/brand-assets/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Changelogs]]></title>
+        <link>https://mtgjson.com/changelogs/</link>
+        <guid>https://mtgjson.com/changelogs/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[MTGGraphQL Changelog]]></title>
+        <link>https://mtgjson.com/changelogs/mtggraphql/</link>
+        <guid>https://mtgjson.com/changelogs/mtggraphql/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[MTGJSON Changelog]]></title>
+        <link>https://mtgjson.com/changelogs/mtgjson-v5/</link>
+        <guid>https://mtgjson.com/changelogs/mtgjson-v5/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Data Models]]></title>
+        <link>https://mtgjson.com/data-models/</link>
+        <guid>https://mtgjson.com/data-models/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Card (Atomic)]]></title>
+        <link>https://mtgjson.com/data-models/card-atomic/</link>
+        <guid>https://mtgjson.com/data-models/card-atomic/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Card (Deck)]]></title>
+        <link>https://mtgjson.com/data-models/card-deck/</link>
+        <guid>https://mtgjson.com/data-models/card-deck/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Card (Set)]]></title>
+        <link>https://mtgjson.com/data-models/card-set/</link>
+        <guid>https://mtgjson.com/data-models/card-set/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Card (Token)]]></title>
+        <link>https://mtgjson.com/data-models/card-token/</link>
+        <guid>https://mtgjson.com/data-models/card-token/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Deck]]></title>
+        <link>https://mtgjson.com/data-models/deck/</link>
+        <guid>https://mtgjson.com/data-models/deck/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Deck List]]></title>
+        <link>https://mtgjson.com/data-models/deck-list/</link>
+        <guid>https://mtgjson.com/data-models/deck-list/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Foreign Data]]></title>
+        <link>https://mtgjson.com/data-models/foreign-data/</link>
+        <guid>https://mtgjson.com/data-models/foreign-data/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Identifiers]]></title>
+        <link>https://mtgjson.com/data-models/identifiers/</link>
+        <guid>https://mtgjson.com/data-models/identifiers/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Keywords]]></title>
+        <link>https://mtgjson.com/data-models/keywords/</link>
+        <guid>https://mtgjson.com/data-models/keywords/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Leadership Skills]]></title>
+        <link>https://mtgjson.com/data-models/leadership-skills/</link>
+        <guid>https://mtgjson.com/data-models/leadership-skills/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Legalities]]></title>
+        <link>https://mtgjson.com/data-models/legalities/</link>
+        <guid>https://mtgjson.com/data-models/legalities/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Meta]]></title>
+        <link>https://mtgjson.com/data-models/meta/</link>
+        <guid>https://mtgjson.com/data-models/meta/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Purchase Urls]]></title>
+        <link>https://mtgjson.com/data-models/purchase-urls/</link>
+        <guid>https://mtgjson.com/data-models/purchase-urls/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Related Cards]]></title>
+        <link>https://mtgjson.com/data-models/related-cards/</link>
+        <guid>https://mtgjson.com/data-models/related-cards/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Rulings]]></title>
+        <link>https://mtgjson.com/data-models/rulings/</link>
+        <guid>https://mtgjson.com/data-models/rulings/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Sealed Product]]></title>
+        <link>https://mtgjson.com/data-models/sealed-product/</link>
+        <guid>https://mtgjson.com/data-models/sealed-product/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Set]]></title>
+        <link>https://mtgjson.com/data-models/set/</link>
+        <guid>https://mtgjson.com/data-models/set/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Set List]]></title>
+        <link>https://mtgjson.com/data-models/set-list/</link>
+        <guid>https://mtgjson.com/data-models/set-list/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Tcgplayer Skus]]></title>
+        <link>https://mtgjson.com/data-models/tcgplayer-skus/</link>
+        <guid>https://mtgjson.com/data-models/tcgplayer-skus/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Translations]]></title>
+        <link>https://mtgjson.com/data-models/translations/</link>
+        <guid>https://mtgjson.com/data-models/translations/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Downloads]]></title>
+        <link>https://mtgjson.com/downloads/</link>
+        <guid>https://mtgjson.com/downloads/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[All Decks]]></title>
+        <link>https://mtgjson.com/downloads/all-decks/</link>
+        <guid>https://mtgjson.com/downloads/all-decks/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[All Files]]></title>
+        <link>https://mtgjson.com/downloads/all-files/</link>
+        <guid>https://mtgjson.com/downloads/all-files/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[All Sets]]></title>
+        <link>https://mtgjson.com/downloads/all-sets/</link>
+        <guid>https://mtgjson.com/downloads/all-sets/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Frequently Asked Questions]]></title>
+        <link>https://mtgjson.com/faq/</link>
+        <guid>https://mtgjson.com/faq/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[Getting Started]]></title>
+        <link>https://mtgjson.com/getting-started/</link>
+        <guid>https://mtgjson.com/getting-started/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[null]]></title>
+        <link>https://mtgjson.com/</link>
+        <guid>https://mtgjson.com/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[MTGJSON License]]></title>
+        <link>https://mtgjson.com/license/</link>
+        <guid>https://mtgjson.com/license/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+      <item>
+        <title><![CDATA[MTGGraphQL]]></title>
+        <link>https://mtgjson.com/mtggraphql/</link>
+        <guid>https://mtgjson.com/mtggraphql/</guid>
+        <pubDate>Wed, 25 Jan 2023 04:32:49 GMT</pubDate>
+      </item>
+      
+    </channel>
+  </rss>
+    

@@ -23,6 +23,8 @@ export type CardAtomic = {
         
   faceName?: string;
         
+  firstPrinting?: string;
+        
   foreignData: ForeignData[];
         
   hand?: string;

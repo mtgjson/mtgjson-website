@@ -272,7 +272,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 
 > ### isAlternative <i class="optional"></i>
 >
-> If the card is an alternate variation to an original printing.
+> If the card is an alternate variation to a printing in this set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.2.0`
@@ -340,9 +340,11 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
 
-> ### isStarter <i class="optional"></i>
+> ### isStarter <i class="deprecated"></i><i class="optional"></i>
 >
 > If the card is found in a starter deck such as a Planeswalker/Brawl deck.
+>
+> _This poprerty is deprecated and no longer provides any useful information._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`

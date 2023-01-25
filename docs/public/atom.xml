@@ -1,0 +1,285 @@
+
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <id>urn:uuid:ee452dfc-7b0a-471e-bc8b-885e3358f3f7</id>
+  <title>MTGJSON: Portable formats for all Magic: The Gathering data</title>
+  <subtitle>MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.</subtitle>
+  <updated>2023-01-25T04:32:49.706Z</updated>
+  <link rel="alternate" href="https://mtgjson.com"/>
+  <link rel="self" href="https://mtgjson.com/atom.xml"/>
+    
+  <entry>
+    <title type="html">Abstract Models</title>
+    <id>urn:uuid:37453e96-001f-4ed2-84bd-3e665ab93d65</id>
+    <link href="https://mtgjson.com/abstract-models/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">All Prices</title>
+    <id>urn:uuid:47f101cd-ad50-47ea-bd3b-61bd400284fd</id>
+    <link href="https://mtgjson.com/abstract-models/all-prices/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Booster</title>
+    <id>urn:uuid:8f33826a-e705-4faa-b624-9898644a775d</id>
+    <link href="https://mtgjson.com/abstract-models/booster/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Card Types</title>
+    <id>urn:uuid:89437a54-85e6-46e3-8ed0-344d4ef88519</id>
+    <link href="https://mtgjson.com/abstract-models/card-types/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Enum Values</title>
+    <id>urn:uuid:3434c056-a599-4e00-b106-0c2970d87422</id>
+    <link href="https://mtgjson.com/abstract-models/enum-values/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Brand Assets</title>
+    <id>urn:uuid:8d5d08ae-51a6-48d3-946e-e15f7d2e4d1c</id>
+    <link href="https://mtgjson.com/brand-assets/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Changelogs</title>
+    <id>urn:uuid:2abb3fc7-4377-4a01-a8ce-be0c6fea45de</id>
+    <link href="https://mtgjson.com/changelogs/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">MTGGraphQL Changelog</title>
+    <id>urn:uuid:df9a4188-c573-4b6f-ad5a-6084b95c88b5</id>
+    <link href="https://mtgjson.com/changelogs/mtggraphql/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">MTGJSON Changelog</title>
+    <id>urn:uuid:3216de8c-a46d-4e44-a3e8-080ccfc6fbe5</id>
+    <link href="https://mtgjson.com/changelogs/mtgjson-v5/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Data Models</title>
+    <id>urn:uuid:d35bd240-52ba-4f7f-ae49-180f86fcb695</id>
+    <link href="https://mtgjson.com/data-models/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Card (Atomic)</title>
+    <id>urn:uuid:9c696c46-068f-4e1b-aa6a-8e927bddc254</id>
+    <link href="https://mtgjson.com/data-models/card-atomic/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Card (Deck)</title>
+    <id>urn:uuid:f92fe90d-0b60-48d3-b851-c18b1f2e7c3e</id>
+    <link href="https://mtgjson.com/data-models/card-deck/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Card (Set)</title>
+    <id>urn:uuid:add3b523-12d3-4955-8659-1ea11e3626ca</id>
+    <link href="https://mtgjson.com/data-models/card-set/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Card (Token)</title>
+    <id>urn:uuid:289effa3-0c22-4b93-b9cd-1adf144ea4df</id>
+    <link href="https://mtgjson.com/data-models/card-token/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Deck</title>
+    <id>urn:uuid:c4c75362-b787-4b0d-889f-f5d791d2a41c</id>
+    <link href="https://mtgjson.com/data-models/deck/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Deck List</title>
+    <id>urn:uuid:02682046-3990-4de9-8f5b-45c68d52d5e7</id>
+    <link href="https://mtgjson.com/data-models/deck-list/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Foreign Data</title>
+    <id>urn:uuid:4cd29a30-a7c2-47eb-8056-ee86b9812f79</id>
+    <link href="https://mtgjson.com/data-models/foreign-data/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Identifiers</title>
+    <id>urn:uuid:9d214f83-bea6-4f81-9c3a-376214e991ff</id>
+    <link href="https://mtgjson.com/data-models/identifiers/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Keywords</title>
+    <id>urn:uuid:b89af2a6-8e16-423c-b402-7572fc89dd37</id>
+    <link href="https://mtgjson.com/data-models/keywords/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Leadership Skills</title>
+    <id>urn:uuid:09c94e0a-45aa-43a4-9c9b-595bf34f3fb8</id>
+    <link href="https://mtgjson.com/data-models/leadership-skills/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Legalities</title>
+    <id>urn:uuid:dfa30bfc-2f68-42da-b5b9-b8cc518d336b</id>
+    <link href="https://mtgjson.com/data-models/legalities/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Meta</title>
+    <id>urn:uuid:bc0add7a-a6f2-464e-b1ab-5ad673d3ad77</id>
+    <link href="https://mtgjson.com/data-models/meta/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Purchase Urls</title>
+    <id>urn:uuid:139e8536-e2d8-435a-852a-c8bb13e08913</id>
+    <link href="https://mtgjson.com/data-models/purchase-urls/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Related Cards</title>
+    <id>urn:uuid:b9acc442-df34-4785-b999-d2ea7e3f38ec</id>
+    <link href="https://mtgjson.com/data-models/related-cards/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Rulings</title>
+    <id>urn:uuid:dfceac22-fcfd-4f8b-89ef-d0803b419227</id>
+    <link href="https://mtgjson.com/data-models/rulings/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Sealed Product</title>
+    <id>urn:uuid:d2e1572e-bff5-4278-95c7-e8551cd04332</id>
+    <link href="https://mtgjson.com/data-models/sealed-product/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Set</title>
+    <id>urn:uuid:400e5b67-dd0f-42e1-a20d-0814564cbada</id>
+    <link href="https://mtgjson.com/data-models/set/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Set List</title>
+    <id>urn:uuid:36630d56-9f87-4d5f-a7c7-83c36845d197</id>
+    <link href="https://mtgjson.com/data-models/set-list/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Tcgplayer Skus</title>
+    <id>urn:uuid:79cbaca2-d9ec-4374-a369-4d82e0c0e39a</id>
+    <link href="https://mtgjson.com/data-models/tcgplayer-skus/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Translations</title>
+    <id>urn:uuid:0e0193ea-415d-4879-98a9-007fb79e6ae8</id>
+    <link href="https://mtgjson.com/data-models/translations/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Downloads</title>
+    <id>urn:uuid:f99974ac-3b50-4918-b953-66e674759b5e</id>
+    <link href="https://mtgjson.com/downloads/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">All Decks</title>
+    <id>urn:uuid:4c8c5d5a-6b87-4c01-8255-7e35d614f106</id>
+    <link href="https://mtgjson.com/downloads/all-decks/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">All Files</title>
+    <id>urn:uuid:c0b67860-6525-440c-ab79-b0ddbb7cd044</id>
+    <link href="https://mtgjson.com/downloads/all-files/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">All Sets</title>
+    <id>urn:uuid:d53b50f7-7837-473b-934d-f6d2b30b17c9</id>
+    <link href="https://mtgjson.com/downloads/all-sets/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Frequently Asked Questions</title>
+    <id>urn:uuid:be247666-874c-4690-a698-0a5935201bd1</id>
+    <link href="https://mtgjson.com/faq/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">Getting Started</title>
+    <id>urn:uuid:881bcd67-c7ed-407d-8532-dd724df63daf</id>
+    <link href="https://mtgjson.com/getting-started/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">null</title>
+    <id>urn:uuid:9023ee78-c136-4aaf-8edd-bce98ebf3dfb</id>
+    <link href="https://mtgjson.com/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">MTGJSON License</title>
+    <id>urn:uuid:b9e89058-ffc7-4c52-8149-e30a3f6eebfa</id>
+    <link href="https://mtgjson.com/license/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+  <entry>
+    <title type="html">MTGGraphQL</title>
+    <id>urn:uuid:10f256b0-38f4-4234-9df4-2f80ef6b8e91</id>
+    <link href="https://mtgjson.com/mtggraphql/"/>
+    <updated>2023-01-25T04:32:49.706Z</updated>
+  </entry>
+      
+</feed>
+    

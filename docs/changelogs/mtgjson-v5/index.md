@@ -29,7 +29,7 @@ TBD
 
 ### Card Model
 
-### Fixed
+#### Fixed
 
 - Fixed some cards showing side `b` for both faces of a card
 - Fixed "meld" cards in The Brothers' War (`BRO`) set
@@ -42,10 +42,15 @@ TBD
 
 - Added `attractionLights` optional property to Card (Atomic), Card (Deck), and Card (Set)
 - Added `edhrecSaltiness` optional property to Card (Atomic), Card (Deck), and Card (Set)
+- Added `firstPrinting` optional property to Card (Atomic)
 - Added `isFunny` optional property to Card (Atomic)
 - Added `language` proptery to Card (Deck), Card (Set), and Card (Token)
 - Added `relatedCards` property to Card (Deck), Card (Set), and Card (Token)
-- Added `subset` optional property for the Secret Lair Drop printing name to all Card models
+- Added `subset` optional property to all Card models
+
+#### Deprecated
+
+- Deprecated `isStarter` as it provides no useful data. Will be removed in `v5.3.0`
 
 ### Related Cards Model (New)
 

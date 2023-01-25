@@ -38,7 +38,7 @@ main.home
           p Learn about all data property names and values, even optional properties and enumerations.
         li
           h3 Simplified Searching
-          p We index all documentation so searching is naturally easy. Search for anything and get immediate results.
+          p We index all documentation so searching is a breeze. Search for anything and get immediate results.
         li
           h3 TypeScript Notations
           p View the TypeScript types of each data model and help keep your code type safe.
