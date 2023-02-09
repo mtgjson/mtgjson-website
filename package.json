@@ -10,7 +10,7 @@
   "scripts": {
     "dev": "run-p lint:js:watch local",
     "local": "npm run check:version && npm run generate:static && vitepress dev docs",
-    "build": "npm run generate:static && vitepress build docs",
+    "build": "npm run generate:types && npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
@@ -19,7 +19,6 @@
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
     "check:version": "node ./check-version.js",
-    "generate:static": "npm run generate:feeds && npm run generate:types && npm run generate:contributors",
     "generate:contributors": "node ./node_modules/.bin/babel-node ./util/generate-contributors.js",
     "generate:feeds": "node ./node_modules/.bin/babel-node ./util/generate-feeds.js",
     "generate:types": "node ./node_modules/.bin/babel-node ./util/generate-types.js"

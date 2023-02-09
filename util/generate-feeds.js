@@ -39,7 +39,7 @@ const generateJSON = async () => {
       });
     });
 
-    fs.writeFileSync(`./docs/public/${JSON_FILE_NAME}`, JSON.stringify(json));
+    fs.writeFileSync(`./docs/.vitepress/dist/${JSON_FILE_NAME}`, JSON.stringify(json));
   } catch (err) {
     console.error(err);
   }
@@ -78,7 +78,7 @@ const generateXML = async () => {
 
     const xml = xmlStart + xmlMid + xmlEnd;
 
-    fs.writeFileSync(`./docs/public/${XML_FILE_NAME}`, xml);
+    fs.writeFileSync(`./docs/.vitepress/dist/${XML_FILE_NAME}`, xml);
   } catch (err) {
     console.error(err);
   }
@@ -119,7 +119,7 @@ const generateRSS = async () => {
 
     const rss = rssStart + rssMid + rssEnd;
 
-    fs.writeFileSync(`./docs/public/${RSS_FILE_NAME}`, rss);
+    fs.writeFileSync(`./docs/.vitepress/dist/${RSS_FILE_NAME}`, rss);
   } catch (err) {
     console.error(err);
   }
@@ -156,7 +156,7 @@ const generateATOM = async () => {
   </entry>
 </feed>`;
 
-    fs.writeFileSync(`./docs/public/${ATOM_FILE_NAME}`, atom);
+    fs.writeFileSync(`./docs/.vitepress/dist/${ATOM_FILE_NAME}`, atom);
   } catch (err) {
     console.error(err);
   }
