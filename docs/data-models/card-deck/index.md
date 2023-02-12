@@ -344,7 +344,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 >
 > If the card is found in a starter deck such as a Planeswalker/Brawl deck.
 >
-> _This poprerty is deprecated and no longer provides any useful information._
+> _This property is deprecated and no longer provides any useful information._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
