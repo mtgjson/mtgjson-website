@@ -34,6 +34,7 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 #### Added
 
 - Added `attractionLights` optional property to [Card (Atomic)](/data-models/card-atomic/#attractionlights), [Card (Deck)](/data-models/card-deck/#attractionlights), and [Card (Set)](/data-models/card-set/#attractionlights)
+- Added `boosterTypes` optional property to [Card (Deck)](/data-models/card-deck/#boostertypes) and [Card (Set)](/data-models/card-set/#boostertypes)
 - Added `edhrecSaltiness` optional property to [Card (Atomic)](/data-models/card-atomic/#edhrecsaltiness), [Card (Deck)](/data-models/card-deck/#edhrecsaltiness), and [Card (Set)](/data-models/card-set/#edhrecsaltiness)
 - Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card-atomic/#firstprinting)
 - Added `foreignData` optional property to [Card (Atomic)](/data-models/card-atomic/#foreigndata)
