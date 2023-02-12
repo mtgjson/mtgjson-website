@@ -25,7 +25,7 @@ Release Date: 2023-02-12
 
 ### Announcements
 
-With this release of MTGGraphQL we've stablized the application and finally added prices! Become a patron today at our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> and get access to our GraphQL service.
+With this release of MTGGraphQL we've stablized the application and added prices! Become a patron today at our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> and get access to our [MTGGraphQL](/mtggraphql/) service.
 
 ### Prices (New)
 
