@@ -98,7 +98,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card-token/#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
