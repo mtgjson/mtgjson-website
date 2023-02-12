@@ -15,7 +15,7 @@ head:
       content: mtg, magic the gathering, mtgjson, json, mtgjson v5 changelog, changelog
 ---
 
-# MTGJSON Changelog
+# MTGJSON v5 Changelog
 
 The following is the MTGJSON v5 Changelog. Some parts may be updated for clarity or corrections at any point.
 
