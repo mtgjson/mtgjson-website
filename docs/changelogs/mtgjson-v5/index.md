@@ -112,9 +112,9 @@ This new Data Model encapsulates data related to cards that are connected to oth
 
 #### Added
 
-- Added `language` property to `card` model
-- Added `boosterTypes` property to `card` model
-- Added `condition`, `finishes`, `language`, and `printing` to new `tcgplayerSkus` model
+- Added `language` property to `card` property
+- Added `boosterTypes` property to `card` property
+- Added `condition`, `finishes`, `language`, and `printing` properties to a new `tcgplayerSkus` property
 
 ### Misc
 

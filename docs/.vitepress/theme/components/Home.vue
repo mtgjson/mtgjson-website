@@ -21,7 +21,7 @@ main.home
       ul
         li
           h3 Portable Formats
-          p With various formats available at our <a href="https://mtgjson.com/api/v5/">"API-like" server</a>, you can download JSON, CSV's and even databases.
+          p You can download our data in your favorite format from our <a href="https://mtgjson.com/api/v5/">"API-like" server</a>. We support JSON, CSV's, and even database files.
         li
           h3 Daily Updates
           p MTGJSON files are built daily so you can keep your projects in sync as new cards, sets, rules, and other updates are added.
@@ -30,7 +30,7 @@ main.home
           p We keep a <strong>limited</strong> history of all card prices provided by our wonderful partners to help further power your projects.
         li
           h3 MTGGraphQL
-          p Get access to our GraphQL API and utilize data more with flexibility. <strong>Currently in beta and only available to Patreon members.</strong>
+          p Get access to our GraphQL API and utilize data more with flexibility. <strong>Currently in beta and only available to Patreon subscribers.</strong>
 
       ul
         li
