@@ -18,7 +18,7 @@
     "lint:js": "esw --fix --ext .ts,.js,.vue docs/.vitepress",
     "lint:md": "markdownlint -c .markdownlint.jsonc docs/**/*.md",
     "lint": "npm run lint:js && npm run lint:md",
-    "check:version": "node ./check-version.js",
+    "check:version": "node ./util/check-version.js",
     "generate:contributors": "node ./node_modules/.bin/babel-node ./util/generate-contributors.js",
     "generate:feeds": "node ./node_modules/.bin/babel-node ./util/generate-feeds.js",
     "generate:types": "node ./node_modules/.bin/babel-node ./util/generate-types.js"

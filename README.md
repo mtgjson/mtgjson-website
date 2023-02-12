@@ -52,7 +52,7 @@ Run all tests.
 npm run test
 ```
 
-or run all the tests and a test build.
+Run all tests and a test build.
 
 ```
 npm run test:full
@@ -62,7 +62,7 @@ npm run test:full
 
 Build out the entire site as a static project.
 
-**Note:** This is done via the GitHub Action and pushed to a Release Tag so no need to do this unless you are testing the actual build. Additionally, when submitting a PR, Heroku will deploy an environment to test your Pull Request.
+**Note:** This is done via the GitHub Action and pushed to a Release Tag so no need to do this unless you are testing the actual build. Additionally, when submitting a PR, Netlify will deploy an environment for you to test your Pull Request.
 
 ```
 npm run build

@@ -37,15 +37,13 @@ Some files and directories are omitted that do not help understand this current 
 
 ```sh
 .
-├── app.json # Configuration for Heroku review apps. Used for Heroku PR deployments
-├── check-version.js # Ensures the Node environment is correct
-├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
 ├── util/ # Build utilities
+│   ├── check-version.js # Ensures the Node environment is correct
 │   ├── generate-contributors.js # Utility to generate GitHub contributors JSON
 │   ├── generate-feeds.js # Utility to generate RSS and other feeds
 │   └── generate-types.js # Utility to generate TypeScript notations for documentation
 └── docs/ # Home directory, outputs to `/dist`
-    ├── **/index.md # Directories and their route entry point
+    ├── **/**/index.md # Directories and their route entry point
     ├── public/ # Static assets
     │   ├── images/ # All application images
     │   │   ├── assets/ # MTGJSON specifics
@@ -67,7 +65,7 @@ Some files and directories are omitted that do not help understand this current 
             ├── static/ # Static data to power Vue components
             │   └── *.json # JSON data
             ├── styles/ # Visual styling
-            │   └── *.scss # CSS
+            │   └── *.scss # Global CSS
             ├── helpers.ts # Helper functions
             ├── index.ts # Theme config and enhancements
             ├── store.ts # Pinia global state store
@@ -91,7 +89,7 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
 
 - Frontmatter is written in YAML.
 - Markdown is written to a high-level of specification.
-- Vue components can only be used in Markdown if they are registered globally via `./docs/vitepress/theme/index.js`.
+- Vue components can only be used in Markdown if they are registered globally via `./docs/vitepress/theme/index.ts`.
 
 ### Using Frontmatter
 
@@ -163,6 +161,6 @@ We use Jest and try our best. Test runs before commits and will fail the commit 
 We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate but are not strict about:
 
 - `issue/123: Fixed bug`: "issue" is a branch which a PR handles something where an issue was opened
-- `no-issue/documentation_updates: Updated README`: "no-issue" is branch which a PR handles something with no open issue
+- `NS/documentation_updates: Updated README`: "NS" is a branch which a PR handles something with no open issue
 
 Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title exact and concise.
