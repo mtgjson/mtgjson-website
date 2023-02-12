@@ -31,8 +31,6 @@ main.home
         li
           h3 MTGGraphQL
           p Get access to our GraphQL API and utilize data more with flexibility. <strong>Currently in beta and only available to Patreon subscribers.</strong>
-
-      ul
         li
           h3 Descriptive Properties
           p Learn about all data property names and values, even optional properties and enumerations.
@@ -54,6 +52,11 @@ main.home
       h2 Contributing
       ul
         li
+          a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
+            img(alt="Github logo" src="/images/icons/icon-github.svg")
+            h3 GitHub
+            p Contribute to MTGJSON, help the community, and get site recognition.
+        li
           a(href="https://mtgjson.com/discord/" target="_blank")
             img(alt="Discord logo" src="/images/icons/icon-discord.svg")
             h3 Discord
@@ -68,11 +71,6 @@ main.home
             img(alt="Paypal logo" src="/images/icons/icon-paypal.svg")
             h3 PayPal
             p Donate to MTGJSON and help keep this project available for free to everyone.
-        li
-          a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
-            img(alt="Github logo" src="/images/icons/icon-github.svg")
-            h3 GitHub
-            p Contribute to MTGJSON, help the community, and get your profile on our homepage.
 
   section.dark.home-team
     .text-wrapper
@@ -392,7 +390,7 @@ onMounted(async (): Promise<void> => {
 
     ul {
       display: grid;
-      grid-gap: 2rem;
+      grid-gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
 
       li {
@@ -427,7 +425,7 @@ onMounted(async (): Promise<void> => {
       li {
         display: flex;
         justify-content: flex-start;
-        margin: 0 0 2rem;
+        margin: 0 0 1rem;
       }
 
       &-member {
@@ -511,7 +509,7 @@ onMounted(async (): Promise<void> => {
   &-contributing {
     ul {
       display: grid;
-      grid-gap: 2rem;
+      grid-gap: 1rem;
       grid-template-columns: repeat(4, 1fr);
 
       li {
@@ -552,7 +550,7 @@ onMounted(async (): Promise<void> => {
       display: grid;
       grid-template-columns: repeat(4, minmax(0, 1fr));
       justify-items: center;
-      grid-gap: 2rem;
+      grid-gap: 1rem;
 
       li {
         width: 100%;
