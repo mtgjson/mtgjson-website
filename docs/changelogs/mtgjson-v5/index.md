@@ -41,8 +41,8 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 - Added `foreignData` optional property to [Card (Atomic)](/data-models/card-atomic/#foreigndata)
 - Added `isFunny` optional property to [Card (Atomic)](/data-models/card-atomic/#isfunny)
 - Added `language` property to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
-- Added `relatedCards` optional property to [Card (Atomic)](/data-models/card-atomic/#relatedcards), [Card (Deck)](/data-models/card-deck/#relatedcards), [Card (Set)](/data-models/card-set/#relatedcards), and [Card (Token)](/data-models/card-token/#relatedcards)
-- Added `subset` optional property to [Card (Atomic)](/data-models/card-atomic/#subset), [Card (Deck)](/data-models/card-deck/#subset), [Card (Set)](/data-models/card-set/#subset), and [Card (Token)](/data-models/card-token/#subset)
+- Added `relatedCards` property to all Card Data Models
+- Added `subset` optional property to all Card Data Models
 
 #### Fixed
 
@@ -364,7 +364,7 @@ Release Date: 2020-07-03
 
 **Welcome to v5.0.0!** We are proud to announce the 5th major release of MTGJSON. The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `booster` property on the [Set](/data-models/set/) Data Model. For more information, see the documentation for [Booster](https://mtgjson.com/abstract-models/booster) Data Model.
+We are also pleased to announce the addition of `booster` optional property defined as the [Booster](/abstract-models/booster/) Abstract Model on the [Set](/data-models/set/) Data Model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
@@ -398,6 +398,10 @@ The MTGJSON team we would like to thank the community for its continued support 
 - Removed `prices` property in favor of a dedicated `AllPrices` file
 
 ### Set Model
+
+#### Added
+
+- Added `booster` optional property to [Set](/data-models/set/#booster)
 
 #### Removed
 
