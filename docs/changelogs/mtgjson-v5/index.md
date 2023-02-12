@@ -40,7 +40,7 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 - Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card-atomic/#firstprinting)
 - Added `foreignData` optional property to [Card (Atomic)](/data-models/card-atomic/#foreigndata)
 - Added `isFunny` optional property to [Card (Atomic)](/data-models/card-atomic/#isfunny)
-- Added `language` proptery to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
+- Added `language` property to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
 - Added `relatedCards` optional property to [Card (Atomic)](/data-models/card-atomic/#relatedcards), [Card (Deck)](/data-models/card-deck/#relatedcards), [Card (Set)](/data-models/card-set/#relatedcards), and [Card (Token)](/data-models/card-token/#relatedcards)
 - Added `subset` optional property to [Card (Atomic)](/data-models/card-atomic/#subset), [Card (Deck)](/data-models/card-deck/#subset), [Card (Set)](/data-models/card-set/#subset), and [Card (Token)](/data-models/card-token/#subset)
 
@@ -57,7 +57,7 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 #### Deprecated
 
 - Deprecated `isStarter` optional property on [Card (Deck)](/data-models/card-deck/#isstarter), and [Card (Set)](/data-models/card-set/#isstarter) as it provides no useful data. Will be removed in `v5.3.0`
-- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card-token/#reverserelated) in favor of the `relatedCards` Data Model. Will be removed in `v5.3.0`
+- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card-token/#reverserelated) in favor of the `relatedCards` property, described by the [Related Cards](/data-models/related-cards/) Data Model. Will be removed in `v5.3.0`
 
 ### Related Cards Model (New)
 
