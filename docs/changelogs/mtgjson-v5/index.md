@@ -27,8 +27,6 @@ Release Date: 2023-02-12
 
 **Welcome to v5.2.1!** The MTGJSON team, our contributors, and the community have been working hard with this latest update with focuses on providing more properties, deprecating old properties, and bug fixes. Although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis.
 
-Also, recently, our GraphQL service hit a major milestone - Card prices! Become a patron today at our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> and get access to our [MTGGraphQL](/mtggraphql/) service.
-
 As always, if you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
 ### Card Model
