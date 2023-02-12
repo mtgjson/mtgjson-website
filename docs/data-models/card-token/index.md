@@ -276,14 +276,14 @@ The Card (Token) data model describes the properties of a single token card.
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
 
-> ### relatedCards <i class="optional"></i>
+> ### relatedCards
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
 >
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
-> ### reverseRelated <i class="deprecated"></i>
+> ### reverseRelated <i class="deprecated"></i><i class="optional"></i>
 >
 > The names of the cards that produce this card.
 >

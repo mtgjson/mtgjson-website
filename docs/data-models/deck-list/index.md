@@ -69,4 +69,4 @@ The Deck List data model describes meta data properties for an individual [Deck]
 >
 > - **Type:** `string`
 > - <ExampleField type='type'/>
-> - **Introduced:** `v4.3.0`
+> - **Introduced:** `v5.1.0`

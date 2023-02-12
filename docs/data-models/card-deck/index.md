@@ -523,7 +523,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### relatedCards <i class="optional"></i>
+> ### relatedCards
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
 >
@@ -633,7 +633,7 @@ The Card (Deck) data model describes the properties of a single card in a [Deck]
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### variations
+> ### variations <i class="optional"></i>
 >
 > A list of card UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >

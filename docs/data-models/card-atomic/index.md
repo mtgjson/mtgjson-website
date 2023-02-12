@@ -62,7 +62,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
 > - **Type:** `string`
-> - **Introduced:** `v5.0.0`
+> - **Introduced:** `v5.1.0`
 
 > ### attractionLights <i class="optional"></i>
 >
@@ -153,7 +153,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >
 > - **Type:** `ForeignData[]`
-> - **Introduced:** `v4.0.0`
+> - **Introduced:** `v5.2.1`
 
 > ### hand <i class="optional"></i>
 >
@@ -174,14 +174,14 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
 >
 > - **Type:** `Identifiers`
-> - **Introduced:** `v5.0.0`
+> - **Introduced:** `v5.1.0`
 
 > ### isFunny <i class="optional"></i>
 >
 > If the card is part of a funny set, such as an Un-set.
 >
 > - **Type:** `boolean`
-> - **Introduced:** `v5.2.0`
+> - **Introduced:** `v5.2.1`
 
 > ### isReserved <i class="optional"></i>
 >
@@ -277,7 +277,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
 
-> ### relatedCards <i class="optional"></i>
+> ### relatedCards
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
 >

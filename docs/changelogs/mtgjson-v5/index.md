@@ -1,23 +1,23 @@
 ---
-title: MTGJSON Changelog
+title: MTGJSON v5 Changelog
 head:
   - - meta
     - property: og:title
-      content: MTGJSON Changelog
+      content: MTGJSON v5 Changelog
   - - meta
     - name: description
-      content: The changelog for the MTGJSON application.
+      content: The changelog for the MTGJSON v5 application.
   - - meta
     - property: og:description
-      content: The changelog for the MTGJSON application.
+      content: The changelog for the MTGJSON v5 application.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, mtgjson changelog
+      content: mtg, magic the gathering, mtgjson, json, mtgjson v5 changelog, changelog
 ---
 
 # MTGJSON Changelog
 
-The following is the MTGJSON Changelog. Some parts may be updated for clarity or corrections at any point.
+The following is the MTGJSON v5 Changelog. Some parts may be updated for clarity or corrections at any point.
 
 ## 5.2.1
 
@@ -25,22 +25,13 @@ Release Date: 2023-02-12
 
 ### Announcements
 
-**Welcome to v5.2.1!** The MTGJSON team, our contributors, and the community have been working hard with this latest update with focuses on providing more properties, sunseting some old properties, and bug fixes.
+**Welcome to v5.2.1!** The MTGJSON team, our contributors, and the community have been working hard with this latest update with focuses on providing more properties, deprecating old properties, and bug fixes. Although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis.
 
 Also, recently, our GraphQL service hit a major milestone - Card prices! Become a patron today at our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> and get access to our [MTGGraphQL](/mtggraphql/) service.
 
 As always, if you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
 ### Card Model
-
-#### Fixed
-
-- Fixed some cards showing side `b` for both faces of a card
-- Fixed "meld" cards in The Brothers' War (`BRO`) set
-
-#### Changed
-
-- Changed `legalities` to be printing-based for a card
 
 #### Added
 
@@ -53,6 +44,11 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 - Added `relatedCards` optional property to [Card (Atomic)](/data-models/card-atomic/#relatedcards), [Card (Deck)](/data-models/card-deck/#relatedcards), [Card (Set)](/data-models/card-set/#relatedcards), and [Card (Token)](/data-models/card-token/#relatedcards)
 - Added `subset` optional property to [Card (Atomic)](/data-models/card-atomic/#subset), [Card (Deck)](/data-models/card-deck/#subset), [Card (Set)](/data-models/card-set/#subset), and [Card (Token)](/data-models/card-token/#subset)
 
+#### Fixed
+
+- Fixed some cards showing side `"b"` for both faces of the card
+- Fixed `"meld"` cards in The Brothers' War (`BRO`) set
+
 #### Changed
 
 - Changed `isAlternative` property to be set only on card variants within the same set
@@ -60,22 +56,34 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 
 #### Deprecated
 
-- Deprecated `isStarter` property as it provides no useful data. Will be removed in `v5.3.0`
-- Deprecated `reverseRelated` optional property on Card (Token) in favor of the `relatedCards` optional property data model. Will be removed in `v5.3.0`
+- Deprecated `isStarter` optional property on [Card (Deck)](/data-models/card-deck/#isstarter), and [Card (Set)](/data-models/card-set/#isstarter) as it provides no useful data. Will be removed in `v5.3.0`
+- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card-token/#reverserelated) in favor of the `relatedCards` Data Model. Will be removed in `v5.3.0`
 
 ### Related Cards Model (New)
 
+This new Data Model encapsulates data related to cards that are connected to other cards including the `"spellbook"` mechanic, `"meld"` cards, and token creation.
+
 #### Added
 
-- Added `reverseRelated` optional property
-- Added `spellbook` optional property
+- Added `reverseRelated` optional property to [Related Cards](/data-models/related-cards/#reverserelated)
+- Added `spellbook` optional property to [Related Cards](/data-models/related-cards/#spellbook)
+
+### Legalities Model
+
+#### Added
+
+- Added `explorer` optional property to [Legalities](/data-models/legalities/#explorer)
+
+#### Removed
+
+- Removed `frontier` optional property
 
 ### Identifiers Model
 
 #### Added
 
-- Added `mtgjsonFoilVersionId` optional property
-- Added `mtgjsonNonFoilVersionId` optional property
+- Added `mtgjsonFoilVersionId` optional property to [Identifiers](/data-models/identifiers/#mtgjsonfoilversionid)
+- Added `mtgjsonNonFoilVersionId` optional property to [Identifiers](/data-models/identifiers/#mtgjsonnonfoilversionid)
 
 #### Fixed
 
@@ -85,8 +93,8 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 
 #### Added
 
-- Added `languages` property
-- Added `tokenSetCode` optional property
+- Added `languages` property to [Set](/data-models/set/#languages)
+- Added `tokenSetCode` optional property to [Set](/data-models/set/#tokensetcode)
 
 #### Fixed
 
@@ -96,28 +104,25 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 
 #### Added
 
-- Added `category` optional property
-- Added `subtype` optional property
-- Added `productSize` optional property
+- Added `category` optional property to [Sealed Product](/data-models/sealed-product/#category)
+- Added `subtype` optional property to [Sealed Product](/data-models/sealed-product/#subtype)
+- Added `productSize` optional property to [Sealed Product](/data-models/sealed-product/#productsize)
 
-### Enum Values
+### Enum Values Model
 
 #### Added
 
-- Added `language` property to card model
-- Added `boosterTypes` property to card model
-- Added new `tcgplayerSkus` data model
-  - Added `condition` property
-  - Added `finishes` property
-  - Added `language`property
-  - Added `printing` property
+- Added `language` property to `card` model
+- Added `boosterTypes` property to `card` model
+- Added `condition`, `finishes`, `language`, and `printing` to new `tcgplayerSkus` model
 
 ### Misc
 
 - MTGJSON dropped support for Python 3.6
 - MTGJSON added support for Python 3.11
 - MTGJSON no longer requires a configuration file
-- Gatherer is now queried for Multiverse ID as a fallback
+- MTGJSON now queries Gatherer for Multiverse ID as a fallback
+- Documentation now uses [VitePress](https://vitepress.vuejs.org/) under the hood
 
 ## 5.2.0
 
@@ -125,163 +130,113 @@ Release Date: 2021-12-20
 
 ### Announcements
 
-**Welcome to v5.2.0!** With this update we've added a lot of new Card data model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
+**Welcome to v5.2.0!** With this update we've added a lot of new Card Data Model properties with a focus on Card identification. Some of these new properties are signatures, stamps, and finishes. Also, some properties were deprecated with various slates of removal.
 
 We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them. MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
-### Documentation
-
-#### Changed
-
-- Changed File models within the documentation and some Abstract Models were merged in to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed
-
 ### Card Model
+
+#### Added
+
+- Added `manaValue` property [Card (Atomic)](/data-models/card-atomic/#manavalue), [Card (Deck)](/data-models/card-deck/#manavalue), and [Card (Set)](/data-models/card-set/#manavalue)
+- Added `isFunny` optional property to [Card (Deck)](/data-models/card-deck/#isfunny), [Card (Set)](/data-models/card-set/#isfunny), and [Card (Token)](/data-models/card-token/#isfunny)
+- Added `finishes` property to [Card (Deck)](/data-models/card-deck/#finishes), [Card (Set)](/data-models/card-set/#finishes), and [Card (Token)](/data-models/card-token/#finishes)
+- Added `cardParts` optional property to [Card (Deck)](/data-models/card-deck/#cardparts), [Card (Set)](/data-models/card-set/#cardparts), and [Card (Token)](/data-models/card-token/#cardparts)
+- Added `securityStamp` optional property to [Card (Deck)](/data-models/card-deck/#securitystamp), [Card (Set)](/data-models/card-set/#securitystamp), and [Card (Token)](/data-models/card-token/#securitystamp)
+- Added `faceManaValue` optional property to [Card (Atomic)](/data-models/card-atomic/#facemanavalue), [Card (Deck)](/data-models/card-deck/#facemanavalue), and [Card (Set)](/data-models/card-set/#facemanavalue)
+- Added `faceFlavorName` optional property to [Card (Deck)](/data-models/card-deck/#faceflavorname), [Card (Set)](/data-models/card-set/#faceflavorname), and [Card (Token)](/data-models/card-token/#faceflavorname)
+- Added `signature` optional property to [Card (Deck)](/data-models/card-deck/#signature), [Card (Set)](/data-models/card-set/#signature), and [Card (Token)](/data-models/card-token/#signature)
+- Added `isRebalanced` optional property to [Card (Deck)](/data-models/card-deck/#isrebalanced) and [Card (Set)](/data-models/card-set/#isrebalanced)
+- Added `rebalancedPrintings` optional property to [Card (Deck)](/data-models/card-deck/#rebalancedprintings) and [Card (Set)](/data-models/card-set/#rebalancedprintings)
+- Added `originalPrintings` optional propertiy to [Card (Deck)](/data-models/card-deck/#originalprintings) and [Card (Set)](/data-models/card-set/#originalprintings)
+- Added `otherFaceIds` property to [Card (Token)](/data-models/card-token/#otherfaceids)
+- Added support for `"Dungeon"` cards in Card (Atomic)
 
 #### Fixed
 
 - Fixed dual-faced cards having the wrong mana value on its face
-- Fixed `hasAlternativeDeckLimit` for `Seven Dwarves` card
-- Fixed `isAlternative` for cards in the `CMR` and `JMP` sets
-- Fixed an issue where `Grist, the Hunger Tide` was not a valid commander
-- Fixed an issue where duplicate UUID's were being set on "AAFR" tokens
-- Fixed an issue where `releaseDate` was not getting set on "flip" cards
+- Fixed `hasAlternativeDeckLimit` property for `Seven Dwarves` being incorrect
+- Fixed `isAlternative` property for cards in the `CMR` and `JMP` sets
+- Fixed `Grist, the Hunger Tide` not being a valid commander
+- Fixed `releaseDate` property not getting set on `"flip"` cards
+- Fixed an issue where duplicate UUID's were being set on Adventures in the Forgotten Realms Art Series (`AAFR`) tokens
 - Fixed an issue where flavor names were not set correctly for certain foreign cards
 - Fixed an issue caused by a source having its printed text not providing line breaks
 
-#### Added
-
-- Added `manaValue` property
-- Added the non-Atomic `isFunny` property
-- Added the non-Atomic `finishes` property
-- Added the non-Atomic `cardParts` property
-- Added the non-Atomic `securityStamp` property
-- Added the non-Atomic `faceManaValue` property
-- Added the non-Atomic `faceFlavorName` property
-- Added the non-Atomic `otherFaceIds` property to Card (Token)
-- Added the non-Atomic `signature` property
-- Added support for "Dungeon" cards in Card (Atomic) data model
-- Added support for "Alchemy" cards by including `isRebalanced`, `rebalancedPrintings`, and `originalPrintings` properties
-
 #### Deprecated
 
-- Deprecated `convertedManaCost` in favor of `manaValue`. Will be removed in `v6.0.0`
-- Deprecated `faceConvertedManaCost` in favor of `faceManaValue`. Will be removed in `v6.0.0`
-- Deprecated `hasFoil` in favor of `finishes`. Will be removed in `v5.3.0`
-- Deprecated `hasNonFoil` in favor of `finishes`. Will be removed in `v5.3.0`
+- Deprecated `convertedManaCost` property in favor of `manaValue` property. Will be removed in `v6.0.0`
+- Deprecated `faceConvertedManaCost` optional property in favor of `faceManaValue` optional property. Will be removed in `v6.0.0`
+- Deprecated `hasFoil` and `hasNonFoil` properties in favor of `finishes` property. Will be removed in `v5.3.0`
 
 ### Set Model
 
-#### Fixed
-
-- Fixed an issue where the French name of "Eldritch Moon" was incorrect
-
 #### Added
 
-- Added `sealedProduct` property (This is still a WIP, but the foundation is now available)
+- Added `sealedProduct` optional property to [Set](/data-models/set/#sealedproduct) (This is still a WIP, but the foundation is now available)
+
+#### Fixed
+
+- Fixed an issue where the French name of `"Eldritch Moon"` was incorrect
 
 ### Foreign Data Model
 
 #### Fixed
 
-- Fixed an issue where data was not getting set at all
+- Fixed an issue where data was not getting set
 
 ### Identifiers Model
 
 #### Added
 
-- Added `tcgplayerEtchedProductId` property
-- Added `cardKingdomEtechedId` property
+- Added `tcgplayerEtchedProductId` optional property to [Identifiers](/data-models/identifiers/#tcgplayeretchedproductid)
+- Added `cardKingdomEtechedId` optional property to [Identifiers](/data-models/identifiers/#cardkingdometchedid)
 
 #### Changed
 
 - Changed `scryfallOracleId` property to be optional
 
-### PurchaseUrls Model
+### Purchase Urls Model
 
 #### Added
 
-- Added `tcgplayerEtched` property
-- Added `cardKingdomEtched` property
+- Added `tcgplayerEtched` optional property to [Purchase Urls](/data-models/purchase-urls/#tcgplayeretched)
+- Added `cardKingdomEtched` optional property to [Purchase Urls](/data-models/purchase-urls/#cardkingdometched)
 
 ### Legalities Model
 
 #### Added
 
-- Added `gladiator` property
-- Added `historicbrawl` property
-- Added `oldschool` property
-- Added `paupercommander` property
-- Added `premodern` property
+- Added `gladiator` property to [Legalities](/data-models/legalities/#gladiator)
+- Added `historicbrawl` property to [Legalities](/data-models/legalities/#historicbrawl)
+- Added `oldschool` property to [Legalities](/data-models/legalities/#oldschool)
+- Added `premodern` property to [Legalities](/data-models/legalities/#premodern)
 
-### Enum Values File
+### Enum Values Model
 
 #### Added
 
-- Added `finishes` property to `card`
+- Added `finishes` property to `card` model
 
-### Keywords File
+### Keywords Model
 
 #### Fixed
 
-- Fixed `abilityWords` showing wrong values
+- Fixed `abilityWords` property showing wrong values
 
-### TCGPlayer SKUs File
-
-#### Added
-
-- Added `finishes` property
-
-### Individual Sets
+### TCGPlayer Skus Model
 
 #### Added
 
-- Added Time Spiral Remastered (`TSR`)
-- Added Commander 2021 (`C21`)
-- Added Oversized Commander 2021 (`OC21`)
-- Added Strixhaven (`STX`)
-- Added Strixhaven Mystical Archives (`STA`)
-- Added Strixhaven Promos (`PSTX`)
-- Added Strixhaven Minigames (`MSTX`)
-- Added Strixhaven Art Series (`ASTX`)
-- Added Historic Anthology 5 (`HA5`)
-- Added Modern Horizons 2 (`MH2`)
-- Added Modern Horizons 2 Promos (`PMH2`)
-- Added Modern Horizons 2 Minigames (`MMH2`)
-- Added Modern Horizons 2 Art Series (`AMH2`)
-- Added Modern Horizons 1 Timeshifted Cards (`H1R`)
-- Added Wizards Play Network 2021 (`PW21`)
-- Added Love Your LGS 2021 (`PLG21`)
-- Added Adventures in the Forgotten Realms (`AFR`)
-- Added Adventures in the Forgotten Realms Promos (`PAFR`)
-- Added Forgotten Realms Commander (`AFC`)
-- Added Forgotten Realms Commander Displays (`OAFC`)
-- Added Adventures in the Forgotten Realms Art Series (`AAFR`)
-- Added Adventures in the Forgotten Realms Minigames (`MAFR`)
-- Added 2020 Heroes of the Realm (`HTR20`)
-- Added Jumpstart: Historic Horizons (`J21`)
-- Added Innistrad Midnight Hunt (`MID`)
-- Added Innistrad Midnight Hunt Promos (`PMID`)
-- Added Innistrad Midnight Hunt Token Sub (`SMID`)
-- Added Midnight Hunt Commander (`MIC`)
-- Added Midnight Hunt Commander Displays (`OMIC`)
-- Added Pioneer Challenger Decks 2021 (`Q06`)
-- Added Innistrad Crimson Vow (`VOW`)
-- Added Innistrad Crimson Vow Promos (`PVOW`)
-- Added Crimson Vow Commander (`VOC`)
-- Added Crimson Vow Commander Displays (`OVOC`)
-- Added Alchemy: Innistrad (`Y22`)
-- Added Innistrad: Double Feature (`DBL`)
-- Added Commander Collection Black (`CC2`)
-- Added Wizards Play Network 2022 (`PW22`)
-- Added Kamigawa Neon Dynasty (`NEO`) Spoilers
-- Added Unfinity (`UNF`) Spoilers
+- Added `finishes` property to [TCGPlayer Skus](/data-models/tcgplayer-skus/#finishes)
 
 ### Misc
 
 - MTGJSON now supports Python 3.6 - 3.10
 - Better handle Gatherer downtime halting builds
+- Merged some File Models and Abstract Models within the documentation to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed.
 
 ## 5.1.0
 
@@ -289,99 +244,111 @@ Release Date: 2021-01-18
 
 ### Announcements
 
-Welcome to the next release of MTGJSON - With this release we are no longer supporting Version 4, so if you have not already, please update all your sources to the Version 5 endpoints to ensure your applications function correctly going forward.
+**Welcome to v5.1.0!** With this release we are no longer supporting Version 4, so if you have not already, please update all your sources to the Version 5 endpoints to ensure your applications function correctly going forward.
 
 **Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 2021 all v4 endpoints will be removed.**
 
 We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](/mtggraphql/) documentation. Access during our beta rollout is limited to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters. A GraphQL GUI can be accessed via <a href="https://graphql.mtgjson.com/" target="_blank" rel="noreferrer noopener">MTGGraphQL Playground</a>
 
-### Files
-
-#### Added
-
-- Added `TcgplayerSkus.*` file for download which contains TCGplayer SKU information organized by card UUID
-- Added more data to the `SetList` file
-- Added `asciiName` property to `Atomic*` files
-- Added `Identifiers` model to the `Atomic*` files
-- Added `currency` to `AllPrices` file (Thanks, tpblaster!)
-- Added `type` property to `DeckList` file
-
-#### Updated
-
-- Updated the order of keys so that the `meta` key appears at the top.
-
 ### Card Model
 
 #### Added
 
-- Added `originalReleaseDate` property
-- Added `layout` to be `"token"` if a set is only tokens
+- Added `originalReleaseDate` optional property to [Card (Deck)](/data-models/card-deck/#originalreleasedate) and [Card (Set)](/data-models/card-set/#originalreleasedate)
+- Added `keywords` property to [Card (Atomic)](/data-models/card-atomic/#keywords)
+- Added `asciiName` property to [Card (Atomic)](/data-models/card-atomic/#asciiname)
+- Added `identifiers` property to [Card (Atomic)](/data-models/card-atomic/#identifiers)
+
+#### Changed
+
+- Changed `layout` property to be set to `"token"` if the set is only tokens
 
 #### Fixed
 
 - Fixed cards with `art_series` type
-- Fixed `isAlternative` for cards within a single set (Thanks, kodabb!)
-
-### Card (Atomic) Model
-
-#### Added
-
-- Added `keywords`
+- Fixed `isAlternative` property for cards within a single set (Thanks, kodabb!)
 
 ### Set Model
 
 #### Added
 
-- Added `mcmIdExtras` property (Thanks, mjainta!)
+- Added `mcmIdExtras` optional property to [Set](/data-models/set/#mcmidextras) (Thanks, mjainta!)
+
+### Set List Model
+
+- Added `sealedProduct` optional property to [Set List](/data-models/set-list/#sealedproduct)
+- Added `mcmIdExtras` optional property to [Set List](/data-models/set-list/#mcmidextras)
 
 ### Deck Model
 
 #### Added
 
-- Added `commander` property
+- Added `commander` optional property to [Deck](/data-models/deck/#commander)
+
+### Deck List Model
+
+#### Added
+
+- Added `type` property to [Deck List](/data-models/deck-list/#type)
 
 ### Legalities Model
 
 #### Added
 
-- Added missing `Historic` property
-
-#### Updated
-
-- Updated broken link to [Keyrune](https://keyrune.andrewgioia.com/)
-
-### Sets
-
-#### Added
-
-- Added Arena Beginner Set (`ANB`)
-- Added Amonkhet Remastered (`AKR`)
-- Added Zendikar Rising (`ZNR`)
-- Added The List (`PLIST`)
-- Added Kaladesh Remastered (`KLR`)
-- Added Commander Legends (`CMR`)
-- Added Commander Collection: Green (`CC1`)
-- Added Kaldheim, spoilers (`KHM`)
-- Added Time Spiral Remastered, spoilers (`TSR`)
+- Added `historic` optional property to [Legalities](/data-models/legalities/#historic)
 
 #### Fixed
 
-- Salvat 2005 is correctly marked as foreign (Thanks, silasary!)
+- Fixed broken link to [Keyrune](https://keyrune.andrewgioia.com/)
 
-### Misc
+### Set Model
+
+#### Fixed
+
+- Fixed Salvat 2005 (`PSAL`) to be now correctly marked as foreign (Thanks, silasary!)
+
+### Files
 
 #### Added
 
-- Added new error page
-- Fixed an issue where models without optional properties were able to be filtered
+- Added `TcgplayerSkus.*` file which contains TCGplayer SKU information organized by card UUID
+- Added `currency` property to `AllPrices` file (Thanks, tpblaster!)
 
 #### Updated
 
+- Updated the order of keys so that the `meta` key appears at the top
+
+### Misc
+
 - MTGJSON has dropped TravisCI support in favor of GitHub Actions (Thanks, ebbit1q!)
+- Fixed a documentation issue where Data Models without optional properties were able to be filtered
 
 ## 5.0.1
 
 Release Date: 2020-08-24
+
+### Announcements
+
+**Welcome to v5.0.1!** We've made some minor changes to data models with a big push to release a new file: *AllIdentifiers*!
+
+### Card Model
+
+#### Added
+
+- Added `setCode` property to [Card (Deck)](/data-models/card-deck/#setcode), [Card (Set)](/data-models/card-set/#setcode), and [Card (Token)](/data-models/card-token/#setcode)
+
+### Foreign Data Model
+
+#### Added
+
+- Added `faceName` optional property to [Foreign Data](/data-models/foreign-data/#facename)
+
+### Set Model
+
+#### Fixed
+
+- Fixed some `translation` property inaccuracies
+- Fixed some `keyruneCode` property inaccuracies
 
 ### Files
 
@@ -389,89 +356,68 @@ Release Date: 2020-08-24
 
 - Added `AllIdentifiers.*` file for download which contains all cards organized by UUID
 
-### Card
-
-#### Added
-
-- Added `setCode` to the non-atomic and token card model
-- Added `faceName` to Foreign Data model
-
-### Set
-
-#### Fixed
-
-- Fixed some `translation` inaccuracies
-- Fixed some `keyruneCode` inaccuracies
-
 ## 5.0.0
 
 Release Date: 2020-07-03
 
 ### Announcements
 
-We are proud to announce the 5th major release of MTGJSON! The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
+**Welcome to v5.0.0!** We are proud to announce the 5th major release of MTGJSON. The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `Booster` information on the `Set` data model. For more information, see the documentation for [Booster](https://mtgjson.com/abstract-models/booster) data model.
+We are also pleased to announce the addition of `booster` property on the [Set](/data-models/set/) Data Model. For more information, see the documentation for [Booster](https://mtgjson.com/abstract-models/booster) Data Model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
 The MTGJSON team we would like to thank the community for its continued support and we look forward to serving you well.
 
-### Card
+### Card Model
+
+#### Added
+
+- Added `hasAlternativeDeckLimit` optional property to [Card (Atomic)](/data-models/card-atomic/#hasalternativedecklimit), [Card (Deck)](/data-models/card-deck/#hasalternativedecklimit), and [Card (Set)](/data-models/card-set/#hasalternativedecklimit)
+- Added `promoTypes` optional property to [Card (Deck)](/data-models/card-deck/#promotypes), [Card (Set)](/data-models/card-set/#promotypes), and [Card (Token)](/data-models/card-token/#promotypes)
+- Added and back-ported `hasContentWarning` property to [Card (Deck)](/data-models/card-deck/#hascontentwarning) and [Card (Set)](/data-models/card-set/#hascontentwarning) (Cards that are marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content)
+- Added `variations` optional property to [Card (Deck)](/data-models/card-deck/#variations) and [Card (Set)](/data-models/card-set/#variations)
+- Added `keywords` property to [Card (Atomic)](/data-models/card-atomic/#keywords), [Card (Deck)](/data-models/card-deck/#keywords), [Card (Set)](/data-models/card-set/#keywords), and [Card (Token)](/data-models/card-token/#keywords)
+- Added `faceName` optional property to [Card (Atomic)](/data-models/card-atomic/#facename), [Card (Deck)](/data-models/card-deck/#facename), [Card (Set)](/data-models/card-set/#facename), and [Card (Token)](/data-models/card-token/#facename)
 
 #### Changed
 
-- Changed "Meld" card `name` and `side` to be more clear. Example: `"Gisela, the Broken Blade // Brisela, Voice of Nightmares"` (side a), `"Bruna, the Fading Light // Brisela, Voice of Nightmares"` (side a), and `"Brisela, Voice of Nightmares"` (side b)
+- Changed `"Meld"` cards `name` and `side` properties to be more clear. Example: `"Gisela, the Broken Blade // Brisela, Voice of Nightmares"` (side a), `"Bruna, the Fading Light // Brisela, Voice of Nightmares"` (side a), and `"Brisela, Voice of Nightmares"` (side b)
 - Changed `mcmId`, `mcmMetaId`, `mtgoFoilId`, `mtgoId`, `multiverseId`, `scryfallId`, `scryallIllustrationId`, `scryfallOracleId`, and `tcgplayerProductId` properties to be nested in to a new `identifiers` property. `mtgstocksId` was removed for redundancy
-- Changed `isArena`, `isMtgo`, and `isPaper` to be nested inside a new `availability` property. Values return a string of the available property. See the available examples for all the values
-- Changed `isBuyABox`, `isBundle`, `isPlaneswalkerStamped`, and `isDateStamped` to be nested in to a new `promoTypes` property
-- Changed `name` to show full split card names (name1 // name2)
-- Changed `name` to be verbatim as printed on the card (see Unglued variants for example)
-- Changed `names` to `otherFaceIds`
-- Changed `uuid` for all tokens and split cards
-- Changed `hasNoDeckLimit` to `hasAlternativeDeckLimit`
-
-#### Added
-
-- Added `hasAlternativeDeckLimit` for cards that allow a limit other than 4
-- Added `promoTypes` for an enums for promo cards which replaces other promo properties
-- Added and back-ported `hasContentWarning` for cards that are marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content
-- Added `variations` to show all cards with the same name
-- Added `keywords` for all keywords available on a card
-- Added `mtgjsonV4Id` to identifiers to help transition developer's code
-- Added `faceName` to identify only the card face card's name
+- Changed `isArena`, `isMtgo`, and `isPaper` properties to be nested inside a new `availability` property. Values return a string of the available property. See the available examples for all the values
+- Changed `isBuyABox`, `isBundle`, `isPlaneswalkerStamped`, and `isDateStamped` properties to be nested in to a new `promoTypes` property
+- Changed `name` property to show full split card names (name1 // name2)
+- Changed `name` property to be verbatim as printed on the card (see Unglued variants for example)
+- Changed `names` property to `otherFaceIds` property
+- Changed `uuid` property for all tokens and split cards
+- Changed `hasNoDeckLimit` property to `hasAlternativeDeckLimit` property
 
 #### Removed
 
-- Removed `prices` in favor of a dedicated `AllPrices` file
+- Removed `prices` property in favor of a dedicated `AllPrices` file
 
-### Sets
-
-#### Added
-
-- Added `booster`. See the [Booster](https://mtgjson.com/abstract-models/booster/) data model
-- Added `isPartialPreview`
-- Added Love Your LGS (`PLGS`)
-- Added Historic Anthology 3 (`HA3`)
-- Added Secret Lair: Ultimate Edition (`SLU`)
-- Added Signature Spellbook: Chandra `SS3`)
-- Added Core Set 2021 (`M21`)
-- Added Jumpstart (`JMP`)
-- Added Double Masters (`2XM`)
+### Set Model
 
 #### Removed
 
-- Removed `boosterV3`
+- Removed `boosterV3` property
+
+### Identifiers Model
+
+#### Added
+
+- Added `mtgjsonV4Id` optional property to [Identifiers](/data-models/identifiers/#mtgjsonv4id) to help transition developer code
 
 ### Files
 
 #### Changed
 
-- All file downloads are now available via the `/api/v5/*` web-based url
-- The `AllCards` file is now renamed `AtomicCards` to better clarify that these files only contain atomic card data
-- The `[Format]Printings` files are now renamed to just their format name: `Modern`, `Legacy`, etc
-- The `version` file is now renamed `Meta`
-- All files now used a top-level `data` and `meta` key. Any data models inside of `data` should lose the nested `meta` object
+- Changed all file downloads to be available via the `/api/v5/*` web-based url
+- Changed `AllCards` file to renamed `AtomicCards` to better clarify that these files only contain atomic card data
+- Changed `[Format]Printings` files to be renamed to just their format name: `Modern`, `Legacy`, etc
+- Changed the `version` file to renamed `Meta`
+- Changed all files to use a top-level `data` and `meta` key. Any Data Models inside of `data` will lose the nested `meta` object
 
 #### Added
 
@@ -480,33 +426,13 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 ### Misc
 
-#### Added
-
 - Added `Phyrexian` language where language data is available
-
-### Documentation
-
-#### Updated
-
 - The documentation application server was switched over to Nginx
-
-#### Changed
-
-- Data "Structures" are now named "Models"
-- Models now reference their parent keys and parent files more accurately
-- Models now have the "optional" tag marked on properties for clarity
-- Some text and spacing adjustments for the "Changelog" and "FAQ" page
-
-#### Added
-
-- More models are clearly defined now that the files deliver all the same top-level keys
-- Atomic Cards are now documented outright as a Data Model for clarity
+- Documentation data "Structures" are now named "Data Models"
+- Data Models now reference their parent keys and parent files more accurately
+- Data Models now have the "optional" tag marked on properties for clarity
+- More Data Models are more clearly defined now that the files deliver all the same top-level keys
+- Atomic Cards are now documented outright as a [Card (Atomic)](/data-models/card-atomic/) Data Model for clarity
 - Property value examples were added for properties with enumuerated values from `EnumValues.json`
-- You can now toggle optional properties on/off within documentation. If all properties are optional than the UI is disabled
-- You can now try to edit/PR a specific documentation from the page footer
-
-#### Removed
-
-- `/file/*` (Documentation): Files are longer documented individually, instead their contents are pure Data Models
-- The "About Us" page no longer uses a table of contents
-- `setCode` was mistakenly added and is now removed from the `Card` data model
+- You can now toggle optional properties on/off within documentation. If all properties are optional, then the UI is disabled
+- You can now open a link to create a PR for a specific documentation page from the footer

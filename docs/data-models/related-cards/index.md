@@ -36,7 +36,7 @@ The Related Cards data model describes cards that have relations to other cards.
 
 > ### reverseRelated <i class="optional"></i>
 >
-> A list of card names associated to a card, such tokens that can be created from a card.
+> A list of card names associated to a card, such as the "spellbook" mechanic, "meld" cards, and token creation.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`

@@ -61,7 +61,7 @@ export type CardAtomic = {
         
   purchaseUrls: PurchaseUrls;
         
-  relatedCards?: RelatedCards;
+  relatedCards: RelatedCards;
         
   rulings: Rulings[];
         
@@ -217,7 +217,7 @@ export type CardDeck = {
         
   rarity: string;
         
-  relatedCards?: RelatedCards;
+  relatedCards: RelatedCards;
         
   rebalancedPrintings?: string[];
         
@@ -247,7 +247,7 @@ export type CardDeck = {
         
   uuid: string;
         
-  variations: string[];
+  variations?: string[];
         
   watermark?: string;
         
@@ -381,7 +381,7 @@ export type CardSet = {
         
   rarity: string;
         
-  relatedCards?: RelatedCards;
+  relatedCards: RelatedCards;
         
   rebalancedPrintings?: string[];
         
@@ -411,7 +411,7 @@ export type CardSet = {
         
   uuid: string;
         
-  variations: string[];
+  variations?: string[];
         
   watermark?: string;
         
@@ -483,9 +483,9 @@ export type CardToken = {
         
   promoTypes?: string[];
         
-  relatedCards?: RelatedCards;
+  relatedCards: RelatedCards;
         
-  reverseRelated: string[];
+  reverseRelated?: string[];
         
   securityStamp?: string;
         

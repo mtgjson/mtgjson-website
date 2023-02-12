@@ -67,7 +67,7 @@ The Legalities data model describes a list of legalities in play formats for a C
 > Legality of the card in the [Explorer](https://magic.wizards.com/en/formats/explorer) play format.
 >
 > - **Type:** `string`
-> - **Introduced:** `v4.0.0`
+> - **Introduced:** `v5.2.1`
 
 > ### future <i class="optional"></i>
 >
