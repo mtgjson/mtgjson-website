@@ -287,6 +287,8 @@ The Card (Token) data model describes the properties of a single token card.
 >
 > The names of the cards that produce this card.
 >
+> _This property is deprecated. Use the [relatedCards](/data-models/card-token/#relatedcards) property instead._
+>
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
 
