@@ -148,7 +148,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
 
-> ### foreignData
+> ### foreignData <i class="optional"></i>
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >

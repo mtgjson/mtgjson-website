@@ -186,7 +186,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### foreignData
+> ### foreignData <i class="optional"></i>
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
 >

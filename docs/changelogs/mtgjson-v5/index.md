@@ -21,11 +21,13 @@ The following is the MTGJSON Changelog. Some parts may be updated for clarity or
 
 ## 5.2.1
 
-Release Date: 2023-02-11
+Release Date: 2023-02-12
 
 ### Announcements
 
-**Welcome to v5.2.1!**
+**Welcome to v5.2.1!** The MTGJSON team, our contributors, and the community have been working this latest update. Our focuses this release were on providing more properties, sunseting some old ones, and bug fixing.
+
+Recently, our GraphQL service hit a major milestone - Card prices!
 
 ### Card Model
 
@@ -40,51 +42,82 @@ Release Date: 2023-02-11
 
 #### Added
 
-- Added `attractionLights` optional property to Card (Atomic), Card (Deck), and Card (Set)
-- Added `edhrecSaltiness` optional property to Card (Atomic), Card (Deck), and Card (Set)
-- Added `firstPrinting` optional property to Card (Atomic)
-- Added `isFunny` optional property to Card (Atomic)
-- Added `language` proptery to Card (Deck), Card (Set), and Card (Token)
-- Added `relatedCards` optional property to to all Card models
-- Added `subset` optional property to all Card models
+- Added `attractionLights` optional property to [Card (Atomic)](/data-models/card-atomic/#attractionlights), [Card (Deck)](/data-models/card-deck/#attractionlights), and [Card (Set)](/data-models/card-set/#attractionlights)
+- Added `edhrecSaltiness` optional property to [Card (Atomic)](/data-models/card-atomic/#edhrecsaltiness), [Card (Deck)](/data-models/card-deck/#edhrecsaltiness), and [Card (Set)](/data-models/card-set/#edhrecsaltiness)
+- Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card-atomic/#firstprinting)
+- Added `foreignData` optional property to [Card (Atomic)](/data-models/card-atomic/#foreigndata)
+- Added `isFunny` optional property to [Card (Atomic)](/data-models/card-atomic/#isfunny)
+- Added `language` proptery to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
+- Added `relatedCards` optional property to [Card (Atomic)](/data-models/card-atomic/#relatedcards), [Card (Deck)](/data-models/card-deck/#relatedcards), [Card (Set)](/data-models/card-set/#relatedcards), and [Card (Token)](/data-models/card-token/#relatedcards)
+- Added `subset` optional property to [Card (Atomic)](/data-models/card-atomic/#subset), [Card (Deck)](/data-models/card-deck/#subset), [Card (Set)](/data-models/card-set/#subset), and [Card (Token)](/data-models/card-token/#subset)
+
+#### Changed
+
+- Changed `isAlternative` property to be set only on card variants within the same set
+- Changed `legalities` property to use the most permissive legalities of the card
 
 #### Deprecated
 
-- Deprecated `isStarter` as it provides no useful data. Will be removed in `v5.3.0`
+- Deprecated `isStarter` property as it provides no useful data. Will be removed in `v5.3.0`
+- Deprecated `reverseRelated` optional property on Card (Token) in favor of the `relatedCards` optional property data model. Will be removed in `v5.3.0`
 
 ### Related Cards Model (New)
 
 #### Added
 
-- Added `reverseRelated` property
-- Added `spellbook` property
+- Added `reverseRelated` optional property
+- Added `spellbook` optional property
 
 ### Identifiers Model
-
-### Fixed
-
-- Fixed `scryfallOracleId` not appearing on some cards
 
 #### Added
 
 - Added `mtgjsonFoilVersionId` optional property
 - Added `mtgjsonNonFoilVersionId` optional property
 
+#### Fixed
+
+- Fixed `scryfallOracleId` property not appearing on some cards
+
 ### Set Model
 
 #### Fixed
-
-- Fixed `translations` not having values
 
 #### Added
 
 - Added `languages` property
 - Added `tokenSetCode` optional property
 
+#### Fixed
+
+- Fixed `translations` not having values
+
+### Sealed Product Model
+
+#### Added
+
+- Added `category` optional property
+- Added `subtype` optional property
+- Added `productSize` optional property
+
+### Enum Values
+
+#### Added
+
+- Added `language` property to card model
+- Added `boosterTypes` property to card model
+- Added new `tcgplayerSkus` data model
+  - Added `condition` property
+  - Added `finishes` property
+  - Added `language`property
+  - Added `printing` property
+
 ### Misc
 
 - MTGJSON dropped support for Python 3.6
 - MTGJSON added support for Python 3.11
+- MTGJSON no longer requires a configuration file
+- Gatherer is now queried for Multiverse ID as a fallback
 
 ## 5.2.0
 

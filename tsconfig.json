@@ -4,7 +4,9 @@
     "esModuleInterop": true
   },
   "vueCompilerOptions": {
-    "experimentalDisableTemplateSupport": true
+    "plugins": [
+      "@volar/vue-language-plugin-pug"
+    ]
   },
   "include": ["docs/.vitepress/theme/"],
   "exclude": ["node_modules/", "util/"]

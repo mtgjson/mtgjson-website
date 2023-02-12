@@ -83,8 +83,8 @@ main.home
             img(src="/images/avatars/avatar-zach.jpg" title="Zachery Halpern's avatar" alt="Zach's avatar")
             div
               a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
-                h4 Zachary Halpern
-              span Developer &amp; Maintainer
+                h4 Zach Halpern
+              span Lead Developer
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member
@@ -114,7 +114,7 @@ main.home
           )
 
   section.dark.home-patrons
-    .text-wrapper
+    .content-wrapper
       h2 Patreon Supporters
       ul
         li(
@@ -129,15 +129,15 @@ main.home
               :title="`${patron.name} logo`"
             )
           .img-wrap.no-image(v-else)
-            p {{ patron.name.substring(0, 1) }}
+            p {{ patron.company ? patron.company.substring(0, 1) : patron.name.substring(0, 1) }}
           a.name.linked-name(
             v-if="patron.link",
             :href="patron.link",
-            v-html="patron.name",
+            v-html="patron.company || patron.name",
             rel="noopener noreferrer",
             target="_blank",
           )
-          p.name.unlinked-name(v-else, v-html="patron.name")
+          p.name.unlinked-name(v-else, v-html="patron.company || patron.name")
           p.tier {{ patron.tier }} Supporter
           p.tier-time(
             v-if="patron.since",
@@ -173,6 +173,7 @@ main.home
           li Copyright &copy; 2018 &ndash; Present Zachary Halpern, Eric Lakatos
           li MTGJSON and Documentation released under the&nbsp;
             a(href="/license/") MIT License
+          li.legal Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. All Rights Reserved.
 </template>
 
 <script setup lang="ts">
@@ -549,7 +550,7 @@ onMounted(async (): Promise<void> => {
 
     ul {
       display: grid;
-      grid-template-columns: repeat(3, minmax(0, 1fr));
+      grid-template-columns: repeat(4, minmax(0, 1fr));
       justify-items: center;
       grid-gap: 2rem;
 
@@ -739,6 +740,12 @@ onMounted(async (): Promise<void> => {
 
         &:first-of-type {
           margin-top: 0;
+        }
+
+        &.legal {
+          margin-top: 2rem;
+          font-size: 12px;
+          color: var(--gray-3-color);
         }
       }
     }

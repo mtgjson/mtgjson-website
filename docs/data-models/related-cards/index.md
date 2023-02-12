@@ -34,14 +34,14 @@ The Related Cards data model describes cards that have relations to other cards.
 
 ## Model Properties
 
-> ### reverseRelated
+> ### reverseRelated <i class="optional"></i>
 >
 > A list of card names associated to a card, such tokens that can be created from a card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
 
-> ### spellbook
+> ### spellbook <i class="optional"></i>
 >
 > A list of card names associated to a card's [Spellbook](https://mtg.fandom.com/wiki/Spellbook) mechanic.
 >

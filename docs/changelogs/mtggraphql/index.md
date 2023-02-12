@@ -19,6 +19,20 @@ head:
 
 The following is the MTGGraphQL Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 1.3.0
+
+Release Date: 2023-02-12
+
+### Announcements
+
+With this release of MTGGraphQL we've stablized the application and finally added prices! Become a patron today at our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> and get access to our GraphQL service.
+
+### Prices (New)
+
+#### Added
+
+- Added price querying
+
 ## 1.0.2
 
 Release Date: 2021-01-18

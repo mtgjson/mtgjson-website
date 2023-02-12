@@ -25,7 +25,7 @@ export type CardAtomic = {
         
   firstPrinting?: string;
         
-  foreignData: ForeignData[];
+  foreignData?: ForeignData[];
         
   hand?: string;
         
@@ -129,7 +129,7 @@ export type CardDeck = {
         
   flavorText?: string;
         
-  foreignData: ForeignData[];
+  foreignData?: ForeignData[];
         
   frameEffects?: string[];
         
@@ -295,7 +295,7 @@ export type CardSet = {
         
   flavorText?: string;
         
-  foreignData: ForeignData[];
+  foreignData?: ForeignData[];
         
   frameEffects?: string[];
         
@@ -693,9 +693,9 @@ export type PurchaseUrls = {
   
 export type RelatedCards = {
   
-  reverseRelated: string[];
+  reverseRelated?: string[];
         
-  spellbook: string[];
+  spellbook?: string[];
         
 }
   
@@ -709,13 +709,19 @@ export type Rulings = {
   
 export type SealedProduct = {
   
+  category?: string;
+        
   identifiers: Identifiers;
         
   name: string;
         
+  productSize?: number;
+        
   purchaseUrls: PurchaseUrls;
         
   releaseDate: string | null;
+        
+  subtype?: string;
         
   uuid: string;
         

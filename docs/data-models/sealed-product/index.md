@@ -6,10 +6,10 @@ head:
       content: Sealed Product
   - - meta
     - name: description
-      content: The Sealed Product data model describes a list of properties for a purchase-able product of a Set.
+      content: The Sealed Product data model describes a list of properties for a purchaseable product of a Set.
   - - meta
     - property: og:description
-      content: The Sealed Product data model describes a list of properties for a purchase-able product of a Set.
+      content: The Sealed Product data model describes a list of properties for a purchaseable product of a Set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product
@@ -17,7 +17,7 @@ head:
 
 # Sealed Product
 
-The Sealed Product data model describes a list of properties for a purchase-able product of a [Set](/data-models/set/).
+The Sealed Product data model describes a list of properties for a purchaseable product of a [Set](/data-models/set/).
 
 - **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
 - **Parent property:** `sealedProduct`
@@ -34,6 +34,13 @@ The Sealed Product data model describes a list of properties for a purchase-able
 
 ## Model Properties
 
+> ### category <i class="optional"></i>
+>
+> The category this product is.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
+
 > ### identifiers
 >
 > The identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) data model.
@@ -48,6 +55,13 @@ The Sealed Product data model describes a list of properties for a purchase-able
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
+> ### productSize <i class="optional"></i>
+>
+> The size of the product.
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.1`
+
 > ### purchaseUrls
 >
 > Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
@@ -61,6 +75,13 @@ The Sealed Product data model describes a list of properties for a purchase-able
 >
 > - **Type:** `string | null`
 > - **Introduced:** `v5.2.0`
+
+> ### subtype <i class="optional"></i>
+>
+> The category subtype this product is.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
 
 > ### uuid
 >

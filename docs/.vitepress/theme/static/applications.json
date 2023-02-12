@@ -77,11 +77,6 @@
     "link": "https://edhrec.com"
   },
   {
-    "name": "FlavorTexts",
-    "image": "avatar-flavortexts.gif",
-    "link": "https://flavortexts.com"
-  },
-  {
     "name": "IPGTree",
     "image": "avatar-ipgtree.jpg",
     "link": "http://alfchaval.epizy.com/ipgtree/"
@@ -106,16 +101,6 @@
     "link": "https://redd.it/55l38e"
   },
   {
-    "name": "Mage Market",
-    "image": "avatar-mage-market.svg",
-    "link": "https://magemarket.com"
-  },
-  {
-    "name": "Magic Cards Manager",
-    "image": "avatar-mcm.png",
-    "link": "https://www.magiccardsmanager.com"
-  },
-  {
     "name": "Magic Data Science",
     "image": "avatar-mds.jpg",
     "link": "https://mtgds.wordpress.com/"
@@ -124,11 +109,6 @@
     "name": "Magic Manager",
     "image": "avatar-magic-manager.png",
     "link": "https://magicmanager.cards"
-  },
-  {
-    "name": "Magic Trade Binder",
-    "image": "avatar-magic-trade-binder.png",
-    "link": "https://www.magictradebinder.com"
   },
   {
     "name": "Magidex",
@@ -189,11 +169,6 @@
     "link": "https://mtg-search.com"
   },
   {
-    "name": "MTG Set Builder",
-    "image": "avatar-mtgsetbuilder.png",
-    "link": "http://mtgsetbuilder.com"
-  },
-  {
     "name": "MTG Tracker",
     "image": "avatar-mtgtracker.jpg",
     "link": "https://play.google.com/store/apps/details?id=net.shalafi.android.mtgpro"
@@ -222,11 +197,6 @@
     "name": "MTGNexus",
     "image": "avatar-mtgnexus.png",
     "link": "https://www.mtgnexus.com/"
-  },
-  {
-    "name": "MTGO Wiki Price",
-    "image": "avatar-mtgowikiprice.png",
-    "link": "http://mtgowikiprice.com"
   },
   {
     "name": "MTGPackSim",
@@ -288,18 +258,8 @@
     "link": "https://tutor.cards"
   },
   {
-    "name": "Venser's Journal",
-    "image": "avatar-vensersjournal.jpg",
-    "link": "https://vensersjournal.com/"
-  },
-  {
     "name": "viMTG",
     "image": "avatar-vimtg.png",
     "link": "https://github.com/yoshi1123/vim-mtg"
-  },
-  {
-    "name": "XMage",
-    "image": "avatar-xmage.png",
-    "link": "http://xmage.de"
   }
 ]
