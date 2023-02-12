@@ -61,6 +61,8 @@ export type CardAtomic = {
         
   purchaseUrls: PurchaseUrls;
         
+  relatedCards?: RelatedCards;
+        
   rulings: Rulings[];
         
   side?: string;

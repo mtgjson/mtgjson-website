@@ -7,7 +7,7 @@ export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
-export const title = 'MTGJSON: Portable formats for all Magic: The Gathering data';
+export const title = 'MTGJSON.com · Portable formats for all Magic: The Gathering data';
 export const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.';
 

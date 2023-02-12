@@ -21,11 +21,11 @@ The following is the MTGJSON Changelog. Some parts may be updated for clarity or
 
 ## 5.2.1
 
-Release Date: TBD
+Release Date: 2023-02-11
 
 ### Announcements
 
-TBD
+**Welcome to v5.2.1!**
 
 ### Card Model
 
@@ -45,7 +45,7 @@ TBD
 - Added `firstPrinting` optional property to Card (Atomic)
 - Added `isFunny` optional property to Card (Atomic)
 - Added `language` proptery to Card (Deck), Card (Set), and Card (Token)
-- Added `relatedCards` property to Card (Deck), Card (Set), and Card (Token)
+- Added `relatedCards` optional property to to all Card models
 - Added `subset` optional property to all Card models
 
 #### Deprecated

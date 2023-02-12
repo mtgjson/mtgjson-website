@@ -277,6 +277,13 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
 
+> ### relatedCards <i class="optional"></i>
+>
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
+>
+> - **Type:** `RelatedCards`
+> - **Introduced:** `v5.2.1`
+
 > ### rulings
 >
 > A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
