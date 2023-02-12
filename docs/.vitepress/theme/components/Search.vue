@@ -105,7 +105,7 @@ const openSearch = (): void => {
   }
 };
 
-const clearSearch = (shouldCloseSidebar): void => {
+const clearSearch = (shouldCloseSidebar?: boolean): void => {
   open.value = false;
   searchTerm.value = '';
 
@@ -184,12 +184,12 @@ const toggleSidebar = (): void => {
     z-index: 100;
     top: calc(100% - 1px);
     width: 100%;
-    background-color: var(--search-bg-color);
-    overflow: scroll;
-    max-height: var(--search-results-max-height);
-    border-radius: var(--common-radius);
 
     &.open {
+      background-color: var(--search-bg-color);
+      overflow: auto;
+      max-height: var(--search-results-max-height);
+      border-radius: var(--common-radius);
       border: 1px solid var(--accent-color);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
