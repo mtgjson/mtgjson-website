@@ -283,7 +283,7 @@ The Card (Token) data model describes the properties of a single token card.
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
-> ### reverseRelated
+> ### reverseRelated <i class="deprecated"></i>
 >
 > The names of the cards that produce this card.
 >

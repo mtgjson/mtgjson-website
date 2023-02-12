@@ -27,7 +27,7 @@ Release Date: 2023-02-12
 
 **Welcome to v5.2.1!** The MTGJSON team, our contributors, and the community have been working this latest update. Our focuses this release were on providing more properties, sunseting some old ones, and bug fixing.
 
-Recently, our GraphQL service hit a major milestone - Card prices!
+Recently, our GraphQL service hit a major milestone - Card prices! Become a patron today at our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> and get access to our GraphQL service.
 
 ### Card Model
 
@@ -80,8 +80,6 @@ Recently, our GraphQL service hit a major milestone - Card prices!
 - Fixed `scryfallOracleId` property not appearing on some cards
 
 ### Set Model
-
-#### Fixed
 
 #### Added
 
