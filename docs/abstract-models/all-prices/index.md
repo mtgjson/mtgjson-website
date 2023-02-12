@@ -6,10 +6,10 @@ head:
       content: All Prices
   - - meta
     - name: description
-      content: The All Prices abstract model describes a list of card prices based on a Card UUID.
+      content: The All Prices Abstract Model describes a list of card prices based on a Card UUID.
   - - meta
     - property: og:description
-      content: The All Prices abstract model describes a list of card prices based on a Card UUID.
+      content: The All Prices Abstract Model describes a list of card prices based on a Card UUID.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, all prices
@@ -17,7 +17,7 @@ head:
 
 # All Prices
 
-The All Prices abstract model describes a list of card prices based on a Card UUID.
+The All Prices Abstract Model describes a list of card prices based on a Card UUID.
 
 - **Parent file:** [AllPrices](/downloads/all-files/#allprices)
 - **Parent model:** `data`

@@ -50,7 +50,7 @@ Some files and directories are omitted that do not help understand this current 
     │   │   ├── avatars/ # User/supporters avatars
     │   │   └── icons/ # General icons
     │   ├── static/ # Desired public facing assets
-    │   │   └── mtgjson-types.ts # TypeScript types for MTGJSON data models
+    │   │   └── mtgjson-types.ts # TypeScript types for MTGJSON Data Models
     │   └── *.* # Any public facing file, like favicons or robots.txt
     └── .vitepress/ # Main source files for the application
         ├── config.js # Main VitePress configuration
@@ -110,10 +110,10 @@ head:
       content: Card (Set)
   - - meta
     - name: description
-      content: The Card (Set) data model describes the keys and calues of a single card in a set.
+      content: The Card (Set) Data Model describes the keys and calues of a single card in a set.
   - - meta
     - property: og:description
-      content: The Card (Set) data model describes the properties of a single card in a set.
+      content: The Card (Set) Data Model describes the properties of a single card in a set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card set
@@ -142,7 +142,7 @@ If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`,
 
 #### TypeScript Notations
 
-Use the `<ModelType type='<Model Name>' />` component to render the TypeScript notation for a data model where `<Model Name>` is the data model, such as `CardAtomic` or `DeckList`.
+Use the `<ModelType type='<Model Name>' />` component to render the TypeScript notation for a Data Model where `<Model Name>` is the Data Model, such as `CardAtomic` or `DeckList`.
 
 #### Table of Contents
 

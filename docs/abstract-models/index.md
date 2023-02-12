@@ -12,7 +12,7 @@ head:
       content: Abstract Models in MTGJSON describe any JSON object or nested JSON object that provides a non-flat response. As such, they will have two or more levels of nested keys. It is worth noting that most, but not all, Abstract Models are related directly to the models of specific files, like AllPrices or EnumValues.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, abstract models
+      content: mtg, magic the gathering, mtgjson, json, Abstract Models
 ---
 
 # Abstract Models

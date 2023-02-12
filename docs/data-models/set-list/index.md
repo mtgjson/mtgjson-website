@@ -7,10 +7,10 @@ head:
       content: Set List
   - - meta
     - name: description
-      content: The Set List data model describes meta data properties for an individual Set.
+      content: The Set List Data Model describes meta data properties for an individual Set.
   - - meta
     - property: og:description
-      content: The Set List data model describes meta data properties for an individual Set.
+      content: The Set List Data Model describes meta data properties for an individual Set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, set list
@@ -18,7 +18,7 @@ head:
 
 # Set List
 
-The Set List data model describes meta data properties for an individual [Set](/data-models/set/).
+The Set List Data Model describes meta data properties for an individual [Set](/data-models/set/).
 
 - **Parent file:** [SetList](/downloads/all-files/#setlist)
 - **Parent property:** `data`
@@ -163,7 +163,7 @@ The Set List data model describes meta data properties for an individual [Set](/
 
 > ### sealedProduct <i class="optional"></i>
 >
-> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
 > - **Type:** `SealedProduct`
 > - **Introduced:** `v5.1.0`
@@ -184,7 +184,7 @@ The Set List data model describes meta data properties for an individual [Set](/
 
 > ### translations
 >
-> The translated set name by language. See the [Translations](/data-models/translations/) data model.
+> The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
 >
 > - **Type:** `Translations`
 > - **Introduced:** `v4.3.2`

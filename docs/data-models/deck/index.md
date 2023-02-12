@@ -7,10 +7,10 @@ head:
       content: Deck
   - - meta
     - name: description
-      content: The Deck data model describes a complete deck reference of an individual deck.
+      content: The Deck Data Model describes a complete deck reference of an individual deck.
   - - meta
     - property: og:description
-      content: The Deck data model describes a complete deck reference of an individual deck.
+      content: The Deck Data Model describes a complete deck reference of an individual deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, deck
@@ -18,7 +18,7 @@ head:
 
 # Deck
 
-The Deck data model describes a complete deck reference of an individual deck.
+The Deck Data Model describes a complete deck reference of an individual deck.
 
 - **Parent file:** [All Decks](/downloads/all-decks/)
 - **Parent property:** `data`
@@ -44,7 +44,7 @@ The Deck data model describes a complete deck reference of an individual deck.
 
 > ### commander <i class="optional"></i>
 >
-> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) data model.
+> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck`
 > - **Introduced:** `v5.1.0`
@@ -59,7 +59,7 @@ The Deck data model describes a complete deck reference of an individual deck.
 
 > ### mainBoard
 >
-> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) data model.
+> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
@@ -73,7 +73,7 @@ The Deck data model describes a complete deck reference of an individual deck.
 
 > ### sideBoard
 >
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) data model.
+> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`

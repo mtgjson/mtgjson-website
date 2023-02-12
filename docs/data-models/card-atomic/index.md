@@ -7,10 +7,10 @@ head:
       content: Card (Atomic)
   - - meta
     - name: description
-      content: The Card (Atomic) data model describes a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data that would never change from printing to printing.
+      content: The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data that would never change from printing to printing.
   - - meta
     - property: og:description
-      content: The Card (Atomic) data model describes a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data that would never change from printing to printing.
+      content: The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data that would never change from printing to printing.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card atomic
@@ -18,7 +18,7 @@ head:
 
 # Card (Atomic)
 
-The Card (Atomic) data model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data that would never change from printing to printing.
+The Card (Atomic) Data Model describes a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data that would never change from printing to printing.
 
 - **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)
 - **Parent property:** `data`
@@ -26,7 +26,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 <!-- For some reason tips before TOC will break the TOC, but HTML will not -->
 <blockquote>
   <p class="small-header">Note</p>
-  <p>The Card (Atomic) data model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
+  <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
 
   ```json
   "data": {
@@ -150,7 +150,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### foreignData <i class="optional"></i>
 >
-> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
 >
 > - **Type:** `ForeignData[]`
 > - **Introduced:** `v5.2.1`
@@ -171,7 +171,7 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### identifiers
 >
-> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.1.0`
@@ -207,14 +207,14 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### leadershipSkills <i class="optional"></i>
 >
-> The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
+> The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
 
 > ### legalities
 >
-> The legalities of play formats for this printing of the card. See the [Legalities](/data-models/legalities/) data model.
+> The legalities of play formats for this printing of the card. See the [Legalities](/data-models/legalities/) Data Model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -272,21 +272,21 @@ The Card (Atomic) data model describes a single atomic card, an oracle-like enti
 
 > ### purchaseUrls
 >
-> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
 >
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
 
 > ### relatedCards
 >
-> The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
 > ### rulings
 >
-> A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
+> A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`

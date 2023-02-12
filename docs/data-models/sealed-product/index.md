@@ -6,10 +6,10 @@ head:
       content: Sealed Product
   - - meta
     - name: description
-      content: The Sealed Product data model describes a list of properties for a purchaseable product of a Set.
+      content: The Sealed Product Data Model describes a list of properties for a purchaseable product of a Set.
   - - meta
     - property: og:description
-      content: The Sealed Product data model describes a list of properties for a purchaseable product of a Set.
+      content: The Sealed Product Data Model describes a list of properties for a purchaseable product of a Set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product
@@ -17,7 +17,7 @@ head:
 
 # Sealed Product
 
-The Sealed Product data model describes a list of properties for a purchaseable product of a [Set](/data-models/set/).
+The Sealed Product Data Model describes a list of properties for a purchaseable product of a [Set](/data-models/set/).
 
 - **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
 - **Parent property:** `sealedProduct`
@@ -43,7 +43,7 @@ The Sealed Product data model describes a list of properties for a purchaseable 
 
 > ### identifiers
 >
-> The identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a product. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.2.0`
@@ -64,7 +64,7 @@ The Sealed Product data model describes a list of properties for a purchaseable 
 
 > ### purchaseUrls
 >
-> Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
+> Links that navigate to websites where the product can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
 >
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v5.2.0`

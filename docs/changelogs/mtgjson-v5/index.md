@@ -328,7 +328,7 @@ Release Date: 2020-08-24
 
 ### Announcements
 
-**Welcome to v5.0.1!** We've made some minor changes to data models with a big push to release a new file: *AllIdentifiers*!
+**Welcome to v5.0.1!** We've made some minor changes to Data Models with a big push to release a new file: *AllIdentifiers*!
 
 ### Card Model
 

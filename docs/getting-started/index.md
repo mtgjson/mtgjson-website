@@ -44,7 +44,7 @@ For a full list of files see the [Downloads](/downloads/) section.
 
 ### Data Models
 
-Data Models are what we call the structures that contain data inside files and other data models. They vary in their availability and are based heavily on the type of file accessed and the data models in those files. Some of the data models used in the files are:
+Data Models are what we call the structures that contain data inside files and other Data Models. They vary in their availability and are based heavily on the type of file accessed and the Data Models in those files. Some of the Data Models used in the files are:
 
 - [Card (Atomic)](/data-models/card-atomic/): Data inside `AtomicCards.json` and `<Format>Atomic.json`
 - [Card (Set)](/data-models/card-set/): Data inside `AllIdentifiers.json`
@@ -52,7 +52,7 @@ Data Models are what we call the structures that contain data inside files and o
 
 ### Abstract Models
 
-Abstract Models are what we call the structures that contain more complex data inside files. They tend to have many nested properties and thus documentation is formalized with example responses and structures. Some of the abstract models used in files are:
+Abstract Models are what we call the structures that contain more complex data inside files. They tend to have many nested properties and thus documentation is formalized with example responses and structures. Some of the Abstract Models used in files are:
 
 - [All Prices](/abstract-models/all-prices/): Data inside `AllPrices.json`
 - [Booster](/abstract-models/booster/): Data inside [Set](/data-models/set/#booster) `booster` property

@@ -7,10 +7,10 @@ head:
       content: Tcgplayer Skus
   - - meta
     - name: description
-      content: The Tcgplayer Skus data model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
+      content: The Tcgplayer Skus Data Model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
   - - meta
     - property: og:description
-      content: The Tcgplayer Skus data model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
+      content: The Tcgplayer Skus Data Model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, tcgplayer skus
@@ -18,14 +18,14 @@ head:
 
 # Tcgplayer Skus
 
-The Tcgplayer Skus data model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
+The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
 
 - **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)
 - **Parent property:** `data`
 
 <blockquote>
   <p class="small-header">Note</p>
-  <p>The Tcgplayer Skus data model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
+  <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
 
   ```json
   "data": {

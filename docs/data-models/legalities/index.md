@@ -6,10 +6,10 @@ head:
       content: Legalities
   - - meta
     - name: description
-      content: The Legalities data model describes a list of legalities in play formats for a Card.
+      content: The Legalities Data Model describes a list of legalities in play formats for a Card.
   - - meta
     - property: og:description
-      content: The Legalities data model describes a list of legalities in play formats for a Card.
+      content: The Legalities Data Model describes a list of legalities in play formats for a Card.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, legalities
@@ -17,7 +17,7 @@ head:
 
 # Legalities
 
-The Legalities data model describes a list of legalities in play formats for a Card.
+The Legalities Data Model describes a list of legalities in play formats for a Card.
 
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `legalities`

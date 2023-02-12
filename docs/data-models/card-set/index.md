@@ -7,10 +7,10 @@ head:
       content: Card (Set)
   - - meta
     - name: description
-      content: The Card (Set) data model describes the properties of a single card in a set.
+      content: The Card (Set) Data Model describes the properties of a single card in a set.
   - - meta
     - property: og:description
-      content: The Card (Set) data model describes the properties of a single card in a set.
+      content: The Card (Set) Data Model describes the properties of a single card in a set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card set
@@ -18,7 +18,7 @@ head:
 
 # Card (Set)
 
-The Card (Set) data model describes the properties of a single card in a [Set](/data-models/set/).
+The Card (Set) Data Model describes the properties of a single card in a [Set](/data-models/set/).
 
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `cards`
@@ -188,7 +188,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### foreignData <i class="optional"></i>
 >
-> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) data model.
+> A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
 >
 > - **Type:** `ForeignData[]`
 > - **Introduced:** `v4.0.0`
@@ -250,7 +250,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### identifiers
 >
-> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -373,14 +373,14 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### leadershipSkills <i class="optional"></i>
 >
-> The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) data model.
+> The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
 >
 > - **Type:** `LeadershipSkills`
 > - **Introduced:** `v4.5.1`
 
 > ### legalities
 >
-> The legalities of play formats for this printing of the card. See the [Legalities](/data-models/legalities/) data model.
+> The legalities of play formats for this printing of the card. See the [Legalities](/data-models/legalities/) Data Model.
 >
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
@@ -488,7 +488,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### purchaseUrls
 >
-> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) data model.
+> Links that navigate to websites where the card can be purchased. See the [Purchase Urls](/data-models/purchase-urls/) Data Model.
 >
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v4.4.0`
@@ -503,7 +503,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### relatedCards
 >
-> The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
@@ -517,7 +517,7 @@ The Card (Set) data model describes the properties of a single card in a [Set](/
 
 > ### rulings
 >
-> A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) data model.
+> A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`

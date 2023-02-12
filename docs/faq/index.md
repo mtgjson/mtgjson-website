@@ -59,11 +59,11 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How can I use TypeScript typings for MTGJSON data?
 >
-> There is currently no official typings exported from MTGJSON, however each data model documentation page does outline its associated type notation. As well, a TypeScript types file for all data models can be accessed <a href="/static/mtgjson-types.ts" target="_blank" rel="noreferrer noopener">here</a>.
+> There is currently no official typings exported from MTGJSON, however each Data Model documentation page does outline its associated type notation. As well, a TypeScript types file for all Data Models can be accessed <a href="/static/mtgjson-types.ts" target="_blank" rel="noreferrer noopener">here</a>.
 
 > ### How do I access a card's imagery?
 >
-> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) using the MTGJSON property from the [Identifiers](/data-models/identifiers/) data model within the various Card data models.
+> While we do not offer card images directly through MTGJSON, we recommend getting card images through [Scryfall](https://scryfall.com/) or [Gatherer](https://gatherer.wizards.com/) using the MTGJSON property from the [Identifiers](/data-models/identifiers/) Data Model within the various Card Data Models.
 >
 > - **Scryfall:**
 >   - Front face: `https://cards.scryfall.io/large/front/6/7/67f4c93b-080c-4196-b095-6a120a221988.jpg`
@@ -77,7 +77,7 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### How can I access a card's set imagery?
 >
-> The `keyruneCode` property from the [Set](/data-models/set/#keyrunecode) data model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
+> The `keyruneCode` property from the [Set](/data-models/set/#keyrunecode) Data Model provides information you need for implementing set code imagery but is mostly limited to projects that can use CSS, however, there is ways to use them in desktop applications. See the [Keyrune official documentation](https://keyrune.andrewgioia.com/) for more information.
 >
 > **Scryfall:** `https://svgs.scryfall.io/sets/${setCode}.svg`  
 > **Gatherer:** `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`
@@ -92,9 +92,9 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### What information is in AtomicCards or similar files?
 >
-> These files contains oracle-like information for every card using the [Card (Atomic)](/data-models/card-atomic/) data model. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
+> These files contains oracle-like information for every card using the [Card (Atomic)](/data-models/card-atomic/) Data Model. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
-> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) data model documentation.
+> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) Data Model documentation.
 >
 > **Note:** Depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 

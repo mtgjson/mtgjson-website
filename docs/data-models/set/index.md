@@ -7,10 +7,10 @@ head:
       content: Set
   - - meta
     - name: description
-      content: The Set data model describes the properties of an individual Set.
+      content: The Set Data Model describes the properties of an individual Set.
   - - meta
     - property: og:description
-      content: The Set data model describes the properties of an individual Set.
+      content: The Set Data Model describes the properties of an individual Set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, set
@@ -18,7 +18,7 @@ head:
 
 # Set
 
-The Set data model describes the properties of an individual Set.
+The Set Data Model describes the properties of an individual Set.
 
 - **Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)
 - **Parent property:** `data`
@@ -51,14 +51,14 @@ The Set data model describes the properties of an individual Set.
 
 > ### booster <i class="optional"></i>
 >
-> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) abstract model.
+> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) Abstract Model.
 >
 > - **Type:** `object`
 > - **Introduced:** `v5.0.0`
 
 > ### cards
 >
-> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) data model.
+> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) Data Model.
 >
 > - **Type:** `CardSet[]`
 > - **Introduced:** `v4.0.0`
@@ -192,7 +192,7 @@ The Set data model describes the properties of an individual Set.
 
 > ### sealedProduct <i class="optional"></i>
 >
-> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) data model.
+> The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
 > - **Type:** `SealedProduct`
 > - **Introduced:** `v5.2.0`
@@ -206,7 +206,7 @@ The Set data model describes the properties of an individual Set.
 
 > ### tokens
 >
-> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) data model.
+> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) Data Model.
 >
 > - **Type:** `CardToken[]`
 > - **Introduced:** `v4.0.0`
@@ -227,7 +227,7 @@ The Set data model describes the properties of an individual Set.
 
 > ### translations
 >
-> The translated set name by language. See the [Translations](/data-models/translations/) data model.
+> The translated set name by language. See the [Translations](/data-models/translations/) Data Model.
 >
 > - **Type:** `Translations`
 > - **Introduced:** `v4.3.2`

@@ -7,10 +7,10 @@ head:
       content: Card (Token)
   - - meta
     - name: description
-      content: The Card (Token) data model describes the properties of a single token card.
+      content: The Card (Token) Data Model describes the properties of a single token card.
   - - meta
     - property: og:description
-      content: The Card (Token) data model describes the properties of a single token card.
+      content: The Card (Token) Data Model describes the properties of a single token card.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card token
@@ -18,7 +18,7 @@ head:
 
 # Card (Token)
 
-The Card (Token) data model describes the properties of a single token card.
+The Card (Token) Data Model describes the properties of a single token card.
 
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `tokens`
@@ -169,7 +169,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### identifiers
 >
-> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) data model.
+> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
 >
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
@@ -278,7 +278,7 @@ The Card (Token) data model describes the properties of a single token card.
 
 > ### relatedCards
 >
-> The related cards for this card. See the [Related Cards](/data-models/related-cards/) data model.
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
