@@ -6,10 +6,10 @@ head:
       content: Rulings
   - - meta
     - name: description
-      content: The Rulings Data Model describes a list of rulings for a Card.
+      content: The Rulings Data Model describes the properties of rulings for a card.
   - - meta
     - property: og:description
-      content: The Rulings Data Model describes a list of rulings for a Card.
+      content: The Rulings Data Model describes the properties of rulings for a card.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, rulings
@@ -17,7 +17,7 @@ head:
 
 # Rulings
 
-The Rulings Data Model describes a list of rulings for a Card.
+The Rulings Data Model describes the properties of rulings for a card.
 
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `rulings`

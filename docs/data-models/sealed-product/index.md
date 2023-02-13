@@ -1,15 +1,16 @@
 ---
 title: Sealed Product
+enum: sealedProduct
 head:
   - - meta
     - property: og:title
       content: Sealed Product
   - - meta
     - name: description
-      content: The Sealed Product Data Model describes a list of properties for a purchaseable product of a Set.
+      content: The Sealed Product Data Model describes the properties for the purchaseable product of a Set Data Model.
   - - meta
     - property: og:description
-      content: The Sealed Product Data Model describes a list of properties for a purchaseable product of a Set.
+      content: The Sealed Product Data Model describes the properties for the purchaseable product of a Set Data Model.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product
@@ -17,7 +18,7 @@ head:
 
 # Sealed Product
 
-The Sealed Product Data Model describes a list of properties for a purchaseable product of a [Set](/data-models/set/).
+The Sealed Product Data Model describes the properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
 
 - **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
 - **Parent property:** `sealedProduct`
@@ -36,9 +37,10 @@ The Sealed Product Data Model describes a list of properties for a purchaseable 
 
 > ### category <i class="optional"></i>
 >
-> The category this product is.
+> The category of this product.
 >
 > - **Type:** `string`
+> - <ExampleField type='category'/>
 > - **Introduced:** `v5.2.1`
 
 > ### identifiers
@@ -78,9 +80,10 @@ The Sealed Product Data Model describes a list of properties for a purchaseable 
 
 > ### subtype <i class="optional"></i>
 >
-> The category subtype this product is.
+> The category subtype of this product.
 >
 > - **Type:** `string`
+> - <ExampleField type='subtype'/>
 > - **Introduced:** `v5.2.1`
 
 > ### uuid

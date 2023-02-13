@@ -7,10 +7,10 @@ head:
       content: Foreign Data
   - - meta
     - name: description
-      content: The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.
+      content: The Foreign Data Data Model describes the properties for a card in alternate languages.
   - - meta
     - property: og:description
-      content: The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.
+      content: The Foreign Data Data Model describes the properties for a card in alternate languages.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, foreign data
@@ -18,7 +18,7 @@ head:
 
 # Foreign Data
 
-The Foreign Data Data Model describes a list of properties for various Card Data Models in alternate languages.
+The Foreign Data Data Model describes the properties for a card in alternate languages.
 
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `foreignData`

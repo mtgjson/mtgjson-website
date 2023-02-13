@@ -7,10 +7,10 @@ head:
       content: Tcgplayer Skus
   - - meta
     - name: description
-      content: The Tcgplayer Skus Data Model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
+      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card UUID.
   - - meta
     - property: og:description
-      content: The Tcgplayer Skus Data Model describes TCGplayer SKU values based on MTGJSON Card UUIDs.
+      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card UUID.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, tcgplayer skus
@@ -18,7 +18,7 @@ head:
 
 # Tcgplayer Skus
 
-The Tcgplayer Skus Data Model describes [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on MTJSON Card UUIDs.
+The Tcgplayer Skus Data Model describes the properties of [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on a card UUID.
 
 - **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)
 - **Parent property:** `data`

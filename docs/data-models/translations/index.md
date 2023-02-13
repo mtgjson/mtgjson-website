@@ -6,10 +6,10 @@ head:
       content: Translations
   - - meta
     - name: description
-      content: The Translations Data Model describes a Set name translated per available language.
+      content: The Translations Data Model describes the properties of a Set name translated in alternate languages.
   - - meta
     - property: og:description
-      content: The Translations Data Model describes a Set name translated per available language.
+      content: The Translations Data Model describes the properties of a Set name translated in alternate languages.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, translations
@@ -17,7 +17,7 @@ head:
 
 # Translations
 
-The Translations Data Model describes a Set name translated per available language.
+The Translations Data Model describes the properties of a [Set](/data-models/set/) name translated in alternate languages.
 
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `translations`

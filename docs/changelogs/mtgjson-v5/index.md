@@ -225,11 +225,11 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 - Fixed `abilityWords` property showing wrong values
 
-### TCGPlayer Skus Model
+### Tcgplayer Skus Model
 
 #### Added
 
-- Added `finishes` property to [TCGPlayer Skus](/data-models/tcgplayer-skus/#finishes)
+- Added `finishes` property to [Tcgplayer Skus](/data-models/tcgplayer-skus/#finishes)
 
 ### Misc
 

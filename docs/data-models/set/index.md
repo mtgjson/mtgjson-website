@@ -7,10 +7,10 @@ head:
       content: Set
   - - meta
     - name: description
-      content: The Set Data Model describes the properties of an individual Set.
+      content: The Set Data Model describes the properties of an individual set.
   - - meta
     - property: og:description
-      content: The Set Data Model describes the properties of an individual Set.
+      content: The Set Data Model describes the properties of an individual set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, set
@@ -18,7 +18,7 @@ head:
 
 # Set
 
-The Set Data Model describes the properties of an individual Set.
+The Set Data Model describes the properties of an individual set.
 
 - **Parent file:** [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)
 - **Parent property:** `data`
