@@ -1,8 +1,13 @@
 <template lang="pug">
 header.navbar
   .navbar-options
-    SidebarButton.desktop-hide(@toggle-sidebar="$emit('toggle-sidebar')")
-    NavMeta.desktop-hide(:width="`70px`" :hideText="true")
+    SidebarButton.desktop-hide(
+      @toggle-sidebar="$emit('toggle-sidebar')"
+    )
+    NavMeta.desktop-hide(
+      :width="`70px`"
+      :hideText="true"
+    )
     ThemeSwitcher
 </template>
 

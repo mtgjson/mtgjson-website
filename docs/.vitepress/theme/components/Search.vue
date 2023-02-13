@@ -37,30 +37,30 @@
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
 import { useStore } from '../store.js';
-import type { ISearchResult, ISearchResultHeader } from '../types';
+import type { IPagesData, IPagesDataHeader } from '../types';
 
 const { theme } = useData();
 
-const pages: ISearchResult[] = theme.value.pages;
+const pages: IPagesData[] = theme.value.pages;
 
 const open = ref<boolean>(false);
 const input = ref<HTMLElement | null>(null);
 const searchTerm = ref<string>('');
 const store = useStore();
 
-const results = computed<ISearchResult[]>((): ISearchResult[] => {
-  const res: ISearchResult[] = [];
+const results = computed<IPagesData[]>((): IPagesData[] => {
+  const res: IPagesData[] = [];
 
   if (searchTerm.value.length > 0) {
     pages.forEach((page: any, index: number): void => {
       const pagePath: string = page.path;
       const pageTitle: string = page.title;
-      const pageHeaders: ISearchResultHeader[] = page.headers;
+      const pageHeaders: IPagesDataHeader[] = page.headers;
       const loweredTitle: string = pageTitle?.toLowerCase();
       const loweredTerm: string = searchTerm.value.toLowerCase();
 
       if (Array.isArray(pageHeaders)) {
-        pageHeaders.forEach((anchor: ISearchResultHeader): void => {
+        pageHeaders.forEach((anchor: IPagesDataHeader): void => {
           const loweredText: string = anchor.text.toLowerCase();
           const containsTerms: boolean = loweredTerm.includes(loweredText) || loweredText.includes(loweredTerm);
           const isOwnPage: boolean = loweredTitle === loweredText;

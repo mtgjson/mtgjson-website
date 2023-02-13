@@ -79,10 +79,10 @@ const resultsLength = ref<number>(0);
 const resultsTotalLength = ref<number>(0);
 const sorter = ref<any>(null);
 const sortKey = ref<string>('releaseDate:true');
-const sortedList = ref<TList[] | any[]>([]);
+const sortedList = ref<TList[]>([]);
 
-const defaultList = computed<TList[] | any[]>((): TList[] | any[] => store[props.file]);
-const listFilters = computed<TList[] | any[]>((): TList[] | any[] =>
+const defaultList = computed<TList[]>((): TList[] => store[props.file]);
+const listFilters = computed<string[]>((): string[] =>
   Array.from(new Set(defaultList.value.map((cur: TList) => cur.type)))
 );
 const list = computed<TList[]>((): TList[] => {

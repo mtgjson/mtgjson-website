@@ -3,8 +3,8 @@ aside.sidebar
   .sidebar-logo
     NavMeta(:width="`70px`")
 
-  .sidebar-wrap-navlinks
-    NavLinks
+  .sidebar-wrap-social
+    SocialLinks
 
   .sidebar-wrap-search
     Search
@@ -14,7 +14,7 @@ aside.sidebar
 </template>
 
 <script setup lang="ts">
-import NavLinks from './NavLinks.vue';
+import SocialLinks from './SocialLinks.vue';
 import SidebarLinks from './SidebarLinks.vue';
 import NavMeta from './NavMeta.vue';
 import Search from './Search.vue';
@@ -73,7 +73,7 @@ defineProps<Props>();
     overflow-y: auto;
     padding: 1.5rem 2rem 10rem;
 
-    &-navlinks,
+    &-social,
     &-search {
       padding: 1rem 2rem;
       border-bottom: 1px solid var(--bg-border-color);

@@ -8,9 +8,10 @@ ul.sidebar-links
 <script setup lang="ts">
 import SidebarGroup from './SidebarGroup.vue';
 import SidebarLink from './SidebarLink.vue';
+import type { TSidebarItem } from '../types';
 
 type Props = {
-  items: [];
+  items: TSidebarItem[];
 };
 
 defineProps<Props>();

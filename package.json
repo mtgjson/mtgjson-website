@@ -11,6 +11,7 @@
     "dev": "run-p lint:js:watch local",
     "local": "npm run check:version && npm run generate:types && npm run generate:contributors && vitepress dev docs",
     "build": "npm run generate:types && npm run generate:contributors && vitepress build docs && npm run generate:feeds",
+    "build:bare": "vitepress build docs",
     "purge": "rm -rf node_modules",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",

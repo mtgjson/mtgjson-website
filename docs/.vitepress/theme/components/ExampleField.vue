@@ -1,10 +1,19 @@
 <template lang="pug">
-.example-field(v-if="enums.length > 0", :class="{ showing: showAll }")
+.example-field(
+  v-if="enums.length > 0",
+  :class="{ showing: showAll }"
+)
   strong Example:{{ ' ' }}
   code(v-if="!showAll") {{ '"' + enums.sort().slice(0, minimumToShow).join('", "') + '"' }}
-    .show-btn(v-if="enums.length > minimumToShow", @click="toggleShowAll") Show&nbsp;More
-  code(v-if="showAll && enums.length > minimumToShow") {{ '"' + enums.sort().join('", "') + '"' }}
-    .show-btn(@click="toggleShowAll") Show&nbsp;Less
+    .show-btn(
+      v-if="enums.length > minimumToShow",
+      @click="toggleShowAll"
+    ) Show&nbsp;More
+  code(v-else) {{ '"' + enums.sort().join('", "') + '"' }}
+    .show-btn(
+      v-if="enums.length > minimumToShow"
+      @click="toggleShowAll"
+    ) Show&nbsp;Less
 </template>
 
 <script setup lang="ts">
@@ -29,7 +38,7 @@ const showAll = ref<boolean>(false);
 const allEnums = computed<object>((): object => store.EnumValues);
 const metaFakeEnums = computed<TMeta>((): TMeta => store.Meta);
 const thisEnum = computed<object>((): object => allEnums.value[frontmatter.value.enum]);
-const enums = computed<string[] | string>((): string[] | string => {
+const enums = computed<string[]>((): string[] => {
   if ( metaFakeEnums.value && frontmatter.value.enum === 'meta') {
     return [ metaFakeEnums.value[props.type] ];
   }

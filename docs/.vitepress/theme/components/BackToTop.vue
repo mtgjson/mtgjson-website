@@ -1,6 +1,13 @@
 <template lang="pug">
-.back-to-top(v-if="show" title="Back to top" @click="scrollToTop")
-  img(alt="Back to top arrow" src="/images/icons/icon-back-to-top.svg")
+.back-to-top(
+  v-if="show",
+  title="Back to top",
+  @click="scrollToTop"
+)
+  img(
+    alt="Back to top arrow"
+    src="/images/icons/icon-back-to-top.svg"
+  )
 </template>
 
 <script setup lang="ts">

@@ -1,13 +1,17 @@
 <template lang="pug">
-a(class="sidebar-link" :class="{ active: selfActive }" :href="link.props.href" @click="toggleSidebar") {{ link.children }}
+a(
+  class="sidebar-link",
+  :class="{ active: selfActive }",
+  :href="link.props.href",
+  @click="toggleSidebar"
+) {{ link.children }}
 </template>
 
 <script setup lang="ts">
 import { h, computed } from 'vue';
-import { useRoute } from 'vitepress';
+import { useRoute, type Route } from 'vitepress';
 import { useStore } from '../store.js';
 import { isActive } from '../helpers';
-import type { Route } from 'vitepress';
 import type { TSidebarItem } from '../types';
 
 type Props = {
@@ -21,20 +25,14 @@ const route: Route = useRoute();
 
 const selfActive = computed<boolean>((): boolean => isActive(route, props.item.link));
 const link = computed<TSidebarItem>(
-  (): TSidebarItem => renderLink(h, props.item.link, props.item.text || props.item.link, selfActive.value)
+  (): TSidebarItem => renderLink(h, props.item.link, props.item.text)
 );
 
-const renderLink = (h: any, to: string, text: string, active: boolean): TSidebarItem => {
+const renderLink = (h: any, to: string, text: string): TSidebarItem => {
   return h(
     'a',
     {
-      href: to,
-      activeClass: '',
-      exactActiveClass: '',
-      class: {
-        active,
-        'sidebar-link': true,
-      },
+      href: to
     },
     text
   );

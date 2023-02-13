@@ -32,17 +32,18 @@
 
 <script setup lang="ts">
 import { ref } from 'vue';
-import { useRoute, useRouter, useData } from 'vitepress';
-import type { ISearchResult } from '../types';
+import { useRoute, useRouter, useData, type Route, type Router } from 'vitepress';
+import type { IPagesData } from '../types';
 
-const route = useRoute();
-const router = useRouter();
+const route: Route = useRoute();
+const router: Router = useRouter();
 const { theme } = useData();
 
-const pages: ISearchResult[] = theme.value.pages;
+const pages: IPagesData[] = theme.value.pages;
 const currentPath: string = route.path;
 const hasHTMLExtension: boolean = currentPath.includes('.html');
 const hasTrailingSlash: boolean = currentPath.endsWith('/');
+
 let possiblePath: string | null = null;
 
 if(hasHTMLExtension){
@@ -53,8 +54,8 @@ if(!hasHTMLExtension && !hasTrailingSlash) {
   possiblePath = currentPath + '/';
 }
 
-const suggestedPathData = pages.filter((page: ISearchResult): boolean => page.path === possiblePath)[0];
-const suggestedPath = ref<ISearchResult | null>(suggestedPathData);
+const suggestedPathData = pages.filter((page: IPagesData): boolean => page.path === possiblePath)[0];
+const suggestedPath = ref<IPagesData | null>(suggestedPathData);
 const canRedirect = ref<boolean>(suggestedPath?.value?.path === possiblePath);
 
 if(canRedirect.value){

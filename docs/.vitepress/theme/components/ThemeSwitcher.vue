@@ -1,6 +1,10 @@
 <template lang="pug">
 .theme-switcher
-  DataToggler(:callback="switchTheme" :class="'theme-toggler'" :checked="checked")
+  DataToggler(
+    :callback="switchTheme",
+    :class="'theme-toggler'",
+    :checked="checked"
+  )
 </template>
 
 <script setup lang="ts">

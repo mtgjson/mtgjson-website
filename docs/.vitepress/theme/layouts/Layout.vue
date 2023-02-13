@@ -1,9 +1,14 @@
 <template lang="pug">
 .theme-container(:class="pageClasses")
   .doc(v-if="!isHome")
-    Navbar(@toggle-sidebar="toggleSidebar")
+    Navbar(
+      @toggle-sidebar="toggleSidebar"
+    )
 
-    Sidebar(:items="sidebarItems", @toggle-sidebar="toggleSidebar")
+    Sidebar(
+      :items="sidebarItems",
+      @toggle-sidebar="toggleSidebar"
+    )
 
     Page
 
