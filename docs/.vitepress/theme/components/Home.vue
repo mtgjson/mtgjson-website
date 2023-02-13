@@ -168,7 +168,7 @@ main.home
     .content-wrapper
       footer
         ul
-          li Copyright &copy; 2018 &ndash; Present Zachary Halpern, Eric Lakatos
+          li Copyright &copy; 2018 &ndash; Present Zach Halpern, Eric Lakatos
           li MTGJSON and Documentation released under the&nbsp;
             a(href="/license/") MIT License
           li.legal Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. All Rights Reserved.
