@@ -1,16 +1,18 @@
 # Contributing
 
-The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.org/) framework with some tricks of our own.
+The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/) Server-Side Generated website framework with some tricks of our own.
 
 ## Knowledge Requirements
 
-- Vue
-- VuePress
+- Node
+- TypeScript
+- Vue 3 (Composition API)
+- Pinia
+- VitePress
 - Markdown
 - JSON
 - SCSS
 - SEO
-- YAML
 - Accessibility
 - MTGJSON Files
 
@@ -18,133 +20,137 @@ The MTGJSON documentation website uses the [VuePress](https://v1.vuepress.vuejs.
 
 - Node
 - npm
-
-### Optional Requirements
-
 - n
+
+## IDE Setup
+
+The current preferred IDE is [VS Code](https://code.visualstudio.com/). Be sure the install the following extensions:
+
+- Vue Language Features (Volar)
+- Typescript Vue Plugin (Volar)
+
+**Note:** You may have to enable "Takeover Mode" by disabling VS Code's builtin package `TypeScript and JavaScript Language Features` within the workspace.
 
 ## Directory Structure
 
-Files/Directories were omitted that do not help understand this current project structure.
+Some files and directories are omitted that do not help understand this current project structure.
 
 ```sh
 .
-├── app.json # Configuration for Heroku review apps. Used for Heroku PR deployments
-├── static.json # Configuration for Heroku build. Used for Heroku PR deployments
-├── util # Build utilities run during site generation
-|   ├── check-version.js # Ensures the developer environment is correct
-│   ├── generate-contributors.js # Utility to generate a github contributors file
-│   └── generate-version-atom.js # Utility to generate a version atom of the siteschemas
-└── docs # Home directory, outputs to `/dist`
-    ├── README.md # Route entry point
-    ├── **/*.md # Directories and their route entry point
-    └── .vuepress # Main source files for the application
-        ├── config.js # Main VuePress configuration
-        ├── config.sidebar.js # Script to generate the sidebar heirarchy
-        ├── enhanceApp.js # Vue enhancements
-        ├── store.js # Vuex store
-        ├── public/ # Static assets
-        │   ├── favicons/ # All favicon images
-        │   ├── images/ # All application images
-        │   │   ├── assets/ # MTGJSON specifics
-        │   │   └── avatars/ # User/supporters avatars
-        │   └── robots.txt # For crawlers to index/not index certain pages
-        ├── src # Helper data and functions
-        │   ├── resources/ # JSON that powers parts of the site
-        │   │   ├── contributors.json # For contributors data from github
-        │   │   └── supporters.json # For project Patrons/Supporters data
-        │   └── scripts/ # Any app helper functions
-        │       └── *.js # Vue helpers
-        └── theme # Visuals
-            ├── components/ # Vuepress default Vue components (Beware!)
-            ├── global-components/ # Custom Vue components
+├── util/ # Build utilities
+│   ├── check-version.js # Ensures the Node environment is correct
+│   ├── generate-contributors.js # Utility to generate GitHub contributors JSON
+│   ├── generate-feeds.js # Utility to generate RSS and other feeds
+│   └── generate-types.js # Utility to generate TypeScript notations for documentation
+└── docs/ # Home directory, outputs to `/dist`
+    ├── **/**/index.md # Directories and their route entry point
+    ├── public/ # Static assets
+    │   ├── images/ # All application images
+    │   │   ├── assets/ # MTGJSON specifics
+    │   │   ├── avatars/ # User/supporters avatars
+    │   │   └── icons/ # General icons
+    │   ├── static/ # Desired public facing assets
+    │   │   └── mtgjson-types.ts # TypeScript types for MTGJSON Data Models
+    │   └── *.* # Any public facing file, like favicons or robots.txt
+    └── .vitepress/ # Main source files for the application
+        ├── config.js # Main VitePress configuration
+        ├── generatePages.js # Polyfill script to generate pages data for search
+        ├── generateSidebar.js # Polyfill script to generate the sidebar heirarchy
+        └── theme/ # Themeing for VitePress
+            ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
-            │   ├── 404.vue # Layout for error page
-            │   └── Layout.vue # Layout for the rest of pages
+            │   ├── Layout.vue # Layout for non-error pages
+            │   └── NotFound.vue # Layout for error page
+            ├── static/ # Static data to power Vue components
+            │   └── *.json # JSON data
             ├── styles/ # Visual styling
-            │   ├── *.scss # CSS
-            │   └── palette.styl # Stylus requirement for VuePress (DO NOT REMOVE)
-            └── util/ # Theme helper functions
-                └── index.js # Helper functions for components
+            │   └── *.scss # Global CSS
+            ├── helpers.ts # Helper functions
+            ├── index.ts # Theme config and enhancements
+            ├── store.ts # Pinia global state store
+            └── types.ts # TypeScript types, interfaces, etc.
 ```
 
-## VuePress Configuration
+## VitePress Configuration
 
-Explaining the configuration as a whole would be best served by directly linking to the [VuePress documentation](https://v1.vuepress.vuejs.org/config/).
+Explaining the configuration as a whole would be best served by directly linking to the [VitePress documentation](https://vitepress.vuejs.org/config/introduction.html).
 
 ## Markdown Files
 
 ### Use and Purpose
 
 > **Use**: To serve has as static routing of the application.  
-> **Purpose**: All markdown files should be named `README.md`. That file will act as the single `index.html` for a directory.
+> **Purpose**: All markdown files should be named `index.md`. That file will act as the single `index.html` for a directory.
 
 ### Markdown Structure
 
-The structure of a file is simple. Frontmatter on top, everything else below it.
+The structure of a file is simple. Frontmatter on top, everything else below it. Some notes:
 
-- Frontmatter is written in JSON (with strings).
-- Markdown is written to a high-level of specification and should not be manipulated.
-- Vue components are imported by placing them in a Markdown file.
-- Plugins are provided by the VuePress community and can add syntactical sugar to rendering elements, such as Table of Contents.
+- Frontmatter is written in YAML.
+- Markdown is written to a high-level of specification.
+- Vue components can only be used in Markdown if they are registered globally via `./docs/vitepress/theme/index.ts`.
 
 ### Using Frontmatter
 
-Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data, Vue component data and state, and Plugin configuration.
+Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data and Vue component data and state.
 
-You can also change configuration of VuePress by overwriting variables within the front matter, such a title, description, etc.
+You can also change configuration of VitePress by overwriting variables within the frontmatter, such a title, description, etc.
 
 > Remember: Frontmatter goes at the top of any Markdown file.
 
 #### Example
 
 ```yaml
-{
-  "title": "Card (Set)", # Meta title of page
-  "schema": "card", # Powers certain Vue components
-  "meta": [ # Head meta properties
-    {
-      "name": "description",
-      "content": "Card (Set) Data Model documentation.",
-    },
-    {
-      "name": "og:description",
-      "content": "Card (Set) Data Model documentation.",
-    },
-    {
-      "name": "keywords",
-      "content": "mtg, magic: the gathering, mtgjson, json, card (set)",
-    }
-  ],
-  "feed": {
-    "enable": "true" # Include this for atom/rss XML additions
-  }
-}
+title: Card (Set)
+enum: card
+head:
+  - - meta
+    - property: og:title
+      content: Card (Set)
+  - - meta
+    - name: description
+      content: The Card (Set) Data Model describes the keys and calues of a single card in a set.
+  - - meta
+    - property: og:description
+      content: The Card (Set) Data Model describes the properties of a single card in a set.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, card, card set
 ```
 
 ### Markdown Syntax for Documentation Fields
 
+#### Property Field
+
 An example of a property field for a data object field in Markdown:
 
 ```
-> ### artist
+> ### artist <i class="optional"></i>
+>
 > The name of the artist that illustrated the card art.  
 >
-> **Type:** `string`  
-> **Introduced:** `v4.0.0`  
-> **Tags:** <i class="optional">Optional</i>
+> **Type:** `string`
+> **Introduced:** `v4.0.0`
 ```
 
-You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. See a Markdown file for an example. This requires some frontmatter updates where the `"schema"` property have a value that equates to an EnumValues.json property.
+The `<i class="optional"></i>` markup will render a UI change in the property that denotes the property is optional and also power a component that will allow toggling the UI to view or not view these fields.
 
-## The Vuex Store
+You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
-We use Vuex to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and API remains as performant as possible.
+If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
 
-## enhanceApp.js
+#### TypeScript Notations
 
-Because Vue backs this entire application we can inject some helpers in to Vue to be accessed in our components.
+Use the `<ModelType type='<Model Name>' />` component to render the TypeScript notation for a Data Model where `<Model Name>` is the Data Model, such as `CardAtomic` or `DeckList`.
+
+#### Table of Contents
+
+Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers and use the `<PropertyToggler/>` component right above `[[toc]]` to enable toggling optional properties on the Table of Contents.
+
+## Pinia Store
+
+We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store remains as performant as possible.
 
 ## Testing
 
@@ -152,9 +158,9 @@ We use Jest and try our best. Test runs before commits and will fail the commit 
 
 ## Pull Requests
 
-We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate:
+We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate but are not strict about:
 
-- `issue/123: fixed bug.` "issue" is a branch which PR handles something where an issue was opened
-- `ni/documentation_updates: updated README.` "ni" is branch which PR handles something with no open issue
+- `issue/123: Fixed bug`: "issue" is a branch which a PR handles something where an issue was opened
+- `NS/documentation_updates: Updated README`: "NS" is a branch which a PR handles something with no open issue
 
-Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title clear and concise.
+Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title exact and concise.

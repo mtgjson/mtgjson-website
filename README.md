@@ -2,7 +2,7 @@
 
 # MTGJSON Documentation Application
 
-<img src="./docs/.vuepress/public/images/assets/logo-mtgjson-dark-blue.svg" height="100px">
+<img src="./docs/public/images/assets/logo-mtgjson.svg" height="100px">
 <br />
 <br />
 
@@ -21,19 +21,11 @@
 
 ### **Installation**
 
-**Option #1 (Preferred)**: Install Node with [brew](https://brew.sh).
+Install Node with [brew](https://brew.sh):
 
 ```
 brew install n
-sudo n 12
-```
-
-**Option #2:** Install Node using the [official resources](https://nodejs.org/en/download/releases/) installer.
-
-Install project dependencies.
-
-```
-npm install
+sudo n 16.16
 ```
 
 ### **Developing**
@@ -60,7 +52,7 @@ Run all tests.
 npm run test
 ```
 
-or run the full tests that Husky will test for.
+Run all tests and a test build.
 
 ```
 npm run test:full
@@ -69,6 +61,8 @@ npm run test:full
 ### **Building**
 
 Build out the entire site as a static project.
+
+**Note:** This is done via the GitHub Action and pushed to a Release Tag so no need to do this unless you are testing the actual build. Additionally, when submitting a PR, Netlify will deploy an environment for you to test your Pull Request.
 
 ```
 npm run build
@@ -81,14 +75,3 @@ Clean out all Node packages.
 ```
 npm run purge
 ```
-
-### **Caveats**
-
-Occasionally we may want to upgrade all packages to keep the project up to date, but since Vuepress is built on Vue 2 there are some discrepencies when trying to update _everything_. The following should not be updated:
-
-- vuex
-- sass-loader
-
-Some dependencies need dev dependencies in order to work since their last update, this includes:
-
-- webpack

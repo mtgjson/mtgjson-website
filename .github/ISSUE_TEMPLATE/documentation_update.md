@@ -2,15 +2,15 @@
 name: Documentation Update
 about: Report documentation being outdated or needing an update
 title: ''
-labels: docs update
+labels: Documentation Update
 assignees: ''
 
 ---
 
-### Steps to reproduce
+### Location of update needed
 
-### What is expected?
+### What does the documentation look like?
 
-### What is actually happening?
+### What should the documentation look like?
 
-### Other relevant information
+### Additional context

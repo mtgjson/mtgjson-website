@@ -1,14 +1,12 @@
-const fs = require('fs');
-const axios = require('axios');
+import fs from 'fs';
+import axios from 'axios';
 
 let contributors = [];
 const promises = [];
 const projects = ['mtgjson', 'mtgjson-website', 'mtgsqlive'];
 
 projects.forEach((project) => {
-  promises.push(
-    axios.get(`https://api.github.com/repos/mtgjson/${project}/contributors`)
-  );
+  promises.push(axios.get(`https://api.github.com/repos/mtgjson/${project}/contributors`));
 });
 
 Promise.all(promises)
@@ -21,26 +19,20 @@ Promise.all(promises)
     );
   })
   .then((data) => {
-    return Array
-      .from(new Set(contributors.map(c => c.login)))
-      .filter(login => !login.includes('[bot]'))
-      .map(login => {
+    return Array.from(new Set(contributors.map((c) => c.login)))
+      .filter((login) => !login.toLowerCase().includes('[bot]'))
+      .filter((login) => !login.toLowerCase().includes('staghouse'))
+      .filter((login) => !login.toLowerCase().includes('zeldazach'))
+      .map((login) => {
         return {
-          username: contributors.find(c => c.login === login).login,
-          url: contributors.find(c => c.login === login).html_url,
-          avatar: contributors.find(c => c.login === login).avatar_url
+          username: contributors.find((c) => c.login === login).login,
+          url: contributors.find((c) => c.login === login).html_url,
+          avatar: contributors.find((c) => c.login === login).avatar_url,
         };
       });
   })
   .then((data) => {
-    fs.writeFileSync(
-      `./docs/.vuepress/src/resources/contributors.json`,
-      JSON.stringify(data, null, 2),
-      'utf-8',
-      res => {
-        console.warn(res);
-      }
-    );
+    fs.writeFileSync(`./docs/.vitepress/theme/static/contributors.json`, JSON.stringify(data, null, 2), 'utf-8');
   })
   .catch((err) => {
     console.log(err);

@@ -1,0 +1,113 @@
+// Changelog
+#mtgjson-v5-changelog,
+#mtggraphql-changelog {
+  & ~ h3 {
+    margin-bottom: 1rem;
+    border-bottom: 1px solid var(--header-border-color);
+    display: inline-block;
+  }
+}
+
+// Model Properties of a page
+#model-properties {
+  & ~ blockquote {
+    ul {
+      padding-bottom: 0.75rem;
+    }
+  }
+  &.none {
+    position: relative;
+    margin-bottom: 1.5rem;
+
+    &::after {
+      content: "No Available Properties";
+      position: relative;
+      display: inline-block;
+      top: 3rem;
+      left: -14.75rem;
+      font-size: 1rem;
+      color: var(--gray-color);
+    }
+
+    & ~ blockquote {
+      display: none;
+    }
+  }
+
+  & ~ .custom-block {
+    margin-bottom: 1rem;
+    margin-top: 0;
+  }
+}
+
+// Table of contents
+.table-of-contents {
+  & > ul,
+  & > ol {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    grid-column-gap: 2rem;
+
+    li {
+      grid-column: span 1;
+    }
+  }
+}
+
+// Reset TOC to regular layout on certain pages with less items
+#getting-started,
+#frequently-asked-questions {
+  & ~ .table-of-contents {
+    ul {
+      display: block;
+    }
+  }
+}
+
+// Team on Homepage
+#mtgjson {
+  & ~ .team-wrapper {
+    img {
+      background-color: var(--bg-2-color);
+    }
+
+    & > .custom-block:first-of-type {
+      margin-top: 0;
+    }
+  }
+}
+@media (max-width: 960px) {
+  #mtgjson {
+    & ~ .team-wrapper {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-gap: 1rem;
+
+      & > * {
+        margin: 0;
+      }
+
+      & > .custom-block:first-of-type {
+        margin-top: 0;
+      }
+
+      .custom-block.tip {
+        .custom-block-title {
+          text-align: center;
+        }
+
+        strong {
+          text-align: center;
+          display: block;
+          margin-bottom: 1rem;
+        }
+
+        img {
+          display: block;
+          float: none;
+          margin: 0 auto 1rem;
+        }
+      }
+    }
+  }
+}

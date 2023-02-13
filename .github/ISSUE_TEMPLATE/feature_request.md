@@ -2,15 +2,15 @@
 name: Feature Request
 about: Suggest an idea or enhancement
 title: ''
-labels: enhancement
+labels: Enhancement
 assignees: ''
 
 ---
 
-### Is your feature request related to a problem? Please describe.
+### Describe the feature request
 
-### Describe the solution you'd like
+### The solution you would like
 
-### Describe, if any, alternatives you've considered
+### Any alternatives you have considered
 
 ### Additional context
