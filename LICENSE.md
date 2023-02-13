@@ -1,6 +1,6 @@
 # MIT License
 
-Copyright &copy; 2018 &ndash; Present, Zachary Halpern, Eric Lakatos
+Copyright &copy; 2018 &ndash; Present, Zach Halpern, Eric Lakatos
 
 Permission is hereby granted, free of charge, to any person obtaining a copy
 of this software and associated documentation files (the "Software"), to deal

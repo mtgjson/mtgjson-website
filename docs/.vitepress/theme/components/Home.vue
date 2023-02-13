@@ -78,11 +78,11 @@ main.home
       ul.home-team-leads
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-zach.jpg" title="Zachery Halpern's avatar" alt="Zach's avatar")
+            img(src="/images/avatars/avatar-zach.jpg" title="Zach Halpern's avatar" alt="Zach's avatar")
             div
               a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
                 h4 Zach Halpern
-              span Lead Developer
+              span Lead Developer & Maintainer
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member
@@ -168,7 +168,7 @@ main.home
     .content-wrapper
       footer
         ul
-          li Copyright &copy; 2018 &ndash; Present Zachary Halpern, Eric Lakatos
+          li Copyright &copy; 2018 &ndash; Present Zach Halpern, Eric Lakatos
           li MTGJSON and Documentation released under the&nbsp;
             a(href="/license/") MIT License
           li.legal Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. All Rights Reserved.
