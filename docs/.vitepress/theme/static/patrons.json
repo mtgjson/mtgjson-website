@@ -55,8 +55,8 @@
   },
   {
     "company": "Mantle",
-    "image": "",
-    "link": "",
+    "image": "avatar-mantle.png",
+    "link": "https://mantlestores.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
     "tier": "mythic",
     "since": "2022-07",
     "name": "Stephen Kirwan"
@@ -111,8 +111,8 @@
   },
   {
     "company": "Moxfield",
-    "image": "",
-    "link": "",
+    "image": "avatar-moxfield.png",
+    "link": "https://www.moxfield.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
     "tier": "rare",
     "since": "2022-11",
     "name": "Moxfield"
@@ -446,8 +446,8 @@
   },
   {
     "company": "FaceToFaceGames",
-    "image": "",
-    "link": "",
+    "image": "avatar-facetofacegames.png",
+    "link": "https://www.facetofacegames.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
     "tier": "uncommon",
     "since": "2023-02",
     "name": "Staphane Faure"
