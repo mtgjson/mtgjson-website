@@ -41,7 +41,7 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 - Added `isFunny` optional property to [Card (Atomic)](/data-models/card-atomic/#isfunny)
 - Added `language` property to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
 - Added `relatedCards` property to all Card Data Models
-- Added `subset` optional property to all Card Data Models
+- Added `subsets` optional property to all Card Data Models
 
 #### Fixed
 

@@ -67,7 +67,7 @@ export type CardAtomic = {
         
   side?: string;
         
-  subset?: string[];
+  subsets?: string[];
         
   subtypes: string[];
         
@@ -231,7 +231,7 @@ export type CardDeck = {
         
   signature?: string;
         
-  subset?: string[];
+  subsets?: string[];
         
   subtypes: string[];
         
@@ -395,7 +395,7 @@ export type CardSet = {
         
   signature?: string;
         
-  subset?: string[];
+  subsets?: string[];
         
   subtypes: string[];
         
@@ -495,7 +495,7 @@ export type CardToken = {
         
   signature?: string;
         
-  subset?: string[];
+  subsets?: string[];
         
   subtypes: string[];
         

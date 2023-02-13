@@ -322,9 +322,9 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### subset <i class="optional"></i>
+> ### subsets <i class="optional"></i>
 >
-> The name of the subset printing a card is in. Used on "Secret Lair Drop" cards.
+> The names of the subset printings a card is in. Used primarily on "Secret Lair Drop" cards.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`

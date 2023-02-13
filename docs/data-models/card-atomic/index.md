@@ -299,9 +299,9 @@ The Card (Atomic) Data Model describes a single atomic card, an oracle-like enti
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
 
-> ### subset <i class="optional"></i>
+> ### subsets <i class="optional"></i>
 >
-> The name of the subset printing a card is in. Used on "Secret Lair Drop" cards.
+> The names of the subset printings a card is in. Used primarily on "Secret Lair Drop" cards.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
