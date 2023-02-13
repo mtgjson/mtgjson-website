@@ -19,8 +19,12 @@ head:
 
 MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.
 
-**Downloads are provided as:**
+## File Putputs
 
-- [All Files](./all-files/) (All downloadable files)
-- [All Sets](./all-sets/) (All downloadable individual sets)
-- [All Decks](./all-decks/) (All downloadable individual decks)
+### All Files
+
+MTGJSON provides a myriad of files for your projects, you can find them all at our [All Files](/downloads/all-files/) download section.
+
+### All Sets/Decks
+
+We also output individual sets and decks, which can be found at our [All Sets](/downloads/all-sets/) and [All Decks](/downloads/all-decks/) download sections.
