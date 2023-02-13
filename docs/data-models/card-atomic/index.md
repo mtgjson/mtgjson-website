@@ -115,7 +115,7 @@ The Card (Atomic) Data Model describes the properties of a single atomic card, a
 >
 > The card saltiness score on [EDHRec](https://www.edhrec.com).
 >
-> - **Type:** `number`
+> - **Type:** `float`
 > - **Introduced:** `v5.2.1`
 
 > ### faceConvertedManaCost <i class="deprecated"></i><i class="optional"></i>

@@ -16,7 +16,7 @@ type Props = {
   class?: string;
   label?: string;
   checked?: boolean;
-  callback?: (event: HTMLChangeEvent) => {};
+  callback?: (arg1?: any, arg2?: any) => void;
 };
 
 const props = defineProps<Props>();

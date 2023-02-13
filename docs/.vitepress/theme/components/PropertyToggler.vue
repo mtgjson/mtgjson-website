@@ -1,6 +1,9 @@
 <template lang="pug">
 #property-toggler.property-toggler(v-if="hasOptionals")
-  DataToggler(:callback="toggleOptionals" :label="'Hide Optional Properties'")
+  DataToggler(
+    :callback="toggleOptionals",
+    :label="'Hide Optional Properties'"
+  )
   span (Showing {{ count }})
 </template>
 

@@ -1,6 +1,5 @@
 <template lang="pug">
 main.home
-  //- Content.content-wrapper
   section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
@@ -82,7 +81,7 @@ main.home
             div
               a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
                 h4 Zach Halpern
-              span Lead Developer & Maintainer
+              span Lead Developer &amp; Maintainer
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member

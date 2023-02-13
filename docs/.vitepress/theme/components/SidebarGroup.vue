@@ -17,19 +17,18 @@ section.sidebar-group
 </template>
 
 <script setup lang="ts">
-import { useRoute } from 'vitepress';
+import { useRoute, type Route } from 'vitepress';
 import { isActive } from '../helpers';
 import SidebarLinks from './SidebarLinks.vue';
-import type { Route } from 'vitepress';
+import type { TSidebarItem } from '../types';
 
 type Props = {
-  item: object;
+  item: TSidebarItem;
 };
 
 defineProps<Props>();
 
 const route: Route = useRoute();
-
 </script>
 
 <style lang="scss">

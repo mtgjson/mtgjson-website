@@ -72,8 +72,7 @@ export const search = (terms: string, searchableData: any[]) => {
 
 export const filter = (filter: string, dataToFilter: any[]) => {
   return filter.length === 0
-    ? // No filter, return all data
-    dataToFilter
+    ? dataToFilter // No filter, return all data
     : dataToFilter.filter((cur: any) => cur.type === filter);
 };
 
@@ -183,30 +182,6 @@ export const getHash = (path: string): string => {
 
 export const isExternal = (path: string): boolean => {
   return outboundRE.test(path);
-};
-
-export const isMailto = (path: string): boolean => {
-  return /^mailto:/.test(path);
-};
-
-export const isTel = (path: string): boolean => {
-  return /^tel:/.test(path);
-};
-
-export const ensureExt = (path: string): string => {
-  if (isExternal(path)) {
-    return path;
-  }
-
-  const hashMatch = path.match(hashRE);
-  const hash = hashMatch ? hashMatch[0] : '';
-  const normalized = normalize(path);
-
-  if (endingSlashRE.test(normalized)) {
-    return path;
-  }
-
-  return normalized + '.html' + hash;
 };
 
 export const isActive = (route: any, path: string): boolean => {

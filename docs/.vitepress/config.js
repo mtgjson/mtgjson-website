@@ -1,7 +1,10 @@
 import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
-const [abstractModels, dataModels] = generateSidebar(['/abstract-models/', '/data-models/']);
+const [
+  abstractModels,
+  dataModels
+] = generateSidebar(['/abstract-models/', '/data-models/']);
 
 export const pages = generatePages({
   INCLUDE_DIR: 'docs',
@@ -52,23 +55,41 @@ export default {
     ['meta', { name: 'theme-color', content: '#0f263c' }]
   ],
   markdown: {
+    // Only capture h3 headings
     toc: {
-      level: [3],
+      level: [ 3 ],
     }
   },
-  // VitePress Themeing
+  // VitePress themeing
   themeConfig: {
-    pages, // Used for search
+    pages,
     smoothScroll: true,
+    // Handle edit link ourselves
     customEditLink: {
       pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/',
       text: 'Help us improve this page!',
     },
-    nav: [
-      { text: 'Join us on Discord', link: 'https://mtgjson.com/discord' },
-      { text: 'Follow us on Twitter', link: 'https://twitter.com/mtgjson' },
-      { text: 'Support us on Patreon', link: 'https://www.patreon.com/MTGJSON' },
-      { text: 'Contribute on GitHub', link: 'https://github.com/mtgjson' },
+    socialLinks: [
+      {
+        text: 'Contribute on GitHub',
+        link: 'https://github.com/mtgjson',
+        class: 'github'
+      },
+      {
+        text: 'Join us on Discord',
+        link: 'https://mtgjson.com/discord',
+        class: 'discord'
+      },
+      {
+        text: 'Support us on Patreon',
+        link: 'https://www.patreon.com/MTGJSON',
+        class: 'patreon'
+      },
+      {
+        text: 'Follow us on Twitter',
+        link: 'https://twitter.com/mtgjson',
+        class: 'twitter'
+      },
     ],
     sidebar: [
       {

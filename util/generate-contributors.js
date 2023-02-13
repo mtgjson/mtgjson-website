@@ -23,6 +23,7 @@ Promise.all(promises)
       .filter((login) => !login.toLowerCase().includes('[bot]'))
       .filter((login) => !login.toLowerCase().includes('staghouse'))
       .filter((login) => !login.toLowerCase().includes('zeldazach'))
+      .filter((login) => !login.toLowerCase().includes('milorue'))
       .map((login) => {
         return {
           username: contributors.find((c) => c.login === login).login,

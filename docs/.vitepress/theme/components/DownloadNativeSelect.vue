@@ -1,6 +1,9 @@
 <template lang="pug">
 .download-native-select
-  select(v-if="fileName === 'AllPrintings'", @change="downloadFile")
+  select(
+    v-if="fileName === 'AllPrintings'",
+    @change="downloadFile"
+  )
     option Select a file to download
     optgroup(label="JSON")
       option(

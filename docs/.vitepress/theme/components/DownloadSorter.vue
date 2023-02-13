@@ -1,6 +1,9 @@
 <template lang="pug">
 .sorting-options
-  DataToggler(:callback="onToggleChange" :label="'Show Toggles'")
+  DataToggler(
+    :callback="onToggleChange",
+    :label="'Show Toggles'"
+  )
   fieldset.sort-rows(v-if="toggleValue")
     .sort-row.search
       label(for="search-input") Search:
@@ -19,7 +22,7 @@
         @change="onHandleChange"
       )
         option(value="", selected) All Sets
-        option(v-for="(type, key) in filters", :key="key", :value="type") {{ prettifyType(type) }}
+        option(v-for="(filter, key) of filters", :key="key", :value="filter") {{ prettifyType(filter) }}
 
     .sort-row
       label(for="sort-input") Sort:
@@ -51,17 +54,18 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import DataToggler from './DataToggler.vue';
 import { search, filter, sort, prettifyType } from '../helpers';
+import DataToggler from './DataToggler.vue';
 import type { TList } from '../types';
 
 type Props = {
   list: TList[];
-  filters: TList[];
+  filters: string[];
   file?: string;
   type?: string;
   disableChecks?: string;
 };
+
 
 const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
 const props = defineProps<Props>();
@@ -114,7 +118,7 @@ const onToggleChange = (value: boolean): void => {
   toggleValue.value = value;
 }
 
-const onHandleChange = (value?: boolean): void => {
+const onHandleChange = (): void => {
   // Throttle so we don't go nuts
   clearTimeout(timeout.value);
 

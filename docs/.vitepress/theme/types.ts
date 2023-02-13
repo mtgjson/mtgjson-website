@@ -35,7 +35,11 @@ export type TList = {
 export type TSidebarItem = {
   text: string;
   link: string;
-  items: any[],
+  items: any[];
+  props: {
+    href: string;
+  };
+  children: JSX.Element;
 }
 
 export type TEditLink = {
@@ -43,20 +47,33 @@ export type TEditLink = {
   text: string;
 }
 
-export interface ISearchResultHeader {
+export type TSocialLink = {
+  text: string;
+  link: string;
+  class: string;
+}
+
+export interface IPagesDataHeader {
   text?: string;
   slug?: string;
   hash?: string;
 }
 
-export interface ISearchResult extends ISearchResultHeader {
+export interface IPagesData extends IPagesDataHeader {
   id: number;
   path: string;
   title: string;
-  headers?: ISearchResultHeader[];
+  headers?: IPagesDataHeader[];
   isOwnPage?: boolean;
 }
 
 export interface HTMLChangeEvent extends Event {
   target: HTMLFormElement;
 }
+
+// Use when pageData is available to error pages
+// declare module "vitepress" {
+//   interface PageData {
+//     pages: IPagesData[]
+//   }
+// }

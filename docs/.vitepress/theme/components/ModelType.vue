@@ -1,6 +1,9 @@
 <template lang="pug">
 .model-type
-  DataToggler(:callback="updateType" :label="'Show TypeScript Notation'")
+  DataToggler(
+    :callback="updateType",
+    :label="'Show TypeScript Notation'"
+  )
   .model-type-code.language-ts(v-show="showType" v-html="currentType")
 </template>
 
