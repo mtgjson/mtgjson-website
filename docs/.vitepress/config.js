@@ -60,7 +60,7 @@ export default {
   themeConfig: {
     pages, // Used for search
     smoothScroll: true,
-    editLink: {
+    customEditLink: {
       pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/',
       text: 'Help us improve this page!',
     },
