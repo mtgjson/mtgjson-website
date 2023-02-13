@@ -30,8 +30,8 @@ const { theme, page } = useData();
 const sidebarItems: TSidebarItem[] = theme.value.sidebar;
 
 const editLink = computed<TEditLink>((): TEditLink => {
-  const link: string = theme.value.editLink.pattern + page.value.relativePath;
-  const text: string = theme.value.editLink.text;
+  const link: string = theme.value.customEditLink.pattern + page.value.relativePath;
+  const text: string = theme.value.customEditLink.text;
 
   return {
     link,
