@@ -6,10 +6,10 @@ head:
       content: Downloads
   - - meta
     - name: description
-      content: MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.
+      content: MTGJSON provides various kinds of downloads, all available on the website or by fetching from our file server.
   - - meta
     - property: og:description
-      content: MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.
+      content: MTGJSON provides various kinds of downloads, all available on the website or by fetching from our file server.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, downloads
@@ -17,7 +17,7 @@ head:
 
 # Downloads
 
-MTGJSON provides various kinds of downloads, all available on the website or by fetching from the file server.
+MTGJSON provides various kinds of downloads, all available on the website or by fetching from our [file server](https://mtgjson.com/api/v5/).
 
 ## File Putputs
 
