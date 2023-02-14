@@ -1,6 +1,5 @@
 ---
-title: 'MTGJSON: Portable formats for all Magic: The Gathering data'
-titleTemplate: false
+title: 'MTGJSON'
 home: true
 head:
   - - meta
