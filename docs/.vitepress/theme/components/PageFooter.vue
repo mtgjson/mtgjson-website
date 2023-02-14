@@ -8,9 +8,9 @@ footer
       span.next(v-if="next")
         a.prev(:href="next.link") {{ next.text }} &rarr;
 
-    .page-footer
-      .edit-link(v-if="editLink")
-        a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
+  .page-footer
+    .edit-link(v-if="editLink")
+      a(:href="editLink.link", target="_blank", rel="noopener noreferrer") {{ editLink.text }}
 </template>
 
 <script setup lang="ts">
@@ -72,7 +72,7 @@ const flattern = (items: TSidebarItem[], res: TSidebarItem[]) => {
 };
 </script>
 
-  <style lang="scss" scoped>
+<style lang="scss" scoped>
   @import '../styles/placeholders';
 
   .page {
