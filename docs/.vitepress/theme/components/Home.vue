@@ -163,14 +163,24 @@ main.home
           )
           p.name.unlinked-name(v-else, v-html="application.name")
 
-  section.home-footer
+  section.light.home-footer
     .content-wrapper
       footer
+        .home-footer-logo
+          NavMeta(:hideText="true", :width="`auto`", :height="`75px`")
+          span MTGJSON
+
         ul
-          li Copyright &copy; 2018 &ndash; Present Zach Halpern, Eric Lakatos
-          li MTGJSON and Documentation released under the&nbsp;
-            a(href="/license/") MIT License
-          li.legal Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC in the United States and other countries. All Rights Reserved.
+          li.legal Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC. All rights reserved.
+          li.legal Third-Party content, links and referrals are provided as is and is subject to their own terms, rights and other legal notices.
+          li.legal All other content &copy; 2018 &ndash; Present, Zach Halpern, Eric Lakatos. All rights reserved.
+
+        div.home-footer-links
+          ol
+            li
+              a(href="/license/") License
+            li
+              a(href="mailto:zach@mtgjson.com") Contact Us
 </template>
 
 <script setup lang="ts">
@@ -727,12 +737,12 @@ onMounted(async (): Promise<void> => {
     background-color: var(--dark-2-color);
     color: var(--light-color);
 
-    ul {
-      max-width: 570px;
-      margin: 0 auto;
+    ol, ul {
+      // max-width: 570px;
+      margin-left: auto;
+      margin-right: auto;
 
       li {
-        flex: 0 0 100%;
         margin-top: 1rem;
 
         &:first-of-type {
@@ -740,9 +750,35 @@ onMounted(async (): Promise<void> => {
         }
 
         &.legal {
-          margin-top: 2rem;
           font-size: 12px;
-          color: var(--gray-3-color);
+          color: var(--gray-5-color);
+        }
+      }
+    }
+
+    &-logo {
+      span {
+        display: block;
+        margin-top: 0.50rem;
+        margin-bottom: 1rem;
+        font-weight: bold;
+        font-weight: 1rem;
+        font-size: 1.15rem;
+      }
+    }
+
+    &-links {
+      max-width: 360px;
+      margin: 0 auto;
+
+      ol {
+        display: flex;
+        margin-top: 2rem;
+
+        li {
+          list-style: none;
+          margin-top: 0;
+          flex: 1;
         }
       }
     }

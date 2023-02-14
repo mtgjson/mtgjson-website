@@ -7,5 +7,6 @@
   "no-blanks-blockquote": false,
   "no-inline-html": false,
   "single-title": false,
-  "no-duplicate-header": false
+  "no-duplicate-header": false,
+  "no-bare-urls": false
 }
