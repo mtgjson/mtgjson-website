@@ -41,7 +41,7 @@ main.home
           p View the TypeScript types of each data model and help keep your code type safe.
         li
           h3 Direct Downloads
-          p You can use remotely fetch files but we also provide a <a href="/downloads/all-files/">simple interface</a> to get the files as needed.
+          p You can remotely fetch files but we also provide a <a href="/downloads/all-files/">simple interface</a> to get the files as needed.
 
       a(href="/getting-started/")
         button.cta-btn.light Get Started Now
