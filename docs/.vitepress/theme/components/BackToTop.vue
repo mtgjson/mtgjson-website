@@ -38,7 +38,7 @@ onMounted((): void => {
   cursor: pointer;
   position: fixed;
   bottom: 3rem;
-  right: 1rem;
+  right: 2rem;
   width: 2rem;
   z-index: 1;
   padding: 0.25rem 0.5rem 0.5rem;

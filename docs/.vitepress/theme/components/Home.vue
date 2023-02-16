@@ -72,12 +72,12 @@ main.home
             p Donate to MTGJSON and help keep this project available for free to everyone.
 
   section.dark.home-team
-    .text-wrapper
+    .content-wrapper
       h2 Team Leads
       ul.home-team-leads
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-zach.jpg" title="Zach Halpern's avatar" alt="Zach's avatar")
+            img(src="/images/avatars/avatar-zach.jpg" title="Zach Halpern" alt="Zach Halpern's avatar")
             div
               a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
                 h4 Zach Halpern
@@ -85,7 +85,7 @@ main.home
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-milo.jpg" title="Milo Rue's avatar" alt="Milo's avatar")
+            img(src="/images/avatars/avatar-milo.jpg" title="Milo Rue" alt="Milo Rue's avatar")
             div
               a(href="https://github.com/milorue" target="_blank" rel="noreferrer noopener")
                 h4 Milo Rue
@@ -93,7 +93,7 @@ main.home
               p Milo is a TypeScript and React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports.
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos' avatar" alt="Eric's avatar")
+            img(src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos" alt="Eric Lakatos' avatar")
             div
               a(href="https://github.com/staghouse" target="_blank" rel="noreferrer noopener")
                 h4 Eric Lakatos
@@ -107,8 +107,8 @@ main.home
             img.lazy(
               :data-src="contributor.avatar",
               :alt="`${contributor.username}'s avatar`",
-              :title="`${contributor.username}'s avatar`"
-          )
+              :title="`${contributor.username}`"
+            )
 
   section.dark.home-patrons
     .content-wrapper
@@ -142,7 +142,7 @@ main.home
           )
 
   section.dark.home-applications
-    .text-wrapper
+    .content-wrapper
       h2 MTGJSON Powered Applications
       ul
         li(v-for="(application, key) in applications", :key="key")
@@ -679,7 +679,7 @@ onMounted(async (): Promise<void> => {
 
     ul {
       display: grid;
-      grid-template-columns: 1fr 1fr;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
       grid-gap: 1rem;
 
       li {
