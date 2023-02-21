@@ -58,6 +58,7 @@ export default {
     // Only capture h3 headings
     toc: {
       level: [ 3 ],
+      shouldAllowNested: true
     }
   },
   // VitePress themeing
