@@ -167,7 +167,6 @@ onMounted(async (): Promise<void> => {
     display: flex;
     flex-wrap: wrap;
     align-items: center;
-    padding-top: 1.5rem;
 
     .img-wrap {
       flex: none;
@@ -199,6 +198,8 @@ onMounted(async (): Promise<void> => {
         margin-top: 0;
         line-height: 1.5rem;
         margin-bottom: 0.5rem;
+        margin-right: 1rem;
+        float: left;
       }
 
       p {
@@ -217,7 +218,7 @@ onMounted(async (): Promise<void> => {
           li {
             small {
               &:first-of-type {
-                color: var(--download-details-text-color);
+                color: var(--vp-c-text-1);
               }
             }
           }
@@ -225,23 +226,28 @@ onMounted(async (): Promise<void> => {
           .tag {
             background-color: var(--yellow-color);
             color: var(--dark-color);
-            margin-left: 5px;
 
             @extend %code-block;
 
             font-family: var(--font-base);
+          }
+        }
+
+        &.details {
+          clear: left;
+        }
+
+        &.tags {
+          float: left;
+          margin-top: 0;
+
+          li {
+            margin-left: 0.5rem;
 
             &:first-of-type {
               margin-left: 0;
             }
           }
-        }
-
-        &.tags {
-          margin-top: 0;
-          position: absolute;
-          right: 1rem;
-          bottom: 1rem;
         }
 
         li {
@@ -272,9 +278,12 @@ onMounted(async (): Promise<void> => {
       }
 
       &--details {
+        position: relative;
+
         &-img {
           float: left;
-          margin-right: 1rem;
+          margin-right: 0.5rem;
+          color: var(--vp-c-text-1);
 
           .ss {
             font-size: 1.5rem;

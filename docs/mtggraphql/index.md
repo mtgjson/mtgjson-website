@@ -25,12 +25,13 @@ MTGGraphQL is a sub-service of MTGJSON and a GraphQL API built on top of the MTG
 - **Metadata**
 - **Prices**
 
-<blockquote>
-  <p class="small-header">Beta Information</p>
-  <p>The beta rollout of the service will be available to all <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters with the goal of bringing a version to the rest of the community in the near future. Feel free to submit suggestions via the <a href="https://mtgjson.com/discord">Discord Server</a>.</p>
-</blockquote>
+::: warning Beta Information
 
-## Service Index
+The beta rollout of the service will be available to all <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters with the goal of bringing a version to the rest of the community in the near future. Feel free to submit suggestions via the [Discord Server](https://mtgjson.com/discord).
+
+:::
+
+## On this page
 
 [[toc]]
 
@@ -106,5 +107,5 @@ query {
 You can use the below embedded playground start a query right now, provided you enter your authorization token in the HTTP Headers:
 
 <div class="doc-iframe graphql-playground">
-  <iframe src="https://graphql.mtgjson.com/?query=query {%0A%20 cards(%0A%20%20%20 input%3A { name%3A %22Phelddagrif%22 }%0A%20%20%20 page%3A { take%3A 100%2C skip%3A 0 }%0A%20%20%20 order%3A { order%3A ASC }%0A%20 ) {%0A%20%20%20 name%0A%20%20%20 setCode%0A%20%20%20 type%0A%20%20%20 text%0A%20 }%0A}%0A" height="700px" width="100%"></iframe>
+  <iframe src="https://graphql.mtgjson.com/?query=query {%0A%20 cards(%0A%20%20%20 input%3A { name%3A %22Phelddagrif%22 }%0A%20%20%20 page%3A { take%3A 100%2C skip%3A 0 }%0A%20%20%20 order%3A { order%3A ASC }%0A%20 ) {%0A%20%20%20 name%0A%20%20%20 setCode%0A%20%20%20 type%0A%20%20%20 text%0A%20 }%0A}%0A" height="700px" width="100%" frameborder="0"></iframe>
 </div>

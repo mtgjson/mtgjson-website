@@ -22,13 +22,7 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `purchaseUrls`
 
-## Model Type
-
-<ModelType type="PurchaseUrls" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -75,3 +69,7 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
+
+## TypeScript Model
+
+<ModelType type="PurchaseUrls" />

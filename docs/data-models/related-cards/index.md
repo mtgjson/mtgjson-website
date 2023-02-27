@@ -22,13 +22,7 @@ The Related Cards Data Model describes the properties of cards that have relatio
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
 - **Parent property:** `relatedCards`
 
-## Model Type
-
-<ModelType type="RelatedCards" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -47,3 +41,7 @@ The Related Cards Data Model describes the properties of cards that have relatio
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
+
+## TypeScript Model
+
+<ModelType type="RelatedCards" />

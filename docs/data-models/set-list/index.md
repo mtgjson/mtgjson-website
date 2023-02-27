@@ -23,13 +23,7 @@ The Set List Data Model describes the meta data properties for an individual [Se
 - **Parent file:** [SetList](/downloads/all-files/#setlist)
 - **Parent property:** `data`
 
-## Model Type
-
-<ModelType type="SetList" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -196,3 +190,7 @@ The Set List Data Model describes the meta data properties for an individual [Se
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.0.0`
+
+## TypeScript Model
+
+<ModelType type="SetList" />

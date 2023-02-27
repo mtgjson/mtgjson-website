@@ -17,9 +17,9 @@ export const description =
 export default {
   lang: 'en-US',
   // SEO
+  title: 'MTGJSON',
   titleTemplate: ':title · ' + title,
   description,
-  appearance: false,
   cleanUrls: 'with-subfolders',
   // Head Tags
   head: [
@@ -63,47 +63,58 @@ export default {
   },
   // VitePress themeing
   themeConfig: {
+    logo: '/images/assets/logo-mtgjson.svg',
     pages,
+    outline: 3,
     smoothScroll: true,
-    // Handle edit link ourselves
-    customEditLink: {
-      pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/',
+    editLink: {
+      pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/:path',
       text: 'Help us improve this page!',
     },
     socialLinks: [
       {
-        text: 'Contribute on GitHub',
+        icon: 'github',
         link: 'https://github.com/mtgjson',
-        class: 'github'
       },
       {
-        text: 'Join us on Discord',
+        icon: 'discord',
         link: 'https://mtgjson.com/discord',
-        class: 'discord'
       },
       {
-        text: 'Support us on Patreon',
+        icon: {
+          svg: '<svg alt="Patreon logo" fill="#f96753" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" class="st0"/></svg>'
+        },
         link: 'https://www.patreon.com/MTGJSON',
-        class: 'patreon'
       },
       {
-        text: 'Follow us on Twitter',
+        icon: 'twitter',
         link: 'https://twitter.com/mtgjson',
-        class: 'twitter'
       },
     ],
     sidebar: [
       {
-        text: 'Getting Started',
-        link: '/getting-started/',
+        text: 'Introduction',
+        link: '',
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/getting-started/',
+          },
+          {
+            text: 'F.A.Q.',
+            link: '/faq/',
+          },
+        ]
       },
       {
-        text: 'F.A.Q.',
-        link: '/faq/',
-      },
-      {
-        text: 'MTGGraphQL',
-        link: '/mtggraphql/',
+        text: 'GraphQL API',
+        link: '',
+        items: [
+          {
+            text: 'MTGGraphQL',
+            link: '/mtggraphql/',
+          }
+        ]
       },
       {
         text: 'Downloads',

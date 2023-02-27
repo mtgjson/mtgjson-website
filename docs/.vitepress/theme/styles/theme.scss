@@ -1,28 +1,8 @@
 @import 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css';
 
-@import './vars';
-@import './reset';
-@import './custom-blocks';
-@import './typography';
-@import './placeholders';
-@import './sidebar';
-@import './code';
-@import './blockquote';
-@import './pages';
-
-html, body {
-  min-width: 320px;
-}
-
-html, body, #app, .theme-container {
-  height: 100%;
-
-  @media (max-width: 719px) {
-    html, body, #app, .theme-container {
-      height: auto;
-    }
-  }
-}
+@import 'vars';
+@import 'placeholders';
+@import 'code';
 
 body {
   font-family: var(--font-base);
@@ -31,101 +11,7 @@ body {
   font-size: 16px;
 }
 
-ol, ul {
-  margin-left: 1rem;
-
-  &:empty {
-    margin: 0;
-  }
-
-  li {
-    list-style: disc;
-  }
-
-  ol, ul {
-    li {
-      list-style: circle;
-    }
-  }
-}
-
-a {
-  text-decoration: underline;
-
-  &:hover,
-  &:focus,
-  &.sidebar-link,
-  &.sidebar-heading {
-    text-decoration: none;
-  }
-
-  &.sidebar-link,
-  &.sidebar-heading {
-    display: inline;
-  }
-
-  &.header-anchor {
-    opacity: 0;
-    margin-left: -0.9em;
-  }
-
-  span {
-    display: inline-block;
-  }
-}
-
-small {
-  font-size: 14px;
-  line-height: 1rem;
-}
-
-.no-result {
-  color: var(--accent-color);
-}
-
-hr {
-  border: 0;
-  border-top: 1px solid var(--table-border-color);
-}
-
-em {
-  font-style: italic;
-}
-
-img {
-  user-select: none;
-
-  &.avatar {
-    max-width: 100px !important;
-    border-radius: 100%;
-    float: left;
-    margin-right: 2rem;
-  }
-
-  &[alt='logo'] {
-    max-width: 275px !important;
-    margin-left: 0;
-  }
-
-  &.img-license {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 1rem;
-  }
-}
-
-// iframes
-.doc-iframe {
-  margin: 1rem 0;
-  border-radius: var(--common-radius);
-  overflow: hidden;
-
-  &.graphql-playground {
-    margin-bottom: 0;
-  }
-}
-
-// Call to action buttons
+// CTA
 .cta-btn {
   display: inline-block;
   vertical-align: center;
@@ -141,82 +27,192 @@ img {
   font-size: 1rem;
   font-weight: bold;
   cursor: pointer;
-  transition: all .25s;
+  transition: all 0.25s;
 
   &:hover,
   &:focus {
     color: var(--light-color);
-    border-color: var(--light-color);
+    background-color: var(--accent-color);
   }
 
   &:focus {
     outline: 0;
   }
+}
 
-  &.light {
-
-    &:hover,
-    &:focus {
-      color: var(--dark-color);
-      border-color: var(--dark-color);
+// Sidebar
+.VPSidebar {
+  .VPLink {
+    h2 {
+      font-size: 1rem;
     }
   }
 }
 
-// Images for links
-.link {
-  &-inline-image {
-    display: inline-flex;
-    padding-right: 1.5rem;
-    background-size: 1rem 1rem;
-    background-position: right center;
-    background-repeat: no-repeat;
+// Content
+.VPDoc {
+  h4 {
+    margin-top: 1rem;
+  }
 
-    &.paypal {
-      background-image: url('/images/icons/icon-paypal.svg');
-    }
-
-    &.patreon {
-      background-image: url('/images/icons/icon-patreon.svg');
-    }
-
-    &.github {
-      background-image: url('/images/icons/icon-github.svg');
+  // Aside TOC links
+  .outline-link {
+    &.active,
+    &:hover {
+      color: var(--vp-c-brand);
     }
   }
-}
 
-// Accent color class
-.accent {
-  color: var(--accent-color);
-}
+  // Images for links
+  .link {
+    &-inline-image {
+      display: inline-flex;
+      padding-right: 1.5rem;
+      background-size: 1rem 1rem;
+      background-position: right center;
+      background-repeat: no-repeat;
 
-// Hide/Show elements
-.hidden-property-siblings {
-  & ~ blockquote {
-    display: none !important;
-  }
-}
-.hidden,
-.desktop-hide {
-  display: none !important;
-}
+      &.paypal {
+        background-image: url('/images/icons/icon-paypal.svg');
+      }
 
-@media (max-width: 719px) {
-  .theme-container {
-    &.sidebar-open {
-      .sidebar {
-        transform: translateX(0);
-        border-right: 1px solid var(--bg-border-color);
+      &.patreon {
+        background-image: url('/images/icons/icon-patreon.svg');
+      }
+
+      &.github {
+        background-image: url('/images/icons/icon-github.svg');
       }
     }
   }
 
-  .desktop-hide {
-    display: block !important;
+  // General TOC
+  .table-of-contents {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      grid-column-gap: 2rem;
+
+      li {
+        margin-top: 0;
+      }
+    }
   }
 
-  .mobile-hide {
-    display: none !important;
+  // Blockquotes
+  blockquote {
+    border-radius: var(--common-radius);
+    border: 1px solid var(--vp-c-divider);
+    color: var(--vp-custom-block-info-text);
+    background-color: var(--vp-custom-block-info-bg);
+    position: relative;
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+
+    h3 {
+      margin-top: 0;
+      font-size: 1rem;
+      color: var(--vp-c-text-1);
+      position: initial;
+
+      i {
+        position: absolute;
+        font-style: normal;
+        margin-right: 0 !important;
+
+        &:first-of-type {
+          right: 5.5rem;
+          bottom: 1rem;
+        }
+
+        &:last-of-type {
+          right: 1rem;
+          bottom: 1rem;
+        }
+
+        &.optional,
+        &.deprecated {
+          background-color: var(--light-color);
+          color: var(--dark-color);
+
+          @extend %code-block;
+
+          font-family: var(--font-base) !important;
+        }
+
+        &.optional {
+          background-color: var(--yellow-color);
+
+          &::before {
+            content: 'Optional';
+          }
+        }
+
+        &.deprecated {
+          background-color: var(--red-color);
+
+          &::before {
+            content: 'Deprecated';
+          }
+        }
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+      }
+    }
+
+    code {
+      @extend %code-block;
+      font-size: 12px;
+    }
+  }
+
+  // Custom blocks, like info and tips
+  .custom-block {
+    margin-bottom: 1.5rem;
+
+    .custom-block-title {
+      font-size: 1rem;
+      color: var(--vp-c-text-1);
+    }
+
+    a {
+      color: var(--vp-c-brand);
+    }
+
+    code {
+      @extend %code-block;
+      font-size: 12px;
+    }
+  }
+}
+
+// Dark themeing
+html.dark {
+  .VPSwitch {
+    .icon {
+      background-color: var(--dark-1-color);
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .VPDoc {
+    // Hide TOC for desktop in favor of aside
+    #on-this-page,
+    .property-toggler,
+    #model-index {
+      &,
+      & + .table-of-contents {
+        display: none;
+      }
+    }
   }
 }

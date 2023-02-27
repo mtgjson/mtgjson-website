@@ -23,13 +23,7 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `cards`
 
-## Model Type
-
-<ModelType type="CardSet" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -625,3 +619,7 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
+
+## TypeScript Model
+
+<ModelType type="CardSet" />

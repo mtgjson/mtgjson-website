@@ -22,13 +22,7 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `translations`
 
-## Model Type
-
-<ModelType type="Translations" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -145,3 +139,7 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
+
+## TypeScript Model
+
+<ModelType type="Translations" />

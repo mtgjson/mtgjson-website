@@ -1,28 +1,46 @@
-import Layout from './layouts/Layout.vue';
-import NotFound from './layouts/NotFound.vue';
-
-import { createPinia } from "pinia";
-
-// Global components to be injected in markdown files
+import DefaultTheme from 'vitepress/theme';
 import DownloadList from './components/DownloadList.vue';
 import DownloadNativeSelect from './components/DownloadNativeSelect.vue';
 import DownloadSorter from './components/DownloadSorter.vue';
 import ExampleField from './components/ExampleField.vue';
 import ModelType from './components/ModelType.vue';
-import PropertyToggler from './components/PropertyToggler.vue';
+import Home from './components/Home.vue';
+
+import { onMounted } from 'vue';
+import { createPinia } from "pinia";
+import { useStore } from './store';
+
+import './styles/theme.scss';
 
 export default {
-  Layout,
-  NotFound,
-  enhanceApp({ app, router, siteData }) {
-    // Register global components here to use in Markdown files
-    app.component('DownloadList', DownloadList);
-    app.component('DownloadNativeSelect', DownloadNativeSelect);
-    app.component('DownloadSorter', DownloadSorter);
-    app.component('ExampleField', ExampleField);
-    app.component('ModelType', ModelType);
-    app.component('PropertyToggler', PropertyToggler);
+  ...DefaultTheme,
 
-    app.use(createPinia());
+  enhanceApp(ctx: any): void {
+    // extend default theme custom behaviour.
+    DefaultTheme.enhanceApp(ctx);
+
+    // register your custom global components
+    ctx.app.component('DownloadList', DownloadList);
+    ctx.app.component('DownloadNativeSelect', DownloadNativeSelect);
+    ctx.app.component('DownloadSorter', DownloadSorter);
+    ctx.app.component('ExampleField', ExampleField);
+    ctx.app.component('ModelType', ModelType);
+    ctx.app.component('Home', Home);
+
+    ctx.app.use(createPinia());
   },
-};
+
+  setup(): void {
+    const store = useStore();
+
+    onMounted(async (): Promise<void> => {
+      if (Object.keys(store.EnumValues).length === 0) {
+        await store.fetchFromApi('EnumValues');
+      }
+
+      if (Object.keys(store.Meta).length === 0) {
+        await store.fetchFromApi('Meta');
+      }
+    });
+  }
+}

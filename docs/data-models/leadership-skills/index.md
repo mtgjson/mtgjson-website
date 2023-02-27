@@ -22,13 +22,7 @@ The Leadership Skills Data Model describes the properties of formats that a card
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `leadershipSkills`
 
-## Model Type
-
-<ModelType type="LeadershipSkills" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -54,3 +48,7 @@ The Leadership Skills Data Model describes the properties of formats that a card
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.5.1`
+
+## TypeScript Model
+
+<ModelType type="LeadershipSkills" />

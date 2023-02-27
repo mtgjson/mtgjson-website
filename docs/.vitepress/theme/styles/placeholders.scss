@@ -1,30 +1,8 @@
-%wrapper {
-  max-width: var(--content-width);
-  margin: 0 auto;
-  padding-left: 2rem;
-  padding-right: 2rem;
-}
-
-%blockquote {
-  position: relative;
-  margin: 0 0 1rem;
-  padding: 0 2rem 2rem;
-  background-color: var(--bg-color);
-  border-radius: var(--common-radius);
-  transition: transform .25s ease-in-out;
-
-  // property title
-  & > *:first-child {
-    padding-top: 2rem;
-    border-bottom: 0;
-  }
-}
-
 %code-block {
   font-family: var(--font-monospace);
-  font-size: 12px;
+  font-size: var(--vp-code-font-size);
   background-color: var(--code-bg-color);
-  color: var(--code-text-color);
+  color: var(--vp-c-text-code);
   border-radius: var(--common-radius);
   line-height: 1rem;
   padding: 0.25rem 0.5rem;

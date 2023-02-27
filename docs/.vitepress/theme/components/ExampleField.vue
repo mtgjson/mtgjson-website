@@ -3,7 +3,7 @@
   v-if="enums.length > 0",
   :class="{ showing: showAll }"
 )
-  strong Example:{{ ' ' }}
+  strong Example:&nbsp;
   code(v-if="!showAll") {{ '"' + enums.sort().slice(0, minimumToShow).join('", "') + '"' }}
     .show-btn(
       v-if="enums.length > minimumToShow",
@@ -19,7 +19,7 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
-import { useStore } from '../store.js';
+import { useStore } from '../store';
 import type { TMeta } from '../types';
 
 type Props = {

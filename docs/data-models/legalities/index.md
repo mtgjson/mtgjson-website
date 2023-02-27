@@ -22,13 +22,7 @@ The Legalities Data Model describes the properties of legalities in play formats
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `legalities`
 
-## Model Type
-
-<ModelType type="Legalities" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -159,3 +153,7 @@ The Legalities Data Model describes the properties of legalities in play formats
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
+
+## TypeScript Model
+
+<ModelType type="Legalities" />

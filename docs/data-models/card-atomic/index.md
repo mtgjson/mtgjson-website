@@ -23,35 +23,26 @@ The Card (Atomic) Data Model describes the properties of a single atomic card, a
 - **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)
 - **Parent property:** `data`
 
-<!-- For some reason tips before TOC will break the TOC, but HTML will not -->
-<blockquote>
-  <p class="small-header">Note</p>
-  <p>The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:</p>
+::: tip Accessing the data
 
-  ```json
+The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:
+
+```json
   "data": {
     "Oblivion Ring": CardAtomic[],
     ... // More card names
   }
-  ```
+```
 
-  <br />
-  <p>and accessing the data would look like this:</p>
-  <br />
+and accessing the data would look like this:
 
-  ```js
+```js
   data["Oblivion Ring"][0];
-  ```
+```
 
-</blockquote>
-
-## Model Type
-
-<ModelType type="CardAtomic" />
+:::
 
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -350,3 +341,7 @@ The Card (Atomic) Data Model describes the properties of a single atomic card, a
 > - **Type:** `string[]`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
+
+## TypeScript Model
+
+<ModelType type="CardAtomic" />

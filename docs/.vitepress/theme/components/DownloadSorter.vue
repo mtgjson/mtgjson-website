@@ -156,10 +156,10 @@ defineExpose({
 <style lang="scss" scoped>
 .sorting-options {
   position: sticky;
-  background-color: var(--bg-color);
+  background-color: var(--vp-c-bg-alt);
   border-radius: var(--common-radius);
-  top: 0;
-  z-index: 9;
+  top: var(--vp-nav-height);
+  z-index: 100;
   padding: 1rem;
   border: 1px solid var(--accent-color);
   margin-bottom: 2rem;
@@ -179,6 +179,7 @@ defineExpose({
 
   .sort-rows {
     margin-top: 1rem;
+    border: 0;
 
     .sort-row {
       margin-bottom: 1rem;
@@ -195,12 +196,13 @@ defineExpose({
       input {
         flex: 1;
         display: inline;
-        padding: 0.5rem;
+        padding: 0.25rem 0.5rem;
         border-radius: var(--common-radius);
         border: none;
         background-color: var(--gray-1-color);
         margin-left: 10px;
         max-width: 220px;
+        color: var(--dark-color);
       }
 
       input {
@@ -228,6 +230,8 @@ defineExpose({
       }
 
       &.checkbox {
+        margin-bottom: 0;
+
         label {
           cursor: pointer;
         }

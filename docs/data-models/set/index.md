@@ -23,13 +23,7 @@ The Set Data Model describes the properties of an individual set.
 - **Parent file:** [AllIdentifiers](/downloads/all-files/#allidentifiers), [AllPrintings](/downloads/all-files/#allprintings), [Legacy](/downloads/all-files/#legacy), [Modern](/downloads/all-files/#modern), [Pioneer](/downloads/all-files/#pioneer), [Standard](/downloads/all-files/#standard), [Vintage](/downloads/all-files/#vintage)
 - **Parent property:** `data`
 
-## Model Type
-
-<ModelType type="Set" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -239,3 +233,7 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.0.0`
+
+## TypeScript Model
+
+<ModelType type="Set" />

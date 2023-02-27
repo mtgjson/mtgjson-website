@@ -3,7 +3,8 @@ main.home
   section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
-        NavMeta(:hideText="true", :width="`250px`", :height="`173px`")
+        //- NavMeta(:hideText="true", :width="`250px`", :height="`173px`")
+        img(src="/images/assets/logo-mtgjson.svg" width="200")
       h1 MTGJSON
       span.version(v-if="version")
         a(href="/changelogs/mtgjson-v5/") v{{ version }}
@@ -44,7 +45,7 @@ main.home
           p You can remotely fetch files but we also provide a <a href="/downloads/all-files/">simple interface</a> to get the files as needed.
 
       a(href="/getting-started/")
-        button.cta-btn.light Get Started Now
+        button.cta-btn Get Started Now
 
   section.light.home-contributing
     .content-wrapper
@@ -123,7 +124,9 @@ main.home
             img.lazy(
               :data-src="'/images/avatars/' + patron.image",
               :alt="`${patron.name} logo`",
-              :title="`${patron.name} logo`"
+              :title="`${patron.name} logo`",
+              width="100",
+              height="100"
             )
           .img-wrap.no-image(v-else)
             p {{ patron.company ? patron.company.substring(0, 1) : patron.name.substring(0, 1) }}
@@ -185,7 +188,7 @@ main.home
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-import NavMeta from './NavMeta.vue';
+// import NavMeta from './NavMeta.vue';
 import contributors from '../static/contributors.json';
 import patrons from '../static/patrons.json';
 import applications from '../static/applications.json';
@@ -225,17 +228,11 @@ onMounted(async (): Promise<void> => {
     });
   }
 
-  if (Object.keys(store.Meta).length === 0) {
-    await store.fetchFromApi('Meta');
-  }
-
   pageLoaded.value = true;
 });
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/placeholders';
-
 .home {
   .content-wrapper {
     max-width: 1028px;
@@ -295,6 +292,8 @@ onMounted(async (): Promise<void> => {
   }
 
   h1 {
+    font-size: 2rem;
+    font-weight: bold;
     margin-bottom: 0.5rem;
 
     & + span.version {
@@ -313,10 +312,12 @@ onMounted(async (): Promise<void> => {
 
   h2 {
     font-size: 2rem;
+    font-weight: bold;
     line-height: 2.5rem;
   }
 
   h3 {
+    font-weight: bold;
     font-size: 1.5rem;
   }
 
@@ -375,7 +376,12 @@ onMounted(async (): Promise<void> => {
     }
 
     &-logo {
-      margin-bottom: 1rem;
+      text-align: center;
+      margin: 0 auto 1rem;
+
+      img {
+        display: initial;
+      }
     }
 
     h2 {
@@ -544,7 +550,7 @@ onMounted(async (): Promise<void> => {
           }
 
           p {
-            font-weight: normal;
+            text-align: left;
             color: var(--gray-5-color);
           }
         }
@@ -720,6 +726,7 @@ onMounted(async (): Promise<void> => {
 
         .name {
           flex: 1;
+          font-weight: bold;
           text-align: left;
         }
       }
@@ -777,6 +784,7 @@ onMounted(async (): Promise<void> => {
 
         li {
           list-style: none;
+          font-weight: bold;
           margin-top: 0;
           flex: 1;
         }

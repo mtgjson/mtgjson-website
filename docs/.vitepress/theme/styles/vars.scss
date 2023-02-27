@@ -10,8 +10,9 @@
   --search-results-max-height: 400px;
   --common-radius: 0.5rem;
   --common-padding: 0.5rem;
-  --toggle-container-width: 50px;
+  --toggle-container-width: 40px;
   --toggle-size: calc(var(--toggle-container-width) / 2);
+  --vp-code-font-size: 12px;
 
   // True colors, not to be changed
   --white-color: #ffffff;
@@ -44,8 +45,9 @@
   --gray-5-color: #676767;
 
   --dark-color: #263646;
-  --dark-1-color: #0f263c;
+  --dark-1-color: #0f1a23;
   --dark-2-color: #0e141f;
+  --dark-2-alpha-color: rgba(11, 34, 57, 0.5);
   --dark-3-color: var(--black-color);
 
   --header-border-color: var(--dark-color);
@@ -86,55 +88,21 @@
   --supporter-rare-color: var(--yellow-color);
   --supporter-uncommon-color: var(--gray-3-color);
   --version-color: var(--gray-3-color);
-  --download-details-text-color: var(--gray-3-color);
+  --download-details-text-color: var(--vp-c-text);
+  --data-toggler-toggle-color: var(--vp-input-border-color);
+
+  --vp-c-brand: var(--accent-color);
+  --vp-c-brand-light: var(--accent-color);
+  --vp-c-brand-lighter: var(--accent-color);
+  --vp-c-brand-dark: var(--accent-color);
+  --vp-c-brand-darker: var(--accent-color);
+  --vp-c-text-code: var(--yellow-color);
 }
 
-body {
-  // Set base theme CSS
-  background-color: var(--dark-2-color);
-  color: var(--text-color);
-
-  &.light {
-    // Main colors
-    --accent-color: var(--true-accent-2-color);
-    --text-color: var(--dark-1-color);
-    --bg-color: var(--light-color);
-    --bg-darker-color: var(--gray-1-color);
-    --bg-border-color: var(--gray-1-color);
-    --gray-color: var(--gray-4-color);
-    --shadow-color: var(--gray-2-color);
-    --blockquote-heading-color: var(--gray-2-color);
-    --blockquote-bg-color: var(--light-color);
-    --blockquote-warning-bg-color: var(--yellow-color);
-    --blockquote-warning-text-color: var(--dark-color);
-
-    // Search
-    --search-bg-color: var(--gray-2-color);
-    --search-border-color: var(--gray-2-color);
-    --search-border-highlight-color: var(--accent-color);
-    --search-text-color: var(--text-color);
-
-    // Data Presentation
-    --table-color: var(--text-color);
-    --table-bg-color: var(--light-color);
-    --table-border-color: var(--gray-2-color);
-    --table-heading-color: var(--light-color);
-    // --pre-bg-color: var(--gray-4-color);
-    // --code-bg-color: var(--gray-4-color);
-    // --code-text-color: var(--dark-1-color);
-
-    // Misc
-    --spoiler-color: var(--yellow-dark-2-color);
-    --spoiler-text-color: var(--yellow-darker-color);
-    --supporter-bg-color: var(--gray-2-color);
-    --supporter-rare-color: var(--yellow-darker-color);
-    --attribute-standard-color: var(--dark-color);
-    --header-border-color: var(--gray-3-color);
-    --version-color: var(--gray-5-color);
-    --download-details-text-color: var(--gray-5-color);
-
-    // Set base theme CSS
-    background-color: var(--gray-1-color);
-    color: var(--text-color);
-  }
+html.dark {
+  --vp-c-bg-elv: var(--dark-2-color);
+  --vp-c-bg-alt: var(--dark-2-color);
+  --vp-c-bg: var(--dark-1-color);
+  --vp-custom-block-info-bg: var(--dark-2-color);
+  --vp-backdrop-bg-color: var(--dark-2-alpha-color);
 }

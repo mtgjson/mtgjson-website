@@ -23,13 +23,7 @@ The Keywords Data Model describes the properties of keywords available to any ca
 - **Parent file:** [Keywords](/downloads/all-files/#keywords)
 - **Parent property:** `data`
 
-## Model Type
-
-<ModelType type="Keywords" />
-
 ## Model Index
-
-<PropertyToggler/>
 
 [[toc]]
 
@@ -58,3 +52,7 @@ The Keywords Data Model describes the properties of keywords available to any ca
 > - **Type:** `string[]`
 > - <ExampleField type='keywordActions'/>
 > - **Introduced:** `v4.3.0`
+
+## TypeScript Model
+
+<ModelType type="Keywords" />
