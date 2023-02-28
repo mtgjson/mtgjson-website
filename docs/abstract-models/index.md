@@ -21,7 +21,7 @@ Abstract Models in MTGJSON describe any JSON object or nested JSON object that p
 
 For example, any <strong>Abstract Model</strong> would look similar to this:
 
-```json
+```JSON
 {
   "<Property 1>": {
     "<Nested Property 1>": any

@@ -58,7 +58,7 @@ For example, the commonly used `AllPrintings.json` file uses the [Set](/data-mod
 
 This documentation leverages TypeScript concepts to define properties.
 
-```json
+```JSON
 "data": {
   "10E": Set
 }
@@ -74,7 +74,7 @@ For example, a [Set](/data-models/set/) Data Model is the model used in the `dat
 
 ::: tip An Even Closer Look
 
-```json
+```JSON
 "data": {
   "10E": {
     "cards": CardSet[]

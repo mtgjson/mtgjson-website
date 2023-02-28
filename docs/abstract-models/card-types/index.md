@@ -24,7 +24,7 @@ The Card Types Abstract Model describes the properties of any possible subtypes 
 
 ## Model Overview
 
-```json
+```JSON
 {
   // Card type
   "<Card Type>": {
@@ -38,7 +38,7 @@ The Card Types Abstract Model describes the properties of any possible subtypes 
 
 ## Example Model
 
-```json
+```JSON
 {
   "artifact": {
     "subTypes": [

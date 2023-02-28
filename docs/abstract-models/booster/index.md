@@ -24,7 +24,7 @@ The Booster Abstract Model describes the properties of how a [Set](/data-models/
 
 ## Model Overview
 
-```json
+```JSON
 {
   // Possible configurations in a traditional booster pack
   "default": {
@@ -75,7 +75,7 @@ The Booster Abstract Model describes the properties of how a [Set](/data-models/
 
 ## Example Model
 
-```json
+```JSON
   {
     "default": {
       "boosters": [

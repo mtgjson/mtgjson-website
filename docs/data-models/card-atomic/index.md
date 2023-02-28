@@ -27,7 +27,7 @@ The Card (Atomic) Data Model describes the properties of a single atomic card, a
 
 The Card (Atomic) Data Model is accessed through a single index array where its parent property is the name of the card. Here is an example of the model:
 
-```json
+```JSON
   "data": {
     "Oblivion Ring": CardAtomic[],
     ... // More card names
@@ -36,8 +36,8 @@ The Card (Atomic) Data Model is accessed through a single index array where its 
 
 and accessing the data would look like this:
 
-```js
-  data["Oblivion Ring"][0];
+```TypeScript
+  const card: CardAtomic = data["Oblivion Ring"][0];
 ```
 
 :::

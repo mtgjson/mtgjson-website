@@ -24,7 +24,7 @@ The Enum Values Abstract Model describes the properties that are direct possible
 
 ## Model Overview
 
-```json
+```JSON
 {
   // Enum model name
   "<Enum Model>": {
@@ -38,7 +38,7 @@ The Enum Values Abstract Model describes the properties that are direct possible
 
 ## Example Model
 
-```json
+```JSON
 {
   "card": {
     "borderColor": [

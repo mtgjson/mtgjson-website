@@ -80,7 +80,7 @@ query {
 
 #### Example HTTP Headers Authorization
 
-```json
+```JSON
 {
   "authorization": "Bearer <Token>"
 }
@@ -88,7 +88,7 @@ query {
 
 #### Example Response
 
-```json
+```JSON
 {
   "data": {
     "cards": [

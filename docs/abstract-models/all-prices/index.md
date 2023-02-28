@@ -36,7 +36,7 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 
 ## Model Overview
 
-```json
+```JSON
 {
   // Card UUID
   "<Card UUID>": {
@@ -83,7 +83,7 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 
 ## Example Model
 
-```json
+```JSON
 {
   "0120a941-9cfb-50b5-b5e4-4e0c7bd32410": {
     "mtgo": {
