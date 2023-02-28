@@ -8,7 +8,7 @@
       autocorrect="off"
       autocapitalize="off"
       spellcheck="false"
-      placeholder="Search..."
+      placeholder="Search docs..."
       type="search"
       @input="openSearch()"
       :class="{ open: results.length > 0 }"
@@ -129,12 +129,13 @@ const toggleSidebar = (): void => {
     input {
       background-color: var(--search-bg-color);
       color: var(--search-text-color);
-      padding: 0.5rem 1rem;
+      padding: 0.25rem 0.5rem;
       border-radius: var(--common-radius);
       font-weight: bold;
-      font-size: 1rem;
+      font-size: .75rem;
       width: 100%;
-      border: 1px solid var(--search-bg-color);
+      border: 1px solid var(--search-border-color);
+      transition: border-color 0.25s;
 
       &.open {
         border-bottom-left-radius: 0;
@@ -142,8 +143,11 @@ const toggleSidebar = (): void => {
       }
 
       &:focus {
-        border: 1px solid var(--accent-color);
         outline: 0;
+      }
+
+      &:hover {
+        border-color: var(--vp-input-hover-border-color);
       }
 
       &::placeholder {

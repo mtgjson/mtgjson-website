@@ -3,7 +3,6 @@ main.home
   section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
-        //- NavMeta(:hideText="true", :width="`250px`", :height="`173px`")
         img(src="/images/assets/logo-mtgjson.svg" width="200")
       h1 MTGJSON
       span.version(v-if="version")
@@ -193,7 +192,7 @@ import contributors from '../static/contributors.json';
 import patrons from '../static/patrons.json';
 import applications from '../static/applications.json';
 import { formatTime } from '../helpers';
-import { useStore } from '../store.js';
+import { useStore } from '../store';
 
 const store = useStore();
 const pageLoaded = ref<boolean>(false);

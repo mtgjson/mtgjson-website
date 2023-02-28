@@ -22,7 +22,8 @@
   --black-color: #000000;
 
   // Search Component
-  --search-bg-color: var(--dark-2-color);
+  --search-bg-color: var(--vp-input-switch-bg-color);
+  --search-border-color: var(--vp-input-border-color);
   --search-item-highlight-color: var(--accent-color);
   --search-text-color: var(--white-color);
   --search-results-max-height: 400px;
@@ -47,6 +48,7 @@
   --vp-c-brand-dark: var(--accent-color);
   --vp-c-brand-darker: var(--accent-color);
   --vp-c-text-code: var(--yellow-color);
+  --vp-c-mute: var(--code-bg-color);
   --vp-code-font-size: 12px;
 }
 

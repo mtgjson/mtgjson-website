@@ -1,4 +1,4 @@
-.codeblock, code, pre, .md-code {
+vp-doc [class*="language-"] code, .codeblock, code, pre, .md-code {
   @extend %code-block;
 
   a {
@@ -15,7 +15,7 @@ pre {
   overflow-x: scroll;
   margin-bottom: 2rem;
   line-height: 1.5rem;
-  padding: 1rem;
+  padding: 1rem !important;
 
   &.shiki {
     background-color: var(--code-bg-color) !important;

@@ -40,6 +40,14 @@ body {
   }
 }
 
+// Navbar
+.VPNavBar {
+  .title {
+    display: flex;
+    border-bottom: var(--vp-c-divider);
+  }
+}
+
 // Sidebar
 .VPSidebar {
   .VPLink {
@@ -51,38 +59,40 @@ body {
 
 // Content
 .VPDoc {
-  h1 {
-    // color: var(--vp-c-brand);
-  }
-
+  // Fix headings
   h4 {
     margin-top: 1rem;
   }
 
   // Aside/Outline
   .aside {
+    order: 1;
+    padding-left: 0;
+
     .outline-link {
       cursor: pointer;
 
-      &.active {
-        color: var(--vp-c-text-2);
+      &:hover {
+        color: var(--vp-c-text-1);
       }
 
-      &:hover {
+      &.active {
         color: var(--vp-c-brand);
+
+        &:hover {
+          color: var(--vp-c-brand);
+        }
       }
     }
 
     .content {
-      .outline-title {
-        // font-size: 1rem;
-        // margin-bottom: 0.25rem;
-      }
+      padding-left: 0;
+      border-left: 0;
+      border-right: 1px solid var(--vp-c-divider);
 
       .outline-marker {
-        // display: none;
-        // right: -1px;
-        // left: auto;
+        right: -1px;
+        left: auto;
       }
     }
   }
@@ -119,6 +129,12 @@ body {
 
       li {
         margin-top: 0;
+
+        a {
+          &:hover {
+            color: var(--vp-c-text-1);
+          }
+        }
       }
     }
   }
@@ -129,7 +145,6 @@ body {
     border: 1px solid var(--vp-c-divider);
     color: var(--vp-custom-block-info-text);
     background-color: var(--vp-custom-block-info-bg);
-    position: relative;
     margin-bottom: 1.5rem;
     padding: 1rem;
 
@@ -140,29 +155,15 @@ body {
       position: initial;
 
       i {
-        position: absolute;
+        background-color: var(--white-color);
+        color: var(--dark-color);
+
+        @extend %code-block;
+
+        font-family: var(--font-base) !important;
         font-style: normal;
-        margin-right: 0 !important;
-
-        &:first-of-type {
-          right: 5.5rem;
-          bottom: 1rem;
-        }
-
-        &:last-of-type {
-          right: 1rem;
-          bottom: 1rem;
-        }
-
-        &.optional,
-        &.deprecated {
-          background-color: var(--white-color);
-          color: var(--dark-color);
-
-          @extend %code-block;
-
-          font-family: var(--font-base) !important;
-        }
+        padding: 0.25rem 0.5rem !important;
+        margin-left: 0.5rem;
 
         &.optional {
           background-color: var(--yellow-color);
@@ -201,6 +202,7 @@ body {
   // Custom blocks, like info and tips
   .custom-block {
     margin-bottom: 1.5rem;
+    border-radius: var(--common-radius);
     border-color: var(--vp-c-divider);
 
     .custom-block-title {
