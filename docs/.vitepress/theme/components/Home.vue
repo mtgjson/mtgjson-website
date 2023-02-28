@@ -252,7 +252,7 @@ onMounted(async (): Promise<void> => {
     padding: 4rem 0 4rem;
 
     &.light {
-      background-color: var(--light-color);
+      background-color: var(--white-color);
       color: var(--dark-color);
 
       h2 {
@@ -261,13 +261,13 @@ onMounted(async (): Promise<void> => {
       }
 
       a {
-        color: var(--true-accent-2-color);
+        color: var(--accent-color);
       }
     }
 
     &.dark {
       background-color: var(--dark-2-color);
-      color: var(--light-color);
+      color: var(--white-color);
 
       h2 {
         padding-bottom: 1rem;
@@ -275,7 +275,7 @@ onMounted(async (): Promise<void> => {
       }
 
       a {
-        color: var(--true-accent-1-color);
+        color: var(--accent-color);
       }
     }
   }
@@ -346,7 +346,7 @@ onMounted(async (): Promise<void> => {
     position: relative;
     z-index: 1;
     background-color: var(--dark-2-color);
-    color: var(--light-color);
+    color: var(--white-color);
     text-align: center;
 
     &::before {
@@ -387,7 +387,7 @@ onMounted(async (): Promise<void> => {
     h2 {
       font-size: 1.25rem;
       line-height: 1.5rem;
-      color: var(--true-accent-1-color);
+      color: var(--accent-color);
       text-align: center;
     }
 
@@ -400,7 +400,7 @@ onMounted(async (): Promise<void> => {
   }
 
   &-features {
-    background-color: var(--light-color);
+    background-color: var(--white-color);
     color: var(--dark-color);
 
     ul {
@@ -409,7 +409,7 @@ onMounted(async (): Promise<void> => {
       grid-template-columns: repeat(4, 1fr);
 
       li {
-        background-color: var(--true-gray-color);
+        background-color: var(--gray-color);
         border-radius: var(--common-radius);
         padding: 2rem;
 
@@ -430,10 +430,10 @@ onMounted(async (): Promise<void> => {
 
   &-team {
     background-color: var(--dark-2-color);
-    color: var(--light-color);
+    color: var(--white-color);
 
     h3 {
-      color: var(--true-accent-1-color);
+      color: var(--accent-color);
     }
 
     &-leads {
@@ -500,7 +500,7 @@ onMounted(async (): Promise<void> => {
         a {
           display: block;
           border-radius: 50%;
-          background-color: var(--light-color);
+          background-color: var(--white-color);
           overflow: hidden;
           font-size: 0;
 
@@ -528,7 +528,7 @@ onMounted(async (): Promise<void> => {
       grid-template-columns: repeat(4, 1fr);
 
       li {
-        background-color: var(--true-gray-color);
+        background-color: var(--gray-color);
         border-radius: var(--common-radius);
         padding: 2rem;
 
@@ -668,7 +668,7 @@ onMounted(async (): Promise<void> => {
 
           &,
           &-time {
-            color: var(--text-color);
+            color: var(--white-color);
             font-size: 14px;
           }
 
@@ -696,7 +696,7 @@ onMounted(async (): Promise<void> => {
         position: relative;
 
         .img-wrap {
-          background-color: var(--light-color);
+          background-color: var(--white-color);
           border-radius: 50%;
           height: 60px;
           display: flex;
@@ -742,7 +742,7 @@ onMounted(async (): Promise<void> => {
   &-footer {
     border-top: 1px solid var(--dark-1-color);
     background-color: var(--dark-2-color);
-    color: var(--light-color);
+    color: var(--white-color);
 
     ol, ul {
       // max-width: 570px;

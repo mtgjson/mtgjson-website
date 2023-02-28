@@ -31,7 +31,7 @@ body {
 
   &:hover,
   &:focus {
-    color: var(--light-color);
+    color: var(--white-color);
     background-color: var(--accent-color);
   }
 
@@ -51,15 +51,39 @@ body {
 
 // Content
 .VPDoc {
+  h1 {
+    // color: var(--vp-c-brand);
+  }
+
   h4 {
     margin-top: 1rem;
   }
 
-  // Aside TOC links
-  .outline-link {
-    &.active,
-    &:hover {
-      color: var(--vp-c-brand);
+  // Aside/Outline
+  .aside {
+    .outline-link {
+      cursor: pointer;
+
+      &.active {
+        color: var(--vp-c-text-2);
+      }
+
+      &:hover {
+        color: var(--vp-c-brand);
+      }
+    }
+
+    .content {
+      .outline-title {
+        font-size: 1rem;
+        margin-bottom: 0.25rem;
+      }
+
+      .outline-marker {
+        display: none;
+        // right: -1px;
+        // left: auto;
+      }
     }
   }
 
@@ -132,7 +156,7 @@ body {
 
         &.optional,
         &.deprecated {
-          background-color: var(--light-color);
+          background-color: var(--white-color);
           color: var(--dark-color);
 
           @extend %code-block;
@@ -177,6 +201,7 @@ body {
   // Custom blocks, like info and tips
   .custom-block {
     margin-bottom: 1.5rem;
+    border-color: var(--vp-c-divider);
 
     .custom-block-title {
       font-size: 1rem;
@@ -190,6 +215,21 @@ body {
     code {
       @extend %code-block;
       font-size: 12px;
+    }
+  }
+}
+
+// TOC
+.table-of-contents {
+  li {
+    font-size: 14px;
+
+    a {
+      color: var(--vp-c-text-2);
+
+      &:hover {
+        color: var(--accent-color);
+      }
     }
   }
 }

@@ -43,7 +43,7 @@ MTGGraphQL is based on the latest MTGJSON release. For the timings of data updat
 
 The current rate limits are capped at `1,000` requests per IP Address per hour and `500` requests per key per hour.
 
-### NPM Typescript Package
+### NPM TypeScript Package
 
 To go along with MTGGraphQL, we have released a [TypeScript package](https://www.npmjs.com/package/mtggraphql/) for your convenience.
 

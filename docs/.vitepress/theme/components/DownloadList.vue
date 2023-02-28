@@ -177,7 +177,7 @@ onMounted(async (): Promise<void> => {
         position: relative;
         height: 3rem;
         width: 3rem;
-        color: var(--text-color);
+        color: var(--vp-c-text);
 
         &::before {
           position: absolute;

@@ -168,7 +168,7 @@ defineExpose({
     display: block;
     margin-bottom: 0;
     position: relative;
-    color: var(--text-color);
+    color: var(--vp-c-text);
     display: flex;
 
     p {

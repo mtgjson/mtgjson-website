@@ -1,5 +1,6 @@
 ---
 title: MTGGraphQL Changelog
+outline: false
 head:
   - - meta
     - property: og:title

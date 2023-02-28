@@ -1,5 +1,6 @@
 ---
 title: MTGJSON v5 Changelog
+outline: false
 head:
   - - meta
     - property: og:title
