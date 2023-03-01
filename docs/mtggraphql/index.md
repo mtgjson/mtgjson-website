@@ -35,6 +35,8 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 [[toc]]
 
+## Usage
+
 ### Data Source
 
 MTGGraphQL is based on the latest MTGJSON release. For the timings of data updates, see [this FAQ question](/faq/#how-often-is-the-data-updated).

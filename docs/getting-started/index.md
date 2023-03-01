@@ -68,9 +68,9 @@ This documentation leverages TypeScript concepts to define properties.
 
 ### Data Models
 
-Data Models are data objects that are generally flat in nature, they are an object or array and they have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, other Data Models. They vary in their availability and are based heavily on the File Model.
+Data Models are data objects that are generally flat in nature, they are an object or array and they have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
 
-For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a nested array of data about cards are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own properties because the card is organized by the Set it was defined in.
+For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a object of data about card Sets are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own unique property values based on the Set it was defined in.
 
 ::: tip An Even Closer Look
 
@@ -94,4 +94,4 @@ For example, `AllPrices.json` uses the [All Prices](/abstract-models/all-prices/
 
 ### MTGGraphQL
 
-A sub-service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API built on top of the MTGJSON data sets.
+A sub-service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API service built on top of MTGJSON data.
