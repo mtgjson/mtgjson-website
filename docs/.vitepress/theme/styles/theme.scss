@@ -57,6 +57,10 @@ body {
   }
 }
 
+.VPNavScreenAppearance {
+  border-radius: var(--common-radius) !important;
+}
+
 // Content
 .VPDoc {
   // Fix headings
@@ -153,6 +157,10 @@ body {
       font-size: 1rem;
       color: var(--vp-c-text-1);
       position: initial;
+
+      .header-anchor {
+        margin-left: -0.75rem;
+      }
 
       i {
         background-color: var(--white-color);

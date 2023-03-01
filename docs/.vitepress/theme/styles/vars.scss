@@ -27,6 +27,7 @@
   --search-item-highlight-color: var(--accent-color);
   --search-text-color: var(--white-color);
   --search-results-max-height: 400px;
+  --search-width: 200px;
 
   // Data Presentation
   --code-bg-color: var(--gray-4-color);
@@ -39,7 +40,7 @@
   --supporter-uncommon-color: var(--gray-3-color);
 
   // Misc
-  --common-radius: 0.5rem;
+  --common-radius: 11px;
 
   // VitePress overrides
   --vp-c-brand: var(--accent-color);
@@ -56,6 +57,7 @@ html.dark {
   --vp-c-bg-elv: var(--dark-2-color);
   --vp-c-bg-alt: var(--dark-2-color);
   --vp-c-bg: var(--dark-1-color);
+  --vp-c-bg-soft: var(--dark-2-color);
   --vp-custom-block-info-bg: var(--dark-2-color);
   --vp-backdrop-bg-color: var(--dark-2-alpha-color);
 }

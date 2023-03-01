@@ -30,7 +30,7 @@
         )
           .search-item
             p.search-item--page {{ item.title }}
-            span.search-item--text(v-if="!item.isOwnPage") &hookrightarrow; {{ item.text }}
+            span.search-item--text(v-if="!item.isOwnPage") {{ item.text }}
 </template>
 
 <script setup lang="ts">
@@ -125,17 +125,21 @@ const toggleSidebar = (): void => {
 .search {
   &-bar {
     position: relative;
+    margin-right: 1rem;
+    padding-right: 1rem;
+    border-right: 1px solid var(--vp-c-divider);
 
     input {
       background-color: var(--search-bg-color);
       color: var(--search-text-color);
-      padding: 0.25rem 0.5rem;
+      padding: 0.25rem 1.25rem 0.25rem 0.5rem;
       border-radius: var(--common-radius);
       font-weight: bold;
       font-size: .75rem;
-      width: 100%;
+      width: var(--search-width);
       border: 1px solid var(--search-border-color);
       transition: border-color 0.25s;
+      height: 22px;
 
       &.open {
         border-bottom-left-radius: 0;
@@ -158,17 +162,17 @@ const toggleSidebar = (): void => {
 
   &-clear-button {
     position: absolute;
-    top: 0.75rem;
-    right: 1rem;
-    width: 15px;
-    height: 15px;
+    top: 0.45rem;
+    right: 1.45rem;
+    width: 12px;
+    height: 12px;
     cursor: pointer;
 
     &::before,
     &::after {
       content: '';
       width: 2px;
-      height: 14px;
+      height: 12px;
       background-color: var(--accent-color);
       position: absolute;
       left: 6px;
@@ -187,7 +191,7 @@ const toggleSidebar = (): void => {
     position: absolute;
     z-index: 100;
     top: calc(100% - 1px);
-    width: 100%;
+    width: var(--search-width);
 
     &.open {
       background-color: var(--search-bg-color);
@@ -197,6 +201,7 @@ const toggleSidebar = (): void => {
       border: 1px solid var(--accent-color);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
+      padding-bottom: 1rem;
     }
 
     .search-suggestion {
@@ -212,7 +217,7 @@ const toggleSidebar = (): void => {
       }
 
       a {
-        padding: 0.5rem 1rem;
+        padding: 0.5rem 0.5rem 0 0.5rem;
         display: block;
         text-decoration: none;
         color: var(--search-text-color);
@@ -224,19 +229,41 @@ const toggleSidebar = (): void => {
         &--page {
           text-align: left;
           margin: 0;
-          line-height: 1.25rem;
-          text-decoration: underline;
+          line-height: 1rem;
           color: var(--accent-color);
+          font-size: 14px;
+          font-weight: bold;
         }
 
         &--text {
           text-align: left;
           display: block;
-          margin-top: 5px;
           font-weight: normal;
+          font-size: 14px;
+          padding-left: 0.5rem;
         }
       }
     }
+  }
+}
+
+@media (max-width: 1279px) {
+  .search {
+    &-bar {
+      margin-right: 0;
+      padding-right: 0;
+      border: 0;
+    }
+
+    &-clear-button {
+      right: 0.45rem;
+    }
+  }
+}
+
+@media (max-width: 569px) {
+  .search {
+    --search-width: 120px;
   }
 }
 </style>
