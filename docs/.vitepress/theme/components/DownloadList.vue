@@ -229,8 +229,8 @@ onMounted(async (): Promise<void> => {
 
             @extend %code-block;
 
-            padding-top: 0;
-            padding-bottom: 0;
+            padding-top: 0 !important;
+            padding-bottom: 0 !important;
 
             font-family: var(--font-base);
           }

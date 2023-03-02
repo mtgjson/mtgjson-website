@@ -8,17 +8,12 @@ export const useStore = defineStore({
   id: 'global',
   state: () =>
     ({
-      SidebarOpen: false,
       Meta: {},
       DeckList: [],
       SetList: [],
       EnumValues: {},
-      ThemeColor: 'light',
     } as TStoreRootState),
   actions: {
-    updateSidebar(): void {
-      this.SidebarOpen = !this.SidebarOpen;
-    },
     async fetchFromApi(fileName: string): Promise<void> {
       try {
         const promised: AxiosResponse<any> = await axios.get(`${api}${fileName}.json`);
@@ -28,9 +23,6 @@ export const useStore = defineStore({
       } catch (err) {
         console.error(err);
       }
-    },
-    setTheme(themeColor: string) {
-      this.ThemeColor = themeColor;
     },
   },
 });

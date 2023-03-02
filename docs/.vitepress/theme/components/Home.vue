@@ -77,7 +77,8 @@ main.home
       ul.home-team-leads
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-zach.jpg" title="Zach Halpern" alt="Zach Halpern's avatar")
+            a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
+              img(src="/images/avatars/avatar-zach.jpg" title="Zach Halpern" alt="Zach Halpern's avatar")
             div
               a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
                 h4 Zach Halpern
@@ -85,7 +86,8 @@ main.home
               p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-milo.jpg" title="Milo Rue" alt="Milo Rue's avatar")
+            a(href="https://github.com/milorue" target="_blank" rel="noreferrer noopener")
+              img(src="/images/avatars/avatar-milo.jpg" title="Milo Rue" alt="Milo Rue's avatar")
             div
               a(href="https://github.com/milorue" target="_blank" rel="noreferrer noopener")
                 h4 Milo Rue
@@ -93,7 +95,8 @@ main.home
               p Milo is a TypeScript and React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports.
         li
           div.home-team-leads-member
-            img(src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos" alt="Eric Lakatos' avatar")
+            a(href="https://github.com/staghouse" target="_blank" rel="noreferrer noopener")
+              img(src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos" alt="Eric Lakatos' avatar")
             div
               a(href="https://github.com/staghouse" target="_blank" rel="noreferrer noopener")
                 h4 Eric Lakatos
@@ -449,11 +452,15 @@ onMounted(async (): Promise<void> => {
         border-radius: var(--common-radius);
         padding: 2rem;
 
+        a {
+          display: block;
+          margin-right: 2rem;
+        }
+
         img {
           border-radius: 50%;
-          margin-right: 2rem;
-          width: 150px;
-          height: 150px;
+          height: auto;
+          max-width: 150px;
         }
 
         div {
@@ -667,7 +674,7 @@ onMounted(async (): Promise<void> => {
 
           &,
           &-time {
-            color: var(--white-color);
+            color: var(--vp-c-text-2);
             font-size: 14px;
           }
 
@@ -836,7 +843,7 @@ onMounted(async (): Promise<void> => {
           display: block;
 
           img {
-            margin: 0 0 1rem 0;
+            margin: 0 auto 1rem auto;
           }
 
           div {

@@ -9,7 +9,7 @@
     .nav-header-content
       .title MTGJSON
       a.version(v-if="version" href="/changelogs/mtgjson-v5/") v{{ version }}
-      .version(v-else) {{ '' }}
+      .version(v-else) &nbsp;
 </template>
 
 <script setup lang="ts">

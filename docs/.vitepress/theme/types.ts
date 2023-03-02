@@ -1,10 +1,8 @@
 export type TStoreRootState = {
-  SidebarOpen: boolean,
   Meta: TMeta,
   DeckList: TList[],
   SetList: TList[],
   EnumValues: object,
-  ThemeColor: string,
 }
 
 export type TMeta = {

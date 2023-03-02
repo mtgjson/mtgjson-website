@@ -36,7 +36,6 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
-import { useStore } from '../store.js';
 import type { IPagesData, IPagesDataHeader } from '../types';
 
 const { theme } = useData();
@@ -46,7 +45,6 @@ const pages: IPagesData[] = theme.value.pages;
 const open = ref<boolean>(false);
 const input = ref<HTMLElement | null>(null);
 const searchTerm = ref<string>('');
-const store = useStore();
 
 const results = computed<IPagesData[]>((): IPagesData[] => {
   const res: IPagesData[] = [];
@@ -108,16 +106,6 @@ const openSearch = (): void => {
 const clearSearch = (shouldCloseSidebar?: boolean): void => {
   open.value = false;
   searchTerm.value = '';
-
-  if (shouldCloseSidebar) {
-    toggleSidebar();
-  }
-};
-
-const toggleSidebar = (): void => {
-  if (store.SidebarOpen) {
-    store.updateSidebar();
-  }
 };
 </script>
 
@@ -137,9 +125,9 @@ const toggleSidebar = (): void => {
       font-weight: bold;
       font-size: .75rem;
       width: var(--search-width);
+      height: var(--search-height);
       border: 1px solid var(--search-border-color);
       transition: border-color 0.25s;
-      height: 22px;
 
       &.open {
         border-bottom-left-radius: 0;

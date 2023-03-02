@@ -1,8 +1,3 @@
-export const hashRE: RegExp = /#.*$/;
-export const extRE: RegExp = /\.(md|html)$/;
-export const endingSlashRE: RegExp = /\/$/;
-export const outboundRE: RegExp = /^(https?:|mailto:|tel:)/;
-
 // Custom slugify function for MarkdownItAnchor.
 export const slugify = (str: string) => {
   return (
@@ -164,33 +159,4 @@ export const formatTime = (time: string, overrideTime?: string): string => {
       }
     }
   }
-};
-
-export const normalize = (path: string): string => {
-  return decodeURI(path).replace(hashRE, '').replace(extRE, '');
-};
-
-export const getHash = (path: string): string => {
-  const match: RegExpMatchArray = path.match(hashRE);
-
-  if (match) {
-    return match[0];
-  } else {
-    return '';
-  }
-};
-
-export const isExternal = (path: string): boolean => {
-  return outboundRE.test(path);
-};
-
-export const isActive = (route: any, path: string): boolean => {
-  const routeHash = route.hash;
-  const linkHash = getHash(path);
-  if (linkHash && routeHash !== linkHash) {
-    return false;
-  }
-  const routePath = normalize(route.path);
-  const pagePath = normalize(path);
-  return routePath === pagePath;
 };

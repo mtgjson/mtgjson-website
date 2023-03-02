@@ -11,6 +11,12 @@ body {
   font-size: 16px;
 }
 
+a {
+  &:hover {
+    text-decoration: underline;
+  }
+}
+
 // CTA
 .cta-btn {
   display: inline-block;
@@ -50,9 +56,29 @@ body {
 
 // Sidebar
 .VPSidebar {
-  .VPLink {
-    h2 {
-      font-size: 1rem;
+  .VPSidebarItem {
+    .VPLink {
+      h2 {
+        font-size: 1rem;
+      }
+
+      &:hover {
+        &,
+        & .text {
+          color: var(--vp-c-text-1) !important;
+        }
+      }
+    }
+
+    &.is-active {
+      .VPLink {
+        &:hover {
+          &,
+          & .text {
+            color: var(--vp-c-brand) !important;
+          }
+        }
+      }
     }
   }
 }
