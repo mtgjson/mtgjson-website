@@ -44,4 +44,4 @@ The Rulings Data Model describes the properties of rulings for a card.
 
 ## TypeScript Model
 
-<ModelType type="Rulings" />
+<<< @/public/static/Rulings.ts{ts}

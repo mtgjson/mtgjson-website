@@ -385,4 +385,4 @@ The Card (Token) Data Model describes the properties of a single token card.
 
 ## TypeScript Model
 
-<ModelType type="CardToken" />
+<<< @/public/static/CardToken.ts{ts}

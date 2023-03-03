@@ -156,4 +156,4 @@ The Legalities Data Model describes the properties of legalities in play formats
 
 ## TypeScript Model
 
-<ModelType type="Legalities" />
+<<< @/public/static/Legalities.ts{ts}

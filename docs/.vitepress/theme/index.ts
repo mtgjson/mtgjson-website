@@ -4,7 +4,6 @@ import DownloadList from './components/DownloadList.vue';
 import DownloadNativeSelect from './components/DownloadNativeSelect.vue';
 import DownloadSorter from './components/DownloadSorter.vue';
 import ExampleField from './components/ExampleField.vue';
-import ModelType from './components/ModelType.vue';
 import Home from './components/Home.vue';
 
 import { onMounted } from 'vue';
@@ -26,7 +25,6 @@ export default {
     ctx.app.component('DownloadNativeSelect', DownloadNativeSelect);
     ctx.app.component('DownloadSorter', DownloadSorter);
     ctx.app.component('ExampleField', ExampleField);
-    ctx.app.component('ModelType', ModelType);
     ctx.app.component('Home', Home);
 
     ctx.app.use(createPinia());

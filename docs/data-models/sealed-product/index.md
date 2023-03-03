@@ -89,4 +89,4 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ## TypeScript Model
 
-<ModelType type="SealedProduct" />
+<<< @/public/static/SealedProduct.ts{ts}

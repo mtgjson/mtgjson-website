@@ -142,4 +142,4 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 
 ## TypeScript Model
 
-<ModelType type="Translations" />
+<<< @/public/static/Translations.ts{ts}

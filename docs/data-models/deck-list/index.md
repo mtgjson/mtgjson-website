@@ -67,4 +67,4 @@ The Deck List Data Model describes the meta data properties for an individual [D
 
 ## TypeScript Model
 
-<ModelType type="DeckList" />
+<<< @/public/static/DeckList.ts{ts}

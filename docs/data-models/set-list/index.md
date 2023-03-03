@@ -193,4 +193,4 @@ The Set List Data Model describes the meta data properties for an individual [Se
 
 ## TypeScript Model
 
-<ModelType type="SetList" />
+<<< @/public/static/SetList.ts{ts}

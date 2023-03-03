@@ -44,4 +44,4 @@ The Related Cards Data Model describes the properties of cards that have relatio
 
 ## TypeScript Model
 
-<ModelType type="RelatedCards" />
+<<< @/public/static/RelatedCards.ts{ts}

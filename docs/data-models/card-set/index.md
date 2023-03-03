@@ -622,4 +622,4 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 
 ## TypeScript Model
 
-<ModelType type="CardSet" />
+<<< @/public/static/CardSet.ts{ts}

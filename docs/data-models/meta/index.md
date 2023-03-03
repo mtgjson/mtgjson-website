@@ -47,4 +47,4 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 
 ## TypeScript Model
 
-<ModelType type="Meta" />
+<<< @/public/static/Meta.ts{ts}

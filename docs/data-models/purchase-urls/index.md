@@ -72,4 +72,4 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 
 ## TypeScript Model
 
-<ModelType type="PurchaseUrls" />
+<<< @/public/static/PurchaseUrls.ts{ts}

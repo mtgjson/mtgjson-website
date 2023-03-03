@@ -236,4 +236,4 @@ The Set Data Model describes the properties of an individual set.
 
 ## TypeScript Model
 
-<ModelType type="Set" />
+<<< @/public/static/Set.ts{ts}

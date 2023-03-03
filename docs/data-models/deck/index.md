@@ -89,4 +89,4 @@ The Deck Data Model describes the properties of an individual deck.
 
 ## TypeScript Model
 
-<ModelType type="Deck" />
+<<< @/public/static/Deck.ts{ts}

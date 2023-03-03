@@ -343,4 +343,4 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 ## TypeScript Model
 
-<ModelType type="CardAtomic" />
+<<< @/public/static/CardAtomic.ts{ts}

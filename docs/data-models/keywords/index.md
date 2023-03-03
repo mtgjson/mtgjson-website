@@ -55,4 +55,4 @@ The Keywords Data Model describes the properties of keywords available to any ca
 
 ## TypeScript Model
 
-<ModelType type="Keywords" />
+<<< @/public/static/Keywords.ts{ts}

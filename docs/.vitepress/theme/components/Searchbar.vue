@@ -2,25 +2,26 @@
 .search
   .search-bar
     input.search-bar-input(
-      ref="input"
-      v-model="searchTerm"
-      autocomplete="off"
-      autocorrect="off"
-      autocapitalize="off"
-      spellcheck="false"
-      placeholder="Search docs..."
-      type="search"
-      @input="openSearch()"
-      :class="{ open: results.length > 0 }"
+      ref="input",
+      v-model="searchTerm",
+      autocomplete="off",
+      autocorrect="off",
+      autocapitalize="off",
+      spellcheck="false",
+      placeholder="Search docs...",
+      type="search",
+      @input="openSearch()",
+      :class="{ open: results?.length > 0 }"
     )
     .search-clear-button(
       v-if="searchTerm.length > 0"
       @click="clearSearch()"
     )
-    .search-suggestions(:class="{ open: results.length > 0 }")
+    .search-suggestions(:class="{ open: results?.length > 0 }")
       .search-suggestion(
-        v-for="(item, i) of results"
-        :key="i"
+        v-if="results",
+        v-for="(item, i) of results",
+        :key="i",
         tabindex="0"
       )
         a(
@@ -46,7 +47,7 @@ const open = ref<boolean>(false);
 const input = ref<HTMLElement | null>(null);
 const searchTerm = ref<string>('');
 
-const results = computed<IPagesData[]>((): IPagesData[] => {
+const results = computed<IPagesData[] | []>((): IPagesData[] | [] => {
   const res: IPagesData[] = [];
 
   if (searchTerm.value.length > 0) {
@@ -89,7 +90,11 @@ const results = computed<IPagesData[]>((): IPagesData[] => {
     });
   }
 
-  return res;
+  if(res.length > 0) {
+    return res;
+  }
+
+  return [];
 });
 
 const openSearch = (): void => {

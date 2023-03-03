@@ -140,10 +140,6 @@ You can also use the `<ExampleField type='<Enum Name>'` component to render exam
 
 If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
 
-#### TypeScript Notations
-
-Use the `<ModelType type='<Model Name>' />` component to render the TypeScript notation for a Data Model where `<Model Name>` is the Data Model, such as `CardAtomic` or `DeckList`.
-
 #### Table of Contents
 
 Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers and use the `<PropertyToggler/>` component right above `[[toc]]` to enable toggling optional properties on the Table of Contents.

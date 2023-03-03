@@ -644,4 +644,4 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 ## TypeScript Model
 
-<ModelType type="CardDeck" />
+<<< @/public/static/CardDeck.ts{ts}

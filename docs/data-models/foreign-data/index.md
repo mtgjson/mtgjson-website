@@ -81,4 +81,4 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 
 ## TypeScript Model
 
-<ModelType type="ForeignData" />
+<<< @/public/static/ForeignData.ts{ts}
