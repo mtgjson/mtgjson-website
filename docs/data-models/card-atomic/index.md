@@ -41,6 +41,14 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 :::
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/CardAtomic.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -340,7 +348,3 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `string[]`
 > - <ExampleField type='types'/>
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/CardAtomic.ts{ts}

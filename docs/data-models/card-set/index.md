@@ -23,6 +23,14 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `cards`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/CardSet.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -619,7 +627,3 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/CardSet.ts{ts}

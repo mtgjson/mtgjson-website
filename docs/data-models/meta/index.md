@@ -23,6 +23,14 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 - **Parent file:** [Meta](/downloads/all-files/#meta)
 - **Parent property:** `meta`, `data`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/Meta.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -44,7 +52,3 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 > - **Type:** `string`
 > - <ExampleField type="version" />
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/Meta.ts{ts}

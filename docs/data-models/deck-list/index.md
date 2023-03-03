@@ -23,6 +23,14 @@ The Deck List Data Model describes the meta data properties for an individual [D
 - **Parent file:** [DeckList](/downloads/all-files/#decklist)
 - **Parent property:** `data`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/DeckList.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -64,7 +72,3 @@ The Deck List Data Model describes the meta data properties for an individual [D
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v5.1.0`
-
-## TypeScript Model
-
-<<< @/public/static/DeckList.ts{ts}

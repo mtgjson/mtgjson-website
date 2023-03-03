@@ -23,6 +23,14 @@ The Deck Data Model describes the properties of an individual deck.
 - **Parent file:** [All Decks](/downloads/all-decks/)
 - **Parent property:** `data`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/Deck.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -86,7 +94,3 @@ The Deck Data Model describes the properties of an individual deck.
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.3.0`
-
-## TypeScript Model
-
-<<< @/public/static/Deck.ts{ts}

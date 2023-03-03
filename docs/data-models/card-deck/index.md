@@ -23,6 +23,14 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 - **Parent model:** [Deck](/data-models/deck/)
 - **Parent property:** `commander`, `mainBoard`, `sideBoard`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/CardDeck.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -641,7 +649,3 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/CardDeck.ts{ts}

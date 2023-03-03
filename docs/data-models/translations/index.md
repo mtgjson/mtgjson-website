@@ -22,6 +22,14 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `translations`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/Translations.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -139,7 +147,3 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/Translations.ts{ts}

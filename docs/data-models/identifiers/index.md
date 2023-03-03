@@ -22,6 +22,14 @@ The Identifiers Data Model describes the properties of identifiers associated to
 - **Parent model:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
 - **Parent property:** `identifiers`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/Identifiers.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -153,7 +161,3 @@ The Identifiers Data Model describes the properties of identifiers associated to
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-
-## TypeScript Model
-
-<<< @/public/static/Identifiers.ts{ts}

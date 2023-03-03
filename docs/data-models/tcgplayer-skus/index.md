@@ -41,6 +41,14 @@ const tcgplayerSkus: TcgplayerSkus = data["00010d56-fe38-5e35-8aed-518019aa36a5"
 
 :::
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/TcgplayerSkus.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -92,7 +100,3 @@ const tcgplayerSkus: TcgplayerSkus = data["00010d56-fe38-5e35-8aed-518019aa36a5"
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
-
-## TypeScript Model
-
-<<< @/public/static/TcgplayerSkus.ts{ts}

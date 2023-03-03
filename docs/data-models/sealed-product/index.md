@@ -23,6 +23,14 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 - **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
 - **Parent property:** `sealedProduct`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/SealedProduct.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -86,7 +94,3 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
-
-## TypeScript Model
-
-<<< @/public/static/SealedProduct.ts{ts}

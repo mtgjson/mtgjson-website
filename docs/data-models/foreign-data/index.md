@@ -23,6 +23,14 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `foreignData`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/ForeignData.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -78,7 +86,3 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/ForeignData.ts{ts}

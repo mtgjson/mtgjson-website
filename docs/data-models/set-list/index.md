@@ -23,6 +23,14 @@ The Set List Data Model describes the meta data properties for an individual [Se
 - **Parent file:** [SetList](/downloads/all-files/#setlist)
 - **Parent property:** `data`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/SetList.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -190,7 +198,3 @@ The Set List Data Model describes the meta data properties for an individual [Se
 > - **Type:** `string`
 > - <ExampleField type='type'/>
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/SetList.ts{ts}

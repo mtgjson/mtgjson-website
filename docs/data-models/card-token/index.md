@@ -23,6 +23,14 @@ The Card (Token) Data Model describes the properties of a single token card.
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `tokens`
 
+## TypeScript Model
+
+::: details Show/Hide Model
+
+<<< @/public/static/CardToken.ts{TypeScript}
+
+:::
+
 ## Model Index
 
 [[toc]]
@@ -382,7 +390,3 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `string`
 > - <ExampleField type='watermark'/>
 > - **Introduced:** `v4.0.0`
-
-## TypeScript Model
-
-<<< @/public/static/CardToken.ts{ts}
