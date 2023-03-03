@@ -68,12 +68,11 @@ const toggleShowAll = (): void => {
   .show-btn {
     display: inline;
     margin-left: 0.5rem;
-    color: var(--accent-color);
-    text-decoration: underline;
+    color: var(--white-color);
     cursor: pointer;
 
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }

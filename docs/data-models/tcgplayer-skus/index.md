@@ -27,9 +27,9 @@ The Tcgplayer Skus Data Model describes the properties of [TCGplayer](https://ww
 
 When using an `TcgplayerSkus.json` file, the Tcgplayer Skus Data Model is accessed through a single index array where its parent property is card uuid property. Here is a reduced payload of the model as an example:
 
-```JSON
-"data": {
-  "00010d56-fe38-5e35-8aed-518019aa36a5": TcgplayerSkus[]
+```TypeScript
+{
+  data: Record<String, TcgplayerSkus[]>;
 }
 ```
 

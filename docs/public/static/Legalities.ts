@@ -14,6 +14,7 @@ export type Legalities = {
   pauper?: string;
   penny?: string;
   pioneer?: string;
+  predh?: string;
   premodern?: string;
   standard?: string;
   vintage?: string;

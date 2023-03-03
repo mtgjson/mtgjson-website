@@ -1,5 +1,6 @@
 ---
 title: Legalities
+enum: legalities
 head:
   - - meta
     - property: og:title
@@ -141,9 +142,16 @@ The Legalities Data Model describes the properties of legalities in play formats
 > - **Type:** `string`
 > - **Introduced:** `v4.6.0`
 
+> ### predh <i class="optional"></i>
+>
+> Legality of the card in the [PreDH](https://articles.starcitygames.com/magic-the-gathering/commander-sub-format-predh-is-the-new-magic-rage/) play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
+
 > ### premodern <i class="optional"></i>
 >
-> Legality of the card in the [Pre-Modern](https://premodernmagic.com/) play format.
+> Legality of the card in the [Premodern](https://premodernmagic.com/) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`

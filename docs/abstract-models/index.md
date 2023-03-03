@@ -17,7 +17,7 @@ head:
 
 # Abstract Models
 
-Abstract Models in MTGJSON describe any JSON object or nested JSON object that provides a non-flat response. As such, they will have two or more levels of nested keys. It is worth noting that most, but not all, Abstract Models are related directly to the models of specific files, like `AllPrices` or `EnumValues`.
+Abstract Models in MTGJSON describe any JSON object or nested JSON object that provides a non-flat response. As such, they will have two or more levels of nested keys. It is worth noting that some Abstract Models are related directly to their type of file, such as **AllPrices** or **CardTypes**.
 
 ## Example
 
@@ -25,15 +25,11 @@ Abstract Models in MTGJSON describe any JSON object or nested JSON object that p
 
 Any <strong>Abstract Model</strong> would look similar to this:
 
-```JSON
+```TypeScript
 {
-  "<Property 1>": {
-    "<Nested Property 1>": any
-  },
-  "<Property 2>": {
-    "<Nested Property 1>": any
-  },
-  ... // More properties
+  [key, string]: {
+    [key, string]: any;
+  };
 }
 ```
 
