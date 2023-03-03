@@ -191,16 +191,20 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
       overflow: auto;
       max-height: var(--search-results-max-height);
       border-radius: var(--common-radius);
-      border: 1px solid var(--accent-color);
+      border: 1px solid var(--search-border-color);
       border-top-left-radius: 0;
       border-top-right-radius: 0;
-      padding-bottom: 1rem;
     }
 
     .search-suggestion {
       &:hover,
       &:focus {
         outline: 0;
+        background-color: var(--search-bg-hover-color);
+
+        a {
+          text-decoration: none;
+        }
 
         .search-item {
           &--page {
@@ -210,7 +214,7 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
       }
 
       a {
-        padding: 0.5rem 0.5rem 0 0.5rem;
+        padding: 0.5rem;
         display: block;
         text-decoration: none;
         color: var(--search-text-color);
