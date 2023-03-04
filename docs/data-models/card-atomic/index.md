@@ -29,7 +29,7 @@ When using any `*Atomic.json` file, the Card (Atomic) Data Model is accessed thr
 
 ```TypeScript
 {
-  data: Record<String, CardAtomic[]>;
+  data: Record<string, CardAtomic[]>;
 }
 ```
 

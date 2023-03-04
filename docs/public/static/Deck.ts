@@ -4,7 +4,7 @@ export type Deck = {
   fileName: string;
   mainBoard: CardDeck[];
   name: string;
-  sideBoard: CardDeck[];
   releaseDate: string | null;
+  sideBoard: CardDeck[];
   type: string;
 };

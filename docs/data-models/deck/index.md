@@ -73,18 +73,18 @@ The Deck Data Model describes the properties of an individual deck.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### sideBoard
->
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
->
-> - **Type:** `CardDeck[]`
-> - **Introduced:** `v4.3.0`
-
 > ### releaseDate
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
 > - **Type:** `string | null`
+> - **Introduced:** `v4.3.0`
+
+> ### sideBoard
+>
+> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+>
+> - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
 
 > ### type

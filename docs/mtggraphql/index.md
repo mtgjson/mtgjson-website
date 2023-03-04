@@ -65,7 +65,7 @@ The playground consists of 3 main sections:
 
 #### Example Query
 
-```graphql
+```GraphQL
 query {
   cards(
     input: { name: "Phelddagrif" }

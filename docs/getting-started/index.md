@@ -58,9 +58,11 @@ For example, the commonly used `AllPrintings.json` file uses the [Set](/data-mod
 
 ::: info A Closer Look
 
-```JSON
-"data": {
-  "10E": Set
+Here is a reduced payload of the model as an example:
+
+```TypeScript
+{
+  data: Record<string, Set>
 }
 ```
 
@@ -74,10 +76,12 @@ For example, a [Set](/data-models/set/) Data Model is the model used in the `dat
 
 ::: info An Even Closer Look
 
-```JSON
-"data": {
-  "10E": {
-    "cards": CardSet[]
+Here is a reduced payload of the model as an example:
+
+```TypeScript
+{
+  data: {
+    cards: Record<string, CardSet[]>
   }
 }
 ```

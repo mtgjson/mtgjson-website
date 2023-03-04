@@ -29,7 +29,7 @@ When using an `TcgplayerSkus.json` file, the Tcgplayer Skus Data Model is access
 
 ```TypeScript
 {
-  data: Record<String, TcgplayerSkus[]>;
+  data: Record<string, TcgplayerSkus[]>;
 }
 ```
 
