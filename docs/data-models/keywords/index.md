@@ -27,7 +27,7 @@ The Keywords Data Model describes the properties of keywords available to any ca
 
 ::: details Show/Hide Model
 
-<<< @/public/static/Keywords.ts{TypeScript}
+<<< @/public/types/Keywords.ts{TypeScript}
 
 :::
 

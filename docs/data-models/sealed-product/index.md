@@ -27,7 +27,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ::: details Show/Hide Model
 
-<<< @/public/static/SealedProduct.ts{TypeScript}
+<<< @/public/types/SealedProduct.ts{TypeScript}
 
 :::
 

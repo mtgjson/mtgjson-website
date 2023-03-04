@@ -106,24 +106,28 @@ Here is a list of frequently asked questions from our users since some data can 
 >
 > #### Using the `keyruneCode` property
 >
-> You can use **Keyrune** and the [keyruneCode](/data-models/set/#keyrunecode) from the Set Data Model to implement set code imagery, but is mostly limited to projects that can use CSS. There is ways to use them in desktop applications - See the [Keyrune documentation](https://keyrune.andrewgioia.com/) for more information.
+> You can use **Keyrune** and the [keyruneCode](/data-models/set/#keyrunecode) from the [Set](/data-models/set/) Data Model to implement set code imagery, but is mostly limited to projects that can use CSS. There is ways to use them in desktop applications - See the [Keyrune documentation](https://keyrune.andrewgioia.com/) for more information.
 >
 > #### Using the `setCode` property
 >
-> You can use the [setCode](/data-models/set/#setcode) property from the Set Data Model for both **Scryfall** and **Gatherer**. Gatherer also lets you pass a rarity parameter to return a set symbol with a color applied. Here is an example of how you might construct the different image paths:
+> You can use the `setCode` property from [Card (Deck)](/data-models/card-deck/#setcode), [Card (Set)](/data-models/card-set/#setcode), and [Card (Token)](/data-models/card-token/#setcode) for both **Scryfall** and **Gatherer**. Gatherer also lets you pass a rarity parameter to return a set symbol with a color applied - you can use the `rarity` property from [Card (Deck)](/data-models/card-deck/#rarity) and [Card (Set)](/data-models/card-set/#rarity) for this value and extrapolate what Gatherer needs in its parameter. Here is an example of how you might construct the different image paths:
 >
 > ```TypeScript
 > // Assuming you have the setCode property available in your code...
 > // Scryfall
 > const scrylfallSetImage: string = `https://svgs.scryfall.io/sets/${setCode}.svg`;
+>
 > // Gatherer
-> // Assuming you also have a rarity property available in your code where rarity is equal to one of:
-> // "m" => Mythic, applies a red-ish color
-> // "r" => Rare, applies a gold-ish color
-> // "u" => Uncommon, applies a silver-ish color
-> // "c" => Common, applies a black color
-> // Which will change the image returned to have that color applied to the image
-> const gathererSetImage: string = `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${rarity}&size=large`
+> // Assuming you also have a rarity property available in your code....
+> const cardRarity: string = rarity.charAt(0);
+> // Gatherer only uses the first letter of a rarity as the parameter value
+> // "mythic" => "m", applies a red-ish color
+> // "rare" => "r", applies a gold-ish color
+> // "uncommon" => "u", applies a silver-ish color
+> // "common" => "c", applies a black color
+> // "special" => "s", applies a purple color. This is only available on some set codes, such as "TSP"
+> // "bonus" is a unique rarity that Gatherer does not parse
+> const gathererSetImage: string = `https://gatherer.wizards.com/Handlers/Image.ashx?type=symbol&set=${setCode}&rarity=${cardRarity}&size=large`;
 > ```
 >
 > **Note:** Gatherer may not have all rarity variants of set codes available. Use at your own discretion.
@@ -134,16 +138,21 @@ Here is a list of frequently asked questions from our users since some data can 
 >
 > **Note:** Depending on your use case, this can be enough data to get the information you need, otherwise you can use those cards to access their `otherFaceIds` to get the card you need by comparing the data that you have already.
 
-> ### How can I use TypeScript typings for MTGJSON data?
+> ### How can I use TypeScript for MTGJSON data?
 >
-> There is currently no official typings exported from MTGJSON, however each Data Model documentation page does outline its associated type notation. As well, once you know the TypeScript typed name of a Data Model you can access that TypeScript type file to download. Here are some examples:
+> While there is currently no official Types exported from MTGJSON, each Data Model documentation page does outline its associated TypeScript notation which is as updated as the documentation is updated. As well, once you know the TypeScript Typed name of a Data Model you can use that to access that TypeScript Type file to download. Here are some examples:
 >
-> - Card (Atomic) Data Model, typed as **CardAtomic**: [https://mtgjson.com/static/CardAtomic.ts](/static/CardAtomic.ts)
-> - Card (Set) Data Model, typed as **CardSet**: [https://mtgjson.com/static/CardSet.ts](/static/CardSet.ts)
-> - Set Data Model, typed as **Set**: [https://mtgjson.com/static/Set.ts](/static/Set.ts)
-> - Deck Data Model, typed as **Deck**: [https://mtgjson.com/static/Deck.ts](/static/Deck.ts)
-> - All Types: [https://mtgjson.com/static/mtgjson-types.ts](/static/mtgjson-types.ts)
+> - Card (Atomic) Data Model, Typed as **CardAtomic**: [https://mtgjson.com/types/CardAtomic.ts](/types/CardAtomic.ts)
+> - Card (Set) Data Model, Typed as **CardSet**: [https://mtgjson.com/types/CardSet.ts](/types/CardSet.ts)
+> - Set Data Model, Typed as **Set**: [https://mtgjson.com/types/Set.ts](/types/Set.ts)
+> - Deck Data Model, Typed as **Deck**: [https://mtgjson.com/types/Deck.ts](/types/Deck.ts)
+>
+> However, more useful would likely be **all** the Types in one file location:
+>
+> - All Types: [https://mtgjson.com/types/AllTypes.ts](/types/AllTypes.ts)
+>
+> Additionally, when using MTGGraphQL, our GraphQL API layer, we offer a [NPM TypeScript Package](https://www.npmjs.com/package/mtggraphql/) that exports Types that the GraphQL service uses.
 
 > ### Why is a file/website out of date?
 >
-> You have probably received a cached version of the file or website. If you are using the website or have a file open in the browser, try hard&#8209;refreshing the path (`CTRL + F5` on Windows, `Shift + Command + R` on MacOS).
+> You have probably received a cached version of the file or website. If are using a browser, try hard&#8209;refreshing the page (`CTRL + F5` on Windows, `Shift + Command + R` on MacOS).

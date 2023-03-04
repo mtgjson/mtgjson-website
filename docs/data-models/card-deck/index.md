@@ -27,7 +27,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 ::: details Show/Hide Model
 
-<<< @/public/static/CardDeck.ts{TypeScript}
+<<< @/public/types/CardDeck.ts{TypeScript}
 
 :::
 
@@ -455,7 +455,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### originalPrintings <i class="optional"></i>
 >
-> A list of card UUID's to original printings of the card if this card is somehow different from its original, such as [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) cards.
+> A list of card `uuid`'s to original printings of the card if this card is somehow different from its original, such as [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) cards.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
@@ -483,7 +483,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### otherFaceIds <i class="optional"></i>
 >
-> A list of card UUID's to this card's counterparts, such as transformed or melded faces.
+> A list of card `uuid`'s to this card's counterparts, such as transformed or melded faces.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
@@ -534,7 +534,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### rebalancedPrintings <i class="optional"></i>
 >
-> A list of card UUID's to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
+> A list of card `uuid`'s to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
@@ -556,7 +556,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### setCode
 >
-> The printing set code that the card is from.
+> The printing set code that the card is from, formatted in uppercase.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
@@ -637,7 +637,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### variations <i class="optional"></i>
 >
-> A list of card UUID's of this card with alternate printings in the same set. Excludes Un&#8209;sets.
+> A list of card `uuid`'s of this card with alternate printings in the same set. Excludes Un&#8209;sets.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.1.2`

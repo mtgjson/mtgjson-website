@@ -26,7 +26,7 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 
 ::: details Show/Hide Model
 
-<<< @/public/static/Translations.ts{TypeScript}
+<<< @/public/types/Translations.ts{TypeScript}
 
 :::
 

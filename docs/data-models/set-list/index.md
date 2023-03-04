@@ -27,7 +27,7 @@ The Set List Data Model describes the meta data properties for an individual [Se
 
 ::: details Show/Hide Model
 
-<<< @/public/static/SetList.ts{TypeScript}
+<<< @/public/types/SetList.ts{TypeScript}
 
 :::
 

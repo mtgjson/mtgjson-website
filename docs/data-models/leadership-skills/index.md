@@ -26,7 +26,7 @@ The Leadership Skills Data Model describes the properties of formats that a card
 
 ::: details Show/Hide Model
 
-<<< @/public/static/LeadershipSkills.ts{TypeScript}
+<<< @/public/types/LeadershipSkills.ts{TypeScript}
 
 :::
 

@@ -6,10 +6,10 @@ head:
       content: All Prices
   - - meta
     - name: description
-      content: The All Prices Abstract Model describes the properties of card prices based on a card UUID.
+      content: The All Prices Abstract Model describes the properties of card prices based on a card's uuid property.
   - - meta
     - property: og:description
-      content: The All Prices Abstract Model describes the properties of card prices based on a card UUID.
+      content: The All Prices Abstract Model describes the properties of card prices based on a card's uuid property.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, all prices
@@ -17,7 +17,7 @@ head:
 
 # All Prices
 
-The All Prices Abstract Model describes the properties of card prices based on a card UUID.
+The All Prices Abstract Model describes the properties of card prices based on a card's uuid property.
 
 - **Parent file:** [AllPrices](/downloads/all-files/#allprices)
 - **Parent model:** `data`
@@ -36,25 +36,25 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 
 ## Model Overview
 
-```JSON
+```TypeScript
 {
-  // Card UUID
-  "<Card UUID>": {
+  // Card uuid property
+  [key: string]: {
     // Game format
-    "<Game Format>": {
+    [key: string]: {
       // Price provider
-      "<Price Provider>": {
+      [key: string]: {
         // Provider buylist values
         "buylist": {
           // Foil prices
           "foil": {
-            // Date as key and price as value
-            "<YYYY-MM-DD>": float
+            // ISO 8601 date format as the key and price as value
+            [key: string]: float
           },
           // Normal prices
           "normal": {
-            // Date as key and price as value
-            "<YYYY-MM-DD>": float
+            // ISO 8601 date format as the key and price as value
+            [key: string]: float
           }
         },
         // Currency of the provider
@@ -63,13 +63,13 @@ MTGJSON currently has affiliated with the following price providers to keep a **
         "retail": {
           // Foil prices
           "foil": {
-            // Date as key and price as value
-            "<YYYY-MM-DD>": float
+            // ISO 8601 date format as the key and price as value
+            [key: string]: float
           },
           // Normal prices
           "normal": {
-            // Date as key and price as value
-            "<YYYY-MM-DD>": float
+            // ISO 8601 date format as the key and price as value
+            [key: string]: float
           }
         }
       },
@@ -77,11 +77,13 @@ MTGJSON currently has affiliated with the following price providers to keep a **
     },
     ... // More game formats
   },
-  ... // More card UUIDs
+  ... // More card uuids
 }
 ```
 
 ## Example Model
+
+Here is an example model with a reduced payload:
 
 ```JSON
 {
@@ -91,11 +93,9 @@ MTGJSON currently has affiliated with the following price providers to keep a **
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.02
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -105,22 +105,18 @@ MTGJSON currently has affiliated with the following price providers to keep a **
       "cardkingdom": {
         "buylist": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.6
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.01
           }
         },
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -128,22 +124,18 @@ MTGJSON currently has affiliated with the following price providers to keep a **
       "cardmarket": {
         "buylist": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.6
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.01
           }
         },
         "currency": "EUR",
         "retail": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -152,11 +144,9 @@ MTGJSON currently has affiliated with the following price providers to keep a **
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.02
           }
         }
@@ -164,22 +154,18 @@ MTGJSON currently has affiliated with the following price providers to keep a **
       "tcgplayer": {
         "buylist": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.6
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.01
           }
         },
         "currency": "USD",
         "retail": {
           "foil": {
-            ..., // More entries
             "2020-04-21": 0.12
           },
           "normal": {
-            ..., // More entries
             "2020-04-21": 0.02
           }
         }

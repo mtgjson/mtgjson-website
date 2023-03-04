@@ -27,7 +27,7 @@ The Set Data Model describes the properties of an individual set.
 
 ::: details Show/Hide Model
 
-<<< @/public/static/Set.ts{TypeScript}
+<<< @/public/types/Set.ts{TypeScript}
 
 :::
 
@@ -215,7 +215,7 @@ The Set Data Model describes the properties of an individual set.
 
 > ### tokenSetCode <i class="optional"></i>
 >
-> The tokens set code.
+> The tokens set code, formatted in uppercase.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`

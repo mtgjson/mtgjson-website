@@ -49,13 +49,13 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllIdentifiers
 >
-> File containing all [Card (Set)](/data-models/card-set/) cards organized by card's [uuid](/data-models/card-set/#uuid) property.
+> File containing all [Card (Set)](/data-models/card-set/) cards organized by the [uuid](/data-models/card-set/#uuid) property.
 >
 > <DownloadNativeSelect fileName='AllIdentifiers'/>
 
 > ### AllPrices
 >
-> File containing all prices of cards in various formats organized by card UUID. See the [All Prices](/abstract-models/all-prices/) Abstract Model for the model of returned data.
+> File containing all prices of cards in various formats organized by a card's `uuid` property. See the [All Prices](/abstract-models/all-prices/) Abstract Model for the model of returned data.
 >
 > <DownloadNativeSelect fileName='AllPrices'/>
 
@@ -113,7 +113,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### LegacyAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to card's legal in the Legacy play format.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Legacy play format.
 >
 > <DownloadNativeSelect fileName='LegacyAtomic'/>
 
@@ -131,13 +131,13 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### ModernAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to card's legal in the Modern play format.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Modern play format.
 >
 > <DownloadNativeSelect fileName='ModernAtomic'/>
 
 > ### PauperAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to card's legal in the Pauper play format.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Pauper play format.
 >
 > <DownloadNativeSelect fileName='PauperAtomic'/>
 
@@ -149,7 +149,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### PioneerAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to card's legal in the Pioneer play format.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Pioneer play format.
 >
 > <DownloadNativeSelect fileName='PioneerAtomic'/>
 
@@ -167,13 +167,13 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### StandardAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to card's legal in the Standard play format.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Standard play format.
 >
 > <DownloadNativeSelect fileName='StandardAtomic'/>
 
 > ### TcgplayerSkus
 >
-> File containing [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU information based on card UUIDs.
+> File containing [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU information based on a card's `uuid` property.
 >
 > <DownloadNativeSelect fileName='TcgplayerSkus'/>
 
@@ -185,6 +185,6 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### VintageAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to card's legal in the Vintage play format.
+> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Vintage play format.
 >
 > <DownloadNativeSelect fileName='VintageAtomic'/>

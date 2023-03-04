@@ -7,10 +7,10 @@ head:
       content: Tcgplayer Skus
   - - meta
     - name: description
-      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card UUID.
+      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card's uuid property.
   - - meta
     - property: og:description
-      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card UUID.
+      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card's uuid property.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, tcgplayer skus
@@ -18,7 +18,7 @@ head:
 
 # Tcgplayer Skus
 
-The Tcgplayer Skus Data Model describes the properties of [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on a card UUID.
+The Tcgplayer Skus Data Model describes the properties of [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on a card's `uuid` property.
 
 - **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)
 - **Parent property:** `data`
@@ -45,7 +45,7 @@ const tcgplayerSkus: TcgplayerSkus = data["00010d56-fe38-5e35-8aed-518019aa36a5"
 
 ::: details Show/Hide Model
 
-<<< @/public/static/TcgplayerSkus.ts{TypeScript}
+<<< @/public/types/TcgplayerSkus.ts{TypeScript}
 
 :::
 

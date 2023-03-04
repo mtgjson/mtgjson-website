@@ -47,7 +47,7 @@ The current rate limits are capped at `1,000` requests per IP Address per hour a
 
 ### NPM TypeScript Package
 
-To go along with MTGGraphQL, we have released a [TypeScript package](https://www.npmjs.com/package/mtggraphql/) for your convenience.
+To go along with MTGGraphQL, we have released a [NPM TypeScript Package](https://www.npmjs.com/package/mtggraphql/) for your convenience.
 
 ### Client-based Querying
 

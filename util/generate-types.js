@@ -49,7 +49,7 @@ ${propValues}
 
       if( props ) {
         fs.writeFileSync(
-          `./docs/public/static/${propTypeName}.ts`,
+          `./docs/public/types/${propTypeName}.ts`,
           `${props.trim()}`
         );
       }
@@ -57,6 +57,12 @@ ${propValues}
 
   });
 
+  fs.writeFileSync(
+    `./docs/public/types/AllTypes.ts`,
+    `${propsAll.replace(/};/g, '};\n').trim()}`
+  );
+
+  // Legacy file
   fs.writeFileSync(
     `./docs/public/static/mtgjson-types.ts`,
     `${propsAll.replace(/};/g, '};\n').trim()}`

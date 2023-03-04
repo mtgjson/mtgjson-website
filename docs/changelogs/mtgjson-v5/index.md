@@ -161,7 +161,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 - Fixed `isAlternative` property for cards in the `CMR` and `JMP` sets
 - Fixed `Grist, the Hunger Tide` not being a valid commander
 - Fixed `releaseDate` property not getting set on `"flip"` cards
-- Fixed an issue where duplicate UUID's were being set on Adventures in the Forgotten Realms Art Series (`AAFR`) tokens
+- Fixed an issue where duplicates of the `uuid` property were being set on Adventures in the Forgotten Realms Art Series (`AAFR`) tokens
 - Fixed an issue where flavor names were not set correctly for certain foreign cards
 - Fixed an issue caused by a source having its printed text not providing line breaks
 
@@ -311,7 +311,7 @@ We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](/mtggrap
 
 #### Added
 
-- Added `TcgplayerSkus.*` file which contains TCGplayer SKU information organized by card UUID
+- Added `TcgplayerSkus.*` file which contains TCGplayer SKU information organized by a card's `uuid` property
 - Added `currency` property to `AllPrices` file (Thanks, tpblaster!)
 
 #### Updated
@@ -354,7 +354,7 @@ Release Date: 2020-08-24
 
 #### Added
 
-- Added `AllIdentifiers.*` file for download which contains all cards organized by UUID
+- Added `AllIdentifiers.*` file for download which contains all cards organized by a card's `uuid` property
 
 ## 5.0.0
 
@@ -426,7 +426,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 #### Added
 
 - Added SHA-256 file validation for every file, downloadable at the file location and file name with an appended `.sha256` format
-- Added `AllPrices` file to collect card prices based on Card UUID with a **limited** history of prices available. Contains paper prices from [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson); mtgo prices from [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
+- Added `AllPrices` file to collect card prices based on a card's `uuid` property with a **limited** history of prices available. Contains paper prices from [tcgplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson), [cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson), and [cardkingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson); mtgo prices from [cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card)
 
 ### Misc
 

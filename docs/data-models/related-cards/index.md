@@ -26,7 +26,7 @@ The Related Cards Data Model describes the properties of cards that have relatio
 
 ::: details Show/Hide Model
 
-<<< @/public/static/RelatedCards.ts{TypeScript}
+<<< @/public/types/RelatedCards.ts{TypeScript}
 
 :::
 

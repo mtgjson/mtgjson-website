@@ -26,7 +26,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 
 ::: details Show/Hide Model
 
-<<< @/public/static/Identifiers.ts{TypeScript}
+<<< @/public/types/Identifiers.ts{TypeScript}
 
 :::
 

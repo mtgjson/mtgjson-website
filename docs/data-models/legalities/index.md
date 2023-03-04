@@ -27,7 +27,7 @@ The Legalities Data Model describes the properties of legalities in play formats
 
 ::: details Show/Hide Model
 
-<<< @/public/static/Legalities.ts{TypeScript}
+<<< @/public/types/Legalities.ts{TypeScript}
 
 :::
 

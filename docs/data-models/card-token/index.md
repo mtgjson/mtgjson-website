@@ -27,7 +27,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 
 ::: details Show/Hide Model
 
-<<< @/public/static/CardToken.ts{TypeScript}
+<<< @/public/types/CardToken.ts{TypeScript}
 
 :::
 
@@ -258,7 +258,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 
 > ### otherFaceIds <i class="optional"></i>
 >
-> A list of card UUID's to this card's counterparts, such as transformed or melded faces.
+> A list of card `uuid`'s to this card's counterparts, such as transformed or melded faces.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
@@ -304,7 +304,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 
 > ### setCode
 >
-> The printing set code that the card is from.
+> The printing set code that the card is from, formatted in uppercase.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
