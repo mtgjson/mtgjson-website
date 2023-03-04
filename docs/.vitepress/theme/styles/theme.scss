@@ -12,7 +12,7 @@ body {
 }
 
 a {
-  &:not(.pager-link):link {
+  &:link:not(.pager-link) {
     &:hover {
       text-decoration: underline;
     }

@@ -137,6 +137,10 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
       &.open {
         border-bottom-left-radius: 0;
         border-bottom-right-radius: 0;
+
+        &:hover {
+          border-color: var(--search-border-color);
+        }
       }
 
       &:focus {
@@ -155,8 +159,8 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
 
   &-clear-button {
     position: absolute;
-    top: 0.45rem;
-    right: 1.45rem;
+    top: 0.55rem;
+    right: 1.55rem;
     width: 12px;
     height: 12px;
     cursor: pointer;
@@ -203,7 +207,7 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
         background-color: var(--search-bg-hover-color);
 
         a {
-          text-decoration: none;
+          text-decoration: none !important;
         }
 
         .search-item {
