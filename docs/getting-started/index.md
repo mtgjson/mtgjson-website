@@ -56,7 +56,7 @@ A File Model is defined by two main properties. One being the `meta` property de
 
 For example, the commonly used `AllPrintings.json` file uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the access key.
 
-::: info A Closer Look
+::: tip A Closer Look
 
 Here is a reduced payload of the model as an example:
 
@@ -74,7 +74,7 @@ Data Models are data objects that are generally flat in nature, they are an obje
 
 For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a object of data about card Sets are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own unique property values based on the Set it was defined in.
 
-::: info An Even Closer Look
+::: tip An Even Closer Look
 
 Here is a reduced payload of the model as an example:
 

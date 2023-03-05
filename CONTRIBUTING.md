@@ -45,13 +45,15 @@ Some files and directories are omitted that do not help understand this current 
 └── docs/ # Home directory, outputs to `/dist`
     ├── **/**/index.md # Directories and their route entry point
     ├── public/ # Static assets
+    │   ├── favicons/ # All favicon images
     │   ├── images/ # All application images
     │   │   ├── assets/ # MTGJSON specifics
     │   │   ├── avatars/ # User/supporters avatars
     │   │   └── icons/ # General icons
-    │   ├── static/ # Desired public facing assets
-    │   │   └── mtgjson-types.ts # TypeScript types for MTGJSON Data Models
-    │   └── *.* # Any public facing file, like favicons or robots.txt
+    │   ├── static/ # Legacy path for MTGJSON documentation TypeScript Types
+    │   │   └── mtgjson-types.ts # All TypeScript Types for MTGJSON Data Models
+    │   ├── types/ # Path to all MTGJSON documentation TypeScript Types
+    │   └── *.* # Any public facing file, like robots.txt
     └── .vitepress/ # Main source files for the application
         ├── config.js # Main VitePress configuration
         ├── generatePages.js # Polyfill script to generate pages data for search
@@ -60,7 +62,6 @@ Some files and directories are omitted that do not help understand this current 
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
-            │   ├── Layout.vue # Layout for non-error pages
             │   └── NotFound.vue # Layout for error page
             ├── static/ # Static data to power Vue components
             │   └── *.json # JSON data
@@ -142,7 +143,7 @@ If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`,
 
 #### Table of Contents
 
-Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers and use the `<PropertyToggler/>` component right above `[[toc]]` to enable toggling optional properties on the Table of Contents.
+Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers.
 
 ## Pinia Store
 

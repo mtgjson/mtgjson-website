@@ -22,12 +22,11 @@
   --black-color: #000000;
 
   // Search Component
-  --search-bg-color: var(--vp-c-bg-alt);
-  --search-bg-hover-color: var(--vp-c-bg);
+  --search-bg-color: var(--vp-c-bg);
+  --search-bg-hover-color: var(--vp-c-bg-alt);
   --search-border-color: var(--vp-input-border-color);
   --search-text-color: var(--vp-c-text);
   --search-results-max-height: 400px;
-  --search-width: 200px;
   --search-height: 30px;
 
   // Data Presentation

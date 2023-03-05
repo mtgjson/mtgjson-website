@@ -1,5 +1,8 @@
 import DefaultTheme from 'vitepress/theme';
+
 import NotFound from './layouts/NotFound.vue';
+import Layout from './layouts/Layout.vue';
+
 import DownloadList from './components/DownloadList.vue';
 import DownloadNativeSelect from './components/DownloadNativeSelect.vue';
 import DownloadSorter from './components/DownloadSorter.vue';
@@ -15,6 +18,7 @@ import './styles/theme.scss';
 export default {
   ...DefaultTheme,
   NotFound,
+  Layout,
 
   enhanceApp(ctx: any): void {
     // extend default theme custom behaviour.

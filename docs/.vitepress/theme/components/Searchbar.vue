@@ -27,7 +27,7 @@
         a(
           :key="item.id"
           :href="`${item.isOwnPage ? item.path : item.path + item.hash}`"
-          @click="clearSearch(true)"
+          @click="clearSearch()"
         )
           .search-item
             p.search-item--page {{ item.title }}
@@ -108,7 +108,7 @@ const openSearch = (): void => {
   }
 };
 
-const clearSearch = (shouldCloseSidebar?: boolean): void => {
+const clearSearch = (): void => {
   open.value = false;
   searchTerm.value = '';
 };
@@ -118,9 +118,9 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
 .search {
   &-bar {
     position: relative;
-    margin-right: 1rem;
-    padding-right: 1rem;
-    border-right: 1px solid var(--vp-c-divider);
+    padding-bottom: 2rem;
+    margin-top: 1rem;
+    border-bottom: 1px solid var(--vp-c-divider);
 
     input {
       background-color: var(--search-bg-color);
@@ -129,7 +129,7 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
       border-radius: var(--common-radius);
       font-weight: bold;
       font-size: .75rem;
-      width: var(--search-width);
+      width: 100%;
       height: var(--search-height);
       border: 1px solid var(--search-border-color);
       transition: border-color 0.25s;
@@ -159,8 +159,8 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
 
   &-clear-button {
     position: absolute;
-    top: 0.55rem;
-    right: 1.55rem;
+    top: 0.6rem;
+    right: 0.5rem;
     width: 12px;
     height: 12px;
     cursor: pointer;
@@ -187,8 +187,8 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
   &-suggestions {
     position: absolute;
     z-index: 100;
-    top: calc(100% - 1px);
-    width: var(--search-width);
+    top: calc(100% - 2rem - 1px); // Height of input - padding below - border width
+    width: 100%;
 
     &.open {
       background-color: var(--search-bg-color);
@@ -248,23 +248,12 @@ const clearSearch = (shouldCloseSidebar?: boolean): void => {
   }
 }
 
-@media (max-width: 1279px) {
+@media (max-width: 959px) {
   .search {
     &-bar {
-      margin-right: 0;
-      padding-right: 0;
-      border: 0;
+      margin-bottom: 0.65rem;
+      margin-top: 0;
     }
-
-    &-clear-button {
-      right: 0.45rem;
-    }
-  }
-}
-
-@media (max-width: 569px) {
-  .search {
-    --search-width: 120px;
   }
 }
 </style>
