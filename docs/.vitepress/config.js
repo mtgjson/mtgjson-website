@@ -20,7 +20,7 @@ export default {
   title: 'MTGJSON',
   titleTemplate: ':title · ' + title,
   description,
-  cleanUrls: 'with-subfolders',
+  cleanUrls: true,
   // Head Tags
   head: [
     ['meta', { charset: 'utf-8' }],
@@ -28,7 +28,7 @@ export default {
     // Google SEO
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', src: '/thumbnail-mtgjson.jpg' }],
+    ['meta', { property: 'og:image', src: '/images/assets/thumbnail-mtgjson.jpg' }],
     // Analytics
     ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
     [
