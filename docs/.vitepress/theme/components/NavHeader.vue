@@ -51,7 +51,7 @@ const version = computed<string>((): string => store.Meta.version);
     .version {
       margin-top: 0.25rem;
       font-size: 12px;
-      color: var(--vp-c-text-2);
+      color: var(--version-color);
     }
   }
 }

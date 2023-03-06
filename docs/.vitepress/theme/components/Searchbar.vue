@@ -8,7 +8,7 @@
       autocorrect="off",
       autocapitalize="off",
       spellcheck="false",
-      placeholder="Search docs...",
+      placeholder="Search documentation...",
       type="search",
       @input="openSearch()",
       :class="{ open: results?.length > 0 }"
@@ -128,7 +128,7 @@ const clearSearch = (): void => {
       padding: 0.25rem 1.25rem 0.25rem 0.5rem;
       border-radius: var(--common-radius);
       font-weight: bold;
-      font-size: .75rem;
+      font-size: 14px;
       width: 100%;
       height: var(--search-height);
       border: 1px solid var(--search-border-color);

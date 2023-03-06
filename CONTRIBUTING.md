@@ -44,17 +44,17 @@ Some files and directories are omitted that do not help understand this current 
 │   └── generate-types.js # Utility to generate TypeScript notations for documentation
 └── docs/ # Home directory, outputs to `/dist`
     ├── **/**/index.md # Directories and their route entry point
-    ├── public/ # Static assets
+    ├── public/ # Public facing files
     │   ├── favicons/ # All favicon images
     │   ├── images/ # All application images
-    │   │   ├── assets/ # MTGJSON specifics
+    │   │   ├── assets/ # MTGJSON assets
     │   │   ├── avatars/ # User/supporters avatars
     │   │   └── icons/ # General icons
     │   ├── static/ # Legacy path for MTGJSON documentation TypeScript Types
     │   │   └── mtgjson-types.ts # All TypeScript Types for MTGJSON Data Models
     │   ├── types/ # Path to all MTGJSON documentation TypeScript Types
     │   └── *.* # Any public facing file, like robots.txt
-    └── .vitepress/ # Main source files for the application
+    └── .vitepress/ # Main config and theme files for Vitepress
         ├── config.js # Main VitePress configuration
         ├── generatePages.js # Polyfill script to generate pages data for search
         ├── generateSidebar.js # Polyfill script to generate the sidebar heirarchy
@@ -62,6 +62,7 @@ Some files and directories are omitted that do not help understand this current 
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
+            │   ├── Layout.vue # General layout to utilize slots
             │   └── NotFound.vue # Layout for error page
             ├── static/ # Static data to power Vue components
             │   └── *.json # JSON data

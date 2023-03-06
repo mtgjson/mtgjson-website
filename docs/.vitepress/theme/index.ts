@@ -10,7 +10,7 @@ import ExampleField from './components/ExampleField.vue';
 import Home from './components/Home.vue';
 
 import { onMounted } from 'vue';
-import { createPinia } from "pinia";
+import { createPinia } from 'pinia';
 import { useStore } from './store';
 
 import './styles/theme.scss';
@@ -39,12 +39,12 @@ export default {
 
     onMounted(async (): Promise<void> => {
       if (Object.keys(store.EnumValues).length === 0) {
-        await store.fetchFromApi('EnumValues');
+        await store.fetchJSON('EnumValues');
       }
 
       if (Object.keys(store.Meta).length === 0) {
-        await store.fetchFromApi('Meta');
+        await store.fetchJSON('Meta');
       }
     });
-  }
-}
+  },
+};

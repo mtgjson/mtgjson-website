@@ -120,13 +120,12 @@ const downloadFile = (e: HTMLChangeEvent): void => {
 .download-native-select {
   select {
     margin-top: 1rem;
-    padding: 0.5rem 0.75rem;
+    padding: 0.25rem 0.5rem;
     border-radius: var(--common-radius);
-    background-color: var(--white-color);
-    box-shadow: 0 0 1px 0 var(--gray-4-color);
-    color: var(--dark-color);
-    appearance: auto;
-    border: none;
+    background-color: var(--select-bg-color);
+    border: 1px solid var(--select-border-color);
+    color: var(--select-text-color);
+    appearance: button;
   }
 }
 </style>

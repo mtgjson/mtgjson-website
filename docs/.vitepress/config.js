@@ -1,24 +1,28 @@
 import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
+// Sidebar link generation
 const [
   abstractModels,
   dataModels
 ] = generateSidebar(['/abstract-models/', '/data-models/']);
 
+// Page metadata generation
 export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
+
+// SEO
 export const title = 'MTGJSON.com · Portable formats for all Magic: The Gathering data';
 export const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.';
 
+// Vitepress configuration
 export default {
   lang: 'en-US',
   // SEO
-  title: 'MTGJSON',
-  titleTemplate: ':title · ' + title,
+  titleTemplate: `:title · ${title}`,
   description,
   cleanUrls: true,
   // Head Tags
@@ -63,7 +67,6 @@ export default {
   },
   // VitePress themeing
   themeConfig: {
-    logo: '/images/assets/logo-mtgjson.svg',
     pages,
     outline: 3,
     smoothScroll: true,
@@ -82,7 +85,7 @@ export default {
       },
       {
         icon: {
-          svg: '<svg alt="Patreon logo" fill="#f96753" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" class="st0"/></svg>'
+          svg: '<svg alt="Patreon icon" fill="#f96753" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" class="st0"/></svg>'
         },
         link: 'https://www.patreon.com/MTGJSON',
       },

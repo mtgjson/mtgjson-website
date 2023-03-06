@@ -1,13 +1,8 @@
 :root {
-  // Fonts
-  --font-base: 'Helvetica Neue', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Fira Sans', 'Droid Sans', sans-serif;
-  --font-monospace: source-code-pro, Menlo, Monaco, Consolas, 'Courier New', monospace;
-
   // True colors, not to be changed
   --accent-color: #1e90ff;
   --yellow-color: #fcd253;
   --red-color: salmon;
-  --orange-color: #ef6c2f;
   --white-color: #ffffff;
   --gray-color: #f9f9f9;
   --gray-1-color: #eeeeee;
@@ -18,7 +13,7 @@
   --dark-color: #263646;
   --dark-1-color: #0f1a23;
   --dark-2-color: #0e141f;
-  --dark-2-alpha-color: rgba(11, 34, 57, 0.5);
+  --dark-2-alpha-color: rgba(12, 16, 20, 0.5);
   --black-color: #000000;
 
   // Search Component
@@ -27,17 +22,25 @@
   --search-border-color: var(--vp-input-border-color);
   --search-text-color: var(--vp-c-text);
   --search-results-max-height: 400px;
-  --search-height: 30px;
+  --search-height: 36px;
+
+  // Select Component
+  --select-bg-color: var(--white-color);
+  --select-border-color: var(--vp-c-divider);
+  --select-text-color: var(--dark-color);
 
   // Data Presentation
   --code-bg-color: var(--gray-4-color);
   --code-text-color: var(--yellow-color);
 
-  // Misc
+  // Supporters
   --supporter-bg-color: var(--white-color);
-  --supporter-mythic-color: var(--orange-color);
+  --supporter-mythic-color: var(--red-color);
   --supporter-rare-color: var(--yellow-color);
   --supporter-uncommon-color: var(--gray-3-color);
+
+  // Version
+  --version-color: var(--gray-4-color);
 
   // Misc
   --common-radius: 11px;
@@ -50,15 +53,23 @@
   --vp-c-brand-darker: var(--accent-color);
   --vp-c-text-code: var(--yellow-color);
   --vp-c-mute: var(--code-bg-color);
+  --vp-input-switch-bg-color: var(--vp-c-bg-alt);
   --vp-code-font-size: 12px;
 }
 
 html.dark {
+  // Vitepress overrides
   --vp-c-bg-elv: var(--dark-2-color);
   --vp-c-bg-alt: var(--dark-2-color);
   --vp-c-bg: var(--dark-1-color);
   --vp-c-bg-soft: var(--dark-2-color);
   --vp-custom-block-info-bg: var(--dark-2-color);
   --vp-backdrop-bg-color: var(--dark-2-alpha-color);
-  --vp-custom-block-warning-text: var(--yellow-color);
+
+  // Select Component
+  --select-bg-color: var(--dark-color);
+  --select-text-color: var(--white-color);
+
+  // Version
+  --version-color: var(--gray-3-color);
 }

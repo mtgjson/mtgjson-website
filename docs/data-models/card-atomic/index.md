@@ -23,7 +23,7 @@ The Card (Atomic) Data Model describes the properties of a single atomic card, a
 - **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)
 - **Parent property:** `data`
 
-::: tip Accessing the data
+::: info Accessing the data
 
 When using any `*Atomic.json` file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is card name property. Here is a reduced payload of the model as an example:
 
@@ -233,7 +233,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 > ### manaCost <i class="optional"></i>
 >
-> The mana cost of the card wrapped in curly brackets for each value.
+> The mana cost of the card wrapped in curly brackets for each mana symbol value.
 >
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`

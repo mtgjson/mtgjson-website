@@ -130,7 +130,7 @@ const toggleShowMore = (canShow: boolean): void => {
 
 onMounted(async (): Promise<void> => {
   if (defaultList.value.length === 0) {
-    await store.fetchFromApi(props.file);
+    await store.fetchJSON(props.file);
   }
 
   resultsTotalLength.value = defaultList.value.length;
@@ -232,7 +232,7 @@ onMounted(async (): Promise<void> => {
             padding-top: 0 !important;
             padding-bottom: 0 !important;
 
-            font-family: var(--font-base);
+            font-family: var(--vp-font-family-base);
           }
         }
 

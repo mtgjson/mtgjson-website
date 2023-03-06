@@ -5,7 +5,6 @@
 @import 'code';
 
 body {
-  font-family: var(--font-base);
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   font-size: 16px;
@@ -60,24 +59,27 @@ a {
 .VPSidebar {
   .VPSidebarItem {
     .VPLink {
-      h2 {
-        font-size: 1rem;
-      }
-
-      &:hover {
-        &,
-        & .text {
+      &,
+      & > .text {
+        &:hover {
           color: var(--vp-c-text-1) !important;
         }
+      }
+
+      h2 {
+        font-size: 1rem;
       }
     }
 
     &.is-active {
-      .VPLink {
-        &:hover {
-          &,
-          & .text {
-            color: var(--vp-c-brand) !important;
+      & > .item {
+        .VPLink {
+          &:hover {
+            &,
+            & .text {
+              color: var(--vp-c-brand) !important;
+              text-decoration: none;
+            }
           }
         }
       }
@@ -101,15 +103,12 @@ a {
     .outline-link {
       cursor: pointer;
 
-      &:hover {
-        color: var(--vp-c-text-1);
-      }
-
       &.active {
         color: var(--vp-c-brand);
 
         &:hover {
           color: var(--vp-c-brand);
+          text-decoration: none;
         }
       }
     }
@@ -163,7 +162,6 @@ a {
   blockquote {
     border-radius: var(--common-radius);
     border: 1px solid var(--vp-c-divider);
-    color: var(--vp-custom-block-info-text);
     background-color: var(--vp-custom-block-info-bg);
     margin-bottom: 1.5rem;
     padding: 1rem;
@@ -171,7 +169,6 @@ a {
     h3 {
       margin-top: 0;
       font-size: 1rem;
-      color: var(--vp-c-text-1);
       position: initial;
 
       .header-anchor {
@@ -184,7 +181,7 @@ a {
 
         @extend %code-block;
 
-        font-family: var(--font-base) !important;
+        font-family: var(--vp-font-family-base) !important;
         font-style: normal;
         padding: 0.25rem 0.5rem !important;
         margin-left: 0.5rem;
@@ -214,6 +211,7 @@ a {
     ul {
       li {
         font-size: 14px;
+        color: var(--vp-c-text-2);
       }
     }
 
@@ -264,7 +262,8 @@ a {
 html.dark {
   .VPSwitch {
     .icon {
-      background-color: var(--dark-1-color);
+      background-color: var(--dark-color);
+      border-color: var(--vp-c-divider);
     }
   }
 }

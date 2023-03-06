@@ -2,11 +2,12 @@ vp-doc [class*="language-"] code, .codeblock, code, pre, .md-code {
   @extend %code-block;
 
   a {
-    color: var(--accent-color);
+    color: var(--vp-c-brand);
   }
 }
 
 .lang {
+  color: var(--gray-3-color) !important;
   top: 0 !important;
   right: 0.65rem !important;
 }

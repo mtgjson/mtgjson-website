@@ -14,7 +14,7 @@ export const useStore = defineStore({
       EnumValues: {},
     } as TStoreRootState),
   actions: {
-    async fetchFromApi(fileName: string): Promise<void> {
+    async fetchJSON(fileName: string): Promise<void> {
       try {
         const promised: AxiosResponse<any> = await axios.get(`${api}${fileName}.json`);
         const { data } = await promised.data;

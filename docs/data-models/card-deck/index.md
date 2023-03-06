@@ -425,7 +425,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### manaCost <i class="optional"></i>
 >
-> The mana cost of the card wrapped in curly brackets for each value.
+> The mana cost of the card wrapped in curly brackets for each mana symbol value.
 >
 > - **Type:** `string`
 > - **Example:** `"{1}{B}"`

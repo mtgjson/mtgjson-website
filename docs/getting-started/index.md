@@ -44,7 +44,7 @@ Models are a general term used to categorize data objects when using this docume
 
 **Note:** This documentation leverages TypeScript concepts to define model properties and values.
 
-::: tip Quick Tip
+::: info Quick Tip
 
 **File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Abstract Models** have many non-unique property names and values for specific **File Models** and are documented separately from **Data Models**.
 
@@ -56,7 +56,7 @@ A File Model is defined by two main properties. One being the `meta` property de
 
 For example, the commonly used `AllPrintings.json` file uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the access key.
 
-::: tip A Closer Look
+::: info A Closer Look
 
 Here is a reduced payload of the model as an example:
 
@@ -74,7 +74,7 @@ Data Models are data objects that are generally flat in nature, they are an obje
 
 For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a object of data about card Sets are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own unique property values based on the Set it was defined in.
 
-::: tip An Even Closer Look
+::: info An Even Closer Look
 
 Here is a reduced payload of the model as an example:
 
