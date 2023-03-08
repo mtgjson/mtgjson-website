@@ -19,6 +19,6 @@ head:
 
 A list of all individual sets that can be sorted, filtered and searched.
 
-## Downloads
+## Set Downloads
 
 <DownloadList file="SetList" />

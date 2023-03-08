@@ -127,7 +127,7 @@ const clearSearch = (): void => {
       color: var(--search-text-color);
       padding: 0.25rem 1.25rem 0.25rem 0.5rem;
       border-radius: var(--common-radius);
-      font-weight: bold;
+      font-weight: 600;
       font-size: 14px;
       width: 100%;
       height: var(--search-height);
@@ -233,7 +233,7 @@ const clearSearch = (): void => {
           line-height: 1rem;
           color: var(--accent-color);
           font-size: 14px;
-          font-weight: bold;
+          font-weight: 600;
         }
 
         &--text {

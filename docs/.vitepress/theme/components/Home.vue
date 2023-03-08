@@ -315,12 +315,12 @@ onMounted(async (): Promise<void> => {
 
   h1 {
     font-size: 2rem;
-    font-weight: bold;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 
     & + .version {
       color: var(--gray-3-color) !important;
-      font-weight: bold;
+      font-weight: 600;
       font-size: 1rem;
       margin-bottom: 2rem;
       display: block;
@@ -334,12 +334,12 @@ onMounted(async (): Promise<void> => {
 
   h2 {
     font-size: 1.75rem;
-    font-weight: bold;
+    font-weight: 600;
     line-height: 2.5rem;
   }
 
   h3 {
-    font-weight: bold;
+    font-weight: 600;
   }
 
   h2,
@@ -469,7 +469,7 @@ onMounted(async (): Promise<void> => {
         h3 {
           margin-bottom: 0.5rem;
           text-align: left;
-          font-weight: bold;
+          font-weight: 600;
         }
 
         span {
@@ -645,7 +645,7 @@ onMounted(async (): Promise<void> => {
 
             p {
               font-size: 3rem;
-              font-weight: bold;
+              font-weight: 600;
               color: var(--dark-color);
               margin-top: 0;
               padding-top: 0;
@@ -674,7 +674,7 @@ onMounted(async (): Promise<void> => {
 
         .name {
           flex: 0 0 100%;
-          font-weight: bold;
+          font-weight: 600;
         }
 
         .unlinked-name {
@@ -686,7 +686,7 @@ onMounted(async (): Promise<void> => {
           flex: 0 0 100%;
           margin: 0.5rem auto 0.25rem;
           line-height: 1.2em;
-          font-weight: bold;
+          font-weight: 600;
           text-transform: capitalize;
 
           &,
@@ -741,7 +741,7 @@ onMounted(async (): Promise<void> => {
               width: 60px;
               padding: 0 0.75rem;
               font-size: 2rem;
-              font-weight: bold;
+              font-weight: 600;
               color: var(--dark-color);
             }
           }
@@ -749,7 +749,7 @@ onMounted(async (): Promise<void> => {
 
         .name {
           flex: 1;
-          font-weight: bold;
+          font-weight: 600;
           text-align: left;
         }
       }
@@ -798,7 +798,7 @@ onMounted(async (): Promise<void> => {
         display: block;
         margin-top: 0.5rem;
         margin-bottom: 1rem;
-        font-weight: bold;
+        font-weight: 600;
         font-weight: 1rem;
         font-size: 1.15rem;
       }
@@ -813,7 +813,7 @@ onMounted(async (): Promise<void> => {
         margin-top: 2rem;
 
         li {
-          font-weight: bold;
+          font-weight: 600;
           margin-top: 0;
           flex: 1;
         }

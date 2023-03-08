@@ -45,7 +45,7 @@ const version = computed<string>((): string => store.Meta.version);
     }
 
     .title {
-      font-weight: bold;
+      font-weight: 600;
     }
 
     .version {

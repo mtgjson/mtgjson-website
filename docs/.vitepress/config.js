@@ -24,6 +24,7 @@ export default {
   // SEO
   titleTemplate: `:title · ${title}`,
   description,
+  lastUpdate: true,
   cleanUrls: true,
   // Head Tags
   head: [
@@ -70,6 +71,8 @@ export default {
     pages,
     outline: 3,
     smoothScroll: true,
+    outlineBadges: false,
+    outlineTitle: 'On This Page',
     editLink: {
       pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/:path',
       text: 'Help us improve this page!',

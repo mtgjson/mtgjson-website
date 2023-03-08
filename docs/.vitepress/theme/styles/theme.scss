@@ -4,12 +4,7 @@
 @import 'placeholders';
 @import 'code';
 
-body {
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-}
-
+// Anchor links
 a {
   &:link:not(.pager-link) {
     &:hover {
@@ -32,7 +27,7 @@ a {
   background-color: transparent;
   color: var(--accent-color);
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
   transition: all 0.25s;
 
@@ -170,42 +165,21 @@ a {
       margin-top: 0;
       font-size: 1rem;
       position: initial;
+      display: flex;
+      line-height: 0.85rem;
+
+      .VPBadge {
+        margin-left: 0.5rem;
+      }
 
       .header-anchor {
         margin-left: -0.75rem;
-      }
-
-      i {
-        background-color: var(--white-color);
-        color: var(--dark-color);
-
-        @extend %code-block;
-
-        font-family: var(--vp-font-family-base) !important;
-        font-style: normal;
-        padding: 0.25rem 0.5rem !important;
-        margin-left: 0.5rem;
-
-        &.optional {
-          background-color: var(--yellow-color);
-
-          &::before {
-            content: 'Optional';
-          }
-        }
-
-        &.deprecated {
-          background-color: var(--red-color);
-
-          &::before {
-            content: 'Deprecated';
-          }
-        }
       }
     }
 
     p {
       font-size: 14px;
+      margin-top: 0.5rem;
     }
 
     ul {

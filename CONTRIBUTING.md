@@ -128,7 +128,7 @@ head:
 An example of a property field for a data object field in Markdown:
 
 ```
-> ### artist <i class="optional"></i>
+> ### artist <Badge type="warning" text="optional" />
 >
 > The name of the artist that illustrated the card art.  
 >
@@ -136,7 +136,7 @@ An example of a property field for a data object field in Markdown:
 > **Introduced:** `v4.0.0`
 ```
 
-The `<i class="optional"></i>` markup will render a UI change in the property that denotes the property is optional and also power a component that will allow toggling the UI to view or not view these fields.
+The `<Badge type="warning" text="optional" />` markup will render a UI change in the property that denotes the property is optional. The same applies for `<Badge type="danger" text="deprecated" />` that can be used to denote a property is deprecated. Be sure to order them with deprecated first, and then optional.
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 

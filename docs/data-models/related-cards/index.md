@@ -36,14 +36,14 @@ The Related Cards Data Model describes the properties of cards that have relatio
 
 ## Model Properties
 
-> ### reverseRelated <i class="optional"></i>
+> ### reverseRelated <Badge type="warning" text="optional" />
 >
 > A list of card names associated to a card, such as "meld" cards and token creation.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
 
-> ### spellbook <i class="optional"></i>
+> ### spellbook <Badge type="warning" text="optional" />
 >
 > A list of card names associated to a card's [Spellbook](https://mtg.fandom.com/wiki/Spellbook) mechanic.
 >

@@ -19,6 +19,6 @@ head:
 
 A list of all individual decks that can be sorted, filtered and searched.
 
-## Downloads
+## Deck Downloads
 
 <DownloadList file="DeckList" type="AllDecks" disableChecks="true"/>

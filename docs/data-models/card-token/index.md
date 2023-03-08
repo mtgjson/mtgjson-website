@@ -37,14 +37,14 @@ The Card (Token) Data Model describes the properties of a single token card.
 
 ## Model Properties
 
-> ### artist <i class="optional"></i>
+> ### artist <Badge type="warning" text="optional" />
 >
 > The name of the artist that illustrated the card art.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### asciiName <i class="optional"></i>
+> ### asciiName <Badge type="warning" text="optional" />
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
@@ -59,7 +59,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
-> ### boosterTypes <i class="optional"></i>
+> ### boosterTypes <Badge type="warning" text="optional" />
 >
 > A list of types this card is in a booster pack.
 >
@@ -75,7 +75,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='borderColor'/>
 > - **Introduced:** `v4.0.0`
 
-> ### cardParts <i class="optional"></i>
+> ### cardParts <Badge type="warning" text="optional" />
 >
 > A list of card names associated to this card, such as `"Meld"` card face names.
 >
@@ -90,7 +90,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### colorIndicator <i class="optional"></i>
+> ### colorIndicator <Badge type="warning" text="optional" />
 >
 > A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
 >
@@ -106,14 +106,14 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### faceName <i class="optional"></i>
+> ### faceName <Badge type="warning" text="optional" />
 >
 > The name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
-> ### faceFlavorName <i class="optional"></i>
+> ### faceFlavorName <Badge type="warning" text="optional" />
 >
 > The flavor name on the face of the card.
 >
@@ -128,14 +128,14 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 
-> ### flavorText <i class="optional"></i>
+> ### flavorText <Badge type="warning" text="optional" />
 >
 > The italicized text found below the rules text that has no game function.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### frameEffects <i class="optional"></i>
+> ### frameEffects <Badge type="warning" text="optional" />
 >
 > The visual frame effects.
 >
@@ -151,7 +151,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
 
-> ### hasFoil <i class="deprecated"></i>
+> ### hasFoil <Badge type="danger" text="deprecated" />
 >
 > If the card can be found in foil.
 >
@@ -160,7 +160,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### hasNonFoil <i class="deprecated"></i>
+> ### hasNonFoil <Badge type="danger" text="deprecated" />
 >
 > If the card can be found in non-foil.
 >
@@ -176,42 +176,42 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
 
-> ### isFullArt <i class="optional"></i>
+> ### isFullArt <Badge type="warning" text="optional" />
 >
 > If the card has full artwork.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
-> ### isFunny <i class="optional"></i>
+> ### isFunny <Badge type="warning" text="optional" />
 >
 > If the card is part of a funny set, such as an Un-set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
 
-> ### isOnlineOnly <i class="optional"></i>
+> ### isOnlineOnly <Badge type="warning" text="optional" />
 >
 > If the card is only available in online game play variations.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
 
-> ### isPromo <i class="optional"></i>
+> ### isPromo <Badge type="warning" text="optional" />
 >
 > If the card is a promotional printing.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
-> ### isReprint <i class="optional"></i>
+> ### isReprint <Badge type="warning" text="optional" />
 >
 > If the card has been reprinted.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
-> ### keywords <i class="optional"></i>
+> ### keywords <Badge type="warning" text="optional" />
 >
 > A list of keywords found on the card.
 >
@@ -234,7 +234,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
-> ### loyalty <i class="optional"></i>
+> ### loyalty <Badge type="warning" text="optional" />
 >
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
@@ -256,21 +256,21 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### otherFaceIds <i class="optional"></i>
+> ### otherFaceIds <Badge type="warning" text="optional" />
 >
 > A list of card `uuid`'s to this card's counterparts, such as transformed or melded faces.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
 
-> ### power <i class="optional"></i>
+> ### power <Badge type="warning" text="optional" />
 >
 > The power of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### promoTypes <i class="optional"></i>
+> ### promoTypes <Badge type="warning" text="optional" />
 >
 > A list of promotional types for a card.
 >
@@ -285,7 +285,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
-> ### reverseRelated <i class="deprecated"></i><i class="optional"></i>
+> ### reverseRelated <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
 >
 > The names of the cards that produce this card.
 >
@@ -294,7 +294,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
 
-> ### securityStamp <i class="optional"></i>
+> ### securityStamp <Badge type="warning" text="optional" />
 >
 > The security stamp printed on the card.
 >
@@ -309,7 +309,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
 
-> ### side <i class="optional"></i>
+> ### side <Badge type="warning" text="optional" />
 >
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
@@ -317,14 +317,14 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
 
-> ### signature <i class="optional"></i>
+> ### signature <Badge type="warning" text="optional" />
 >
 > The name of the signature on the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### subsets <i class="optional"></i>
+> ### subsets <Badge type="warning" text="optional" />
 >
 > The names of the subset printings a card is in. Used primarily on "Secret Lair Drop" cards.
 >
@@ -347,14 +347,14 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### text <i class="optional"></i>
+> ### text <Badge type="warning" text="optional" />
 >
 > The rules text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### toughness <i class="optional"></i>
+> ### toughness <Badge type="warning" text="optional" />
 >
 > The toughness of the card.
 >
@@ -383,7 +383,7 @@ The Card (Token) Data Model describes the properties of a single token card.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### watermark <i class="optional"></i>
+> ### watermark <Badge type="warning" text="optional" />
 >
 > The name of the watermark on the card.
 >

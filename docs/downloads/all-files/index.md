@@ -21,11 +21,11 @@ A list of all files output by the MTGJSON application.
 
 You can see a dump of all files, including individual sets and decks by going to the [file server](https://mtgjson.com/api/v5/) directly.
 
-## On this page
+## On This Page
 
 [[toc]]
 
-## Downloads
+## File Downloads
 
 > ### AllPrintings
 >

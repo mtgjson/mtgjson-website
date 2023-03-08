@@ -126,6 +126,7 @@ const downloadFile = (e: HTMLChangeEvent): void => {
     border: 1px solid var(--select-border-color);
     color: var(--select-text-color);
     appearance: button;
+    cursor: pointer;
   }
 }
 </style>

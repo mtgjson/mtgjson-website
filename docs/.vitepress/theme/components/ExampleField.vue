@@ -11,7 +11,7 @@
     ) Show&nbsp;More
   code(v-else) {{ '"' + enums.sort().join('", "') + '"' }}
     .show-btn(
-      v-if="enums.length > minimumToShow"
+      v-if="enums.length > minimumToShow",
       @click="toggleShowAll"
     ) Show&nbsp;Less
 </template>

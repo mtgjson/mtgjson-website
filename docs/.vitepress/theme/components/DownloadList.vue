@@ -28,12 +28,21 @@
               )
             h3 {{ item.name }}
             ol.tags
-              li(v-if="item.isPartialPreview")
-                .tag.preview(title="Only partial data is available") Preview
-              li(v-if="item.isOnlineOnly")
-                .tag.online-only Online Only
-              li(v-if="item.isPaperOnly")
-                .tag.paper-only Paper Only
+              Badge(
+                v-if="item.isPartialPreview",
+                type="warning",
+                text="Preview"
+              )
+              Badge(
+                v-if="item.isOnlineOnly",
+                type="warning",
+                text="Online Only"
+              )
+              Badge(
+                v-if="item.isPaperOnly",
+                type="warning",
+                text="Paper Only"
+              )
             ol.details
               li
                 small Type:
@@ -43,7 +52,7 @@
                 small &nbsp;{{ item.code }}
               li
                 small Release Date:
-                small &nbsp;{{ formatDateToPretty(item.releaseDate) }}
+                small &nbsp;{{ item.releaseDate }}
           .text-wrap--downloads
             DownloadNativeSelect(
               :fileName="item.fileName ? item.fileName : item.code",
@@ -154,8 +163,9 @@ onMounted(async (): Promise<void> => {
   }
 
   .results-message {
-    line-height: 1.2rem;
-    font-weight: bold;
+    line-height: 1rem;
+    font-size: 14px;
+    font-weight: 600;
     display: inline-block;
 
     &.error {
@@ -194,12 +204,16 @@ onMounted(async (): Promise<void> => {
       flex: 1;
       padding-bottom: 0.75rem;
 
+      &--details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+      }
+
       h3 {
         margin-top: 0;
-        line-height: 1.5rem;
-        margin-bottom: 0.5rem;
-        margin-right: 1rem;
-        float: left;
+        line-height: 1.25rem;
+        flex: none;
       }
 
       p {
@@ -217,40 +231,26 @@ onMounted(async (): Promise<void> => {
 
           li {
             small {
+              color: var(--vp-c-text-2);
+
               &:first-of-type {
                 color: var(--vp-c-text-1);
               }
             }
           }
+        }
 
-          .tag {
-            background-color: var(--yellow-color);
-            color: var(--dark-color);
+        &.tags {
+          margin-top: 0;
+          flex: none;
 
-            @extend %code-block;
-
-            padding-top: 0 !important;
-            padding-bottom: 0 !important;
-
-            font-family: var(--vp-font-family-base);
+          & > * {
+            margin-left: 0.5rem;
           }
         }
 
         &.details {
-          clear: left;
-        }
-
-        &.tags {
-          float: left;
-          margin-top: 0;
-
-          li {
-            margin-left: 0.5rem;
-
-            &:first-of-type {
-              margin-left: 0;
-            }
-          }
+          flex: 0 0 100%;
         }
 
         li {
@@ -272,7 +272,7 @@ onMounted(async (): Promise<void> => {
         text-transform: capitalize;
 
         &:first-of-type {
-          font-weight: bold;
+          font-weight: 600;
         }
       }
 
