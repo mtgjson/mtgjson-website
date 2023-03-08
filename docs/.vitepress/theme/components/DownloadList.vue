@@ -298,7 +298,28 @@ onMounted(async (): Promise<void> => {
   }
 }
 
-@media (max-width: 571px) {
+@media (max-width: 799px) {
+  .download-list {
+    .download-wrap {
+      .text-wrap {
+        ol {
+          &.tags {
+            flex: 0 0 100%;
+
+            & > * {
+              margin-top: 0.75rem;
+              margin-left: 0;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 569px) {
   .download-list {
     .download-wrap {
       & > * {

@@ -37,7 +37,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllPrintingsCSVFiles
 >
-> File containing a directory of split-out CSV files from the `AllPrintings` file, compressed.
+> File containing a directory of split-out CSV files from the `AllPrintings.json` file, compressed.
 >
 > <DownloadNativeSelect fileName='AllPrintingsCSVFiles'/>
 
