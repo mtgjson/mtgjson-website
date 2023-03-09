@@ -3,12 +3,11 @@ main.home
   section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
-        img(src="/images/assets/logo-mtgjson.svg" width="200")
+        img(src="/images/assets/logo-mtgjson.svg" width="200" height="200")
       h1 MTGJSON
       span.version(v-if="version")
         a(href="/changelogs/mtgjson-v5/") v{{ version }}
-      span.version(v-else)
-        a(href="/changelogs/mtgjson-v5/") &nbsp;
+      span.version(v-else) &nbsp;
       h2 Portable formats for all Magic: The Gathering data
       p MTGJSON is an open-source project that catalogs all <a href="https://magic.wizards.com/en" target="_blank" rel="noreferrer noopener">Magic: The Gathering</a> data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.
       a(href="/getting-started/")
@@ -71,8 +70,8 @@ main.home
             h3 PayPal
           p Donate to MTGJSON and help keep this project free to all.
 
-  section.dark.home-team
-    .content-wrapper(v-if="team")
+  section.dark.home-team(v-if="team")
+    .content-wrapper
       h2 Team Leads
       ul.home-team-leads
         li(
@@ -102,8 +101,8 @@ main.home
               span {{ member.title }}
               p {{ member.description }}
 
-  section.dark.home-contributors
-    .content-wrapper(v-if="contributors")
+  section.dark.home-contributors(v-if="contributors")
+    .content-wrapper
       h2 Code Contributors
       ul
         li(
@@ -123,7 +122,7 @@ main.home
               height="100"
             )
 
-  section.dark.home-patrons
+  section.dark.home-patrons(v-if="patrons")
     .content-wrapper
       h2 Patreon Supporters
       ul
@@ -159,7 +158,7 @@ main.home
             v-html="formatTime(patron.since)"
           )
 
-  section.dark.home-applications
+  section.dark.home-applications(v-if="applications")
     .content-wrapper
       h2 MTGJSON Powered Applications
       ul
@@ -190,7 +189,7 @@ main.home
     .content-wrapper
       footer
         .home-footer-logo
-          img(src="/images/assets/logo-mtgjson.svg" width="200")
+          img(src="/images/assets/logo-mtgjson.svg" width="200" height="200")
           span MTGJSON
 
         ul
@@ -320,14 +319,17 @@ onMounted(async (): Promise<void> => {
 
     & + .version {
       color: var(--gray-3-color) !important;
-      font-weight: 600;
-      font-size: 1rem;
+      font-size: 14px;
       margin-bottom: 2rem;
       display: block;
 
       a {
         color: inherit;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
@@ -816,6 +818,10 @@ onMounted(async (): Promise<void> => {
           font-weight: 600;
           margin-top: 0;
           flex: 1;
+
+          a {
+            color: var(--dark-color);
+          }
         }
       }
     }

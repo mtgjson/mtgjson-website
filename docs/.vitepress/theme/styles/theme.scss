@@ -93,6 +93,15 @@ a {
     margin-top: 1rem;
   }
 
+  // Fix edit link colors
+  .edit-link-button {
+    color: var(--vp-c-text-2);
+
+    &:hover {
+      color: var(--vp-c-text-1);
+    }
+  }
+
   // Aside/Outline
   .aside {
     .outline-link {

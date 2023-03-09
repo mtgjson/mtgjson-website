@@ -34,19 +34,6 @@ export default {
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
     ['meta', { property: 'og:image', src: '/images/assets/thumbnail-mtgjson.jpg' }],
-    // Analytics
-    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
-    [
-      'script',
-      {},
-      `
-      window.dataLayer = window.dataLayer || [];
-      function gtag(){dataLayer.push(arguments);}
-      gtag('js', new Date());
-      gtag('config', 'G-ZPPM5J5ET2');
-    `,
-    ],
-    ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }],
     ['link', { rel: 'icon', href: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
@@ -57,13 +44,26 @@ export default {
     ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon.png' }],
     ['link', { rel: 'msapplication-TileImage', href: '/favicons/mstile-150x150.png' }],
     // iOS Safari Theme
-    ['meta', { name: 'theme-color', content: '#0f263c' }]
+    ['meta', { name: 'theme-color', content: '#0f263c' }],
+    // Analytics
+    ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
+    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
+    [
+      'script',
+      {},
+      `
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-ZPPM5J5ET2');
+      `,
+    ],
   ],
   markdown: {
-    // Only capture h3 headings
     toc: {
       level: [ 3 ],
-      shouldAllowNested: true
+      shouldAllowNested: true,
+      format: (str) => str.split('<')[0]
     }
   },
   // VitePress themeing
