@@ -7,10 +7,10 @@ head:
       content: Card (Set)
   - - meta
     - name: description
-      content: The Card (Set) Data Model describes the properties of a single card in a Set Data Modal
+      content: The Card (Set) Data Model describes the properties of a single card found in a Set.
   - - meta
     - property: og:description
-      content: The Card (Set) Data Model describes the properties of a single card in a Set Data Modal.
+      content: The Card (Set) Data Model describes the properties of a single card found in a Set.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card set
@@ -18,7 +18,7 @@ head:
 
 # Card (Set)
 
-The Card (Set) Data Model describes the properties of a single card in a [Set](/data-models/set/) Data Model.
+The Card (Set) Data Model describes the properties of a single card found in a [Set](/data-models/set/).
 
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `cards`
@@ -53,7 +53,7 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 
 > ### attractionLights <Badge type="warning" text="optional" />
 >
-> A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
+> A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
@@ -615,7 +615,7 @@ The Card (Set) Data Model describes the properties of a single card in a [Set](/
 
 > ### variations <Badge type="warning" text="optional" />
 >
-> A list of card `uuid`'s of this card with alternate printings in the same set. Excludes Un&#8209;sets.
+> A list of card `uuid`'s of this card with alternate printings in the same set, excluding Un&#8209;sets.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.1.2`

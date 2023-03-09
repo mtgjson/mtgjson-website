@@ -6,10 +6,10 @@ head:
       content: Related Cards
   - - meta
     - name: description
-      content: The Related Cards Data Model describes the properties of cards that have relations to other cards.
+      content: The Related Cards Data Model describes the properties of a card that has relations to other cards.
   - - meta
     - property: og:description
-      content: The Related Cards Data Model describes the properties of cards that have relations to other cards.
+      content: The Related Cards Data Model describes the properties of a card that has relations to other cards.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, version, related cards
@@ -17,7 +17,7 @@ head:
 
 # Related Cards
 
-The Related Cards Data Model describes the properties of cards that have relations to other cards.
+The Related Cards Data Model describes the properties of a card that has relations to other cards.
 
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
 - **Parent property:** `relatedCards`

@@ -85,7 +85,6 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > The category subtype of this product.
 >
 > - **Type:** `string`
-> - <ExampleField type='subtype'/>
 > - **Introduced:** `v5.2.1`
 
 > ### uuid

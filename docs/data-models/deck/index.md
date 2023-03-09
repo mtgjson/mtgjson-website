@@ -7,10 +7,10 @@ head:
       content: Deck
   - - meta
     - name: description
-      content: The Deck Data Model describes the properties of an individual deck.
+      content: The Deck Data Model describes the properties of an individual Deck.
   - - meta
     - property: og:description
-      content: The Deck Data Model describes the properties of an individual deck.
+      content: The Deck Data Model describes the properties of an individual Deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, deck
@@ -18,7 +18,7 @@ head:
 
 # Deck
 
-The Deck Data Model describes the properties of an individual deck.
+The Deck Data Model describes the properties of an individual Deck.
 
 - **Parent file:** [All Decks](/downloads/all-decks/)
 - **Parent property:** `data`

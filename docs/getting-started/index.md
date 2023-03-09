@@ -98,4 +98,4 @@ For example, `AllPrices.json` uses the [All Prices](/abstract-models/all-prices/
 
 ### MTGGraphQL
 
-A sub-service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API service built on top of MTGJSON data.
+A service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API service built on top of MTGJSON data.

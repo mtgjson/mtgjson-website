@@ -6,18 +6,18 @@ head:
       content: All Files
   - - meta
     - name: description
-      content: A list of all files output by the MTGJSON application.
+      content: A list of all downloadable files, excluding individual sets and decks, output by the MTGJSON.
   - - meta
     - property: og:description
-      content: A list of all files output by the MTGJSON application.
+      content: A list of all downloadable files, excluding individual sets and decks, output by the MTGJSON.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, all files, downloads
+      content: mtg, magic the gathering, mtgjson, json, all files, download files
 ---
 
 # All Files
 
-A list of all files output by the MTGJSON application.
+A list of all downloadable files, excluding individual sets and decks, output by the MTGJSON.
 
 You can see a dump of all files, including individual sets and decks by going to the [file server](https://mtgjson.com/api/v5/) directly.
 
@@ -29,7 +29,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllPrintings
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, organized by a Set's [code](/data-models/set/#code) property.
 >
 > SQL/SQLite downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).
 >

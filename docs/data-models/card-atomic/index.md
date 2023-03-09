@@ -7,10 +7,10 @@ head:
       content: Card (Atomic)
   - - meta
     - name: description
-      content: The Card (Atomic) Data Model describes the properties of a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data that would never change from printing to printing.
+      content: The Card (Atomic) Data Model describes the properties of a single "atomic" card, an oracle-like entity of a card that only has evergreen properties that would never change from printing to printing.
   - - meta
     - property: og:description
-      content: The Card (Atomic) Data Model describes the properties of a single atomic card, an oracle-like entity of a Magic The Gathering card that only stores evergreen data that would never change from printing to printing.
+      content: The Card (Atomic) Data Model describes the properties of a single "atomic" card, an oracle-like entity of a card that only has evergreen properties that would never change from printing to printing.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card atomic
@@ -18,14 +18,14 @@ head:
 
 # Card (Atomic)
 
-The Card (Atomic) Data Model describes the properties of a single atomic card, an oracle-like entity of a Magic: The Gathering card that only stores evergreen data that would never change from printing to printing.
+The Card (Atomic) Data Model describes the properties of a single "atomic" card, an oracle-like entity of a card that only has evergreen properties that would never change from printing to printing.
 
 - **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)
 - **Parent property:** `data`
 
 ::: info Accessing the data
 
-When using any `*Atomic.json` file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is card name property. Here is a reduced payload of the model as an example:
+When using any `*Atomic.json` file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's `name` property. Here is a reduced payload of the model as an example:
 
 ```TypeScript
 {
@@ -64,7 +64,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 > ### attractionLights <Badge type="warning" text="optional" />
 >
-> A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
+> A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`

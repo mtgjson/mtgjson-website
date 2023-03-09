@@ -6,18 +6,18 @@ head:
       content: All Sets
   - - meta
     - name: description
-      content: A list of all individual sets that can be sorted, filtered and searched.
+      content: A list of all individual downloadable sets that can be sorted, filtered and searched.
   - - meta
     - property: og:description
-      content: A list of all individual sets that can be sorted, filtered and searched.
+      content: A list of all individual downloadable sets that can be sorted, filtered and searched.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, all sets
+      content: mtg, magic the gathering, mtgjson, json, all sets, download sets
 ---
 
 # All Sets
 
-A list of all individual sets that can be sorted, filtered and searched.
+A list of all individual downloadable sets that can be sorted, filtered and searched.
 
 ## Set Downloads
 

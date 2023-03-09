@@ -7,10 +7,10 @@ head:
       content: Tcgplayer Skus
   - - meta
     - name: description
-      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card's uuid property.
+      content: The Tcgplayer Skus Data Model describes the properties of the TCGplayer SKUs for a product.
   - - meta
     - property: og:description
-      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card's uuid property.
+      content: The Tcgplayer Skus Data Model describes the properties of the TCGplayer SKUs for a product.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, tcgplayer skus
@@ -18,14 +18,14 @@ head:
 
 # Tcgplayer Skus
 
-The Tcgplayer Skus Data Model describes the properties of [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on a card's `uuid` property.
+The Tcgplayer Skus Data Model describes the properties of the [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKUs for a product.
 
 - **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)
 - **Parent property:** `data`
 
 ::: info Accessing the data
 
-When using an `TcgplayerSkus.json` file, the Tcgplayer Skus Data Model is accessed through a single index array where its parent property is card uuid property. Here is a reduced payload of the model as an example:
+When using an `TcgplayerSkus.json` file, the Tcgplayer Skus Data Model is accessed through a single index array where its parent property is a card's `uuid` property. Here is a reduced payload of the model as an example:
 
 ```TypeScript
 {

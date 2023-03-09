@@ -7,10 +7,10 @@ head:
       content: Card (Deck)
   - - meta
     - name: description
-      content: The Card (Deck) Data Model describes the properties of a single card in a Deck Data Model.
+      content: The Card (Deck) Data Model describes the properties of a single card found in a Deck.
   - - meta
     - property: og:description
-      content: The Card (Deck) Data Model describes the properties of a single card in a Deck Data Model.
+      content: The Card (Deck) Data Model describes the properties of a single card found in a Deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card, card deck
@@ -18,7 +18,7 @@ head:
 
 # Card (Deck)
 
-The Card (Deck) Data Model describes the properties of a single card in a [Deck](/data-models/deck/) Data Model.
+The Card (Deck) Data Model describes the properties of a single card found in a [Deck](/data-models/deck/).
 
 - **Parent model:** [Deck](/data-models/deck/)
 - **Parent property:** `commander`, `mainBoard`, `sideBoard`
@@ -53,7 +53,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### attractionLights <Badge type="warning" text="optional" />
 >
-> A list of attraction lights found on a card, available only to cards printed in certain "Un-sets".
+> A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
@@ -637,7 +637,7 @@ The Card (Deck) Data Model describes the properties of a single card in a [Deck]
 
 > ### variations <Badge type="warning" text="optional" />
 >
-> A list of card `uuid`'s of this card with alternate printings in the same set. Excludes Un&#8209;sets.
+> A list of card `uuid`'s of this card with alternate printings in the same set, excluding Un&#8209;sets.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.1.2`
