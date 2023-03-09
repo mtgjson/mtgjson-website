@@ -1,5 +1,6 @@
 import { defineStore } from 'pinia';
-import axios, { AxiosResponse } from 'axios';
+import axios from 'axios';
+import type { AxiosResponse } from 'axios';
 import type { TStoreRootState } from './types';
 
 const api: string = 'https://mtgjson.com/api/v5/';

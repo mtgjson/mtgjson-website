@@ -65,10 +65,10 @@
 
 <script setup lang="ts">
 import { computed, ref, onMounted } from 'vue';
-import { useStore } from '../store.js';
+import { useStore } from '../store';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
-import { sort, formatDateToPretty } from '../helpers';
+import { sort } from '../helpers';
 import type { TList } from '../types';
 
 type Props = {
@@ -78,7 +78,7 @@ type Props = {
 };
 
 const store = useStore();
-const props = defineProps<Props>();
+const props: Props = defineProps<Props>();
 
 const lazyOffset: number = 10;
 
@@ -137,11 +137,7 @@ const toggleShowMore = (canShow: boolean): void => {
   canLoadMore.value = canShow;
 };
 
-onMounted(async (): Promise<void> => {
-  if (defaultList.value.length === 0) {
-    await store.fetchJSON(props.file);
-  }
-
+onMounted((): void => {
   resultsTotalLength.value = defaultList.value.length;
   resultsLength.value = lazyOffset;
 });
