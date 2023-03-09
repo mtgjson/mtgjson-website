@@ -88,15 +88,10 @@ type Props = {
 };
 
 const props: Props = defineProps<Props>();
-const emit = defineEmits([
-  'updateData',
-  'updateCount',
-  'canShowButton',
-  'canShowAllButton'
-]);
+const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
 
-const lazyOffset = ref<number>(25);
-const lazyToLoad = ref<number>(25);
+const lazyOffset = ref<number>(10);
+const lazyToLoad = ref<number>(10);
 const filterValue = ref<string>('');
 const searchValue = ref<string>('');
 const spoilerValue = ref<boolean>(true);
@@ -106,7 +101,7 @@ const sortKey = ref<string>('releaseDate:true');
 const timeout = ref<any>(null);
 
 onMounted((): void => {
-  onHandleChange(null);
+  onHandleChange();
 });
 
 const emitNewData = (data: TList[], counts: number[]): void => {
@@ -114,15 +109,14 @@ const emitNewData = (data: TList[], counts: number[]): void => {
   emit('updateCount', counts);
 };
 
-const emitShowButtonsView = (showButton: boolean): void => {
+const emitShowMoreButtonView = (showButton: boolean): void => {
   emit('canShowButton', showButton);
-  emit('canShowAllButton', showButton);
 };
 
-const onLoadMore = (loadAll?: boolean): void => {
+const onLoadMore = (): void => {
   lazyOffset.value = lazyOffset.value + lazyToLoad.value;
 
-  onHandleChange(null, loadAll);
+  onHandleChange();
 };
 
 const onHandleReset = (): void => {
@@ -139,10 +133,9 @@ const onHandleReset = (): void => {
   const newListCount: number = dynamicData.length;
 
   emitNewData(dynamicData, [newListCount, data.length]);
-  emitShowButtonsView(true);
 };
 
-const onHandleChange = (_: any, loadAll?: boolean): void => {
+const onHandleChange = (): void => {
   // Throttle so we don't go nuts
   clearTimeout(timeout.value);
 
@@ -159,18 +152,18 @@ const onHandleChange = (_: any, loadAll?: boolean): void => {
     const searched: TList[] = search(searchValue.value, filteredData);
     const sorted: TList[] = sort(sortKey.value, searched);
     const filtered: TList[] = filter(filterValue.value, sorted);
-    const dynamicData: TList[] = loadAll ? filtered : filtered.slice(0, lazyOffset.value);
+    const dynamicData: TList[] = filtered.slice(0, lazyOffset.value);
     const newListCount: number = dynamicData.length;
     const newListTotalCount: number = filtered.length;
 
     emitNewData(dynamicData, [newListCount, newListTotalCount]);
 
-    if (loadAll || lazyOffset.value >= filtered.length) {
+    if (lazyOffset.value >= filtered.length) {
       loadMoreEl && loadMoreEl.classList.add('hide');
-      emitShowButtonsView(false);
+      emitShowMoreButtonView(false);
     } else {
       loadMoreEl && loadMoreEl.classList.remove('hide');
-      emitShowButtonsView(true);
+      emitShowMoreButtonView(true);
     }
   }, 300);
 };
