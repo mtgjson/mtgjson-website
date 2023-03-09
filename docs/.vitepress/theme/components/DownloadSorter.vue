@@ -87,8 +87,8 @@ type Props = {
   disableChecks?: string;
 };
 
+const props: Props = defineProps<Props>();
 const emit = defineEmits(['updateData', 'updateCount', 'canShowButton']);
-const props = defineProps<Props>();
 
 const lazyOffset = ref<number>(10);
 const lazyToLoad = ref<number>(10);
