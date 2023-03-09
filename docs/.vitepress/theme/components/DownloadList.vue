@@ -7,7 +7,8 @@
     :disableChecks="disableChecks",
     @updateData="updateData",
     @updateCount="updateCounts",
-    @canShowButton="toggleShowMore"
+    @canShowButton="toggleShowMore",
+    @canShowAllButton="toggleShowAll"
   )
   div(v-if="resultsTotalLength === 0")
     p.results-message Loading...
@@ -80,7 +81,7 @@ type Props = {
 const store = useStore();
 const props: Props = defineProps<Props>();
 
-const lazyOffset: number = 10;
+const lazyOffset: number = 25;
 
 const canLoadMore = ref<boolean>(true);
 const canLoadAll = ref<boolean>(true);
@@ -125,7 +126,7 @@ const onLoadAll = (): void => {
   sortedList.value = defaultList.value;
   resultsLength.value = resultsTotalLength.value;
 
-  removeButtons();
+  sorter.value.onLoadMore(true);
 };
 
 const removeButtons = (): void => {
@@ -136,6 +137,10 @@ const removeButtons = (): void => {
 const toggleShowMore = (canShow: boolean): void => {
   canLoadMore.value = canShow;
 };
+
+const toggleShowAll = (canShow: boolean): void => {
+  canLoadAll.value = canShow;
+}
 
 onMounted((): void => {
   resultsTotalLength.value = defaultList.value.length;
