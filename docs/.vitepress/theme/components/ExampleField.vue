@@ -26,7 +26,7 @@ type Props = {
   type: string;
 };
 
-const props: Props = defineProps<Props>();
+const props = defineProps<Props>();
 
 const minimumToShow = 5;
 

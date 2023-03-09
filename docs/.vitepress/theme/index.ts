@@ -21,10 +21,10 @@ export default {
   Layout,
 
   enhanceApp(ctx: any): void {
-    // Extend default theme custom behaviour.
+    // extend default theme custom behaviour.
     DefaultTheme.enhanceApp(ctx);
 
-    // Register global components
+    // register your custom global components
     ctx.app.component('DownloadList', DownloadList);
     ctx.app.component('DownloadNativeSelect', DownloadNativeSelect);
     ctx.app.component('DownloadSorter', DownloadSorter);
@@ -36,14 +36,15 @@ export default {
 
   setup(): void {
     const store = useStore();
-    const storeValues: string[] = ['Meta', 'EnumValues', 'SetList', 'DeckList']
 
     onMounted(async (): Promise<void> => {
-      storeValues.forEach(async ( value: string ): Promise<void> => {
-        if ( Object.keys(store[value] ).length === 0) {
-          await store.fetchJSON(value);
-        }
-      });
+      if (Object.keys(store.EnumValues).length === 0) {
+        await store.fetchJSON('EnumValues');
+      }
+
+      if (Object.keys(store.Meta).length === 0) {
+        await store.fetchJSON('Meta');
+      }
     });
   },
 };
