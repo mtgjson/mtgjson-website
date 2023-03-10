@@ -10,24 +10,25 @@
       spellcheck="false",
       placeholder="Search documentation...",
       type="search",
-      @input="openSearch()",
+      @input="openSearch",
       :class="{ open: results?.length > 0 }"
     )
     .search-clear-button(
       v-if="searchTerm.length > 0"
-      @click="clearSearch()"
+      @click="clearSearch"
     )
     .search-suggestions(:class="{ open: results?.length > 0 }")
       .search-suggestion(
         v-if="results",
         v-for="(item, i) of results",
         :key="i",
-        tabindex="0"
+        tabindex="0",
+        @keydown="handleA11yKeydown"
       )
         a(
-          :key="item.id"
-          :href="`${item.isOwnPage ? item.path : item.path + item.hash}`"
-          @click="clearSearch()"
+          :key="item.id",
+          :href="`${item.isOwnPage ? item.path : item.path + item.hash}`",
+          @click="clearSearch"
         )
           .search-item
             p.search-item--page {{ item.title }}
@@ -90,7 +91,7 @@ const results = computed<IPagesData[] | []>((): IPagesData[] | [] => {
     });
   }
 
-  if(res.length > 0) {
+  if (res.length > 0) {
     return res;
   }
 
@@ -111,6 +112,15 @@ const openSearch = (): void => {
 const clearSearch = (): void => {
   open.value = false;
   searchTerm.value = '';
+};
+
+const handleA11yKeydown = (event: KeyboardEvent): void => {
+  const target: HTMLAnchorElement = event.currentTarget as HTMLAnchorElement;
+  const targetAnchor: HTMLAnchorElement = target.children[0] as HTMLAnchorElement;
+
+  if (event.key === 'Enter') {
+    targetAnchor.click();
+  }
 };
 </script>
 

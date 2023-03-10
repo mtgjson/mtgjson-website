@@ -10,10 +10,11 @@
   "scripts": {
     "dev": "run-p lint:js:watch local",
     "dev:bare": "vitepress dev docs",
-    "local": "npm run check:version && npm run generate:types && npm run generate:contributors && npm run dev:bare",
+    "local": "npm run check:version && npm run purge:cache && npm run generate:types && npm run generate:contributors && npm run dev:bare",
     "build": "npm run generate:types && npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "build:bare": "vitepress build docs",
-    "purge": "rm -rf node_modules",
+    "purge": "rm -rf node_modules && npm run purge:cache",
+    "purge:cache": "rm -rf docs/.vitepress/cache",
     "test": "npm run lint && jest --coverage --coverageDirectory='__coverage__'",
     "test:full": "npm run test && npm run build",
     "lint:js:watch": "esw --fix --ext .ts,.js,.vue docs/.vitepress -w",
