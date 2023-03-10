@@ -2,8 +2,8 @@
 .search
   .search-bar
     input.search-bar-input(
-      ref="input",
-      v-model="searchTerm",
+      ref="inputRef",
+      v-model="searchTermRef",
       autocomplete="off",
       autocorrect="off",
       autocapitalize="off",
@@ -11,19 +11,23 @@
       placeholder="Search documentation...",
       type="search",
       @input="openSearch",
+      @keydown="handleA11yInputKeydown",
       :class="{ open: results?.length > 0 }"
     )
     .search-clear-button(
-      v-if="searchTerm.length > 0"
+      v-if="searchTermRef.length > 0"
       @click="clearSearch"
     )
-    .search-suggestions(:class="{ open: results?.length > 0 }")
+    .search-suggestions(
+      :class="{ open: results?.length > 0 }",
+      ref="resultsRef"
+    )
       .search-suggestion(
         v-if="results",
         v-for="(item, i) of results",
         :key="i",
         tabindex="0",
-        @keydown="handleA11yKeydown"
+        @keydown="handleA11yResultKeydown"
       )
         a(
           :key="item.id",
@@ -44,20 +48,21 @@ const { theme } = useData();
 
 const pages: IPagesData[] = theme.value.pages;
 
-const open = ref<boolean>(false);
-const input = ref<HTMLElement | null>(null);
-const searchTerm = ref<string>('');
+const openRef = ref<boolean>(false);
+const searchTermRef = ref<string>('');
+const inputRef = ref<HTMLElement | null>(null);
+const resultsRef = ref<HTMLElement | null>(null);
 
 const results = computed<IPagesData[] | []>((): IPagesData[] | [] => {
   const res: IPagesData[] = [];
 
-  if (searchTerm.value.length > 0) {
+  if (searchTermRef.value.length > 0) {
     pages.forEach((page: any, index: number): void => {
       const pagePath: string = page.path;
       const pageTitle: string = page.title;
       const pageHeaders: IPagesDataHeader[] = page.headers;
       const loweredTitle: string = pageTitle?.toLowerCase();
-      const loweredTerm: string = searchTerm.value.toLowerCase();
+      const loweredTerm: string = searchTermRef.value.toLowerCase();
 
       if (Array.isArray(pageHeaders)) {
         pageHeaders.forEach((anchor: IPagesDataHeader): void => {
@@ -99,27 +104,53 @@ const results = computed<IPagesData[] | []>((): IPagesData[] | [] => {
 });
 
 const openSearch = (): void => {
-  if (input.value) {
-    input.value.focus();
-    open.value = true;
+  if (inputRef.value) {
+    inputRef.value.focus();
+    openRef.value = true;
   } else {
     if (results.value.length === 0) {
-      open.value = false;
+      openRef.value = false;
     }
   }
 };
 
 const clearSearch = (): void => {
-  open.value = false;
-  searchTerm.value = '';
+  openRef.value = false;
+  searchTermRef.value = '';
 };
 
-const handleA11yKeydown = (event: KeyboardEvent): void => {
+const handleA11yInputKeydown = (event: KeyboardEvent): void => {
+  const resultsFirst: HTMLElement = resultsRef.value.children[0] as HTMLElement;
+
+  if (event.key === 'ArrowDown' || event.key === 'Enter') {
+    event.preventDefault();
+    resultsFirst.focus();
+  }
+};
+
+const handleA11yResultKeydown = (event: KeyboardEvent): void => {
   const target: HTMLAnchorElement = event.currentTarget as HTMLAnchorElement;
   const targetAnchor: HTMLAnchorElement = target.children[0] as HTMLAnchorElement;
+  const targetNextSibling: HTMLElement = target.nextElementSibling as HTMLElement;
+  const targetPrevSibling: HTMLElement = target.previousElementSibling as HTMLElement;
 
   if (event.key === 'Enter') {
     targetAnchor.click();
+  }
+
+  if (event.key === 'ArrowDown') {
+    event.preventDefault();
+    targetNextSibling && targetNextSibling.focus();
+  }
+
+  if (event.key === 'ArrowUp') {
+    event.preventDefault();
+
+    if (targetPrevSibling) {
+      targetPrevSibling.focus();
+    } else {
+      inputRef.value.focus();
+    }
   }
 };
 </script>
