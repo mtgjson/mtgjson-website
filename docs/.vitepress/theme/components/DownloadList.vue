@@ -32,17 +32,17 @@
               Badge(
                 v-if="item.isPartialPreview",
                 type="warning",
-                text="Preview"
+                text="preview"
               )
               Badge(
                 v-if="item.isOnlineOnly",
                 type="warning",
-                text="Online Only"
+                text="online only"
               )
               Badge(
                 v-if="item.isPaperOnly",
                 type="warning",
-                text="Paper Only"
+                text="paper only"
               )
             ol.details
               li
@@ -209,6 +209,13 @@ onMounted((): void => {
           display: flex;
           flex-wrap: wrap;
           align-items: center;
+
+          &-img {
+            .ss {
+              width: 1.5rem;
+              height: 1.5rem;
+            }
+          }
         }
 
         h3 {
