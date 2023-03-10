@@ -69,7 +69,7 @@ import { computed, ref, onMounted } from 'vue';
 import { useStore } from '../store';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
-import { sort } from '../helpers';
+import { dataSort } from '../helpers';
 import type { TList } from '../types';
 
   type Props = {
@@ -100,7 +100,7 @@ const list = computed<TList[]>((): TList[] => {
     return sortedList.value;
   }
 
-  return sort(sortKey.value, defaultList.value).slice(0, lazyOffset);
+  return dataSort(sortKey.value, defaultList.value).slice(0, lazyOffset);
 });
 
 const updateData = (data: TList[]): void => {

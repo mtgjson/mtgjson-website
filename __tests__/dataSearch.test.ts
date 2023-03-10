@@ -1,4 +1,4 @@
-import { search } from '../docs/.vitepress/theme/helpers';
+import { dataSearch } from '../docs/.vitepress/theme/helpers';
 
 test('should return the same data if no terms is passed', () => {
   const terms = '';
@@ -12,7 +12,7 @@ test('should return the same data if no terms is passed', () => {
       type: 'artifact',
     },
   ];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(data);
 });
@@ -35,7 +35,7 @@ test('should return filtered data if terms for a valid type is passed in', () =>
       type: 'creature',
     },
   ];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(result);
 });
@@ -58,7 +58,7 @@ test('should return filtered data if terms for a valid name is passed in', () =>
       type: 'creature',
     },
   ];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(result);
 });
@@ -84,7 +84,7 @@ test('should return filtered data if terms for a valid code is passed in', () =>
       code: 'M20',
     },
   ];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(result);
 });
@@ -113,7 +113,7 @@ test('should return filtered data if terms for a valid releaseData is passed in'
       releaseDate: '2021-01-01',
     },
   ];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(result);
 });
@@ -131,7 +131,7 @@ test('should return no data if a non-matching term is used', () => {
     },
   ];
   const result = [];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(result);
 });
@@ -147,7 +147,7 @@ test('should return no data if an object has invalid props', () => {
     },
   ];
   const result = [];
-  const searched = search(terms, data);
+  const searched = dataSearch(terms, data);
 
   expect(searched).toEqual(result);
 });

@@ -2,7 +2,7 @@
  * A little different than the source but works
  * https://jsbin.com/wowezadolo/edit?js,console
  */
-export const sort = (value: string, dataToSort: any[]): any[] => {
+export const dataSort = (value: string, dataToSort: any[]): any[] => {
   if (!value || value.length < 1 || typeof value !== 'string') {
     return dataToSort;
   }
@@ -26,7 +26,7 @@ export const sort = (value: string, dataToSort: any[]): any[] => {
   });
 };
 
-export const search = (terms: string, searchableData: any[]) => {
+export const dataSearch = (terms: string, searchableData: any[]) => {
   const searchTerms = terms.toLowerCase();
 
   if (searchTerms.length < 1) {
@@ -46,13 +46,13 @@ export const search = (terms: string, searchableData: any[]) => {
   });
 };
 
-export const filter = (filter: string, dataToFilter: any[]) => {
+export const dataFilter = (filter: string, dataToFilter: any[]) => {
   return filter.length === 0
     ? dataToFilter // No filter, return all data
     : dataToFilter.filter((cur: any) => cur.type === filter);
 };
 
-export const prettifyType = (str: string) => {
+export const formatType = (str: string) => {
   return (
     str
       // split each word by underscores
@@ -62,30 +62,6 @@ export const prettifyType = (str: string) => {
       // join them back with a space
       .join(' ')
   );
-};
-
-export const formatDateToPretty = (stringDate: string): string => {
-  const isoDate: Date = new Date(stringDate);
-  const rawDate: Date = new Date(isoDate.getTime() - isoDate.getTimezoneOffset() * -60000);
-  const year: number = rawDate.getFullYear();
-  const date: number = rawDate.getDate();
-  const months: string[] = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-  const month: string = months[rawDate.getMonth()];
-
-  return `${month} ${date}, ${year}`;
 };
 
 export const formatTime = (time: string, overrideTime?: string): string => {

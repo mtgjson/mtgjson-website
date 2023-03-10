@@ -25,7 +25,7 @@
               v-for="(filter, key) of filters",
               :key="key",
               :value="filter"
-            ) {{ prettifyType(filter) }}
+            ) {{ formatType(filter) }}
 
         .sort-row.grid-item
           label(for="sort-input") Sort
@@ -76,7 +76,7 @@
 
 <script setup lang="ts">
 import { ref, onMounted } from 'vue';
-import { search, filter, sort, prettifyType } from '../helpers';
+import { dataSearch, dataFilter, dataSort, formatType } from '../helpers';
 import type { TList } from '../types';
 
 type Props = {
@@ -129,7 +129,7 @@ const onHandleReset = (): void => {
   onlineValue.value = true;
   paperValue.value = true;
 
-  const data: TList[] = sort(sortKey.value, props.list);
+  const data: TList[] = dataSort(sortKey.value, props.list);
   const dynamicData: TList[] = data.slice(0, lazyOffset.value);
   const newListCount: number = dynamicData.length;
 
@@ -151,9 +151,9 @@ const onHandleChange = (_: any, loadAll?: boolean): void => {
     // Removed paper data
     filteredData = !paperValue.value ? filteredData.filter((set) => !set.isPaperOnly) : filteredData;
 
-    const searched: TList[] = search(searchValue.value, filteredData);
-    const sorted: TList[] = sort(sortKey.value, searched);
-    const filtered: TList[] = filter(filterValue.value, sorted);
+    const searched: TList[] = dataSearch(searchValue.value, filteredData);
+    const sorted: TList[] = dataSort(sortKey.value, searched);
+    const filtered: TList[] = dataFilter(filterValue.value, sorted);
     const dynamicData: TList[] = loadAll ? filtered : filtered.slice(0, lazyOffset.value);
     const newListCount: number = dynamicData.length;
     const newListTotalCount: number = filtered.length;

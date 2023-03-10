@@ -1,4 +1,4 @@
-import { sort } from '../docs/.vitepress/theme/helpers';
+import { dataSort } from '../docs/.vitepress/theme/helpers';
 
 test('should return the same data if an empty filter is passed', () => {
   const filter = '';
@@ -7,7 +7,7 @@ test('should return the same data if an empty filter is passed', () => {
       type: 'creature',
     },
   ];
-  const sorted = sort(filter, data);
+  const sorted = dataSort(filter, data);
 
   expect(sorted).toEqual(data);
 });
@@ -19,7 +19,7 @@ test('should return no data if the filter is not found', () => {
       type: 'creature',
     },
   ];
-  const sorted = sort(filter, data);
+  const sorted = dataSort(filter, data);
 
   expect(sorted).toEqual(data);
 });
@@ -48,7 +48,7 @@ test('should return sorted data if a filter by recent releaseDate by descending 
       releaseDate: '1995-07-13',
     },
   ];
-  const sorted = sort(filter, data);
+  const sorted = dataSort(filter, data);
 
   expect(sorted).toEqual(expected);
 });
@@ -77,7 +77,7 @@ test('should return sorted data if a filter by recent releaseDate is missing', (
       releaseDate: '1995-07-13',
     },
   ];
-  const sorted = sort(filter, data);
+  const sorted = dataSort(filter, data);
 
   expect(sorted).toEqual(expected);
 });
@@ -106,7 +106,7 @@ test('should return sorted data if a filter by oldest releaseDate is missing', (
       releaseDate: '2017-04-05',
     },
   ];
-  const sorted = sort(filter, data);
+  const sorted = dataSort(filter, data);
 
   expect(sorted).toEqual(expected);
 });
@@ -135,7 +135,7 @@ test('should return sorted data if a filter by recent releaseData by ascending o
       releaseDate: '2020-01-01',
     },
   ];
-  const sorted = sort(filter, data);
+  const sorted = dataSort(filter, data);
 
   expect(sorted).toEqual(expected);
 });
