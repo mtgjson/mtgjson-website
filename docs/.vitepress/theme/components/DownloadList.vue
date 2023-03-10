@@ -7,7 +7,8 @@
     :disableChecks="disableChecks",
     @updateData="updateData",
     @updateCount="updateCounts",
-    @canShowButton="toggleShowMore"
+    @canShowButton="toggleShowMore",
+    @canShowAllButton="toggleShowAll"
   )
   div(v-if="resultsTotalLength === 0")
     p.results-message Loading...
@@ -61,7 +62,7 @@
     .load-more-container
       button.load-more-btn.cta-btn(v-if="canLoadMore" @click="onLoadMore") Show More
       button.load-more-btn.cta-btn(v-if="canLoadAll" @click="onLoadAll") Show All
-</template>
+  </template>
 
 <script setup lang="ts">
 import { computed, ref, onMounted } from 'vue';
@@ -71,16 +72,16 @@ import DownloadSorter from './DownloadSorter.vue';
 import { sort } from '../helpers';
 import type { TList } from '../types';
 
-type Props = {
-  file: string;
-  type?: string;
-  disableChecks?: string;
-};
+  type Props = {
+    file: string;
+    type?: string;
+    disableChecks?: string;
+  };
 
 const store = useStore();
 const props: Props = defineProps<Props>();
 
-const lazyOffset: number = 10;
+const lazyOffset: number = 25;
 
 const canLoadMore = ref<boolean>(true);
 const canLoadAll = ref<boolean>(true);
@@ -125,7 +126,7 @@ const onLoadAll = (): void => {
   sortedList.value = defaultList.value;
   resultsLength.value = resultsTotalLength.value;
 
-  removeButtons();
+  sorter.value.onLoadMore(true);
 };
 
 const removeButtons = (): void => {
@@ -137,199 +138,203 @@ const toggleShowMore = (canShow: boolean): void => {
   canLoadMore.value = canShow;
 };
 
+const toggleShowAll = (canShow: boolean): void => {
+  canLoadAll.value = canShow;
+}
+
 onMounted((): void => {
   resultsTotalLength.value = defaultList.value.length;
   resultsLength.value = lazyOffset;
 });
 </script>
 
-<style lang="scss" scoped>
-@import '../styles/placeholders';
-.download-list {
-  position: relative;
+  <style lang="scss" scoped>
+  @import '../styles/placeholders';
+  .download-list {
+    position: relative;
 
-  .load-more-container {
-    display: flex;
+    .load-more-container {
+      display: flex;
 
-    .load-more-btn {
-      margin-top: 1rem;
-      display: block;
-      flex: 1;
+      .load-more-btn {
+        margin-top: 1rem;
+        display: block;
+        flex: 1;
+      }
     }
-  }
 
-  .results-message {
-    line-height: 1rem;
-    font-size: 14px;
-    font-weight: 600;
-    display: inline-block;
+    .results-message {
+      line-height: 1rem;
+      font-size: 14px;
+      font-weight: 600;
+      display: inline-block;
 
-    &.error {
-      color: var(--red-color);
+      &.error {
+        color: var(--red-color);
+      }
     }
-  }
 
-  .download-wrap {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
+    .download-wrap {
+      display: flex;
+      flex-wrap: wrap;
+      align-items: center;
 
-    .img-wrap {
-      flex: none;
+      .img-wrap {
+        flex: none;
 
-      div {
-        margin-right: 2rem;
-        margin-bottom: 1rem;
-        position: relative;
-        height: 3rem;
-        width: 3rem;
-        color: var(--vp-c-text);
+        div {
+          margin-right: 2rem;
+          margin-bottom: 1rem;
+          position: relative;
+          height: 3rem;
+          width: 3rem;
+          color: var(--vp-c-text);
 
-        &::before {
-          position: absolute;
-          text-align: center;
-          line-height: 1em;
-          font-size: 50px;
-          width: 100%;
-          height: 100%;
+          &::before {
+            position: absolute;
+            text-align: center;
+            line-height: 1em;
+            font-size: 50px;
+            width: 100%;
+            height: 100%;
+          }
+        }
+      }
+
+      .text-wrap {
+        flex: 1;
+        padding-bottom: 0.75rem;
+
+        &--details {
+          display: flex;
+          flex-wrap: wrap;
+          align-items: center;
+        }
+
+        h3 {
+          margin-top: 0;
+          line-height: 1.25rem;
+          flex: none;
+        }
+
+        p {
+          display: block;
+          margin: 0;
+        }
+
+        ol {
+          padding: 0;
+          margin: 0;
+
+          &.tags,
+          &.details {
+            margin-top: 0.5rem;
+
+            li {
+              small {
+                color: var(--vp-c-text-2);
+
+                &:first-of-type {
+                  color: var(--vp-c-text-1);
+                }
+              }
+            }
+          }
+
+          &.tags {
+            margin-top: 0;
+            flex: none;
+
+            & > * {
+              margin-left: 0.5rem;
+            }
+          }
+
+          &.details {
+            flex: 0 0 100%;
+          }
+
+          li {
+            margin: 0;
+            list-style: none;
+            display: inline-block;
+            margin-right: 1rem;
+          }
+
+          &:not(:only-of-type):first-of-type {
+            li {
+              margin-right: 0;
+            }
+          }
+        }
+
+        small {
+          display: inline-block;
+          text-transform: capitalize;
+
+          &:first-of-type {
+            font-weight: 600;
+          }
+        }
+
+        &--download--btn-wrap {
+          display: block !important;
+        }
+
+        &--details {
+          position: relative;
+
+          &-img {
+            float: left;
+            margin-right: 0.5rem;
+            color: var(--vp-c-text-1);
+
+            .ss {
+              font-size: 1.5rem;
+              line-height: 1.5rem;
+            }
+          }
         }
       }
     }
+  }
 
-    .text-wrap {
-      flex: 1;
-      padding-bottom: 0.75rem;
+  @media (max-width: 799px) {
+    .download-list {
+      .download-wrap {
+        .text-wrap {
+          ol {
+            &.tags {
+              flex: 0 0 100%;
 
-      &--details {
-        display: flex;
-        flex-wrap: wrap;
-        align-items: center;
-      }
-
-      h3 {
-        margin-top: 0;
-        line-height: 1.25rem;
-        flex: none;
-      }
-
-      p {
-        display: block;
-        margin: 0;
-      }
-
-      ol {
-        padding: 0;
-        margin: 0;
-
-        &.tags,
-        &.details {
-          margin-top: 0.5rem;
-
-          li {
-            small {
-              color: var(--vp-c-text-2);
-
-              &:first-of-type {
-                color: var(--vp-c-text-1);
+              & > * {
+                margin-top: 0.75rem;
+                margin-left: 0;
+                margin-right: 0.5rem;
               }
             }
           }
         }
-
-        &.tags {
-          margin-top: 0;
-          flex: none;
-
-          & > * {
-            margin-left: 0.5rem;
-          }
-        }
-
-        &.details {
-          flex: 0 0 100%;
-        }
-
-        li {
-          margin: 0;
-          list-style: none;
-          display: inline-block;
-          margin-right: 1rem;
-        }
-
-        &:not(:only-of-type):first-of-type {
-          li {
-            margin-right: 0;
-          }
-        }
-      }
-
-      small {
-        display: inline-block;
-        text-transform: capitalize;
-
-        &:first-of-type {
-          font-weight: 600;
-        }
-      }
-
-      &--download--btn-wrap {
-        display: block !important;
-      }
-
-      &--details {
-        position: relative;
-
-        &-img {
-          float: left;
-          margin-right: 0.5rem;
-          color: var(--vp-c-text-1);
-
-          .ss {
-            font-size: 1.5rem;
-            line-height: 1.5rem;
-          }
-        }
       }
     }
+
   }
-}
 
-@media (max-width: 799px) {
-  .download-list {
-    .download-wrap {
-      .text-wrap {
-        ol {
-          &.tags {
-            flex: 0 0 100%;
+  @media (max-width: 569px) {
+    .download-list {
+      .download-wrap {
+        & > * {
+          flex: 0 0 100% !important;
+        }
 
-            & > * {
-              margin-top: 0.75rem;
-              margin-left: 0;
-              margin-right: 0.5rem;
+        .text-wrap {
+          ol {
+            li {
+              display: inline-block !important;
             }
           }
         }
       }
     }
   }
-
-}
-
-@media (max-width: 569px) {
-  .download-list {
-    .download-wrap {
-      & > * {
-        flex: 0 0 100% !important;
-      }
-
-      .text-wrap {
-        ol {
-          li {
-            display: inline-block !important;
-          }
-        }
-      }
-    }
-  }
-}
-</style>
+  </style>
