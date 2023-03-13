@@ -149,7 +149,6 @@ onMounted((): void => {
 </script>
 
   <style lang="scss" scoped>
-  @import '../styles/placeholders';
   .download-list {
     position: relative;
 

@@ -43,7 +43,7 @@
   --version-color: var(--gray-4-color);
 
   // Misc
-  --common-radius: 11px;
+  --common-radius: 8px;
 
   // VitePress overrides
   --vp-c-brand: var(--accent-color);
@@ -52,7 +52,6 @@
   --vp-c-brand-dark: var(--accent-color);
   --vp-c-brand-darker: var(--accent-color);
   --vp-c-text-code: var(--yellow-color);
-  --vp-c-mute: var(--code-bg-color);
   --vp-input-switch-bg-color: var(--vp-c-bg-alt);
   --vp-badge-danger-bg: transparent;
   --vp-badge-warning-bg: transparent;

@@ -25,7 +25,7 @@ The Card (Atomic) Data Model describes the properties of a single "atomic" card,
 
 ::: info Accessing the data
 
-When using any `*Atomic.json` file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's `name` property. Here is a reduced payload of the model as an example:
+When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's [name](/data-models/card-atomic/#name) property. Here is a reduced payload of the model as an example:
 
 ```TypeScript
 {
