@@ -47,7 +47,6 @@ code {
   right: 0.45rem !important;
 }
 
-
 // CTA
 .cta-btn {
   display: inline-block;
@@ -209,18 +208,15 @@ code {
     margin-bottom: 1.5rem;
     padding: 1rem;
 
+    .VPBadge {
+      text-transform: capitalize;
+      margin-left: 0.5rem;
+    }
+
     h3 {
       margin-top: 0;
       font-size: 1rem;
       line-height: 0.85rem;
-
-      .VPBadge {
-        margin-left: 0.5rem;
-      }
-
-      .header-anchor {
-        margin-left: -0.75rem;
-      }
     }
 
     p {
@@ -258,6 +254,29 @@ html.dark {
     .icon {
       background-color: var(--dark-color);
       border-color: var(--vp-c-divider);
+    }
+  }
+}
+
+@media (max-width: 399px) {
+  .VPDoc {
+    blockquote {
+      .VPBadge {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        text-align: center;
+
+        &:first-of-type {
+          margin-top: 1rem;
+        }
+      }
+
+      h3 {
+        .header-anchor {
+          display: none;
+        }
+      }
     }
   }
 }

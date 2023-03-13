@@ -61,6 +61,10 @@ const toggleShowAll = (): void => {
   display: flex;
   align-items: center;
 
+  code {
+    line-height: 1rem !important;
+  }
+
   .show-btn {
     display: inline;
     margin-left: 0.5rem;
