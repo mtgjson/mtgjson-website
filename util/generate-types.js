@@ -58,7 +58,7 @@ ${propValues}
   });
 
   fs.writeFileSync(
-    `./docs/public/types/AllTypes.ts`,
+    `./docs/public/types/AllMTGJSONTypes.ts`,
     `${propsAll.replace(/};/g, '};\n').trim()}`
   );
 

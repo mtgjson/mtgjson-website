@@ -149,7 +149,7 @@ Here is a list of frequently asked questions from our users since some data can 
 >
 > However, more useful would likely be **all** the Types in one file location:
 >
-> - All Types: [https://mtgjson.com/types/AllTypes.ts](/types/AllTypes.ts)
+> - All Types: [https://mtgjson.com/types/AllMTGJSONTypes.ts](/types/AllMTGJSONTypes.ts)
 >
 > Additionally, when using MTGGraphQL, our GraphQL API layer, we offer a [NPM TypeScript Package](https://www.npmjs.com/package/mtggraphql/) that exports Types that the GraphQL service uses.
 
