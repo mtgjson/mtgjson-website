@@ -261,5 +261,10 @@
     "name": "viMTG",
     "image": "avatar-vimtg.png",
     "link": "https://github.com/yoshi1123/vim-mtg"
+  },
+  {
+    "name": "XMage",
+    "image": "avatar-xmage.png",
+    "link": "http://xmage.today"
   }
 ]
