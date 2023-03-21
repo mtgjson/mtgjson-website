@@ -30,10 +30,6 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### cardKingdom <Badge type="warning" text="optional" />

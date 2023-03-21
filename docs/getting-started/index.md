@@ -21,10 +21,6 @@ MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https
 
 **Below is some guiding information to get you started on working with MTGJSON data.**
 
-## On This Page
-
-[[toc]]
-
 ## MTGJSON Files
 
 ### File Formats

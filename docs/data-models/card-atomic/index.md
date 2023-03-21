@@ -49,10 +49,6 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### asciiName <Badge type="warning" text="optional" />

@@ -31,10 +31,6 @@ The Deck List Data Model describes the meta data properties of an individual [De
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### code

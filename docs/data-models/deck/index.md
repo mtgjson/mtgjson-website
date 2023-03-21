@@ -31,10 +31,6 @@ The Deck Data Model describes the properties of an individual Deck.
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### code

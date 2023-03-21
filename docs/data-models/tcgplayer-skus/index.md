@@ -49,10 +49,6 @@ const tcgplayerSkus: TcgplayerSkus = data["00010d56-fe38-5e35-8aed-518019aa36a5"
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### condition

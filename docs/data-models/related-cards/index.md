@@ -30,10 +30,6 @@ The Related Cards Data Model describes the properties of a card that has relatio
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### reverseRelated <Badge type="warning" text="optional" />

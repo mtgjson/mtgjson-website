@@ -176,30 +176,6 @@ code {
     }
   }
 
-  // Table of Contents
-  .table-of-contents {
-    ul {
-      display: grid;
-      grid-template-columns: 1fr 1fr;
-      grid-column-gap: 2rem;
-      padding-left: 0;
-
-      li {
-        margin-top: 0;
-        list-style: none;
-        font-size: 14px;
-
-        a {
-          color: var(--vp-c-text-2);
-
-          &:hover {
-            color: var(--vp-c-text-1);
-          }
-        }
-      }
-    }
-  }
-
   // Blockquotes
   blockquote {
     border-radius: var(--common-radius);
@@ -211,12 +187,12 @@ code {
     .VPBadge {
       text-transform: capitalize;
       margin-left: 0.5rem;
+      margin-top: 0.4rem;
     }
 
     h3 {
       margin-top: 0;
       font-size: 1rem;
-      line-height: 0.85rem;
     }
 
     p {

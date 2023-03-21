@@ -31,10 +31,6 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### artist <Badge type="warning" text="optional" />

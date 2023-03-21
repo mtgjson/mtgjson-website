@@ -31,10 +31,6 @@ The Set Data Model describes the properties of an individual set.
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### baseSetSize

@@ -31,10 +31,6 @@ The Legalities Data Model describes the properties of legalities of a card in va
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### alchemy <Badge type="warning" text="optional" />

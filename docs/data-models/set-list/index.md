@@ -31,10 +31,6 @@ The Set List Data Model describes the meta data properties of an individual [Set
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### baseSetSize

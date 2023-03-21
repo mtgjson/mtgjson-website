@@ -31,10 +31,6 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### category <Badge type="warning" text="optional" />

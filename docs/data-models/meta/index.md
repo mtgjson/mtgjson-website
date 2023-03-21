@@ -31,10 +31,6 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### date

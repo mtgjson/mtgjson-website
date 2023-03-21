@@ -30,10 +30,6 @@ The Rulings Data Model describes the properties of rulings for a card.
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### date

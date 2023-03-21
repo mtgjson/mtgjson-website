@@ -31,10 +31,6 @@ The Keywords Data Model describes the properties of keywords available to any ca
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### abilityWords

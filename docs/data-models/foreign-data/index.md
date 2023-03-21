@@ -31,10 +31,6 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### faceName <Badge type="warning" text="optional" />

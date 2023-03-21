@@ -119,10 +119,6 @@ You can also use the `<ExampleField type='<Enum Name>'` component to render exam
 
 If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
 
-#### Table of Contents
-
-Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers.
-
 ## Pinia Store
 
 We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store remains as performant as possible.

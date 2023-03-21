@@ -31,10 +31,6 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 :::
 
-## On This Page
-
-[[toc]]
-
 ## Usage
 
 ### Data Source

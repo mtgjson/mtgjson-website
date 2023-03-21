@@ -19,10 +19,6 @@ head:
 
 MTGJSON provides various kinds of downloads, all available on the website or by fetching from our [file server](https://mtgjson.com/api/v5/).
 
-## On This Page
-
-[[toc]]
-
 ## File Outputs
 
 ### All Files

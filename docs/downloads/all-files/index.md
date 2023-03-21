@@ -21,10 +21,6 @@ A list of all downloadable files, excluding individual sets and decks, output by
 
 You can see a dump of all files, including individual sets and decks by going to the [file server](https://mtgjson.com/api/v5/) directly.
 
-## On This Page
-
-[[toc]]
-
 ## File Downloads
 
 > ### AllPrintings

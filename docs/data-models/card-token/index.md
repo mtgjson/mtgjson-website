@@ -31,10 +31,6 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### artist <Badge type="warning" text="optional" />

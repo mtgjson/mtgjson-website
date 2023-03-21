@@ -30,10 +30,6 @@ The Identifiers Data Model describes the properties of identifiers associated to
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### cardKingdomEtchedId <Badge type="warning" text="optional" />

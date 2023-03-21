@@ -30,10 +30,6 @@ The Translations Data Model describes the properties of a [Set](/data-models/set
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### Ancient Greek <Badge type="warning" text="optional" />

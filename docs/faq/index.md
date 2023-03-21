@@ -19,10 +19,6 @@ head:
 
 Here is a list of frequently asked questions from our users since some data can be nuanced.
 
-## On This Page
-
-[[toc]]
-
 > ### Which file should I use for my project?
 >
 > In most cases, [AllPrintings](/downloads/all-files/#allprintings) is the correct file. It contains all data for every printing of each card organized by set, however, this file is quite large. Alternatively, you can browse the [All Sets](/downloads/all-sets/) and [All Decks](/downloads/all-decks/) files individually.

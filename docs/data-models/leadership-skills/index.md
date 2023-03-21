@@ -30,10 +30,6 @@ The Leadership Skills Data Model describes the properties of formats that a card
 
 :::
 
-## Model Index
-
-[[toc]]
-
 ## Model Properties
 
 > ### brawl
