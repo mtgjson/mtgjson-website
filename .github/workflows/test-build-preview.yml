@@ -1,4 +1,4 @@
-name: Build and Test Application
+name: Test, Build and Deploy Preview Application
 
 on:
   pull_request:
@@ -6,9 +6,7 @@ on:
 
 jobs:
   build:
-    name: 'Build Application'
     runs-on: ubuntu-latest
-
     steps:
     - name: Checkout
       uses: actions/checkout@master
@@ -36,3 +34,11 @@ jobs:
       uses: codecov/codecov-action@v3
       with:
         token: ${{ secrets.CODECOV_TOKEN }}
+
+    - name: Deploy to Netlify
+      uses: nwtgck/actions-netlify@v1.2
+      with:
+        publish-dir: './docs/.vitepress/dist'
+      env:
+        NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
+        NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}
