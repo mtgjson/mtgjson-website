@@ -24,50 +24,50 @@ The Booster Abstract Model describes the properties of how a [Set](/data-models/
 
 ## Model Overview
 
-```json
+```TypeScript
 {
   // Possible configurations in a traditional booster pack
-  "default": {
+  default: {
     // Booster pack configurations
-    "boosters": [
+    boosters: [
       {
         // Card contents of a booster pack
-        "contents": {
-          // Amount of this cards from this sheet name in configuration
-          "<Sheet Name>": number,
+        contents: {
+          // Amount of this cards in this configuration, using the sheet name as a key
+          [key: string]: number,
           ... // More sheet names
         },
         // Odds of getting this configuration against other configurations
-        "weight": number
+        weight: number
       },
       ... // More configurations
     ],
     // Sum of all booster configurations weights
-    "boostersTotalWeight": number,
+    boostersTotalWeight: number,
     // All possible sheets of cards to use within booster packs
-    "sheets": {
-      // A sheet of cards for use in a booster
-      "<Sheet Name>": {
+    sheets: {
+      // A sheet of cards for use in a booster, using the sheet name as the key
+      [key: string]: {
         // Colors of the sheet need to be balanced
-        "balanceColors": boolean,
+        balanceColors: boolean,
         // Cards used on a sheet
-        "cards": {
-          // Unique MTGJSON card UUID with a weight as its value
-          "<Card UUID>": number,
+        cards: {
+          // Card uuid as the key and and a weight as its value
+          [key: string]: number,
           ... // More cards
         },
         // Is the sheet foiled?
-        "foil": boolean,
+        foil: boolean,
         // Sum of all card weights
-        "totalWeight": number
+        totalWeight: number
       },
       ... // More sheet names
     }
   },
   // An extended object for the future that may be used for alternative booster packs
-  "premium": {
+  premium: {
     // Name of the premium booster pack
-    "name": string,
+    name: string,
     ... // All other keys are the same as 'default'
   }
 }
@@ -75,74 +75,71 @@ The Booster Abstract Model describes the properties of how a [Set](/data-models/
 
 ## Example Model
 
-```json
-  {
-    "default": {
-      "boosters": [
-        {
-          "contents": {
-            "basic": 1,
-            "common": 10,
-            "rareMythic": 1,
-            "uncommon": 3
-          },
-          "weight": 2
+Here is an example model with a reduced payload:
+
+```JSON
+{
+  "default": {
+    "boosters": [
+      {
+        "contents": {
+          "basic": 1,
+          "common": 10,
+          "rareMythic": 1,
+          "uncommon": 3
         },
-        {
-          "contents": {
-            "basic": 1,
-            "common": 9,
-            "foil": 1,
-            "rareMythic": 1,
-            "uncommon": 3
-          },
-          "weight": 1
-        }
-      ],
-      "boostersTotalWeight": 3,
-      "sheets": {
-        "basic": {
-          "cards": {
-            "08ca354f-d163-5aa7-80cb-6b8dab4893e8": 2,
-            ... // More card UUIDs with weights
-          },
-          "foil": false,
-          "totalWeight": 30
+        "weight": 2
+      },
+      {
+        "contents": {
+          "basic": 1,
+          "common": 9,
+          "foil": 1,
+          "rareMythic": 1,
+          "uncommon": 3
         },
-        "common": {
-          "balanceColors": true,
-          "cards": {
-            "00542ebe-9ff3-5ba1-9015-1028e95b7f8e": 1,
-            ... // More card UUIDs with weights
-          },
-          "foil": false,
-          "totalWeight": 101
+        "weight": 1
+      }
+    ],
+    "boostersTotalWeight": 3,
+    "sheets": {
+      "basic": {
+        "cards": {
+          "08ca354f-d163-5aa7-80cb-6b8dab4893e8": 2
         },
-        "foil": {
-          "cards": {
-            "00542ebe-9ff3-5ba1-9015-1028e95b7f8e": 6720,
-            ... // More card UUIDs with weights
-          },
-          "foil": true,
-          "totalWeight": 1355200
+        "foil": false,
+        "totalWeight": 30
+      },
+      "common": {
+        "balanceColors": true,
+        "cards": {
+          "00542ebe-9ff3-5ba1-9015-1028e95b7f8e": 1
         },
-        "rareMythic": {
-          "cards": {
-            "00adcf10-69b4-56f5-b393-c17511ba207c": 1,
-            ... // More card UUIDs with weights
-          },
-          "foil": false,
-          "totalWeight": 140
+        "foil": false,
+        "totalWeight": 101
+      },
+      "foil": {
+        "cards": {
+          "00542ebe-9ff3-5ba1-9015-1028e95b7f8e": 6720
         },
-        "uncommon": {
-          "cards": {
-            "0906fd55-3248-5fe3-ac3c-717ae4bece94": 1,
-            ... // More card UUIDs with weights
-          },
-          "foil": false,
-          "totalWeight": 80
-        }
+        "foil": true,
+        "totalWeight": 1355200
+      },
+      "rareMythic": {
+        "cards": {
+          "00adcf10-69b4-56f5-b393-c17511ba207c": 1
+        },
+        "foil": false,
+        "totalWeight": 140
+      },
+      "uncommon": {
+        "cards": {
+          "0906fd55-3248-5fe3-ac3c-717ae4bece94": 1
+        },
+        "foil": false,
+        "totalWeight": 80
       }
     }
   }
+}
 ```

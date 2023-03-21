@@ -6,19 +6,19 @@ head:
       content: All Decks
   - - meta
     - name: description
-      content: A list of all individual decks that can be sorted, filtered and searched.
+      content: A list of all individual downloadable decks that can be sorted, filtered and searched.
   - - meta
     - property: og:description
-      content: A list of all individual decks that can be sorted, filtered and searched.
+      content: A list of all individual downloadable decks that can be sorted, filtered and searched.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, all decks
+      content: mtg, magic the gathering, mtgjson, json, all decks, download decks
 ---
 
 # All Decks
 
-A list of all individual decks that can be sorted, filtered and searched.
+A list of all individual downloadable decks that can be sorted, filtered and searched.
 
-## Downloads
+## Deck Downloads
 
 <DownloadList file="DeckList" type="AllDecks" disableChecks="true"/>

@@ -1,10 +1,8 @@
 export type TStoreRootState = {
-  SidebarOpen: boolean,
-  Meta: TMeta,
   DeckList: TList[],
-  SetList: TList[],
   EnumValues: object,
-  ThemeColor: string,
+  SetList: TList[],
+  Meta: TMeta,
 }
 
 export type TMeta = {
@@ -20,8 +18,8 @@ export type TList = {
   isNonFoilOnly: boolean;
   isOnline: boolean;
   isOnlineOnly: boolean;
-  isPaperOnly: boolean;
   isPaper: boolean;
+  isPaperOnly: boolean;
   isPartialPreview: boolean;
   keyruneCode: string;
   mtgoCode: string;
@@ -42,17 +40,6 @@ export type TSidebarItem = {
   children: JSX.Element;
 }
 
-export type TEditLink = {
-  link: string;
-  text: string;
-}
-
-export type TSocialLink = {
-  text: string;
-  link: string;
-  class: string;
-}
-
 export interface IPagesDataHeader {
   text?: string;
   slug?: string;
@@ -70,10 +57,3 @@ export interface IPagesData extends IPagesDataHeader {
 export interface HTMLChangeEvent extends Event {
   target: HTMLFormElement;
 }
-
-// Use when pageData is available to error pages
-// declare module "vitepress" {
-//   interface PageData {
-//     pages: IPagesData[]
-//   }
-// }

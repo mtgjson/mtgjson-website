@@ -1,26 +1,31 @@
 import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
+// Sidebar link generation
 const [
   abstractModels,
   dataModels
 ] = generateSidebar(['/abstract-models/', '/data-models/']);
 
+// Page metadata generation
 export const pages = generatePages({
   INCLUDE_DIR: 'docs',
   EXCLUDE_DIRS: ['public', '.vitepress'],
 });
+
+// SEO
 export const title = 'MTGJSON.com · Portable formats for all Magic: The Gathering data';
 export const description =
   'MTGJSON is an open-source project that catalogs all Magic: The Gathering data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.';
 
+// Vitepress configuration
 export default {
   lang: 'en-US',
   // SEO
-  titleTemplate: ':title · ' + title,
+  titleTemplate: `:title · ${title}`,
   description,
-  appearance: false,
-  cleanUrls: 'with-subfolders',
+  lastUpdate: true,
+  cleanUrls: true,
   // Head Tags
   head: [
     ['meta', { charset: 'utf-8' }],
@@ -28,8 +33,20 @@ export default {
     // Google SEO
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', src: '/thumbnail-mtgjson.jpg' }],
+    ['meta', { property: 'og:image', src: '/images/assets/thumbnail-mtgjson.jpg' }],
+    // Favicon and OS Tiles
+    ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }],
+    ['link', { rel: 'icon', href: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicons/favicon-32x32.png', sizes: '32x32', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicons/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' }],
+    ['link', { rel: 'icon', href: '/favicons/android-chrome-384x384.png', sizes: '384x384', type: 'image/png' }],
+    ['link', { rel: 'mask-icon', href: '/favicons/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],
+    ['link', { rel: 'apple-touch-icon', href: '/favicons/apple-touch-icon.png' }],
+    ['link', { rel: 'msapplication-TileImage', href: '/favicons/mstile-150x150.png' }],
+    // iOS Safari Theme
+    ['meta', { name: 'theme-color', content: '#0f263c' }],
     // Analytics
+    ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
     ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
     [
       'script',
@@ -39,71 +56,72 @@ export default {
       function gtag(){dataLayer.push(arguments);}
       gtag('js', new Date());
       gtag('config', 'G-ZPPM5J5ET2');
-    `,
+      `,
     ],
-    ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
-    // Favicon and OS Tiles
-    ['link', { rel: 'shortcut icon', href: '/favicon.ico', type: 'image/x-icon' }],
-    ['link', { rel: 'icon', href: '/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/favicon-32x32.png', sizes: '32x32', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-chrome-192x192.png', sizes: '192x192', type: 'image/png' }],
-    ['link', { rel: 'icon', href: '/android-chrome-384x384.png', sizes: '384x384', type: 'image/png' }],
-    ['link', { rel: 'mask-icon', href: '/safari-pinned-tab.svg', sizes: '384x384', type: 'image/png' }],
-    ['link', { rel: 'apple-touch-icon', href: '/apple-touch-icon.png' }],
-    ['link', { rel: 'msapplication-TileImage', href: '/mstile-150x150.png' }],
-    // iOS Safari Theme
-    ['meta', { name: 'theme-color', content: '#0f263c' }]
   ],
   markdown: {
-    // Only capture h3 headings
     toc: {
       level: [ 3 ],
-      shouldAllowNested: true
-    }
+      shouldAllowNested: true,
+      format: (str) => str.split('<')[0]
+    },
+    theme: 'material-theme-darker'
   },
   // VitePress themeing
   themeConfig: {
     pages,
+    outline: 3,
     smoothScroll: true,
-    // Handle edit link ourselves
-    customEditLink: {
-      pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/',
+    outlineBadges: false,
+    outlineTitle: 'On This Page',
+    editLink: {
+      pattern: 'https://github.com/mtgjson/mtgjson-website/edit/main/docs/:path',
       text: 'Help us improve this page!',
     },
     socialLinks: [
       {
-        text: 'Contribute on GitHub',
+        icon: 'github',
         link: 'https://github.com/mtgjson',
-        class: 'github'
       },
       {
-        text: 'Join us on Discord',
+        icon: 'discord',
         link: 'https://mtgjson.com/discord',
-        class: 'discord'
       },
       {
-        text: 'Support us on Patreon',
+        icon: {
+          svg: '<svg alt="Patreon icon" fill="#f96753" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" class="st0"/></svg>'
+        },
         link: 'https://www.patreon.com/MTGJSON',
-        class: 'patreon'
       },
       {
-        text: 'Follow us on Twitter',
+        icon: 'twitter',
         link: 'https://twitter.com/mtgjson',
-        class: 'twitter'
       },
     ],
     sidebar: [
       {
-        text: 'Getting Started',
-        link: '/getting-started/',
+        text: 'Introduction',
+        link: '',
+        items: [
+          {
+            text: 'Getting Started',
+            link: '/getting-started/',
+          },
+          {
+            text: 'F.A.Q.',
+            link: '/faq/',
+          },
+        ]
       },
       {
-        text: 'F.A.Q.',
-        link: '/faq/',
-      },
-      {
-        text: 'MTGGraphQL',
-        link: '/mtggraphql/',
+        text: 'GraphQL API',
+        link: '',
+        items: [
+          {
+            text: 'MTGGraphQL',
+            link: '/mtggraphql/',
+          }
+        ]
       },
       {
         text: 'Downloads',

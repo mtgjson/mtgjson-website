@@ -31,7 +31,7 @@ When creating your project a credit to MTGJSON is greatly appreciated, though it
 
 ## Embed Code
 
-```html
+```HTML
 <a href="https://mtgjson.com" style="display: inline-flex; align-items: center;">
   <img src="https://mtgjson.com/images/assets/logo-mtgjson.svg" width="60px" alt="MTGJSON logo" />
   <p style="margin-left: 10px">Powered by MTGJSON</p>

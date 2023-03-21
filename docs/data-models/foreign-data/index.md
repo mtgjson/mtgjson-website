@@ -23,26 +23,24 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `foreignData`
 
-## Model Type
+## TypeScript Model
 
-<ModelType type="ForeignData" />
+::: details Show/Hide Model
 
-## Model Index
+<<< @/public/types/ForeignData.ts{TypeScript}
 
-<PropertyToggler/>
-
-[[toc]]
+:::
 
 ## Model Properties
 
-> ### faceName <i class="optional"></i>
+> ### faceName <Badge type="warning" text="optional" />
 >
 > The foreign name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
 
-> ### flavorText <i class="optional"></i>
+> ### flavorText <Badge type="warning" text="optional" />
 >
 > The foreign flavor text of the card.
 >
@@ -57,7 +55,7 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 > - <ExampleField type='language'/>
 > - **Introduced:** `v4.0.0`
 
-> ### multiverseId <i class="optional"></i>
+> ### multiverseId <Badge type="warning" text="optional" />
 >
 > The foreign multiverse identifier of the card.
 >
@@ -71,14 +69,14 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### text <i class="optional"></i>
+> ### text <Badge type="warning" text="optional" />
 >
 > The foreign text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### type <i class="optional"></i>
+> ### type <Badge type="warning" text="optional" />
 >
 > The foreign type of the card, including any supertypes and subtypesa and are given a ` - ` delimiter if appropriate.
 >

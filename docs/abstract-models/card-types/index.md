@@ -24,21 +24,23 @@ The Card Types Abstract Model describes the properties of any possible subtypes 
 
 ## Model Overview
 
-```json
+```TypeScript
 {
   // Card type
-  "<Card Type>": {
+  [key: string]: {
     // Any subtypes available to a card type
-    "subTypes": string[],
+    subTypes: string[],
     // Any supertypes available to a card type
-    "superTypes": string[]
+    superTypes: string[]
   }
 }
 ```
 
 ## Example Model
 
-```json
+Here is an example model with a reduced payload:
+
+```JSON
 {
   "artifact": {
     "subTypes": [
@@ -59,7 +61,6 @@ The Card Types Abstract Model describes the properties of any possible subtypes 
       "Snow",
       "World"
     ]
-  },
-  ... // More types
+  }
 }
 ```

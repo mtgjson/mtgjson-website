@@ -23,19 +23,17 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 - **Parent model:** [Set](/data-models/set/), [Set List](/data-models/set-list/)
 - **Parent property:** `sealedProduct`
 
-## Model Type
+## TypeScript Model
 
-<ModelType type="SealedProduct" />
+::: details Show/Hide Model
 
-## Model Index
+<<< @/public/types/SealedProduct.ts{TypeScript}
 
-<PropertyToggler/>
-
-[[toc]]
+:::
 
 ## Model Properties
 
-> ### category <i class="optional"></i>
+> ### category <Badge type="warning" text="optional" />
 >
 > The category of this product.
 >
@@ -57,7 +55,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### productSize <i class="optional"></i>
+> ### productSize <Badge type="warning" text="optional" />
 >
 > The size of the product.
 >
@@ -78,12 +76,11 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > - **Type:** `string | null`
 > - **Introduced:** `v5.2.0`
 
-> ### subtype <i class="optional"></i>
+> ### subtype <Badge type="warning" text="optional" />
 >
 > The category subtype of this product.
 >
 > - **Type:** `string`
-> - <ExampleField type='subtype'/>
 > - **Introduced:** `v5.2.1`
 
 > ### uuid

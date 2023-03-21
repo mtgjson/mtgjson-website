@@ -21,45 +21,77 @@ MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https
 
 **Below is some guiding information to get you started on working with MTGJSON data.**
 
-## Data Index
+## MTGJSON Files
 
-[[toc]]
-
-## Files
-
-### Formats
+### File Formats
 
 Formats are provided via an "API-like" server. JSON can be fetched in your code, but many of the files are extremely large in size so it is not recommended to open links in your browser.
+
+**The following formats are provided by MTGJSON services:**
 
 - **JSON**
 - **CSV**
 - **SQL/SQLite**
 - **Compressed files**
 
-### Downloads
-
-For a full list of files see the [Downloads](/downloads/) section.
-
 ## Models
+
+Models are a general term used to categorize data objects when using this documentation.
+
+**Note:** This documentation leverages TypeScript concepts to define model properties and values.
+
+::: info Quick Tip
+
+**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Abstract Models** have many non-unique property names and values for specific **File Models** and are documented separately from **Data Models**.
+
+:::
+
+### File Models
+
+A File Model is defined by two main properties. One being the `meta` property described as the [Meta](/data-models/meta/) Data Model and the `data` property which can vary on a file by file basis.
+
+For example, the commonly used `AllPrintings.json` file uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the access key.
+
+::: info A Closer Look
+
+Here is a reduced payload of the model as an example:
+
+```TypeScript
+{
+  data: Record<string, Set>
+}
+```
+
+:::
 
 ### Data Models
 
-Data Models are what we call the structures that contain data inside files and other Data Models. They vary in their availability and are based heavily on the type of file accessed and the Data Models in those files. Some of the Data Models used in the files are:
+Data Models are data objects that are generally flat in nature, they are an object or array and they have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
 
-- [Card (Atomic)](/data-models/card-atomic/): Data inside `AtomicCards.json` and `<Format>Atomic.json`
-- [Card (Set)](/data-models/card-set/): Data inside `AllIdentifiers.json`
-- [Set](/data-models/set/): Data inside `AllPrintings.json` and `<Format>.json`
+For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a object of data about card Sets are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own unique property values based on the Set it was defined in.
+
+::: info An Even Closer Look
+
+Here is a reduced payload of the model as an example:
+
+```TypeScript
+{
+  data: {
+    cards: Record<string, CardSet[]>
+  }
+}
+```
+
+:::
 
 ### Abstract Models
 
-Abstract Models are what we call the structures that contain more complex data inside files. They tend to have many nested properties and thus documentation is formalized with example responses and structures. Some of the Abstract Models used in files are:
+Abstract Models have abnormal data objects that are not clearly defined. They tend to have many nested properties with non-unique keys so documentation is formalized with example data.
 
-- [All Prices](/abstract-models/all-prices/): Data inside `AllPrices.json`
-- [Booster](/abstract-models/booster/): Data inside [Set](/data-models/set/#booster) `booster` property
-- [Enum Values](/abstract-models/enum-values/): Data inside `EnumValues.json`
+For example, `AllPrices.json` uses the [All Prices](/abstract-models/all-prices/) Abstract Model in its `data` property.
 
 ## GraphQL API
 
 ### MTGGraphQL
 
-A sub-service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API built on top of the MTGJSON data sets.
+A service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API service built on top of MTGJSON data.

@@ -19,14 +19,15 @@ head:
 
 Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.
 
-For example, any **Data Model** would look similar to this:
+## Example
 
-```json
+### Model Example
+
+Any **Data Model** would look similar to this:
+
+```TypeScript
 {
-  "<Property 1>": any,
-  "<Property 2>": any,
-  "<Property 3>": any,
-  ... // More properties
+  [key, string]: any;
 }
 ```
 

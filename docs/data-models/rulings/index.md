@@ -22,15 +22,13 @@ The Rulings Data Model describes the properties of rulings for a card.
 - **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
 - **Parent property:** `rulings`
 
-## Model Type
+## TypeScript Model
 
-<ModelType type="Rulings" />
+::: details Show/Hide Model
 
-## Model Index
+<<< @/public/types/Rulings.ts{TypeScript}
 
-<PropertyToggler/>
-
-[[toc]]
+:::
 
 ## Model Properties
 
