@@ -166,7 +166,8 @@ const handleA11yResultKeydown = (event: KeyboardEvent): void => {
     input {
       background-color: var(--search-bg-color);
       color: var(--search-text-color);
-      padding: 0.25rem 1.25rem 0.25rem 0.5rem;
+      padding-left: 0.5rem;
+      padding-right: 1.25rem;
       border-radius: var(--common-radius);
       font-weight: 600;
       font-size: 14px;
