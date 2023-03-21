@@ -1,53 +1,28 @@
 <template lang="pug">
-.theme-container(:class="pageClasses")
-  .doc(v-if="!isHome")
-    Navbar(
-      @toggle-sidebar="toggleSidebar"
-    )
-
-    Sidebar(
-      :items="sidebarItems",
-      @toggle-sidebar="toggleSidebar"
-    )
-
-    Page
-
-  .home(v-else)
-    Home
+Layout
+  template(#sidebar-nav-before)
+    Searchbar
+  template(#not-found)
+    NotFound
 </template>
 
 <script setup lang="ts">
-import { computed, onMounted } from 'vue';
-import { useData } from 'vitepress';
-import { useStore } from '../store.js';
-import Navbar from '../components/Navbar.vue';
-import Page from '../components/Page.vue';
-import Home from '../components/Home.vue';
-import Sidebar from '../components/Sidebar.vue';
-import type { TSidebarItem } from '../types';
+import { onMounted } from 'vue';
+import DefaultTheme from 'vitepress/theme';
+import Searchbar from '../components/Searchbar.vue';
+import NotFound from '../components/NotFound.vue';
+import { useStore } from '../store';
 
-const { theme, frontmatter } = useData();
+const { Layout } = DefaultTheme;
+
 const store = useStore();
-const isHome = computed<boolean>(() => frontmatter.value.home);
-const sidebarItems: TSidebarItem[] = theme.value.sidebar;
-
-const pageClasses = computed((): object[] => {
-  return [
-    {
-      'sidebar-open': store.SidebarOpen,
-    },
-  ];
-});
-
-const toggleSidebar = (): void => {
-  store.updateSidebar();
-};
+const storeValues: string[] = ['Meta', 'EnumValues', 'SetList', 'DeckList']
 
 onMounted(async (): Promise<void> => {
-  if (Object.keys(store.EnumValues).length === 0) {
-    await store.fetchFromApi('EnumValues');
-  }
+  storeValues.forEach(async ( value: string ): Promise<void> => {
+    if ( Object.keys(store[value] ).length === 0) {
+      await store.fetchJSON(value);
+    }
+  });
 });
 </script>
-
-<style src="../styles/theme.scss" lang="scss"></style>

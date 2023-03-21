@@ -23,15 +23,13 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 - **Parent file:** [Meta](/downloads/all-files/#meta)
 - **Parent property:** `meta`, `data`
 
-## Model Type
+## TypeScript Model
 
-<ModelType type="Meta" />
+::: details Show/Hide Model
 
-## Model Index
+<<< @/public/types/Meta.ts{TypeScript}
 
-<PropertyToggler/>
-
-[[toc]]
+:::
 
 ## Model Properties
 

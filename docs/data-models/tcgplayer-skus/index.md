@@ -7,10 +7,10 @@ head:
       content: Tcgplayer Skus
   - - meta
     - name: description
-      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card UUID.
+      content: The Tcgplayer Skus Data Model describes the properties of the TCGplayer SKUs for a product.
   - - meta
     - property: og:description
-      content: The Tcgplayer Skus Data Model describes the properties of TCGplayer SKU values based on a card UUID.
+      content: The Tcgplayer Skus Data Model describes the properties of the TCGplayer SKUs for a product.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, tcgplayer skus
@@ -18,41 +18,36 @@ head:
 
 # Tcgplayer Skus
 
-The Tcgplayer Skus Data Model describes the properties of [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKU values based on a card UUID.
+The Tcgplayer Skus Data Model describes the properties of the [TCGplayer](https://www.tcgplayer.com/?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) SKUs for a product.
 
 - **Parent file:** [TcgplayerSkus](/downloads/all-files/#tcgplayerskus)
 - **Parent property:** `data`
 
-<blockquote>
-  <p class="small-header">Note</p>
-  <p>The Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the UUID of the card. Here is an example of the model:</p>
+::: info Accessing the data
 
-  ```json
-  "data": {
-    "00010d56-fe38-5e35-8aed-518019aa36a5": TcgplayerSkus[],
-    ... // More Card UUIDs
-  }
-  ```
+When using an `TcgplayerSkus.json` file, the Tcgplayer Skus Data Model is accessed through a single index array where its parent property is the card's `uuid` property. Here is a reduced payload of the model as an example:
 
-  <br />
-  <p>and accessing the data would look like this:</p>
-  <br />
+```TypeScript
+{
+  data: Record<string, TcgplayerSkus[]>;
+}
+```
 
-  ```js
-  data["00010d56-fe38-5e35-8aed-518019aa36a5"][0];
-  ```
+and accessing the data would look like this:
 
-</blockquote>
+```TypeScript
+const tcgplayerSkus: TcgplayerSkus = data["00010d56-fe38-5e35-8aed-518019aa36a5"][0];
+```
 
-## Model Type
+:::
 
-<ModelType type="TcgplayerSkus" />
+## TypeScript Model
 
-## Model Index
+::: details Show/Hide Model
 
-<PropertyToggler/>
+<<< @/public/types/TcgplayerSkus.ts{TypeScript}
 
-[[toc]]
+:::
 
 ## Model Properties
 

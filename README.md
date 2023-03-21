@@ -1,3 +1,4 @@
+<!-- markdownlint-disable-next-line -->
 <div align="center">
 
 # MTGJSON Documentation Application
@@ -70,8 +71,14 @@ npm run build
 
 ### **Purging**
 
-Clean out all Node packages.
+Clean out all Node packages and Vitepress cache.
 
 ```
 npm run purge
+```
+
+You can also just purge the Vitepress cache with the following.
+
+```
+npm run purge:cache
 ```

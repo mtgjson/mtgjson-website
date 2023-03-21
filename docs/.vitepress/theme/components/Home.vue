@@ -3,12 +3,11 @@ main.home
   section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
-        NavMeta(:hideText="true", :width="`250px`", :height="`173px`")
+        img(src="/images/assets/logo-mtgjson.svg" width="200" height="200")
       h1 MTGJSON
       span.version(v-if="version")
         a(href="/changelogs/mtgjson-v5/") v{{ version }}
-      span.version(v-else)
-        a(href="/changelogs/mtgjson-v5/") &nbsp;
+      span.version(v-else) &nbsp;
       h2 Portable formats for all Magic: The Gathering data
       p MTGJSON is an open-source project that catalogs all <a href="https://magic.wizards.com/en" target="_blank" rel="noreferrer noopener">Magic: The Gathering</a> data in portable formats. Using an aggregation process we fetch information between multiple resources and approved partners, and combine all that data in to various downloadable formats.
       a(href="/getting-started/")
@@ -26,91 +25,104 @@ main.home
           p MTGJSON files are built daily so you can keep your projects in sync as new cards, sets, rules, and other updates are added.
         li
           h3 Card Pricing
-          p We keep a <strong>limited</strong> history of all card prices provided by our wonderful partners to help further power your projects.
+          p We keep a <strong>limited</strong> history of all card prices provided by our partners to help further power your projects.
         li
-          h3 MTGGraphQL
-          p Get access to our GraphQL API and utilize data more with flexibility. <strong>Currently in beta and only available to Patreon subscribers.</strong>
+          h3 GraphQL API
+          p Utilize our data efficiently with <a href="/mtggraphql/">MTGGraphQL</a> and query cards, decks, and even prices. <strong>Currently in beta and only available to Patreon subscribers.</strong>
         li
           h3 Descriptive Properties
-          p Learn about all data property names and values, even optional properties and enumerations.
+          p Learn all about data property names, values, and enumerations.
         li
           h3 Simplified Searching
           p We index all documentation so searching is a breeze. Search for anything and get immediate results.
         li
           h3 TypeScript Notations
-          p View the TypeScript types of each data model and help keep your code type safe.
+          p View the Types of each Data Model and help keep your code type safe.
         li
           h3 Direct Downloads
           p You can remotely fetch files but we also provide a <a href="/downloads/all-files/">simple interface</a> to get the files as needed.
 
       a(href="/getting-started/")
-        button.cta-btn.light Get Started Now
+        button.cta-btn Get Started Now
 
   section.light.home-contributing
     .content-wrapper
       h2 Contributing
       ul
         li
+          img(alt="Github logo" src="/images/icons/icon-github.svg")
           a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
-            img(alt="Github logo" src="/images/icons/icon-github.svg")
             h3 GitHub
-            p Contribute to MTGJSON, help the community, and get site recognition.
+          p Contribute code to the project and get site recognition.
         li
+          img(alt="Discord logo" src="/images/icons/icon-discord.svg")
           a(href="https://mtgjson.com/discord/" target="_blank")
-            img(alt="Discord logo" src="/images/icons/icon-discord.svg")
             h3 Discord
-            p Discuss MTGJSON, get updates, report issues and more.
+          p Discuss MTGJSON, get updates, report issues and more.
         li
+          img(alt="Patreon logo" src="/images/icons/icon-patreon.svg")
           a(href="https://www.patreon.com/MTGJSON" target="_blank" rel="noreferrer noopener")
-            img(alt="Patreon logo" src="/images/icons/icon-patreon.svg")
             h3 Patreon
-            p Pledge to our Patreon and get access to MTGGraphQL and site recognition.
+          p Pledge to our Patreon and get access to our GraphQL API.
         li
+          img(alt="Paypal logo" src="/images/icons/icon-paypal.svg")
           a(href="https://www.paypal.me/Zachhalpern" target="_blank" rel="noreferrer noopener")
-            img(alt="Paypal logo" src="/images/icons/icon-paypal.svg")
             h3 PayPal
-            p Donate to MTGJSON and help keep this project available for free to everyone.
+          p Donate to MTGJSON and help keep this project free to all.
 
-  section.dark.home-team
+  section.dark.home-team(v-if="team")
     .content-wrapper
       h2 Team Leads
       ul.home-team-leads
-        li
-          div.home-team-leads-member
-            img(src="/images/avatars/avatar-zach.jpg" title="Zach Halpern" alt="Zach Halpern's avatar")
-            div
-              a(href="https://github.com/ZeldaZach" target="_blank" rel="noreferrer noopener")
-                h4 Zach Halpern
-              span Lead Developer &amp; Maintainer
-              p Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client.
-        li
-          div.home-team-leads-member
-            img(src="/images/avatars/avatar-milo.jpg" title="Milo Rue" alt="Milo Rue's avatar")
-            div
-              a(href="https://github.com/milorue" target="_blank" rel="noreferrer noopener")
-                h4 Milo Rue
-              span GraphQL Developer
-              p Milo is a TypeScript and React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports.
-        li
-          div.home-team-leads-member
-            img(src="/images/avatars/avatar-eric.jpg" title="Eric Lakatos" alt="Eric Lakatos' avatar")
-            div
-              a(href="https://github.com/staghouse" target="_blank" rel="noreferrer noopener")
-                h4 Eric Lakatos
-              span Documentation Maintainer
-              p Eric is a conceptualizer that loves deer, cheesy sci-fi movies and delving in to any code he can find. He is an avid supporter of open-source software and the Magic: The Gathering developer community.
+        li(
+          v-for="(member, key) in team",
+          :key="key"
+        )
+          .home-team-leads-member
+            a(
+              :href="member.url",
+              rel="noreferrer noopener",
+              target="_blank"
+            )
+              img.lazy(
+                :data-src="`/images/avatars/${member.avatar}`",
+                :title="member.name",
+                :alt="`${member.name}'s avatar`"
+                width="200",
+                height="200"
+              )
+            .home-team-leads-member-details
+              a(
+                :href="member.url",
+                rel="noreferrer noopener",
+                target="_blank"
+              )
+                h3 {{ member.name }}
+              span {{ member.title }}
+              p {{ member.description }}
 
+  section.dark.home-contributors(v-if="contributors")
+    .content-wrapper
       h2 Code Contributors
-      ul.home-team-contributors(v-if="contributors")
-        li(v-for="(contributor, key) in contributors", :key="key")
-          a(:href="contributor.url", rel="noopener noreferrer", target="_blank") {{ `${contributor.username}'s GitHub profile` }}
+      ul
+        li(
+          v-for="(contributor, key) in contributors",
+          :key="key"
+        )
+          a(
+            :href="contributor.url",
+            rel="noopener noreferrer",
+            target="_blank"
+          ) {{ `${contributor.username}'s GitHub profile` }}
             img.lazy(
               :data-src="contributor.avatar",
               :alt="`${contributor.username}'s avatar`",
-              :title="`${contributor.username}`"
+              :title="`${contributor.username}'s avatar'`",
+              width="100",
+              height="100"
             )
 
-  section.dark.home-patrons
+  section.dark.home-patrons(v-if="patrons")
     .content-wrapper
       h2 Patreon Supporters
       ul
@@ -121,9 +133,11 @@ main.home
         )
           .img-wrap(v-if="patron.image")
             img.lazy(
-              :data-src="'/images/avatars/' + patron.image",
-              :alt="`${patron.name} logo`",
-              :title="`${patron.name} logo`"
+              :data-src="`/images/avatars/${patron.image}`",
+              :alt="`${patron.name}'s avatar`",
+              :title="`${patron.name}'s avatar`",
+              width="100",
+              height="100"
             )
           .img-wrap.no-image(v-else)
             p {{ patron.company ? patron.company.substring(0, 1) : patron.name.substring(0, 1) }}
@@ -134,23 +148,31 @@ main.home
             rel="noopener noreferrer",
             target="_blank",
           )
-          p.name.unlinked-name(v-else, v-html="patron.company || patron.name")
+          p.name.unlinked-name(
+            v-else,
+            v-html="patron.company || patron.name"
+          )
           p.tier {{ patron.tier }} Supporter
           p.tier-time(
             v-if="patron.since",
             v-html="formatTime(patron.since)"
           )
 
-  section.dark.home-applications
+  section.dark.home-applications(v-if="applications")
     .content-wrapper
       h2 MTGJSON Powered Applications
       ul
-        li(v-for="(application, key) in applications", :key="key")
+        li(
+          v-for="(application, key) in applications",
+          :key="key"
+        )
           .img-wrap(v-if="application.image")
             img.lazy(
-              :data-src="'/images/avatars/' + application.image",
-              :alt="`${application.name} logo`",
-              :title="`${application.name} logo`"
+              :data-src="`/images/avatars/${application.image}`",
+              :alt="`${application.name}'s logo`",
+              :title="`${application.name}'s logo`",
+              height="100",
+              width="100"
             )
           .img-wrap.no-image(v-else)
             p {{ application.name.substring(0, 1) }}
@@ -159,7 +181,7 @@ main.home
             :href="application.link",
             v-html="application.name",
             rel="noopener noreferrer",
-            target="_blank",
+            target="_blank"
           )
           p.name.unlinked-name(v-else, v-html="application.name")
 
@@ -167,7 +189,7 @@ main.home
     .content-wrapper
       footer
         .home-footer-logo
-          NavMeta(:hideText="true", :width="`auto`", :height="`75px`")
+          img(src="/images/assets/logo-mtgjson.svg" width="200" height="200")
           span MTGJSON
 
         ul
@@ -175,7 +197,7 @@ main.home
           li.legal Third-Party content, links and referrals are provided as is and is subject to their own terms, rights and other legal notices.
           li.legal All other content &copy; 2018 &ndash; Present, Zach Halpern, Eric Lakatos. All rights reserved.
 
-        div.home-footer-links
+        .home-footer-links
           ol
             li
               a(href="/license/") License
@@ -185,12 +207,12 @@ main.home
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue';
-import NavMeta from './NavMeta.vue';
+import team from '../static/team.json';
 import contributors from '../static/contributors.json';
 import patrons from '../static/patrons.json';
 import applications from '../static/applications.json';
 import { formatTime } from '../helpers';
-import { useStore } from '../store.js';
+import { useStore } from '../store';
 
 const store = useStore();
 const pageLoaded = ref<boolean>(false);
@@ -200,17 +222,22 @@ onMounted(async (): Promise<void> => {
   const lazyImages: HTMLElement[] = Array.from(document.querySelectorAll('img.lazy'));
 
   if ('IntersectionObserver' in window) {
-    let lazyImageObserver: IntersectionObserver = new IntersectionObserver((entries, observer): void => {
-      entries.forEach((entry: IntersectionObserverEntry): void => {
-        if (entry.isIntersecting) {
-          let lazyImage: HTMLImageElement = entry.target as HTMLImageElement;
-          lazyImage.src = lazyImage.dataset.src;
-          delete lazyImage.dataset.src;
-          lazyImage.classList.remove('lazy');
-          lazyImageObserver.unobserve(lazyImage);
-        }
-      });
-    });
+    let lazyImageObserver: IntersectionObserver = new IntersectionObserver(
+      (entries): void => {
+        entries.forEach((entry: IntersectionObserverEntry): void => {
+          if (entry.isIntersecting) {
+            let lazyImage: HTMLImageElement = entry.target as HTMLImageElement;
+            lazyImage.src = lazyImage.dataset.src;
+            delete lazyImage.dataset.src;
+            lazyImage.classList.remove('lazy');
+            lazyImageObserver.unobserve(lazyImage);
+          }
+        });
+      },
+      {
+        rootMargin: '200px',
+      }
+    );
 
     lazyImages.forEach((lazyImage: HTMLImageElement): void => {
       lazyImageObserver.observe(lazyImage);
@@ -225,17 +252,11 @@ onMounted(async (): Promise<void> => {
     });
   }
 
-  if (Object.keys(store.Meta).length === 0) {
-    await store.fetchFromApi('Meta');
-  }
-
   pageLoaded.value = true;
 });
 </script>
 
 <style lang="scss" scoped>
-@import '../styles/placeholders';
-
 .home {
   .content-wrapper {
     max-width: 1028px;
@@ -254,31 +275,28 @@ onMounted(async (): Promise<void> => {
   section {
     padding: 4rem 0 4rem;
 
+    a {
+      color: var(--accent-color);
+      text-decoration: none;
+    }
+
     &.light {
-      background-color: var(--light-color);
+      background-color: var(--white-color);
       color: var(--dark-color);
 
       h2 {
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--gray-2-color);
       }
-
-      a {
-        color: var(--true-accent-2-color);
-      }
     }
 
     &.dark {
       background-color: var(--dark-2-color);
-      color: var(--light-color);
+      color: var(--white-color);
 
       h2 {
         padding-bottom: 1rem;
         border-bottom: 1px solid var(--dark-1-color);
-      }
-
-      a {
-        color: var(--true-accent-1-color);
       }
     }
   }
@@ -295,29 +313,35 @@ onMounted(async (): Promise<void> => {
   }
 
   h1 {
+    font-size: 2rem;
+    font-weight: 600;
     margin-bottom: 0.5rem;
 
-    & + span.version {
+    & + .version {
       color: var(--gray-3-color) !important;
-      font-weight: bold;
-      font-size: 1rem;
+      font-size: 14px;
       margin-bottom: 2rem;
       display: block;
 
       a {
         color: inherit;
         text-decoration: none;
+
+        &:hover {
+          text-decoration: underline;
+        }
       }
     }
   }
 
   h2 {
-    font-size: 2rem;
+    font-size: 1.75rem;
+    font-weight: 600;
     line-height: 2.5rem;
   }
 
   h3 {
-    font-size: 1.5rem;
+    font-weight: 600;
   }
 
   h2,
@@ -345,7 +369,7 @@ onMounted(async (): Promise<void> => {
     position: relative;
     z-index: 1;
     background-color: var(--dark-2-color);
-    color: var(--light-color);
+    color: var(--white-color);
     text-align: center;
 
     &::before {
@@ -370,18 +394,23 @@ onMounted(async (): Promise<void> => {
     &.loaded {
       &::before {
         transition: all 1s;
-        opacity: 0.10;
+        opacity: 0.1;
       }
     }
 
     &-logo {
-      margin-bottom: 1rem;
+      text-align: center;
+      margin: 0 auto 1rem;
+
+      img {
+        display: initial;
+      }
     }
 
     h2 {
       font-size: 1.25rem;
       line-height: 1.5rem;
-      color: var(--true-accent-1-color);
+      color: var(--accent-color);
       text-align: center;
     }
 
@@ -394,7 +423,7 @@ onMounted(async (): Promise<void> => {
   }
 
   &-features {
-    background-color: var(--light-color);
+    background-color: var(--white-color);
     color: var(--dark-color);
 
     ul {
@@ -403,7 +432,7 @@ onMounted(async (): Promise<void> => {
       grid-template-columns: repeat(4, 1fr);
 
       li {
-        background-color: var(--true-gray-color);
+        background-color: var(--gray-color);
         border-radius: var(--common-radius);
         padding: 2rem;
 
@@ -424,77 +453,84 @@ onMounted(async (): Promise<void> => {
 
   &-team {
     background-color: var(--dark-2-color);
-    color: var(--light-color);
-
-    h3 {
-      color: var(--true-accent-1-color);
-    }
+    color: var(--white-color);
 
     &-leads {
       li {
         display: flex;
         justify-content: flex-start;
         margin: 0 0 1rem;
-      }
-
-      &-member {
-        flex: 0 0 100%;
-        display: flex;
-        background-color: var(--dark-1-color);
-        border-radius: var(--common-radius);
-        padding: 2rem;
 
         img {
           border-radius: 50%;
+          height: auto;
+          max-width: 150px;
           margin-right: 2rem;
-          width: 150px;
-          height: 150px;
         }
 
-        div {
+        h3 {
+          margin-bottom: 0.5rem;
           text-align: left;
+          font-weight: 600;
+        }
 
+        span {
+          display: block;
+          text-align: left;
+          margin: 0 0 1rem 0;
+          color: var(--light-color);
+        }
+
+        p {
+          text-align: left;
+          color: var(--gray-3-color);
+        }
+      }
+
+      a {
+        &:hover {
+          h3 {
+            text-decoration: underline;
+          }
+        }
+      }
+
+      &-member {
+        background-color: var(--dark-1-color);
+        border-radius: var(--common-radius);
+        padding: 2rem;
+        display: flex;
+
+        &-details {
           a {
-            display: inline-block;
+            float: left;
 
-            h4 {
-              margin-bottom: 0.5rem;
-              text-align: left;
-              font-weight: bold;
+            & ~ * {
+              &::before,
+              &::after {
+                clear: both;
+                content: '';
+                display: table;
+              }
             }
           }
-
-          span {
-            display: block;
-            text-align: left;
-            margin: 0 0 1rem 0;
-            color: var(--gray-3-color);
-          }
-
-          p {
-            text-align: left;
-          }
         }
       }
-
-      li {
-        list-style: none;
-      }
     }
+  }
 
-    &-contributors {
+  &-contributors {
+    ul {
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       grid-gap: 1rem;
       margin-left: 0;
 
       li {
-        list-style: none;
-
         a {
           display: block;
           border-radius: 50%;
-          background-color: var(--light-color);
+          background-color: var(--white-color);
           overflow: hidden;
           font-size: 0;
 
@@ -522,31 +558,31 @@ onMounted(async (): Promise<void> => {
       grid-template-columns: repeat(4, 1fr);
 
       li {
-        background-color: var(--true-gray-color);
+        background-color: var(--gray-color);
         border-radius: var(--common-radius);
         padding: 2rem;
 
         a {
           text-decoration: none;
           color: var(--dark-color) !important;
+        }
 
-          img {
-            width: 100%;
-            max-height: 50px;
-            height: auto;
-            margin-bottom: 1rem;
-          }
+        img {
+          width: 100%;
+          max-height: 50px;
+          height: auto;
+          margin-bottom: 1rem;
+        }
 
-          h3 {
-            font-size: 1rem;
-            line-height: 1.25rem;
-            margin-bottom: 1rem;
-          }
+        h3 {
+          font-size: 1rem;
+          line-height: 1.25rem;
+          margin-bottom: 1rem;
+        }
 
-          p {
-            font-weight: normal;
-            color: var(--gray-5-color);
-          }
+        p {
+          text-align: left;
+          color: var(--gray-5-color);
         }
       }
     }
@@ -611,7 +647,7 @@ onMounted(async (): Promise<void> => {
 
             p {
               font-size: 3rem;
-              font-weight: bold;
+              font-weight: 600;
               color: var(--dark-color);
               margin-top: 0;
               padding-top: 0;
@@ -639,13 +675,8 @@ onMounted(async (): Promise<void> => {
         }
 
         .name {
-          text-decoration: underline;
           flex: 0 0 100%;
-          font-weight: bold;
-
-          &:hover {
-            text-decoration: none;
-          }
+          font-weight: 600;
         }
 
         .unlinked-name {
@@ -657,12 +688,12 @@ onMounted(async (): Promise<void> => {
           flex: 0 0 100%;
           margin: 0.5rem auto 0.25rem;
           line-height: 1.2em;
-          font-weight: bold;
+          font-weight: 600;
           text-transform: capitalize;
 
           &,
           &-time {
-            color: var(--text-color);
+            color: var(--gray-3-color);
             font-size: 14px;
           }
 
@@ -690,7 +721,7 @@ onMounted(async (): Promise<void> => {
         position: relative;
 
         .img-wrap {
-          background-color: var(--light-color);
+          background-color: var(--white-color);
           border-radius: 50%;
           height: 60px;
           display: flex;
@@ -712,7 +743,7 @@ onMounted(async (): Promise<void> => {
               width: 60px;
               padding: 0 0.75rem;
               font-size: 2rem;
-              font-weight: bold;
+              font-weight: 600;
               color: var(--dark-color);
             }
           }
@@ -720,6 +751,7 @@ onMounted(async (): Promise<void> => {
 
         .name {
           flex: 1;
+          font-weight: 600;
           text-align: left;
         }
       }
@@ -727,6 +759,7 @@ onMounted(async (): Promise<void> => {
   }
 
   &-patrons,
+  &-contributors,
   &-applications,
   &-contributing {
     padding-top: 0 !important;
@@ -735,10 +768,10 @@ onMounted(async (): Promise<void> => {
   &-footer {
     border-top: 1px solid var(--dark-1-color);
     background-color: var(--dark-2-color);
-    color: var(--light-color);
+    color: var(--white-color);
 
-    ol, ul {
-      // max-width: 570px;
+    ol,
+    ul {
       margin-left: auto;
       margin-right: auto;
 
@@ -757,11 +790,17 @@ onMounted(async (): Promise<void> => {
     }
 
     &-logo {
+      img {
+        margin: 0 auto;
+        height: 75px;
+        width: auto;
+      }
+
       span {
         display: block;
-        margin-top: 0.50rem;
+        margin-top: 0.5rem;
         margin-bottom: 1rem;
-        font-weight: bold;
+        font-weight: 600;
         font-weight: 1rem;
         font-size: 1.15rem;
       }
@@ -776,9 +815,13 @@ onMounted(async (): Promise<void> => {
         margin-top: 2rem;
 
         li {
-          list-style: none;
+          font-weight: 600;
           margin-top: 0;
           flex: 1;
+
+          a {
+            color: var(--dark-color);
+          }
         }
       }
     }
@@ -800,10 +843,8 @@ onMounted(async (): Promise<void> => {
 
 @media (max-width: 800px) {
   .home {
-    &-team {
-      &-contributors {
-        grid-template-columns: repeat(10, 1fr);
-      }
+    &-contributors {
+      grid-template-columns: repeat(10, 1fr);
     }
   }
 }
@@ -811,37 +852,56 @@ onMounted(async (): Promise<void> => {
 @media (max-width: 570px) {
   .home {
     &-features,
+    &-team,
     &-contributing,
     &-patrons,
     &-applications {
       ul {
         grid-template-columns: 1fr;
+
+        li {
+          img {
+            margin: 0 auto 1rem;
+          }
+          h3,
+          span,
+          p {
+            text-align: center;
+          }
+        }
       }
     }
 
     &-team {
       &-leads {
-        li {
-          justify-content: center;
-        }
-
         &-member {
           display: block;
 
-          img {
-            margin: 0 0 1rem 0;
-          }
-
-          div {
-            &,
-            span {
-              text-align: center;
+          &-details {
+            a {
+              float: none;
             }
           }
+
+          img {
+            margin: 0 auto 1rem auto;
+            float: none;
+          }
+
+          h3,
+          span {
+            text-align: center;
+          }
+        }
+
+        li {
+          justify-content: center;
         }
       }
+    }
 
-      &-contributors {
+    &-contributors {
+      ul {
         grid-template-columns: repeat(8, 1fr);
       }
     }

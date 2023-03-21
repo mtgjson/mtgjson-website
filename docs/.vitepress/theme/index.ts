@@ -1,28 +1,32 @@
+import DefaultTheme from 'vitepress/theme';
+
 import Layout from './layouts/Layout.vue';
-import NotFound from './layouts/NotFound.vue';
 
-import { createPinia } from "pinia";
-
-// Global components to be injected in markdown files
 import DownloadList from './components/DownloadList.vue';
 import DownloadNativeSelect from './components/DownloadNativeSelect.vue';
 import DownloadSorter from './components/DownloadSorter.vue';
 import ExampleField from './components/ExampleField.vue';
-import ModelType from './components/ModelType.vue';
-import PropertyToggler from './components/PropertyToggler.vue';
+import Home from './components/Home.vue';
+
+import { createPinia } from 'pinia';
+
+import './styles/theme.scss';
 
 export default {
+  ...DefaultTheme,
   Layout,
-  NotFound,
-  enhanceApp({ app, router, siteData }) {
-    // Register global components here to use in Markdown files
-    app.component('DownloadList', DownloadList);
-    app.component('DownloadNativeSelect', DownloadNativeSelect);
-    app.component('DownloadSorter', DownloadSorter);
-    app.component('ExampleField', ExampleField);
-    app.component('ModelType', ModelType);
-    app.component('PropertyToggler', PropertyToggler);
 
-    app.use(createPinia());
-  },
+  enhanceApp(ctx: any): void {
+    // Extend default theme custom behaviour.
+    DefaultTheme.enhanceApp(ctx);
+
+    // Register global components
+    ctx.app.component('DownloadList', DownloadList);
+    ctx.app.component('DownloadNativeSelect', DownloadNativeSelect);
+    ctx.app.component('DownloadSorter', DownloadSorter);
+    ctx.app.component('ExampleField', ExampleField);
+    ctx.app.component('Home', Home);
+
+    ctx.app.use(createPinia());
+  }
 };

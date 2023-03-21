@@ -3,7 +3,7 @@
   v-if="enums.length > 0",
   :class="{ showing: showAll }"
 )
-  strong Example:{{ ' ' }}
+  strong Example:&nbsp;
   code(v-if="!showAll") {{ '"' + enums.sort().slice(0, minimumToShow).join('", "') + '"' }}
     .show-btn(
       v-if="enums.length > minimumToShow",
@@ -11,7 +11,7 @@
     ) Show&nbsp;More
   code(v-else) {{ '"' + enums.sort().join('", "') + '"' }}
     .show-btn(
-      v-if="enums.length > minimumToShow"
+      v-if="enums.length > minimumToShow",
       @click="toggleShowAll"
     ) Show&nbsp;Less
 </template>
@@ -19,14 +19,14 @@
 <script setup lang="ts">
 import { ref, computed } from 'vue';
 import { useData } from 'vitepress';
-import { useStore } from '../store.js';
+import { useStore } from '../store';
 import type { TMeta } from '../types';
 
 type Props = {
   type: string;
 };
 
-const props = defineProps<Props>();
+const props: Props = defineProps<Props>();
 
 const minimumToShow = 5;
 
@@ -61,19 +61,18 @@ const toggleShowAll = (): void => {
   display: flex;
   align-items: center;
 
-  // &.showing {
-  //   align-items: flex-start;
-  // }
+  code {
+    line-height: 1rem !important;
+  }
 
   .show-btn {
     display: inline;
     margin-left: 0.5rem;
-    color: var(--accent-color);
-    text-decoration: underline;
+    color: var(--white-color);
     cursor: pointer;
 
     &:hover {
-      text-decoration: none;
+      text-decoration: underline;
     }
   }
 }

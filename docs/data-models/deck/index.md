@@ -7,10 +7,10 @@ head:
       content: Deck
   - - meta
     - name: description
-      content: The Deck Data Model describes the properties of an individual deck.
+      content: The Deck Data Model describes the properties of an individual Deck.
   - - meta
     - property: og:description
-      content: The Deck Data Model describes the properties of an individual deck.
+      content: The Deck Data Model describes the properties of an individual Deck.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, deck
@@ -18,20 +18,18 @@ head:
 
 # Deck
 
-The Deck Data Model describes the properties of an individual deck.
+The Deck Data Model describes the properties of an individual Deck.
 
 - **Parent file:** [All Decks](/downloads/all-decks/)
 - **Parent property:** `data`
 
-## Model Type
+## TypeScript Model
 
-<ModelType type="Deck" />
+::: details Show/Hide Model
 
-## Model Index
+<<< @/public/types/Deck.ts{TypeScript}
 
-<PropertyToggler/>
-
-[[toc]]
+:::
 
 ## Model Properties
 
@@ -42,7 +40,7 @@ The Deck Data Model describes the properties of an individual deck.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### commander <i class="optional"></i>
+> ### commander <Badge type="warning" text="optional" />
 >
 > The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >
@@ -71,18 +69,18 @@ The Deck Data Model describes the properties of an individual deck.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### sideBoard
->
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
->
-> - **Type:** `CardDeck[]`
-> - **Introduced:** `v4.3.0`
-
 > ### releaseDate
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
 > - **Type:** `string | null`
+> - **Introduced:** `v4.3.0`
+
+> ### sideBoard
+>
+> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+>
+> - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
 
 > ### type

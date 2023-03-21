@@ -1,0 +1,23 @@
+[
+  {
+    "name": "Zach Halpern",
+    "avatar": "avatar-zach.jpg",
+    "url": "https://github.com/ZeldaZach",
+    "title": "Lead Developer & Maintainer",
+    "description": "Zach is a hippo fanatic who loves playing with big data and giving back to the community in unique ways. He has worked on MTGJSON since 2016, and has led the design and development of versions 4 and 5. His work can also be seen heavily in the open-source Cockatrice game client."
+  },
+  {
+    "name": "Milo Rue",
+    "avatar": "avatar-milo.jpg",
+    "url": "https://github.com/milorue",
+    "title": "GraphQL Developer",
+    "description": "Milo is a TypeScript and React enthusiast who enjoys learning the newest web technologies. In his free time he enjoys hiking, cats, losing at Catan, video games, and e-sports."
+  },
+  {
+    "name": "Eric Lakatos",
+    "avatar": "avatar-eric.jpg",
+    "url": "https://github.com/staghouse",
+    "title": "Documentation Developer",
+    "description": "Eric is a conceptualizer that loves deer, movies, open-source software, and is an avid supporter of the Magic: The Gathering developer community."
+  }
+]

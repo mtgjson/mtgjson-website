@@ -24,39 +24,26 @@ The Enum Values Abstract Model describes the properties that are direct possible
 
 ## Model Overview
 
-```json
+```TypeScript
 {
-  // Enum model name
-  "<Enum Model>": {
-    // Enumerable property name
-    "<Property Key>": string[],
-    ... // More properties
-  },
-  ... // More models
+  [key: string]: Record<string, string[]>
 }
 ```
 
 ## Example Model
 
-```json
+Here is an example model with a reduced payload:
+
+```JSON
 {
   "card": {
-    "borderColor": [
-      "black",
-      "borderless",
-      "gold",
-      "silver",
-      "white"
-    ],
     "colorIdentity": [
       "B",
       "G",
       "R",
       "U",
       "W"
-    ],
-    ... // More properties
-  },
-  ... // More models
+    ]
+  }
 }
 ```

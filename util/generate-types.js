@@ -1,8 +1,6 @@
 import fs from 'fs';
 import { pages } from '../docs/.vitepress/config';
 
-const shiki = require('shiki');
-
 // Convert some incompatible types that we use for documentation clarity but differs from TypeScript types
 const convertIncompatibleTypes = (value) => {
   if (value === 'float') {
@@ -17,91 +15,58 @@ const convertPageNameToNamedType = (name) => {
   return name?.replace(/[\s()]/g, '');
 }
 
-// JSON TypeScript types for documentation
-const awaitJSONTypes = async () => new Promise(async (resolve, reject) => {
-  const jsonTypes = {};
-
-  for(let page of pages) {
-    const propName = convertPageNameToNamedType(page.title);
-
-    if (propName && page.model && page.model.length > 0) {
-      let propValues = '';
-      let isFirst = true;
-
-      page.model.forEach((property) => {
-        const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
-        const propertyType = convertIncompatibleTypes(property.type);
-        const propertyOptional = !!property.optional ? '?' : '';
-
-        if( isFirst ) {
-          isFirst = false;
-          propValues += `${propertyName}${propertyOptional}: ${propertyType};`;
-        } else {
-          propValues += `\n  ${propertyName}${propertyOptional}: ${propertyType};`;
-        }
-      });
-
-      const propString = `type ${propName} = {
-  ${propValues}
-}
-  `.trim();
-
-      const shikiHighlighter = await shiki.getHighlighter({ theme: 'material-palenight' });
-      const shikiCode = shikiHighlighter.codeToHtml(`${propString}`, { lang: 'ts' });
-
-      jsonTypes[propName] = shikiCode;
-    }
-  }
-
-  resolve(jsonTypes);
-});
-
 // True TypeScript type generation
 const generateTrueTypes = () => {
   let props = '';
+  let propsAll = '';
+  let propTypeName = '';
 
   pages.forEach(async (page) => {
-    const propName = convertPageNameToNamedType(page.title);
+    props = '';
+    const propName = propTypeName = convertPageNameToNamedType(page.title);
 
     if (propName && page.model && page.model.length > 0) {
       let propValues = '';
       let propString = '';
 
-      page.model.forEach((property) => {
+      page.model.forEach((property, index) => {
+        const isLastLine = index === page.model.length - 1;
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
         const propertyType = convertIncompatibleTypes(property.type);
         const propertyOptional = !!property.optional ? '?' : '';
+        const propertyValue = `  ${propertyName}${propertyOptional}: ${propertyType};${isLastLine ? '' : '\n'}`;
 
-        propValues += `
-  ${propertyName}${propertyOptional}: ${propertyType};
-        `;
+        propValues += propertyValue;
       });
 
       propString = `
 export type ${propName} = {
-  ${propValues}
-}
-  `;
+${propValues}
+};`;
 
       props += propString;
+      propsAll += propString;
+
+      if( props ) {
+        fs.writeFileSync(
+          `./docs/public/types/${propTypeName}.ts`,
+          `${props.trim()}`
+        );
+      }
     }
+
   });
 
   fs.writeFileSync(
+    `./docs/public/types/AllMTGJSONTypes.ts`,
+    `${propsAll.replace(/};/g, '};\n').trim()}`
+  );
+
+  // Legacy file
+  fs.writeFileSync(
     `./docs/public/static/mtgjson-types.ts`,
-    `${props}
-  `
+    `${propsAll.replace(/};/g, '};\n').trim()}`
   );
 };
 
-const generateJSONTypes = () => {
-  Promise.all([awaitJSONTypes()]).then(result => {
-    fs.writeFileSync(
-      `./docs/.vitepress/theme/static/types.json`,
-      `${JSON.stringify(result[0])}`
-    );
-  })
-}
-
 generateTrueTypes();
-generateJSONTypes();

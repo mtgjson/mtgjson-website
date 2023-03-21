@@ -4,23 +4,20 @@ The MTGJSON documentation website uses [VitePress](https://vitepress.vuejs.org/)
 
 ## Knowledge Requirements
 
+### Required
+
 - Node
 - TypeScript
 - Vue 3 (Composition API)
 - Pinia
-- VitePress
-- Markdown
-- JSON
+- Pug
 - SCSS
+- Markdown
+
+### Optional
+
+- a11y
 - SEO
-- Accessibility
-- MTGJSON Files
-
-## Technical Requirements
-
-- Node
-- npm
-- n
 
 ## IDE Setup
 
@@ -44,15 +41,20 @@ Some files and directories are omitted that do not help understand this current 
 │   └── generate-types.js # Utility to generate TypeScript notations for documentation
 └── docs/ # Home directory, outputs to `/dist`
     ├── **/**/index.md # Directories and their route entry point
-    ├── public/ # Static assets
+    ├── public/ # Public facing files
+    │   ├── favicons/ # All favicon images
     │   ├── images/ # All application images
-    │   │   ├── assets/ # MTGJSON specifics
+    │   │   ├── assets/ # MTGJSON assets
     │   │   ├── avatars/ # User/supporters avatars
     │   │   └── icons/ # General icons
-    │   ├── static/ # Desired public facing assets
-    │   │   └── mtgjson-types.ts # TypeScript types for MTGJSON Data Models
-    │   └── *.* # Any public facing file, like favicons or robots.txt
-    └── .vitepress/ # Main source files for the application
+    │   │
+    │   │ # Deprecated. To be removed
+    │   ├── static/ # Legacy path for MTGJSON documentation TypeScript Types
+    │   │   └── mtgjson-types.ts # All TypeScript Types for MTGJSON Data Models
+    │   │
+    │   ├── types/ # Path to all MTGJSON documentation TypeScript Types
+    │   └── *.* # Any public facing file, like robots.txt
+    └── .vitepress/ # Main config and theme files for Vitepress
         ├── config.js # Main VitePress configuration
         ├── generatePages.js # Polyfill script to generate pages data for search
         ├── generateSidebar.js # Polyfill script to generate the sidebar heirarchy
@@ -60,8 +62,7 @@ Some files and directories are omitted that do not help understand this current 
             ├── components/ # Vue components
             │   └── *.vue # Vue component
             ├── layouts/ # Theme layout for all pages
-            │   ├── Layout.vue # Layout for non-error pages
-            │   └── NotFound.vue # Layout for error page
+            │   └── *.vue # Vue component
             ├── static/ # Static data to power Vue components
             │   └── *.json # JSON data
             ├── styles/ # Visual styling
@@ -74,7 +75,7 @@ Some files and directories are omitted that do not help understand this current 
 
 ## VitePress Configuration
 
-Explaining the configuration as a whole would be best served by directly linking to the [VitePress documentation](https://vitepress.vuejs.org/config/introduction.html).
+Explaining the configuration as a whole would be best served by directly linking to the [VitePress documentation](https://vitepress.dev/reference/site-config).
 
 ## Markdown Files
 
@@ -95,29 +96,7 @@ The structure of a file is simple. Frontmatter on top, everything else below it.
 
 Frontmatter is configuration that begins each markdown file to define meta data for that "route". Such configuration is HTML Head data and Vue component data and state.
 
-You can also change configuration of VitePress by overwriting variables within the frontmatter, such a title, description, etc.
-
-> Remember: Frontmatter goes at the top of any Markdown file.
-
-#### Example
-
-```yaml
-title: Card (Set)
-enum: card
-head:
-  - - meta
-    - property: og:title
-      content: Card (Set)
-  - - meta
-    - name: description
-      content: The Card (Set) Data Model describes the keys and calues of a single card in a set.
-  - - meta
-    - property: og:description
-      content: The Card (Set) Data Model describes the properties of a single card in a set.
-  - - meta
-    - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, card, card set
-```
+You can also change configuration of VitePress by overwriting variables within the frontmatter, such a title, description, and any other meta data that might change on a path-by-path basis based on its content.
 
 ### Markdown Syntax for Documentation Fields
 
@@ -126,7 +105,7 @@ head:
 An example of a property field for a data object field in Markdown:
 
 ```
-> ### artist <i class="optional"></i>
+> ### artist <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
 >
 > The name of the artist that illustrated the card art.  
 >
@@ -134,19 +113,11 @@ An example of a property field for a data object field in Markdown:
 > **Introduced:** `v4.0.0`
 ```
 
-The `<i class="optional"></i>` markup will render a UI change in the property that denotes the property is optional and also power a component that will allow toggling the UI to view or not view these fields.
+The `<Badge type="warning" text="optional" />` markup will render a UI change in the property that denotes the property is optional. The same applies for `<Badge type="danger" text="deprecated" />` that can be used to denote a property is deprecated. Be sure to order them with deprecated first, and then optional. Using the optional Badge is required for properties that we know are optional in order to generate the TypeScript types properly.
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
 If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
-
-#### TypeScript Notations
-
-Use the `<ModelType type='<Model Name>' />` component to render the TypeScript notation for a Data Model where `<Model Name>` is the Data Model, such as `CardAtomic` or `DeckList`.
-
-#### Table of Contents
-
-Include `[[toc]]` near the top of the page, like the other pages, to render out the property headers and use the `<PropertyToggler/>` component right above `[[toc]]` to enable toggling optional properties on the Table of Contents.
 
 ## Pinia Store
 
@@ -156,11 +127,10 @@ We use Pinia to fetch data from MTGJSON API's in order to fill our application d
 
 We use Jest and try our best. Test runs before commits and will fail the commit if necessary.
 
-## Pull Requests
+## Pull Requests/Commit Messages
 
-We like to keep our history as clearly labeled as possible. Here are some examples of PR title formats we appreciate but are not strict about:
+Use common conventions where they succinctly describes what was changed. Here are some generic examples:
 
-- `issue/123: Fixed bug`: "issue" is a branch which a PR handles something where an issue was opened
-- `NS/documentation_updates: Updated README`: "NS" is a branch which a PR handles something with no open issue
-
-Be sure to squash all commits and remove any commit messages that are unclear. Keep the commit title exact and concise.
+- `feat(theme): added logic to a component`
+- `fix(style): fixed issues with styling`
+- `chore(deps): bump dependencies`

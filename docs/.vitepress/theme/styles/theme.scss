@@ -1,131 +1,53 @@
 @import 'https://cdn.jsdelivr.net/npm/keyrune@latest/css/keyrune.css';
 
-@import './vars';
-@import './reset';
-@import './custom-blocks';
-@import './typography';
-@import './placeholders';
-@import './sidebar';
-@import './code';
-@import './blockquote';
-@import './pages';
+@import 'vars';
 
-html, body {
-  min-width: 320px;
-}
-
-html, body, #app, .theme-container {
-  height: 100%;
-
-  @media (max-width: 719px) {
-    html, body, #app, .theme-container {
-      height: auto;
-    }
-  }
-}
-
-body {
-  font-family: var(--font-base);
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  font-size: 16px;
-}
-
-ol, ul {
-  margin-left: 1rem;
-
-  &:empty {
-    margin: 0;
-  }
-
-  li {
-    list-style: disc;
-  }
-
-  ol, ul {
-    li {
-      list-style: circle;
-    }
-  }
-}
-
+// Anchor links
 a {
-  text-decoration: underline;
-
-  &:hover,
-  &:focus,
-  &.sidebar-link,
-  &.sidebar-heading {
-    text-decoration: none;
-  }
-
-  &.sidebar-link,
-  &.sidebar-heading {
-    display: inline;
-  }
-
-  &.header-anchor {
-    opacity: 0;
-    margin-left: -0.9em;
-  }
-
-  span {
-    display: inline-block;
+  &:link:not(.pager-link) {
+    &:hover {
+      text-decoration: underline;
+    }
   }
 }
 
-small {
-  font-size: 14px;
-  line-height: 1rem;
+// Code styles - Vitepress has a lot of specific rules to override
+.vp-doc div[class*="language-"],
+code,
+pre {
+  border-radius: var(--common-radius) !important;
+  line-height: 1.25rem;
+  font-weight: 600;
+  word-break: break-word;
 }
 
-.no-result {
-  color: var(--accent-color);
-}
+pre {
+  padding: 1rem !important;
+  margin-bottom: 1rem;
+  overflow-x: scroll;
 
-hr {
-  border: 0;
-  border-top: 1px solid var(--table-border-color);
-}
-
-em {
-  font-style: italic;
-}
-
-img {
-  user-select: none;
-
-  &.avatar {
-    max-width: 100px !important;
-    border-radius: 100%;
-    float: left;
-    margin-right: 2rem;
-  }
-
-  &[alt='logo'] {
-    max-width: 275px !important;
-    margin-left: 0;
-  }
-
-  &.img-license {
-    max-width: 100px;
-    height: auto;
-    margin-bottom: 1rem;
+  code {
+    padding: 0;
   }
 }
 
-// iframes
-.doc-iframe {
-  margin: 1rem 0;
-  border-radius: var(--common-radius);
-  overflow: hidden;
-
-  &.graphql-playground {
-    margin-bottom: 0;
-  }
+div[class*="language-"],
+code {
+  background-color: var(--code-bg-color) !important;
 }
 
-// Call to action buttons
+code {
+  color: var(--code-text-color) !important;
+  padding: 0.25rem 0.5rem !important;
+  font-size: 12px !important;
+}
+
+.lang {
+  top: 0rem !important;
+  right: 0.45rem !important;
+}
+
+// CTA
 .cta-btn {
   display: inline-block;
   vertical-align: center;
@@ -139,84 +61,211 @@ img {
   background-color: transparent;
   color: var(--accent-color);
   font-size: 1rem;
-  font-weight: bold;
+  font-weight: 600;
   cursor: pointer;
-  transition: all .25s;
+  transition: all 0.25s;
 
   &:hover,
   &:focus {
-    color: var(--light-color);
-    border-color: var(--light-color);
+    color: var(--white-color);
+    background-color: var(--accent-color);
   }
 
   &:focus {
     outline: 0;
   }
+}
 
-  &.light {
+// Navbar
+.VPNavBar {
+  .title {
+    display: flex;
+    border-bottom: var(--vp-c-divider);
+  }
+}
 
-    &:hover,
-    &:focus {
-      color: var(--dark-color);
-      border-color: var(--dark-color);
+// Sidebar
+.VPSidebar {
+  .VPSidebarItem {
+    .VPLink {
+      &,
+      & > .text {
+        &:hover {
+          color: var(--vp-c-text-1) !important;
+        }
+      }
+
+      h2 {
+        font-size: 1rem;
+      }
+    }
+
+    &.is-active {
+      & > .item {
+        .VPLink {
+          &:hover {
+            &,
+            & .text {
+              color: var(--vp-c-brand) !important;
+              text-decoration: none;
+            }
+          }
+        }
+      }
     }
   }
 }
 
-// Images for links
-.link {
-  &-inline-image {
-    display: inline-flex;
-    padding-right: 1.5rem;
-    background-size: 1rem 1rem;
-    background-position: right center;
-    background-repeat: no-repeat;
+// Appearance/Social links overlay on mobile
+.VPNavScreenAppearance {
+  border-radius: var(--common-radius) !important;
+}
 
-    &.paypal {
-      background-image: url('/images/icons/icon-paypal.svg');
-    }
+// Content
+.VPDoc {
+  // Fix headings
+  h4 {
+    margin-top: 1rem;
+  }
 
-    &.patreon {
-      background-image: url('/images/icons/icon-patreon.svg');
-    }
+  // Fix edit link colors
+  .edit-link-button {
+    color: var(--vp-c-text-2);
 
-    &.github {
-      background-image: url('/images/icons/icon-github.svg');
+    &:hover {
+      color: var(--vp-c-text-1);
     }
   }
-}
 
-// Accent color class
-.accent {
-  color: var(--accent-color);
-}
+  // Aside/Outline
+  .aside {
+    .outline-link {
+      cursor: pointer;
 
-// Hide/Show elements
-.hidden-property-siblings {
-  & ~ blockquote {
-    display: none !important;
-  }
-}
-.hidden,
-.desktop-hide {
-  display: none !important;
-}
+      &.active {
+        color: var(--vp-c-brand);
 
-@media (max-width: 719px) {
-  .theme-container {
-    &.sidebar-open {
-      .sidebar {
-        transform: translateX(0);
-        border-right: 1px solid var(--bg-border-color);
+        &:hover {
+          color: var(--vp-c-brand);
+          text-decoration: none;
+        }
       }
     }
   }
 
-  .desktop-hide {
-    display: block !important;
+  // Images for links
+  .link {
+    &-inline-image {
+      display: inline-flex;
+      padding-right: 1.5rem;
+      background-size: 1rem 1rem;
+      background-position: right center;
+      background-repeat: no-repeat;
+
+      &.paypal {
+        background-image: url('/images/icons/icon-paypal.svg');
+      }
+
+      &.patreon {
+        background-image: url('/images/icons/icon-patreon.svg');
+      }
+
+      &.github {
+        background-image: url('/images/icons/icon-github.svg');
+      }
+    }
   }
 
-  .mobile-hide {
-    display: none !important;
+  // Blockquotes
+  blockquote {
+    border-radius: var(--common-radius);
+    border: 1px solid var(--vp-c-divider);
+    background-color: var(--vp-custom-block-info-bg);
+    margin-bottom: 1.5rem;
+    padding: 1rem;
+
+    .VPBadge {
+      text-transform: capitalize;
+      margin-left: 0.5rem;
+      margin-top: 0.4rem;
+    }
+
+    h3 {
+      margin-top: 0;
+      font-size: 1rem;
+    }
+
+    p {
+      font-size: 14px;
+      margin-top: 0.5rem;
+    }
+
+    ul {
+      li {
+        font-size: 14px;
+        color: var(--vp-c-text-2);
+      }
+    }
+  }
+
+  // Custom blocks, like info and tips
+  .custom-block {
+    margin-bottom: 1.5rem;
+    border-radius: var(--common-radius);
+    border-color: var(--vp-c-divider);
+
+    .custom-block-title {
+      color: var(--vp-c-text-1);
+    }
+
+    a {
+      color: var(--vp-c-brand);
+    }
+  }
+}
+
+// Dark themeing
+html.dark {
+  .VPSwitch {
+    .icon {
+      background-color: var(--dark-color);
+      border-color: var(--vp-c-divider);
+    }
+  }
+}
+
+@media (max-width: 399px) {
+  .VPDoc {
+    blockquote {
+      .VPBadge {
+        display: block;
+        margin-left: 0;
+        margin-top: 0.5rem;
+        text-align: center;
+
+        &:first-of-type {
+          margin-top: 1rem;
+        }
+      }
+
+      h3 {
+        .header-anchor {
+          display: none;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1280px) {
+  .VPDoc {
+    // Hide TOC for desktop in favor of aside
+    #on-this-page,
+    #model-index {
+      &,
+      & + .table-of-contents {
+        display: none;
+      }
+    }
   }
 }

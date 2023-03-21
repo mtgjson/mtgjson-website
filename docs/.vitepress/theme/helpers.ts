@@ -1,32 +1,8 @@
-export const hashRE: RegExp = /#.*$/;
-export const extRE: RegExp = /\.(md|html)$/;
-export const endingSlashRE: RegExp = /\/$/;
-export const outboundRE: RegExp = /^(https?:|mailto:|tel:)/;
-
-// Custom slugify function for MarkdownItAnchor.
-export const slugify = (str: string) => {
-  return (
-    str
-      // Remove control characters
-      .replace(/[\u0000-\u001f]/g, '')
-      // Replace special characters
-      .replace(/[\s~`!@#$%^&*()\-_+=[\]{}|\\;:"'<>,.?/]+/g, '-')
-      // Remove continuous separators
-      .replace(/\-{2,}/g, '-')
-      // Remove prefixing and trailing separators
-      .replace(/^\-+|\-+$/g, '')
-      // ensure it doesn't start with a number (#121)
-      .replace(/^(\d)/, '_$1')
-      // lowercase
-      .toLowerCase()
-  );
-};
-
 /**
  * A little different than the source but works
  * https://jsbin.com/wowezadolo/edit?js,console
  */
-export const sort = (value: string, dataToSort: any[]): any[] => {
+export const dataSort = (value: string, dataToSort: any[]): any[] => {
   if (!value || value.length < 1 || typeof value !== 'string') {
     return dataToSort;
   }
@@ -50,7 +26,7 @@ export const sort = (value: string, dataToSort: any[]): any[] => {
   });
 };
 
-export const search = (terms: string, searchableData: any[]) => {
+export const dataSearch = (terms: string, searchableData: any[]) => {
   const searchTerms = terms.toLowerCase();
 
   if (searchTerms.length < 1) {
@@ -70,13 +46,13 @@ export const search = (terms: string, searchableData: any[]) => {
   });
 };
 
-export const filter = (filter: string, dataToFilter: any[]) => {
+export const dataFilter = (filter: string, dataToFilter: any[]) => {
   return filter.length === 0
     ? dataToFilter // No filter, return all data
     : dataToFilter.filter((cur: any) => cur.type === filter);
 };
 
-export const prettifyType = (str: string) => {
+export const formatType = (str: string) => {
   return (
     str
       // split each word by underscores
@@ -86,30 +62,6 @@ export const prettifyType = (str: string) => {
       // join them back with a space
       .join(' ')
   );
-};
-
-export const formatDateToPretty = (stringDate: string): string => {
-  const isoDate: Date = new Date(stringDate);
-  const rawDate: Date = new Date(isoDate.getTime() - isoDate.getTimezoneOffset() * -60000);
-  const year: number = rawDate.getFullYear();
-  const date: number = rawDate.getDate();
-  const months: string[] = [
-    'January',
-    'February',
-    'March',
-    'April',
-    'May',
-    'June',
-    'July',
-    'August',
-    'September',
-    'October',
-    'November',
-    'December',
-  ];
-  const month: string = months[rawDate.getMonth()];
-
-  return `${month} ${date}, ${year}`;
 };
 
 export const formatTime = (time: string, overrideTime?: string): string => {
@@ -164,33 +116,4 @@ export const formatTime = (time: string, overrideTime?: string): string => {
       }
     }
   }
-};
-
-export const normalize = (path: string): string => {
-  return decodeURI(path).replace(hashRE, '').replace(extRE, '');
-};
-
-export const getHash = (path: string): string => {
-  const match: RegExpMatchArray = path.match(hashRE);
-
-  if (match) {
-    return match[0];
-  } else {
-    return '';
-  }
-};
-
-export const isExternal = (path: string): boolean => {
-  return outboundRE.test(path);
-};
-
-export const isActive = (route: any, path: string): boolean => {
-  const routeHash = route.hash;
-  const linkHash = getHash(path);
-  if (linkHash && routeHash !== linkHash) {
-    return false;
-  }
-  const routePath = normalize(route.path);
-  const pagePath = normalize(path);
-  return routePath === pagePath;
 };

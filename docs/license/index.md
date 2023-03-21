@@ -17,9 +17,9 @@ head:
 
 # MTGJSON License
 
-By using this website and its content you agree to the following MIT License:
+By using this website and its content you agree to the following License:
 
-<img class="img-license" src="/images/assets/license.jpg" alt="MIT License logo" title="MIT License" />
+<img class="img-license" src="/images/assets/license.jpg" alt="MIT License logo" title="MIT License" width="150" height="100" />
 
 Copyright &copy; 2018 &ndash; Present, Zach Halpern, Eric Lakatos
 
