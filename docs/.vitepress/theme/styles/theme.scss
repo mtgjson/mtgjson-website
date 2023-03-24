@@ -83,6 +83,9 @@ code {
     border-bottom: var(--vp-c-divider);
   }
 }
+.content-body {
+  transition: none !important;
+}
 
 // Sidebar
 .VPSidebar {
