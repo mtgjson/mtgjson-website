@@ -19,7 +19,7 @@ main.home
       ul
         li
           h3 Portable Formats
-          p You can download our data in your favorite format from our <a href="https://mtgjson.com/api/v5/">"API-like" server</a>. We support JSON, CSV's, and even database files.
+          p You can download our data in your favorite format from our <a href="https://mtgjson.com/api/v5/"  target="_blank" rel="noreferrer noopener">"API-like" server</a>. We support JSON, CSV's, and even database files.
         li
           h3 Daily Updates
           p MTGJSON files are built daily so you can keep your projects in sync as new cards, sets, rules, and other updates are added.
