@@ -28,6 +28,7 @@ export type CardToken = {
   loyalty?: string;
   name: string;
   number: string;
+  orientation?: string;
   otherFaceIds?: string[];
   power?: string;
   promoTypes?: string[];

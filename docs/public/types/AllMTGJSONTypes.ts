@@ -5,6 +5,7 @@ export type CardAtomic = {
   colorIndicator?: string[];
   colors: string[];
   convertedManaCost: number;
+  defense?: string;
   edhrecRank?: number;
   edhrecSaltiness?: number;
   faceConvertedManaCost?: number;
@@ -54,6 +55,7 @@ export type CardDeck = {
   colors: string[];
   convertedManaCost: number;
   count: number;
+  defense?: string;
   duelDeck?: string;
   edhrecRank?: number;
   edhrecSaltiness?: number;
@@ -139,6 +141,7 @@ export type CardSet = {
   colorIndicator?: string[];
   colors: string[];
   convertedManaCost: number;
+  defense?: string;
   edhrecRank?: number;
   edhrecSaltiness?: number;
   faceConvertedManaCost?: number;
@@ -240,6 +243,7 @@ export type CardToken = {
   loyalty?: string;
   name: string;
   number: string;
+  orientation?: string;
   otherFaceIds?: string[];
   power?: string;
   promoTypes?: string[];

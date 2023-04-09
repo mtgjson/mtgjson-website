@@ -11,6 +11,7 @@ export type CardDeck = {
   colors: string[];
   convertedManaCost: number;
   count: number;
+  defense?: string;
   duelDeck?: string;
   edhrecRank?: number;
   edhrecSaltiness?: number;

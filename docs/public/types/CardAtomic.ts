@@ -5,6 +5,7 @@ export type CardAtomic = {
   colorIndicator?: string[];
   colors: string[];
   convertedManaCost: number;
+  defense?: string;
   edhrecRank?: number;
   edhrecSaltiness?: number;
   faceConvertedManaCost?: number;
