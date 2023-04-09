@@ -125,6 +125,13 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 > - **Type:** `number`
 > - **Introduced:** `v4.4.1`
 
+> ### defense <Badge type="warning" text="optional" />
+>
+> The defense of the card. Used on card [battle](https://mtg.fandom.com/wiki/Battle) cards.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
+
 > ### duelDeck <Badge type="warning" text="optional" />
 >
 > The indicator for which duel deck the card is in.

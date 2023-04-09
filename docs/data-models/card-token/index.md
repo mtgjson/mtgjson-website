@@ -252,6 +252,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### orientation <Badge type="warning" text="optional" />
+>
+> The orientation of the card.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
+
 > ### otherFaceIds <Badge type="warning" text="optional" />
 >
 > A list of card `uuid`'s to this card's counterparts, such as transformed or melded faces.
