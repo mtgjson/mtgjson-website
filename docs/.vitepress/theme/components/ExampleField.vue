@@ -63,6 +63,7 @@ const toggleShowAll = (): void => {
 
   code {
     line-height: 1rem !important;
+    margin-left: 0;
   }
 
   .show-btn {
