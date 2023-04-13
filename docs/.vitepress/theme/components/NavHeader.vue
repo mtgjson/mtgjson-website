@@ -1,14 +1,23 @@
 <template lang="pug">
 .nav-header
   .nav-header-wrapper
-    a.home-link(href="/")
+    a.home-link(
+      href="/"
+      aria-label="Go to homepage"
+    )
       img(
         src="/images/assets/logo-mtgjson.svg"
+        alt="MTGJSON logo"
         width="50"
+        height="40"
       )
     .nav-header-content
       .title MTGJSON
-      a.version(v-if="version" href="/changelogs/mtgjson-v5/") v{{ version }}
+      a.version(
+        v-if="version"
+        aria-label="Go to MTGJSON changelog"
+        href="/changelogs/mtgjson-v5/"
+      ) v{{ version }}
       .version(v-else) &nbsp;
 </template>
 

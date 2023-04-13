@@ -3,7 +3,12 @@ main.home
   section.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
-        img(src="/images/assets/logo-mtgjson.svg" width="200" height="200")
+        img(
+          src="/images/assets/logo-mtgjson.svg"
+          alt="MTGJSON logo"
+          width="200"
+          height="138"
+        )
       h1 MTGJSON
       span.version(v-if="version")
         a(href="/changelogs/mtgjson-v5/") v{{ version }}
@@ -50,22 +55,22 @@ main.home
       h2 Contributing
       ul
         li
-          img(alt="Github logo" src="/images/icons/icon-github.svg")
+          img(alt="Github logo" width="50" height="50" src="/images/icons/icon-github.svg")
           a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
             h3 GitHub
           p Contribute code to the project and get site recognition.
         li
-          img(alt="Discord logo" src="/images/icons/icon-discord.svg")
+          img(alt="Discord logo" width="50" height="50" src="/images/icons/icon-discord.svg")
           a(href="https://mtgjson.com/discord/" target="_blank")
             h3 Discord
           p Discuss MTGJSON, get updates, report issues and more.
         li
-          img(alt="Patreon logo" src="/images/icons/icon-patreon.svg")
+          img(alt="Patreon logo" width="50" height="50" src="/images/icons/icon-patreon.svg")
           a(href="https://www.patreon.com/MTGJSON" target="_blank" rel="noreferrer noopener")
             h3 Patreon
           p Pledge to our Patreon and get access to our GraphQL API.
         li
-          img(alt="Paypal logo" src="/images/icons/icon-paypal.svg")
+          img(alt="Paypal logo" width="50" height="50" src="/images/icons/icon-paypal.svg")
           a(href="https://www.paypal.me/Zachhalpern" target="_blank" rel="noreferrer noopener")
             h3 PayPal
           p Donate to MTGJSON and help keep this project free to all.
@@ -83,6 +88,7 @@ main.home
               :href="member.url",
               rel="noreferrer noopener",
               target="_blank"
+              :aria-label="`${member.name}'s GitHub profile`"
             )
               img.lazy(
                 :data-src="`/images/avatars/${member.avatar}`",
@@ -96,6 +102,7 @@ main.home
                 :href="member.url",
                 rel="noreferrer noopener",
                 target="_blank"
+                :aria-label="`${member.name}'s GitHub profile`"
               )
                 h3 {{ member.name }}
               span {{ member.title }}
@@ -113,7 +120,8 @@ main.home
             :href="contributor.url",
             rel="noopener noreferrer",
             target="_blank"
-          ) {{ `${contributor.username}'s GitHub profile` }}
+            :aria-label="`${contributor.username}'s GitHub profile`"
+          )
             img.lazy(
               :data-src="contributor.avatar",
               :alt="`${contributor.username}'s avatar`",
@@ -189,7 +197,7 @@ main.home
     .content-wrapper
       footer
         .home-footer-logo
-          img(src="/images/assets/logo-mtgjson.svg" width="200" height="200")
+          img(src="/images/assets/logo-mtgjson.svg" width="200" height="200" alt="MTGJSON logo")
           span MTGJSON
 
         ul
