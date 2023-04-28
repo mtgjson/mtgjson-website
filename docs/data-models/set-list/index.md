@@ -163,7 +163,7 @@ The Set List Data Model describes the meta data properties of an individual [Set
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
-> - **Type:** `SealedProduct`
+> - **Type:** `SealedProduct[]`
 > - **Introduced:** `v5.1.0`
 
 > ### tcgplayerGroupId <Badge type="warning" text="optional" />

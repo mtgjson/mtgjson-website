@@ -192,7 +192,7 @@ The Set Data Model describes the properties of an individual set.
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
-> - **Type:** `SealedProduct`
+> - **Type:** `SealedProduct[]`
 > - **Introduced:** `v5.2.0`
 
 > ### tcgplayerGroupId <Badge type="warning" text="optional" />
