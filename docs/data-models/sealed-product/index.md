@@ -38,7 +38,6 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > The category of this product.
 >
 > - **Type:** `string`
-> - <ExampleField type='category'/>
 > - **Introduced:** `v5.2.1`
 
 > ### identifiers
