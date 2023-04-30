@@ -42,3 +42,5 @@ MTGJSON-Brand-Assets/
 dist/
 .temp/
 docs/.vitepress/cache/
+docs/public/static/*.ts
+docs/public/types/*.ts
