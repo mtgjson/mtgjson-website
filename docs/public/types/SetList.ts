@@ -17,7 +17,7 @@ export type SetList = {
   name: string;
   parentCode?: string;
   releaseDate: string;
-  sealedProduct?: SealedProduct;
+  sealedProduct?: SealedProduct[];
   tcgplayerGroupId?: number;
   totalSetSize: number;
   translations: Translations;

@@ -406,7 +406,7 @@ export type Set = {
   name: string;
   parentCode?: string;
   releaseDate: string;
-  sealedProduct?: SealedProduct;
+  sealedProduct?: SealedProduct[];
   tcgplayerGroupId?: number;
   tokens: CardToken[];
   tokenSetCode?: string;
@@ -434,7 +434,7 @@ export type SetList = {
   name: string;
   parentCode?: string;
   releaseDate: string;
-  sealedProduct?: SealedProduct;
+  sealedProduct?: SealedProduct[];
   tcgplayerGroupId?: number;
   totalSetSize: number;
   translations: Translations;
