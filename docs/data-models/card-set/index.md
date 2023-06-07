@@ -506,7 +506,7 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### relatedCards
+> ### relatedCards <Badge type="warning" text="optional" />
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
@@ -520,7 +520,7 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
 
-> ### rulings
+> ### rulings <Badge type="warning" text="optional" />
 >
 > A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
