@@ -68,11 +68,11 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v5.2.0`
 
-> ### releaseDate
+> ### releaseDate <Badge type="warning" text="optional" />
 >
-> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product. Returns `null` if the set was not formally released as a product.
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product. Not included if the set was not formally released as a product.
 >
-> - **Type:** `string | null`
+> - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
 > ### subtype <Badge type="warning" text="optional" />
