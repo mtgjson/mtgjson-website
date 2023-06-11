@@ -281,7 +281,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
 
-> ### relatedCards
+> ### relatedCards <Badge type="warning" text="optional" />
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
