@@ -110,6 +110,13 @@ The Legalities Data Model describes the properties of legalities of a card in va
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### oathbreaker <Badge type="warning" text="optional" />
+>
+> Legality of the card in the [Oathbreaker](https://magic.wizards.com/en/formats/oathbreaker) play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.0`
+
 > ### oldschool <Badge type="warning" text="optional" />
 >
 > Legality of the card in the [Old School](https://mtg.fandom.com/wiki/Old_School) play format.
@@ -120,6 +127,13 @@ The Legalities Data Model describes the properties of legalities of a card in va
 > ### pauper <Badge type="warning" text="optional" />
 >
 > Legality of the card in the [Pauper](https://magic.wizards.com/en/formats/pauper) play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+
+> ### paupercommander <Badge type="warning" text="optional" />
+>
+> Legality of the card in the [Pauper Commander](https://mtg.fandom.com/wiki/Pauper_Commander) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

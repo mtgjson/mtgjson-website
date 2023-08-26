@@ -138,7 +138,7 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.2`
 
-> ### languages
+> ### languages <Badge type="warning" text="optional" />
 >
 > The languages the set was printed in.
 >

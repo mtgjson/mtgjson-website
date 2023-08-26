@@ -6,10 +6,10 @@ head:
       content: Booster
   - - meta
     - name: description
-      content: The Booster Abstract Model describes the properties of how a Set booster pack may be constructed.
+      content: The Booster Abstract Model describes the properties of how a Set's booster pack may be constructed.
   - - meta
     - property: og:description
-      content: The Booster Abstract Model describes the properties of how a Set booster pack may be constructed.
+      content: The Booster Abstract Model describes the properties of how a Set's booster pack may be constructed.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, booster
@@ -17,7 +17,7 @@ head:
 
 # Booster
 
-The Booster Abstract Model describes the properties of how a [Set](/data-models/set/) booster pack may be constructed.
+The Booster Abstract Model describes the properties of how a [Set](/data-models/set/)'s booster pack may be constructed.
 
 - **Parent file:** [Set](/data-models/set/)
 - **Parent model:** `booster`
@@ -32,11 +32,7 @@ The Booster Abstract Model describes the properties of how a [Set](/data-models/
     boosters: [
       {
         // Card contents of a booster pack
-        contents: {
-          // Amount of this cards in this configuration, using the sheet name as a key
-          [key: string]: number,
-          ... // More sheet names
-        },
+        contents: Record<string, number>, // Record key is rarity and value is weight of the card
         // Odds of getting this configuration against other configurations
         weight: number
       },
@@ -48,16 +44,16 @@ The Booster Abstract Model describes the properties of how a [Set](/data-models/
     sheets: {
       // A sheet of cards for use in a booster, using the sheet name as the key
       [key: string]: {
+        // If the pack has mulitples of the same card
+        allowDuplicates: boolean,
         // Colors of the sheet need to be balanced
         balanceColors: boolean,
         // Cards used on a sheet
-        cards: {
-          // Card uuid as the key and and a weight as its value
-          [key: string]: number,
-          ... // More cards
-        },
-        // Is the sheet foiled?
+        cards: Record<string, number>, // Record key is the uuid of a card and weight is the value
+        // If the sheet is foiled
         foil: boolean,
+        // Contents are guaranteed
+        fixed: boolean,
         // Sum of all card weights
         totalWeight: number
       },

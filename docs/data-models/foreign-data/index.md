@@ -78,7 +78,7 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 
 > ### type <Badge type="warning" text="optional" />
 >
-> The foreign type of the card, including any supertypes and subtypesa and are given a ` - ` delimiter if appropriate.
+> The foreign type of the card, including any supertypes and subtypes, and are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

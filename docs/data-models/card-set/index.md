@@ -132,6 +132,14 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
 
+> ### duelDeck <Badge type="warning" text="optional" />
+>
+> The indicator for which duel deck the card is in.
+>
+> - **Type:** `string`
+> - <ExampleField type='duelDeck'/>
+> - **Introduced:** `v4.2.0`
+
 > ### edhrecRank <Badge type="warning" text="optional" />
 >
 > The card rank on [EDHRec](https://www.edhrec.com).

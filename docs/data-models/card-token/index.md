@@ -214,6 +214,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
+> ### isTextless <Badge type="warning" text="optional" />
+>
+> If the card does not have a text box.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v4.4.2`
+
 > ### keywords <Badge type="warning" text="optional" />
 >
 > A list of keywords found on the card.
@@ -265,6 +272,20 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
+
+> ### originalText <Badge type="warning" text="optional" />
+>
+> The text on the card as originally printed.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+
+> ### originalType <Badge type="warning" text="optional" />
+>
+> The type of the card as originally printed. Includes any supertypes and subtypes.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
 
 > ### otherFaceIds <Badge type="warning" text="optional" />
 >
