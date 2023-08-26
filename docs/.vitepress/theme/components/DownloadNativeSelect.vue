@@ -38,6 +38,17 @@
         :key="`sqlite-${key + format}`",
         :value="`${api}${fileName}.sqlite.${format}`"
       ) {{ `${fileName}.sqlite.${format}` }}
+    optgroup(label="PSQL")
+      option(
+        :key="`psql`",
+        :value="`${api}${fileName}.psql`"
+      ) {{ `${fileName}.psql` }}
+    optgroup(label="PSQL Compressed")
+      option(
+        v-for="(format, key) in compressedFormats",
+        :key="`psql-${key + format}`",
+        :value="`${api}${fileName}.psql.${format}`"
+      ) {{ `${fileName}.psql.${format}` }}
   select(v-else-if="fileName.includes('Files')", @change="downloadFile")
     option Select a file to download
     optgroup(label="Files Compressed")

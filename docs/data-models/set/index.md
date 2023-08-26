@@ -82,6 +82,13 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
 
+> ### decks
+>
+> All decks associated to the set. See the [Deck](/data-models/deck/) Data Model.
+>
+> - **Type:** `Deck[]`
+> - **Introduced:** `v5.2.1`
+
 > ### isForeignOnly <Badge type="warning" text="optional" />
 >
 > If the set is only available outside the United States of America.

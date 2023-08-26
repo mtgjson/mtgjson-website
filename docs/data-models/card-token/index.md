@@ -40,6 +40,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### artistIds <Badge type="warning" text="optional" />
+>
+> A list of identifiers for the artists that illustrated the card art.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
+
 > ### asciiName <Badge type="warning" text="optional" />
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
@@ -254,7 +261,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### orientation <Badge type="warning" text="optional" />
 >
-> The orientation of the card.
+> The layout direction of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`

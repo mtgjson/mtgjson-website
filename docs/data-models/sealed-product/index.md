@@ -33,11 +33,25 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ## Model Properties
 
+> ### cardCount <Badge type="warning" text="optional" />
+>
+> The number of cards in this product.
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.1`
+
 > ### category <Badge type="warning" text="optional" />
 >
 > The category of this product.
 >
 > - **Type:** `string`
+> - **Introduced:** `v5.2.1`
+
+> ### contents <Badge type="warning" text="optional" />
+>
+> The contents of this product. The contents of a sealed product can vary, see the applicable Data Models for Sealed Product.
+>
+> - **Type:** `Record<string, object[]>`
 > - **Introduced:** `v5.2.1`
 
 > ### identifiers

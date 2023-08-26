@@ -285,7 +285,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
-> ### rulings
+> ### rulings <Badge type="warning" text="optional" />
 >
 > A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >

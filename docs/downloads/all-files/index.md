@@ -27,7 +27,7 @@ You can see a dump of all files, including individual sets and decks by going to
 >
 > File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, organized by a Set's [code](/data-models/set/#code) property.
 >
-> SQL/SQLite downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).
+> SQL, SQLite, and PSQL downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).
 >
 > <DownloadNativeSelect fileName='AllPrintings'/>
 
@@ -36,6 +36,12 @@ You can see a dump of all files, including individual sets and decks by going to
 > File containing a directory of split-out CSV files from the `AllPrintings.json` file, compressed.
 >
 > <DownloadNativeSelect fileName='AllPrintingsCSVFiles'/>
+
+> ### AllPrintingsParquetFiles
+>
+> File containing a directory of split-out Parquet files from the `AllPrintings.json` file, compressed.
+>
+> <DownloadNativeSelect fileName='AllPrintingsParquetFiles'/>
 
 > ### AllDeckFiles
 >
@@ -54,6 +60,12 @@ You can see a dump of all files, including individual sets and decks by going to
 > File containing all prices of cards in various formats organized by a card's `uuid` property. See the [All Prices](/abstract-models/all-prices/) Abstract Model for the model of returned data.
 >
 > <DownloadNativeSelect fileName='AllPrices'/>
+
+> ### AllPricesToday
+>
+> File containing all prices, **for the current day**, of cards in various formats organized by a card's `uuid` property. See the [All Prices](/abstract-models/all-prices/) Abstract Model for the model of returned data.
+>
+> <DownloadNativeSelect fileName='AllPricesToday'/>
 
 > ### AllSetFiles
 >
