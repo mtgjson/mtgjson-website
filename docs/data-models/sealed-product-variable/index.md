@@ -20,13 +20,13 @@ head:
 The Sealed Product (Variable) Data Model describes the variable product properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
 
 - **Parent model:** [Sealed Product](/data-models/sealed-product/)
-- **Parent property:** `sealed`
+- **Parent property:** `variable`
 
 ## TypeScript Model
 
 ::: details Show/Hide Model
 
-<<< @/public/types/SealedProductSealed.ts{TypeScript}
+<<< @/public/types/SealedProductVariable.ts{TypeScript}
 
 :::
 
