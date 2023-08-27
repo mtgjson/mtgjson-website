@@ -2,11 +2,11 @@
 
 @import 'vars';
 
-// Anchor links
+// Next/Prev buttons fix
 a {
-  &:link:not(.pager-link) {
+  &.pager-link {
     &:hover {
-      text-decoration: underline;
+      text-decoration: none !important;
     }
   }
 }
