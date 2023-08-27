@@ -230,6 +230,7 @@ defineExpose({
 
       input {
         border-radius: var(--common-radius);
+        border-color: var(--input-border-color);
 
         &::placeholder {
           color: var(--vp-c-text-1);

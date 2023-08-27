@@ -24,10 +24,13 @@
   --search-results-max-height: 400px;
   --search-height: 34px;
 
-  // Select Component
+  // Selects
   --select-bg-color: var(--white-color);
   --select-border-color: var(--vp-c-divider);
   --select-text-color: var(--dark-color);
+
+  // Inputs
+  --input-border-color: var(--vp-c-divider);
 
   // Data Presentation
   --code-bg-color: var(--gray-4-color);
@@ -47,14 +50,18 @@
 
   // VitePress overrides
   --vp-c-brand: var(--accent-color);
+  --vp-c-brand-1: var(--accent-color);
+  --vp-c-brand-2: var(--accent-color);
   --vp-c-brand-light: var(--accent-color);
   --vp-c-brand-lighter: var(--accent-color);
   --vp-c-brand-dark: var(--accent-color);
   --vp-c-brand-darker: var(--accent-color);
   --vp-c-text-code: var(--yellow-color);
   --vp-input-switch-bg-color: var(--vp-c-bg-alt);
-  --vp-badge-danger-bg: transparent;
-  --vp-badge-warning-bg: transparent;
+  --vp-badge-danger-bg: var(--white-color);
+  --vp-badge-danger-border: var(--vp-badge-danger-text);
+  --vp-badge-warning-bg: var(--white-color);
+  --vp-badge-warning-border: var(--vp-badge-warning-text);
   --vp-badge-info-bg: transparent;
   --vp-badge-tip-bg: transparent;
   --vp-code-font-size: 12px;
@@ -70,11 +77,17 @@ html.dark {
   --vp-custom-block-warning-bg: var(--dark-2-color);
   --vp-backdrop-bg-color: var(--dark-2-alpha-color);
   --vp-badge-warning-border: var(--yellow-color);
+  --vp-badge-warning-bg: var(--dark-color);
   --vp-badge-warning-text: var(--yellow-color);
+  --vp-badge-danger-bg: var(--dark-color);
 
-  // Select Component
+  // Selects
   --select-bg-color: var(--dark-color);
+  --select-border-color: var(--black-color);
   --select-text-color: var(--white-color);
+
+  // Inputs
+  --input-border-color: var(--black-color);
 
   // Version
   --version-color: var(--gray-3-color);

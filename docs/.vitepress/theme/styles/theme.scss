@@ -146,6 +146,15 @@ code {
     margin-top: 1rem;
   }
 
+  // Fix links
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
+  }
+
   // Fix edit link colors
   .edit-link-button {
     color: var(--vp-c-text-2);
@@ -198,14 +207,15 @@ code {
   blockquote {
     border-radius: var(--common-radius);
     border: 1px solid var(--vp-c-divider);
-    background-color: var(--vp-custom-block-info-bg);
+    background-color: var(--vp-sidebar-bg-color);
     margin-bottom: 1.5rem;
     padding: 1rem;
 
     .VPBadge {
-      text-transform: capitalize;
       margin-left: 0.5rem;
-      margin-top: 0.4rem;
+      border-width: 2px !important;
+      font-weight: bold !important;
+      float: right;
     }
 
     h3 {
@@ -232,6 +242,7 @@ code {
     margin-bottom: 1.5rem;
     border-radius: var(--common-radius);
     border-color: var(--vp-c-divider);
+    background-color: var(--vp-sidebar-bg-color);
 
     .custom-block-title {
       color: var(--vp-c-text-1);
