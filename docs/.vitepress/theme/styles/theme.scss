@@ -126,6 +126,20 @@ code {
   border-radius: var(--common-radius) !important;
 }
 
+// TOC/Outline
+.VPDocOutlineDropdown button {
+  border-color: var(--accent-color) !important;
+  background-color: transparent !important;
+  color: var(--accent-color) !important;
+  font-weight: bold !important;
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: var(--accent-color) !important;
+    color: var(--white-color) !important;
+  }
+}
+
 // Content
 .VPDoc {
   // Fix headings
@@ -203,6 +217,7 @@ code {
     p {
       font-size: 14px;
       margin-top: 0.5rem;
+      font-weight: 500;
     }
 
     ul {

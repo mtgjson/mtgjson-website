@@ -17,7 +17,7 @@ head:
 
 # Sealed Product (Deck)
 
-The Sealed Product (Deck) Data Model describes the deck product properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
+The Sealed Product (Deck) Data Model describes the deck product properties for the purchaseable product for a [Sealed Product](/data-models/sealed-product/) Data Model.
 
 - **Parent model:** [Sealed Product](/data-models/sealed-product/)
 - **Parent property:** `deck`
@@ -37,11 +37,11 @@ The Sealed Product (Deck) Data Model describes the deck product properties for t
 > The name of the product.
 >
 > - **Type:** `string`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.2`
 
 > ### set
 >
 > The set code for the product.
 >
 > - **Type:** `string`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.2`

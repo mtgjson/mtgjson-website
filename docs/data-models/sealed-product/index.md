@@ -38,7 +38,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > The number of cards in this product.
 >
 > - **Type:** `number`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.2`
 
 > ### category <Badge type="warning" text="optional" />
 >
@@ -52,7 +52,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > The contents of this product. The contents of a sealed product can vary, see the applicable Data Models for Sealed Product.
 >
 > - **Type:** `Record<string, object[]>`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.2`
 
 > ### identifiers
 >

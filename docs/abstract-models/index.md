@@ -19,9 +19,7 @@ head:
 
 Abstract Models in MTGJSON describe any JSON object or nested JSON object that provides a non-flat response. As such, they will have two or more levels of nested keys. It is worth noting that some Abstract Models are related directly to their type of file, such as **AllPrices** or **CardTypes**.
 
-## Example
-
-### Model Example
+## Model Overview
 
 Any <strong>Abstract Model</strong> would look similar to this:
 
@@ -30,6 +28,24 @@ Any <strong>Abstract Model</strong> would look similar to this:
   [key, string]: {
     [key, string]: any;
   };
+}
+```
+
+## Example Model
+
+Here is an example model with a reduced payload:
+
+```JSON
+{
+  "card": {
+    "colorIdentity": [
+      "B",
+      "G",
+      "R",
+      "U",
+      "W"
+    ]
+  }
 }
 ```
 

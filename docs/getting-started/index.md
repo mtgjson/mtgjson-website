@@ -31,7 +31,10 @@ Formats are provided via an "API-like" server. JSON can be fetched in your code,
 
 - **JSON**
 - **CSV**
-- **SQL/SQLite**
+- **Parquet**
+- **SQL**
+- **SQLite**
+- **PSQL**
 - **Compressed files**
 
 ## Models

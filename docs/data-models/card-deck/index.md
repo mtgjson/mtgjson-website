@@ -586,6 +586,13 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
+> ### sourceProducts <Badge type="warning" text="optional" />
+>
+> A list of associated Sealed Product `uuid` properties where this card can be found in.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.2`
+
 > ### subsets <Badge type="warning" text="optional" />
 >
 > The names of the subset printings a card is in. Used primarily on "Secret Lair Drop" cards.

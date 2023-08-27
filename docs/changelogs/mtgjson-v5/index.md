@@ -20,6 +20,129 @@ head:
 
 The following is the MTGJSON v5 Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 5.2.2
+
+Release Date: 2023-09-01
+
+### Announcements
+
+**Welcome to v5.2.2!** With this update, we've put a large focus on Sealed Product, both from building it out and documentation. We have also added a few more new properties, new Data Models, Abstract Models, new files (including **AllPricesToday**!) and fixed some bugs. As always, although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis.
+
+### Card Model
+
+#### Added
+
+- Added `artistIds` property to [Card (Deck)](/data-models/card-deck/#artistids), [Card (Set)](/data-models/card-set/#artistids), and [Card (Token)](/data-models/card-token/#artistids)
+- Added `sourceProducts` property to [Card (Deck)](/data-models/card-deck/#sourceproducts), [Card (Set)](/data-models/card-set/#sourceproducts), and [Card (Token)](/data-models/card-token/#sourceproducts)
+- Added missing `duelDeck` property to [Card (Set)](/data-models/card-set/#dueldeck)
+- Added missing `isTextless` property to [Card (Token)](/data-models/card-token/#istextless)
+- Added missing `originalText` property to [Card (Token)](/data-models/card-token/#originaltext)
+- Added missing `originalType` property to [Card (Token)](/data-models/card-token/#originaltype)
+- Added `mcm*` properties to the `identifiers` property for [Card (Token)](/data-models/card-token/). (Our documentation linked these as a possibility however it was not possible until now)
+
+### Set Model
+
+#### Added
+
+- Added `decks` property
+
+#### Changed
+
+- Changed `languages` property to be sorted
+
+### Legalities Model
+
+#### Added
+
+- Added missing `oathbreaker` property
+- Added missing `paupercommander` property
+
+### Booster Model
+
+#### Added
+
+- Added `fixed` property to Booster Sheets
+- Added `allowDuplicates` property to Booster Sheets
+
+#### Changed
+
+- Changed top-level key of `draft` to `default`
+
+### Sealed Product Model
+
+Sealed Product is now more documented. More Data Models have been created to describe the `contents` property of a top-level Sealed Product Data Model.
+
+#### Added
+
+- Added `cardCount` property
+- Added missing `contents` property
+
+### Sealed Product (Card) Model
+
+This is a new Data Model describing a Card product within a Sealed Product.
+
+#### Added
+
+- Added `foil` property
+- Added `name` property
+- Added `number` property
+- Added `set` property
+- Added `uuid` property
+
+### Sealed Product (Deck) Model
+
+This is a new Data Model describing a Deck product within a Sealed Product.
+
+#### Added
+
+- Added `name` property
+- Added `set` property
+
+### Sealed Product (Other) Model
+
+This is a new Data Model describing other types of products within a Sealed Product. An example would be a Spindown counter within a Bundle.
+
+#### Added
+
+- Added `name` property
+
+### Sealed Product (Pack) Model
+
+This is a new Data Model describing a Pack product within a Sealed Product.
+
+#### Added
+
+- Added `code` property
+- Added `set` property
+
+### Sealed Product (Sealed) Model
+
+This is a new Data Model describing a Sealed product within a Sealed Product.
+
+#### Added
+
+- Added `count` property
+- Added `name` property
+- Added `set` property
+- Added `uuid` property
+
+### Sealed Product (Variable) Model
+
+This is a new **Abstract Model** describing a variable product within a Sealed Product. Variable products are products with different configurations within a Sealed Product.
+
+### AllPrintingsParquetFiles
+
+A series of new files formatted for [Parquet](https://www.databricks.com/glossary/what-is-parquet).
+
+### AllPriceToday
+
+A new file containing card prices for all cards only for the current day.
+
+### Misc
+
+- Handle crashes if fields are not found
+- Handle error exceptions with Scryfall
+
 ## 5.2.1
 
 Release Date: 2023-02-12
@@ -329,7 +452,7 @@ Release Date: 2020-08-24
 
 ### Announcements
 
-**Welcome to v5.0.1!** We've made some minor changes to Data Models with a big push to release a new file: *AllIdentifiers*!
+**Welcome to v5.0.1!** We've made some minor changes to Data Models with a big push to release a new file: _AllIdentifiers_!
 
 ### Card Model
 

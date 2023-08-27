@@ -17,7 +17,7 @@ head:
 
 # Sealed Product (Other)
 
-The Sealed Product (Other) Data Model describes the obscure product properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
+The Sealed Product (Other) Data Model describes the obscure product properties for the purchaseable product for a [Sealed Product](/data-models/sealed-product/) Data Model.
 
 - **Parent model:** [Sealed Product](/data-models/sealed-product/)
 - **Parent property:** `other`
@@ -37,4 +37,4 @@ The Sealed Product (Other) Data Model describes the obscure product properties f
 > The name of the product.
 >
 > - **Type:** `string`
-> - **Introduced:** `v5.2.1`
+> - **Introduced:** `v5.2.2`
