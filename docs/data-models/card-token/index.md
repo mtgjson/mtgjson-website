@@ -25,7 +25,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/CardToken.ts{TypeScript}
 

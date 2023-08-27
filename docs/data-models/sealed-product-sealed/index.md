@@ -24,7 +24,7 @@ The Sealed Product (Sealed) Data Model describes the sealed product properties f
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/SealedProductSealed.ts{TypeScript}
 

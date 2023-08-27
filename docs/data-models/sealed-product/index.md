@@ -25,7 +25,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/SealedProduct.ts{TypeScript}
 
@@ -51,7 +51,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 >
 > The contents of this product. The contents of a sealed product can vary, see the applicable Data Models for Sealed Product.
 >
-> - **Type:** `Record<string, object[]>`
+> - <ExampleType type="Record<string, SealedProductCard[] | SealedProductDeck[] | SealedProductOther[] | SealedProductPack[] | SealedProductSealed[] | SealedProductVariable[]>" />
 > - **Introduced:** `v5.2.2`
 
 > ### identifiers

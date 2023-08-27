@@ -25,7 +25,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/CardDeck.ts{TypeScript}
 

@@ -25,7 +25,7 @@ The Keywords Data Model describes the properties of keywords available to any ca
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/Keywords.ts{TypeScript}
 

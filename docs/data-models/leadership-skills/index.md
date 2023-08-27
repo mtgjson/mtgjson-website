@@ -24,7 +24,7 @@ The Leadership Skills Data Model describes the properties of formats that a card
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/LeadershipSkills.ts{TypeScript}
 

@@ -25,7 +25,7 @@ The Set Data Model describes the properties of an individual set.
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/Set.ts{TypeScript}
 

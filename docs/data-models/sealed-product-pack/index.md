@@ -24,7 +24,7 @@ The Sealed Product (Pack) Data Model describes the pack product properties for t
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/SealedProductPack.ts{TypeScript}
 

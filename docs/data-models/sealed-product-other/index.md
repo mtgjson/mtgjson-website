@@ -24,7 +24,7 @@ The Sealed Product (Other) Data Model describes the obscure product properties f
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/SealedProductOther.ts{TypeScript}
 

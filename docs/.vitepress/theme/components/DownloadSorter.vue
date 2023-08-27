@@ -1,7 +1,7 @@
 <template lang="pug">
 .sorting-options
-  details
-    summary Show/Hide Toggles
+  details(open=true)
+    summary Toggle Filters
     fieldset.sort-rows
       .sort-rows-grid
         .sort-row.grid-item.search
@@ -191,7 +191,7 @@ defineExpose({
       margin: 0;
       font-size: 14px;
       font-weight: 700;
-      color: var(--vp-c-text-2);
+      color: var(--vp-c-text-1);
       cursor: pointer;
     }
   }
@@ -238,7 +238,7 @@ defineExpose({
         &[type='checkbox'] {
           margin: 0 0.5rem 0 0;
 
-          & + label {
+          &+label {
             margin-bottom: 0;
             font-weight: 600;
             font-size: 12px;
@@ -305,6 +305,7 @@ defineExpose({
 @media (max-width: 569px) {
   .sorting-options {
     .sort-rows {
+
       .sort-row,
       .sort-row.search,
       .sort-row.checkbox {
@@ -340,8 +341,10 @@ defineExpose({
 
       &-grid {
         grid-template-columns: 1fr;
+
         .sort-row {
           &.grid-item {
+
             input,
             select {
               max-width: 100%;

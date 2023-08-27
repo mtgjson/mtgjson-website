@@ -134,7 +134,7 @@ This is a new **Abstract Model** describing a variable product within a Sealed P
 
 A series of new files formatted for [Parquet](https://www.databricks.com/glossary/what-is-parquet).
 
-### AllPriceToday
+### AllPricesToday
 
 A new file containing card prices for all cards only for the current day.
 

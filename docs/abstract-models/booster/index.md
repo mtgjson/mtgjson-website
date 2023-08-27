@@ -19,8 +19,8 @@ head:
 
 The Booster Abstract Model describes the properties of how a [Set](/data-models/set/)'s booster pack may be constructed.
 
-- **Parent file:** [Set](/data-models/set/)
-- **Parent model:** `booster`
+- **Parent model:** [Set](/data-models/set/)
+- **Parent property:** `booster`
 
 ## Model Overview
 

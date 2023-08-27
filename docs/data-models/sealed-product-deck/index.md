@@ -24,7 +24,7 @@ The Sealed Product (Deck) Data Model describes the deck product properties for t
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/SealedProductDeck.ts{TypeScript}
 

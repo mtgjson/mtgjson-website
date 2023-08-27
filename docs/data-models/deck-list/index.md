@@ -25,7 +25,7 @@ The Deck List Data Model describes the meta data properties of an individual [De
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/DeckList.ts{TypeScript}
 

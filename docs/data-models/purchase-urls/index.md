@@ -24,7 +24,7 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/PurchaseUrls.ts{TypeScript}
 

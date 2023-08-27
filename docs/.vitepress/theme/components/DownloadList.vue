@@ -148,199 +148,200 @@ onMounted((): void => {
 });
 </script>
 
-  <style lang="scss" scoped>
-  .download-list {
-    position: relative;
+<style lang="scss" scoped>
+.download-list {
+  position: relative;
 
-    .load-more-container {
-      display: flex;
+  .load-more-container {
+    display: flex;
 
-      .load-more-btn {
-        margin-top: 1rem;
-        display: block;
-        flex: 1;
+    .load-more-btn {
+      margin-top: 1rem;
+      display: block;
+      flex: 1;
+    }
+  }
+
+  .results-message {
+    line-height: 1rem;
+    font-size: 14px;
+    font-weight: 600;
+    display: inline-block;
+
+    &.error {
+      color: var(--red-color);
+    }
+  }
+
+  .download-wrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+
+    .img-wrap {
+      flex: none;
+
+      div {
+        margin-right: 2rem;
+        margin-bottom: 1rem;
+        position: relative;
+        height: 3rem;
+        width: 3rem;
+        color: var(--vp-c-text);
+
+        &::before {
+          position: absolute;
+          text-align: center;
+          line-height: 1em;
+          font-size: 50px;
+          width: 100%;
+          height: 100%;
+        }
       }
     }
 
-    .results-message {
-      line-height: 1rem;
-      font-size: 14px;
-      font-weight: 600;
-      display: inline-block;
+    .text-wrap {
+      flex: 1;
+      padding-bottom: 0.75rem;
 
-      &.error {
-        color: var(--red-color);
-      }
-    }
+      &--details {
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
 
-    .download-wrap {
-      display: flex;
-      flex-wrap: wrap;
-      align-items: center;
-
-      .img-wrap {
-        flex: none;
-
-        div {
-          margin-right: 2rem;
-          margin-bottom: 1rem;
-          position: relative;
-          height: 3rem;
-          width: 3rem;
-          color: var(--vp-c-text);
-
-          &::before {
-            position: absolute;
-            text-align: center;
-            line-height: 1em;
-            font-size: 50px;
-            width: 100%;
-            height: 100%;
+        &-img {
+          .ss {
+            width: 1.5rem;
+            height: 1.5rem;
           }
         }
+      }
+
+      h3 {
+        margin-top: 0;
+        line-height: 1.25rem;
+        flex: none;
+      }
+
+      p {
+        display: block;
+        margin: 0;
+      }
+
+      ol {
+        padding: 0;
+        margin: 0;
+
+        &.tags,
+        &.details {
+          margin-top: 0.5rem;
+
+          li {
+            small {
+              color: var(--vp-c-text-2);
+              font-weight: 600;
+
+              &:first-of-type {
+                color: var(--vp-c-text-1);
+              }
+            }
+          }
+        }
+
+        &.tags {
+          margin-top: 0;
+          flex: none;
+
+          &>* {
+            margin-left: 0.5rem;
+          }
+        }
+
+        &.details {
+          flex: 0 0 100%;
+        }
+
+        li {
+          margin: 0;
+          list-style: none;
+          display: inline-block;
+          margin-right: 1rem;
+        }
+
+        &:not(:only-of-type):first-of-type {
+          li {
+            margin-right: 0;
+          }
+        }
+      }
+
+      small {
+        display: inline-block;
+        text-transform: capitalize;
+
+        &:first-of-type {
+          font-weight: 600;
+        }
+      }
+
+      &--download--btn-wrap {
+        display: block !important;
+      }
+
+      &--details {
+        position: relative;
+
+        &-img {
+          float: left;
+          margin-right: 0.5rem;
+          color: var(--vp-c-text-1);
+
+          .ss {
+            font-size: 1.5rem;
+            line-height: 1.5rem;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media (max-width: 799px) {
+  .download-list {
+    .download-wrap {
+      .text-wrap {
+        ol {
+          &.tags {
+            flex: 0 0 100%;
+
+            &>* {
+              margin-top: 0.75rem;
+              margin-left: 0;
+              margin-right: 0.5rem;
+            }
+          }
+        }
+      }
+    }
+  }
+
+}
+
+@media (max-width: 569px) {
+  .download-list {
+    .download-wrap {
+      &>* {
+        flex: 0 0 100% !important;
       }
 
       .text-wrap {
-        flex: 1;
-        padding-bottom: 0.75rem;
-
-        &--details {
-          display: flex;
-          flex-wrap: wrap;
-          align-items: center;
-
-          &-img {
-            .ss {
-              width: 1.5rem;
-              height: 1.5rem;
-            }
-          }
-        }
-
-        h3 {
-          margin-top: 0;
-          line-height: 1.25rem;
-          flex: none;
-        }
-
-        p {
-          display: block;
-          margin: 0;
-        }
-
         ol {
-          padding: 0;
-          margin: 0;
-
-          &.tags,
-          &.details {
-            margin-top: 0.5rem;
-
-            li {
-              small {
-                color: var(--vp-c-text-2);
-
-                &:first-of-type {
-                  color: var(--vp-c-text-1);
-                }
-              }
-            }
-          }
-
-          &.tags {
-            margin-top: 0;
-            flex: none;
-
-            & > * {
-              margin-left: 0.5rem;
-            }
-          }
-
-          &.details {
-            flex: 0 0 100%;
-          }
-
           li {
-            margin: 0;
-            list-style: none;
-            display: inline-block;
-            margin-right: 1rem;
-          }
-
-          &:not(:only-of-type):first-of-type {
-            li {
-              margin-right: 0;
-            }
-          }
-        }
-
-        small {
-          display: inline-block;
-          text-transform: capitalize;
-
-          &:first-of-type {
-            font-weight: 600;
-          }
-        }
-
-        &--download--btn-wrap {
-          display: block !important;
-        }
-
-        &--details {
-          position: relative;
-
-          &-img {
-            float: left;
-            margin-right: 0.5rem;
-            color: var(--vp-c-text-1);
-
-            .ss {
-              font-size: 1.5rem;
-              line-height: 1.5rem;
-            }
+            display: inline-block !important;
           }
         }
       }
     }
   }
-
-  @media (max-width: 799px) {
-    .download-list {
-      .download-wrap {
-        .text-wrap {
-          ol {
-            &.tags {
-              flex: 0 0 100%;
-
-              & > * {
-                margin-top: 0.75rem;
-                margin-left: 0;
-                margin-right: 0.5rem;
-              }
-            }
-          }
-        }
-      }
-    }
-
-  }
-
-  @media (max-width: 569px) {
-    .download-list {
-      .download-wrap {
-        & > * {
-          flex: 0 0 100% !important;
-        }
-
-        .text-wrap {
-          ol {
-            li {
-              display: inline-block !important;
-            }
-          }
-        }
-      }
-    }
-  }
-  </style>
+}
+</style>

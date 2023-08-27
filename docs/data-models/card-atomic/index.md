@@ -43,7 +43,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/CardAtomic.ts{TypeScript}
 

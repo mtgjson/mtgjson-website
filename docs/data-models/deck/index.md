@@ -25,7 +25,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/Deck.ts{TypeScript}
 

@@ -20,7 +20,7 @@ head:
 The Card Types Abstract Model describes the properties of any possible subtypes and supertypes of a card.
 
 - **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)
-- **Parent model:** `data`
+- **Parent property:** `data`
 
 ## Model Overview
 

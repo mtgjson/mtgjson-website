@@ -25,7 +25,7 @@ The Legalities Data Model describes the properties of legalities of a card in va
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/Legalities.ts{TypeScript}
 

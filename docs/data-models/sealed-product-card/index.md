@@ -24,7 +24,7 @@ The Sealed Product (Card) Data Model describes the card product properties for t
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model
 
 <<< @/public/types/SealedProductCard.ts{TypeScript}
 

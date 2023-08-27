@@ -20,7 +20,7 @@ head:
 The Enum Values Abstract Model describes the properties that are direct possible values of other properties in specific Data Models. Generally, this data is used for documentation, but is also available to the public.
 
 - **Parent file:** [EnumValues](/downloads/all-files/#enumvalues)
-- **Parent model:** `data`
+- **Parent property:** `data`
 
 ## Model Overview
 
