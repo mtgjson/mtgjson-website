@@ -95,7 +95,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 >
 > _This property is deprecated. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead._
 >
-> - **Type:** `float`
+> - **Type:** `number`
 > - **Introduced:** `v4.0.0`
 
 > ### defense <Badge type="warning" text="optional" />
@@ -116,7 +116,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 >
 > The card saltiness score on [EDHRec](https://www.edhrec.com).
 >
-> - **Type:** `float`
+> - **Type:** `number`
 > - **Introduced:** `v5.2.1`
 
 > ### faceConvertedManaCost <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
@@ -125,14 +125,14 @@ const card: CardAtomic = data["Phelddagrif"][0];
 >
 > _This property is deprecated. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead._
 >
-> - **Type:** `float`
+> - **Type:** `number`
 > - **Introduced:** `v4.1.1`
 
 > ### faceManaValue <Badge type="warning" text="optional" />
 >
 > The mana value of the face for either half or part of the card.
 >
-> - **Type:** `float`
+> - **Type:** `number`
 > - **Introduced:** `v5.2.0`
 
 > ### faceName <Badge type="warning" text="optional" />
@@ -246,7 +246,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 >
 > The mana value of the card.
 >
-> - **Type:** `float`
+> - **Type:** `number`
 > - **Introduced:** `v5.2.0`
 
 > ### name

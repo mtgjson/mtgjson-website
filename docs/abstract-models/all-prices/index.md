@@ -49,12 +49,12 @@ MTGJSON currently has affiliated with the following price providers to keep a **
           // Foil prices
           "foil": {
             // ISO 8601 date format as the key and price as value
-            [key: string]: float
+            [key: string]: number
           },
           // Normal prices
           "normal": {
             // ISO 8601 date format as the key and price as value
-            [key: string]: float
+            [key: string]: number
           }
         },
         // Currency of the provider
@@ -64,12 +64,12 @@ MTGJSON currently has affiliated with the following price providers to keep a **
           // Foil prices
           "foil": {
             // ISO 8601 date format as the key and price as value
-            [key: string]: float
+            [key: string]: number
           },
           // Normal prices
           "normal": {
             // ISO 8601 date format as the key and price as value
-            [key: string]: float
+            [key: string]: number
           }
         }
       },

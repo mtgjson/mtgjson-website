@@ -8,12 +8,12 @@ const convertIncompatibleTypes = (value) => {
   } else {
     return value;
   }
-}
+};
 
 // Convert page title to become a type name
 const convertPageNameToNamedType = (name) => {
   return name?.replace(/[\s()]/g, '');
-}
+};
 
 // True TypeScript type generation
 const generateTrueTypes = () => {
@@ -23,7 +23,7 @@ const generateTrueTypes = () => {
 
   pages.forEach(async (page) => {
     props = '';
-    const propName = propTypeName = convertPageNameToNamedType(page.title);
+    const propName = (propTypeName = convertPageNameToNamedType(page.title));
 
     if (propName && page.model && page.model.length > 0) {
       let propValues = '';
@@ -47,26 +47,16 @@ ${propValues}
       props += propString;
       propsAll += propString;
 
-      if( props ) {
-        fs.writeFileSync(
-          `./docs/public/types/${propTypeName}.ts`,
-          `${props.trim()}`
-        );
+      if (props) {
+        fs.writeFileSync(`./docs/public/types/${propTypeName}.ts`, `${props.trim()}`);
       }
     }
-
   });
 
-  fs.writeFileSync(
-    `./docs/public/types/AllMTGJSONTypes.ts`,
-    `${propsAll.replace(/};/g, '};\n').trim()}`
-  );
+  fs.writeFileSync(`./docs/public/types/AllMTGJSONTypes.ts`, `${propsAll.replace(/};/g, '};\n').trim()}`);
 
   // Legacy file
-  fs.writeFileSync(
-    `./docs/public/static/mtgjson-types.ts`,
-    `${propsAll.replace(/};/g, '};\n').trim()}`
-  );
+  fs.writeFileSync(`./docs/public/static/mtgjson-types.ts`, `${propsAll.replace(/};/g, '};\n').trim()}`);
 };
 
 generateTrueTypes();
