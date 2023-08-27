@@ -30,7 +30,7 @@ export default {
     // Google SEO
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', src: '/images/assets/thumbnail-mtgjson.jpg' }],
+    ['meta', { property: 'og:image', src: 'https://mtgjson.com/images/assets/og-image-mtgjson.jpg' }],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }],
     ['link', { rel: 'icon', href: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
