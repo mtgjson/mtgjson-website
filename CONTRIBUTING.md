@@ -52,8 +52,9 @@ Some files and directories are omitted that do not help understand this current 
     │   ├── static/ # Legacy path for MTGJSON documentation TypeScript Types
     │   │   └── mtgjson-types.ts # All TypeScript Types for MTGJSON Data Models
     │   │
-    │   ├── types/ # Path to all MTGJSON documentation TypeScript Types
-    │   └── *.* # Any public facing file, like robots.txt
+    │   └── types/ # Path to all MTGJSON documentation TypeScript Types
+    │       └── *.ts # All individual TseScript Types for MTGJSON Data Models
+    │
     └── .vitepress/ # Main config and theme files for Vitepress
         ├── config.js # Main VitePress configuration
         ├── generatePages.js # Polyfill script to generate pages data for search
@@ -107,7 +108,7 @@ An example of a property field for a data object field in Markdown:
 ```
 > ### artist <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
 >
-> The name of the artist that illustrated the card art.  
+> The name of the artist that illustrated the card art.
 >
 > **Type:** `string`
 > **Introduced:** `v4.0.0`
