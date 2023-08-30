@@ -1,3 +1,4 @@
+// import ModelBadge from './theme/components/ModelBadge.vue';
 /**
  * In order to have each documentation page to have its own meta data
  * and URI we break them out in to individual routes.
@@ -25,7 +26,9 @@ export default (routes) => {
           const is3Words = fileNameSplit[2];
 
           let fileNameClean = fileName;
-          let badgeText = '';
+          let badgeText = [];
+          let badgeClasses = [];
+          let badges = [];
 
           // First check if were looking at a Card or Deck route that is a variation
           // like Card (Set) or Deck (Set), but not Deck or Deck List put them in parens
@@ -44,23 +47,38 @@ export default (routes) => {
             }
           }
 
-          // switch (fileNameDirty) {
-          //   case 'all prices':
-          //   case 'booster':
-          //   case 'card types':
-          //   case 'enum values':
-          //   case 'sealed product variable':
-          //     badgeText = 'A';
-          //     break;
+          switch (fileNameDirty) {
+            case 'all prices':
+            case 'booster':
+            case 'card types':
+            case 'enum values':
+            case 'sealed product variable':
+              badgeText.push('Abstract');
+              break;
 
-          //   default:
-          //     break;
-          // }
+              // case 'card set deck':
+              // case 'deck set':
+              // case 'sealed product card':
+              // case 'sealed product deck':
+              // case 'sealed product other':
+              // case 'sealed product pack':
+              // case 'sealed product sealed':
+              //   badgeText.push('New');
+              //   break;
 
-          let badgeElement = !!badgeText ? `<span class="badge">${badgeText}</span>` : '';
+            default:
+              break;
+          }
+
+          badgeClasses = badgeText.map((text) => text.toLowerCase());
+          badges = badgeClasses.map((text) => {
+            return `<span class="model-badge sidebar ${text}" title="${
+              text.charAt(0).toUpperCase() + text.slice(1, text.length)
+            } Data Model">${text.charAt(0).toUpperCase()}</span>`;
+          });
 
           return {
-            text: `${badgeElement}${fileNameClean}`,
+            text: `${badges.join('')}${fileNameClean}`,
             link: `${route}${file}/`,
           };
         })

@@ -2,7 +2,7 @@ import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
 // Sidebar link generation
-const [abstractModels, dataModels] = generateSidebar(['/abstract-models/', '/data-models/']);
+const [dataModels] = generateSidebar(['/data-models/']);
 
 // Page metadata generation
 export const pages = generatePages({
@@ -142,11 +142,6 @@ export default {
         text: 'Data Models',
         link: '/data-models/',
         items: dataModels,
-      },
-      {
-        text: 'Abstract Models',
-        link: '/abstract-models/',
-        items: abstractModels,
       },
       {
         text: 'Changelogs',

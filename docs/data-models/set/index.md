@@ -49,7 +49,7 @@ The Set Data Model describes the properties of an individual set.
 
 > ### booster <Badge type="warning" text="optional" />
 >
-> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/abstract-models/booster/) Abstract Model.
+> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster](/data-models/booster/) Abstract Data Model.
 >
 > - **Type:** `object`
 > - **Introduced:** `v5.0.0`

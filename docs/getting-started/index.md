@@ -45,7 +45,7 @@ Models are a general term used to categorize data objects when using this docume
 
 ::: info Quick Tip
 
-**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Abstract Models** have many non-unique property names and values for specific **File Models** and are documented separately from **Data Models**.
+**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Abstract Data Models** have many non-unique property names and values for specific **File Models** and are documented separately from **Data Models**.
 
 :::
 
@@ -87,11 +87,11 @@ Here is a reduced payload of the model as an example:
 
 :::
 
-### Abstract Models
+### Abstract Data Models
 
-Abstract Models have abnormal data objects that are not clearly defined. They tend to have many nested properties with non-unique keys so documentation is formalized with example data.
+Abstract Data Models have abnormal data objects that are not clearly defined. They tend to have many nested properties with non-unique keys so documentation is formalized with example data.
 
-For example, `AllPrices.json` uses the [All Prices](/abstract-models/all-prices/) Abstract Model in its `data` property.
+For example, `AllPrices.json` uses the [All Prices](/data-models/all-prices/) Abstract Data Model in its `data` property.
 
 ## GraphQL API
 

@@ -26,7 +26,7 @@ Release Date: 2023-09-01
 
 ### Announcements
 
-**Welcome to v5.2.2!** With this update, we've put a large focus on Sealed Product, both from building it out and documentation. We have also added a few more new properties, new Data Models, Abstract Models, new files (including **AllPricesToday**!) and fixed some bugs. As always, although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis.
+**Welcome to v5.2.2!** With this update, we've put a large focus on Sealed Product, both from building it out and documentation. We have also added a few more new properties, new Data Models, Abstract Data Models, new files (including **AllPricesToday**!) and fixed some bugs. As always, although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis. We've also revamped our documentation a bit for more clarity. Abstract Data Models are now housed in all Data Models but are earmarked in the sidebar as being abstract. Also the [Data Models](/data-models/) page describes the differences.
 
 ### Card Model
 
@@ -73,8 +73,8 @@ Release Date: 2023-09-01
 
 #### Added
 
-- Added `fixed` property to [Booster](/abstract-models/booster/) sheets property
-- Added `allowDuplicates` property to [Booster](/abstract-models/booster/) sheets property
+- Added `fixed` property to [Booster](/data-models/booster/) sheets property
+- Added `allowDuplicates` property to [Booster](/data-models/booster/) sheets property
 
 #### Changed
 
@@ -89,7 +89,7 @@ Release Date: 2023-09-01
 - Added `cardCount` property
 - Added missing `contents` property
 - Added [Sealed Product (Card)](/data-models/sealed-product-card/), [Sealed Product (Deck)](/data-models/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product-sealed/) Data Models to describe the different kinds of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
-- Added [Sealed Product (Variable)](/abstract-models/sealed-product-variable/) Abstract Model to describe the sealed product variations of configurations found in the [Sealed Product](/data-models/sealed-product/) Data Model
+- Added [Sealed Product (Variable)](/data-models/sealed-product-variable/) Abstract Data Model to describe the sealed product variations of configurations found in the [Sealed Product](/data-models/sealed-product/) Data Model
 
 ### AllPrintingsParquetFiles
 
@@ -322,7 +322,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 - MTGJSON now supports Python 3.6 - 3.10
 - Better handle Gatherer downtime halting builds
-- Merged some File Models and Abstract Models within the documentation to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed.
+- Merged some File Models and Abstract Data Models within the documentation to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed.
 
 ## 5.1.0
 
@@ -450,7 +450,7 @@ Release Date: 2020-07-03
 
 **Welcome to v5.0.0!** We are proud to announce the 5th major release of MTGJSON. The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `booster` optional property defined as the [Booster](/abstract-models/booster/) Abstract Model on the [Set](/data-models/set/) Data Model.
+We are also pleased to announce the addition of `booster` optional property defined as the [Booster](/data-models/booster/) Abstract Data Model on the [Set](/data-models/set/) Data Model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 

@@ -17,18 +17,13 @@ head:
 
 # Data Models
 
-Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.
+Data Models in MTGJSON describe any JSON object or nested JSON object.
 
-## Example
+Generally speaking, most **Data Models** describe flat structures, but **Abstract Data Models** describe many nested data structures within Files and Data Models.
 
-### Model Example
+The easiest way to think about the difference is that a regular Data Model is a Record or Array containing few other known Records or Arrays, while Abstract Data Models are Records with many variable keys of nested Records or Arrays.
 
-Any **Data Model** would look similar to this:
+::: info Identifying Abstract Data Models
 
-```TypeScript
-{
-  [key, string]: any;
-}
-```
-
-Most data output by MTGJSON are Data Models but some models have more complex structures which are outlined in [Abstract Models](/abstract-models/).
+To help identify Abstract Data Models, they are marked with an <span class="model-badge abstract">A</span> badge in the sidebar.
+:::
