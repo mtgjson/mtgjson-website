@@ -35,7 +35,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### code
 >
-> The printing deck code for the deck.
+> The printing set code for the deck.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`

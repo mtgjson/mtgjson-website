@@ -32,13 +32,25 @@ Release Date: 2023-09-01
 
 #### Added
 
-- Added `artistIds` property to [Card (Deck)](/data-models/card-deck/#artistids), [Card (Set)](/data-models/card-set/#artistids), and [Card (Token)](/data-models/card-token/#artistids)
-- Added `sourceProducts` property to [Card (Deck)](/data-models/card-deck/#sourceproducts), [Card (Set)](/data-models/card-set/#sourceproducts), and [Card (Token)](/data-models/card-token/#sourceproducts)
 - Added missing `duelDeck` property to [Card (Set)](/data-models/card-set/#dueldeck)
 - Added missing `isTextless` property to [Card (Token)](/data-models/card-token/#istextless)
 - Added missing `originalText` property to [Card (Token)](/data-models/card-token/#originaltext)
 - Added missing `originalType` property to [Card (Token)](/data-models/card-token/#originaltype)
-- Added `mcm*` properties to the `identifiers` property for [Card (Token)](/data-models/card-token/). (Our documentation linked these as a possibility however it was not possible until now)
+- Added `mcm*` properties to the `identifiers` property for [Card (Token)](/data-models/card-token/). (Our documentation linked these as a possibility however they were not populating until now)
+- Added `artistIds` property to [Card (Deck)](/data-models/card-deck/#artistids), [Card (Set)](/data-models/card-set/#artistids), and [Card (Token)](/data-models/card-token/#artistids)
+- Added `sourceProducts` property to [Card (Deck)](/data-models/card-deck/#sourceproducts), [Card (Set)](/data-models/card-set/#sourceproducts), and [Card (Token)](/data-models/card-token/#sourceproducts)
+- Added `starterdeck` to `promoTypes` property for [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/)
+- Added [Card (Set Deck)](/data-models/card-set-deck/) Data Model to describe cards within a [Deck (Set)](/data-models/deck-set/)
+
+#### Changed
+
+- Changed `rulings` on Card Data Models to be optional
+
+### Deck Model
+
+#### Added
+
+- Added [Deck (Set)](/data-models/deck-set/) Data Model to describe a Deck within a [Set](/data-models/set/)
 
 ### Set Model
 
@@ -61,8 +73,8 @@ Release Date: 2023-09-01
 
 #### Added
 
-- Added `fixed` property to Booster Sheets
-- Added `allowDuplicates` property to Booster Sheets
+- Added `fixed` property to [Booster](/abstract-models/booster/) sheets property
+- Added `allowDuplicates` property to [Booster](/abstract-models/booster/) sheets property
 
 #### Changed
 
@@ -70,65 +82,14 @@ Release Date: 2023-09-01
 
 ### Sealed Product Model
 
-Sealed Product is now more documented. More Data Models have been created to describe the `contents` property of a top-level Sealed Product Data Model.
+[Sealed Product](/data-models/sealed-product/) is now more documented. More Data Models have been created to describe the `contents` property of a top-level Sealed Product Data Model.
 
 #### Added
 
 - Added `cardCount` property
 - Added missing `contents` property
-
-### Sealed Product (Card) Model
-
-This is a new Data Model describing a Card product within a Sealed Product.
-
-#### Added
-
-- Added `foil` property
-- Added `name` property
-- Added `number` property
-- Added `set` property
-- Added `uuid` property
-
-### Sealed Product (Deck) Model
-
-This is a new Data Model describing a Deck product within a Sealed Product.
-
-#### Added
-
-- Added `name` property
-- Added `set` property
-
-### Sealed Product (Other) Model
-
-This is a new Data Model describing other types of products within a Sealed Product. An example would be a Spindown counter within a Bundle.
-
-#### Added
-
-- Added `name` property
-
-### Sealed Product (Pack) Model
-
-This is a new Data Model describing a Pack product within a Sealed Product.
-
-#### Added
-
-- Added `code` property
-- Added `set` property
-
-### Sealed Product (Sealed) Model
-
-This is a new Data Model describing a Sealed product within a Sealed Product.
-
-#### Added
-
-- Added `count` property
-- Added `name` property
-- Added `set` property
-- Added `uuid` property
-
-### Sealed Product (Variable) Model
-
-This is a new **Abstract Model** describing a variable product within a Sealed Product. Variable products are products with different configurations within a Sealed Product.
+- Added [Sealed Product (Card)](/data-models/sealed-product-card/), [Sealed Product (Deck)](/data-models/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product-sealed/) Data Models to describe the different kinds of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
+- Added [Sealed Product (Variable)](/abstract-models/sealed-product-variable/) Abstract Model to describe the sealed product variations of configurations found in the [Sealed Product](/data-models/sealed-product/) Data Model
 
 ### AllPrintingsParquetFiles
 
@@ -140,8 +101,10 @@ A new file containing card prices for all cards only for the current day.
 
 ### Misc
 
+- Handle error exceptions from Gatherer
+- Handle error exceptions from Scryfall
 - Handle crashes if fields are not found
-- Handle error exceptions with Scryfall
+- Allow building of empty sets
 
 ## 5.2.1
 

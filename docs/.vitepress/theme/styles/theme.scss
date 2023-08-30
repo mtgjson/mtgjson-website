@@ -2,6 +2,11 @@
 
 @import 'vars';
 
+// Top level HTML
+html {
+  min-width: 375px;
+}
+
 // Next/Prev buttons fix
 a {
   &.pager-link {
@@ -22,7 +27,6 @@ pre {
   margin-left: auto;
   margin-right: auto;
 }
-
 pre {
   padding: 1rem !important;
   margin-bottom: 1rem;
@@ -32,21 +36,32 @@ pre {
     padding: 0;
   }
 }
-
 div[class*="language-"],
 code {
   background-color: var(--code-bg-color) !important;
 }
-
 code {
   color: var(--code-text-color) !important;
   padding: 0.25rem 0.5rem !important;
   font-size: 12px !important;
 }
-
 .lang {
   top: 0rem !important;
   right: 0.45rem !important;
+}
+
+// Sidebar Badge
+.badge {
+  text-align: center;
+  display: inline-block;
+  background-color: var(--yellow-color);
+  padding: 0 0.5rem;
+  height: 25px;
+  border-radius: var(--common-radius);
+  margin-right: 0.5rem;
+  color: black;
+  font-size: 12px;
+  font-weight: bold;
 }
 
 // CTA
@@ -267,17 +282,6 @@ html.dark {
 @media (max-width: 399px) {
   .VPDoc {
     blockquote {
-      .VPBadge {
-        display: block;
-        margin-left: 0;
-        margin-top: 0.5rem;
-        text-align: center;
-
-        &:first-of-type {
-          margin-top: 1rem;
-        }
-      }
-
       h3 {
         .header-anchor {
           display: none;

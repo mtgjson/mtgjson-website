@@ -84,10 +84,10 @@ The Set Data Model describes the properties of an individual set.
 
 > ### decks
 >
-> All decks associated to the set. See the [Deck](/data-models/deck/) Data Model.
+> All decks associated to the set. See the [Deck (Set)](/data-models/deck-set/) Data Model.
 >
-> - **Type:** `Deck[]`
-> - **Introduced:** `v5.2.1`
+> - **Type:** `DeckSet[]`
+> - **Introduced:** `v5.2.2`
 
 > ### isForeignOnly <Badge type="warning" text="optional" />
 >
@@ -211,7 +211,7 @@ The Set Data Model describes the properties of an individual set.
 
 > ### tokens
 >
-> The tokens available to the set. See the [Card (Token)](/data-models/card-token/) Data Model.
+> The tokens cards in the set. See the [Card (Token)](/data-models/card-token/) Data Model.
 >
 > - **Type:** `CardToken[]`
 > - **Introduced:** `v4.0.0`

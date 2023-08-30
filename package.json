@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "run-p lint:js:watch local",
-    "dev:bare": "vitepress dev docs",
+    "dev:bare": "vitepress dev docs --watch",
     "local": "npm run check:version && npm run purge:cache && npm run generate:types && npm run generate:contributors && npm run dev:bare",
     "build": "npm run generate:types && npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "build:bare": "vitepress build docs",
