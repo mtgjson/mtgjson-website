@@ -34,52 +34,53 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 - `mtgo`
   - `cardhoarder` ([Cardhoarder](https://www.cardhoarder.com/?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card))
 
-## Model Overview
+## TypeScript Model
+
+::: details Toggle Model
 
 ```TypeScript
-{
+export type AllPrices = {
   // Card uuid property
   [key: string]: {
-    // Game format
+    // Product format, such as "paper"
     [key: string]: {
       // Price provider
       [key: string]: {
         // Provider buylist values
-        "buylist": {
+        buylist?: {
           // Foil prices
-          "foil": {
+          foil?: {
             // ISO 8601 date format as the key and price as value
-            [key: string]: number
+            [key: string]: number;
           },
           // Normal prices
-          "normal": {
+          normal?: {
             // ISO 8601 date format as the key and price as value
-            [key: string]: number
+            [key: string]: number;
           }
         },
         // Currency of the provider
-        "currency": string,
+        currency: string;
         // Provider retail values
-        "retail": {
+        retail?: {
           // Foil prices
-          "foil": {
+          foil?: {
             // ISO 8601 date format as the key and price as value
-            [key: string]: number
+            [key: string]: number;
           },
           // Normal prices
-          "normal": {
+          normal?: {
             // ISO 8601 date format as the key and price as value
-            [key: string]: number
+            [key: string]: number;
           }
         }
-      },
-      ... // More price providers
-    },
-    ... // More game formats
-  },
-  ... // More card uuids
+      }
+    }
+  }
 }
 ```
+
+:::
 
 ## Example Model
 

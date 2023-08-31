@@ -22,19 +22,23 @@ The Card Types Abstract Data Model describes the properties of any possible subt
 - **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)
 - **Parent property:** `data`
 
-## Model Overview
+## TypeScript Model
+
+::: details Toggle Model
 
 ```TypeScript
-{
+export type CardTypes = {
   // Card type
   [key: string]: {
     // Any subtypes available to a card type
-    subTypes: string[],
+    subTypes: string[];
     // Any supertypes available to a card type
-    superTypes: string[]
+    superTypes: string[];
   }
 }
 ```
+
+:::
 
 ## Example Model
 

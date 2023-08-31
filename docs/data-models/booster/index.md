@@ -22,52 +22,51 @@ The Booster Abstract Data Model describes the properties of how a [Set](/data-mo
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `booster`
 
-## Model Overview
+## TypeScript Model
+
+::: details Toggle Model
 
 ```TypeScript
-{
+export type Booster = {
   // Possible configurations in a traditional booster pack
-  default: {
+  [key: string]: {
     // Booster pack configurations
     boosters: [
       {
         // Card contents of a booster pack
-        contents: Record<string, number>, // Record key is rarity and value is weight of the card
+        contents: {
+          // Key is the rarity and value is the weight of the card
+          [key: string]: number;
+        },
         // Odds of getting this configuration against other configurations
-        weight: number
-      },
-      ... // More configurations
+        weight: number;
+      }
     ],
     // Sum of all booster configurations weights
-    boostersTotalWeight: number,
+    boostersTotalWeight: number;
     // All possible sheets of cards to use within booster packs
     sheets: {
       // A sheet of cards for use in a booster, using the sheet name as the key
       [key: string]: {
         // If the pack has mulitples of the same card
-        allowDuplicates: boolean,
+        allowDuplicates: boolean;
         // Colors of the sheet need to be balanced
-        balanceColors: boolean,
+        balanceColors: boolean;
         // Cards used on a sheet
-        cards: Record<string, number>, // Record key is the uuid of a card and weight is the value
+        cards: Record<string, number>; // Record key is the uuid of a card and weight is the value
         // If the sheet is foiled
-        foil: boolean,
+        foil: boolean;
         // Contents are guaranteed
-        fixed: boolean,
+        fixed: boolean;
         // Sum of all card weights
         totalWeight: number
-      },
-      ... // More sheet names
+      }
     }
-  },
-  // An extended object for the future that may be used for alternative booster packs
-  premium: {
-    // Name of the premium booster pack
-    name: string,
-    ... // All other keys are the same as 'default'
   }
 }
 ```
+
+:::
 
 ## Example Model
 

@@ -6,18 +6,18 @@ head:
       content: Frequently Asked Questions
   - - meta
     - name: description
-      content: Frequently Asked Questions for MTGJSON and documentation.
+      content: Common questions about MTGJSON data and services.
   - - meta
     - property: og:description
-      content: Frequently Asked Questions for MTGJSON and documentation.
+      content: Common questions about MTGJSON data and services.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, frequently asked questions, faq
+      content: mtg, magic the gathering, mtgjson, json, frequently asked questions, faq, common questions
 ---
 
 # Frequently Asked Questions
 
-Here is a list of frequently asked questions from our users since some data can be nuanced.
+Here are some common questions about MTGJSON data and services.
 
 > ### Which file should I use for my project?
 >

@@ -28,23 +28,27 @@ This Abstract Data Model is used when a Sealed Product may have differnt configu
 
 :::
 
-## Model Overview
+## TypeScript Model
+
+::: details Toggle Model
 
 ```TypeScript
-variable: [
-  {
-    configs: [
-      {
-        card: SealedProductCard[],
-        deck: SealedProductDeck[],
-        other: SealedProductOther[],
-        pack: SealedProductPack[],
-        sealed: SealedProductSealed[],
-      }
-    ]
-  }
-]
+export type SealedProductConfigs = {
+  card?: SealedProductCard[];
+  deck?: SealedProductDeck[];
+  other?: SealedProductOther[];
+  pack?: SealedProductPack[];
+  sealed?: SealedProductSealed[];
+};
+
+export type SealedProductConfig = {
+  configs: SealedProductConfigs[];
+};
+
+export type SealedProductVariable = SealedProductConfig[];
 ```
+
+:::
 
 ## Example Model
 

@@ -22,13 +22,21 @@ The Enum Values Abstract Data Model describes the properties that are direct pos
 - **Parent file:** [EnumValues](/downloads/all-files/#enumvalues)
 - **Parent property:** `data`
 
-## Model Overview
+## TypeScript Model
+
+::: details Toggle Model
 
 ```TypeScript
-{
-  [key: string]: Record<string, string[]>
+export type EnumValues = {
+  // Enum data model name
+  [key: string]: {
+    // data model property
+    [key: string]: string | boolean | number;
+  }
 }
 ```
+
+:::
 
 ## Example Model
 
