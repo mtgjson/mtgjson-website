@@ -23,7 +23,14 @@ Generally speaking, most **Data Models** describe flat structures, but **Abstrac
 
 The easiest way to think about the difference is that a regular Data Model is a Record or Array containing few other known Records or Arrays, while Abstract Data Models are Records with many variable keys of nested Records or Arrays.
 
-::: info Identifying Abstract Data Models
+::: info Attribute Identification
 
-To help identify Abstract Data Models, they are marked with an <span class="model-badge abstract">A</span> badge in the sidebar.
+Certain Data Models and Data Model properties may have different attributes to denote alternate types of data returned.
+
+- <DocBadge inline="true" type="info" text="abstract" /> Data Model is an Abstract Data Model.
+- <DocBadge inline="true" type="warning" text="optional" /> Property may not return in the Data Model.
+- <DocBadge inline="true" type="danger" text="deprecated" /> Property is deprecated in the Data Model.
+
 :::
+
+Use the above to help guide you to understand what data flows through your application and when to use it.

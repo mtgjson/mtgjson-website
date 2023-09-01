@@ -1,6 +1,6 @@
 <template lang="pug">
 .sorting-options
-  details(open=true)
+  details
     summary Toggle Filters
     fieldset.sort-rows
       .sort-rows-grid
@@ -216,6 +216,7 @@ defineExpose({
         flex: 1;
         display: inline;
         padding: 0.25rem 0.5rem;
+        height: 40px;
         border-radius: var(--common-radius);
         border: 1px solid var(--select-border-color);
         background-color: var(--select-bg-color);
@@ -238,8 +239,10 @@ defineExpose({
 
         &[type='checkbox'] {
           margin: 0 0.5rem 0 0;
+          height: initial;
 
           &+label {
+            padding: 0.25rem 0;
             margin-bottom: 0;
             font-weight: 600;
             font-size: 12px;

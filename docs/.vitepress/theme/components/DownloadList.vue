@@ -18,31 +18,35 @@
       .download-wrap
         .text-wrap
           .text-wrap--details
-            .text-wrap--details-img
-              div(
-                v-if="item.keyruneCode",
-                :class="`ss ss-${item.keyruneCode.toLowerCase()}`"
-              )
-              div(
-                v-else-if="item.code",
-                :class="`ss ss-${item.code.toLowerCase()}`"
-              )
-            h3 {{ item.name }}
+            .text-wrap--details-title
+              .text-wrap--details-img
+                div(
+                  v-if="item.keyruneCode",
+                  :class="`ss ss-${item.keyruneCode.toLowerCase()}`"
+                )
+                div(
+                  v-else-if="item.code",
+                  :class="`ss ss-${item.code.toLowerCase()}`"
+                )
+              h3 {{ item.name }}
             ol.tags
               Badge(
                 v-if="item.isPartialPreview",
-                type="warning",
-                text="preview"
+                type="info",
+                text="Preview"
+                title="Some data not present"
               )
               Badge(
                 v-if="item.isOnlineOnly",
-                type="warning",
-                text="online only"
+                type="info",
+                text="Online Only"
+                title="Only available in online products"
               )
               Badge(
                 v-if="item.isPaperOnly",
-                type="warning",
-                text="paper only"
+                type="info",
+                text="Paper Only"
+                title="Only available in paper products"
               )
             ol.details
               li
@@ -69,6 +73,7 @@ import { computed, ref, onMounted } from 'vue';
 import { useStore } from '../store';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
+import DocBadge from './DocBadge.vue';
 import { dataSort } from '../helpers';
 import type { TList } from '../types';
 
@@ -220,7 +225,7 @@ onMounted((): void => {
       h3 {
         margin-top: 0;
         line-height: 1.25rem;
-        flex: none;
+        flex: 1;
       }
 
       p {
@@ -251,6 +256,9 @@ onMounted((): void => {
         &.tags {
           margin-top: 0;
           flex: none;
+          display: flex;
+          justify-content: flex-end;
+          align-items: center;
 
           &>* {
             margin-left: 0.5rem;
@@ -291,6 +299,12 @@ onMounted((): void => {
       &--details {
         position: relative;
 
+        &-title {
+          display: flex;
+          align-items: center;
+          flex: 1;
+        }
+
         &-img {
           float: left;
           margin-right: 0.5rem;
@@ -306,27 +320,6 @@ onMounted((): void => {
   }
 }
 
-@media (max-width: 799px) {
-  .download-list {
-    .download-wrap {
-      .text-wrap {
-        ol {
-          &.tags {
-            flex: 0 0 100%;
-
-            &>* {
-              margin-top: 0.75rem;
-              margin-left: 0;
-              margin-right: 0.5rem;
-            }
-          }
-        }
-      }
-    }
-  }
-
-}
-
 @media (max-width: 569px) {
   .download-list {
     .download-wrap {
@@ -338,6 +331,16 @@ onMounted((): void => {
         ol {
           li {
             display: inline-block !important;
+          }
+
+          &.tags {
+            flex: 0 0 100%;
+            margin-top: 1rem;
+            justify-content: flex-start;
+
+            &>* {
+              margin-left: 0;
+            }
           }
         }
       }

@@ -2,7 +2,7 @@
   // True colors, not to be changed
   --accent-color: #1e90ff;
   --yellow-color: #fcd253;
-  --yellow-1-color: #c6ac00;
+  --yellow-1-color: goldenrod;
   --yellow-2-color: #feffdb;
   --yellow-3-color: #363816;
   --green-color: palegreen;
@@ -10,6 +10,8 @@
   --green-2-color: #e0ffe1;
   --green-3-color: #203f22;
   --red-color: salmon;
+  --red-1-color: red;
+  --orange-color: darkorange;
   --white-color: #ffffff;
   --gray-color: #f9f9f9;
   --gray-1-color: #eeeeee;
@@ -50,9 +52,7 @@
   --supporter-uncommon-color: var(--white-color);
 
   // Model Badges
-  --model-new-badge-color: var(--green-1-color);
-  --model-new-badge-bg-color: transparent;
-  --model-abstract-badge-color: var(--yellow-1-color);
+  --model-abstract-badge-color: var(--orange-color);
   --model-abstract-badge-bg-color: transparent;
 
   // Version
@@ -71,13 +71,17 @@
   --vp-c-brand-darker: var(--accent-color);
   --vp-c-text-code: var(--yellow-color);
   --vp-input-switch-bg-color: var(--vp-c-bg-alt);
-  --vp-badge-danger-bg: var(--white-color);
-  --vp-badge-danger-border: var(--vp-badge-danger-text);
+
+  --vp-badge-danger-bg: transparent;
+  --vp-badge-danger-border: var(--red-1-color);
+  --vp-badge-danger-text: var(--red-1-color);
   --vp-badge-warning-bg: transparent;
   --vp-badge-warning-text: var(--yellow-1-color);
   --vp-badge-warning-border: var(--yellow-1-color);
   --vp-badge-info-bg: transparent;
-  --vp-badge-tip-bg: transparent;
+  --vp-badge-info-text: var(--orange-color);
+  --vp-badge-info-border: var(--orange-color);
+
   --vp-code-font-size: 12px;
 }
 
@@ -93,10 +97,6 @@ html.dark {
   // Version
   --version-color: var(--gray-3-color);
 
-  // Model Badges
-  --model-new-badge-color: var(--green-color);
-  --model-abstract-badge-color: var(--yellow-color);
-
   // Vitepress overrides
   --vp-c-bg-elv: var(--dark-2-color);
   --vp-c-bg-alt: var(--dark-2-color);
@@ -105,8 +105,9 @@ html.dark {
   --vp-custom-block-info-bg: var(--dark-2-color);
   --vp-custom-block-warning-bg: var(--dark-2-color);
   --vp-backdrop-bg-color: var(--dark-2-alpha-color);
+
+  --vp-badge-danger-border: var(--red-color);
+  --vp-badge-danger-text: var(--red-color);
   --vp-badge-warning-border: var(--yellow-color);
-  --vp-badge-warning-bg: var(--dark-color);
   --vp-badge-warning-text: var(--yellow-color);
-  --vp-badge-danger-bg: var(--dark-color);
 }

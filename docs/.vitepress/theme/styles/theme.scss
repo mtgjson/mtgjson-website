@@ -60,13 +60,13 @@ code {
   display: inline-block;
   color: var(--white-color);
   border: 2px solid var(--white-color);
-  padding: 0.35rem 0.45rem 0.35rem;
+  padding: 0 0.45rem 0;
   line-height: 0.5rem;
   border-radius: var(--common-radius);
   margin: 0 0.5rem;
   font-size: 12px;
+  line-height: 22px;
   font-weight: bold;
-  font-family: var(--vp-font-family-mono);
 
   &.sidebar {
     margin-right: 0.5rem;
@@ -77,12 +77,6 @@ code {
     color: var(--model-abstract-badge-color);
     border-color: var(--model-abstract-badge-color);
     background-color: var(--model-abstract-badge-bg-color);
-  }
-
-  &.new {
-    color: var(--model-new-badge-color);
-    border-color: var(--model-new-badge-color);
-    background-color: var(--model-new-badge-bg-color);
   }
 }
 
@@ -240,6 +234,14 @@ code {
     }
   }
 
+  .VPBadge {
+    margin-left: 0.5rem;
+    background-color: transparent !important;
+    border-width: 2px !important;
+    border-radius: var(--common-radius);
+    font-weight: bold !important;
+  }
+
   // Blockquotes
   blockquote {
     border-radius: var(--common-radius);
@@ -249,12 +251,6 @@ code {
     padding: 1rem;
 
     .VPBadge {
-      margin-left: 0.5rem;
-      background-color: transparent !important;
-      border-width: 2px !important;
-      border-radius: var(--common-radius);
-      font-weight: bold !important;
-      text-transform: capitalize;
       float: right;
     }
 
