@@ -33,14 +33,14 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 
 ## Model Properties
 
-> ### faceName <Badge type="warning" text="optional" />
+> ### faceName <DocBadge type="warning" text="optional" />
 >
 > The foreign name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
 
-> ### flavorText <Badge type="warning" text="optional" />
+> ### flavorText <DocBadge type="warning" text="optional" />
 >
 > The foreign flavor text of the card.
 >
@@ -55,7 +55,7 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 > - <ExampleField type='language'/>
 > - **Introduced:** `v4.0.0`
 
-> ### multiverseId <Badge type="warning" text="optional" />
+> ### multiverseId <DocBadge type="warning" text="optional" />
 >
 > The foreign multiverse identifier of the card.
 >
@@ -69,14 +69,14 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### text <Badge type="warning" text="optional" />
+> ### text <DocBadge type="warning" text="optional" />
 >
 > The foreign text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### type <Badge type="warning" text="optional" />
+> ### type <DocBadge type="warning" text="optional" />
 >
 > The foreign type of the card, including any supertypes and subtypes, and are given a `-` delimiter if appropriate.
 >

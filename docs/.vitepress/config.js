@@ -62,7 +62,7 @@ export default {
       shouldAllowNested: true,
       format: (str) => str.split('<')[0],
     },
-    theme: 'material-theme-darker',
+    theme: 'material-theme',
   },
   // VitePress themeing
   themeConfig: {

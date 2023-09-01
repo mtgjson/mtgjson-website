@@ -40,7 +40,7 @@ The Deck Data Model describes the properties of an individual Deck.
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### commander <Badge type="warning" text="optional" />
+> ### commander <DocBadge type="warning" text="optional" />
 >
 > The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
 >

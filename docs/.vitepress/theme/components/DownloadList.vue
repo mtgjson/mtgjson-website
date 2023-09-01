@@ -72,11 +72,11 @@ import DownloadSorter from './DownloadSorter.vue';
 import { dataSort } from '../helpers';
 import type { TList } from '../types';
 
-  type Props = {
-    file: string;
-    type?: string;
-    disableChecks?: string;
-  };
+type Props = {
+  file: string;
+  type?: string;
+  disableChecks?: string;
+};
 
 const store = useStore();
 const props: Props = defineProps<Props>();

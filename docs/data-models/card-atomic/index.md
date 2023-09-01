@@ -51,14 +51,14 @@ const card: CardAtomic = data["Phelddagrif"][0];
 
 ## Model Properties
 
-> ### asciiName <Badge type="warning" text="optional" />
+> ### asciiName <DocBadge type="warning" text="optional" />
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
 
-> ### attractionLights <Badge type="warning" text="optional" />
+> ### attractionLights <DocBadge type="warning" text="optional" />
 >
 > A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
 >
@@ -73,7 +73,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### colorIndicator <Badge type="warning" text="optional" />
+> ### colorIndicator <DocBadge type="warning" text="optional" />
 >
 > A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
 >
@@ -89,7 +89,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### convertedManaCost <Badge type="danger" text="deprecated" />
+> ### convertedManaCost <DocBadge type="danger" text="deprecated" />
 >
 > The converted mana cost of the card.
 >
@@ -98,28 +98,28 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `number`
 > - **Introduced:** `v4.0.0`
 
-> ### defense <Badge type="warning" text="optional" />
+> ### defense <DocBadge type="warning" text="optional" />
 >
 > The defense of the card. Used on [battle](https://mtg.fandom.com/wiki/Battle) cards.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
 
-> ### edhrecRank <Badge type="warning" text="optional" />
+> ### edhrecRank <DocBadge type="warning" text="optional" />
 >
 > The card rank on [EDHRec](https://www.edhrec.com).
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.5.0`
 
-> ### edhrecSaltiness <Badge type="warning" text="optional" />
+> ### edhrecSaltiness <DocBadge type="warning" text="optional" />
 >
 > The card saltiness score on [EDHRec](https://www.edhrec.com).
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.2.1`
 
-> ### faceConvertedManaCost <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
+> ### faceConvertedManaCost <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
 >
 > The converted mana cost or mana value for the face for either half or part of the card.
 >
@@ -128,42 +128,42 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `number`
 > - **Introduced:** `v4.1.1`
 
-> ### faceManaValue <Badge type="warning" text="optional" />
+> ### faceManaValue <DocBadge type="warning" text="optional" />
 >
 > The mana value of the face for either half or part of the card.
 >
 > - **Type:** `number`
 > - **Introduced:** `v5.2.0`
 
-> ### faceName <Badge type="warning" text="optional" />
+> ### faceName <DocBadge type="warning" text="optional" />
 >
 > The name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
-> ### firstPrinting <Badge type="warning" text="optional" />
+> ### firstPrinting <DocBadge type="warning" text="optional" />
 >
 > The set code the card was first printed in.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
 
-> ### foreignData <Badge type="warning" text="optional" />
+> ### foreignData <DocBadge type="warning" text="optional" />
 >
 > A list of data properties in other languages. See the [Foreign Data](/data-models/foreign-data/) Data Model.
 >
 > - **Type:** `ForeignData[]`
 > - **Introduced:** `v5.2.1`
 
-> ### hand <Badge type="warning" text="optional" />
+> ### hand <DocBadge type="warning" text="optional" />
 >
 > The starting maximum hand size total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
 
-> ### hasAlternativeDeckLimit <Badge type="warning" text="optional" />
+> ### hasAlternativeDeckLimit <DocBadge type="warning" text="optional" />
 >
 > If the card allows a value other than 4 copies in a deck.
 >
@@ -177,21 +177,21 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.1.0`
 
-> ### isFunny <Badge type="warning" text="optional" />
+> ### isFunny <DocBadge type="warning" text="optional" />
 >
 > If the card is part of a funny set, such as an Un-set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.1`
 
-> ### isReserved <Badge type="warning" text="optional" />
+> ### isReserved <DocBadge type="warning" text="optional" />
 >
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
 
-> ### keywords <Badge type="warning" text="optional" />
+> ### keywords <DocBadge type="warning" text="optional" />
 >
 > A list of keywords found on the card.
 >
@@ -206,7 +206,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
-> ### leadershipSkills <Badge type="warning" text="optional" />
+> ### leadershipSkills <DocBadge type="warning" text="optional" />
 >
 > The formats the card is legal to be a commander in. See the [Leadership Skills](/data-models/leadership-skills/) Data Model.
 >
@@ -220,21 +220,21 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `Legalities`
 > - **Introduced:** `v4.0.0`
 
-> ### life <Badge type="warning" text="optional" />
+> ### life <DocBadge type="warning" text="optional" />
 >
 > The starting life total modifier. A `+` or `-` character precedes a number. Used only on cards with `"Vanguard"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
 
-> ### loyalty <Badge type="warning" text="optional" />
+> ### loyalty <DocBadge type="warning" text="optional" />
 >
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### manaCost <Badge type="warning" text="optional" />
+> ### manaCost <DocBadge type="warning" text="optional" />
 >
 > The mana cost of the card wrapped in curly brackets for each mana symbol value.
 >
@@ -257,14 +257,14 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Example:** `"Wear // Tear"`
 > - **Introduced:** `v4.0.0`
 
-> ### power <Badge type="warning" text="optional" />
+> ### power <DocBadge type="warning" text="optional" />
 >
 > The power of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### printings <Badge type="warning" text="optional" />
+> ### printings <DocBadge type="warning" text="optional" />
 >
 > A list of printing set codes the card was printed in, formatted in uppercase.
 >
@@ -285,14 +285,14 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
-> ### rulings <Badge type="warning" text="optional" />
+> ### rulings <DocBadge type="warning" text="optional" />
 >
 > A list of the official rulings of the card. See the [Rulings](/data-models/rulings/) Data Model.
 >
 > - **Type:** `Rulings[]`
 > - **Introduced:** `v4.0.0`
 
-> ### side <Badge type="warning" text="optional" />
+> ### side <DocBadge type="warning" text="optional" />
 >
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
@@ -300,7 +300,7 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
 
-> ### subsets <Badge type="warning" text="optional" />
+> ### subsets <DocBadge type="warning" text="optional" />
 >
 > The names of the subset printings a card is in. Used primarily on "Secret Lair Drop" cards.
 >
@@ -323,14 +323,14 @@ const card: CardAtomic = data["Phelddagrif"][0];
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### text <Badge type="warning" text="optional" />
+> ### text <DocBadge type="warning" text="optional" />
 >
 > The rules text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### toughness <Badge type="warning" text="optional" />
+> ### toughness <DocBadge type="warning" text="optional" />
 >
 > The toughness of the card.
 >

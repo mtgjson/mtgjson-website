@@ -106,7 +106,7 @@ You can also change configuration of VitePress by overwriting variables within t
 An example of a property field for a data object field in Markdown:
 
 ```
-> ### artist <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
+> ### artist <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
 >
 > The name of the artist that illustrated the card art.
 >
@@ -114,7 +114,7 @@ An example of a property field for a data object field in Markdown:
 > **Introduced:** `v4.0.0`
 ```
 
-The `<Badge type="warning" text="optional" />` markup will render a UI change in the property that denotes the property is optional. The same applies for `<Badge type="danger" text="deprecated" />` that can be used to denote a property is deprecated. Be sure to order them with deprecated first, and then optional. Using the optional Badge is required for properties that we know are optional in order to generate the TypeScript types properly.
+The `<DocBadge type="warning" text="optional" />` markup will render a UI change in the property that denotes the property is optional. The same applies for `<DocBadge type="danger" text="deprecated" />` that can be used to denote a property is deprecated. Be sure to order them with deprecated first, and then optional. Using the optional Badge is required for properties that we know are optional in order to generate the TypeScript types properly.
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
@@ -122,7 +122,7 @@ If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`,
 
 ## Pinia Store
 
-We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store remains as performant as possible.
+We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store the data so the app remains as performant as possible without hitting the API's too much.
 
 ## Testing
 
