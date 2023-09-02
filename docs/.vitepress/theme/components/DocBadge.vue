@@ -10,7 +10,7 @@ type Props = {
 };
 
 const props: Props = defineProps<Props>();
-const title: string = props.text.charAt(0).toUpperCase();
+let title: string = props.text.charAt(0).toUpperCase();
 // Handle multiple words
 // const title: string = props.text.split(' ').map(text => {
 //   return text.charAt(0).toUpperCase() + text.slice(1, text.length);
@@ -33,14 +33,32 @@ switch (props.text) {
 
   case 'preview':
     tooltip = 'Data is not complete';
+    title = 'Preview';
     break;
 
   case 'online only':
-    tooltip = 'Data is only relevant to digital products';
+    tooltip = 'Data is only a digital product';
+    title = 'Digital Only';
     break;
 
   case 'paper only':
-    tooltip = 'Data is only relevant to paper products';
+    tooltip = 'Data is only a paper product';
+    title = 'Paper Only';
+    break;
+
+  case 'foil only':
+    tooltip = 'Data is only a foil product';
+    title = 'Foiled Only';
+    break;
+
+  case 'non-foil only':
+    tooltip = 'Data is only a non-foil product';
+    title = 'Non-Foiled Only';
+    break;
+
+  case 'foreign only':
+    tooltip = 'Data is only a foreign product';
+    title = 'Foreign Only';
     break;
 
   default:
@@ -56,9 +74,10 @@ switch (props.text) {
     display: inline-block;
     color: var(--white-color);
     border: 2px solid var(--white-color);
+    background-color: transparent;
+    border-radius: var(--common-radius);
     padding: 0 0.5rem;
     line-height: 0.5rem;
-    border-radius: var(--common-radius);
     font-size: 12px;
     line-height: 22px;
     font-weight: bold;

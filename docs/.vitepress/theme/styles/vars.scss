@@ -3,6 +3,7 @@
   --accent-color: #1e90ff;
   --accent-1-color: #092d50;
   --accent-2-color: #daecfe;
+  --accent-3-color: #1762ae;
   --yellow-color: #FFCB6B;
   --yellow-1-color: goldenrod;
   --yellow-2-color: #feffdb;
@@ -14,6 +15,7 @@
   --red-color: salmon;
   --red-1-color: red;
   --orange-color: darkorange;
+  --orange-1-color: tomato;
   --white-color: #ffffff;
   --gray-color: #f9f9f9;
   --gray-1-color: #eeeeee;
@@ -109,16 +111,18 @@ html.dark {
   --vp-c-bg: var(--dark-1-color);
   --vp-c-bg-soft: var(--dark-2-color);
   --vp-backdrop-bg-color: var(--dark-2-alpha-color);
+
   --vp-custom-block-tip-bg: var(--accent-1-color);
   --vp-custom-block-tip-text: var(--white-color);
+  --vp-custom-block-tip-border: var(--accent-3-color);
   --vp-custom-block-warning-bg: var(--yellow-3-color);
   --vp-custom-block-warning-border: var(--yellow-color);
   --vp-custom-block-warning-text: var(--dark-color);
   --vp-custom-block-details-border: var(--dark-color);
   --vp-custom-block-details-bg: var(--dark-2-color);
 
-  --vp-badge-info-border: var(--orange-color);
-  --vp-badge-info-text: var(--orange-color);
+  // --vp-badge-info-border: var(--orange-color);
+  // --vp-badge-info-text: var(--orange-color);
   --vp-badge-warning-border: var(--yellow-color);
   --vp-badge-warning-text: var(--yellow-color);
   --vp-badge-danger-border: var(--red-color);

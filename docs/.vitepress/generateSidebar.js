@@ -21,13 +21,12 @@ export default (routes) => {
           const isCardRoute = fileNameSplit[0] === 'Card';
           const isDeckRoute = fileNameSplit[0] === 'Deck' && fileNameSplit[1];
           const isSealedProductRoute = fileNameSplit[0] === 'Sealed';
-          const isTypesRoute = fileNameSplit[1] === 'Types';
+          const isTypesRoute = fileNameSplit[1] === 'Types' || fileNameSplit[1] === 'Type';
           const isListRoute = fileNameSplit[1] === 'List';
           const is3Words = fileNameSplit[2];
 
           let fileNameClean = fileName;
           let badgeText = [];
-          let badgeClasses = [];
           let badges = [];
 
           // First check if were looking at a Card or Deck route that is a variation
@@ -37,7 +36,7 @@ export default (routes) => {
           }
 
           // Next, if the route has 3 words default to just putting all other words in parens
-          if (is3Words) {
+          if (is3Words && !isTypesRoute) {
             fileNameClean = `${fileNameSplit[0]} (${fileNameSplit[1]} ${fileNameSplit[2]})`;
 
             // If we have a Sealed Product we needs to account for two
@@ -50,7 +49,6 @@ export default (routes) => {
           switch (fileNameDirty) {
             case 'all prices':
             case 'booster':
-            case 'card types':
             case 'enum values':
             case 'sealed product variable':
               badgeText.push('abstract');

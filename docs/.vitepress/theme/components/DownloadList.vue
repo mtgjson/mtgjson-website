@@ -30,23 +30,41 @@
                 )
               h3 {{ item.name }}
             ol.tags
-              Badge(
+              DocBadge(
                 v-if="item.isPartialPreview",
                 type="info",
-                text="Preview"
+                text="preview"
                 title="Some data not present"
               )
-              Badge(
+              DocBadge(
                 v-if="item.isOnlineOnly",
                 type="info",
-                text="Online Only"
+                text="online only"
                 title="Only available in online products"
               )
-              Badge(
+              DocBadge(
                 v-if="item.isPaperOnly",
                 type="info",
-                text="Paper Only"
+                text="paper only"
                 title="Only available in paper products"
+              )
+              DocBadge(
+                v-if="item.isFoilOnly",
+                type="info",
+                text="foil only"
+                title="Only available as foil products"
+              )
+              DocBadge(
+                v-if="item.isNonFoilOnly",
+                type="info",
+                text="foil only"
+                title="Only available as foil products"
+              )
+              DocBadge(
+                v-if="item.isForeignOnly",
+                type="info",
+                text="foreign only"
+                title="Only available as a foreign product"
               )
             ol.details
               li
@@ -338,7 +356,7 @@ onMounted((): void => {
             margin-top: 1rem;
             justify-content: flex-start;
 
-            &>* {
+            &>*:first-of-type {
               margin-left: 0;
             }
           }

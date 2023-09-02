@@ -42,32 +42,62 @@
             option(value="type") Type (Ascending)
             option(value="type:true") Type (Descending)
 
-      .sort-row.checkbox(v-if="disableChecks !== 'true'")
-        input(
-          id="preview-toggle",
-          type="checkbox",
-          @change="onHandleChange",
-          v-model="spoilerValue"
-        )
-        label(for="preview-toggle") Include Previews
+      .sort-rows-grid
+        .sort-row.grid-item
+          .sort-row.checkbox(v-if="disableChecks !== 'true'")
+            input(
+              id="partial-toggle",
+              type="checkbox",
+              @change="onHandleChange",
+              v-model="partialValue"
+            )
+            label(for="partial-toggle") Include Partial Data
 
-      .sort-row.checkbox(v-if="disableChecks !== 'true'")
-        input(
-          id="online-toggle",
-          type="checkbox",
-          @change="onHandleChange",
-          v-model="onlineValue"
-        )
-        label(for="online-toggle") Include Online Only
+          .sort-row.checkbox(v-if="disableChecks !== 'true'")
+            input(
+              id="online-toggle",
+              type="checkbox",
+              @change="onHandleChange",
+              v-model="onlineValue"
+            )
+            label(for="online-toggle") Include Digital Only
 
-      .sort-row.checkbox(v-if="disableChecks !== 'true'")
-        input(
-          id="paper-toggle",
-          type="checkbox",
-          @change="onHandleChange",
-          v-model="paperValue"
-        )
-        label(for="paper-toggle") Include Paper Only
+          .sort-row.checkbox(v-if="disableChecks !== 'true'")
+            input(
+              id="paper-toggle",
+              type="checkbox",
+              @change="onHandleChange",
+              v-model="paperValue"
+            )
+            label(for="paper-toggle") Include Paper Only
+
+        .sort-row.grid-item
+          .sort-row.checkbox(v-if="disableChecks !== 'true'")
+            input(
+              id="foil-toggle",
+              type="checkbox",
+              @change="onHandleChange",
+              v-model="foilValue"
+            )
+            label(for="foil-toggle") Include Foiled Only
+
+          .sort-row.checkbox(v-if="disableChecks !== 'true'")
+            input(
+              id="non-foil-toggle",
+              type="checkbox",
+              @change="onHandleChange",
+              v-model="nonFoilValue"
+            )
+            label(for="non-foil-toggle") Include Non-Foiled Only
+
+          .sort-row.checkbox(v-if="disableChecks !== 'true'")
+            input(
+              id="foreign-toggle",
+              type="checkbox",
+              @change="onHandleChange",
+              v-model="foreignValue"
+            )
+            label(for="foreign-toggle") Include Foreign Only
 
       .sort-row.reset
         small
@@ -94,9 +124,12 @@ const lazyOffset = ref<number>(25);
 const lazyToLoad = ref<number>(25);
 const filterValue = ref<string>('');
 const searchValue = ref<string>('');
-const spoilerValue = ref<boolean>(true);
+const partialValue = ref<boolean>(true);
 const onlineValue = ref<boolean>(true);
 const paperValue = ref<boolean>(true);
+const foilValue = ref<boolean>(true);
+const nonFoilValue = ref<boolean>(true);
+const foreignValue = ref<boolean>(true);
 const sortKey = ref<string>('releaseDate:true');
 const timeout = ref<any>(null);
 
@@ -125,9 +158,12 @@ const onHandleReset = (): void => {
   lazyOffset.value = lazyToLoad.value;
   filterValue.value = '';
   searchValue.value = '';
-  spoilerValue.value = true;
+  partialValue.value = true;
   onlineValue.value = true;
   paperValue.value = true;
+  foilValue.value = true;
+  nonFoilValue.value = true;
+  foreignValue.value = true;
 
   const data: TList[] = dataSort(sortKey.value, props.list);
   const dynamicData: TList[] = data.slice(0, lazyOffset.value);
@@ -145,11 +181,17 @@ const onHandleChange = (_: any, loadAll?: boolean): void => {
     const loadMoreEl: HTMLElement = document.querySelector('.load-more-btn');
     const data: TList[] = props.list;
     // Remove preview data
-    let filteredData: TList[] = !spoilerValue.value ? data.filter((set) => !set.isPartialPreview) : data;
-    // Removed online data
+    let filteredData: TList[] = !partialValue.value ? data.filter((set) => !set.isPartialPreview) : data;
+    // Remove online data
     filteredData = !onlineValue.value ? filteredData.filter((set) => !set.isOnlineOnly) : filteredData;
-    // Removed paper data
+    // Remove paper data
     filteredData = !paperValue.value ? filteredData.filter((set) => !set.isPaperOnly) : filteredData;
+    // Remove foil data
+    filteredData = !foilValue.value ? filteredData.filter((set) => !set.isFoilOnly) : filteredData;
+    // Remove non-foil data
+    filteredData = !nonFoilValue.value ? filteredData.filter((set) => !set.isNonFoilOnly) : filteredData;
+    // Remove foreign data
+    filteredData = !foreignValue.value ? filteredData.filter((set) => !set.isForeignOnly) : filteredData;
 
     const searched: TList[] = dataSearch(searchValue.value, filteredData);
     const sorted: TList[] = dataSort(sortKey.value, searched);
@@ -181,7 +223,7 @@ defineExpose({
   background-color: var(--vp-c-bg-alt);
   border-radius: var(--common-radius);
   top: var(--vp-nav-height);
-  z-index: 100;
+  z-index: 9;
   padding: 1rem;
   border: 1px solid var(--vp-c-divider);
   margin-bottom: 1rem;
@@ -301,6 +343,16 @@ defineExpose({
             margin-left: 0;
           }
         }
+
+        &.checkbox {
+          flex: 0 0 100%;
+
+          label,
+          input,
+          select {
+            flex: none;
+          }
+        }
       }
     }
   }
@@ -345,6 +397,7 @@ defineExpose({
 
       &-grid {
         grid-template-columns: 1fr;
+        grid-gap: 0;
 
         .sort-row {
           &.grid-item {

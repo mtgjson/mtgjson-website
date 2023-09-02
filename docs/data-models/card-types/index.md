@@ -6,18 +6,18 @@ head:
       content: Card Types
   - - meta
     - name: description
-      content: The Card Types Abstract Data Model describes the properties of any possible subtypes and supertypes of a card.
+      content: The Card Types Data Model describes the properties of a Card Data Model that has possible confurations of associated subtypes and supertypes.
   - - meta
     - property: og:description
-      content: The Card Types Abstract Data Model describes the properties of any possible subtypes and supertypes of a card.
+      content: The Card Types Data Model describes the properties of a Card Data Model that has possible confurations of associated subtypes and supertypes.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, card types
 ---
 
-# Card Types <DocBadge type="abstract" text="abstract" />
+# Card Types
 
-The Card Types Abstract Data Model describes the properties of any possible subtypes and supertypes of a card.
+The Card Types Data Model describes the properties of a Card Data Model that has possible confurations of associated subtypes and supertypes.
 
 - **Parent file:** [CardTypes](/downloads/all-files/#cardtypes)
 - **Parent property:** `data`
@@ -26,45 +26,99 @@ The Card Types Abstract Data Model describes the properties of any possible subt
 
 ::: details Toggle Model
 
-```TypeScript
-export type CardTypes = {
-  // Card type
-  [key: string]: {
-    // Any subtypes available to a card type
-    subTypes: string[];
-    // Any supertypes available to a card type
-    superTypes: string[];
-  }
-}
-```
+<<< @/public/types/CardTypes.ts{TypeScript}
 
 :::
 
-## Example Model
+## Model Properties
 
-Here is an example model with a reduced payload:
+> ### artifact
+>
+> The artifact type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
 
-```JSON
-{
-  "artifact": {
-    "subTypes": [
-      "Blood",
-      "Clue",
-      "Contraption",
-      "Equipment",
-      "Food",
-      "Fortification",
-      "Gold",
-      "Treasure",
-      "Vehicle"
-    ],
-    "superTypes": [
-      "Basic",
-      "Legendary",
-      "Ongoing",
-      "Snow",
-      "World"
-    ]
-  }
-}
-```
+> ### conpsiracy
+>
+> The artifact type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### creature
+>
+> The creature type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### enchantment
+>
+> The enchantment type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### instant
+>
+> The instant type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### land
+>
+> The land type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### phenomenon
+>
+> The phenomenon type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### plane
+>
+> The plane type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### planeswalker
+>
+> The planeswalker type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### scheme
+>
+> The scheme type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### sorcery
+>
+> The sorcery type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### tribal
+>
+> The tribal type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`
+
+> ### vanguard
+>
+> The vanguard type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v4.0.0`

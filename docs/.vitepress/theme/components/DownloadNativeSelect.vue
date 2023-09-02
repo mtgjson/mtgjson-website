@@ -132,6 +132,7 @@ const downloadFile = (e: HTMLChangeEvent): void => {
   select {
     margin-top: 1rem;
     padding: 0.25rem 0.5rem;
+    height: 40px;
     border-radius: var(--common-radius);
     background-color: var(--select-bg-color);
     border: 1px solid var(--select-border-color);
