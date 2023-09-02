@@ -32,37 +32,37 @@
             ol.tags
               DocBadge(
                 v-if="item.isPartialPreview",
-                type="info",
+                type="tip",
                 text="preview"
                 title="Some data not present"
               )
               DocBadge(
                 v-if="item.isOnlineOnly",
-                type="info",
+                type="tip",
                 text="online only"
                 title="Only available in online products"
               )
               DocBadge(
                 v-if="item.isPaperOnly",
-                type="info",
+                type="tip",
                 text="paper only"
                 title="Only available in paper products"
               )
               DocBadge(
                 v-if="item.isFoilOnly",
-                type="info",
+                type="tip",
                 text="foil only"
                 title="Only available as foil products"
               )
               DocBadge(
                 v-if="item.isNonFoilOnly",
-                type="info",
+                type="tip",
                 text="foil only"
                 title="Only available as foil products"
               )
               DocBadge(
                 v-if="item.isForeignOnly",
-                type="info",
+                type="tip",
                 text="foreign only"
                 title="Only available as a foreign product"
               )

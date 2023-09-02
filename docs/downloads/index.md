@@ -29,15 +29,17 @@ MTGJSON provides various files for your projects, you can find them all at the [
 
 MTGJSON outputs each individual Set which can be found at the [All Sets](/downloads/all-sets/) download page. Sets may be tagged with certain attributes that define information about the Set.
 
-<DocBadge inline="true" type="info" text="preview" /> Data is not complete.<br />
+<DocBadge inline="true" type="tip" text="preview" /> Set is not complete.<br />
 
-<DocBadge inline="true" type="info" text="paper only" /> Data is only a paper product.<br />
+<DocBadge inline="true" type="tip" text="paper only" /> Set is only a paper product.<br />
 
-<DocBadge inline="true" type="info" text="online only" /> Data is only a digital product.<br />
+<DocBadge inline="true" type="tip" text="online only" /> Set is only a digital product.<br />
 
-<DocBadge inline="true" type="info" text="foil only" /> Data is only a foiled product.<br />
+<DocBadge inline="true" type="tip" text="foreign only" /> Set is only a foreign product.<br />
 
-<DocBadge inline="true" type="info" text="foreign only" /> Data is only a foreign product.<br />
+<DocBadge inline="true" type="tip" text="foil only" /> Set is only a foiled product.<br />
+
+<DocBadge inline="true" type="tip" text="non-foil only" /> Set is only a non-foiled product.<br />
 
 ### All Decks
 
