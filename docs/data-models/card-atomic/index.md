@@ -23,9 +23,9 @@ The Card (Atomic) Data Model describes the properties of a single "atomic" card,
 - **Parent file:** [AtomicCards](/downloads/all-files/#atomiccards), [LegacyAtomic](/downloads/all-files/#legacyatomic), [ModernAtomic](/downloads/all-files/#modernatomic), [PauperAtomic](/downloads/all-files/#pauperatomic), [PioneerAtomic](/downloads/all-files/#pioneeratomic), [StandardAtomic](/downloads/all-files/#standardatomic), [VintageAtomic](/downloads/all-files/#vintageatomic)
 - **Parent property:** `data`
 
-::: info Accessing the data
+::: tip Accessing Card (Atomic) Data
 
-When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's [name](/data-models/card-atomic/#name) property. Here is a reduced payload of the model as an example:
+When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's [name](/data-models/card-atomic/#name) property.
 
 ```TypeScript
 {

@@ -15,7 +15,7 @@ head:
       content: mtg, magic the gathering, mtgjson, json, card types
 ---
 
-# Card Types
+# Card Types <DocBadge type="abstract" text="abstract" />
 
 The Card Types Abstract Data Model describes the properties of any possible subtypes and supertypes of a card.
 

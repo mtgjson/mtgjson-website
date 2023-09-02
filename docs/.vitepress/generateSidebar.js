@@ -53,32 +53,21 @@ export default (routes) => {
             case 'card types':
             case 'enum values':
             case 'sealed product variable':
-              badgeText.push('Abstract');
+              badgeText.push('abstract');
               break;
-
-              // case 'card set deck':
-              // case 'deck set':
-              // case 'sealed product card':
-              // case 'sealed product deck':
-              // case 'sealed product other':
-              // case 'sealed product pack':
-              // case 'sealed product sealed':
-              //   badgeText.push('New');
-              //   break;
 
             default:
               break;
           }
 
-          badgeClasses = badgeText.map((text) => text.toLowerCase());
-          badges = badgeClasses.map((text) => {
-            return `<span class="model-badge sidebar ${text}" title="${
+          badges = badgeText.map((text) => {
+            return `<span class="doc-badge sidebar ${text}" title="${
               text.charAt(0).toUpperCase() + text.slice(1, text.length)
             } Data Model">${text.charAt(0).toUpperCase()}</span>`;
           });
 
           return {
-            text: `${badges.join('')}${fileNameClean}`,
+            text: `${fileNameClean}${badges.join('')}`,
             link: `${route}${file}/`,
           };
         })

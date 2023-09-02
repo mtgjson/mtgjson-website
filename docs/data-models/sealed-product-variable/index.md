@@ -15,14 +15,14 @@ head:
       content: mtg, magic the gathering, mtgjson, json, sealed product variable product
 ---
 
-# Sealed Product (Variable)
+# Sealed Product (Variable) <DocBadge type="abstract" text="abstract" />
 
 The Sealed Product (Variable) Abstract Data Model describes the variable product properties for the purchaseable product for a [Sealed Product](/data-models/sealed-product/) Data Model.
 
 - **Parent model:** [Sealed Product](/data-models/sealed-product/)
 - **Parent property:** `variable`
 
-::: info About Sealed Product (Variable)
+::: tip Accessing Sealed Product (Variable) Data
 
 This Abstract Data Model is used when a Sealed Product may have differnt configurations of the products within a Sealed Product, such as variations of Decks or Cards. To access this data, the `variable` key may have multiple configurations accessible by index. Each configuration has a single `configs` key which contains an array of objects where the Sealed Product products can be accessed exactly like other Sealed Products. See below for the Abstract Data Model structure.
 

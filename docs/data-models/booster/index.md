@@ -15,7 +15,7 @@ head:
       content: mtg, magic the gathering, mtgjson, json, booster
 ---
 
-# Booster
+# Booster <DocBadge type="abstract" text="abstract" />
 
 The Booster Abstract Data Model describes the properties of how a [Set](/data-models/set/)'s booster pack may be constructed.
 

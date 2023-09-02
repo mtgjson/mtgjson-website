@@ -15,7 +15,7 @@ head:
       content: mtg, magic the gathering, mtgjson, json, all prices
 ---
 
-# All Prices
+# All Prices <DocBadge type="abstract" text="abstract" />
 
 The All Prices Abstract Data Model describes the properties of card prices based on a card's uuid property.
 
@@ -39,43 +39,44 @@ MTGJSON currently has affiliated with the following price providers to keep a **
 ::: details Toggle Model
 
 ```TypeScript
-export type AllPrices = {
-  // Card uuid property
-  [key: string]: {
-    // Product format, such as "paper"
-    [key: string]: {
-      // Price provider
-      [key: string]: {
-        // Provider buylist values
-        buylist?: {
-          // Foil prices
-          foil?: {
-            // ISO 8601 date format as the key and price as value
-            [key: string]: number;
-          },
-          // Normal prices
-          normal?: {
-            // ISO 8601 date format as the key and price as value
-            [key: string]: number;
-          }
-        },
-        // Currency of the provider
-        currency: string;
-        // Provider retail values
-        retail?: {
-          // Foil prices
-          foil?: {
-            // ISO 8601 date format as the key and price as value
-            [key: string]: number;
-          },
-          // Normal prices
-          normal?: {
-            // ISO 8601 date format as the key and price as value
-            [key: string]: number;
-          }
-        }
-      }
+export type AllPricesProvider = {
+  buylist?: {
+    foil?: {
+      // ISO 8601 date format as the key and price as value
+      [key: string]: number;
+    },
+    normal?: {
+      // ISO 8601 date format as the key and price as value
+      [key: string]: number;
     }
+  },
+  currency: string;
+  retail?: {
+    // Foil prices
+    foil?: {
+      // ISO 8601 date format as the key and price as value
+      [key: string]: number;
+    },
+    // Normal prices
+    normal?: {
+      // ISO 8601 date format as the key and price as value
+      [key: string]: number;
+    }
+  }
+};
+
+export type AllPrices = {
+  // Card uuid
+  [key: string]: {
+    mtgo?: {
+      cardhoarder: AllPricesProvider;
+    };
+    paper?: {
+      cardkingdom?: AllPricesProvider;
+      cardmarket?: AllPricesProvider;
+      cardsphere?: AllPricesProvider;
+      tcgplayer?: AllPricesProvider;
+    };
   }
 }
 ```
