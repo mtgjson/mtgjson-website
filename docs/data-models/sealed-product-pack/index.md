@@ -34,7 +34,7 @@ The Sealed Product (Pack) Data Model describes the sealed pack configuration in 
 
 > ### code
 >
-> The name for the configuration of the Booster for the pack. Used for identification in a [Booster](/data-models/booster/) Data Model.
+> The name for the configuration of the Booster for the pack. Used for identifying a [Booster (Config)](/data-models/booster-config/) Data Model.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`

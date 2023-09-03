@@ -73,8 +73,9 @@ Release Date: 2023-09-01
 
 #### Added
 
-- Added `fixed` property to [Booster](/data-models/booster/) sheets property
-- Added `allowDuplicates` property to [Booster](/data-models/booster/) sheets property
+- Added `fixed` property
+- Added `allowDuplicates` property
+- Added [Booster (Config)](/data-models/booster-config/) Data Model to describe configurations of a booster property
 - Added [Booster (Pack)](/data-models/booster-pack/) Data Model to describe configurations of booster packs
 - Added [Booster (Sheet)](/data-models/booster-sheet/) Data Model to describe configurations of cards printed on a sheet for booster packs
 
@@ -102,6 +103,7 @@ A new file containing card prices for all cards only for the current day.
 
 ### Misc
 
+- Exported more Data Models as TypeScript types
 - Handle error exceptions from Gatherer
 - Handle error exceptions from Scryfall
 - Handle crashes if fields are not found
@@ -451,7 +453,7 @@ Release Date: 2020-07-03
 
 **Welcome to v5.0.0!** We are proud to announce the 5th major release of MTGJSON. The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `booster` optional property defined as the [Booster](/data-models/booster/) Abstract Data Model on the [Set](/data-models/set/) Data Model.
+We are also pleased to announce the addition of `booster` optional property defined as the [Booster (Config)](/data-models/booster-config/) Abstract Data Model on the [Set](/data-models/set/) Data Model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 

@@ -79,19 +79,11 @@ For example, a [Set](/data-models/set/) Data Model is the model used in the `dat
 
 ```TypeScript
 {
-  data: {
-    cards: Record<string, CardSet[]>
-  }
+  data: Record<string, CardSet[]>
 }
 ```
 
 :::
-
-### Abstract Data Models
-
-Abstract Data Models have abnormal data objects that are not clearly defined. They tend to have many nested properties with non-unique keys so documentation is formalized with example data.
-
-For example, `AllPrices.json` uses the [All Prices](/data-models/all-prices/) Abstract Data Model in its `data` property.
 
 ## GraphQL API
 

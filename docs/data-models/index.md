@@ -17,19 +17,15 @@ head:
 
 # Data Models
 
-Data Models in MTGJSON describe any JSON object or nested JSON object.
-
-Generally speaking, most **Data Models** describe flat structures, but **Abstract Data Models** describe many nested data structures within Files and Data Models.
-
-The easiest way to think about the difference is that a regular Data Model is a Record or Array containing few other known Records or Arrays, while Abstract Data Models are Records with many variable keys of nested Records or Arrays.
+Data Models in MTGJSON describe any JSON structure within a file or other Data Model. These are the response structures of the JSON payload.
 
 ## Attributes
 
 Certain Data Models and Data Model properties may have different attributes to denote alternate types of data returned. Use the below to guide you in understanding what data flows through your application and when to use it.
 
-### Abstract Models
+<!-- ### Abstract Models
 
-<DocBadge inline="true" type="info" text="abstract" /> Data Model is an Abstract Data Model.
+<DocBadge inline="true" type="info" text="abstract" /> Data Model is an Abstract Data Model. -->
 
 ### Optional Properties
 

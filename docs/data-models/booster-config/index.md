@@ -1,0 +1,54 @@
+---
+title: Booster (Config)
+head:
+  - - meta
+    - property: og:title
+      content: Booster (Config)
+  - - meta
+    - name: description
+      content: The Booster (Config) Data Model describes the properties of how a Set's booster data may be configured.
+  - - meta
+    - property: og:description
+      content: The Booster (Config) Data Model describes the properties of how a Set's booster data may be configured.
+  - - meta
+    - name: keywords
+      content: mtg, magic the gathering, mtgjson, json, booster config
+---
+
+# Booster (Config)
+
+The Booster (Config) Data Model describes the properties of how a [Set](/data-models/set/)'s booster data may be configured.
+
+- **Parent model:** [Set](/data-models/set/)
+- **Parent property:** `booster`
+
+## TypeScript Model
+
+::: details Toggle Model
+
+<<< @/public/types/BoosterConfig.ts{TypeScript}
+
+:::
+
+## Model Properties
+
+> ### boosters
+>
+> The booster packs configurations. See the [Booster Pack](/data-models/booster-pack/) Data Model.
+>
+> - **Type:** `BoosterPack[]`
+> - **Introduced:** `v5.2.2`
+
+> ### boostersTotalWeight
+>
+> The weight of total booster pack configurations.
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.2`
+
+> ### sheets
+>
+> The sheets of cards in a printing where the key is the name of the sheet and value is the configuration. See the [Booster Sheet](/data-models/booster-sheet/) Data Model.
+>
+> - **Type:** `Record<string, BoosterSheet>`
+> - **Introduced:** `v5.2.2`

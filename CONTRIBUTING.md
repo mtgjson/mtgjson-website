@@ -41,6 +41,7 @@ Some files and directories are omitted that do not help understand this current 
 │   └── generate-types.js # Utility to generate TypeScript notations for documentation
 └── docs/ # Home directory, outputs to `/dist`
     ├── **/**/index.md # Directories and their route entry point
+    ├── types.ts # An abstract of TypeScript types for MTGJSON files
     ├── public/ # Public facing files
     │   ├── favicons/ # All favicon images
     │   ├── images/ # All application images
@@ -119,6 +120,12 @@ The `<DocBadge type="warning" text="optional" />` markup will render a UI change
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
 If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
+
+#### TypeScript Models
+
+These are generated at build-time of the application and then import inline to the documentation page. THis works by using the above syntax for a property field for a documentation page. The utility will parse out all those blockquotes with properties and transform them in to a TypeScript file.
+
+File Data Models work a bit differently. They are declared in the `/docs/types.ts` file. And need to be updated manually as new files are created.
 
 ## Pinia Store
 
