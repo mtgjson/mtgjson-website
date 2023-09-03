@@ -33,12 +33,6 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 }
 ```
 
-and accessing the data would look like this:
-
-```TypeScript
-const card: CardAtomic = data["Phelddagrif"][0];
-```
-
 :::
 
 ## TypeScript Model

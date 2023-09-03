@@ -75,6 +75,8 @@ Release Date: 2023-09-01
 
 - Added `fixed` property to [Booster](/data-models/booster/) sheets property
 - Added `allowDuplicates` property to [Booster](/data-models/booster/) sheets property
+- Added [Booster (Pack)](/data-models/booster-pack/) Data Model to describe configurations of booster packs
+- Added [Booster (Sheet)](/data-models/booster-sheet/) Data Model to describe configurations of cards printed on a sheet for booster packs
 
 #### Changed
 
@@ -82,14 +84,13 @@ Release Date: 2023-09-01
 
 ### Sealed Product Model
 
-[Sealed Product](/data-models/sealed-product/) is now more documented. More Data Models have been created to describe the `contents` property of a top-level Sealed Product Data Model.
+[Sealed Product](/data-models/sealed-product/) is now more documented. More Data Models have been created to describe the `contents` property of a top-level Sealed Product Data Model
 
 #### Added
 
 - Added `cardCount` property
 - Added missing `contents` property
-- Added [Sealed Product (Card)](/data-models/sealed-product-card/), [Sealed Product (Deck)](/data-models/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product-sealed/) Data Models to describe the different kinds of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
-- Added [Sealed Product (Variable)](/data-models/sealed-product-variable/) Abstract Data Model to describe the sealed product variations of configurations found in the [Sealed Product](/data-models/sealed-product/) Data Model
+- Added [Sealed Product (Card)](/data-models/sealed-product-card/), [Sealed Product (Config)](/data-models/sealed-product-config/), [Sealed Product (Deck)](/data-models/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product-sealed/) Data Models to describe the different configurations of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
 
 ### AllPrintingsParquetFiles
 

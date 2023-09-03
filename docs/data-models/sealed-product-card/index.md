@@ -17,9 +17,9 @@ head:
 
 # Sealed Product (Card)
 
-The Sealed Product (Card) Data Model describes the card product properties for the purchaseable product for a [Sealed Product](/data-models/sealed-product/) Data Model.
+The Sealed Product (Card) Data Model describes the card product configuration in the [Sealed Product (Config)](/data-models/sealed-product-config/) Data Model.
 
-- **Parent model:** [Sealed Product](/data-models/sealed-product/)
+- **Parent model:** [Sealed Product (Config)](/data-models/sealed-product-config/)
 - **Parent property:** `card`
 
 ## TypeScript Model
@@ -34,28 +34,28 @@ The Sealed Product (Card) Data Model describes the card product properties for t
 
 > ### foil
 >
-> If the product is foiled. Applies to a product that is a card.
+> If the card is foiled.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.2`
 
 > ### name
 >
-> The name of the product.
+> The name of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
 > ### number
 >
-> The card number of the product. Applies to a product that is a card.
+> The card number.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
 > ### set
 >
-> The set code for the product.
+> The set code for the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`

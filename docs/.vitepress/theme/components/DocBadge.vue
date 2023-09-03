@@ -11,11 +11,6 @@ type Props = {
 
 const props: Props = defineProps<Props>();
 let title: string = props.text.charAt(0).toUpperCase();
-// Handle multiple words
-// const title: string = props.text.split(' ').map(text => {
-//   return text.charAt(0).toUpperCase() + text.slice(1, text.length);
-// }).join(' ');
-
 let tooltip: string = '';
 
 switch (props.text) {
@@ -31,9 +26,9 @@ switch (props.text) {
     tooltip = 'Property is deprecated';
     break;
 
-  case 'preview':
-    tooltip = 'Data is not complete';
-    title = 'Preview';
+  case 'partial':
+    tooltip = 'Data is not fully complete';
+    title = 'Partial';
     break;
 
   case 'online only':

@@ -222,10 +222,11 @@ defineExpose({
   position: sticky;
   background-color: var(--vp-c-bg-alt);
   border-radius: var(--common-radius);
-  top: var(--vp-nav-height);
+  top: calc(1rem + var(--vp-nav-height));
   z-index: 9;
   padding: 1rem;
   border: 1px solid var(--vp-c-divider);
+  box-shadow: 0 0 1rem 0.5rem var(--dark-1-color);
   margin-bottom: 1rem;
 
   details {

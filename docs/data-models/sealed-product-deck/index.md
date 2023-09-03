@@ -17,9 +17,9 @@ head:
 
 # Sealed Product (Deck)
 
-The Sealed Product (Deck) Data Model describes the deck product properties for the purchaseable product for a [Sealed Product](/data-models/sealed-product/) Data Model.
+The Sealed Product (Deck) Data Model describes the deck product configuration in the [Sealed Product (Config)](/data-models/sealed-product-config/) Data Model.
 
-- **Parent model:** [Sealed Product](/data-models/sealed-product/)
+- **Parent model:** [Sealed Product (Config)](/data-models/sealed-product-config/)
 - **Parent property:** `deck`
 
 ## TypeScript Model

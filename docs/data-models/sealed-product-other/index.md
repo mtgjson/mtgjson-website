@@ -17,9 +17,9 @@ head:
 
 # Sealed Product (Other)
 
-The Sealed Product (Other) Data Model describes the obscure product properties for the purchaseable product for a [Sealed Product](/data-models/sealed-product/) Data Model.
+The Sealed Product (Other) Data Model describes the obscure product configuration in the [Sealed Product (Config)](/data-models/sealed-product-config/) Data Model.
 
-- **Parent model:** [Sealed Product](/data-models/sealed-product/)
+- **Parent model:** [Sealed Product (Config)](/data-models/sealed-product-config/)
 - **Parent property:** `other`
 
 ## TypeScript Model

@@ -6,18 +6,18 @@ head:
       content: Booster
   - - meta
     - name: description
-      content: The Booster Abstract Data Model describes the properties of how a Set's booster pack may be constructed.
+      content: The Booster Data Model describes the properties of how a Set's booster data may be configured.
   - - meta
     - property: og:description
-      content: The Booster Abstract Data Model describes the properties of how a Set's booster pack may be constructed.
+      content: The Booster Data Model describes the properties of how a Set's booster data may be configured.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, booster
 ---
 
-# Booster <DocBadge type="abstract" text="abstract" />
+# Booster
 
-The Booster Abstract Data Model describes the properties of how a [Set](/data-models/set/)'s booster pack may be constructed.
+The Booster Data Model describes the properties of how a [Set](/data-models/set/)'s booster data may be configured.
 
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `booster`
@@ -26,47 +26,32 @@ The Booster Abstract Data Model describes the properties of how a [Set](/data-mo
 
 ::: details Toggle Model
 
-```TypeScript
-export type Booster = {
-  // Possible configurations in a traditional booster pack
-  [key: string]: {
-    // Booster pack configurations
-    boosters: [
-      {
-        // Card contents of a booster pack
-        contents: {
-          // Key is the rarity and value is the weight of the card
-          [key: string]: number;
-        },
-        // Odds of getting this configuration against other configurations
-        weight: number;
-      }
-    ],
-    // Sum of all booster configurations weights
-    boostersTotalWeight: number;
-    // All possible sheets of cards to use within booster packs
-    sheets: {
-      // A sheet of cards for use in a booster, using the sheet name as the key
-      [key: string]: {
-        // If the pack has mulitples of the same card
-        allowDuplicates: boolean;
-        // Colors of the sheet need to be balanced
-        balanceColors: boolean;
-        // Cards used on a sheet
-        cards: Record<string, number>; // Record key is the uuid of a card and weight is the value
-        // If the sheet is foiled
-        foil: boolean;
-        // Contents are guaranteed
-        fixed: boolean;
-        // Sum of all card weights
-        totalWeight: number
-      }
-    }
-  }
-}
-```
+<<< @/public/types/Booster.ts{TypeScript}
 
 :::
+
+## Model Properties
+
+> ### boosters
+>
+> The booster packs configurations. See the [Booster Pack](/data-models/booster-pack/) Data Model.
+>
+> - **Type:** `BoosterPack[]`
+> - **Introduced:** `v5.2.2`
+
+> ### boostersTotalWeight
+>
+> The weight of total booster pack configurations.
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.2`
+
+> ### sheets
+>
+> The sheets of cards in a printing where the key is the name of the sheet and value is the configuration. See the [Booster Sheet](/data-models/booster-sheet/) Data Model.
+>
+> - **Type:** `Record<string, BoosterSheet>`
+> - **Introduced:** `v5.2.2`
 
 ## Example Model
 

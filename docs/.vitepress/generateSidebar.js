@@ -19,6 +19,7 @@ export default (routes) => {
           const fileName = fileNameDirty.replace(/(^\w{1})|(\s+\w{1})/g, (letter) => letter.toUpperCase());
           const fileNameSplit = fileName.split(' ');
           const isCardRoute = fileNameSplit[0] === 'Card';
+          const isBoosterRoute = fileNameSplit[0] === 'Booster' && fileNameSplit[1];
           const isDeckRoute = fileNameSplit[0] === 'Deck' && fileNameSplit[1];
           const isSealedProductRoute = fileNameSplit[0] === 'Sealed';
           const isTypesRoute = fileNameSplit[1] === 'Types' || fileNameSplit[1] === 'Type';
@@ -30,8 +31,8 @@ export default (routes) => {
           let badges = [];
 
           // First check if were looking at a Card or Deck route that is a variation
-          // like Card (Set) or Deck (Set), but not Deck or Deck List put them in parens
-          if ((isCardRoute && !isTypesRoute) || (isDeckRoute && !isListRoute)) {
+          // like Card (Set) or Deck (Set), but not Deck or Deck List, then put them in parens
+          if ((isCardRoute && !isTypesRoute) || (isDeckRoute && !isListRoute) || isBoosterRoute) {
             fileNameClean = `${fileNameSplit[0]} (${fileNameSplit[1]})`;
           }
 
@@ -48,7 +49,6 @@ export default (routes) => {
 
           switch (fileNameDirty) {
             case 'all prices':
-            case 'booster':
             case 'enum values':
             case 'sealed product variable':
               badgeText.push('abstract');

@@ -1,27 +1,18 @@
 import fs from 'fs';
 import { pages } from '../docs/.vitepress/config';
 
-// Convert some incompatible types that we use for documentation clarity but differs from TypeScript types
-const convertIncompatibleTypes = (value) => {
-  if (value === 'float') {
-    return 'number';
-  } else {
-    return value;
-  }
-};
-
 // Convert page title to become a type name
 const convertPageNameToNamedType = (name) => {
   return name?.replace(/[\s()]/g, '');
 };
 
 // True TypeScript type generation
-const generateTrueTypes = () => {
+const generateTrueTypes = (_pages) => {
   let props = '';
   let propsAll = '';
   let propTypeName = '';
 
-  pages.forEach(async (page) => {
+  _pages.forEach(async (page) => {
     props = '';
     const propName = (propTypeName = convertPageNameToNamedType(page.title));
 
@@ -32,7 +23,7 @@ const generateTrueTypes = () => {
       page.model.forEach((property, index) => {
         const isLastLine = index === page.model.length - 1;
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
-        const propertyType = convertIncompatibleTypes(property.type);
+        const propertyType = property.type;
         const propertyOptional = !!property.optional ? '?' : '';
         const propertyValue = `  ${propertyName}${propertyOptional}: ${propertyType};${isLastLine ? '' : '\n'}`;
 
@@ -59,4 +50,4 @@ ${propValues}
   fs.writeFileSync(`./docs/public/static/mtgjson-types.ts`, `${propsAll.replace(/};/g, '};\n').trim()}`);
 };
 
-generateTrueTypes();
+generateTrueTypes(pages);

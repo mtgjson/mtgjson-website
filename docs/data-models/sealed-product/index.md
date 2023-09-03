@@ -49,9 +49,9 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 > ### contents <DocBadge type="warning" text="optional" />
 >
-> The contents of this product. The contents of a sealed product can vary, see the applicable Data Models for Sealed Product.
+> The contents of this product. See the [Sealed Product (Config)](/data-models/sealed-product-config/) Data Model.
 >
-> - <ExampleType type="Record<string, SealedProductCard[] | SealedProductDeck[] | SealedProductOther[] | SealedProductPack[] | SealedProductSealed[] | SealedProductVariable[]>" />
+> - **Type:** `SealedProductConfig`
 > - **Introduced:** `v5.2.2`
 
 > ### identifiers
