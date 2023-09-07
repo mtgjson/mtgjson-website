@@ -1,6 +1,6 @@
 export type AllPrintingsFile = { meta: Meta; data: Record<string, Set>; };
-export type AllPricesFile = { meta: Meta; data: Record<string, AllPricesProviders>; };
-export type AllPricesTodayFile = { meta: Meta; data: Record<string, AllPricesProviders>; };
+export type AllPricesFile = { meta: Meta; data: Record<string, PriceFormats>; };
+export type AllPricesTodayFile = { meta: Meta; data: Record<string, PriceFormats>; };
 export type AllIdentifiersFile = { meta: Meta; data: Record<string, CardSet>; };
 export type AtomicCardsFile = { meta: Meta; data: Record<string, CardAtomic>; };
 export type CompiledListFile = { meta: Meta; data: string[]; };
