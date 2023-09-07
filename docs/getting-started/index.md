@@ -43,7 +43,7 @@ Formats are provided via an "API-like" server. JSON can be fetched in your code,
 - **PSQL**
 - **Compressed files**
 
-## File Models
+### File Models
 
 A File Model is defined by two main properties. One being the `meta` property described as the [Meta](/data-models/meta/) Data Model and the `data` property which can vary on a file by file basis.
 
@@ -60,7 +60,7 @@ For example, the `AllPrintings.json` File Model uses the [Set](/data-models/set/
 
 :::
 
-## Data Models
+### Data Models
 
 Data Models are a general term used to categorize data objects when using this documentation.
 
@@ -98,8 +98,8 @@ Alternatively, the `AtomicCards.json` File Model uses the [Card (Atomic)](/data-
 
 :::
 
-## GraphQL API
+### GraphQL API
 
-### MTGGraphQL
+#### MTGGraphQL
 
 A service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API service built on top of MTGJSON data.
