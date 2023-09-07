@@ -43,6 +43,23 @@ Formats are provided via an "API-like" server. JSON can be fetched in your code,
 - **PSQL**
 - **Compressed files**
 
+## File Models
+
+A File Model is defined by two main properties. One being the `meta` property described as the [Meta](/data-models/meta/) Data Model and the `data` property which can vary on a file by file basis.
+
+For example, the `AllPrintings.json` File Model uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the key.
+
+::: tip A closer look at AllPrintings
+
+```TypeScript
+{
+  meta: Meta;
+  data: Record<string, Set>;
+}
+```
+
+:::
+
 ## Data Models
 
 Data Models are a general term used to categorize data objects when using this documentation.
@@ -53,33 +70,29 @@ Data Models are a general term used to categorize data objects when using this d
 
 :::
 
-### File Models
+Generally flat in nature, Data Models is JSON that have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
 
-A File Model is defined by two main properties. One being the `meta` property described as the [Meta](/data-models/meta/) Data Model and the `data` property which can vary on a file by file basis.
+For example, the `AllIdentifiers.json` File Model uses the [Card (Set)](/data-models/card-set/) Data Model for the card data returned using that card's [uuid](/data-models/card-set/#uuid) property as the key.
 
-For example, the commonly used `AllPrintings.json` file uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the access key.
-
-::: tip A Closer Look
+::: tip A closer look at AllIdentifiers
 
 ```TypeScript
 {
-  data: Record<string, Set>
+  meta: Meta;
+  data: Record<string, CardSet>;
 }
 ```
 
 :::
 
-### Data Models
+Alternatively, the `AtomicCards.json` File Model uses the [Card (Atomic)](/data-models/card-atomic/) Data Model for the card data returned using that card's [name](/data-models/card-atomic/#name) property as the key.
 
-Data Models are data objects that are generally flat in nature, they are an object or array and they have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
-
-For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a object of data about card Sets are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own unique property values based on the Set it was defined in.
-
-::: tip An Even Closer Look
+::: tip A closer look at AtomicCards
 
 ```TypeScript
 {
-  data: Record<string, CardSet[]>
+  meta: Meta;
+  data: Record<string, CardAtomic>;
 }
 ```
 
