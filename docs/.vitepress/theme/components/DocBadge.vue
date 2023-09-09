@@ -14,10 +14,6 @@ let title: string = props.text.charAt(0).toUpperCase();
 let tooltip: string = '';
 
 switch (props.text) {
-  case 'abstract':
-    tooltip = 'Abstract Data Model'
-    break;
-
   case 'optional':
     tooltip = 'Property may not be available';
     break;

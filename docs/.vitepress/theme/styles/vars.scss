@@ -29,6 +29,9 @@
   --dark-2-alpha-color: rgba(12, 16, 20, 0.5);
   --black-color: #000000;
 
+  // Sorter
+  --sort-box-shadow-color: var(--white-color);
+
   // Search Component
   --search-bg-color: var(--vp-c-bg);
   --search-bg-hover-color: var(--vp-c-bg-alt);
@@ -101,6 +104,9 @@ html.dark {
   --select-bg-color: var(--dark-color);
   --select-border-color: var(--black-color);
   --select-text-color: var(--white-color);
+
+  // Sorter
+  --sort-box-shadow-color: var(--dark-1-color);
 
   // Inputs
   --input-border-color: var(--black-color);

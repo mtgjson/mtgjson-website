@@ -98,8 +98,8 @@ Alternatively, the `AtomicCards.json` File Model uses the [Card (Atomic)](/data-
 
 :::
 
-### GraphQL API
+## GraphQL API
 
-#### MTGGraphQL
+### MTGGraphQL
 
 A service of MTGJSON, [MTGGraphQL](/mtggraphql/) is a GraphQL API service built on top of MTGJSON data.

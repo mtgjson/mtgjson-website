@@ -226,7 +226,7 @@ defineExpose({
   z-index: 9;
   padding: 1rem;
   border: 1px solid var(--vp-c-divider);
-  box-shadow: 0 0 1rem 0.5rem var(--dark-1-color);
+  box-shadow: 0 0 1rem 0.5rem var(--sort-box-shadow-color);
   margin-bottom: 1rem;
 
   details {

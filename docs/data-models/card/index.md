@@ -24,4 +24,6 @@ A Card is a data structure with variations of Data Models that is found within f
 
 ## Card Data Models
 
-While there is no high-level structure of a Card, they may have the same, more, or even less properties than other Card Data Modals &mdash; as such, they are documented individually in the following pages.
+### Overview
+
+While there is no high-level structure of a Card, they may have the same, more, or even less properties than other various Card Data Modals &mdash; as such, they are documented individually in the following pages.

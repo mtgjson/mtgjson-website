@@ -23,6 +23,8 @@ A Booster is a data structure with containing property values of Booster configu
 
 ## Booster Configurations
 
+### Overview
+
 The actual Booster data is accessed through a property key that defines the [Booster (Config)](/data-models/booster/booster-config/). What this property key name is depends on the Set that contains this Data Model and all of its booster variations for that Set.
 
 ::: tip Accessing Booster Data

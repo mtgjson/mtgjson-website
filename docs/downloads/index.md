@@ -29,7 +29,7 @@ MTGJSON provides various files for your projects, you can find them all at the [
 
 MTGJSON outputs each individual Set which can be found at the [All Sets](/downloads/all-sets/) download page. Sets may be tagged with certain attributes that define information about the Set.
 
-<DocBadge inline="true" type="tip" text="preview" /> Set is not complete.<br />
+<DocBadge inline="true" type="tip" text="partial" /> Set is not complete.<br />
 
 <DocBadge inline="true" type="tip" text="paper only" /> Set is only a paper product.<br />
 
