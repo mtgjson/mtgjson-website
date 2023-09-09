@@ -103,7 +103,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card-token/#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card/card-token/#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
@@ -158,7 +158,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > If the card can be found in foil.
 >
-> _This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead._
+> _This property is deprecated. Use the [finishes](/data-models/card/card-token/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -167,7 +167,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > If the card can be found in non-foil.
 >
-> _This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead._
+> _This property is deprecated. Use the [finishes](/data-models/card/card-token/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -320,7 +320,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > The names of the cards that produce this card.
 >
-> _This property is deprecated. Use the [relatedCards](/data-models/card-token/#relatedcards) property instead._
+> _This property is deprecated. Use the [relatedCards](/data-models/card/card-token/#relatedcards) property instead._
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`

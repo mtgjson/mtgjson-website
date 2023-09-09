@@ -110,7 +110,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card-deck/#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card/card-deck/#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
@@ -120,7 +120,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 >
 > The converted mana cost of the card.
 >
-> _This property is deprecated. Use the [manaValue](/data-models/card-deck/#manavalue) property instead._
+> _This property is deprecated. Use the [manaValue](/data-models/card/card-deck/#manavalue) property instead._
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.0.0`
@@ -165,7 +165,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 >
 > The converted mana cost or mana value for the face for either half or part of the card.
 >
-> _This property is deprecated. Use the [faceManaValue](/data-models/card-deck/#facemanavalue) property instead._
+> _This property is deprecated. Use the [faceManaValue](/data-models/card/card-deck/#facemanavalue) property instead._
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.1.1`
@@ -261,7 +261,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 >
 > If the card can be found in foil.
 >
-> _This property is deprecated. Use the [finishes](/data-models/card-deck/#finishes) property instead._
+> _This property is deprecated. Use the [finishes](/data-models/card/card-deck/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -270,7 +270,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 >
 > If the card can be found in non-foil.
 >
-> _This property is deprecated. Use the [finishes](/data-models/card-deck/#finishes) property instead._
+> _This property is deprecated. Use the [finishes](/data-models/card/card-deck/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -377,7 +377,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 
 > ### isTimeshifted <DocBadge type="warning" text="optional" />
 >
-> If the card is "timeshifted", a feature of certain sets where a card will have a different [frameVersion](/data-models/card-deck/#frameversion).
+> If the card is "timeshifted", a feature of certain sets where a card will have a different [frameVersion](/data-models/card/card-deck/#frameversion).
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.1`

@@ -32,15 +32,15 @@ Release Date: 2023-09-01
 
 #### Added
 
-- Added missing `duelDeck` property to [Card (Set)](/data-models/card-set/#dueldeck)
-- Added missing `isTextless` property to [Card (Token)](/data-models/card-token/#istextless)
-- Added missing `originalText` property to [Card (Token)](/data-models/card-token/#originaltext)
-- Added missing `originalType` property to [Card (Token)](/data-models/card-token/#originaltype)
-- Added `mcm*` properties to the `identifiers` property for [Card (Token)](/data-models/card-token/). (Our documentation linked these as a possibility however they were not populating until now)
-- Added `artistIds` property to [Card (Deck)](/data-models/card-deck/#artistids), [Card (Set)](/data-models/card-set/#artistids), and [Card (Token)](/data-models/card-token/#artistids)
-- Added `sourceProducts` property to [Card (Deck)](/data-models/card-deck/#sourceproducts), [Card (Set)](/data-models/card-set/#sourceproducts), and [Card (Token)](/data-models/card-token/#sourceproducts)
-- Added `starterdeck` to `promoTypes` property for [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), and [Card (Token)](/data-models/card-token/)
-- Added [Card (Set Deck)](/data-models/card-set-deck/) Data Model to describe cards within a [Deck (Set)](/data-models/deck-set/)
+- Added missing `duelDeck` property to [Card (Set)](/data-models/card/card-set/#dueldeck)
+- Added missing `isTextless` property to [Card (Token)](/data-models/card/card-token/#istextless)
+- Added missing `originalText` property to [Card (Token)](/data-models/card/card-token/#originaltext)
+- Added missing `originalType` property to [Card (Token)](/data-models/card/card-token/#originaltype)
+- Added `mcm*` properties to the `identifiers` property for [Card (Token)](/data-models/card/card-token/). (Our documentation linked these as a possibility however they were not populating until now)
+- Added `artistIds` property to [Card (Deck)](/data-models/card/card-deck/#artistids), [Card (Set)](/data-models/card/card-set/#artistids), and [Card (Token)](/data-models/card/card-token/#artistids)
+- Added `sourceProducts` property to [Card (Deck)](/data-models/card/card-deck/#sourceproducts), [Card (Set)](/data-models/card/card-set/#sourceproducts), and [Card (Token)](/data-models/card/card-token/#sourceproducts)
+- Added `starterdeck` to `promoTypes` property for [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), and [Card (Token)](/data-models/card/card-token/)
+- Added [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model to describe cards within a [Deck (Set)](/data-models/deck-set/)
 
 #### Changed
 
@@ -75,9 +75,9 @@ Release Date: 2023-09-01
 
 - Added `fixed` property
 - Added `allowDuplicates` property
-- Added [Booster (Config)](/data-models/booster-config/) Data Model to describe configurations of a booster property
-- Added [Booster (Pack)](/data-models/booster-pack/) Data Model to describe configurations of booster packs
-- Added [Booster (Sheet)](/data-models/booster-sheet/) Data Model to describe configurations of cards printed on a sheet for booster packs
+- Added [Booster (Config)](/data-models/booster/booster-config/) Data Model to describe configurations of a booster property
+- Added [Booster (Pack)](/data-models/booster/booster-pack/) Data Model to describe configurations of booster packs
+- Added [Booster (Sheet)](/data-models/booster/booster-sheet/) Data Model to describe configurations of cards printed on a sheet for booster packs
 
 #### Changed
 
@@ -91,7 +91,7 @@ Release Date: 2023-09-01
 
 - Added `cardCount` property
 - Added missing `contents` property
-- Added [Sealed Product (Card)](/data-models/sealed-product-card/), [Sealed Product (Config)](/data-models/sealed-product-config/), [Sealed Product (Deck)](/data-models/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product-sealed/) Data Models to describe the different configurations of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
+- Added [Sealed Product (Card)](/data-models/sealed-product/sealed-product-card/), [Sealed Product (Config)](/data-models/sealed-product/sealed-product-config/), [Sealed Product (Deck)](/data-models/sealed-product/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product/sealed-product-sealed/) Data Models to describe the different configurations of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
 
 ### AllPrintingsParquetFiles
 
@@ -123,13 +123,13 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 
 #### Added
 
-- Added `attractionLights` optional property to [Card (Atomic)](/data-models/card-atomic/#attractionlights), [Card (Deck)](/data-models/card-deck/#attractionlights), and [Card (Set)](/data-models/card-set/#attractionlights)
-- Added `boosterTypes` optional property to [Card (Deck)](/data-models/card-deck/#boostertypes) and [Card (Set)](/data-models/card-set/#boostertypes)
-- Added `edhrecSaltiness` optional property to [Card (Atomic)](/data-models/card-atomic/#edhrecsaltiness), [Card (Deck)](/data-models/card-deck/#edhrecsaltiness), and [Card (Set)](/data-models/card-set/#edhrecsaltiness)
-- Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card-atomic/#firstprinting)
-- Added `foreignData` optional property to [Card (Atomic)](/data-models/card-atomic/#foreigndata)
-- Added `isFunny` optional property to [Card (Atomic)](/data-models/card-atomic/#isfunny)
-- Added `language` property to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
+- Added `attractionLights` optional property to [Card (Atomic)](/data-models/card/card-atomic/#attractionlights), [Card (Deck)](/data-models/card/card-deck/#attractionlights), and [Card (Set)](/data-models/card/card-set/#attractionlights)
+- Added `boosterTypes` optional property to [Card (Deck)](/data-models/card/card-deck/#boostertypes) and [Card (Set)](/data-models/card/card-set/#boostertypes)
+- Added `edhrecSaltiness` optional property to [Card (Atomic)](/data-models/card/card-atomic/#edhrecsaltiness), [Card (Deck)](/data-models/card/card-deck/#edhrecsaltiness), and [Card (Set)](/data-models/card/card-set/#edhrecsaltiness)
+- Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card/card-atomic/#firstprinting)
+- Added `foreignData` optional property to [Card (Atomic)](/data-models/card/card-atomic/#foreigndata)
+- Added `isFunny` optional property to [Card (Atomic)](/data-models/card/card-atomic/#isfunny)
+- Added `language` property to [Card (Deck)](/data-models/card/card-deck/#language), [Card (Set)](/data-models/card/card-set/#language), and [Card (Token)](/data-models/card/card-token/#language)
 - Added `relatedCards` property to all Card Data Models
 - Added `subsets` optional property to all Card Data Models
 
@@ -145,8 +145,8 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 
 #### Deprecated
 
-- Deprecated `isStarter` optional property on [Card (Deck)](/data-models/card-deck/#isstarter), and [Card (Set)](/data-models/card-set/#isstarter) as it provides no useful data. Will be removed in `v5.3.0`
-- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card-token/#reverserelated) in favor of the `relatedCards` property, described by the [Related Cards](/data-models/related-cards/) Data Model. Will be removed in `v5.3.0`
+- Deprecated `isStarter` optional property on [Card (Deck)](/data-models/card/card-deck/#isstarter), and [Card (Set)](/data-models/card/card-set/#isstarter) as it provides no useful data. Will be removed in `v5.3.0`
+- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card/card-token/#reverserelated) in favor of the `relatedCards` property, described by the [Related Cards](/data-models/related-cards/) Data Model. Will be removed in `v5.3.0`
 
 ### Related Cards Model (New)
 
@@ -229,18 +229,18 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 #### Added
 
-- Added `manaValue` property [Card (Atomic)](/data-models/card-atomic/#manavalue), [Card (Deck)](/data-models/card-deck/#manavalue), and [Card (Set)](/data-models/card-set/#manavalue)
-- Added `isFunny` optional property to [Card (Deck)](/data-models/card-deck/#isfunny), [Card (Set)](/data-models/card-set/#isfunny), and [Card (Token)](/data-models/card-token/#isfunny)
-- Added `finishes` property to [Card (Deck)](/data-models/card-deck/#finishes), [Card (Set)](/data-models/card-set/#finishes), and [Card (Token)](/data-models/card-token/#finishes)
-- Added `cardParts` optional property to [Card (Deck)](/data-models/card-deck/#cardparts), [Card (Set)](/data-models/card-set/#cardparts), and [Card (Token)](/data-models/card-token/#cardparts)
-- Added `securityStamp` optional property to [Card (Deck)](/data-models/card-deck/#securitystamp), [Card (Set)](/data-models/card-set/#securitystamp), and [Card (Token)](/data-models/card-token/#securitystamp)
-- Added `faceManaValue` optional property to [Card (Atomic)](/data-models/card-atomic/#facemanavalue), [Card (Deck)](/data-models/card-deck/#facemanavalue), and [Card (Set)](/data-models/card-set/#facemanavalue)
-- Added `faceFlavorName` optional property to [Card (Deck)](/data-models/card-deck/#faceflavorname), [Card (Set)](/data-models/card-set/#faceflavorname), and [Card (Token)](/data-models/card-token/#faceflavorname)
-- Added `signature` optional property to [Card (Deck)](/data-models/card-deck/#signature), [Card (Set)](/data-models/card-set/#signature), and [Card (Token)](/data-models/card-token/#signature)
-- Added `isRebalanced` optional property to [Card (Deck)](/data-models/card-deck/#isrebalanced) and [Card (Set)](/data-models/card-set/#isrebalanced)
-- Added `rebalancedPrintings` optional property to [Card (Deck)](/data-models/card-deck/#rebalancedprintings) and [Card (Set)](/data-models/card-set/#rebalancedprintings)
-- Added `originalPrintings` optional propertiy to [Card (Deck)](/data-models/card-deck/#originalprintings) and [Card (Set)](/data-models/card-set/#originalprintings)
-- Added `otherFaceIds` property to [Card (Token)](/data-models/card-token/#otherfaceids)
+- Added `manaValue` property [Card (Atomic)](/data-models/card/card-atomic/#manavalue), [Card (Deck)](/data-models/card/card-deck/#manavalue), and [Card (Set)](/data-models/card/card-set/#manavalue)
+- Added `isFunny` optional property to [Card (Deck)](/data-models/card/card-deck/#isfunny), [Card (Set)](/data-models/card/card-set/#isfunny), and [Card (Token)](/data-models/card/card-token/#isfunny)
+- Added `finishes` property to [Card (Deck)](/data-models/card/card-deck/#finishes), [Card (Set)](/data-models/card/card-set/#finishes), and [Card (Token)](/data-models/card/card-token/#finishes)
+- Added `cardParts` optional property to [Card (Deck)](/data-models/card/card-deck/#cardparts), [Card (Set)](/data-models/card/card-set/#cardparts), and [Card (Token)](/data-models/card/card-token/#cardparts)
+- Added `securityStamp` optional property to [Card (Deck)](/data-models/card/card-deck/#securitystamp), [Card (Set)](/data-models/card/card-set/#securitystamp), and [Card (Token)](/data-models/card/card-token/#securitystamp)
+- Added `faceManaValue` optional property to [Card (Atomic)](/data-models/card/card-atomic/#facemanavalue), [Card (Deck)](/data-models/card/card-deck/#facemanavalue), and [Card (Set)](/data-models/card/card-set/#facemanavalue)
+- Added `faceFlavorName` optional property to [Card (Deck)](/data-models/card/card-deck/#faceflavorname), [Card (Set)](/data-models/card/card-set/#faceflavorname), and [Card (Token)](/data-models/card/card-token/#faceflavorname)
+- Added `signature` optional property to [Card (Deck)](/data-models/card/card-deck/#signature), [Card (Set)](/data-models/card/card-set/#signature), and [Card (Token)](/data-models/card/card-token/#signature)
+- Added `isRebalanced` optional property to [Card (Deck)](/data-models/card/card-deck/#isrebalanced) and [Card (Set)](/data-models/card/card-set/#isrebalanced)
+- Added `rebalancedPrintings` optional property to [Card (Deck)](/data-models/card/card-deck/#rebalancedprintings) and [Card (Set)](/data-models/card/card-set/#rebalancedprintings)
+- Added `originalPrintings` optional propertiy to [Card (Deck)](/data-models/card/card-deck/#originalprintings) and [Card (Set)](/data-models/card/card-set/#originalprintings)
+- Added `otherFaceIds` property to [Card (Token)](/data-models/card/card-token/#otherfaceids)
 - Added support for `"Dungeon"` cards in Card (Atomic)
 
 #### Fixed
@@ -343,10 +343,10 @@ We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](/mtggrap
 
 #### Added
 
-- Added `originalReleaseDate` optional property to [Card (Deck)](/data-models/card-deck/#originalreleasedate) and [Card (Set)](/data-models/card-set/#originalreleasedate)
-- Added `keywords` property to [Card (Atomic)](/data-models/card-atomic/#keywords)
-- Added `asciiName` property to [Card (Atomic)](/data-models/card-atomic/#asciiname)
-- Added `identifiers` property to [Card (Atomic)](/data-models/card-atomic/#identifiers)
+- Added `originalReleaseDate` optional property to [Card (Deck)](/data-models/card/card-deck/#originalreleasedate) and [Card (Set)](/data-models/card/card-set/#originalreleasedate)
+- Added `keywords` property to [Card (Atomic)](/data-models/card/card-atomic/#keywords)
+- Added `asciiName` property to [Card (Atomic)](/data-models/card/card-atomic/#asciiname)
+- Added `identifiers` property to [Card (Atomic)](/data-models/card/card-atomic/#identifiers)
 
 #### Changed
 
@@ -424,7 +424,7 @@ Release Date: 2020-08-24
 
 #### Added
 
-- Added `setCode` property to [Card (Deck)](/data-models/card-deck/#setcode), [Card (Set)](/data-models/card-set/#setcode), and [Card (Token)](/data-models/card-token/#setcode)
+- Added `setCode` property to [Card (Deck)](/data-models/card/card-deck/#setcode), [Card (Set)](/data-models/card/card-set/#setcode), and [Card (Token)](/data-models/card/card-token/#setcode)
 
 ### Foreign Data Model
 
@@ -453,7 +453,7 @@ Release Date: 2020-07-03
 
 **Welcome to v5.0.0!** We are proud to announce the 5th major release of MTGJSON. The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `booster` optional property defined as the [Booster (Config)](/data-models/booster-config/) Abstract Data Model on the [Set](/data-models/set/) Data Model.
+We are also pleased to announce the addition of `booster` optional property defined as the [Booster (Config)](/data-models/booster/booster-config/) Abstract Data Model on the [Set](/data-models/set/) Data Model.
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
@@ -463,12 +463,12 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 #### Added
 
-- Added `hasAlternativeDeckLimit` optional property to [Card (Atomic)](/data-models/card-atomic/#hasalternativedecklimit), [Card (Deck)](/data-models/card-deck/#hasalternativedecklimit), and [Card (Set)](/data-models/card-set/#hasalternativedecklimit)
-- Added `promoTypes` optional property to [Card (Deck)](/data-models/card-deck/#promotypes), [Card (Set)](/data-models/card-set/#promotypes), and [Card (Token)](/data-models/card-token/#promotypes)
-- Added and back-ported `hasContentWarning` property to [Card (Deck)](/data-models/card-deck/#hascontentwarning) and [Card (Set)](/data-models/card-set/#hascontentwarning) (Cards that are marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content)
-- Added `variations` optional property to [Card (Deck)](/data-models/card-deck/#variations) and [Card (Set)](/data-models/card-set/#variations)
-- Added `keywords` property to [Card (Atomic)](/data-models/card-atomic/#keywords), [Card (Deck)](/data-models/card-deck/#keywords), [Card (Set)](/data-models/card-set/#keywords), and [Card (Token)](/data-models/card-token/#keywords)
-- Added `faceName` optional property to [Card (Atomic)](/data-models/card-atomic/#facename), [Card (Deck)](/data-models/card-deck/#facename), [Card (Set)](/data-models/card-set/#facename), and [Card (Token)](/data-models/card-token/#facename)
+- Added `hasAlternativeDeckLimit` optional property to [Card (Atomic)](/data-models/card/card-atomic/#hasalternativedecklimit), [Card (Deck)](/data-models/card/card-deck/#hasalternativedecklimit), and [Card (Set)](/data-models/card/card-set/#hasalternativedecklimit)
+- Added `promoTypes` optional property to [Card (Deck)](/data-models/card/card-deck/#promotypes), [Card (Set)](/data-models/card/card-set/#promotypes), and [Card (Token)](/data-models/card/card-token/#promotypes)
+- Added and back-ported `hasContentWarning` property to [Card (Deck)](/data-models/card/card-deck/#hascontentwarning) and [Card (Set)](/data-models/card/card-set/#hascontentwarning) (Cards that are marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content)
+- Added `variations` optional property to [Card (Deck)](/data-models/card/card-deck/#variations) and [Card (Set)](/data-models/card/card-set/#variations)
+- Added `keywords` property to [Card (Atomic)](/data-models/card/card-atomic/#keywords), [Card (Deck)](/data-models/card/card-deck/#keywords), [Card (Set)](/data-models/card/card-set/#keywords), and [Card (Token)](/data-models/card/card-token/#keywords)
+- Added `faceName` optional property to [Card (Atomic)](/data-models/card/card-atomic/#facename), [Card (Deck)](/data-models/card/card-deck/#facename), [Card (Set)](/data-models/card/card-set/#facename), and [Card (Token)](/data-models/card/card-token/#facename)
 
 #### Changed
 
@@ -525,7 +525,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 - Data Models now reference their parent keys and parent files more accurately
 - Data Models now have the "optional" tag marked on properties for clarity
 - More Data Models are more clearly defined now that the files deliver all the same top-level keys
-- Atomic Cards are now documented outright as a [Card (Atomic)](/data-models/card-atomic/) Data Model for clarity
+- Atomic Cards are now documented outright as a [Card (Atomic)](/data-models/card/card-atomic/) Data Model for clarity
 - Property value examples were added for properties with enumuerated values from `EnumValues.json`
 - You can now toggle optional properties on/off within documentation. If all properties are optional, then the UI is disabled
 - You can now open a link to create a PR for a specific documentation page from the footer

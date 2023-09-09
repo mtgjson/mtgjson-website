@@ -19,7 +19,7 @@ head:
 
 The Leadership Skills Data Model describes the properties of formats that a card is legal to be your Commander in play formats that utilize Commanders.
 
-- **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
+- **Parent model:** [Card (Atomic)](/data-models/card/card-atomic/), [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/)
 - **Parent property:** `leadershipSkills`
 
 ## TypeScript Model

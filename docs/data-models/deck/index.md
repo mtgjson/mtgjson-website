@@ -42,7 +42,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### commander <DocBadge type="warning" text="optional" />
 >
-> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck`
 > - **Introduced:** `v5.1.0`
@@ -57,7 +57,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### mainBoard
 >
-> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The cards in the main-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
@@ -78,7 +78,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### sideBoard
 >
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The cards in the side-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`

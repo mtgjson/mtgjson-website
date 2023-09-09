@@ -49,14 +49,14 @@ The Set Data Model describes the properties of an individual set.
 
 > ### booster <DocBadge type="warning" text="optional" />
 >
-> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster (Config)](/data-models/booster-config/) Data Model.
+> A breakdown of possibilities and weights of cards in a booster pack. See the [Booster (Config)](/data-models/booster/booster-config/) Data Model.
 >
 > - **Type:** `Record<string, BoosterConfig>`
 > - **Introduced:** `v5.0.0`
 
 > ### cards
 >
-> The list of cards in the set. See the [Card (Set)](/data-models/card-set/) Data Model.
+> The list of cards in the set. See the [Card (Set)](/data-models/card/card-set/) Data Model.
 >
 > - **Type:** `CardSet[]`
 > - **Introduced:** `v4.0.0`
@@ -211,7 +211,7 @@ The Set Data Model describes the properties of an individual set.
 
 > ### tokens
 >
-> The tokens cards in the set. See the [Card (Token)](/data-models/card-token/) Data Model.
+> The tokens cards in the set. See the [Card (Token)](/data-models/card/card-token/) Data Model.
 >
 > - **Type:** `CardToken[]`
 > - **Introduced:** `v4.0.0`

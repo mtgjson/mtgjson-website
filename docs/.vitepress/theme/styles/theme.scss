@@ -102,38 +102,6 @@ code {
   transition: none !important;
 }
 
-// Sidebar
-.VPSidebar {
-  .VPSidebarItem {
-    .VPLink {
-      &,
-      & > .text {
-        &:hover {
-          color: var(--vp-c-text-1) !important;
-        }
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-    }
-
-    &.is-active {
-      & > .item {
-        .VPLink {
-          &:hover {
-            &,
-            & .text {
-              color: var(--vp-c-brand) !important;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
-  }
-}
-
 // Appearance/Social links overlay on mobile
 .VPNavScreenAppearance {
   border-radius: var(--common-radius) !important;

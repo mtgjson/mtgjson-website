@@ -19,7 +19,7 @@ head:
 
 The Related Cards Data Model describes the properties of a card that has relations to other cards.
 
-- **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
+- **Parent model:** [Card (Atomic)](/data-models/card/card-atomic/), [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), [Card (Token)](/data-models/card/card-token/)
 - **Parent property:** `relatedCards`
 
 ## TypeScript Model

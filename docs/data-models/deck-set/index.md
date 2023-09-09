@@ -34,7 +34,7 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 
 > ### cards
 >
-> A list of cards in this deck. See the [Card (Set Deck)](/data-models/card-set-deck/) Data Model.
+> A list of cards in this deck. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
 >
 > - **Type:** `CardSetDeck[]`
 > - **Introduced:** `v5.2.2`

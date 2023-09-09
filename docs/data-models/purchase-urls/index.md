@@ -19,7 +19,7 @@ head:
 
 The Purchase Urls Data Model describes the properties of links to purchase a product from a marketplace.
 
-- **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/)
+- **Parent model:** [Card (Atomic)](/data-models/card/card-atomic/), [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/)
 - **Parent property:** `purchaseUrls`
 
 ## TypeScript Model

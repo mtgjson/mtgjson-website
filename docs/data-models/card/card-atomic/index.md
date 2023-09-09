@@ -25,7 +25,7 @@ The Card (Atomic) Data Model describes the properties of a single "atomic" card,
 
 ::: tip Accessing Card (Atomic) Data
 
-When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's [name](/data-models/card-atomic/#name) property.
+When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed through a single index array where its parent property is the card's [name](/data-models/card/card-atomic/#name) property.
 
 ```TypeScript
 {
@@ -77,7 +77,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card-atomic/#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card/card-atomic/#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
@@ -87,7 +87,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 >
 > The converted mana cost of the card.
 >
-> _This property is deprecated. Use the [manaValue](/data-models/card-atomic/#manavalue) property instead._
+> _This property is deprecated. Use the [manaValue](/data-models/card/card-atomic/#manavalue) property instead._
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.0.0`
@@ -117,7 +117,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 >
 > The converted mana cost or mana value for the face for either half or part of the card.
 >
-> _This property is deprecated. Use the [faceManaValue](/data-models/card-atomic/#facemanavalue) property instead._
+> _This property is deprecated. Use the [faceManaValue](/data-models/card/card-atomic/#facemanavalue) property instead._
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.1.1`

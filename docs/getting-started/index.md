@@ -72,7 +72,7 @@ Data Models are a general term used to categorize data objects when using this d
 
 Generally flat in nature, Data Models is JSON that have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
 
-For example, the `AllIdentifiers.json` File Model uses the [Card (Set)](/data-models/card-set/) Data Model for the card data returned using that card's [uuid](/data-models/card-set/#uuid) property as the key.
+For example, the `AllIdentifiers.json` File Model uses the [Card (Set)](/data-models/card/card-set/) Data Model for the card data returned using that card's [uuid](/data-models/card/card-set/#uuid) property as the key.
 
 ::: tip A closer look at AllIdentifiers
 
@@ -85,7 +85,7 @@ For example, the `AllIdentifiers.json` File Model uses the [Card (Set)](/data-mo
 
 :::
 
-Alternatively, the `AtomicCards.json` File Model uses the [Card (Atomic)](/data-models/card-atomic/) Data Model for the card data returned using that card's [name](/data-models/card-atomic/#name) property as the key.
+Alternatively, the `AtomicCards.json` File Model uses the [Card (Atomic)](/data-models/card/card-atomic/) Data Model for the card data returned using that card's [name](/data-models/card/card-atomic/#name) property as the key.
 
 ::: tip A closer look at AtomicCards
 

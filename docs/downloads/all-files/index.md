@@ -25,7 +25,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllPrintings
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, organized by a Set's [code](/data-models/set/#code) property.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card/card-set/) Data Model, organized by a Set's [code](/data-models/set/#code) property.
 >
 > SQL, SQLite, and PSQL downloads courtesy of [mtgsqlive](https://github.com/mtgjson/mtgsqlive).
 >
@@ -51,7 +51,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllIdentifiers
 >
-> File containing all [Card (Set)](/data-models/card-set/) cards organized by the [uuid](/data-models/card-set/#uuid) property.
+> File containing all [Card (Set)](/data-models/card/card-set/) cards organized by the [uuid](/data-models/card/card-set/#uuid) property.
 >
 > <DownloadNativeSelect fileName='AllIdentifiers'/>
 
@@ -75,7 +75,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AtomicCards
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property.
 >
 > <DownloadNativeSelect fileName='AtomicCards'/>
 
@@ -115,13 +115,13 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### Legacy
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Legacy play format.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Legacy play format.
 >
 > <DownloadNativeSelect fileName='Legacy'/>
 
 > ### LegacyAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Legacy play format.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property, restricted to cards legal in the Legacy play format.
 >
 > <DownloadNativeSelect fileName='LegacyAtomic'/>
 
@@ -133,31 +133,31 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### Modern
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Modern play format.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Modern play format.
 >
 > <DownloadNativeSelect fileName='Modern'/>
 
 > ### ModernAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Modern play format.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property, restricted to cards legal in the Modern play format.
 >
 > <DownloadNativeSelect fileName='ModernAtomic'/>
 
 > ### PauperAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Pauper play format.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property, restricted to cards legal in the Pauper play format.
 >
 > <DownloadNativeSelect fileName='PauperAtomic'/>
 
 > ### Pioneer
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Pioneer play format.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Pioneer play format.
 >
 > <DownloadNativeSelect fileName='Pioneer'/>
 
 > ### PioneerAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Pioneer play format.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property, restricted to cards legal in the Pioneer play format.
 >
 > <DownloadNativeSelect fileName='PioneerAtomic'/>
 
@@ -169,13 +169,13 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### Standard
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Standard play format.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Standard play format.
 >
 > <DownloadNativeSelect fileName='Standard'/>
 
 > ### StandardAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Standard play format.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property, restricted to cards legal in the Standard play format.
 >
 > <DownloadNativeSelect fileName='StandardAtomic'/>
 
@@ -187,12 +187,12 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### Vintage
 >
-> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Vintage play format.
+> File containing all sets using the [Set](/data-models/set/) Data Model which includes all printings and variations of the [Card (Set)](/data-models/card/card-set/) Data Model, categorized by a Set's [code](/data-models/set/#code) property, restricted to sets legal in the Vintage play format.
 >
 > <DownloadNativeSelect fileName='Vintage'/>
 
 > ### VintageAtomic
 >
-> File containing every [Card (Atomic)](/data-models/card-atomic/) card organized by the card's [name](/data-models/card-atomic/#name) property, restricted to cards legal in the Vintage play format.
+> File containing every [Card (Atomic)](/data-models/card/card-atomic/) card organized by the card's [name](/data-models/card/card-atomic/#name) property, restricted to cards legal in the Vintage play format.
 >
 > <DownloadNativeSelect fileName='VintageAtomic'/>

@@ -19,7 +19,7 @@ head:
 
 The Identifiers Data Model describes the properties of identifiers associated to a card.
 
-- **Parent model:** [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
+- **Parent model:** [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), [Card (Token)](/data-models/card/card-token/)
 - **Parent property:** `identifiers`
 
 ## TypeScript Model

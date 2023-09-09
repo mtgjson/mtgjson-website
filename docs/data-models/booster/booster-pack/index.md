@@ -19,7 +19,7 @@ head:
 
 The Booster (Pack) Data Model describes the properties of how a Booster Pack can be configured.
 
-- **Parent model:** [Booster (Config)](/data-models/booster-config/)
+- **Parent model:** [Booster (Config)](/data-models/booster/booster-config/)
 - **Parent property:** `boosters`
 
 ## TypeScript Model

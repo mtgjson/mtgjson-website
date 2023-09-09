@@ -19,7 +19,7 @@ head:
 
 The Booster (Sheet) Data Model describes the properties of how a sheet of printed cards can be configured.
 
-- **Parent model:** [Booster (Config)](/data-models/booster-config/)
+- **Parent model:** [Booster (Config)](/data-models/booster/booster-config/)
 - **Parent property:** `sheets`
 
 ## TypeScript Model

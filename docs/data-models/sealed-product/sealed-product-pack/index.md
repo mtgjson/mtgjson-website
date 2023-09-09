@@ -17,9 +17,9 @@ head:
 
 # Sealed Product (Pack)
 
-The Sealed Product (Pack) Data Model describes the sealed pack configuration in the [Sealed Product (Config)](/data-models/sealed-product-config/) Data Model.
+The Sealed Product (Pack) Data Model describes the sealed pack configuration in the [Sealed Product (Config)](/data-models/sealed-product/sealed-product-config/) Data Model.
 
-- **Parent model:** [Sealed Product (Config)](/data-models/sealed-product-config/)
+- **Parent model:** [Sealed Product (Config)](/data-models/sealed-product/sealed-product-config/)
 - **Parent property:** `pack`
 
 ## TypeScript Model
@@ -34,7 +34,7 @@ The Sealed Product (Pack) Data Model describes the sealed pack configuration in 
 
 > ### code
 >
-> The name for the configuration of the Booster for the pack. Used for identifying a [Booster (Config)](/data-models/booster-config/) Data Model.
+> The name for the configuration of the Booster for the pack. Used for identifying a [Booster (Config)](/data-models/booster/booster-config/) Data Model.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`

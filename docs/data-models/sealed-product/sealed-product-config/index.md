@@ -35,35 +35,35 @@ The Sealed Product (Config) Data Model describes the properties for the purchase
 
 > ### card <DocBadge type="warning" text="optional" />
 >
-> The card configuration for a sealed card product. See the [Sealed Product (Card)](/data-models/sealed-product-card/) Data Model.
+> The card configuration for a sealed card product. See the [Sealed Product (Card)](/data-models/sealed-product/sealed-product-card/) Data Model.
 >
 > - **Type:** `SealedProductCard[]`
 > - **Introduced:** `v5.2.2`
 
 > ### deck <DocBadge type="warning" text="optional" />
 >
-> The deck configuration for a sealed deck product. See the [Sealed Product (Deck)](/data-models/sealed-product-deck/) Data Model.
+> The deck configuration for a sealed deck product. See the [Sealed Product (Deck)](/data-models/sealed-product/sealed-product-deck/) Data Model.
 >
 > - **Type:** `SealedProductDeck[]`
 > - **Introduced:** `v5.2.2`
 
 > ### other <DocBadge type="warning" text="optional" />
 >
-> The product configuration for an obscure sealed product, such as a Spindown counter. See the [Sealed Product (Other)](/data-models/sealed-product-other/) Data Model.
+> The product configuration for an obscure sealed product, such as a Spindown counter. See the [Sealed Product (Other)](/data-models/sealed-product/sealed-product-other/) Data Model.
 >
 > - **Type:** `SealedProductOther[]`
 > - **Introduced:** `v5.2.2`
 
 > ### pack <DocBadge type="warning" text="optional" />
 >
-> The pack configuration for a sealed booster pack product. See the [Sealed Product (Pack)](/data-models/sealed-product-pack/) Data Model.
+> The pack configuration for a sealed booster pack product. See the [Sealed Product (Pack)](/data-models/sealed-product/sealed-product-pack/) Data Model.
 >
 > - **Type:** `SealedProductPack[]`
 > - **Introduced:** `v5.2.2`
 
 > ### sealed <DocBadge type="warning" text="optional" />
 >
-> The sealed configuration for a sealed product, such as a booster box. See the [Sealed Product (Sealed)](/data-models/sealed-product-sealed/) Data Model.
+> The sealed configuration for a sealed product, such as a booster box. See the [Sealed Product (Sealed)](/data-models/sealed-product/sealed-product-sealed/) Data Model.
 >
 > - **Type:** `SealedProductSealed[]`
 > - **Introduced:** `v5.2.2`

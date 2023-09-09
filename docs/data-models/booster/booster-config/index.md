@@ -34,7 +34,7 @@ The Booster (Config) Data Model describes the properties of how a [Set](/data-mo
 
 > ### boosters
 >
-> The booster packs configurations. See the [Booster Pack](/data-models/booster-pack/) Data Model.
+> The booster packs configurations. See the [Booster Pack](/data-models/booster/booster-pack/) Data Model.
 >
 > - **Type:** `BoosterPack[]`
 > - **Introduced:** `v5.2.2`
@@ -48,7 +48,7 @@ The Booster (Config) Data Model describes the properties of how a [Set](/data-mo
 
 > ### sheets
 >
-> The sheets of cards in a printing where the key is the name of the sheet and value is the configuration. See the [Booster Sheet](/data-models/booster-sheet/) Data Model.
+> The sheets of cards in a printing where the key is the name of the sheet and value is the configuration. See the [Booster Sheet](/data-models/booster/booster-sheet/) Data Model.
 >
 > - **Type:** `Record<string, BoosterSheet>`
 > - **Introduced:** `v5.2.2`
