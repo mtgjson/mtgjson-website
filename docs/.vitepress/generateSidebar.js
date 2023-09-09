@@ -60,7 +60,7 @@ const createNestedRoute = (dirFiles, fileName, fileNameClean, route) => {
 
     nestedItems.push({
       text: parseFileName(text, textSplit),
-      link: `${route}/${fileName}/${file}/`,
+      link: `${route}${fileName}/${file}/`,
     });
   });
 

@@ -4,6 +4,8 @@ import generatePages from './generatePages';
 // Sidebar link generation
 const [dataModels] = generateSidebar(['/data-models/']);
 
+console.debug(dataModels[0].items);
+
 // Page metadata generation
 export const pages = generatePages({
   INCLUDE_DIR: 'docs',
@@ -67,7 +69,7 @@ export default {
   // VitePress themeing
   themeConfig: {
     pages,
-    outline: 3,
+    outline: [2, 3],
     smoothScroll: true,
     outlineBadges: false,
     outlineTitle: 'On This Page',
