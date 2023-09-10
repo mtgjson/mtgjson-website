@@ -72,5 +72,5 @@ The Sealed Product Config Data Model describes the properties for the purchaseab
 >
 > The variable configurations for sealed products when the contents are not always pre-determined. This data type can be referenced on this Data Model
 >
-> - **Type:** `Array<Record<"configs", Array<SealedProductConfig>>>`
+> - **Type:** `Record<"configs", SealedProductConfig[]>[]`
 > - **Introduced:** `v5.2.2`
