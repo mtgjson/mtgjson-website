@@ -49,7 +49,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 > ### contents <DocBadge type="warning" text="optional" />
 >
-> The contents of this product. See the [Sealed Product (Config)](/data-models/sealed-product/sealed-product-config/) Data Model.
+> The contents of this product. See the [Sealed Product Config](/data-models/sealed-product/sealed-product-config/) Data Model.
 >
 > - **Type:** `SealedProductConfig`
 > - **Introduced:** `v5.2.2`

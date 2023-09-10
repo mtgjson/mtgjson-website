@@ -17,9 +17,9 @@ head:
 
 # Sealed Product (Sealed)
 
-The Sealed Product (Sealed) Data Model describes the sealed product configuration in the [Sealed Product (Config)](/data-models/sealed-product/sealed-product-config/) Data Model.
+The Sealed Product (Sealed) Data Model describes the sealed product configuration in the [Sealed Product Config](/data-models/sealed-product/sealed-product-config/) Data Model.
 
-- **Parent model:** [Sealed Product (Config)](/data-models/sealed-product/sealed-product-config/)
+- **Parent model:** [Sealed Product Config](/data-models/sealed-product/sealed-product-config/)
 - **Parent property:** `sealed`
 
 ## TypeScript Model

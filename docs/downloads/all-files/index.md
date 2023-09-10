@@ -57,13 +57,13 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllPrices
 >
-> File containing all prices of cards in various formats organized by a card's `uuid` property. See the [Price Formats](/data-models/price-formats/) Data Model for the model of returned data.
+> File containing all prices of cards in various formats organized by a card's `uuid` property. See the [Price Formats](/data-models/price/price-formats/) Data Model for the model of returned data.
 >
 > <DownloadNativeSelect fileName='AllPrices'/>
 
 > ### AllPricesToday
 >
-> File containing all prices, **for the current day**, of cards in various formats organized by a card's `uuid` property. See the [Price Formats](/data-models/price-formats/) Data Model for the model of returned data.
+> File containing all prices, **for the current day**, of cards in various formats organized by a card's `uuid` property. See the [Price Formats](/data-models/price/price-formats/) Data Model for the model of returned data.
 >
 > <DownloadNativeSelect fileName='AllPricesToday'/>
 
@@ -81,7 +81,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### CardTypes
 >
-> File containing every card type of any type of card, defined by the [Card Types](/data-models/card-types/) Abstract Data Model.
+> File containing every card type of any type of card, defined by the [Card Types](/data-models/card-types/) Data Model.
 >
 > <DownloadNativeSelect fileName='CardTypes'/>
 

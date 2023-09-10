@@ -1,32 +1,32 @@
 ---
-title: Prices
+title: Price Points
 head:
   - - meta
     - property: og:title
-      content: Prices
+      content: Price Points
   - - meta
     - name: description
-      content: The Prices Data Model describes the properties of a card's price points.
+      content: The Price Points Data Model describes the properties of a card's price provider prices.
   - - meta
     - property: og:description
-      content: The Prices Data Model describes the properties of a card's price points.
+      content: The Price Points Data Model describes the properties of a card's price provider prices.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, price list
 ---
 
-# Prices
+# Price Points
 
-The Prices Data Model describes the properties of a card's price points.
+The Price Points Data Model describes the properties of a card's price provider prices.
 
-- **Parent model:** [Price List](/data-models/price-list/)
+- **Parent model:** [Price List](/data-models/price/price-list/)
 - **Parent property:** `buylist`, `retail`
 
 ## TypeScript Model
 
 ::: details Toggle Model
 
-<<< @/public/types/Prices.ts{TypeScript}
+<<< @/public/types/PricePoints.ts{TypeScript}
 
 :::
 

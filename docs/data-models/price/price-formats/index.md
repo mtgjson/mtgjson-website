@@ -34,14 +34,14 @@ The Price Formats Data Model describes the properties of all product formats tha
 
 > ### mtgo <DocBadge type="warning" text="optional" />
 >
-> Card prices available to this card for MTGO products. See the [Price List](/data-models/price-list/) Data Model.
+> Card prices available to this card for MTGO products. See the [Price List](/data-models/price/price-list/) Data Model.
 >
 > - **Type:** `Record<'cardhoarder', PriceList>`
 > - **Introduced:** `v5.2.2`
 
 > ### paper <DocBadge type="warning" text="optional" />
 >
-> Card prices available to this card for paper products. See the [Price List](/data-models/price-list/) Data Model.
+> Card prices available to this card for paper products. See the [Price List](/data-models/price/price-list/) Data Model.
 >
 > - **Type:** `Record<'cardkingdom' | 'cardmarket' | 'cardsphere' | 'tcgplayer', PriceList>`
 > - **Introduced:** `v5.2.2`

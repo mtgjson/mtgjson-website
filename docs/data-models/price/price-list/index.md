@@ -19,7 +19,7 @@ head:
 
 The Price List Data Model describes the properties of a card providers list of buying and selling ability.
 
-- **Parent model:** [Price Formats](/data-models/price-formats/)
+- **Parent model:** [Price Formats](/data-models/price/price-formats/)
 - **Parent property:** `cardhoarder`, `cardkingdom`, `cardmarket`, `cardsphere`, `tcgplayer`
 
 ## TypeScript Model
@@ -34,9 +34,9 @@ The Price List Data Model describes the properties of a card providers list of b
 
 > ### buylist <DocBadge type="warning" text="optional" />
 >
-> A list of card type availability for selling cards to this provider. See the [Price List](/data-models/price-list/) Data Model.
+> A list of card type availability for selling cards to this provider. See the [Price Points](/data-models/price/price-points/) Data Model.
 >
-> - **Type:** `PriceList`
+> - **Type:** `PricePoints`
 > - **Introduced:** `v5.2.2`
 
 > ### currency
@@ -48,7 +48,7 @@ The Price List Data Model describes the properties of a card providers list of b
 
 > ### retail <DocBadge type="warning" text="optional" />
 >
-> A list of card type availability for buying cards from this provider. See the [Price List](/data-models/price-list/) Data Model.
+> A list of card type availability for buying cards from this provider. See the [Price Points](/data-models/price/price-points/) Data Model.
 >
-> - **Type:** `PriceList`
+> - **Type:** `PricePoints`
 > - **Introduced:** `v5.2.2`

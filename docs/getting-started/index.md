@@ -66,7 +66,7 @@ Data Models are a general term used to categorize data objects when using this d
 
 ::: tip Quick Tip
 
-**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Abstract Data Models** have many non-unique property names and values for specific **File Models** and are documented differently from **Data Models**.
+**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Other data structures** we document have non-unique property keys and values for specific **File Models** and are documented differently from **Data Models**.
 
 :::
 

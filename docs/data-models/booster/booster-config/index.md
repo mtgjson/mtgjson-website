@@ -1,23 +1,23 @@
 ---
-title: Booster (Config)
+title: Booster Config
 head:
   - - meta
     - property: og:title
-      content: Booster (Config)
+      content: Booster Config
   - - meta
     - name: description
-      content: The Booster (Config) Data Model describes the properties of how a Set's booster data may be configured.
+      content: The Booster Config Data Model describes the properties of how a Set's booster data may be configured.
   - - meta
     - property: og:description
-      content: The Booster (Config) Data Model describes the properties of how a Set's booster data may be configured.
+      content: The Booster Config Data Model describes the properties of how a Set's booster data may be configured.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, booster config
 ---
 
-# Booster (Config)
+# Booster Config
 
-The Booster (Config) Data Model describes the properties of how a [Set](/data-models/set/)'s booster data may be configured.
+The Booster Config Data Model describes the properties of how a [Set](/data-models/set/)'s booster data may be configured.
 
 - **Parent model:** [Set](/data-models/set/)
 - **Parent property:** `booster`

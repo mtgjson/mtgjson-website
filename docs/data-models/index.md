@@ -23,10 +23,6 @@ Data Models in MTGJSON describe any JSON structure within a file or other Data M
 
 Certain Data Models and Data Model properties may have different attributes to denote alternate types of data returned. Use the below to guide you in understanding what data flows through your application and when to use it.
 
-<!-- ### Abstract Models
-
-<DocBadge inline="true" type="info" text="abstract" /> Data Model is an Abstract Data Model. -->
-
 ### Optional Properties
 
 <DocBadge inline="true" type="warning" text="optional" /> Property may not return in the Data Model.

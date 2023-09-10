@@ -1,24 +1,24 @@
 ---
-title: Sealed Product (Config)
+title: Sealed Product Config
 enum: sealedProduct
 head:
   - - meta
     - property: og:title
-      content: Sealed Product (Config)
+      content: Sealed Product Config
   - - meta
     - name: description
-      content: The Sealed Product (Config) Data Model describes the properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product Config Data Model describes the properties for the purchaseable product of a Set Data Model.
   - - meta
     - property: og:description
-      content: The Sealed Product (Config) Data Model describes the properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product Config Data Model describes the properties for the purchaseable product of a Set Data Model.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product config
 ---
 
-# Sealed Product (Config)
+# Sealed Product Config
 
-The Sealed Product (Config) Data Model describes the properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
+The Sealed Product Config Data Model describes the properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
 
 - **Parent model:** [Sealed Product](/data-models/sealed-product/)
 - **Parent property:** `contents`

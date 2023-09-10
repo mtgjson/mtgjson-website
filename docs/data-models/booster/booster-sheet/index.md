@@ -1,25 +1,25 @@
 ---
-title: Booster (Sheet)
+title: Booster Sheet
 head:
   - - meta
     - property: og:title
-      content: Booster (Sheet)
+      content: Booster Sheet
   - - meta
     - name: description
-      content: The Booster (Sheet) Data Model describes the properties of how a sheet of printed cards can be configured.
+      content: The Booster Sheet Data Model describes the properties of how a sheet of printed cards can be configured.
   - - meta
     - property: og:description
-      content: The Booster (Sheet) Data Model describes the properties of how a sheet of printed cards can be configured.
+      content: The Booster Sheet Data Model describes the properties of how a sheet of printed cards can be configured.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, booster sheet, sheet
 ---
 
-# Booster (Sheet)
+# Booster Sheet
 
-The Booster (Sheet) Data Model describes the properties of how a sheet of printed cards can be configured.
+The Booster Sheet Data Model describes the properties of how a sheet of printed cards can be configured.
 
-- **Parent model:** [Booster (Config)](/data-models/booster/booster-config/)
+- **Parent model:** [Booster Config](/data-models/booster/booster-config/)
 - **Parent property:** `sheets`
 
 ## TypeScript Model
