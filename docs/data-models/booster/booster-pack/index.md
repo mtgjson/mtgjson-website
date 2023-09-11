@@ -24,7 +24,7 @@ The Booster Pack Data Model describes the properties of how a Booster Pack can b
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/BoosterPack.ts{TypeScript}
 

@@ -24,7 +24,7 @@ A Price is a data structure with containing property values of prices for a card
 
 ### TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 ```TypeScript
 {

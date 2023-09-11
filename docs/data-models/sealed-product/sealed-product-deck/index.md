@@ -17,14 +17,14 @@ head:
 
 # Sealed Product (Deck)
 
-The Sealed Product (Deck) Data Model describes the deck product configuration in the [Sealed Product Config](/data-models/sealed-product/sealed-product-config/) Data Model.
+The Sealed Product (Deck) Data Model describes the deck product configuration in the [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/) Data Model.
 
-- **Parent model:** [Sealed Product Config](/data-models/sealed-product/sealed-product-config/)
+- **Parent model:** [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/)
 - **Parent property:** `deck`
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/SealedProductDeck.ts{TypeScript}
 

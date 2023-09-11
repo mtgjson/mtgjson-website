@@ -24,7 +24,7 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/DeckSet.ts{TypeScript}
 

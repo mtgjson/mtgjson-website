@@ -24,7 +24,7 @@ The Related Cards Data Model describes the properties of a card that has relatio
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/RelatedCards.ts{TypeScript}
 

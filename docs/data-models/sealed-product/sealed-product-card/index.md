@@ -17,14 +17,14 @@ head:
 
 # Sealed Product (Card)
 
-The Sealed Product (Card) Data Model describes the card product configuration in the [Sealed Product Config](/data-models/sealed-product/sealed-product-config/) Data Model.
+The Sealed Product (Card) Data Model describes the card product configuration in the [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/) Data Model.
 
-- **Parent model:** [Sealed Product Config](/data-models/sealed-product/sealed-product-config/)
+- **Parent model:** [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/)
 - **Parent property:** `card`
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/SealedProductCard.ts{TypeScript}
 

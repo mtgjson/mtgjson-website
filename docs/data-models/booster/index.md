@@ -29,7 +29,7 @@ The actual Booster data is accessed through a property key that defines the [Boo
 
 ### TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 ```TypeScript
 {
@@ -39,4 +39,4 @@ The actual Booster data is accessed through a property key that defines the [Boo
 
 :::
 
-The Data Models of a configuration are documented in the following pages.
+The Data Models of a Booster configuration are documented in the following pages.

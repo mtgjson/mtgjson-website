@@ -24,7 +24,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/Identifiers.ts{TypeScript}
 

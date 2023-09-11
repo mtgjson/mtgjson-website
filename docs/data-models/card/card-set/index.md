@@ -25,7 +25,7 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/CardSet.ts{TypeScript}
 

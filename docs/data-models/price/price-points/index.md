@@ -24,7 +24,7 @@ The Price Points Data Model describes the properties of a card's price provider 
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/PricePoints.ts{TypeScript}
 

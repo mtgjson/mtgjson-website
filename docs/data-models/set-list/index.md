@@ -25,7 +25,7 @@ The Set List Data Model describes the meta data properties of an individual [Set
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/SetList.ts{TypeScript}
 
@@ -159,7 +159,7 @@ The Set List Data Model describes the meta data properties of an individual [Set
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### sealedProduct <DocBadge type="warning" text="optional" />
+> ### sealedProduct
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >

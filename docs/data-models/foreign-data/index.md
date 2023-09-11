@@ -25,7 +25,7 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/ForeignData.ts{TypeScript}
 

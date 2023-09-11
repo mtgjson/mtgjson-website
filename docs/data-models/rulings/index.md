@@ -24,7 +24,7 @@ The Rulings Data Model describes the properties of rulings for a card.
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/Rulings.ts{TypeScript}
 

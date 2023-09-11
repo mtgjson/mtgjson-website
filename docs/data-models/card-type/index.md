@@ -24,7 +24,7 @@ The Card Type Data Model describes the properties of any possible subtypes and s
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/CardType.ts{TypeScript}
 

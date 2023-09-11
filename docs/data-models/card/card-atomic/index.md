@@ -37,7 +37,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/CardAtomic.ts{TypeScript}
 

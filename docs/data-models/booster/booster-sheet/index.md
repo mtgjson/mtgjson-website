@@ -24,7 +24,7 @@ The Booster Sheet Data Model describes the properties of how a sheet of printed 
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/BoosterSheet.ts{TypeScript}
 

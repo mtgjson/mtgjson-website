@@ -25,7 +25,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/SealedProduct.ts{TypeScript}
 
@@ -49,9 +49,9 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 > ### contents <DocBadge type="warning" text="optional" />
 >
-> The contents of this product. See the [Sealed Product Config](/data-models/sealed-product/sealed-product-config/) Data Model.
+> The contents of this product. See the [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/) Data Model.
 >
-> - **Type:** `SealedProductConfig`
+> - **Type:** `SealedProductContents`
 > - **Introduced:** `v5.2.2`
 
 > ### identifiers

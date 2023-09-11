@@ -1,33 +1,33 @@
 ---
-title: Sealed Product Config
+title: Sealed Product Contents
 enum: sealedProduct
 head:
   - - meta
     - property: og:title
-      content: Sealed Product Config
+      content: Sealed Product Contents
   - - meta
     - name: description
-      content: The Sealed Product Config Data Model describes the properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product Contents Data Model describes the properties for the purchaseable product of a Set Data Model.
   - - meta
     - property: og:description
-      content: The Sealed Product Config Data Model describes the properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product Contents Data Model describes the properties for the purchaseable product of a Set Data Model.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product config
 ---
 
-# Sealed Product Config
+# Sealed Product Contents
 
-The Sealed Product Config Data Model describes the properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
+The Sealed Product Contents Data Model describes the properties for the purchaseable product of a [Set](/data-models/set/) Data Model.
 
 - **Parent model:** [Sealed Product](/data-models/sealed-product/)
 - **Parent property:** `contents`
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
-<<< @/public/types/SealedProductConfig.ts{TypeScript}
+<<< @/public/types/SealedProductContents.ts{TypeScript}
 
 :::
 
@@ -72,5 +72,5 @@ The Sealed Product Config Data Model describes the properties for the purchaseab
 >
 > The variable configurations for sealed products when the contents are not always pre-determined. This data type can be referenced on this Data Model
 >
-> - **Type:** `Record<"configs", SealedProductConfig[]>[]`
+> - **Type:** `Record<"configs", SealedProductContents[]>[]`
 > - **Introduced:** `v5.2.2`

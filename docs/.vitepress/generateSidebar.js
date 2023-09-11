@@ -23,7 +23,7 @@ const parseFileName = (fileName, fileNameSplit) => {
   const isCardRoute = fileNameSplit[0] === 'Card';
   const isDeckRoute = fileNameSplit[0] === 'Deck' && fileNameSplit[1];
   const isSealedProductRoute = fileNameSplit[0] === 'Sealed';
-  const isSealedProductConfigRoute = fileName === 'Sealed Product Config';
+  const isSealedProductContentsRoute = fileName === 'Sealed Product Contents';
   const isAllPricesRoute = fileNameSplit[0] === 'All' && fileNameSplit[1] === 'Prices';
   const isTypesRoute = fileNameSplit[1] === 'Types' || fileNameSplit[1] === 'Type';
   const isListRoute = fileNameSplit[1] === 'List';
@@ -38,7 +38,7 @@ const parseFileName = (fileName, fileNameSplit) => {
   }
 
   // Next, if the route has 3 words default to just putting all other words in parens
-  if (is3Words && !isTypesRoute && !isAllPricesRoute && !isSealedProductConfigRoute) {
+  if (is3Words && !isTypesRoute && !isAllPricesRoute && !isSealedProductContentsRoute) {
     newFileName = `${fileNameSplit[0]} (${fileNameSplit[1]} ${fileNameSplit[2]})`;
 
     // If we have a Sealed Product we needs to account for two
@@ -65,7 +65,7 @@ const createNestedRoute = (dirFiles, fileName, fileNameClean, route) => {
   });
 
   const sortedNestedRoutes = nestedRoutes.reduce((nestedRoutes, route) => {
-    if (route.text === 'Sealed Product Config') {
+    if (route.text === 'Sealed Product Contents') {
       nestedRoutes.unshift(route);
     } else {
       nestedRoutes.push(route);

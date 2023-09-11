@@ -24,7 +24,7 @@ The Price List Data Model describes the properties of a card providers list of b
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/PriceList.ts{TypeScript}
 

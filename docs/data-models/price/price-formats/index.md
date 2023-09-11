@@ -24,7 +24,7 @@ The Price Formats Data Model describes the properties of all product formats tha
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/PriceFormats.ts{TypeScript}
 

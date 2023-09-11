@@ -17,14 +17,14 @@ head:
 
 # Sealed Product (Pack)
 
-The Sealed Product (Pack) Data Model describes the sealed pack configuration in the [Sealed Product Config](/data-models/sealed-product/sealed-product-config/) Data Model.
+The Sealed Product (Pack) Data Model describes the sealed pack configuration in the [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/) Data Model.
 
-- **Parent model:** [Sealed Product Config](/data-models/sealed-product/sealed-product-config/)
+- **Parent model:** [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/)
 - **Parent property:** `pack`
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/SealedProductPack.ts{TypeScript}
 

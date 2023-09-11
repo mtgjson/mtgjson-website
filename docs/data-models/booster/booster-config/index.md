@@ -24,7 +24,7 @@ The Booster Config Data Model describes the properties of how a [Set](/data-mode
 
 ## TypeScript Model
 
-::: details Toggle Model
+::: details Toggle Model {open}
 
 <<< @/public/types/BoosterConfig.ts{TypeScript}
 
