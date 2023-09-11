@@ -1,6 +1,6 @@
 <template lang="pug">
 main.home
-  section.home-masthead(:class="{loaded: pageLoaded}")
+  section.dark.home-masthead(:class="{loaded: pageLoaded}")
     .content-wrapper
       .home-masthead-logo
         img(
