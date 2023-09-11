@@ -1,9 +1,9 @@
 :root {
   // True colors, not to be changed later
-  --accent-color: #1e90ff;
+  --accent-color: #3484d4;
   --accent-1-color: #092d50;
   --accent-2-color: #daecfe;
-  --accent-3-color: #1762ae;
+  --accent-3-color: #3077bf;
   --yellow-color: #FFCB6B;
   --yellow-1-color: goldenrod;
   --yellow-2-color: #feffdb;
@@ -73,16 +73,13 @@
   --vp-c-brand-dark: var(--accent-color);
   --vp-c-brand-darker: var(--accent-color);
   --vp-c-text-code: var(--yellow-color);
-
   --vp-input-switch-bg-color: var(--vp-c-bg-alt);
-
   --vp-custom-block-tip-bg: var(--accent-2-color);
   --vp-custom-block-tip-border: var(--accent-color);
   --vp-custom-block-warning-bg: var(--yellow-2-color);
   --vp-custom-block-warning-border: var(--yellow-color);
   --vp-custom-block-details-border: var(--gray-2-color);
   --vp-custom-block-details-bg: var(--gray-color);
-
   --vp-badge-tip-border: var(--accent-color);
   --vp-badge-tip-text: var(--accent-color);
   --vp-badge-tip-bg: transparent;
@@ -99,7 +96,7 @@
   --vp-code-font-size: 12px;
 }
 
-html.dark {
+html.dark{
   // Selects
   --select-bg-color: var(--dark-color);
   --select-border-color: var(--black-color);
@@ -114,26 +111,27 @@ html.dark {
   // Version
   --version-color: var(--gray-3-color);
 
-  // Vitepress overrides
+  // VitePress Overrides
+  --vp-c-text-code: var(--yellow-color);
   --vp-c-bg-elv: var(--dark-2-color);
   --vp-c-bg-alt: var(--dark-2-color);
   --vp-c-bg: var(--dark-1-color);
   --vp-c-bg-soft: var(--dark-2-color);
   --vp-backdrop-bg-color: var(--dark-2-alpha-color);
-
   --vp-custom-block-tip-bg: var(--accent-1-color);
   --vp-custom-block-tip-text: var(--white-color);
-  --vp-custom-block-tip-border: var(--accent-3-color);
+  --vp-custom-block-tip-border: var(--accent-color);
   --vp-custom-block-warning-bg: var(--yellow-3-color);
   --vp-custom-block-warning-border: var(--yellow-color);
   --vp-custom-block-warning-text: var(--dark-color);
   --vp-custom-block-details-border: var(--dark-color);
   --vp-custom-block-details-bg: var(--dark-2-color);
-
-  // --vp-badge-info-border: var(--orange-color);
-  // --vp-badge-info-text: var(--orange-color);
   --vp-badge-warning-border: var(--yellow-color);
   --vp-badge-warning-text: var(--yellow-color);
   --vp-badge-danger-border: var(--red-color);
   --vp-badge-danger-text: var(--red-color);
+}
+
+.light {
+  --accent-color: var(--accent-3-color);
 }

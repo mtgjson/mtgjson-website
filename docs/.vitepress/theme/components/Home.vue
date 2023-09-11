@@ -325,7 +325,7 @@ onMounted(async (): Promise<void> => {
     font-weight: 600;
     margin-bottom: 0.5rem;
 
-    & + .version {
+    &+.version {
       color: var(--gray-3-color) !important;
       font-size: 14px;
       margin-bottom: 2rem;
@@ -513,7 +513,8 @@ onMounted(async (): Promise<void> => {
           a {
             float: left;
 
-            & ~ * {
+            &~* {
+
               &::before,
               &::after {
                 clear: both;
@@ -838,6 +839,7 @@ onMounted(async (): Promise<void> => {
 
 @media (max-width: 960px) {
   .home {
+
     &-features,
     &-contributing,
     &-patrons,
@@ -859,6 +861,7 @@ onMounted(async (): Promise<void> => {
 
 @media (max-width: 570px) {
   .home {
+
     &-features,
     &-team,
     &-contributing,
@@ -871,6 +874,7 @@ onMounted(async (): Promise<void> => {
           img {
             margin: 0 auto 1rem;
           }
+
           h3,
           span,
           p {
