@@ -44,7 +44,7 @@ export default {
     ['meta', { name: 'theme-color', content: '#0f263c' }],
     // Analytics
     ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
-    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true', defer: 'true' }],
+    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', defer: 'true' }],
     [
       'script',
       {},
