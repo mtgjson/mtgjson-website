@@ -17,18 +17,16 @@ head:
 
 # Data Models
 
-Data Models in MTGJSON describe any JSON object or nested JSON object that provides a flat response. As such, they will only have one level of nested keys. Any additional nested keys that return another object that is also a flat response are they themselves, a Data Model, and will have its own documentation.
+Data Models in MTGJSON describe any JSON structure within a file or other Data Model. These are the response structures of the JSON payload.
 
-## Example
+## Attributes
 
-### Model Example
+Certain Data Models and Data Model properties may have different attributes to denote alternate types of data returned. Use the below to guide you in understanding what data flows through your application and when to use it.
 
-Any **Data Model** would look similar to this:
+### Optional Properties
 
-```TypeScript
-{
-  [key, string]: any;
-}
-```
+<DocBadge inline="true" type="warning" text="optional" /> Property may not return in the Data Model.
 
-Most data output by MTGJSON are Data Models but some models have more complex structures which are outlined in [Abstract Models](/abstract-models/).
+### Deprecated Properties
+
+<DocBadge inline="true" type="danger" text="deprecated" /> Property is deprecated in the Data Model.

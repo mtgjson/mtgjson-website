@@ -20,6 +20,97 @@ head:
 
 The following is the MTGJSON v5 Changelog. Some parts may be updated for clarity or corrections at any point.
 
+If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
+
+## 5.2.2
+
+Release Date: 2023-09-10
+
+### Announcements
+
+**Welcome to v5.2.2!** With this update, we've put a large focus on Sealed Product, both from building it out and documentation. We have also added a few more new properties, new Data Models, new files (including **AllPricesToday**!) and fixed some bugs. As always, although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis. We've also revamped our documentation a bit for more clarity. Abstract Data Models are now gone and all housed in the Data Models section with their own property definitions.
+
+### Card Model
+
+#### Added
+
+- Added missing `duelDeck` property to [Card (Set)](/data-models/card/card-set/#dueldeck)
+- Added missing `isTextless` property to [Card (Token)](/data-models/card/card-token/#istextless)
+- Added missing `originalText` property to [Card (Token)](/data-models/card/card-token/#originaltext)
+- Added missing `originalType` property to [Card (Token)](/data-models/card/card-token/#originaltype)
+- Added `mcm*` properties to the `identifiers` property for [Card (Token)](/data-models/card/card-token/). (Our documentation linked these as a possibility however they were not populating until now)
+- Added `artistIds` property to [Card (Deck)](/data-models/card/card-deck/#artistids), [Card (Set)](/data-models/card/card-set/#artistids), and [Card (Token)](/data-models/card/card-token/#artistids)
+- Added `sourceProducts` property to [Card (Deck)](/data-models/card/card-deck/#sourceproducts), [Card (Set)](/data-models/card/card-set/#sourceproducts), and [Card (Token)](/data-models/card/card-token/#sourceproducts)
+- Added `starterdeck` to `promoTypes` property for [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), and [Card (Token)](/data-models/card/card-token/)
+- Added [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model to describe cards within a [Deck (Set)](/data-models/deck-set/)
+
+#### Changed
+
+- Changed `rulings` on Card Data Models to be optional
+
+### Deck Model
+
+#### Added
+
+- Added [Deck (Set)](/data-models/deck-set/) Data Model to describe a Deck within a [Set](/data-models/set/)
+
+### Set Model
+
+#### Added
+
+- Added `decks` property
+
+#### Changed
+
+- Changed `languages` property to be sorted
+
+### Legalities Model
+
+#### Added
+
+- Added missing `oathbreaker` property
+- Added missing `paupercommander` property
+
+### Booster Model
+
+#### Added
+
+- Added `fixed` property
+- Added `allowDuplicates` property
+- Added [Booster Config](/data-models/booster/booster-config/) Data Model to describe configurations of a booster property
+- Added [Booster Pack](/data-models/booster/booster-pack/) Data Model to describe configurations of booster packs
+- Added [Booster Sheet](/data-models/booster/booster-sheet/) Data Model to describe configurations of cards printed on a sheet for booster packs
+
+#### Changed
+
+- Changed top-level key of `draft` to `default`
+
+### Sealed Product Model
+
+[Sealed Product](/data-models/sealed-product/) is now more documented. More Data Models have been created to describe the `contents` property of a top-level Sealed Product Data Model
+
+#### Added
+
+- Added `cardCount` property
+- Added missing `contents` property
+- Added [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/), [Sealed Product (Card)](/data-models/sealed-product/sealed-product-card/), [Sealed Product (Deck)](/data-models/sealed-product/sealed-product-deck/), [Sealed Product (Other)](/data-models/sealed-product/sealed-product-other/), [Sealed Product (Pack)](/data-models/sealed-product/sealed-product-pack/), [Sealed Product (Sealed)](/data-models/sealed-product/sealed-product-sealed/) Data Models to describe the different configurations of sealed products found in the [Sealed Product](/data-models/sealed-product/) Data Model
+
+### AllPrintingsParquetFiles
+
+A series of new files formatted for [Parquet](https://www.databricks.com/glossary/what-is-parquet).
+
+### AllPricesToday
+
+A new file containing card prices for all cards only for the current day.
+
+### Misc
+
+- Exported more Data Models as TypeScript types
+- Handle error exceptions from Gatherer
+- Handle error exceptions from Scryfall
+- Handle crashes if fields are not found
+- Allow building of empty sets
+
 ## 5.2.1
 
 Release Date: 2023-02-12
@@ -28,19 +119,17 @@ Release Date: 2023-02-12
 
 **Welcome to v5.2.1!** The MTGJSON team, our contributors, and the community have been working hard with this latest update with focuses on providing more properties, deprecating old properties, and bug fixes. Although this changelog does not reflect all the new sets and decks added, MTGJSON will continue to build frequently enough to capture all new products on a daily basis.
 
-As always, if you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
-
 ### Card Model
 
 #### Added
 
-- Added `attractionLights` optional property to [Card (Atomic)](/data-models/card-atomic/#attractionlights), [Card (Deck)](/data-models/card-deck/#attractionlights), and [Card (Set)](/data-models/card-set/#attractionlights)
-- Added `boosterTypes` optional property to [Card (Deck)](/data-models/card-deck/#boostertypes) and [Card (Set)](/data-models/card-set/#boostertypes)
-- Added `edhrecSaltiness` optional property to [Card (Atomic)](/data-models/card-atomic/#edhrecsaltiness), [Card (Deck)](/data-models/card-deck/#edhrecsaltiness), and [Card (Set)](/data-models/card-set/#edhrecsaltiness)
-- Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card-atomic/#firstprinting)
-- Added `foreignData` optional property to [Card (Atomic)](/data-models/card-atomic/#foreigndata)
-- Added `isFunny` optional property to [Card (Atomic)](/data-models/card-atomic/#isfunny)
-- Added `language` property to [Card (Deck)](/data-models/card-deck/#language), [Card (Set)](/data-models/card-set/#language), and [Card (Token)](/data-models/card-token/#language)
+- Added `attractionLights` optional property to [Card (Atomic)](/data-models/card/card-atomic/#attractionlights), [Card (Deck)](/data-models/card/card-deck/#attractionlights), and [Card (Set)](/data-models/card/card-set/#attractionlights)
+- Added `boosterTypes` optional property to [Card (Deck)](/data-models/card/card-deck/#boostertypes) and [Card (Set)](/data-models/card/card-set/#boostertypes)
+- Added `edhrecSaltiness` optional property to [Card (Atomic)](/data-models/card/card-atomic/#edhrecsaltiness), [Card (Deck)](/data-models/card/card-deck/#edhrecsaltiness), and [Card (Set)](/data-models/card/card-set/#edhrecsaltiness)
+- Added `firstPrinting` optional property to [Card (Atomic)](/data-models/card/card-atomic/#firstprinting)
+- Added `foreignData` optional property to [Card (Atomic)](/data-models/card/card-atomic/#foreigndata)
+- Added `isFunny` optional property to [Card (Atomic)](/data-models/card/card-atomic/#isfunny)
+- Added `language` property to [Card (Deck)](/data-models/card/card-deck/#language), [Card (Set)](/data-models/card/card-set/#language), and [Card (Token)](/data-models/card/card-token/#language)
 - Added `relatedCards` property to all Card Data Models
 - Added `subsets` optional property to all Card Data Models
 
@@ -56,8 +145,8 @@ As always, if you have suggestions for improvements, bug reports, or would just 
 
 #### Deprecated
 
-- Deprecated `isStarter` optional property on [Card (Deck)](/data-models/card-deck/#isstarter), and [Card (Set)](/data-models/card-set/#isstarter) as it provides no useful data. Will be removed in `v5.3.0`
-- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card-token/#reverserelated) in favor of the `relatedCards` property, described by the [Related Cards](/data-models/related-cards/) Data Model. Will be removed in `v5.3.0`
+- Deprecated `isStarter` optional property on [Card (Deck)](/data-models/card/card-deck/#isstarter), and [Card (Set)](/data-models/card/card-set/#isstarter) as it provides no useful data. Will be removed in `v5.3.0`
+- Deprecated `reverseRelated` optional property on [Card (Token)](/data-models/card/card-token/#reverserelated) in favor of the `relatedCards` property, described by the [Related Cards](/data-models/related-cards/) Data Model. Will be removed in `v5.3.0`
 
 ### Related Cards Model (New)
 
@@ -134,24 +223,22 @@ Release Date: 2021-12-20
 
 We want to remind everyone that while this Changelog can show updates to new Sets that have dropped and our added support for them. MTGJSON will continue to build frequently enough to have this new data without major or minor updates to the application or Changelog. You can always see the current build date using the [Meta](https://mtgjson.com/api/v5/Meta.json) JSON file and observing the date property or the date appended to the version number.
 
-If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
-
 ### Card Model
 
 #### Added
 
-- Added `manaValue` property [Card (Atomic)](/data-models/card-atomic/#manavalue), [Card (Deck)](/data-models/card-deck/#manavalue), and [Card (Set)](/data-models/card-set/#manavalue)
-- Added `isFunny` optional property to [Card (Deck)](/data-models/card-deck/#isfunny), [Card (Set)](/data-models/card-set/#isfunny), and [Card (Token)](/data-models/card-token/#isfunny)
-- Added `finishes` property to [Card (Deck)](/data-models/card-deck/#finishes), [Card (Set)](/data-models/card-set/#finishes), and [Card (Token)](/data-models/card-token/#finishes)
-- Added `cardParts` optional property to [Card (Deck)](/data-models/card-deck/#cardparts), [Card (Set)](/data-models/card-set/#cardparts), and [Card (Token)](/data-models/card-token/#cardparts)
-- Added `securityStamp` optional property to [Card (Deck)](/data-models/card-deck/#securitystamp), [Card (Set)](/data-models/card-set/#securitystamp), and [Card (Token)](/data-models/card-token/#securitystamp)
-- Added `faceManaValue` optional property to [Card (Atomic)](/data-models/card-atomic/#facemanavalue), [Card (Deck)](/data-models/card-deck/#facemanavalue), and [Card (Set)](/data-models/card-set/#facemanavalue)
-- Added `faceFlavorName` optional property to [Card (Deck)](/data-models/card-deck/#faceflavorname), [Card (Set)](/data-models/card-set/#faceflavorname), and [Card (Token)](/data-models/card-token/#faceflavorname)
-- Added `signature` optional property to [Card (Deck)](/data-models/card-deck/#signature), [Card (Set)](/data-models/card-set/#signature), and [Card (Token)](/data-models/card-token/#signature)
-- Added `isRebalanced` optional property to [Card (Deck)](/data-models/card-deck/#isrebalanced) and [Card (Set)](/data-models/card-set/#isrebalanced)
-- Added `rebalancedPrintings` optional property to [Card (Deck)](/data-models/card-deck/#rebalancedprintings) and [Card (Set)](/data-models/card-set/#rebalancedprintings)
-- Added `originalPrintings` optional propertiy to [Card (Deck)](/data-models/card-deck/#originalprintings) and [Card (Set)](/data-models/card-set/#originalprintings)
-- Added `otherFaceIds` property to [Card (Token)](/data-models/card-token/#otherfaceids)
+- Added `manaValue` property [Card (Atomic)](/data-models/card/card-atomic/#manavalue), [Card (Deck)](/data-models/card/card-deck/#manavalue), and [Card (Set)](/data-models/card/card-set/#manavalue)
+- Added `isFunny` optional property to [Card (Deck)](/data-models/card/card-deck/#isfunny), [Card (Set)](/data-models/card/card-set/#isfunny), and [Card (Token)](/data-models/card/card-token/#isfunny)
+- Added `finishes` property to [Card (Deck)](/data-models/card/card-deck/#finishes), [Card (Set)](/data-models/card/card-set/#finishes), and [Card (Token)](/data-models/card/card-token/#finishes)
+- Added `cardParts` optional property to [Card (Deck)](/data-models/card/card-deck/#cardparts), [Card (Set)](/data-models/card/card-set/#cardparts), and [Card (Token)](/data-models/card/card-token/#cardparts)
+- Added `securityStamp` optional property to [Card (Deck)](/data-models/card/card-deck/#securitystamp), [Card (Set)](/data-models/card/card-set/#securitystamp), and [Card (Token)](/data-models/card/card-token/#securitystamp)
+- Added `faceManaValue` optional property to [Card (Atomic)](/data-models/card/card-atomic/#facemanavalue), [Card (Deck)](/data-models/card/card-deck/#facemanavalue), and [Card (Set)](/data-models/card/card-set/#facemanavalue)
+- Added `faceFlavorName` optional property to [Card (Deck)](/data-models/card/card-deck/#faceflavorname), [Card (Set)](/data-models/card/card-set/#faceflavorname), and [Card (Token)](/data-models/card/card-token/#faceflavorname)
+- Added `signature` optional property to [Card (Deck)](/data-models/card/card-deck/#signature), [Card (Set)](/data-models/card/card-set/#signature), and [Card (Token)](/data-models/card/card-token/#signature)
+- Added `isRebalanced` optional property to [Card (Deck)](/data-models/card/card-deck/#isrebalanced) and [Card (Set)](/data-models/card/card-set/#isrebalanced)
+- Added `rebalancedPrintings` optional property to [Card (Deck)](/data-models/card/card-deck/#rebalancedprintings) and [Card (Set)](/data-models/card/card-set/#rebalancedprintings)
+- Added `originalPrintings` optional propertiy to [Card (Deck)](/data-models/card/card-deck/#originalprintings) and [Card (Set)](/data-models/card/card-set/#originalprintings)
+- Added `otherFaceIds` property to [Card (Token)](/data-models/card/card-token/#otherfaceids)
 - Added support for `"Dungeon"` cards in Card (Atomic)
 
 #### Fixed
@@ -236,7 +323,7 @@ If you have suggestions for improvements, bug reports, or would just like to hel
 
 - MTGJSON now supports Python 3.6 - 3.10
 - Better handle Gatherer downtime halting builds
-- Merged some File Models and Abstract Models within the documentation to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed.
+- Merged some File Models and Abstract Data Models within the documentation to the Data Model category for more clarity and ease of use. This in no way changes how and where the data files are downloaded or how their models are formed.
 
 ## 5.1.0
 
@@ -248,16 +335,14 @@ Release Date: 2021-01-18
 
 **Note: With this release, MTGJSONv4 has been fully deprecated. On February 28th, 2021 all v4 endpoints will be removed.**
 
-We're rolling out MTGGraphQL! For more information see the [MTGGraphQL](/mtggraphql/) documentation. Access during our beta rollout is limited to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> supporters. A GraphQL GUI can be accessed via <a href="https://graphql.mtgjson.com/" target="_blank" rel="noreferrer noopener">MTGGraphQL Playground</a>
-
 ### Card Model
 
 #### Added
 
-- Added `originalReleaseDate` optional property to [Card (Deck)](/data-models/card-deck/#originalreleasedate) and [Card (Set)](/data-models/card-set/#originalreleasedate)
-- Added `keywords` property to [Card (Atomic)](/data-models/card-atomic/#keywords)
-- Added `asciiName` property to [Card (Atomic)](/data-models/card-atomic/#asciiname)
-- Added `identifiers` property to [Card (Atomic)](/data-models/card-atomic/#identifiers)
+- Added `originalReleaseDate` optional property to [Card (Deck)](/data-models/card/card-deck/#originalreleasedate) and [Card (Set)](/data-models/card/card-set/#originalreleasedate)
+- Added `keywords` property to [Card (Atomic)](/data-models/card/card-atomic/#keywords)
+- Added `asciiName` property to [Card (Atomic)](/data-models/card/card-atomic/#asciiname)
+- Added `identifiers` property to [Card (Atomic)](/data-models/card/card-atomic/#identifiers)
 
 #### Changed
 
@@ -329,13 +414,13 @@ Release Date: 2020-08-24
 
 ### Announcements
 
-**Welcome to v5.0.1!** We've made some minor changes to Data Models with a big push to release a new file: *AllIdentifiers*!
+**Welcome to v5.0.1!** We've made some minor changes to Data Models with a big push to release a new file: _AllIdentifiers_!
 
 ### Card Model
 
 #### Added
 
-- Added `setCode` property to [Card (Deck)](/data-models/card-deck/#setcode), [Card (Set)](/data-models/card-set/#setcode), and [Card (Token)](/data-models/card-token/#setcode)
+- Added `setCode` property to [Card (Deck)](/data-models/card/card-deck/#setcode), [Card (Set)](/data-models/card/card-set/#setcode), and [Card (Token)](/data-models/card/card-token/#setcode)
 
 ### Foreign Data Model
 
@@ -364,9 +449,7 @@ Release Date: 2020-07-03
 
 **Welcome to v5.0.0!** We are proud to announce the 5th major release of MTGJSON. The team has made big improvements including a new “API” endpoint to serve files. We have also given our documentation an overhaul - including upgrading our server to run on Nginx.
 
-We are also pleased to announce the addition of `booster` optional property defined as the [Booster](/abstract-models/booster/) Abstract Model on the [Set](/data-models/set/) Data Model.
-
-If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
+We are also pleased to announce the addition of `booster` optional property defined with the help of the [Booster Config](/data-models/booster/booster-config/) Data Model on the [Set](/data-models/set/) Data Model.
 
 The MTGJSON team we would like to thank the community for its continued support and we look forward to serving you well.
 
@@ -374,12 +457,12 @@ The MTGJSON team we would like to thank the community for its continued support 
 
 #### Added
 
-- Added `hasAlternativeDeckLimit` optional property to [Card (Atomic)](/data-models/card-atomic/#hasalternativedecklimit), [Card (Deck)](/data-models/card-deck/#hasalternativedecklimit), and [Card (Set)](/data-models/card-set/#hasalternativedecklimit)
-- Added `promoTypes` optional property to [Card (Deck)](/data-models/card-deck/#promotypes), [Card (Set)](/data-models/card-set/#promotypes), and [Card (Token)](/data-models/card-token/#promotypes)
-- Added and back-ported `hasContentWarning` property to [Card (Deck)](/data-models/card-deck/#hascontentwarning) and [Card (Set)](/data-models/card-set/#hascontentwarning) (Cards that are marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content)
-- Added `variations` optional property to [Card (Deck)](/data-models/card-deck/#variations) and [Card (Set)](/data-models/card-set/#variations)
-- Added `keywords` property to [Card (Atomic)](/data-models/card-atomic/#keywords), [Card (Deck)](/data-models/card-deck/#keywords), [Card (Set)](/data-models/card-set/#keywords), and [Card (Token)](/data-models/card-token/#keywords)
-- Added `faceName` optional property to [Card (Atomic)](/data-models/card-atomic/#facename), [Card (Deck)](/data-models/card-deck/#facename), [Card (Set)](/data-models/card-set/#facename), and [Card (Token)](/data-models/card-token/#facename)
+- Added `hasAlternativeDeckLimit` optional property to [Card (Atomic)](/data-models/card/card-atomic/#hasalternativedecklimit), [Card (Deck)](/data-models/card/card-deck/#hasalternativedecklimit), and [Card (Set)](/data-models/card/card-set/#hasalternativedecklimit)
+- Added `promoTypes` optional property to [Card (Deck)](/data-models/card/card-deck/#promotypes), [Card (Set)](/data-models/card/card-set/#promotypes), and [Card (Token)](/data-models/card/card-token/#promotypes)
+- Added and back-ported `hasContentWarning` property to [Card (Deck)](/data-models/card/card-deck/#hascontentwarning) and [Card (Set)](/data-models/card/card-set/#hascontentwarning) (Cards that are marked by [Wizards of the Coast](https://company.wizards.com) for having sensitive content)
+- Added `variations` optional property to [Card (Deck)](/data-models/card/card-deck/#variations) and [Card (Set)](/data-models/card/card-set/#variations)
+- Added `keywords` property to [Card (Atomic)](/data-models/card/card-atomic/#keywords), [Card (Deck)](/data-models/card/card-deck/#keywords), [Card (Set)](/data-models/card/card-set/#keywords), and [Card (Token)](/data-models/card/card-token/#keywords)
+- Added `faceName` optional property to [Card (Atomic)](/data-models/card/card-atomic/#facename), [Card (Deck)](/data-models/card/card-deck/#facename), [Card (Set)](/data-models/card/card-set/#facename), and [Card (Token)](/data-models/card/card-token/#facename)
 
 #### Changed
 
@@ -436,7 +519,7 @@ The MTGJSON team we would like to thank the community for its continued support 
 - Data Models now reference their parent keys and parent files more accurately
 - Data Models now have the "optional" tag marked on properties for clarity
 - More Data Models are more clearly defined now that the files deliver all the same top-level keys
-- Atomic Cards are now documented outright as a [Card (Atomic)](/data-models/card-atomic/) Data Model for clarity
+- Atomic Cards are now documented outright as a [Card (Atomic)](/data-models/card/card-atomic/) Data Model for clarity
 - Property value examples were added for properties with enumuerated values from `EnumValues.json`
 - You can now toggle optional properties on/off within documentation. If all properties are optional, then the UI is disabled
 - You can now open a link to create a PR for a specific documentation page from the footer

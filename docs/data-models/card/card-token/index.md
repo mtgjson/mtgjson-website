@@ -25,7 +25,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model {open}
 
 <<< @/public/types/CardToken.ts{TypeScript}
 
@@ -33,14 +33,21 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 ## Model Properties
 
-> ### artist <Badge type="warning" text="optional" />
+> ### artist <DocBadge type="warning" text="optional" />
 >
 > The name of the artist that illustrated the card art.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### asciiName <Badge type="warning" text="optional" />
+> ### artistIds <DocBadge type="warning" text="optional" />
+>
+> A list of identifiers for the artists that illustrated the card art.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.1`
+
+> ### asciiName <DocBadge type="warning" text="optional" />
 >
 > The [ASCII](http://www.asciitable.com) (Basic/128) code formatted card name with no special unicode characters.
 >
@@ -55,7 +62,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='availability'/>
 > - **Introduced:** `v5.0.0`
 
-> ### boosterTypes <Badge type="warning" text="optional" />
+> ### boosterTypes <DocBadge type="warning" text="optional" />
 >
 > A list of types this card is in a booster pack.
 >
@@ -71,7 +78,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='borderColor'/>
 > - **Introduced:** `v4.0.0`
 
-> ### cardParts <Badge type="warning" text="optional" />
+> ### cardParts <DocBadge type="warning" text="optional" />
 >
 > A list of card names associated to this card, such as `"Meld"` card face names.
 >
@@ -86,7 +93,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='colorIdentity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### colorIndicator <Badge type="warning" text="optional" />
+> ### colorIndicator <DocBadge type="warning" text="optional" />
 >
 > A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
 >
@@ -96,20 +103,20 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### colors
 >
-> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card-token/#text).
+> A list of all the colors in `manaCost` and `colorIndicator` properties. Some cards may not have values, such as cards with `"Devoid"` in its [text](/data-models/card/card-token/#text).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
-> ### faceName <Badge type="warning" text="optional" />
+> ### faceName <DocBadge type="warning" text="optional" />
 >
 > The name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
-> ### faceFlavorName <Badge type="warning" text="optional" />
+> ### faceFlavorName <DocBadge type="warning" text="optional" />
 >
 > The flavor name on the face of the card.
 >
@@ -124,14 +131,14 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 
-> ### flavorText <Badge type="warning" text="optional" />
+> ### flavorText <DocBadge type="warning" text="optional" />
 >
 > The italicized text found below the rules text that has no game function.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### frameEffects <Badge type="warning" text="optional" />
+> ### frameEffects <DocBadge type="warning" text="optional" />
 >
 > The visual frame effects.
 >
@@ -147,20 +154,20 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='frameVersion'/>
 > - **Introduced:** `v4.0.0`
 
-> ### hasFoil <Badge type="danger" text="deprecated" />
+> ### hasFoil <DocBadge type="danger" text="deprecated" />
 >
 > If the card can be found in foil.
 >
-> _This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead._
+> _This property is deprecated. Use the [finishes](/data-models/card/card-token/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
-> ### hasNonFoil <Badge type="danger" text="deprecated" />
+> ### hasNonFoil <DocBadge type="danger" text="deprecated" />
 >
 > If the card can be found in non-foil.
 >
-> _This property is deprecated. Use the [finishes](/data-models/card-token/#finishes) property instead._
+> _This property is deprecated. Use the [finishes](/data-models/card/card-token/#finishes) property instead._
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
@@ -172,42 +179,49 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `Identifiers`
 > - **Introduced:** `v5.0.0`
 
-> ### isFullArt <Badge type="warning" text="optional" />
+> ### isFullArt <DocBadge type="warning" text="optional" />
 >
 > If the card has full artwork.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
-> ### isFunny <Badge type="warning" text="optional" />
+> ### isFunny <DocBadge type="warning" text="optional" />
 >
 > If the card is part of a funny set, such as an Un-set.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
 
-> ### isOnlineOnly <Badge type="warning" text="optional" />
+> ### isOnlineOnly <DocBadge type="warning" text="optional" />
 >
 > If the card is only available in online game play variations.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
 
-> ### isPromo <Badge type="warning" text="optional" />
+> ### isPromo <DocBadge type="warning" text="optional" />
 >
 > If the card is a promotional printing.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
-> ### isReprint <Badge type="warning" text="optional" />
+> ### isReprint <DocBadge type="warning" text="optional" />
 >
 > If the card has been reprinted.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`
 
-> ### keywords <Badge type="warning" text="optional" />
+> ### isTextless <DocBadge type="warning" text="optional" />
+>
+> If the card does not have a text box.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v4.4.2`
+
+> ### keywords <DocBadge type="warning" text="optional" />
 >
 > A list of keywords found on the card.
 >
@@ -230,7 +244,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='layout'/>
 > - **Introduced:** `v4.0.0`
 
-> ### loyalty <Badge type="warning" text="optional" />
+> ### loyalty <DocBadge type="warning" text="optional" />
 >
 > The starting loyalty value of the card. Used only on cards with `"Planeswalker"` in its [types](./#types).
 >
@@ -252,28 +266,42 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### orientation <Badge type="warning" text="optional" />
+> ### orientation <DocBadge type="warning" text="optional" />
 >
-> The orientation of the card.
+> The layout direction of the card. Used on [Art cards](https://mtg.fandom.com/wiki/Art_card).
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
 
-> ### otherFaceIds <Badge type="warning" text="optional" />
+> ### originalText <DocBadge type="warning" text="optional" />
+>
+> The text on the card as originally printed.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+
+> ### originalType <DocBadge type="warning" text="optional" />
+>
+> The type of the card as originally printed. Includes any supertypes and subtypes.
+>
+> - **Type:** `string`
+> - **Introduced:** `v4.0.0`
+
+> ### otherFaceIds <DocBadge type="warning" text="optional" />
 >
 > A list of card `uuid`'s to this card's counterparts, such as transformed or melded faces.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.6.1`
 
-> ### power <Badge type="warning" text="optional" />
+> ### power <DocBadge type="warning" text="optional" />
 >
 > The power of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### promoTypes <Badge type="warning" text="optional" />
+> ### promoTypes <DocBadge type="warning" text="optional" />
 >
 > A list of promotional types for a card.
 >
@@ -281,23 +309,23 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='promoTypes'/>
 > - **Introduced:** `v5.0.0`
 
-> ### relatedCards <Badge type="warning" text="optional" />
+> ### relatedCards <DocBadge type="warning" text="optional" />
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
 
-> ### reverseRelated <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
+> ### reverseRelated <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
 >
 > The names of the cards that produce this card.
 >
-> _This property is deprecated. Use the [relatedCards](/data-models/card-token/#relatedcards) property instead._
+> _This property is deprecated. Use the [relatedCards](/data-models/card/card-token/#relatedcards) property instead._
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v4.0.0`
 
-> ### securityStamp <Badge type="warning" text="optional" />
+> ### securityStamp <DocBadge type="warning" text="optional" />
 >
 > The security stamp printed on the card.
 >
@@ -312,7 +340,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v5.0.1`
 
-> ### side <Badge type="warning" text="optional" />
+> ### side <DocBadge type="warning" text="optional" />
 >
 > The identifier of the card side. Used on cards with multiple faces on the same card.
 >
@@ -320,14 +348,21 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='side'/>
 > - **Introduced:** `v4.1.0`
 
-> ### signature <Badge type="warning" text="optional" />
+> ### signature <DocBadge type="warning" text="optional" />
 >
 > The name of the signature on the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### subsets <Badge type="warning" text="optional" />
+> ### sourceProducts <DocBadge type="warning" text="optional" />
+>
+> A list of associated Sealed Product `uuid` properties where this card can be found in.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.2`
+
+> ### subsets <DocBadge type="warning" text="optional" />
 >
 > The names of the subset printings a card is in. Used primarily on "Secret Lair Drop" cards.
 >
@@ -350,14 +385,14 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='supertypes'/>
 > - **Introduced:** `v4.0.0`
 
-> ### text <Badge type="warning" text="optional" />
+> ### text <DocBadge type="warning" text="optional" />
 >
 > The rules text of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### toughness <Badge type="warning" text="optional" />
+> ### toughness <DocBadge type="warning" text="optional" />
 >
 > The toughness of the card.
 >
@@ -386,7 +421,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### watermark <Badge type="warning" text="optional" />
+> ### watermark <DocBadge type="warning" text="optional" />
 >
 > The name of the watermark on the card.
 >

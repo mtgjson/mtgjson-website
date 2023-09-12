@@ -2,10 +2,7 @@ import generateSidebar from './generateSidebar';
 import generatePages from './generatePages';
 
 // Sidebar link generation
-const [
-  abstractModels,
-  dataModels
-] = generateSidebar(['/abstract-models/', '/data-models/']);
+const [dataModels] = generateSidebar(['/data-models/']);
 
 // Page metadata generation
 export const pages = generatePages({
@@ -33,7 +30,7 @@ export default {
     // Google SEO
     ['meta', { property: 'og:title', content: title }],
     ['meta', { property: 'og:description', content: description }],
-    ['meta', { property: 'og:image', src: '/images/assets/thumbnail-mtgjson.jpg' }],
+    ['meta', { property: 'og:image', src: 'https://mtgjson.com/images/assets/og-image-mtgjson.jpg' }],
     // Favicon and OS Tiles
     ['link', { rel: 'shortcut icon', href: '/favicons/favicon.ico', type: 'image/x-icon' }],
     ['link', { rel: 'icon', href: '/favicons/favicon-16x16.png', sizes: '16x16', type: 'image/png' }],
@@ -47,7 +44,7 @@ export default {
     ['meta', { name: 'theme-color', content: '#0f263c' }],
     // Analytics
     ['meta', { name: 'google-site-verification', content: 'M0vhY1d0DytNcuhlzErPmN1UUXkPEZM_jkj8q_S21JY' }],
-    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true' }],
+    ['script', { src: 'https://www.googletagmanager.com/gtag/js?id=G-ZPPM5J5ET2', async: 'true', defer: 'true' }],
     [
       'script',
       {},
@@ -61,16 +58,16 @@ export default {
   ],
   markdown: {
     toc: {
-      level: [ 3 ],
+      level: [3],
       shouldAllowNested: true,
-      format: (str) => str.split('<')[0]
+      format: (str) => str.split('<')[0],
     },
-    theme: 'material-theme-darker'
+    theme: 'material-theme',
   },
   // VitePress themeing
   themeConfig: {
     pages,
-    outline: 3,
+    outline: [2, 3],
     smoothScroll: true,
     outlineBadges: false,
     outlineTitle: 'On This Page',
@@ -89,7 +86,7 @@ export default {
       },
       {
         icon: {
-          svg: '<svg alt="Patreon icon" fill="#f96753" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" class="st0"/></svg>'
+          svg: '<svg alt="Patreon icon" fill="#f96753" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path d="M512 194.8c0 101.3-82.4 183.8-183.8 183.8-101.7 0-184.4-82.4-184.4-183.8 0-101.6 82.7-184.3 184.4-184.3C429.6 10.5 512 93.2 512 194.8zM0 501.5h90v-491H0v491z" class="st0"/></svg>',
         },
         link: 'https://www.patreon.com/MTGJSON',
       },
@@ -111,7 +108,7 @@ export default {
             text: 'F.A.Q.',
             link: '/faq/',
           },
-        ]
+        ],
       },
       {
         text: 'GraphQL API',
@@ -120,8 +117,8 @@ export default {
           {
             text: 'MTGGraphQL',
             link: '/mtggraphql/',
-          }
-        ]
+          },
+        ],
       },
       {
         text: 'Downloads',
@@ -145,11 +142,6 @@ export default {
         text: 'Data Models',
         link: '/data-models/',
         items: dataModels,
-      },
-      {
-        text: 'Abstract Models',
-        link: '/abstract-models/',
-        items: abstractModels,
       },
       {
         text: 'Changelogs',

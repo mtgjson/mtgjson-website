@@ -20,6 +20,29 @@ head:
 
 The following is the MTGGraphQL Changelog. Some parts may be updated for clarity or corrections at any point.
 
+## 1.4.0
+
+Release Date: 2023-09-01
+
+### Announcements
+
+With this release we've put a focus on making the `cards` endpoint more robust.
+
+### Cards
+
+#### Added
+
+- Added price querying directly from cards
+- Added `latestPrice` and `prices` as a field resolver
+- Added `decksContaining` method to get decks associated with each card found
+- Added `set` method to get information for the related set
+- Added advanced searching by specifying exact search operators such as `eq`, `in`, and `like`
+- Added querying by `text`, `type`, etc; identifieres like `scryfallId`, `multiverseId`, etc
+
+### Misc
+
+- Added defaults for page/order if not specified. (Defaults to {take: 15, skip 0}, and {order: ASC})
+
 ## 1.3.0
 
 Release Date: 2023-02-12

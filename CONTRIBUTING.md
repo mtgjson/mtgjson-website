@@ -41,6 +41,7 @@ Some files and directories are omitted that do not help understand this current 
 │   └── generate-types.js # Utility to generate TypeScript notations for documentation
 └── docs/ # Home directory, outputs to `/dist`
     ├── **/**/index.md # Directories and their route entry point
+    ├── types.ts # An abstract of TypeScript types for MTGJSON files
     ├── public/ # Public facing files
     │   ├── favicons/ # All favicon images
     │   ├── images/ # All application images
@@ -52,8 +53,9 @@ Some files and directories are omitted that do not help understand this current 
     │   ├── static/ # Legacy path for MTGJSON documentation TypeScript Types
     │   │   └── mtgjson-types.ts # All TypeScript Types for MTGJSON Data Models
     │   │
-    │   ├── types/ # Path to all MTGJSON documentation TypeScript Types
-    │   └── *.* # Any public facing file, like robots.txt
+    │   └── types/ # Path to all MTGJSON documentation TypeScript Types
+    │       └── *.ts # All individual TseScript Types for MTGJSON Data Models
+    │
     └── .vitepress/ # Main config and theme files for Vitepress
         ├── config.js # Main VitePress configuration
         ├── generatePages.js # Polyfill script to generate pages data for search
@@ -105,23 +107,29 @@ You can also change configuration of VitePress by overwriting variables within t
 An example of a property field for a data object field in Markdown:
 
 ```
-> ### artist <Badge type="danger" text="deprecated" /><Badge type="warning" text="optional" />
+> ### artist <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
 >
-> The name of the artist that illustrated the card art.  
+> The name of the artist that illustrated the card art.
 >
 > **Type:** `string`
 > **Introduced:** `v4.0.0`
 ```
 
-The `<Badge type="warning" text="optional" />` markup will render a UI change in the property that denotes the property is optional. The same applies for `<Badge type="danger" text="deprecated" />` that can be used to denote a property is deprecated. Be sure to order them with deprecated first, and then optional. Using the optional Badge is required for properties that we know are optional in order to generate the TypeScript types properly.
+The `<DocBadge type="warning" text="optional" />` markup will render a UI change in the property that denotes the property is optional. The same applies for `<DocBadge type="danger" text="deprecated" />` that can be used to denote a property is deprecated. Be sure to order them with deprecated first, and then optional. Using the optional Badge is required for properties that we know are optional in order to generate the TypeScript types properly.
 
 You can also use the `<ExampleField type='<Enum Name>'` component to render examples provided the enum values exist in the EnumValues.json file. This requires some frontmatter updates where the `enum` Frontmatter property has a value that equates to an EnumValues.json property and the `<Enum Name>` is the property within that enumeration. For example:
 
 If you set `enum` is Frontmatter to `card`, and `<Enum Name>` to `availability`, the example field will populate from `EnumValues.json` -> `data` -> `card` -> `availability`.
 
+#### TypeScript Models
+
+These are generated at build-time of the application and then import inline to the documentation page. THis works by using the above syntax for a property field for a documentation page. The utility will parse out all those blockquotes with properties and transform them in to a TypeScript file.
+
+File Data Models work a bit differently. They are declared in the `/docs/types.ts` file. And need to be updated manually as new files are created.
+
 ## Pinia Store
 
-We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store remains as performant as possible.
+We use Pinia to fetch data from MTGJSON API's in order to fill our application data. However, we only do this during the first render so the application and store the data so the app remains as performant as possible without hitting the API's too much.
 
 ## Testing
 

@@ -19,12 +19,12 @@ head:
 
 The Related Cards Data Model describes the properties of a card that has relations to other cards.
 
-- **Parent model:** [Card (Atomic)](/data-models/card-atomic/), [Card (Deck)](/data-models/card-deck/), [Card (Set)](/data-models/card-set/), [Card (Token)](/data-models/card-token/)
+- **Parent model:** [Card (Atomic)](/data-models/card/card-atomic/), [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), [Card (Token)](/data-models/card/card-token/)
 - **Parent property:** `relatedCards`
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model {open}
 
 <<< @/public/types/RelatedCards.ts{TypeScript}
 
@@ -32,14 +32,14 @@ The Related Cards Data Model describes the properties of a card that has relatio
 
 ## Model Properties
 
-> ### reverseRelated <Badge type="warning" text="optional" />
+> ### reverseRelated <DocBadge type="warning" text="optional" />
 >
 > A list of card names associated to a card, such as "meld" cards and token creation.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`
 
-> ### spellbook <Badge type="warning" text="optional" />
+> ### spellbook <DocBadge type="warning" text="optional" />
 >
 > A list of card names associated to a card's [Spellbook](https://mtg.fandom.com/wiki/Spellbook) mechanic.
 >

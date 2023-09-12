@@ -113,6 +113,31 @@ const findMarkdown = (dir) => {
           }
 
           /**
+           * If the directory has another file, its probably a nested directory.
+           */
+          if (dirFiles.length > 1) {
+            const nextDirs = dirFiles.filter((f) => f !== MARKDOWN_FILE_INDEX);
+
+            nextDirs.forEach((dirName) => {
+              const nextDirPath = `${fileName}/${dirName}`;
+              const dirStats = fs.lstatSync(nextDirPath);
+
+              if (dirStats.isDirectory()) {
+                const dir = fs.readdirSync(nextDirPath);
+                const cleanDir = dir.filter((f) => f !== MARKDOWN_FILE_INDEX);
+
+                if (cleanDir.length > 0) {
+                  cleanDir.forEach((d) => {
+                    const path = `${fileName}/${dirName}/${d}/${MARKDOWN_FILE_INDEX}`;
+
+                    reducer.push(path);
+                  });
+                }
+              }
+            });
+          }
+
+          /**
            * For all the directories subdirectories.
            */
           dirFiles.forEach((dirFile) => {
@@ -163,7 +188,7 @@ const readMarkdown = (fileName) => {
   const markdownItHTML = markdownIt.render(markdownStrippedOfFrontmatter);
 
   /**
-   * Use cheerio to parse the the HTML in order to access headers.
+   * Use cheerio to parse the the HTML in order to access markup.
    */
   const cheerio = cheerioParse(markdownItHTML);
 
@@ -229,7 +254,7 @@ const readMarkdown = (fileName) => {
     /**
      * Get the name of the header
      */
-    const name = cheerio(element).text().split("<")[0].trim();
+    const name = cheerio(element).text().split('<')[0].trim();
     /**
      * Get the current value mapped to an anchor
      */
@@ -238,7 +263,7 @@ const readMarkdown = (fileName) => {
     /**
      * Get the optional tag
      */
-    const optional = header.includes("optional");
+    const optional = header.includes('optional');
 
     /**
      * Filter out the non-mappables
@@ -247,7 +272,7 @@ const readMarkdown = (fileName) => {
       reducer[index] = {
         name,
         type,
-        optional
+        optional,
       };
     }
 

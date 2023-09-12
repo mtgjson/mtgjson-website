@@ -38,6 +38,17 @@
         :key="`sqlite-${key + format}`",
         :value="`${api}${fileName}.sqlite.${format}`"
       ) {{ `${fileName}.sqlite.${format}` }}
+    optgroup(label="PSQL")
+      option(
+        :key="`psql`",
+        :value="`${api}${fileName}.psql`"
+      ) {{ `${fileName}.psql` }}
+    optgroup(label="PSQL Compressed")
+      option(
+        v-for="(format, key) in compressedFormats",
+        :key="`psql-${key + format}`",
+        :value="`${api}${fileName}.psql.${format}`"
+      ) {{ `${fileName}.psql.${format}` }}
   select(v-else-if="fileName.includes('Files')", @change="downloadFile")
     option Select a file to download
     optgroup(label="Files Compressed")
@@ -121,6 +132,7 @@ const downloadFile = (e: HTMLChangeEvent): void => {
   select {
     margin-top: 1rem;
     padding: 0.25rem 0.5rem;
+    height: 40px;
     border-radius: var(--common-radius);
     background-color: var(--select-bg-color);
     border: 1px solid var(--select-border-color);

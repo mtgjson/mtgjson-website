@@ -21,6 +21,7 @@ MTGGraphQL is a service of MTGJSON and a GraphQL API built on top of the MTGJSON
 
 - **Cards**
 - **Decks**
+- **Imagery**
 - **Sets**
 - **Metadata**
 - **Prices**
@@ -64,7 +65,7 @@ The playground consists of 3 main sections:
 ```GraphQL
 query {
   cards(
-    input: { name: "Phelddagrif" }
+    filter: { name_eq: "Phelddagrif" }
     page: { take: 100, skip: 0 }
     order: { order: ASC }
   ) {
@@ -72,6 +73,13 @@ query {
     setCode
     type
     text
+    prices {
+      provider
+      date
+      cardType
+      listType
+      price
+    }
   }
 }
 ```
@@ -96,17 +104,83 @@ Here is a reduced payload the example response:
     "cards": [
       {
         "name": "Phelddagrif",
+        "setCode": "ALL",
+        "type": "Legendary Creature — Phelddagrif",
+        "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card.",
+        "prices": [
+          {
+            "provider": "cardkingdom",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "buylist",
+            "price": 5.5
+          },
+          {
+            "provider": "cardkingdom",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "retail",
+            "price": 9.99
+          },
+          {
+            "provider": "cardmarket",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "retail",
+            "price": 8.95
+          },
+          {
+            "provider": "tcgplayer",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "retail",
+            "price": 10.05
+          },
+          {
+            "provider": "tcgplayer",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "buylist",
+            "price": 7.54
+          },
+          {
+            "provider": "cardsphere",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "retail",
+            "price": 10.25
+          }
+        ]
+      },
+      {
+        "name": "Phelddagrif",
         "setCode": "ME1",
         "type": "Legendary Creature — Phelddagrif",
-        "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card."
+        "text": "{G}: Phelddagrif gains trample until end of turn. Target opponent creates a 1/1 green Hippo creature token.\n{W}: Phelddagrif gains flying until end of turn. Target opponent gains 2 life.\n{U}: Return Phelddagrif to its owner's hand. Target opponent may draw a card.",
+        "prices": [
+          {
+            "provider": "cardhoarder",
+            "date": "2023-08-15",
+            "cardType": "normal",
+            "listType": "retail",
+            "price": 0.03
+          },
+          {
+            "provider": "cardhoarder",
+            "date": "2023-08-15",
+            "cardType": "foil",
+            "listType": "retail",
+            "price": 1.82
+          }
+        ]
       }
     ]
   }
 }
 ```
 
-You can use the this embedded playground to start a query right now using your access token in the HTTP Headers section:
+You can use the this embedded playground to run this specific example query without the need of an access token:
 
 <div class="doc-iframe graphql-playground">
-  <iframe src="https://graphql.mtgjson.com/?query=query {%0A%20 cards(%0A%20%20%20 input%3A { name%3A %22Phelddagrif%22 }%0A%20%20%20 page%3A { take%3A 100%2C skip%3A 0 }%0A%20%20%20 order%3A { order%3A ASC }%0A%20 ) {%0A%20%20%20 name%0A%20%20%20 setCode%0A%20%20%20 type%0A%20%20%20 text%0A%20 }%0A}%0A" height="700px" width="100%" frameborder="0"></iframe>
+  <iframe src="https://graphql.mtgjson.com/?query=query {%0A%20 cards(%0A%20%20%20 filter%3A { name_eq%3A %22Phelddagrif%22 }%0A%20%20%20 page%3A { take%3A 100%2C skip%3A 0 }%0A%20%20%20 order%3A { order%3A ASC }%0A%20 ) {%0A%20%20%20 name%0A%20%20%20 setCode%0A%20%20%20 type%0A%20%20%20 text%0A%20%20%20 prices {%0A%20%20%20%20%20 provider%0A%20%20%20%20%20 date%0A%20%20%20%20%20 cardType%0A%20%20%20%20%20 listType%0A%20%20%20%20%20 price%0A%20%20%20 }%0A%20%20}%0A}%0A" height="700px" width="100%" frameborder="0"></iframe>
 </div>

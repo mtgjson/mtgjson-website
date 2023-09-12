@@ -25,7 +25,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model {open}
 
 <<< @/public/types/Deck.ts{TypeScript}
 
@@ -35,14 +35,14 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### code
 >
-> The printing deck code for the deck.
+> The printing set code for the deck.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
-> ### commander <Badge type="warning" text="optional" />
+> ### commander <DocBadge type="warning" text="optional" />
 >
-> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck`
 > - **Introduced:** `v5.1.0`
@@ -57,7 +57,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### mainBoard
 >
-> The cards in the main-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The cards in the main-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
@@ -78,7 +78,7 @@ The Deck Data Model describes the properties of an individual Deck.
 
 > ### sideBoard
 >
-> The cards in the side-board. See the [Card (Deck)](/data-models/card-deck/) Data Model.
+> The cards in the side-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`

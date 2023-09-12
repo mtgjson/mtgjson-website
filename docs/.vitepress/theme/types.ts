@@ -14,9 +14,9 @@ export type TList = {
   baseSetSize: number;
   code: string;
   fileName: string;
+  isForeignOnly: boolean;
   isFoilOnly: boolean;
   isNonFoilOnly: boolean;
-  isOnline: boolean;
   isOnlineOnly: boolean;
   isPaper: boolean;
   isPaperOnly: boolean;

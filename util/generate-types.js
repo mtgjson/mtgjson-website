@@ -1,38 +1,32 @@
 import fs from 'fs';
 import { pages } from '../docs/.vitepress/config';
 
-// Convert some incompatible types that we use for documentation clarity but differs from TypeScript types
-const convertIncompatibleTypes = (value) => {
-  if (value === 'float') {
-    return 'number';
-  } else {
-    return value;
-  }
-}
+const preDeterminedTypes = fs.readFileSync('docs/types.ts', { encoding: 'utf8' });
+
+let typesAll = '';
 
 // Convert page title to become a type name
 const convertPageNameToNamedType = (name) => {
   return name?.replace(/[\s()]/g, '');
-}
+};
 
-// True TypeScript type generation
-const generateTrueTypes = () => {
+// Generate types from the pages type models generated at build time
+const generatePageModelTypes = (_pages) => {
   let props = '';
-  let propsAll = '';
   let propTypeName = '';
 
-  pages.forEach(async (page) => {
+  _pages.forEach(async (page) => {
     props = '';
-    const propName = propTypeName = convertPageNameToNamedType(page.title);
+    const propName = (propTypeName = convertPageNameToNamedType(page.title));
 
-    if (propName && page.model && page.model.length > 0) {
+    if (propName && page.model?.length > 0) {
       let propValues = '';
       let propString = '';
 
       page.model.forEach((property, index) => {
         const isLastLine = index === page.model.length - 1;
         const propertyName = property.name.includes(' ') ? `"${property.name}"` : property.name;
-        const propertyType = convertIncompatibleTypes(property.type);
+        const propertyType = property.type;
         const propertyOptional = !!property.optional ? '?' : '';
         const propertyValue = `  ${propertyName}${propertyOptional}: ${propertyType};${isLastLine ? '' : '\n'}`;
 
@@ -45,28 +39,28 @@ ${propValues}
 };`;
 
       props += propString;
-      propsAll += propString;
+      typesAll += propString;
 
-      if( props ) {
-        fs.writeFileSync(
-          `./docs/public/types/${propTypeName}.ts`,
-          `${props.trim()}`
-        );
+      if (props) {
+        fs.writeFileSync(`./docs/public/types/${propTypeName.replace(/ /g, '')}.ts`, `${props.trim()}`);
       }
     }
+  });
+};
+generatePageModelTypes(pages);
 
+// Generate types from a static file for models we do not declare
+const generateFileModelTypes = (_types) => {
+  const fileModels = _types.split('\n').filter((line) => line !== '');
+
+  fileModels.forEach((model) => {
+    const modelName = model.match(/(?<=type )(.*)(?= =)/)[0];
+
+    fs.writeFileSync(`./docs/public/types/${modelName.replace(/ /g, '')}.ts`, `${model.trim()}`);
   });
 
-  fs.writeFileSync(
-    `./docs/public/types/AllMTGJSONTypes.ts`,
-    `${propsAll.replace(/};/g, '};\n').trim()}`
-  );
-
-  // Legacy file
-  fs.writeFileSync(
-    `./docs/public/static/mtgjson-types.ts`,
-    `${propsAll.replace(/};/g, '};\n').trim()}`
-  );
+  typesAll += '\n' + _types;
 };
+generateFileModelTypes(preDeterminedTypes);
 
-generateTrueTypes();
+fs.writeFileSync(`./docs/public/types/AllMTGJSONTypes.ts`, `${typesAll.trim()}`);

@@ -6,18 +6,18 @@ head:
       content: Frequently Asked Questions
   - - meta
     - name: description
-      content: Frequently Asked Questions for MTGJSON and documentation.
+      content: Common questions about MTGJSON data and services.
   - - meta
     - property: og:description
-      content: Frequently Asked Questions for MTGJSON and documentation.
+      content: Common questions about MTGJSON data and services.
   - - meta
     - name: keywords
-      content: mtg, magic the gathering, mtgjson, json, frequently asked questions, faq
+      content: mtg, magic the gathering, mtgjson, json, frequently asked questions, faq, common questions
 ---
 
 # Frequently Asked Questions
 
-Here is a list of frequently asked questions from our users since some data can be nuanced.
+Here are some common questions about MTGJSON data and services.
 
 > ### Which file should I use for my project?
 >
@@ -31,9 +31,9 @@ Here is a list of frequently asked questions from our users since some data can 
 
 > ### What information is in AtomicCards or similar files?
 >
-> These files contains oracle-like information for every card using the [Card (Atomic)](/data-models/card-atomic/) Data Model. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
+> These files contains oracle-like information for every card using the [Card (Atomic)](/data-models/card/card-atomic/) Data Model. Any data that is persistent across the printings of a card will be included, such as `colorIdentity`, but anything that pertains to a specific printing of a card will **NOT** be included, such as `artist`.
 >
-> For a full list of properties, see the [Card (Atomic)](/data-models/card-atomic/) Data Model documentation.
+> For a full list of properties, see the [Card (Atomic)](/data-models/card/card-atomic/) Data Model documentation.
 >
 > **Note:** Depending on your use case you probably do not need this file, as it can be easily derived from [AllPrintings](/downloads/all-files/#allprintings) - handle with care.
 
@@ -106,7 +106,7 @@ Here is a list of frequently asked questions from our users since some data can 
 >
 > #### Using the `setCode` property
 >
-> You can use the `setCode` property from [Card (Deck)](/data-models/card-deck/#setcode), [Card (Set)](/data-models/card-set/#setcode), and [Card (Token)](/data-models/card-token/#setcode) for both **Scryfall** and **Gatherer**. Gatherer also lets you pass a rarity parameter to return a set symbol with a color applied - you can use the `rarity` property from [Card (Deck)](/data-models/card-deck/#rarity) and [Card (Set)](/data-models/card-set/#rarity) for this value and extrapolate what Gatherer needs in its parameter. Here is an example of how you might construct the different image paths:
+> You can use the `setCode` property from [Card (Deck)](/data-models/card/card-deck/#setcode), [Card (Set)](/data-models/card/card-set/#setcode), and [Card (Token)](/data-models/card/card-token/#setcode) for both **Scryfall** and **Gatherer**. Gatherer also lets you pass a rarity parameter to return a set symbol with a color applied - you can use the `rarity` property from [Card (Deck)](/data-models/card/card-deck/#rarity) and [Card (Set)](/data-models/card/card-set/#rarity) for this value and extrapolate what Gatherer needs in its parameter. Here is an example of how you might construct the different image paths:
 >
 > ```TypeScript
 > // Assuming you have the setCode property available in your code...

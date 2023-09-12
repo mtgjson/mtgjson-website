@@ -9,7 +9,7 @@
   },
   "scripts": {
     "dev": "run-p lint:js:watch local",
-    "dev:bare": "vitepress dev docs",
+    "dev:bare": "vitepress dev docs --watch",
     "local": "npm run check:version && npm run purge:cache && npm run generate:types && npm run generate:contributors && npm run dev:bare",
     "build": "npm run generate:types && npm run generate:contributors && vitepress build docs && npm run generate:feeds",
     "build:bare": "vitepress build docs",
@@ -38,6 +38,7 @@
     "@types/jest": "^28.1.6",
     "@typescript-eslint/parser": "^5.30.7",
     "@volar/vue-language-plugin-pug": "^1.0.24",
+    "@vue/language-plugin-pug": "^1.8.8",
     "cheerio": "^1.0.0-rc.12",
     "codecov": "^4.0.0-0",
     "eslint": "^8.11.0",
@@ -53,8 +54,9 @@
     "semver": "^7.3.5",
     "ts-jest": "^28.0.7",
     "ts-node": "^10.9.1",
+    "tslint": "^6.1.3",
     "uuid": "^8.3.2",
-    "vitepress": "1.0.0-alpha.64",
+    "vitepress": "^1.0.0-rc.12",
     "vue": "^3.2.37",
     "vue-eslint-parser": "^9.0.0"
   }

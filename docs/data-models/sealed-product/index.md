@@ -25,7 +25,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ## TypeScript Model
 
-::: details Show/Hide Model
+::: details Toggle Model {open}
 
 <<< @/public/types/SealedProduct.ts{TypeScript}
 
@@ -33,12 +33,26 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 
 ## Model Properties
 
-> ### category <Badge type="warning" text="optional" />
+> ### cardCount <DocBadge type="warning" text="optional" />
+>
+> The number of cards in this product.
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.2`
+
+> ### category <DocBadge type="warning" text="optional" />
 >
 > The category of this product.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
+
+> ### contents <DocBadge type="warning" text="optional" />
+>
+> The contents of this product. See the [Sealed Product Contents](/data-models/sealed-product/sealed-product-contents/) Data Model.
+>
+> - **Type:** `SealedProductContents`
+> - **Introduced:** `v5.2.2`
 
 > ### identifiers
 >
@@ -54,7 +68,7 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### productSize <Badge type="warning" text="optional" />
+> ### productSize <DocBadge type="warning" text="optional" />
 >
 > The size of the product.
 >
@@ -68,14 +82,14 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > - **Type:** `PurchaseUrls`
 > - **Introduced:** `v5.2.0`
 
-> ### releaseDate <Badge type="warning" text="optional" />
+> ### releaseDate <DocBadge type="warning" text="optional" />
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the product. Not included if the set was not formally released as a product.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### subtype <Badge type="warning" text="optional" />
+> ### subtype <DocBadge type="warning" text="optional" />
 >
 > The category subtype of this product.
 >

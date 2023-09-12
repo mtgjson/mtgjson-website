@@ -2,11 +2,20 @@
 
 @import 'vars';
 
-// Anchor links
+// Top level HTML
+html {
+  min-width: 375px;
+}
+
+// Next/Prev buttons fix
 a {
-  &:link:not(.pager-link) {
+  &.pager-link {
     &:hover {
-      text-decoration: underline;
+      text-decoration: none !important;
+    }
+
+    .doc-badge {
+      display: none;
     }
   }
 }
@@ -22,7 +31,6 @@ pre {
   margin-left: auto;
   margin-right: auto;
 }
-
 pre {
   padding: 1rem !important;
   margin-bottom: 1rem;
@@ -32,21 +40,27 @@ pre {
     padding: 0;
   }
 }
-
 div[class*="language-"],
 code {
   background-color: var(--code-bg-color) !important;
 }
-
 code {
   color: var(--code-text-color) !important;
   padding: 0.25rem 0.5rem !important;
   font-size: 12px !important;
 }
-
 .lang {
   top: 0rem !important;
   right: 0.45rem !important;
+}
+
+.custom-block {
+  a:link,
+  a:visited,
+  a:active,
+  a:hover {
+    color: var(--accent-color);
+  }
 }
 
 // CTA
@@ -82,43 +96,10 @@ code {
 .VPNavBar {
   .title {
     display: flex;
-    border-bottom: var(--vp-c-divider);
   }
 }
 .content-body {
   transition: none !important;
-}
-
-// Sidebar
-.VPSidebar {
-  .VPSidebarItem {
-    .VPLink {
-      &,
-      & > .text {
-        &:hover {
-          color: var(--vp-c-text-1) !important;
-        }
-      }
-
-      h2 {
-        font-size: 1rem;
-      }
-    }
-
-    &.is-active {
-      & > .item {
-        .VPLink {
-          &:hover {
-            &,
-            & .text {
-              color: var(--vp-c-brand) !important;
-              text-decoration: none;
-            }
-          }
-        }
-      }
-    }
-  }
 }
 
 // Appearance/Social links overlay on mobile
@@ -126,11 +107,39 @@ code {
   border-radius: var(--common-radius) !important;
 }
 
+// TOC/Outline
+.VPDocOutlineDropdown button {
+  border-color: var(--accent-color) !important;
+  background-color: transparent !important;
+  color: var(--accent-color) !important;
+  font-weight: bold !important;
+  transition: all 0.25s;
+
+  &:hover {
+    background-color: var(--accent-color) !important;
+    color: var(--white-color) !important;
+  }
+}
+
 // Content
 .VPDoc {
   // Fix headings
+
+  h1 {
+    display: inline-flex;
+    align-items: center;
+  }
   h4 {
     margin-top: 1rem;
+  }
+
+  // Fix links
+  a {
+    text-decoration: none;
+
+    &:hover {
+      text-decoration: underline;
+    }
   }
 
   // Fix edit link colors
@@ -181,18 +190,24 @@ code {
     }
   }
 
+  .VPBadge {
+    margin-left: 0.5rem;
+    border-width: 2px !important;
+    border-radius: var(--common-radius);
+    padding: 0 0.5rem;
+    font-weight: bold !important;
+  }
+
   // Blockquotes
   blockquote {
     border-radius: var(--common-radius);
     border: 1px solid var(--vp-c-divider);
-    background-color: var(--vp-custom-block-info-bg);
+    background-color: var(--vp-sidebar-bg-color);
     margin-bottom: 1.5rem;
     padding: 1rem;
 
     .VPBadge {
-      text-transform: capitalize;
-      margin-left: 0.5rem;
-      margin-top: 0.4rem;
+      float: right;
     }
 
     h3 {
@@ -203,6 +218,7 @@ code {
     p {
       font-size: 14px;
       margin-top: 0.5rem;
+      font-weight: 500;
     }
 
     ul {
@@ -210,21 +226,6 @@ code {
         font-size: 14px;
         color: var(--vp-c-text-2);
       }
-    }
-  }
-
-  // Custom blocks, like info and tips
-  .custom-block {
-    margin-bottom: 1.5rem;
-    border-radius: var(--common-radius);
-    border-color: var(--vp-c-divider);
-
-    .custom-block-title {
-      color: var(--vp-c-text-1);
-    }
-
-    a {
-      color: var(--vp-c-brand);
     }
   }
 }
@@ -242,17 +243,6 @@ html.dark {
 @media (max-width: 399px) {
   .VPDoc {
     blockquote {
-      .VPBadge {
-        display: block;
-        margin-left: 0;
-        margin-top: 0.5rem;
-        text-align: center;
-
-        &:first-of-type {
-          margin-top: 1rem;
-        }
-      }
-
       h3 {
         .header-anchor {
           display: none;

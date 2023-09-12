@@ -21,6 +21,12 @@ MTGJSON is an open-source project that catalogs all [Magic: The Gathering](https
 
 **Below is some guiding information to get you started on working with MTGJSON data.**
 
+::: warning Clarity On Documentation
+
+This documentation leverages **TypeScript** syntax to describe data.
+
+:::
+
 ## MTGJSON Files
 
 ### File Formats
@@ -31,34 +37,24 @@ Formats are provided via an "API-like" server. JSON can be fetched in your code,
 
 - **JSON**
 - **CSV**
-- **SQL/SQLite**
+- **Parquet**
+- **SQL**
+- **SQLite**
+- **PSQL**
 - **Compressed files**
-
-## Models
-
-Models are a general term used to categorize data objects when using this documentation.
-
-**Note:** This documentation leverages TypeScript concepts to define model properties and values.
-
-::: info Quick Tip
-
-**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Abstract Models** have many non-unique property names and values for specific **File Models** and are documented separately from **Data Models**.
-
-:::
 
 ### File Models
 
 A File Model is defined by two main properties. One being the `meta` property described as the [Meta](/data-models/meta/) Data Model and the `data` property which can vary on a file by file basis.
 
-For example, the commonly used `AllPrintings.json` file uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the access key.
+For example, the `AllPrintings.json` File Model uses the [Set](/data-models/set/) Data Model within the `data` property using a Set's [code](/data-models/set/#code) property as the key.
 
-::: info A Closer Look
-
-Here is a reduced payload of the model as an example:
+::: tip A closer look at AllPrintings
 
 ```TypeScript
 {
-  data: Record<string, Set>
+  meta: Meta;
+  data: Record<string, Set>;
 }
 ```
 
@@ -66,29 +62,41 @@ Here is a reduced payload of the model as an example:
 
 ### Data Models
 
-Data Models are data objects that are generally flat in nature, they are an object or array and they have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
+Data Models are a general term used to categorize data objects when using this documentation.
 
-For example, a [Set](/data-models/set/) Data Model is the model used in the `data` property for `AllPrintings.json`. With this, a object of data about card Sets are returned using the [Card (Set)](/data-models/card-set/) Data Model - which has its own unique property values based on the Set it was defined in.
+::: tip Quick Tip
 
-::: info An Even Closer Look
+**File Models** inherit **Data Models** and **Data Models** provide further definitions for a **File Model**. **Other data structures** we document have non-unique property keys and values for specific **File Models** and are documented differently from **Data Models**.
 
-Here is a reduced payload of the model as an example:
+:::
+
+Generally flat in nature, Data Models is JSON that have one or more key/value pairs. Some of those values become more complex data objects that are documented separately, but similarly, as other Data Models. They vary in their availability and are based heavily on the File Model.
+
+For example, the `AllIdentifiers.json` File Model uses the [Card (Set)](/data-models/card/card-set/) Data Model for the card data returned using that card's [uuid](/data-models/card/card-set/#uuid) property as the key.
+
+::: tip A closer look at AllIdentifiers
 
 ```TypeScript
 {
-  data: {
-    cards: Record<string, CardSet[]>
-  }
+  meta: Meta;
+  data: Record<string, CardSet>;
 }
 ```
 
 :::
 
-### Abstract Models
+Alternatively, the `AtomicCards.json` File Model uses the [Card (Atomic)](/data-models/card/card-atomic/) Data Model for the card data returned using that card's [name](/data-models/card/card-atomic/#name) property as the key.
 
-Abstract Models have abnormal data objects that are not clearly defined. They tend to have many nested properties with non-unique keys so documentation is formalized with example data.
+::: tip A closer look at AtomicCards
 
-For example, `AllPrices.json` uses the [All Prices](/abstract-models/all-prices/) Abstract Model in its `data` property.
+```TypeScript
+{
+  meta: Meta;
+  data: Record<string, CardAtomic>;
+}
+```
+
+:::
 
 ## GraphQL API
 
