@@ -1,5 +1,6 @@
 ---
 title: Deck (Set)
+enum: deck
 head:
   - - meta
     - property: og:title
@@ -32,9 +33,23 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 
 ## Model Properties
 
-> ### cards
+> ### code
 >
-> A list of cards in this deck. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
+> The printing set code for the deck.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
+> ### commander
+>
+> The card that is the Commander in this deck. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
+>
+> - **Type:** `CardSetDeck[]`
+> - **Introduced:** `v5.2.2`
+
+> ### mainBoard
+>
+> The cards in the main-board. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
 >
 > - **Type:** `CardSetDeck[]`
 > - **Introduced:** `v5.2.2`
@@ -46,9 +61,31 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
+> ### releaseDate
+>
+> The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the deck.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
 > ### sealedProductUuids
 >
 > A list of UUID's associated to this Deck in a [Sealed Product](/data-models/sealed-product/).
 >
-> - **Type:** `string[]`
+> - **Type:** `string[] | null`
+> - **Introduced:** `v5.2.2`
+
+> ### sideBoard
+>
+> The cards in the side-board. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
+>
+> - **Type:** `CardSetDeck[]`
+> - **Introduced:** `v5.2.2`
+
+> ### type
+>
+> The type of deck.
+>
+> - **Type:** `string`
+> - <ExampleField type='type'/>
 > - **Introduced:** `v5.2.2`
