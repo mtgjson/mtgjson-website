@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { title, description, pages } from '../docs/.vitepress/config';
+import { title, description, pages } from '../docs/.vitepress/config.js';
 import axios from 'axios';
 import { v4 as uuid } from 'uuid';
 
