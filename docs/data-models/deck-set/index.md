@@ -42,16 +42,16 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 
 > ### commander <DocBadge type="warning" text="optional" />
 >
-> The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
+> The card that is the Commander in this deck. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
 >
-> - **Type:** `CardDeck[]`
+> - **Type:** `CardSetDeck[]`
 > - **Introduced:** `v5.1.0`
 
 > ### mainBoard
 >
-> The cards in the main-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
+> The cards in the main-board. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
 >
-> - **Type:** `CardDeck[]`
+> - **Type:** `CardSetDeck[]`
 > - **Introduced:** `v4.3.0`
 
 > ### name
@@ -77,9 +77,9 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 
 > ### sideBoard
 >
-> The cards in the side-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
+> The cards in the side-board. See the [Card (Set Deck)](/data-models/card/card-set-deck/) Data Model.
 >
-> - **Type:** `CardDeck[]`
+> - **Type:** `CardSetDeck[]`
 > - **Introduced:** `v4.3.0`
 
 > ### type
