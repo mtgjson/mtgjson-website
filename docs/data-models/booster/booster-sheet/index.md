@@ -32,14 +32,14 @@ The Booster Sheet Data Model describes the properties of how a sheet of printed 
 
 ## Model Properties
 
-> ### allowDuplicates
+> ### allowDuplicates <DocBadge type="warning" text="optional" />
 >
 > If the sheet can be picked for cards in duplicates.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.2`
 
-> ### balanceColors
+> ### balanceColors <DocBadge type="warning" text="optional" />
 >
 > If the sheet needs to have it colors balanced.
 >
@@ -60,7 +60,7 @@ The Booster Sheet Data Model describes the properties of how a sheet of printed 
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.2`
 
-> ### fixed
+> ### fixed <DocBadge type="warning" text="optional" />
 >
 > If cards are garunteed to be in this sheet. Used for "Jump Start"-style products.
 >

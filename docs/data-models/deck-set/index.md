@@ -72,7 +72,7 @@ The Deck (Set) Data Model describes the properties of an individual Deck within 
 >
 > A list of UUID's associated to this Deck in a [Sealed Product](/data-models/sealed-product/).
 >
-> - **Type:** `string[]`
+> - **Type:** `string[] | null`
 > - **Introduced:** `v5.2.2`
 
 > ### sideBoard

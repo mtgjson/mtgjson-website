@@ -36,7 +36,7 @@ The Booster Config Data Model describes the properties of how a [Set](/data-mode
 >
 > The booster packs configurations. See the [Booster (Pack)](/data-models/booster/booster-pack/) Data Model.
 >
-> - **Type:** `BoosterPack[]`
+> - **Type:** `Record<string, BoosterPack[]>`
 > - **Introduced:** `v5.2.2`
 
 > ### boostersTotalWeight

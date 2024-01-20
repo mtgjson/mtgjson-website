@@ -89,11 +89,11 @@ The Sealed Product Data Model describes the properties for the purchaseable prod
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
 
-> ### subtype <DocBadge type="warning" text="optional" />
+> ### subtype
 >
 > The category subtype of this product.
 >
-> - **Type:** `string`
+> - **Type:** `string | null`
 > - **Introduced:** `v5.2.1`
 
 > ### uuid

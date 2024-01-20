@@ -58,7 +58,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 >
 > A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
 >
-> - **Type:** `string[]`
+> - **Type:** `number[]`
 > - **Introduced:** `v5.2.1`
 
 > ### availability
