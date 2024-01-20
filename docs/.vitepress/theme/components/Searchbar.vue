@@ -243,6 +243,7 @@ const handleA11yResultKeydown = (event: KeyboardEvent): void => {
     }
 
     .search-suggestion {
+
       &:hover,
       &:focus {
         outline: 0;

@@ -40,11 +40,11 @@ The Card (Set Deck) Data Model describes the properties of a single card found i
 > - **Type:** `number`
 > - **Introduced:** `v5.2.2`
 
-> ### finish
+> ### isFoil <DocBadge type="warning" text="optional" />
 >
-> The finish of the card.
+> If the card is foiled.
 >
-> - **Type:** `string`
+> - **Type:** `boolean`
 > - **Introduced:** `v5.2.2`
 
 > ### uuid

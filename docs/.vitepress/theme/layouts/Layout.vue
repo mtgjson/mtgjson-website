@@ -1,7 +1,5 @@
 <template lang="pug">
 Layout
-  template(#sidebar-nav-before)
-    Searchbar
   template(#not-found)
     NotFound
 </template>
@@ -9,7 +7,6 @@ Layout
 <script setup lang="ts">
 import { onMounted } from 'vue';
 import DefaultTheme from 'vitepress/theme';
-import Searchbar from '../components/Searchbar.vue';
 import NotFound from '../components/NotFound.vue';
 import { useStore } from '../store';
 

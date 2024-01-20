@@ -82,7 +82,7 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
 
-> ### decks
+> ### decks <DocBadge type="warning" text="optional" />
 >
 > All decks associated to the set. See the [Deck (Set)](/data-models/deck-set/) Data Model.
 >
