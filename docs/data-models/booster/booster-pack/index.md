@@ -36,7 +36,7 @@ The Booster Pack Data Model describes the properties of how a Booster Pack can b
 >
 > The contents of the booster pack, where the key is the card slot and value is the weight.
 >
-> - **Type:** `Record<string, number>`
+> - **Type:** `Partial<Record<string, number>>`
 > - **Introduced:** `v5.2.2`
 
 > ### weight

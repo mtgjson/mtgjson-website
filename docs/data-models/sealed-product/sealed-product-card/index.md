@@ -32,7 +32,7 @@ The Sealed Product (Card) Data Model describes the card product configuration in
 
 ## Model Properties
 
-> ### foil
+> ### foil <DocBadge type="warning" text="optional" />
 >
 > If the card is foiled.
 >

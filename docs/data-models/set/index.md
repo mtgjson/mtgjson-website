@@ -195,7 +195,7 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### sealedProduct
+> ### sealedProduct <DocBadge type="warning" text="optional" />
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >

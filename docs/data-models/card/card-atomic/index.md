@@ -56,7 +56,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 >
 > A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
 >
-> - **Type:** `string[]`
+> - **Type:** `number[]`
 > - **Introduced:** `v5.2.1`
 
 > ### colorIdentity
