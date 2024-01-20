@@ -44,16 +44,8 @@ The Deck Data Model describes the properties of an individual Deck.
 >
 > The card that is the Commander in this deck. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
-> - **Type:** `CardDeck`
+> - **Type:** `CardDeck[]`
 > - **Introduced:** `v5.1.0`
-
-> ### fileName
->
-> The file name for the deck. Combines the `name` and `code` properties to avoid namespace collisions and are given a `_` delimiter.
->
-> - **Type:** `string`
-> - **Example:** `"SpiritSquadron_VOC"`
-> - **Introduced:** `v4.3.0`
 
 > ### mainBoard
 >

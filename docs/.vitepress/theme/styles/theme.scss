@@ -252,6 +252,13 @@ html.dark {
   }
 }
 
+@media (min-width: 768px) {
+  .VPNavBarSearch {
+    flex-grow: 0;
+    padding-right: 1rem;
+  }
+}
+
 @media (min-width: 1280px) {
   .VPDoc {
     // Hide TOC for desktop in favor of aside

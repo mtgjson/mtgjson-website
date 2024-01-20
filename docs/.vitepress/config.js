@@ -66,7 +66,9 @@ export default {
   },
   // VitePress themeing
   themeConfig: {
-    pages,
+    search: {
+      provider: 'local',
+    },
     outline: [2, 3],
     smoothScroll: true,
     outlineBadges: false,
