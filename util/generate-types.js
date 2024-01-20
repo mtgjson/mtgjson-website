@@ -1,5 +1,5 @@
 import fs from 'fs';
-import { pages } from '../docs/.vitepress/config';
+import { pages } from '../docs/.vitepress/config.js';
 
 const preDeterminedTypes = fs.readFileSync('docs/types.ts', { encoding: 'utf8' });
 

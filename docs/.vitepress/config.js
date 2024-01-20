@@ -1,5 +1,5 @@
-import generateSidebar from './generateSidebar';
-import generatePages from './generatePages';
+import generateSidebar from './generateSidebar.js';
+import generatePages from './generatePages.js';
 
 // Sidebar link generation
 const [dataModels] = generateSidebar(['/data-models/']);

@@ -3,8 +3,8 @@ module.exports = {
   parserOptions: {
     ecmaVersion: 2020,
     parser: {
-      ts: "@typescript-eslint/parser",
-    }
+      ts: '@typescript-eslint/parser',
+    },
   },
   env: {
     node: true,
@@ -14,7 +14,7 @@ module.exports = {
     es6: true,
   },
   extends: ['plugin:vue/vue3-recommended'],
-  ignorePatterns: ['dist/', 'node_modules/', '*.json', '.temp/'],
+  ignorePatterns: ['dist/', 'node_modules/', '*.json', '.temp/', 'cache/'],
   rules: {
     // Rules to ignore
     'vue/no-setup-props-destructure': 'off',
