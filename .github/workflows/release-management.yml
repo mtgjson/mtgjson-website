@@ -2,7 +2,7 @@ name: Release Management
 
 on:
   push:
-    branches: [ main ]
+    branches: [main]
 
 jobs:
   release:
@@ -10,51 +10,50 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - name: ⬇️ Checkout
-      uses: actions/checkout@master
+      - name: ⬇️ Checkout
+        uses: actions/checkout@master
 
-    # Sets up the Node environment to build the application on
-    - name: 📄 Setup Node.js
-      uses: actions/setup-node@v1
-      with:
-        node-version: '16.x'
+      # Sets up the Node environment to build the application on
+      - name: 🏗 Setup Node
+        uses: actions/setup-node@v3
+        with:
+          node-version: 16.x
 
-    # Installs local dependencies needed to build, test, etc.
-    - name: 🏗 Install Dependencies
-      run: |
-        npm install
+      # Installs local dependencies needed to build, test, etc.
+      - name: 🏗 Install Dependencies
+        run: |
+          npm install
 
-    # Runs all tests and builds the application
-    - name: 🧱 Run Tests and Build Application
-      run: |
-        npm run test:full
-      env:
-        CI: true
+      # Runs all tests and builds the application
+      - name: 🧱 Run Tests and Build Application
+        run: |
+          npm run test:full
+        env:
+          CI: true
 
-    # Upload CodeCov report to the remote server
-    - name: ⬆️ Upload Code Coverage
-      uses: codecov/codecov-action@v1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
+      # Upload CodeCov report to the remote server
+      - name: ⬆️ Upload Code Coverage
+        uses: codecov/codecov-action@v3
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
 
-    # Generate a dynamic release tag based on a nightly build format
-    - name: 🏷 Generate Release Tag
-      id: tag
-      run: |
-        echo "::set-output name=release_tag::Release_$(date +"%Y.%m.%d_%H-%M")"
+      # Generate a dynamic release tag based on a nightly build format
+      - name: 🏷 Generate Release Tag
+        id: tag
+        run: echo "release_tag=Release_$(date +"%Y.%m.%d_%H-%M")" >> $GITHUB_OUTPUT
 
-    # Zip up the build files
-    - name: 💾 Archive Release
-      uses: thedoctor0/zip-release@master
-      with:
-        type: zip
-        filename: release.zip
-        directory: ./docs/.vitepress
-        path: dist
+      # Zip up the build files
+      - name: 💾 Archive Release
+        uses: thedoctor0/zip-release@master
+        with:
+          type: zip
+          filename: release.zip
+          directory: ./docs/.vitepress
+          path: dist
 
-    # Deliver the build files to a new tag
-    - name: 🚙 Deliver Release
-      uses: softprops/action-gh-release@v1
-      with:
-        tag_name: ${{ steps.tag.outputs.release_tag }}
-        files: ./docs/.vitepress/release.zip
+      # Deliver the build files to a new tag
+      - name: 🚙 Deliver Release
+        uses: softprops/action-gh-release@v1
+        with:
+          tag_name: ${{ steps.tag.outputs.release_tag }}
+          files: ./docs/.vitepress/release.zip
