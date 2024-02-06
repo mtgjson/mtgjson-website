@@ -39,7 +39,7 @@ The Card Types Data Model describes the properties of a Card Data Model that has
 > - **Type:** `CardType`
 > - **Introduced:** `v4.0.0`
 
-> ### conpsiracy
+> ### conspiracy
 >
 > The artifact type of a card.
 >
