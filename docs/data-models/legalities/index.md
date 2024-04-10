@@ -173,9 +173,23 @@ The Legalities Data Model describes the properties of legalities of a card in va
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### standardbrawl <DocBadge type="warning" text="optional" />
+>
+> Legality of the card in the [Standard Brawl](https://magic.wizards.com/en/formats/brawl) play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
+> ### timeless <DocBadge type="warning" text="optional" />
+>
+> Legality of the card in the [Timeless](https://magic.wizards.com/en/formats/standard) play format.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
 > ### vintage <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Vintage](https://magic.wizards.com/en/formats/vintage) play format.
+> Legality of the card in the [Vintage](https://magic.wizards.com/en/formats/timeless) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
