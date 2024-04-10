@@ -182,14 +182,14 @@ The Legalities Data Model describes the properties of legalities of a card in va
 
 > ### timeless <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Timeless](https://magic.wizards.com/en/formats/standard) play format.
+> Legality of the card in the [Timeless](https://magic.wizards.com/en/formats/timeless) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
 > ### vintage <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Vintage](https://magic.wizards.com/en/formats/timeless) play format.
+> Legality of the card in the [Vintage](https://magic.wizards.com/en/formats/cintage) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
