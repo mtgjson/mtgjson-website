@@ -189,7 +189,7 @@ The Legalities Data Model describes the properties of legalities of a card in va
 
 > ### vintage <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Vintage](https://magic.wizards.com/en/formats/cintage) play format.
+> Legality of the card in the [Vintage](https://magic.wizards.com/en/formats/vintage) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
