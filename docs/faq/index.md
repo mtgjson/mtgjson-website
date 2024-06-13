@@ -43,7 +43,7 @@ Here are some common questions about MTGJSON data and services.
 
 > ### How often is the data updated?
 >
-> Builds kick off at **2:00PM ET** taking between 4-5 hours to complete and go live at **7:00PM ET**.
+> Builds kick off at **1:00AM EST** and go live at **9:00AM EST**.
 >
 > **Note:** These time may be adjusted to compensate upstream issues and may not be accurately reflected here.
 
@@ -78,7 +78,7 @@ Here are some common questions about MTGJSON data and services.
 > // Assuming you have the scryfallId property available in your code...
 > const fileFace: string = 'front';
 > const fileType: string = 'large';
-> const fileFormat: string = '.jpg';
+> const fileFormat: string = 'jpg';
 > const fileName: string = scryfallId;
 > const dir1: string = fileName.charAt(0);
 > const dir2: string = fileName.charAt(1);
