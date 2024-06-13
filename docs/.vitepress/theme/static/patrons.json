@@ -62,6 +62,14 @@
     "name": "Stephen Kirwan"
   },
   {
+    "company": "ManaPool.com",
+    "image": "avatar-manapool.png",
+    "link": "https://manapool.com",
+    "tier": "mythic",
+    "since": "2024-03",
+    "name": ""
+  },
+  {
     "company": "My MTG Collection",
     "image": "avatar-my-mtg-collection-logo.png",
     "link": "https://www.reddit.com/r/Mymtgapp",
