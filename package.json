@@ -28,7 +28,7 @@
     "generate:types": "node ./node_modules/.bin/babel-node ./util/generate-types.js"
   },
   "dependencies": {
-    "axios": "^1.6.5",
+    "axios": "^1.7.7",
     "pinia": "^2.1.7"
   },
   "devDependencies": {
