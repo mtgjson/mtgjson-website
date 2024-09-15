@@ -59,11 +59,11 @@ const tcgplayerSkus: TcgplayerSkus = data["00010d56-fe38-5e35-8aed-518019aa36a5"
 > - <ExampleField type='condition'/>
 > - **Introduced:** `v5.1.0`
 
-> ### finishes
+> ### finish
 >
-> The finishes of the card.
+> The finish of the card.
 >
-> - **Type:** `string[]`
+> - **Type:** `string`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
 

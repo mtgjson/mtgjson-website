@@ -47,19 +47,19 @@ The Foreign Data Data Model describes the properties for a card in alternate lan
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### identifiers
+>
+> The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
+>
+> - **Type:** `Identifiers`
+> - **Introduced:** `v5.2.2`
+
 > ### language
 >
 > The foreign language of card.
 >
 > - **Type:** `string`
 > - <ExampleField type='language'/>
-> - **Introduced:** `v4.0.0`
-
-> ### multiverseId <DocBadge type="warning" text="optional" />
->
-> The foreign multiverse identifier of the card.
->
-> - **Type:** `number`
 > - **Introduced:** `v4.0.0`
 
 > ### name

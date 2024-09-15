@@ -47,6 +47,13 @@ The Set List Data Model describes the meta data properties of an individual [Set
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### cardsphereSetId <DocBadge type="warning" text="optional" />
+>
+> The [Cardsphere](https://www.cardsphere.com/) set identifier.
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.1`
+
 > ### code
 >
 > The printing set code for the set.
@@ -60,6 +67,13 @@ The Set List Data Model describes the meta data properties of an individual [Set
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.2.1`
+
+> ### decks <DocBadge type="warning" text="optional" />
+>
+> All decks associated to the set. See the [Deck (Set)](/data-models/deck-set/) Data Model.
+>
+> - **Type:** `DeckSet[]`
+> - **Introduced:** `v5.2.2`
 
 > ### isForeignOnly <DocBadge type="warning" text="optional" />
 >
@@ -110,6 +124,14 @@ The Set List Data Model describes the meta data properties of an individual [Set
 > - **Type:** `string`
 > - **Introduced:** `v4.3.2`
 
+> ### languages <DocBadge type="warning" text="optional" />
+>
+> The languages the set was printed in.
+>
+> - **Type:** `string[]`
+> - <ExampleField type='languages'/>
+> - **Introduced:** `v5.2.1`
+
 > ### mcmId <DocBadge type="warning" text="optional" />
 >
 > The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) set identifier.
@@ -159,7 +181,7 @@ The Set List Data Model describes the meta data properties of an individual [Set
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### sealedProduct
+> ### sealedProduct <DocBadge type="warning" text="optional" />
 >
 > The sealed product information for the set. See the [Sealed Product](/data-models/sealed-product/) Data Model.
 >
@@ -179,6 +201,13 @@ The Set List Data Model describes the meta data properties of an individual [Set
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.1.0`
+
+> ### tokenSetCode <DocBadge type="warning" text="optional" />
+>
+> The tokens set code, formatted in uppercase.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.1`
 
 > ### translations
 >

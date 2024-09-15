@@ -186,7 +186,7 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 
 > ### finishes
 >
-> The finishes of the card.
+> The finishes of the card. These finishes are not mutually exclusive.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>

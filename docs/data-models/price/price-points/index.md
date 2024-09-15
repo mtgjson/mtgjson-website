@@ -32,6 +32,13 @@ The Price Points Data Model describes the properties of a card's price provider 
 
 ## Model Properties
 
+> ### etched <DocBadge type="warning" text="optional" />
+>
+> The card's etched product price, where the key is the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date and value is its price.
+>
+> - **Type:** `Record<string, number>`
+> - **Introduced:** `v5.2.2`
+
 > ### foil <DocBadge type="warning" text="optional" />
 >
 > The card's foil product price, where the key is the [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) date and value is its price.

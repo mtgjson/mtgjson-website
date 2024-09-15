@@ -67,6 +67,20 @@ The Identifiers Data Model describes the properties of identifiers associated to
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
+> ### cardtraderId <DocBadge type="warning" text="optional" />
+>
+> The [Card Trader](https://www.cardtrader.com/en) card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
+> ### csiId <DocBadge type="warning" text="optional" />
+>
+> The [CoolStuffInc](https://www.coolstuffinc.com/) card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
 > ### mcmId <DocBadge type="warning" text="optional" />
 >
 > The [Cardmarket](https://www.cardmarket.com/en/Magic?utm_campaign=card_prices&utm_medium=text&utm_source=mtgjson) card identifier.
@@ -80,6 +94,13 @@ The Identifiers Data Model describes the properties of identifiers associated to
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
+
+> ### miniaturemarketId <DocBadge type="warning" text="optional" />
+>
+> The [Miniature Market](https://www.miniaturemarket.com/) card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
 
 > ### mtgArenaId <DocBadge type="warning" text="optional" />
 >
@@ -129,6 +150,13 @@ The Identifiers Data Model describes the properties of identifiers associated to
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
+
+> ### scgId <DocBadge type="warning" text="optional" />
+>
+> The [StarCityGames](https://starcitygames.com/) card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
 
 > ### scryfallId <DocBadge type="warning" text="optional" />
 >

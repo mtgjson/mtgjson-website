@@ -68,6 +68,13 @@ The Deck Data Model describes the properties of an individual Deck.
 > - **Type:** `string | null`
 > - **Introduced:** `v4.3.0`
 
+> ### sealedProductUuids
+>
+> A cross-reference identifier to determine which sealed products contain this deck.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
 > ### sideBoard
 >
 > The cards in the side-board. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.

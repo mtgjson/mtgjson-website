@@ -193,7 +193,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 
 > ### finishes
 >
-> The finishes of the card.
+> The finishes of the card. These finishes are not mutually exclusive.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
@@ -535,7 +535,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### relatedCards
+> ### relatedCards <DocBadge type="warning" text="optional" />
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >

@@ -46,6 +46,13 @@ The Booster Config Data Model describes the properties of how a [Set](/data-mode
 > - **Type:** `number`
 > - **Introduced:** `v5.2.2`
 
+> ### name <DocBadge type="warning" text="optional" />
+> 
+> The name of the product, if applicable.
+> 
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
+
 > ### sheets
 >
 > The sheets of cards in a printing where the key is the name of the sheet and value is the configuration. See the [Booster (Sheet)](/data-models/booster/booster-sheet/) Data Model.

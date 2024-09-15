@@ -39,6 +39,13 @@ The Card Types Data Model describes the properties of a Card Data Model that has
 > - **Type:** `CardType`
 > - **Introduced:** `v4.0.0`
 
+> ### battle
+>
+> The battle type of a card.
+>
+> - **Type:** `CardType`
+> - **Introduced:** `v5.2.2`
+
 > ### conspiracy
 >
 > The artifact type of a card.

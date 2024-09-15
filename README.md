@@ -26,7 +26,7 @@ Install Node with [brew](https://brew.sh):
 
 ```
 brew install n
-sudo n 16.16
+sudo n 18
 ```
 
 ### **Developing**

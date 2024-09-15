@@ -109,6 +109,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - <ExampleField type='colors'/>
 > - **Introduced:** `v4.0.0`
 
+> ### edhrecSaltiness <DocBadge type="warning" text="optional" />
+>
+> The card saltiness score on [EDHRec](https://www.edhrec.com).
+>
+> - **Type:** `number`
+> - **Introduced:** `v5.2.1`
+
 > ### faceName <DocBadge type="warning" text="optional" />
 >
 > The name on the face of the card.
@@ -125,11 +132,18 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### finishes
 >
-> The finishes of the card.
+> The finishes of the card. These finishes are not mutually exclusive.
 >
 > - **Type:** `string[]`
 > - <ExampleField type='finishes'/>
 > - **Introduced:** `v5.2.0`
+
+> ### flavorName <DocBadge type="warning" text="optional" />
+>
+> The promotional card name printed above the true card name on special cards that has no game function. See [this card](https://scryfall.com/card/plg20/2/hangarback-walker) for an example.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
 
 > ### flavorText <DocBadge type="warning" text="optional" />
 >
@@ -200,6 +214,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
 
+> ### isOversized <DocBadge type="warning" text="optional" />
+>
+> If the card is oversized.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v5.2.2`
+
 > ### isPromo <DocBadge type="warning" text="optional" />
 >
 > If the card is a promotional printing.
@@ -250,6 +271,14 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
+
+> ### manaCost <DocBadge type="warning" text="optional" />
+>
+> The mana cost of the card wrapped in curly brackets for each mana symbol value.
+>
+> - **Type:** `string`
+> - **Example:** `"{1}{B}"`
+> - **Introduced:** `v5.2.2`
 
 > ### name
 >
