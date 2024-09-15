@@ -49,7 +49,7 @@
     "markdown-it-anchor": "^8.6.4",
     "markdownlint-cli": "^0.38.0",
     "npm-run-all": "^4.1.5",
-    "pug": "^3.0.2",
+    "pug": "^3.0.3",
     "sass": "^1.70.0",
     "semver": "^7.3.5",
     "ts-jest": "^29.1.1",
