@@ -34,7 +34,7 @@ The Leadership Skills Data Model describes the properties of formats that a card
 
 > ### brawl
 >
-> If the card can be your commander in the [Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) format.
+> If the card can be your commander in the [Standard Brawl](https://magic.wizards.com/en/game-info/gameplay/formats/brawl) format.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.5.1`
