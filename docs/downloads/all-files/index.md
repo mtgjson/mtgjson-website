@@ -57,7 +57,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllPrices
 >
-> File containing all prices of cards in various formats organized by a card's `uuid` property. See the [Price Formats](/data-models/price/price-formats/) Data Model for the model of returned data.
+> File containing all prices of cards in various formats organized by a card's `uuid` property for the past 90 days. See the [Price Formats](/data-models/price/price-formats/) Data Model for the model of returned data.
 >
 > <DownloadNativeSelect fileName='AllPrices'/>
 

@@ -17,9 +17,9 @@ head:
 
 # Identifiers
 
-The Identifiers Data Model describes the properties of identifiers associated to a card.
+The Identifiers Data Model describes the properties of identifiers associated to a card or product.
 
-- **Parent model:** [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), [Card (Token)](/data-models/card/card-token/)
+- **Parent model:** [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), [Card (Token)](/data-models/card/card-token/), [Sealed Product](/data-models/sealed-product/)
 - **Parent property:** `identifiers`
 
 ## TypeScript Model
@@ -31,6 +31,13 @@ The Identifiers Data Model describes the properties of identifiers associated to
 :::
 
 ## Model Properties
+
+> ### abuId <DocBadge type="warning" text="optional" />
+>
+> The [ABUGames](https://abugames.com/) identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
 
 > ### cardKingdomEtchedId <DocBadge type="warning" text="optional" />
 >
@@ -76,7 +83,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 
 > ### csiId <DocBadge type="warning" text="optional" />
 >
-> The [CoolStuffInc](https://www.coolstuffinc.com/) card identifier.
+> The [CoolStuffInc](https://www.coolstuffinc.com/) identifier.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
@@ -97,7 +104,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 
 > ### miniaturemarketId <DocBadge type="warning" text="optional" />
 >
-> The [Miniature Market](https://www.miniaturemarket.com/) card identifier.
+> The [Miniature Market](https://www.miniaturemarket.com/) identifier.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
@@ -153,7 +160,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 
 > ### scgId <DocBadge type="warning" text="optional" />
 >
-> The [StarCityGames](https://starcitygames.com/) card identifier.
+> The [StarCityGames](https://starcitygames.com/) identifier.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
@@ -199,3 +206,10 @@ The Identifiers Data Model describes the properties of identifiers associated to
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
+
+> ### tntId <DocBadge type="warning" text="optional" />
+>
+> The [Troll and Toad](https://www.trollandtoad.com/) identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.2.2`
