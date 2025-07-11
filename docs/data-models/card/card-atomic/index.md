@@ -178,6 +178,13 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.1`
 
+> ### isGameChanger <DocBadge type="warning" text="optional" />
+>
+> If the card is a part of the [game changers](https://mtg.wiki/page/Game_Changers) commander list.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v5.2.2`
+
 > ### isReserved <DocBadge type="warning" text="optional" />
 >
 > If the card is on the Magic: The Gathering [Reserved List](https://magic.wizards.com/en/articles/archive/official-reprint-policy-2010-03-10).

@@ -310,6 +310,13 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.0`
 
+> ### isGameChanger <DocBadge type="warning" text="optional" />
+>
+> If the card is a part of the [game changers](https://mtg.wiki/page/Game_Changers) commander list.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v5.2.2`
+
 > ### isOnlineOnly <DocBadge type="warning" text="optional" />
 >
 > If the card is only available in online game play variations.
