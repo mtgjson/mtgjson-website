@@ -125,7 +125,7 @@ main.home
             img.lazy(
               :data-src="contributor.avatar",
               :alt="`${contributor.username}'s avatar`",
-              :title="`${contributor.username}'s avatar'`",
+              :title="`${contributor.username}'s avatar`",
               width="100",
               height="100"
             )
