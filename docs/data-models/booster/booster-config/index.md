@@ -59,3 +59,10 @@ The Booster Config Data Model describes the properties of how a [Set](/data-mode
 >
 > - **Type:** `Record<string, BoosterSheet>`
 > - **Introduced:** `v5.2.2`
+
+> ### sourceSetCodes
+>
+> The set codes with which cards in this booster are selected from.
+>
+> - **Type:** `string[]`
+> - **Introduced:** `v5.2.2`
