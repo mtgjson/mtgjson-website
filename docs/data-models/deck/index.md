@@ -82,6 +82,13 @@ The Deck Data Model describes the properties of an individual Deck.
 > - **Type:** `CardDeck[]`
 > - **Introduced:** `v4.3.0`
 
+> ### tokens
+>
+> The tokens included with the product. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
+>
+> - **Type:** `CardDeck[]`
+> - **Introduced:** `v5.2.2`
+
 > ### type
 >
 > The type of deck.
