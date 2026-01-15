@@ -119,7 +119,7 @@ The Legalities Data Model describes the properties of legalities of a card in va
 
 > ### oldschool <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Old School](https://mtg.fandom.com/wiki/Old_School) play format.
+> Legality of the card in the [Old School](https://mtg.wiki/page/Old_School) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
@@ -133,14 +133,14 @@ The Legalities Data Model describes the properties of legalities of a card in va
 
 > ### paupercommander <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Pauper Commander](https://mtg.fandom.com/wiki/Pauper_Commander) play format.
+> Legality of the card in the [Pauper Commander](https://mtg.wiki/page/Pauper_Commander) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
 > ### penny <DocBadge type="warning" text="optional" />
 >
-> Legality of the card in the [Penny Dreadful](https://mtg.fandom.com/wiki/Penny_Dreadful) play format.
+> Legality of the card in the [Penny Dreadful](https://mtg.wiki/page/Penny_Dreadful) play format.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

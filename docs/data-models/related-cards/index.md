@@ -41,7 +41,7 @@ The Related Cards Data Model describes the properties of a card that has relatio
 
 > ### spellbook <DocBadge type="warning" text="optional" />
 >
-> A list of card names associated to a card's [Spellbook](https://mtg.fandom.com/wiki/Spellbook) mechanic.
+> A list of card names associated to a card's [Spellbook](https://mtg.wiki/page/Spellbook) mechanic.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.1`

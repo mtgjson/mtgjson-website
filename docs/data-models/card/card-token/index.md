@@ -297,7 +297,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### orientation <DocBadge type="warning" text="optional" />
 >
-> The layout direction of the card. Used on [Art cards](https://mtg.fandom.com/wiki/Art_card).
+> The layout direction of the card. Used on [Art cards](https://mtg.wiki/page/Art_card).
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
