@@ -22,6 +22,156 @@ The following is the MTGJSON v5 Changelog. Some parts may be updated for clarity
 
 If you have suggestions for improvements, bug reports, or would just like to help address existing issues, we are always looking for help. You can contribute to the project through the <a href="https://github.com/mtgjson/mtgjson" target="_blank">MTGJSON Repository</a> or the <a href="https://github.com/mtgjson/mtgjson-website" target="_blank">Documentation Repository</a>. If you would like to help in other ways please consider donating to the project via <a href="https://www.paypal.me/Zachhalpern" class="link-inline-image paypal" target="_blank" rel="noreferrer noopener">PayPal</a> (one-time donation) or via <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> (recurring donations).
 
+## 5.3.0
+
+Release Date: 2026-02-08
+
+### Announcements
+
+**Welcome to v5.3.0!** This is a major release featuring a complete rewrite of the MTGJSON data pipeline. The new architecture uses [Polars](https://pola.rs/) for high-performance data processing, resulting in faster builds, improved memory efficiency, and better data consistency. We've also modernized the development tooling with [UV](https://github.com/astral-sh/uv) for package management and [Ruff](https://github.com/astral-sh/ruff) for linting/formatting.
+
+This release includes many new card properties, expanded pricing support with Manapool.com and etched pricing across all providers, improved sealed product data, and numerous bug fixes. Python support has been updated to 3.12-3.14, dropping 3.9-3.10.
+
+### Card Model
+
+#### Added
+
+- Added `tokens` property to [Card (Deck)](/data-models/card/card-deck/#tokens), [Card (Set)](/data-models/card/card-set/#tokens), and [Card (Token)](/data-models/card/card-token/#tokens) which links to the UUIDs of tokens the card creates within the set
+- Added `producedMana` property to [Card (Atomic)](/data-models/card/card-atomic/#producedmana), [Card (Deck)](/data-models/card/card-deck/#producedmana), and [Card (Set)](/data-models/card/card-set/#producedmana) indicating what colors of mana a card can produce
+- Added `printedName` optional property to [Card (Deck)](/data-models/card/card-deck/#printedname) and [Card (Set)](/data-models/card/card-set/#printedname) for the actual printed name on a card face
+- Added `printedType` optional property to [Card (Deck)](/data-models/card/card-deck/#printedtype) and [Card (Set)](/data-models/card/card-set/#printedtype) for the actual printed type line
+- Added `printedText` optional property to [Card (Deck)](/data-models/card/card-deck/#printedtext) and [Card (Set)](/data-models/card/card-set/#printedtext) for the actual printed rules text
+- Added `isGameChanger` optional property to [Card (Deck)](/data-models/card/card-deck/#isgamechanger) and [Card (Set)](/data-models/card/card-set/#isgamechanger) for Game Changer cards
+- Added `tokenProducts` optional property to [Card (Token)](/data-models/card/card-token/#tokenproducts) linking tokens to sealed products that include them
+
+#### Fixed
+
+- Fixed `otherFaceIds` for meld cards having missing or incorrect values
+- Fixed `attractionLights` not appearing in AtomicCards
+- Fixed `isForeignOnly` property not being set correctly on foreign-only cards
+- Fixed `flavorName` and `faceFlavorNames` missing on some cards
+- Fixed multipart card side ordering in AtomicCards
+- Fixed AtomicCards deduplication selecting wrong printings
+- Fixed TDM reversible adventure dragon names
+
+#### Changed
+
+- Changed card sorting to use collector number instead of UUID for consistency
+- Changed `relatedCards` property to be optional
+- Changed `purchaseUrls` property to be optional
+- Removed `convertedManaCost` and `manaValue` from Dungeon cards (they have no mana cost)
+
+### Identifiers Model
+
+#### Added
+
+- Added `cardBackId` optional property to [Identifiers](/data-models/identifiers/#cardbackid) for Scryfall card back identifier
+- Added `deckboxId` optional property to [Identifiers](/data-models/identifiers/#deckboxid) for Deckbox identifier
+- Added `cardsphereFoilId` optional property to [Identifiers](/data-models/identifiers/#cardspherefoilid) for CardSphere foil variant identifier
+
+### Foreign Data Model
+
+#### Added
+
+- Added `uuid` property to [Foreign Data](/data-models/foreign-data/#uuid) for unique identification
+- Added `identifiers` property to [Foreign Data](/data-models/foreign-data/#identifiers) containing full identifier data
+
+#### Fixed
+
+- Fixed UUID mismatch in SQLite output for cardForeignData
+
+#### Deprecated
+
+- Deprecated `multiverseId` property in favor of `identifiers.multiverseId`. Will be removed in `v6.0.0`
+
+### Deck Model
+
+#### Added
+
+- Added `tokens` property to [Deck](/data-models/deck/#tokens) containing token cards used by the deck
+- Added `sourceSetCodes` property to [Deck](/data-models/deck/#sourcesetcodes) listing sets the deck's cards come from
+- Added support for etched cards in GitHub-sourced decks
+
+#### Changed
+
+- Changed deck file names to use TitleCase formatting
+
+### Set Model
+
+#### Fixed
+
+- Fixed `languages` property not populating correctly
+- Fixed `totalSetSize` to be based on true set size rather than face counts
+
+#### Changed
+
+- Changed `token.setCode` to point to the actual set code rather than a token-specific code
+
+### Set List Model
+
+#### Added
+
+- Re-added `sealedProduct` property to [Set List](/data-models/set-list/#sealedproduct)
+- Re-added `languages` property to [Set List](/data-models/set-list/#languages)
+- Re-added `decks` property to [Set List](/data-models/set-list/#decks)
+
+### Legalities Model
+
+#### Added
+
+- Added support for vehicles and spacecraft cards as valid commanders
+- Added support for Battle card type in legality calculations
+
+### Sealed Product Model
+
+#### Added
+
+- Added `finishes` property to Sealed Product Card entries indicating foil availability
+- Added sealed product IDs to TCGPlayer SKUs file
+
+#### Changed
+
+- Added `PLAY` and `DRAFT` to sealed product subtypes
+- Removed unused `VIP` and `DELUXE` subtypes
+
+### Prices
+
+#### Added
+
+- Added [Manapool.com](https://manapool.com/) as a paper pricing provider in AllPrices and AllPricesToday
+- Added etched pricing support for CardKingdom, CardMarket, TCGPlayer, and CardHoarder
+
+#### Changed
+
+- Migrated CardKingdom IDs from MTGBan to the official CardKingdom API
+- Migrated to new CardMarket API
+- Changed CardMarket pricing from 1-Day Average to Trend pricing
+
+### TCGPlayer SKUs Model
+
+#### Changed
+
+- Changed SKU type fields from string to integer for consistency
+
+### Files
+
+#### Changed
+
+- Implemented streaming compression for improved build performance
+- Enhanced MySQL type mapping with compatibility overrides
+- Fixed duplicate rows in SQL normalized tables
+- Fixed SQLite arrays being written as array structs
+
+### Misc
+
+- Complete rewrite of data pipeline using Polars for improved performance
+- MTGJSON now uses [UV](https://github.com/astral-sh/uv) for package management
+- MTGJSON now uses [Ruff](https://github.com/astral-sh/ruff) for linting and formatting
+- MTGJSON dropped support for Python 3.9 and 3.10
+- MTGJSON added support for Python 3.12, 3.13, and 3.14
+- Changed wiki links to use MTG.Wiki instead of Fandom
+- Daily builds now run instead of weekly
+
 ## 5.2.2
 
 Release Date: 2023-09-10
