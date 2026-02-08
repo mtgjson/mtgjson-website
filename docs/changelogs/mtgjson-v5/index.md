@@ -30,7 +30,7 @@ Release Date: 2026-02-08
 
 **Welcome to v5.3.0!** This is a major release featuring a complete rewrite of the MTGJSON data pipeline. The new architecture uses [Polars](https://pola.rs/) for high-performance data processing, resulting in faster builds, improved memory efficiency, and better data consistency. We've also modernized the development tooling with [UV](https://github.com/astral-sh/uv) for package management and [Ruff](https://github.com/astral-sh/ruff) for linting/formatting.
 
-This release includes many new card properties, expanded pricing support with Manapool.com and etched pricing across all providers, improved sealed product data, and numerous bug fixes. Python support has been updated to 3.12-3.14, dropping 3.9-3.10.
+This release includes many new card properties, expanded pricing support with Manapool.com, improved sealed product data, and numerous bug fixes. Python support has been updated to 3.12-3.14, dropping 3.9-3.10, and we moved to UV for dependency management.
 
 ### Card Model
 
@@ -42,32 +42,22 @@ This release includes many new card properties, expanded pricing support with Ma
 - Added `printedType` optional property to [Card (Deck)](/data-models/card/card-deck/#printedtype) and [Card (Set)](/data-models/card/card-set/#printedtype) for the actual printed type line
 - Added `printedText` optional property to [Card (Deck)](/data-models/card/card-deck/#printedtext) and [Card (Set)](/data-models/card/card-set/#printedtext) for the actual printed rules text
 - Added `isGameChanger` optional property to [Card (Deck)](/data-models/card/card-deck/#isgamechanger) and [Card (Set)](/data-models/card/card-set/#isgamechanger) for Game Changer cards
-- Added `tokenProducts` optional property to [Card (Token)](/data-models/card/card-token/#tokenproducts) linking tokens to sealed products that include them
+- Added `tokenProducts` optional property to [Card (Token)](/data-models/card/card-token/#tokenproducts) linking together token faces for double-sided tokens
 
-#### Fixed
+#### Removed
 
-- Fixed `otherFaceIds` for meld cards having missing or incorrect values
-- Fixed `attractionLights` not appearing in AtomicCards
-- Fixed `isForeignOnly` property not being set correctly on foreign-only cards
-- Fixed `flavorName` and `faceFlavorNames` missing on some cards
-- Fixed multipart card side ordering in AtomicCards
-- Fixed AtomicCards deduplication selecting wrong printings
-- Fixed TDM reversible adventure dragon names
-
-#### Changed
-
-- Changed card sorting to use collector number instead of UUID for consistency
-- Changed `relatedCards` property to be optional
-- Changed `purchaseUrls` property to be optional
-- Removed `convertedManaCost` and `manaValue` from Dungeon cards (they have no mana cost)
+- Removed `firstPrinting` property from [Card (Atomic)](/data-models/card/card-atomic/)
+- Removed `isStarter` property from [Card (Deck)](/data-models/card/card-deck/) and [Card (Set)](/data-models/card/card-set/)
 
 ### Identifiers Model
 
 #### Added
 
 - Added `cardBackId` optional property to [Identifiers](/data-models/identifiers/#cardbackid) for Scryfall card back identifier
-- Added `deckboxId` optional property to [Identifiers](/data-models/identifiers/#deckboxid) for Deckbox identifier
-- Added `cardsphereFoilId` optional property to [Identifiers](/data-models/identifiers/#cardspherefoilid) for CardSphere foil variant identifier
+
+#### Changed
+
+- Revised providers for `deckboxId` and `cardsphereFoilId` properties following the removal of MultiverseBridge, now using upstream CardKingdom data
 
 ### Foreign Data Model
 
@@ -126,7 +116,6 @@ This release includes many new card properties, expanded pricing support with Ma
 
 #### Added
 
-- Added `finishes` property to Sealed Product Card entries indicating foil availability
 - Added sealed product IDs to TCGPlayer SKUs file
 
 #### Changed
@@ -170,7 +159,6 @@ This release includes many new card properties, expanded pricing support with Ma
 - MTGJSON dropped support for Python 3.9 and 3.10
 - MTGJSON added support for Python 3.12, 3.13, and 3.14
 - Changed wiki links to use MTG.Wiki instead of Fandom
-- Daily builds now run instead of weekly
 
 ## 5.2.2
 
