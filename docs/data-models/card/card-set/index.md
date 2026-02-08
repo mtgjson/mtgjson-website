@@ -127,7 +127,7 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 
 > ### defense <DocBadge type="warning" text="optional" />
 >
-> The defense of the card. Used on [battle](https://mtg.fandom.com/wiki/Battle) cards.
+> The defense of the card. Used on [battle](https://mtg.wiki/page/Battle) cards.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
@@ -356,7 +356,7 @@ The Card (Set) Data Model describes the properties of a single card found in a [
 
 > ### isStorySpotlight <DocBadge type="warning" text="optional" />
 >
-> If the card is a [Story Spotlight](https://mtg.fandom.com/wiki/Story_Spotlight) card.
+> If the card is a [Story Spotlight](https://mtg.wiki/page/Story_Spotlight) card.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.4.2`

@@ -94,7 +94,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 
 > ### defense <DocBadge type="warning" text="optional" />
 >
-> The defense of the card. Used on [battle](https://mtg.fandom.com/wiki/Battle) cards.
+> The defense of the card. Used on [battle](https://mtg.wiki/page/Battle) cards.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
