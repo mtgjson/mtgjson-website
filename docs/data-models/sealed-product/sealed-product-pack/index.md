@@ -6,10 +6,10 @@ head:
       content: Sealed Product (Pack)
   - - meta
     - name: description
-      content: The Sealed Product (Pack) Data Model describes the pack product properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product (Pack) Data Model describes the sealed pack configuration in the Sealed Product Contents Data Model.
   - - meta
     - property: og:description
-      content: The Sealed Product (Pack) Data Model describes the pack product properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product (Pack) Data Model describes the sealed pack configuration in the Sealed Product Contents Data Model.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product pack

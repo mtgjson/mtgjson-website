@@ -54,6 +54,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
+> ### attractionLights <DocBadge type="warning" text="optional" />
+>
+> A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
+>
+> - **Type:** `number[]`
+> - **Introduced:** `v5.2.1`
+
 > ### availability
 >
 > A list of the card's available printing types.
@@ -95,7 +102,7 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### colorIndicator <DocBadge type="warning" text="optional" />
 >
-> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
+> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](/data-models/card/card-token/#types).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
@@ -116,19 +123,19 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `number`
 > - **Introduced:** `v5.2.1`
 
-> ### faceName <DocBadge type="warning" text="optional" />
->
-> The name on the face of the card.
->
-> - **Type:** `string`
-> - **Introduced:** `v5.0.0`
-
 > ### faceFlavorName <DocBadge type="warning" text="optional" />
 >
 > The flavor name on the face of the card.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.0`
+
+> ### faceName <DocBadge type="warning" text="optional" />
+>
+> The name on the face of the card.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.0.0`
 
 > ### finishes
 >
@@ -166,24 +173,6 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > - **Type:** `string`
 > - <ExampleField type='frameVersion'/>
-> - **Introduced:** `v4.0.0`
-
-> ### hasFoil <DocBadge type="danger" text="deprecated" />
->
-> If the card can be found in foil.
->
-> _This property is deprecated. Use the [finishes](/data-models/card/card-token/#finishes) property instead._
->
-> - **Type:** `boolean`
-> - **Introduced:** `v4.0.0`
-
-> ### hasNonFoil <DocBadge type="danger" text="deprecated" />
->
-> If the card can be found in non-foil.
->
-> _This property is deprecated. Use the [finishes](/data-models/card/card-token/#finishes) property instead._
->
-> - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
 
 > ### identifiers
@@ -344,15 +333,6 @@ The Card (Token) Data Model describes the properties of a single token card foun
 >
 > - **Type:** `RelatedCards`
 > - **Introduced:** `v5.2.1`
-
-> ### reverseRelated <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
->
-> The names of the cards that produce this card.
->
-> _This property is deprecated. Use the [relatedCards](/data-models/card/card-token/#relatedcards) property instead._
->
-> - **Type:** `string[]`
-> - **Introduced:** `v4.0.0`
 
 > ### securityStamp <DocBadge type="warning" text="optional" />
 >

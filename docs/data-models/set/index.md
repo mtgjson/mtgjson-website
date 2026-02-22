@@ -35,7 +35,7 @@ The Set Data Model describes the properties of an individual set.
 
 > ### baseSetSize
 >
-> The number of cards in the set. This will default to [totalSetSize](#totalsetsize) if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
+> The number of cards in the set. This will default to [totalSetSize](/data-models/set/#totalsetsize) if not available. [Wizards of the Coast](https://company.wizards.com) sometimes prints extra cards beyond the set size into promos or supplemental products.
 >
 > - **Type:** `number`
 > - **Introduced:** `v4.1.0`
@@ -75,13 +75,6 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
-> ### codeV3 <DocBadge type="warning" text="optional" />
->
-> The alternate printing set code [Wizards of the Coast](https://company.wizards.com) uses for a select few duel deck sets.
->
-> - **Type:** `string`
-> - **Introduced:** `v4.2.1`
-
 > ### decks <DocBadge type="warning" text="optional" />
 >
 > All decks associated to the set. See the [Deck (Set)](/data-models/deck-set/) Data Model.
@@ -89,19 +82,19 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `DeckSet[]`
 > - **Introduced:** `v5.2.2`
 
-> ### isForeignOnly <DocBadge type="warning" text="optional" />
->
-> If the set is only available outside the United States of America.
->
-> - **Type:** `boolean`
-> - **Introduced:** `v4.4.1`
-
 > ### isFoilOnly
 >
 > If the set is only available in foil.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.0`
+
+> ### isForeignOnly <DocBadge type="warning" text="optional" />
+>
+> If the set is only available outside the United States of America.
+>
+> - **Type:** `boolean`
+> - **Introduced:** `v4.4.1`
 
 > ### isNonFoilOnly <DocBadge type="warning" text="optional" />
 >
@@ -209,19 +202,19 @@ The Set Data Model describes the properties of an individual set.
 > - **Type:** `number`
 > - **Introduced:** `v4.2.1`
 
-> ### tokens
->
-> The tokens cards in the set. See the [Card (Token)](/data-models/card/card-token/) Data Model.
->
-> - **Type:** `CardToken[]`
-> - **Introduced:** `v4.0.0`
-
 > ### tokenSetCode <DocBadge type="warning" text="optional" />
 >
 > The tokens set code, formatted in uppercase.
 >
 > - **Type:** `string`
 > - **Introduced:** `v5.2.1`
+
+> ### tokens
+>
+> The tokens cards in the set. See the [Card (Token)](/data-models/card/card-token/) Data Model.
+>
+> - **Type:** `CardToken[]`
+> - **Introduced:** `v4.0.0`
 
 > ### totalSetSize
 >

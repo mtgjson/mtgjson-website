@@ -102,7 +102,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 
 > ### colorIndicator <DocBadge type="warning" text="optional" />
 >
-> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
+> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](/data-models/card/card-deck/#types).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
@@ -257,24 +257,6 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 > - **Type:** `boolean`
 > - **Introduced:** `v5.0.0`
 
-> ### hasFoil <DocBadge type="danger" text="deprecated" />
->
-> If the card can be found in foil.
->
-> _This property is deprecated. Use the [finishes](/data-models/card/card-deck/#finishes) property instead._
->
-> - **Type:** `boolean`
-> - **Introduced:** `v4.0.0`
-
-> ### hasNonFoil <DocBadge type="danger" text="deprecated" />
->
-> If the card can be found in non-foil.
->
-> _This property is deprecated. Use the [finishes](/data-models/card/card-deck/#finishes) property instead._
->
-> - **Type:** `boolean`
-> - **Introduced:** `v4.0.0`
-
 > ### identifiers
 >
 > The identifiers associated to a card. See the [Identifiers](/data-models/identifiers/) Data Model.
@@ -358,15 +340,6 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v4.0.1`
-
-> ### isStarter <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
->
-> If the card is found in a starter deck such as a Planeswalker/Brawl deck.
->
-> _This property is deprecated and no longer provides any useful information._
->
-> - **Type:** `boolean`
-> - **Introduced:** `v4.0.0`
 
 > ### isStorySpotlight <DocBadge type="warning" text="optional" />
 >
@@ -542,19 +515,19 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 > - <ExampleField type='rarity'/>
 > - **Introduced:** `v4.0.0`
 
-> ### relatedCards <DocBadge type="warning" text="optional" />
->
-> The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
->
-> - **Type:** `RelatedCards`
-> - **Introduced:** `v5.2.1`
-
 > ### rebalancedPrintings <DocBadge type="warning" text="optional" />
 >
 > A list of card `uuid`'s to printings that are [rebalanced](https://magic.wizards.com/en/articles/archive/magic-digital/alchemy-rebalancing-philosophy-2021-12-02) versions of this card.
 >
 > - **Type:** `string[]`
 > - **Introduced:** `v5.2.0`
+
+> ### relatedCards
+>
+> The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
+>
+> - **Type:** `RelatedCards | null`
+> - **Introduced:** `v5.2.1`
 
 > ### rulings <DocBadge type="warning" text="optional" />
 >
@@ -639,7 +612,7 @@ The Card (Deck) Data Model describes the properties of a single card found in a 
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes anre are given a `-` delimiter if appropriate.
+> The type of the card as visible, including any supertypes and subtypes and are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

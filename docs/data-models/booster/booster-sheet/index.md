@@ -53,16 +53,16 @@ The Booster Sheet Data Model describes the properties of how a sheet of printed 
 > - **Type:** `Record<string, number>`
 > - **Introduced:** `v5.2.2`
 
-> ### foil
+> ### fixed <DocBadge type="warning" text="optional" />
 >
-> If the cards in the sheet are all foiled.
+> If cards are garunteed to be in this sheet. Used for "Jump Start"-style products.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.2`
 
-> ### fixed <DocBadge type="warning" text="optional" />
+> ### foil
 >
-> If cards are garunteed to be in this sheet. Used for "Jump Start"-style products.
+> If the cards in the sheet are all foiled.
 >
 > - **Type:** `boolean`
 > - **Introduced:** `v5.2.2`

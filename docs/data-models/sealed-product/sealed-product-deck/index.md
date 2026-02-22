@@ -6,10 +6,10 @@ head:
       content: Sealed Product (Deck)
   - - meta
     - name: description
-      content: The Sealed Product (Deck) Data Model describes the deck product properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product (Deck) Data Model describes the deck product configuration in the Sealed Product Contents Data Model.
   - - meta
     - property: og:description
-      content: The Sealed Product (Deck) Data Model describes the deck product properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product (Deck) Data Model describes the deck product configuration in the Sealed Product Contents Data Model.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product deck

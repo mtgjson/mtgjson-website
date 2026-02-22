@@ -6,10 +6,10 @@ head:
       content: Sealed Product (Other)
   - - meta
     - name: description
-      content: The Sealed Product (Other) Data Model describes the obscure product properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product (Other) Data Model describes the obscure product configuration in the Sealed Product Contents Data Model.
   - - meta
     - property: og:description
-      content: The Sealed Product (Other) Data Model describes the obscure product properties for the purchaseable product of a Set Data Model.
+      content: The Sealed Product (Other) Data Model describes the obscure product configuration in the Sealed Product Contents Data Model.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, sealed product other
