@@ -20,7 +20,7 @@ head:
 The Price List Data Model describes the properties of a card providers list of buying and selling ability.
 
 - **Parent model:** [Price Formats](/data-models/price/price-formats/)
-- **Parent property:** `cardhoarder`, `cardkingdom`, `cardmarket`, `cardsphere`, `tcgplayer`
+- **Parent property:** `cardhoarder`, `cardkingdom`, `cardmarket`, `cardsphere`, `tcgplayer`, `manapool`
 
 ## TypeScript Model
 
