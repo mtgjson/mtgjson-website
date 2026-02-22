@@ -38,7 +38,7 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 > The current release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the MTGJSON build.
 >
 > - **Type:** `string`
-> - <ExampleField type="date" />
+> - <ExampleField type='date'/>
 > - **Introduced:** `v4.0.0`
 
 > ### version
@@ -46,5 +46,5 @@ The Meta Data Model describes the properties of the MTGJSON application meta dat
 > The current [SemVer](https://semver.org) version for the MTGJSON build appended with the build date.
 >
 > - **Type:** `string`
-> - <ExampleField type="version" />
+> - <ExampleField type='version'/>
 > - **Introduced:** `v4.0.0`

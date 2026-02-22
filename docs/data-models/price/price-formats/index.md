@@ -6,10 +6,10 @@ head:
       content: Price Formats
   - - meta
     - name: description
-      content: The Price Formats Data Model describes the properties of a card providers buying and selling data.
+      content: The Price Formats Data Model describes the properties of all product formats that the price providers provide.
   - - meta
     - property: og:description
-      content: The Price Formats Data Model describes the properties of a card providers buying and selling data.
+      content: The Price Formats Data Model describes the properties of all product formats that the price providers provide.
   - - meta
     - name: keywords
       content: mtg, magic the gathering, mtgjson, json, price providers

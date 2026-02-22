@@ -65,14 +65,14 @@ The Deck Data Model describes the properties of an individual Deck.
 >
 > The release date in [ISO 8601](https://www.iso.org/iso-8601-date-and-time-format.html) format for the set. Returns `null` if the deck was not formally released as a product.
 >
-> - **Type:** `string | null`
+> - **Type:** `string`
 > - **Introduced:** `v4.3.0`
 
 > ### sealedProductUuids
 >
 > A cross-reference identifier to determine which sealed products contain this deck.
 >
-> - **Type:** `string`
+> - **Type:** `string[] | null`
 > - **Introduced:** `v5.2.2`
 
 > ### sideBoard
@@ -86,7 +86,7 @@ The Deck Data Model describes the properties of an individual Deck.
 >
 > The tokens included with the product. See the [Card (Deck)](/data-models/card/card-deck/) Data Model.
 >
-> - **Type:** `CardDeck[]`
+> - **Type:** `CardToken[] | null`
 > - **Introduced:** `v5.2.2`
 
 > ### type

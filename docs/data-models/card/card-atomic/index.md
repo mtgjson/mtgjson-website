@@ -52,13 +52,6 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 > - **Type:** `string`
 > - **Introduced:** `v5.1.0`
 
-> ### attractionLights <DocBadge type="warning" text="optional" />
->
-> A list of attraction lights found on a card, available only to cards printed in certain Un-sets.
->
-> - **Type:** `number[]`
-> - **Introduced:** `v5.2.1`
-
 > ### colorIdentity
 >
 > A list of all the colors found in `manaCost`, `colorIndicator`, and `text` properties.
@@ -69,7 +62,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 
 > ### colorIndicator <DocBadge type="warning" text="optional" />
 >
-> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](#types).
+> A list of all the colors in the color indicator. This is the symbol prefixed to a card's [types](/data-models/card/card-atomic/#types).
 >
 > - **Type:** `string[]`
 > - <ExampleField type='colorIndicator'/>
@@ -283,7 +276,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 >
 > The related cards for this card. See the [Related Cards](/data-models/related-cards/) Data Model.
 >
-> - **Type:** `RelatedCards`
+> - **Type:** `RelatedCards | null`
 > - **Introduced:** `v5.2.1`
 
 > ### rulings <DocBadge type="warning" text="optional" />
@@ -340,7 +333,7 @@ When using any **Atomic-like** file, the Card (Atomic) Data Model is accessed th
 
 > ### type
 >
-> The type of the card as visible, including any supertypes and subtypes are given a `-` delimiter if appropriate.
+> The type of the card as visible, including any supertypes and subtypes and are given a `-` delimiter if appropriate.
 >
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`

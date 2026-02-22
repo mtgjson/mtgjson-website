@@ -47,9 +47,9 @@ The Booster Config Data Model describes the properties of how a [Set](/data-mode
 > - **Introduced:** `v5.2.2`
 
 > ### name <DocBadge type="warning" text="optional" />
-> 
+>
 > The name of the product, if applicable.
-> 
+>
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
