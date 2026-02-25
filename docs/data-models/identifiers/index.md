@@ -39,14 +39,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 > - **Type:** `string`
 > - **Introduced:** `v5.2.2`
 
-> ### cardKingdomAlternativeFoilIds <DocBadge type="warning" text="optional" />
->
-> A mapping of alternative foil types to their [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) identifiers. Keys are foil type names (e.g. `etched`, `surge`, `rainbow`).
->
-> - **Type:** `Record<string, string>`
-> - **Introduced:** `v5.3.0`
-
-> ### cardKingdomEtchedId <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
+> ### cardKingdomEtchedId <DocBadge type="warning" text="optional" />
 >
 > The [Card Kingdom](https://www.cardkingdom.com/?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson) etched card identifier.
 >
@@ -200,14 +193,7 @@ The Identifiers Data Model describes the properties of identifiers associated to
 > - **Type:** `string`
 > - **Introduced:** `v4.3.1`
 
-> ### tcgplayerAlternativeFoilIds <DocBadge type="warning" text="optional" />
->
-> A mapping of alternative foil types to their [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) product identifiers. Keys are foil type names (e.g. `etched`, `surge`, `rainbow`).
->
-> - **Type:** `Record<string, string>`
-> - **Introduced:** `v5.3.0`
-
-> ### tcgplayerEtchedProductId <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
+> ### tcgplayerEtchedProductId <DocBadge type="warning" text="optional" />
 >
 > The [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) etched card identifier.
 >

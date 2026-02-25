@@ -39,14 +39,7 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 > - **Type:** `string`
 > - **Introduced:** `v5.0.0`
 
-> ### cardKingdomAlternativeFoilUrls <DocBadge type="warning" text="optional" />
->
-> A mapping of alternative foil types to their purchase URLs on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson). Keys are foil type names (e.g. `etched`, `surge`, `rainbow`).
->
-> - **Type:** `Record<string, string>`
-> - **Introduced:** `v5.3.0`
-
-> ### cardKingdomEtched <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
+> ### cardKingdomEtched <DocBadge type="warning" text="optional" />
 >
 > The URL to purchase an etched product on [Card Kingdom](https://www.cardkingdom.com?partner=mtgjson&utm_source=mtgjson&utm_medium=affiliate&utm_campaign=mtgjson).
 >
@@ -74,14 +67,7 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
 
-> ### tcgplayerAlternativeFoilUrls <DocBadge type="warning" text="optional" />
->
-> A mapping of alternative foil types to their purchase URLs on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson). Keys are foil type names (e.g. `etched`, `surge`, `rainbow`).
->
-> - **Type:** `Record<string, string>`
-> - **Introduced:** `v5.3.0`
-
-> ### tcgplayerEtched <DocBadge type="danger" text="deprecated" /><DocBadge type="warning" text="optional" />
+> ### tcgplayerEtched <DocBadge type="warning" text="optional" />
 >
 > The URL to purchase an etched product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
 >
