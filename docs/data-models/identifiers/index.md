@@ -193,6 +193,13 @@ The Identifiers Data Model describes the properties of identifiers associated to
 > - **Type:** `string`
 > - **Introduced:** `v4.3.1`
 
+> ### tcgplayerAlternativeFoilProductId <DocBadge type="warning" text="optional" />
+>
+> The [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) alternative foil card identifier.
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.3.0`
+
 > ### tcgplayerEtchedProductId <DocBadge type="warning" text="optional" />
 >
 > The [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson) etched card identifier.

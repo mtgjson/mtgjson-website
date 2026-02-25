@@ -67,6 +67,13 @@ The Purchase Urls Data Model describes the properties of links to purchase a pro
 > - **Type:** `string`
 > - **Introduced:** `v4.4.0`
 
+> ### tcgplayerAlternativeFoil <DocBadge type="warning" text="optional" />
+>
+> The URL to purchase an alternative foil product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
+>
+> - **Type:** `string`
+> - **Introduced:** `v5.3.0`
+
 > ### tcgplayerEtched <DocBadge type="warning" text="optional" />
 >
 > The URL to purchase an etched product on [TCGplayer](https://www.tcgplayer.com?partner=mtgjson&utm_campaign=affiliate&utm_medium=mtgjson&utm_source=mtgjson).
