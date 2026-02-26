@@ -5,8 +5,7 @@ import type { TStoreRootState } from './types';
 
 const api: string = 'https://mtgjson.com/api/v5/';
 
-export const useStore = defineStore({
-  id: 'global',
+export const useStore = defineStore('global', {
   state: () =>
     ({
       Meta: {},

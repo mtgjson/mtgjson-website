@@ -9,13 +9,13 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: ⬇️ Checkout
-        uses: actions/checkout@master
+        uses: actions/checkout@v4
 
       # Sets up the Node environment to build the application on
       - name: 🏗 Setup Node
-        uses: actions/setup-node@v3
+        uses: actions/setup-node@v4
         with:
-          node-version: 16.x
+          node-version: 24.x
 
       # Installs local dependencies needed to build, test, etc.
       - name: 🏗 Install Dependencies
@@ -31,14 +31,6 @@ jobs:
 
       # Upload CodeCov report to the remote server
       - name: ⬆️ Upload Code Coverage
-        uses: codecov/codecov-action@v3
+        uses: codecov/codecov-action@v4
         with:
           token: ${{ secrets.CODECOV_TOKEN }}
-
-      - name: 🚙 Deploy to Netlify
-        uses: nwtgck/actions-netlify@v2.0
-        with:
-          publish-dir: './docs/.vitepress/dist'
-        env:
-          NETLIFY_AUTH_TOKEN: ${{ secrets.NETLIFY_TOKEN }}
-          NETLIFY_SITE_ID: ${{ secrets.NETLIFY_SITE_ID }}

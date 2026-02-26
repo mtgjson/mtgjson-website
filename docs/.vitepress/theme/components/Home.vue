@@ -203,7 +203,7 @@ main.home
         ul
           li.legal Wizards of the Coast, Magic: The Gathering, and their logos are trademarks of Wizards of the Coast LLC. All rights reserved.
           li.legal Third-Party content, links and referrals are provided as is and is subject to their own terms, rights and other legal notices.
-          li.legal All other content &copy; 2018 &ndash; Present, Zach Halpern, Eric Lakatos. All rights reserved.
+          li.legal All other content &copy; 2018 &ndash; Present, Zach Halpern. All rights reserved.
 
         .home-footer-links
           ol
