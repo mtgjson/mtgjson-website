@@ -4,7 +4,7 @@
     "image": "avatar-cardhoarder.png",
     "link": "https://www.cardhoarder.com?affiliate_id=mtgjson&utm_source=mtgjson&utm_campaign=affiliate&utm_medium=card",
     "tier": "mythic",
-    "since": "2018-11",
+    "since": "2019-04",
     "name": "Nathaniel Buckley-Wright"
   },
   {
@@ -14,14 +14,6 @@
     "tier": "mythic",
     "since": "2019-04",
     "name": "CardCastle"
-  },
-  {
-    "company": "CardBoard Live",
-    "image": "avatar-cardboard-live.png",
-    "link": "https://cardboard.live",
-    "tier": "mythic",
-    "since": "2019-09",
-    "name": ""
   },
   {
     "company": "Out of Cards",
@@ -37,21 +29,15 @@
     "link": "https://www.mtgban.com/",
     "tier": "mythic",
     "since": "2020-03",
-    "name": "Craig Chapman"
-  },
-  {
-    "company": "Fetchbot Sorter",
-    "tier": "mythic",
-    "since": "2020-03",
-    "name": ""
+    "name": "Koda Wah"
   },
   {
     "company": "",
     "image": "",
     "link": "",
     "tier": "mythic",
-    "since": "2021-03",
-    "name": "Quinn Gil"
+    "since": "2021-02",
+    "name": "Malcolm Moss"
   },
   {
     "company": "Mantle",
@@ -62,12 +48,68 @@
     "name": "Stephen Kirwan"
   },
   {
-    "company": "ManaPool.com",
+    "company": "ManaPool",
     "image": "avatar-manapool.png",
     "link": "https://manapool.com",
     "tier": "mythic",
     "since": "2024-03",
     "name": ""
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "mythic",
+    "since": "2024-03",
+    "name": "ChatLurking"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "mythic",
+    "since": "2024-11",
+    "name": "Sebastiaan Provost"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "mythic",
+    "since": "2025-03",
+    "name": "yianna kokalas"
+  },
+  {
+    "company": "Tcg Sync",
+    "image": "avatar-tcgsync.png",
+    "link": "https://tcgsync.com",
+    "tier": "mythic",
+    "since": "2025-05",
+    "name": "Tcg Sync"
+  },
+  {
+    "company": "Grove Warden Games",
+    "image": "avatar-grovewarden.png",
+    "link": "https://grovewarden.games",
+    "tier": "mythic",
+    "since": "2025-09",
+    "name": "Riley Cherry"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "mythic",
+    "since": "2025-10",
+    "name": "Aaron Blohowiak"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "mythic",
+    "since": "2025-12",
+    "name": "Thomas Harris"
   },
   {
     "company": "My MTG Collection",
@@ -76,14 +118,6 @@
     "tier": "rare",
     "since": "2019-04",
     "name": "Joe Beaudoin"
-  },
-  {
-    "company": "DeckTech.io",
-    "image": "avatar-decktech.png",
-    "link": "https://decktech.io",
-    "tier": "rare",
-    "since": "2020-08",
-    "name": "Littleton Riggins"
   },
   {
     "company": "",
@@ -99,7 +133,7 @@
     "link": "https://github.com/AEFeinstein/mtg-familiar",
     "tier": "rare",
     "since": "2021-03",
-    "name": "Adam Fienstein"
+    "name": "Adam Feinstein"
   },
   {
     "company": "",
@@ -146,8 +180,64 @@
     "image": "",
     "link": "",
     "tier": "rare",
-    "since": "2023-01",
-    "name": "Bryan Yang"
+    "since": "2023-10",
+    "name": "Alu"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2024-06",
+    "name": "Jonathan Medina"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2025-01",
+    "name": "Ethan Klein"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2025-02",
+    "name": "Daniel Trone"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2025-07",
+    "name": "Gabriel Rice"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2025-07",
+    "name": "Scott Anderson"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2025-09",
+    "name": "David Wong"
+  },
+  {
+    "company": "Cockatrice",
+    "image": "avatar-cockatrice.png",
+    "link": "https://cockatrice.github.io",
+    "tier": "uncommon",
+    "since": "2019-04",
+    "name": "Zach Halpern"
   },
   {
     "company": "MTG Decks",
@@ -158,33 +248,9 @@
     "name": "Angel Sevilla"
   },
   {
-    "company": "MTG Brewmaster",
-    "image": "avatar-mtgbrewmaster.png",
-    "link": "http://mtgbrewmaster.com",
-    "tier": "uncommon",
-    "since": "2019-04",
-    "name": ""
-  },
-  {
-    "company": "ComboDeck",
-    "image": "avatar-combodeck.png",
-    "link": "http://combodeck.net",
-    "tier": "uncommon",
-    "since": "2019-04",
-    "name": ""
-  },
-  {
-    "company": "Cockatrice",
-    "image": "avatar-cockatrice.png",
-    "link": "https://cockatrice.github.io",
-    "tier": "uncommon",
-    "since": "2019-04",
-    "name": ""
-  },
-  {
-    "company": "",
+    "company": "tekk.info",
     "image": "",
-    "link": "",
+    "link": "https://tekk.info",
     "tier": "uncommon",
     "since": "2019-04",
     "name": "Eric Richards"
@@ -217,40 +283,8 @@
     "company": "Fran&ccedil;ois Andrieux",
     "image": "avatar-francois-andrieux.png",
     "tier": "uncommon",
-    "since": "2019-12",
+    "since": "2019-11",
     "name": "Fran&ccedil;ois Andrieux"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2020-01",
-    "name": "Chris Connett"
-  },
-  {
-    "company": "MagicHunter",
-    "image": "avatar-magic-hunter.jpg",
-    "link": "https://play.google.com/store/apps/details?id=com.and3r.magiccardhunter2",
-    "tier": "uncommon",
-    "since": "2020-02",
-    "name": ""
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2020-07",
-    "name": "Samuel Perkins"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2020-07",
-    "name": "Tyler Greene"
   },
   {
     "company": "",
@@ -273,48 +307,8 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2020-12",
-    "name": "CRISPY"
-  },
-  {
-    "company": "MagicML",
-    "image": "avatar-magicml.png",
-    "link": "https://www.magicml.com/",
-    "tier": "uncommon",
-    "since": "2021-01",
-    "name": ""
-  },
-  {
-    "company": "MTGStocks",
-    "image": "avatar-mtgstocks.jpg",
-    "link": "http://mtgstocks.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
-    "tier": "uncommon",
-    "since": "2021-01",
-    "name": "Arjen Brandenburgh"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2021-01",
-    "name": "Paul"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2021-02",
-    "name": "Greg Brown"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2021-02",
-    "name": "Malcolm Moss"
+    "since": "2020-09",
+    "name": "Jason Caggiano"
   },
   {
     "company": "",
@@ -322,7 +316,7 @@
     "link": "",
     "tier": "uncommon",
     "since": "2021-05",
-    "name": "Jathby Bredas"
+    "name": "Jathby Dredas"
   },
   {
     "company": "",
@@ -361,61 +355,13 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2022-04",
-    "name": "Lincoln Davidson"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
     "since": "2022-05",
-    "name": "Rodentman"
+    "name": "Maisy"
   },
   {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2022-07",
-    "name": "Ethienne Graveline"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2022-09",
-    "name": "Mark Lindsey"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2022-09",
-    "name": "Richard Anderson"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2022-10",
-    "name": "Dark Audio Stash"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2022-11",
-    "name": "Tim Rayburn"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
+    "company": "The Rare Company",
+    "image": "avatar-therare.png",
+    "link": "https://therare.co/",
     "tier": "uncommon",
     "since": "2022-11",
     "name": "The Rare Company"
@@ -427,14 +373,6 @@
     "tier": "uncommon",
     "since": "2022-12",
     "name": "Steffen Jensen"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2022-12",
-    "name": "Matt Palumbo"
   },
   {
     "company": "",
@@ -453,11 +391,339 @@
     "name": "Max Isenberg"
   },
   {
-    "company": "FaceToFaceGames",
-    "image": "avatar-facetofacegames.png",
-    "link": "https://www.facetofacegames.com?utm_campaign=mtgjson&utm_medium=mtgjson&utm_source=mtgjson",
+    "company": "",
+    "image": "",
+    "link": "",
     "tier": "uncommon",
     "since": "2023-02",
-    "name": "Staphane Faure"
+    "name": "David Fenko"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2023-04",
+    "name": "Orlando"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2023-07",
+    "name": "Noah Keating"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2023-11",
+    "name": "Jordan Munson"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-01",
+    "name": "Terry"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-05",
+    "name": "Thakkr"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-08",
+    "name": "val bnn"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-09",
+    "name": "Nick Driver"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-10",
+    "name": "xGDPx"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-11",
+    "name": "Joel Barnes"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-11",
+    "name": "Ryan Prusinski"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2024-12",
+    "name": "Smaeckle"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-01",
+    "name": "Wheels35 - George W"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-01",
+    "name": "Robin Hartlauer"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-02",
+    "name": "Walker Smith"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-03",
+    "name": "Ahagz"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-04",
+    "name": "Ian Morrison"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-05",
+    "name": "missive"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-05",
+    "name": "David Shettler"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-06",
+    "name": "Ryan Pettit"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-07",
+    "name": "Michael Wood"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-07",
+    "name": "Mart McMahon"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-07",
+    "name": "Diego Soto"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-08",
+    "name": "Nathan Pannell"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-09",
+    "name": "GrantCodes"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-09",
+    "name": "Daniel Carl"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-10",
+    "name": "Joe Stutzke"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-10",
+    "name": "Andrew Duncan"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-11",
+    "name": "Michael Mulick"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-12",
+    "name": "ChuckTheDM"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-12",
+    "name": "Derek Stotz"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2025-12",
+    "name": "Ame"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-01",
+    "name": "Stephane Mercier"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-01",
+    "name": "TheChosenJuans"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-01",
+    "name": "Zach Maynard"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-01",
+    "name": "Jon Wendorf"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-01",
+    "name": "gerg"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-02",
+    "name": "Kelly Bodwin"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-02",
+    "name": "Mercadia City"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-02",
+    "name": "Brennan McMillan"
+  },
+  {
+    "company": "Another Round Disc Golf Salt Lake City",
+    "image": "avatar-another-round.png",
+    "link": "https://www.anotherroundsaltlake.com/",
+    "tier": "uncommon",
+    "since": "2026-02",
+    "name": "Another Round Disc Golf Salt Lake City"
+  },
+  {
+    "company": "MTGMate",
+    "image": "avatar-mtgmate.png",
+    "link": "https://mtgmate.com.au",
+    "tier": "uncommon",
+    "since": "2026-02",
+    "name": "Nick Chmielewski"
   }
 ]
