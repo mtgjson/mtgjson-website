@@ -85,7 +85,7 @@ Here are some common questions about MTGJSON data and services.
 > const image: string = `https://cards.scryfall.io/${fileType}/${fileFace}/${dir1}/${dir2}/${fileName}.${fileFormat}`;
 > ```
 >
-> See the official documentaion [here](https://scryfall.com/docs/api/images) for more information about different image variants, formats and pathing rules.
+> See the [official Scryfall documentation](https://scryfall.com/docs/api/images) for more information about different image variants, formats and pathing rules.
 >
 > #### Gatherer Imagery
 >
