@@ -232,6 +232,14 @@
     "name": "David Wong"
   },
   {
+    "company": "Cockatrice",
+    "image": "avatar-cockatrice.png",
+    "link": "https://cockatrice.github.io",
+    "tier": "uncommon",
+    "since": "2019-04",
+    "name": "Zach Halpern"
+  },
+  {
     "company": "MTG Decks",
     "image": "avatar-mtgdecks.png",
     "link": "https://www.mtgdecks.net",
