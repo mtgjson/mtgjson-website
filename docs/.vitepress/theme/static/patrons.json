@@ -232,6 +232,14 @@
     "name": "David Wong"
   },
   {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2026-02",
+    "name": "Philippe Castonguay"
+  },
+  {
     "company": "Cockatrice",
     "image": "avatar-cockatrice.png",
     "link": "https://cockatrice.github.io",
@@ -461,14 +469,6 @@
     "tier": "uncommon",
     "since": "2024-10",
     "name": "xGDPx"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2024-11",
-    "name": "Joel Barnes"
   },
   {
     "company": "",
