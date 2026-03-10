@@ -55,25 +55,25 @@ main.home
       h2 Contributing
       ul
         li
-          img(alt="Github logo" width="50" height="50" src="/images/icons/icon-github.svg")
           a(href="https://github.com/mtgjson" target="_blank" rel="noreferrer noopener")
+            img(alt="Github logo" width="50" height="50" src="/images/icons/icon-github.svg")
             h3 GitHub
-          p Contribute code to the project and get site recognition.
+            p Contribute code to the project and get site recognition.
         li
-          img(alt="Discord logo" width="50" height="50" src="/images/icons/icon-discord.svg")
           a(href="https://mtgjson.com/discord/" target="_blank")
+            img(alt="Discord logo" width="50" height="50" src="/images/icons/icon-discord.svg")
             h3 Discord
-          p Discuss MTGJSON, get updates, report issues and more.
+            p Discuss MTGJSON, get updates, report issues and more.
         li
-          img(alt="Patreon logo" width="50" height="50" src="/images/icons/icon-patreon.svg")
           a(href="https://www.patreon.com/MTGJSON" target="_blank" rel="noreferrer noopener")
+            img(alt="Patreon logo" width="50" height="50" src="/images/icons/icon-patreon.svg")
             h3 Patreon
-          p Pledge to our Patreon and get access to our GraphQL API.
+            p Pledge to our Patreon and get access to our GraphQL API.
         li
-          img(alt="Paypal logo" width="50" height="50" src="/images/icons/icon-paypal.svg")
           a(href="https://www.paypal.me/Zachhalpern" target="_blank" rel="noreferrer noopener")
+            img(alt="Paypal logo" width="50" height="50" src="/images/icons/icon-paypal.svg")
             h3 PayPal
-          p Donate to MTGJSON and help keep this project free to all.
+            p Donate to MTGJSON and help keep this project free to all.
 
   section.dark.home-team(v-if="team")
     .content-wrapper
@@ -569,9 +569,15 @@ onMounted(async (): Promise<void> => {
       li {
         background-color: var(--gray-color);
         border-radius: var(--common-radius);
-        padding: 2rem;
+        transition: background-color 0.2s;
+
+        &:hover {
+          background-color: var(--gray-2-color);
+        }
 
         a {
+          display: block;
+          padding: 2rem;
           text-decoration: none;
           color: var(--dark-color) !important;
         }
