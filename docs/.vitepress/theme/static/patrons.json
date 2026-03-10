@@ -451,14 +451,6 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2024-08",
-    "name": "val bnn"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
     "since": "2024-09",
     "name": "Nick Driver"
   },
@@ -717,6 +709,14 @@
     "tier": "uncommon",
     "since": "2026-02",
     "name": "Another Round Disc Golf Salt Lake City"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-03",
+    "name": "devon who"
   },
   {
     "company": "MTGMate",
