@@ -16,6 +16,14 @@
     "name": "CardCastle"
   },
   {
+    "company": "HippoLink",
+    "image": "avatar-hippolink.png",
+    "link": "https://www.hippolink.app",
+    "tier": "mythic",
+    "since": "2026-02",
+    "name": "HippoLink"
+  },
+  {
     "company": "Out of Cards",
     "image": "avatar-outofcards.png",
     "link": "https://outof.cards",
