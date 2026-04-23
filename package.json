@@ -55,7 +55,7 @@
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
     "typescript-eslint": "^8.56.1",
-    "uuid": "^13.0.0",
+    "uuid": "^14.0.0",
     "vitepress": "^1.0.0-rc.39",
     "vue": "^3.2.37",
     "vue-eslint-parser": "^10.4.0"
