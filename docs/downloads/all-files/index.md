@@ -49,7 +49,7 @@ You can see a dump of all files, including individual sets and decks by going to
 
 > ### AllIdentifiers
 >
-> File containing all [Card (Set)](/data-models/card/card-set/) cards organized by the [uuid](/data-models/card/card-set/#uuid) property.
+> File containing all [Card (Set)](/data-models/card/card-set/) and [Card (Token)](/data-models/card/card-token/) cards organized by the [uuid](/data-models/card/card-set/#uuid) property.
 >
 > <DownloadNativeSelect fileName='AllIdentifiers'/>
 
