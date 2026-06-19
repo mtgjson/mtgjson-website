@@ -32,7 +32,7 @@
     "pinia": "^3.0.4"
   },
   "devDependencies": {
-    "@babel/core": "^7.23.7",
+    "@babel/core": "^7.29.6",
     "@babel/node": "^7.22.19",
     "@babel/preset-env": "^7.23.8",
     "@eslint/js": "^10.0.1",
