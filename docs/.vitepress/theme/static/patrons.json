@@ -68,14 +68,6 @@
     "image": "",
     "link": "",
     "tier": "mythic",
-    "since": "2024-03",
-    "name": "ChatLurking"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "mythic",
     "since": "2024-11",
     "name": "Sebastiaan Provost"
   },
@@ -86,14 +78,6 @@
     "tier": "mythic",
     "since": "2025-03",
     "name": "yianna kokalas"
-  },
-  {
-    "company": "Tcg Sync",
-    "image": "avatar-tcgsync.png",
-    "link": "https://tcgsync.com",
-    "tier": "mythic",
-    "since": "2025-05",
-    "name": "Tcg Sync"
   },
   {
     "company": "Grove Warden Games",
@@ -256,6 +240,14 @@
     "name": "Jonathan Hosein"
   },
   {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "rare",
+    "since": "2026-05",
+    "name": "Alex Yang"
+  },
+  {
     "company": "Cockatrice",
     "image": "avatar-cockatrice.png",
     "link": "https://cockatrice.github.io",
@@ -387,14 +379,6 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2022-12",
-    "name": "Steffen Jensen"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
     "since": "2023-01",
     "name": "Dmitri Ignakov"
   },
@@ -483,14 +467,6 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2024-12",
-    "name": "Smaeckle"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
     "since": "2025-01",
     "name": "Wheels35 - George W"
   },
@@ -548,14 +524,6 @@
     "link": "",
     "tier": "uncommon",
     "since": "2025-07",
-    "name": "Mart McMahon"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2025-07",
     "name": "Diego Soto"
   },
   {
@@ -596,23 +564,7 @@
     "link": "",
     "tier": "uncommon",
     "since": "2025-12",
-    "name": "ChuckTheDM"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2025-12",
     "name": "Derek Stotz"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2025-12",
-    "name": "Ame"
   },
   {
     "company": "",
@@ -655,14 +607,6 @@
     "name": "Mercadia City"
   },
   {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
-    "since": "2026-02",
-    "name": "Brennan McMillan"
-  },
-  {
     "company": "Another Round Disc Golf Salt Lake City",
     "image": "avatar-another-round.png",
     "link": "https://www.anotherroundsaltlake.com/",
@@ -699,7 +643,47 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2026-04",
-    "name": "Kaide Salo"
+    "since": "2026-05",
+    "name": "natsunlee"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-05",
+    "name": "Davide Scuderi"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-05",
+    "name": "JN"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-05",
+    "name": "Brian Whalley"
+  },
+  {
+    "company": "MoxMythic",
+    "image": "avatar-moxmythic.png",
+    "link": "https://moxmythic.com",
+    "tier": "uncommon",
+    "since": "2026-06",
+    "name": "MoxMythic"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-06",
+    "name": "Kody Manharth"
   }
 ]
