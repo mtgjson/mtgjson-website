@@ -54,6 +54,7 @@
     "semver": "^7.3.5",
     "ts-jest": "^29.4.6",
     "ts-node": "^10.9.2",
+    "typescript": "^5.9.3",
     "typescript-eslint": "^8.56.1",
     "uuid": "^13.0.0",
     "vitepress": "^1.0.0-rc.39",
