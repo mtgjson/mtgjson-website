@@ -373,9 +373,9 @@ The Card (Token) Data Model describes the properties of a single token card foun
 
 > ### sourceProducts <DocBadge type="warning" text="optional" />
 >
-> A list of associated Sealed Product `uuid` properties where this card can be found in.
+> The source product identifiers linked to a [Sealed Product](/data-models/sealed-product/). See the [Source Products](/data-models/source-products/) Data Model.
 >
-> - **Type:** `string[]`
+> - **Type:** `SourceProducts`
 > - **Introduced:** `v5.2.2`
 
 > ### subsets <DocBadge type="warning" text="optional" />
