@@ -19,7 +19,7 @@ head:
 
 The Source Products Data Model describes the uuids for the card version in a Sealed Product.
 
-- **Parent model:** [Card (Set)](/data-models/card/card-set/)
+- **Parent model:** [Card (Deck)](/data-models/card/card-deck/), [Card (Set)](/data-models/card/card-set/), [Card (Token)](/data-models/card/card-token/)
 - **Parent property:** `sourceProducts`
 
 ## TypeScript Model
