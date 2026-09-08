@@ -149,6 +149,21 @@ Here are some common questions about MTGJSON data and services.
 >
 > Additionally, when using MTGGraphQL, our GraphQL API layer, we offer a [NPM TypeScript Package](https://www.npmjs.com/package/mtggraphql/) that exports Types that the GraphQL service uses.
 
+> ### How do I query the GraphQL API?
+>
+> [MTGGraphQL](/mtggraphql/) accepts `POST` requests at `https://graphql.mtgjson.com/`, with your access token in an `authorization` header. Here is a complete request:
+>
+> ```sh
+> curl https://graphql.mtgjson.com/ \
+>   -H 'content-type: application/json' \
+>   -H 'authorization: Bearer <Access Token>' \
+>   -d '{"query": "query { cards(filter: { name_eq: \"Phelddagrif\" }, page: { take: 100, skip: 0 }) { name setCode type } }"}'
+> ```
+>
+> Access tokens are issued to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> subscribers while the service is in beta - subscribe, then ask us for a token on [Discord](https://mtgjson.com/discord).
+>
+> See the [MTGGraphQL](/mtggraphql/#usage) documentation for rate limits, more examples, and a playground you can experiment in.
+
 > ### Why is a file/website out of date?
 >
 > You have probably received a cached version of the file or website. If are using a browser, try hard&#8209;refreshing the page (`CTRL + F5` on Windows, `Shift + Command + R` on MacOS).

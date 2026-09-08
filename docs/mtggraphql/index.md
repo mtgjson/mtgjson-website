@@ -34,6 +34,30 @@ The beta rollout of the service will be available to all <a href="https://www.pa
 
 ## Usage
 
+### Endpoint
+
+Every query is a `POST` request to a single endpoint:
+
+- `https://graphql.mtgjson.com/`
+
+The request body is JSON containing a `query` property, and the response is JSON containing a `data` property. Visiting the endpoint in a browser loads the [GraphQL Playground](#graphql-playground) instead.
+
+### Authorization
+
+Send your access token in an `authorization` header on every request:
+
+```JSON
+{
+  "authorization": "Bearer <Access Token>"
+}
+```
+
+Access tokens are issued to <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a> subscribers while the service is in beta. To get one:
+
+1. Subscribe to MTGJSON on <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a>.
+2. Join our [Discord](https://mtgjson.com/discord).
+3. Ask us for an access token, and we will issue one for your account.
+
 ### Data Source
 
 MTGGraphQL is based on the latest MTGJSON release. For the timings of data updates, see [this FAQ question](/faq/#how-often-is-the-data-updated).
@@ -41,6 +65,40 @@ MTGGraphQL is based on the latest MTGJSON release. For the timings of data updat
 ### Rate Limits
 
 The current rate limits are capped at `1,000` requests per IP Address per hour and `500` requests per access token per hour.
+
+### Querying Outside of the Playground
+
+Any HTTP client can talk to the endpoint. Here is the same query using `curl`:
+
+```sh
+curl https://graphql.mtgjson.com/ \
+  -H 'content-type: application/json' \
+  -H 'authorization: Bearer <Access Token>' \
+  -d '{"query": "query { cards(filter: { name_eq: \"Phelddagrif\" }, page: { take: 100, skip: 0 }) { name setCode type } }"}'
+```
+
+And the same query from JavaScript or TypeScript:
+
+```TypeScript
+const response = await fetch('https://graphql.mtgjson.com/', {
+  method: 'POST',
+  headers: {
+    'content-type': 'application/json',
+    authorization: 'Bearer <Access Token>',
+  },
+  body: JSON.stringify({
+    query: `query {
+      cards(filter: { name_eq: "Phelddagrif" }, page: { take: 100, skip: 0 }) {
+        name
+        setCode
+        type
+      }
+    }`,
+  }),
+});
+
+const { data } = await response.json();
+```
 
 ### NPM TypeScript Package
 
@@ -86,7 +144,7 @@ query {
 
 #### Example HTTP Headers Authorization
 
-Your access token is used here for authorization to the GraphQL API. If you do not have an access token and have subscribed to our <a href="https://www.patreon.com/MTGJSON" class="link-inline-image patreon" target="_blank" rel="noreferrer noopener">Patreon</a>, contact us on [Discord](https://mtgjson.com/discord).
+Paste your access token into the `HTTP HEADERS` tab so the playground can authorize your query. See [Authorization](#authorization) if you do not have a token yet.
 
 ```JSON
 {
