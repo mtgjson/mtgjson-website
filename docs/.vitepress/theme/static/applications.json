@@ -131,6 +131,11 @@
     "link": "http://metadeck.me/"
   },
   {
+    "name": "MoxMythic",
+    "image": "avatar-moxmythic.svg",
+    "link": "https://moxmythic.com"
+  },
+  {
     "name": "MTGCardFetcher",
     "link": "https://reddit.com/r/MTGCardFetcher"
   },
