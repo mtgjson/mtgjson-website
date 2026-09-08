@@ -248,6 +248,14 @@
     "name": "Alex Yang"
   },
   {
+    "company": "folio.fyi",
+    "image": "avatar-folio.png",
+    "link": "https://folio.fyi",
+    "tier": "rare",
+    "since": "2026-08",
+    "name": "folio.fyi"
+  },
+  {
     "company": "Cockatrice",
     "image": "avatar-cockatrice.png",
     "link": "https://cockatrice.github.io",
