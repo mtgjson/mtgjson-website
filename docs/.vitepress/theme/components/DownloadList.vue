@@ -10,8 +10,10 @@
     @canShowButton="toggleShowMore",
     @canShowAllButton="toggleShowAll"
   )
-  div(v-if="resultsTotalLength === 0")
+  div(v-if="isLoading")
     p.results-message Loading...
+  div(v-else-if="resultsTotalLength === 0")
+    p.results-message No results found.
   div(v-else)
     p.results-message Showing {{ resultsLength }} of {{ resultsTotalLength }} Results
     blockquote(v-for="(item, key) in list", :key="key")
@@ -81,7 +83,7 @@
   </template>
 
 <script setup lang="ts">
-import { computed, ref, onMounted } from 'vue';
+import { computed, ref, watch } from 'vue';
 import { useStore } from '../store';
 import DownloadNativeSelect from './DownloadNativeSelect.vue';
 import DownloadSorter from './DownloadSorter.vue';
@@ -109,6 +111,7 @@ const sortKey = ref<string>('releaseDate:true');
 const sortedList = ref<TList[]>([]);
 
 const defaultList = computed<TList[]>((): TList[] => store[props.file]);
+const isLoading = computed<boolean>((): boolean => defaultList.value.length === 0);
 const listFilters = computed<string[]>((): string[] =>
   Array.from(new Set(defaultList.value.map((cur: TList) => cur.type)))
 );
@@ -159,10 +162,16 @@ const toggleShowAll = (canShow: boolean): void => {
   canLoadAll.value = canShow;
 }
 
-onMounted((): void => {
-  resultsTotalLength.value = defaultList.value.length;
-  resultsLength.value = lazyOffset;
-});
+// The lists are fetched asynchronously, so seed the counts whenever the data
+// lands rather than only on mount, when it is usually still empty.
+watch(
+  defaultList,
+  (newList: TList[]): void => {
+    resultsTotalLength.value = newList.length;
+    resultsLength.value = Math.min(lazyOffset, newList.length);
+  },
+  { immediate: true }
+);
 </script>
 
 <style lang="scss" scoped>
