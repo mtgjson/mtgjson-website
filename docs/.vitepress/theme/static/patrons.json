@@ -72,14 +72,6 @@
     "name": "Sebastiaan Provost"
   },
   {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "mythic",
-    "since": "2025-03",
-    "name": "yianna kokalas"
-  },
-  {
     "company": "Grove Warden Games",
     "image": "avatar-grovewarden.png",
     "link": "https://grovewarden.games",
@@ -102,6 +94,14 @@
     "tier": "mythic",
     "since": "2025-12",
     "name": "Thomas Harris"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "mythic",
+    "since": "2026-06",
+    "name": "Mihail Morosan"
   },
   {
     "company": "My MTG Collection",
@@ -188,14 +188,6 @@
     "image": "",
     "link": "",
     "tier": "rare",
-    "since": "2025-01",
-    "name": "Ethan Klein"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "rare",
     "since": "2025-02",
     "name": "Daniel Trone"
   },
@@ -240,12 +232,12 @@
     "name": "Jonathan Hosein"
   },
   {
-    "company": "",
-    "image": "",
-    "link": "",
+    "company": "Draftsim",
+    "image": "avatar-draftsim.png",
+    "link": "https://draftsim.com/",
     "tier": "rare",
-    "since": "2026-05",
-    "name": "Alex Yang"
+    "since": "2026-07",
+    "name": "Draftsim"
   },
   {
     "company": "folio.fyi",
@@ -254,6 +246,14 @@
     "tier": "rare",
     "since": "2026-08",
     "name": "folio.fyi"
+  },
+  {
+    "company": "TableCommander",
+    "image": "",
+    "link": "https://tablecommander.com",
+    "tier": "rare",
+    "since": "2026-08",
+    "name": "TableCommander"
   },
   {
     "company": "Cockatrice",
@@ -507,14 +507,6 @@
     "image": "",
     "link": "",
     "tier": "uncommon",
-    "since": "2025-05",
-    "name": "missive"
-  },
-  {
-    "company": "",
-    "image": "",
-    "link": "",
-    "tier": "uncommon",
     "since": "2025-06",
     "name": "Ryan Pettit"
   },
@@ -643,7 +635,7 @@
     "image": "avatar-tcgsnoop.png",
     "link": "https://tcgsnoop.com.au",
     "tier": "uncommon",
-    "since": "2026-03",
+    "since": "2026-04",
     "name": "TCG Snoop"
   },
   {
@@ -693,5 +685,13 @@
     "tier": "uncommon",
     "since": "2026-06",
     "name": "Kody Manharth"
+  },
+  {
+    "company": "",
+    "image": "",
+    "link": "",
+    "tier": "uncommon",
+    "since": "2026-07",
+    "name": "Richard Jarrell"
   }
 ]
