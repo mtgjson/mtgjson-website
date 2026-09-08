@@ -271,5 +271,10 @@
     "name": "XMage",
     "image": "avatar-xmage.png",
     "link": "https://xmage.today"
+  },
+  {
+    "name": "YesTCG",
+    "image": "avatar-yestcg.png",
+    "link": "https://yestcg.com"
   }
 ]
