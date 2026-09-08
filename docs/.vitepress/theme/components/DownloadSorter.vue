@@ -105,7 +105,7 @@
   </template>
 
 <script setup lang="ts">
-import { ref, onMounted } from 'vue';
+import { ref, onMounted, watch } from 'vue';
 import { dataSearch, dataFilter, dataSort, formatType } from '../helpers';
 import type { TList } from '../types';
 
@@ -136,6 +136,14 @@ const timeout = ref<any>(null);
 onMounted((): void => {
   onHandleChange(null);
 });
+
+// Re-apply the current search/filters once the fetched list arrives.
+watch(
+  () => props.list,
+  (): void => {
+    onHandleChange(null);
+  }
+);
 
 const emitNewData = (data: TList[], counts: number[]): void => {
   emit('updateData', data);
