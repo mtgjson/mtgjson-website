@@ -1,7 +1,9 @@
 {
   "compilerOptions": {
     "resolveJsonModule": true,
-    "esModuleInterop": true
+    "esModuleInterop": true,
+    "strict": false,
+    "types": ["jest"]
   },
   "vueCompilerOptions": {
     "plugins": ["@volar/vue-language-plugin-pug", "@vue/language-plugin-pug"]
