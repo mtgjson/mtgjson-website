@@ -256,6 +256,14 @@
     "name": "TableCommander"
   },
   {
+    "company": "Mana Grove",
+    "image": "avatar-mana-grove.png",
+    "link": "https://themanagrove.com",
+    "tier": "rare",
+    "since": "2026-10",
+    "name": "Mana Grove"
+  },
+  {
     "company": "Cockatrice",
     "image": "avatar-cockatrice.png",
     "link": "https://cockatrice.github.io",
