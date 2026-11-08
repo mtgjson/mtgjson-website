@@ -408,6 +408,13 @@ The Card (Token) Data Model describes the properties of a single token card foun
 > - **Type:** `string`
 > - **Introduced:** `v4.0.0`
 
+> ### tokenProducts <DocBadge type="warning" text="optional" />
+>
+> The real product printings of the token. See the [Token Product](/data-models/token-product/) Data Model.
+>
+> - **Type:** `TokenProduct[]`
+> - **Introduced:** `v5.3.0`
+
 > ### toughness <DocBadge type="warning" text="optional" />
 >
 > The toughness of the card.

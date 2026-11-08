@@ -23,6 +23,7 @@ const parseFileName = (fileName, fileNameSplit) => {
   const isCardRoute = fileNameSplit[0] === 'Card';
   const isDeckRoute = fileNameSplit[0] === 'Deck' && fileNameSplit[1];
   const isSealedProductRoute = fileNameSplit[0] === 'Sealed';
+  const isTokenProductRoute = fileNameSplit[0] === 'Token' && fileNameSplit[1] === 'Product';
   const isSealedProductContentsRoute = fileName === 'Sealed Product Contents';
   const isAllPricesRoute = fileNameSplit[0] === 'All' && fileNameSplit[1] === 'Prices';
   const isTypesRoute = fileNameSplit[1] === 'Types' || fileNameSplit[1] === 'Type';
@@ -41,9 +42,9 @@ const parseFileName = (fileName, fileNameSplit) => {
   if (is3Words && !isTypesRoute && !isAllPricesRoute && !isSealedProductContentsRoute) {
     newFileName = `${fileNameSplit[0]} (${fileNameSplit[1]} ${fileNameSplit[2]})`;
 
-    // If we have a Sealed Product we needs to account for two
+    // If we have a Sealed Product or Token Product we needs to account for two
     // initial words and a single variation in parens
-    if (isSealedProductRoute) {
+    if (isSealedProductRoute || isTokenProductRoute) {
       newFileName = `${fileNameSplit[0]} ${fileNameSplit[1]} (${fileNameSplit[2]})`;
     }
   }
@@ -95,6 +96,7 @@ export default (routes) => {
 
         const isBoosterRoute = fileNameClean === 'Booster';
         const isSealedProductRoute = fileNameClean === 'Sealed Product';
+        const isTokenProductRoute = fileNameClean === 'Token Product';
         const isCardRoute = fileNameClean === 'Card';
         const isPricesRoute = fileNameClean === 'Price';
 
@@ -102,6 +104,8 @@ export default (routes) => {
           reducer.push(createNestedRoute(fs.readdirSync(`./docs${route}/booster`), file, fileNameClean, route));
         } else if (isSealedProductRoute) {
           reducer.push(createNestedRoute(fs.readdirSync(`./docs${route}/sealed-product`), file, fileNameClean, route));
+        } else if (isTokenProductRoute) {
+          reducer.push(createNestedRoute(fs.readdirSync(`./docs${route}/token-product`), file, fileNameClean, route));
         } else if (isCardRoute) {
           reducer.push(createNestedRoute(fs.readdirSync(`./docs${route}/card`), file, fileNameClean, route));
         } else if (isPricesRoute) {
